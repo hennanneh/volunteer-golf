@@ -972,7 +972,7 @@
 
     function renderCaptainLogin() {
       const captains = appData.volunteers.filter(v =>
-        v.type === 'Captain' || v.type === 'Asst. Chairman' || v.type === 'Chairman'
+        v.type === 'Captain' || v.type === 'Asst. Chairman' || v.type === 'Chairman' || v.type === 'Admin'
       );
 
       // Count captains per hole
@@ -1359,7 +1359,7 @@
               
               <label>Type</label>
               <select id="editType">
-                ${['Volunteer', 'Captain', 'Asst. Chairman', 'Chairman'].map(t => 
+                ${['Volunteer', 'Captain', 'Asst. Chairman', 'Chairman', 'Admin'].map(t => 
                   `<option value="${t}" ${editingVolunteer.type === t ? 'selected' : ''}>${t}</option>`
                 ).join('')}
               </select>
@@ -1669,43 +1669,50 @@
       `;
     }
 
+    // Track selected hole for admin users
+    let adminSelectedHole = 1;
+
     function renderCaptainDashboard() {
-      const holeVolunteers = appData.volunteers.filter(v => v.hole === captainAuth.hole && v.type === 'Volunteer');
+      // For Admin users, use the selected hole instead of their assigned hole
+      const isAdminUser = captainAuth.isAdmin;
+      const activeHole = isAdminUser ? adminSelectedHole : captainAuth.hole;
+
+      const holeVolunteers = appData.volunteers.filter(v => v.hole === activeHole && v.type === 'Volunteer');
       const scheduledVolunteers = holeVolunteers.filter(v => v.scheduled && v.scheduled[`${selectedDay} ${selectedShift}`]);
       const unscheduledVolunteers = holeVolunteers.filter(v => !v.scheduled || !v.scheduled[`${selectedDay} ${selectedShift}`]);
 
-      // Get captains for this hole (including the logged-in captain)
+      // Get captains for this hole
       const holeCaptains = appData.volunteers.filter(v =>
-        v.hole === captainAuth.hole &&
+        v.hole === activeHole &&
         (v.type === 'Captain' || v.type === 'Asst. Chairman' || v.type === 'Chairman')
       );
 
-      // Find the current captain's volunteer record
-      const currentCaptainRecord = holeCaptains.find(v => v.name === captainAuth.name);
+      // Find the current user's volunteer record (for admin, find by name)
+      const currentUserRecord = appData.volunteers.find(v => v.name === captainAuth.name);
 
       const checkedInIds = new Set(
         appData.checkIns
-          .filter(c => c.day === selectedDay && c.shift === selectedShift && c.hole === captainAuth.hole)
+          .filter(c => c.day === selectedDay && c.shift === selectedShift && c.hole === activeHole)
           .map(c => c.volunteerId)
       );
 
-      // Auto-check in the captain on first load if not already checked in and no submission yet
+      // Auto-check in the captain on first load if not already checked in and no submission yet (only for non-admin captains)
       const lastSubmission = appData.submissions.find(s =>
-        s.hole === captainAuth.hole && s.day === selectedDay && s.shift === selectedShift
+        s.hole === activeHole && s.day === selectedDay && s.shift === selectedShift
       );
-      if (currentCaptainRecord && !checkedInIds.has(currentCaptainRecord.id) && !lastSubmission) {
+      if (!isAdminUser && currentUserRecord && currentUserRecord.hole === activeHole && !checkedInIds.has(currentUserRecord.id) && !lastSubmission) {
         // Auto-add captain check-in
         appData.checkIns.push({
-          volunteerId: currentCaptainRecord.id,
-          volunteerName: currentCaptainRecord.name,
-          hole: captainAuth.hole,
+          volunteerId: currentUserRecord.id,
+          volunteerName: currentUserRecord.name,
+          hole: activeHole,
           day: selectedDay,
           shift: selectedShift,
           timestamp: new Date().toISOString(),
           checkedInBy: captainAuth.name,
           isAlternate: false
         });
-        checkedInIds.add(currentCaptainRecord.id);
+        checkedInIds.add(currentUserRecord.id);
         saveData();
       }
 
@@ -1730,7 +1737,7 @@
       if (searchTerm) {
         displayVolunteers = appData.volunteers.filter(v =>
           v.name.toLowerCase().includes(searchTerm.toLowerCase()) &&
-          v.hole === captainAuth.hole
+          (isAdminUser || v.hole === activeHole)
         );
       } else {
         // Show captains first (current captain at top), then scheduled, then unscheduled
@@ -1783,7 +1790,7 @@
           <div class="modal" onclick="event.stopPropagation()">
             <h3>Submit Check-In?</h3>
             <p style="text-align:left">
-              You are submitting check-ins for <strong>Hole #${captainAuth.hole}</strong> - <strong>${timeInfo.label}</strong>.
+              You are submitting check-ins for <strong>Hole #${activeHole}</strong> - <strong>${timeInfo.label}</strong>.
               ${captainNotes ? `<br><br><em style="color:#666">Note: "${captainNotes}"</em>` : ''}
               <br><br><strong>${checkedInIds.size}</strong> volunteer${checkedInIds.size !== 1 ? 's' : ''} checked in.
             </p>
@@ -1800,7 +1807,7 @@
         <div class="modal-overlay" onclick="closeSuccessModal()">
           <div class="modal" onclick="event.stopPropagation()">
             <h3 style="font-size:24px">✓ ${successMessage.title}</h3>
-            <p>Hole #${captainAuth.hole} ${successMessage.message}</p>
+            <p>Hole #${activeHole} ${successMessage.message}</p>
             <div class="modal-buttons" style="justify-content:center">
               <button class="modal-btn confirm" onclick="closeSuccessModal()">Close</button>
             </div>
@@ -1837,9 +1844,18 @@
           <div class="captain-header">
             <div class="captain-header-top">
               <div>
-                <h1>Hole #${captainAuth.hole}</h1>
-                <p>Captain: ${captainAuth.name}</p>
-                ${coCaptains.length > 0 ? `<p style="opacity:0.85;font-size:12px;margin-top:4px">Also: ${coCaptains.map(c => c.name.split(',')[0]).join(', ')}</p>` : ''}
+                ${isAdminUser ? `
+                  <h1 style="display:flex;align-items:center;gap:10px">
+                    <select onchange="adminSelectedHole=parseInt(this.value);render()" style="font-size:20px;font-weight:700;padding:4px 8px;border-radius:6px;border:none;background:rgba(255,255,255,0.9);color:#1a472a">
+                      ${[...Array(18).keys()].map(i => i + 1).map(h => `<option value="${h}" ${h === adminSelectedHole ? 'selected' : ''}>Hole #${h}</option>`).join('')}
+                    </select>
+                  </h1>
+                  <p>Admin: ${captainAuth.name}</p>
+                ` : `
+                  <h1>Hole #${activeHole}</h1>
+                  <p>Captain: ${captainAuth.name}</p>
+                  ${coCaptains.length > 0 ? `<p style="opacity:0.85;font-size:12px;margin-top:4px">Also: ${coCaptains.map(c => c.name.split(',')[0]).join(', ')}</p>` : ''}
+                `}
               </div>
               <div style="display:flex;gap:8px;align-items:center">
                 <button onclick="showHelpModal=true;render()" style="background:rgba(255,255,255,0.2);border:none;color:white;padding:8px 12px;border-radius:8px;cursor:pointer;font-size:13px">?</button>
@@ -2190,20 +2206,23 @@
     }
 
     function toggleCheckIn(volunteerId) {
-      const existing = appData.checkIns.find(c => 
-        c.volunteerId === volunteerId && c.day === selectedDay && c.shift === selectedShift
+      // For admin users, use the selected hole; for captains, use their assigned hole
+      const activeHole = captainAuth.isAdmin ? adminSelectedHole : captainAuth.hole;
+
+      const existing = appData.checkIns.find(c =>
+        c.volunteerId === volunteerId && c.day === selectedDay && c.shift === selectedShift && c.hole === activeHole
       );
-      
+
       if (existing) {
-        appData.checkIns = appData.checkIns.filter(c => 
-          !(c.volunteerId === volunteerId && c.day === selectedDay && c.shift === selectedShift)
+        appData.checkIns = appData.checkIns.filter(c =>
+          !(c.volunteerId === volunteerId && c.day === selectedDay && c.shift === selectedShift && c.hole === activeHole)
         );
       } else {
         const volunteer = appData.volunteers.find(v => v.id === volunteerId);
         appData.checkIns.push({
           volunteerId,
           volunteerName: volunteer ? volunteer.name : 'Unknown',
-          hole: captainAuth.hole,
+          hole: activeHole,
           day: selectedDay,
           shift: selectedShift,
           timestamp: new Date().toISOString(),
@@ -2388,19 +2407,22 @@
     function confirmSubmission() {
       if (!captainAuth) return;
 
+      // For admin users, use the selected hole; for captains, use their assigned hole
+      const activeHole = captainAuth.isAdmin ? adminSelectedHole : captainAuth.hole;
+
       // Get current checked-in IDs for tracking
       const checkedInIds = appData.checkIns
-        .filter(c => c.day === selectedDay && c.shift === selectedShift && c.hole === captainAuth.hole)
+        .filter(c => c.day === selectedDay && c.shift === selectedShift && c.hole === activeHole)
         .map(c => c.volunteerId);
 
       // Remove existing submission for this hole/day/shift
       appData.submissions = appData.submissions.filter(s =>
-        !(s.hole === captainAuth.hole && s.day === selectedDay && s.shift === selectedShift)
+        !(s.hole === activeHole && s.day === selectedDay && s.shift === selectedShift)
       );
 
       // Add new submission with notes and checked-in IDs
       appData.submissions.push({
-        hole: captainAuth.hole,
+        hole: activeHole,
         day: selectedDay,
         shift: selectedShift,
         timestamp: new Date().toISOString(),
@@ -2677,7 +2699,7 @@
           try {
             var phone4 = String(phoneInput.value || '');
             var captains = appData.volunteers.filter(function(v) {
-              return v.type === 'Captain' || v.type === 'Asst. Chairman' || v.type === 'Chairman';
+              return v.type === 'Captain' || v.type === 'Asst. Chairman' || v.type === 'Chairman' || v.type === 'Admin';
             });
             var captain = null;
             for (var i = 0; i < captains.length; i++) {
@@ -2688,7 +2710,7 @@
             }
 
             if (captain) {
-              captainAuth = { name: captain.name, hole: captain.hole, phone4: phone4 };
+              captainAuth = { name: captain.name, hole: captain.hole, phone4: phone4, isAdmin: captain.type === 'Admin' };
               currentView = 'captain';
               render();
             } else {
