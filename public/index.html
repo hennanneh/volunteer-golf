@@ -1867,14 +1867,16 @@
           <div class="modal" onclick="event.stopPropagation()" style="max-width:450px;text-align:left">
             <h3 style="text-align:center">How to check in volunteers</h3>
             <ol style="padding-left:20px;line-height:1.8;color:#444;font-size:13px">
-              <li>Select your shift time at the top (this morning, this afternoon, etc.)</li>
-              <li>Tap each volunteer's name as they arrive. A green checkmark means they're here.</li>
-              <li>Add a note if needed (optional) - let staff know about any issues or updates.</li>
-              <li>Tap the button at the bottom whenever you want. You can do this as many times as needed - it's not final.</li>
-              <li>That's it. The check-ins save automatically and you can always come back to make changes.</li>
+              <li>Select your day and shift time at the top.</li>
+              <li>Your name appears first and is pre-checked. Other captains and volunteers are listed below.</li>
+              <li>Tap each volunteer's name as they arrive. A green checkmark and "checked in" tag confirms they're here.</li>
+              <li>Add a note if needed (optional) - let staff know about any issues.</li>
+              <li>Tap the submit button. It shows exactly what you're submitting (e.g., "Check In 3 Volunteers").</li>
+              <li>After submitting, the button updates to show only new changes. Submit as many times as needed.</li>
             </ol>
             <p style="margin-top:15px;font-size:13px;color:#666"><strong>If someone doesn't show up:</strong> Just leave them unchecked. Only mark the people who actually arrive.</p>
-            <p style="margin-top:10px;font-size:13px;color:#666"><strong>If you make a mistake:</strong> Tap their name again to uncheck them, then tap the button at the bottom.</p>
+            <p style="margin-top:10px;font-size:13px;color:#666"><strong>If you make a mistake:</strong> Tap their name again to uncheck them, then submit to update.</p>
+            ${isAdminUser ? `<p style="margin-top:10px;font-size:13px;color:#1a472a"><strong>Admin mode:</strong> Use the hole selector dropdown to switch between any hole.</p>` : ''}
             <div class="modal-buttons" style="margin-top:20px;justify-content:center">
               <button class="modal-btn confirm" onclick="showHelpModal=false;render()">Got it</button>
             </div>
