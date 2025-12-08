@@ -6408,6 +6408,116 @@
       "timestamp": "2025-12-07T22:09:56.034Z",
       "checkedInBy": "Elkins, Paul",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "9461",
+      "volunteerName": "Goodenough, Timothy",
+      "hole": 6,
+      "day": "Monday",
+      "shift": "AM",
+      "timestamp": "2025-12-08T16:54:44.842Z",
+      "checkedInBy": "Elkins, Paul",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5441",
+      "volunteerName": "Lee, Rodney",
+      "hole": 6,
+      "day": "Monday",
+      "shift": "AM",
+      "timestamp": "2025-12-08T16:54:45.652Z",
+      "checkedInBy": "Elkins, Paul",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10069",
+      "volunteerName": "Quinonez, Eduardo",
+      "hole": 6,
+      "day": "Monday",
+      "shift": "AM",
+      "timestamp": "2025-12-08T16:54:46.894Z",
+      "checkedInBy": "Elkins, Paul",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9195",
+      "volunteerName": "Greener, Jim",
+      "hole": 6,
+      "day": "Monday",
+      "shift": "AM",
+      "timestamp": "2025-12-08T16:55:19.375Z",
+      "checkedInBy": "Elkins, Paul",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "419",
+      "volunteerName": "Cantu, Doug",
+      "hole": 6,
+      "day": "Friday",
+      "shift": "AM",
+      "timestamp": "2025-12-08T16:56:41.710Z",
+      "checkedInBy": "Elkins, Paul",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9461",
+      "volunteerName": "Goodenough, Timothy",
+      "hole": 6,
+      "day": "Friday",
+      "shift": "AM",
+      "timestamp": "2025-12-08T16:56:42.214Z",
+      "checkedInBy": "Elkins, Paul",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9195",
+      "volunteerName": "Greener, Jim",
+      "hole": 6,
+      "day": "Friday",
+      "shift": "AM",
+      "timestamp": "2025-12-08T16:56:42.630Z",
+      "checkedInBy": "Elkins, Paul",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5192",
+      "volunteerName": "Imboden, Thomas",
+      "hole": 6,
+      "day": "Friday",
+      "shift": "AM",
+      "timestamp": "2025-12-08T16:56:43.064Z",
+      "checkedInBy": "Elkins, Paul",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2658",
+      "volunteerName": "Andrews, Joseph",
+      "hole": 6,
+      "day": "Thursday",
+      "shift": "AM",
+      "timestamp": "2025-12-08T16:57:23.131Z",
+      "checkedInBy": "Elkins, Paul",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5192",
+      "volunteerName": "Imboden, Thomas",
+      "hole": 6,
+      "day": "Thursday",
+      "shift": "AM",
+      "timestamp": "2025-12-08T16:57:23.547Z",
+      "checkedInBy": "Elkins, Paul",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5441",
+      "volunteerName": "Lee, Rodney",
+      "hole": 6,
+      "day": "Thursday",
+      "shift": "AM",
+      "timestamp": "2025-12-08T16:57:23.998Z",
+      "checkedInBy": "Elkins, Paul",
+      "isAlternate": false
     }
   ],
   "submissions": [
@@ -6431,6 +6541,33 @@
       "shift": "PM",
       "timestamp": "2025-12-07T22:10:14.459Z",
       "captainName": "Elkins, Paul"
+    },
+    {
+      "hole": 6,
+      "day": "Friday",
+      "shift": "AM",
+      "timestamp": "2025-12-08T16:57:17.926Z",
+      "captainName": "Elkins, Paul",
+      "notes": "note",
+      "checkedInIds": [
+        "419",
+        "9461",
+        "9195",
+        "5192"
+      ]
+    },
+    {
+      "hole": 6,
+      "day": "Thursday",
+      "shift": "AM",
+      "timestamp": "2025-12-08T16:57:29.652Z",
+      "captainName": "Elkins, Paul",
+      "notes": "thursday",
+      "checkedInIds": [
+        "2658",
+        "5192",
+        "5441"
+      ]
     }
   ],
   "settings": {
@@ -6441,6 +6578,10 @@
       "annehowrey@yahoo.com"
     ],
     "gmailUser": "1122howrey@gmail.com",
-    "gmailAppPassword": "fatPu2-jacjir-zarhyf"
+    "gmailAppPassword": "fatPu2-jacjir-zarhyf",
+    "helpPhone": "2148868611",
+    "helpEmail": "annehowrey@yahoo.com",
+    "tournamentStartDate": "2025-12-08",
+    "tournamentEndDate": "2025-12-14"
   }
 }

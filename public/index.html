@@ -682,6 +682,27 @@
     .summary-stat-value.orange { color: #f57c00; }
     .summary-stat-value.gray { color: #666; }
     .summary-stat-label { font-size: 11px; color: #666; }
+
+    /* Save toast notification */
+    .save-toast {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #1a472a;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 500;
+      z-index: 9999;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      animation: fadeInUp 0.3s ease;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateX(-50%) translateY(10px); }
+      to { opacity: 1; transform: translateX(-50%) translateY(0); }
+    }
   </style>
 </head>
 <body>
@@ -724,10 +745,14 @@
     let showModal = null;
     let editingVolunteer = null;
     let filterHole = null;
+    let filterDay = 'all';
+    let filterShift = 'all';
     let captainNotes = '';
     let showHelpModal = false;
     let showSuccessModal = false;
     let successMessage = '';
+    let showSaveToast = false;
+    let saveToastTimeout = null;
 
     // Success messages for rotation
     const SUCCESS_MESSAGES = [
@@ -752,19 +777,30 @@
         timeLabel = `${day} ${shiftLabel}`;
       }
 
-      if (includeDate && appData.settings.tournamentStartDate) {
+      // Always calculate date - use tournament start date if set, otherwise calculate from current week
+      let targetDate;
+      if (appData.settings.tournamentStartDate) {
         const startDate = new Date(appData.settings.tournamentStartDate);
-        // Calculate the actual date for this day
         const dayOffset = targetIndex - ((startDate.getDay() + 6) % 7);
-        const targetDate = new Date(startDate);
+        targetDate = new Date(startDate);
         targetDate.setDate(startDate.getDate() + dayOffset);
         if (dayOffset < 0) targetDate.setDate(targetDate.getDate() + 7);
-
-        const dateStr = targetDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
-        return { label: timeLabel, date: `${day}, ${dateStr}` };
+      } else {
+        // Calculate based on current week
+        targetDate = new Date(now);
+        const currentDayIndex = (now.getDay() + 6) % 7;
+        const diff = targetIndex - currentDayIndex;
+        targetDate.setDate(now.getDate() + diff);
       }
 
-      return { label: timeLabel, date: '' };
+      const dateStr = targetDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+      return { label: timeLabel, date: `${day}, ${dateStr}`, dateOnly: dateStr };
+    }
+
+    // Get formatted date for a day of the week
+    function getDateForDay(day) {
+      const info = getRelativeTimeLabel(day, 'AM');
+      return info.dateOnly;
     }
 
     // Format phone number for display
@@ -870,18 +906,25 @@
         return;
       }
 
+      let content = '';
       if (currentView === 'landing') {
-        app.innerHTML = renderLanding();
+        content = renderLanding();
       } else if (currentView === 'adminLogin') {
-        app.innerHTML = renderAdminLogin();
+        content = renderAdminLogin();
       } else if (currentView === 'admin') {
-        app.innerHTML = renderAdminDashboard();
+        content = renderAdminDashboard();
       } else if (currentView === 'captainLogin') {
-        app.innerHTML = renderCaptainLogin();
+        content = renderCaptainLogin();
       } else if (currentView === 'captain') {
-        app.innerHTML = renderCaptainDashboard();
+        content = renderCaptainDashboard();
       }
 
+      // Add save toast if visible
+      if (showSaveToast) {
+        content += '<div class="save-toast">✓ Changes saved</div>';
+      }
+
+      app.innerHTML = content;
       attachEventListeners();
     }
 
@@ -1101,8 +1144,7 @@
               const dayInfo = getRelativeTimeLabel(day, 'AM');
               return `
               <div class="day-card">
-                <h3>${day}</h3>
-                ${dayInfo.date ? `<p style="font-size:10px;color:#999;margin-bottom:10px">${dayInfo.date.split(',')[1] || ''}</p>` : ''}
+                <h3>${day} <span style="font-weight:normal;font-size:11px;color:#666">(${dayInfo.dateOnly})</span></h3>
                 ${SHIFTS.map(shift => {
                   const s = stats[`${day} ${shift}`];
                   const isSelected = day === selectedDay && shift === selectedShift;
@@ -1129,79 +1171,128 @@
     }
 
     function renderCheckins() {
-      let checkins = appData.checkIns
-        .filter(c => c.day === selectedDay && c.shift === selectedShift)
-        .sort((a, b) => a.hole - b.hole);
+      // Start with all check-ins
+      let checkins = [...appData.checkIns];
 
-      // Apply hole filter if set
+      // Apply day filter
+      if (filterDay !== 'all') {
+        checkins = checkins.filter(c => c.day === filterDay);
+      }
+
+      // Apply shift filter
+      if (filterShift !== 'all') {
+        checkins = checkins.filter(c => c.shift === filterShift);
+      }
+
+      // Apply hole filter
       if (filterHole) {
         checkins = checkins.filter(c => c.hole === filterHole);
       }
 
-      // Get submission notes for each hole
-      const getSubmissionNotes = (hole) => {
-        const sub = appData.submissions.find(s => s.hole === hole && s.day === selectedDay && s.shift === selectedShift);
+      // Sort by day, then shift, then hole
+      checkins = checkins.sort((a, b) => {
+        const dayDiff = DAYS.indexOf(a.day) - DAYS.indexOf(b.day);
+        if (dayDiff !== 0) return dayDiff;
+        const shiftDiff = SHIFTS.indexOf(a.shift) - SHIFTS.indexOf(b.shift);
+        if (shiftDiff !== 0) return shiftDiff;
+        return a.hole - b.hole;
+      });
+
+      // Get submission notes for a check-in
+      const getSubmissionNotes = (hole, day, shift) => {
+        const sub = appData.submissions.find(s => s.hole === hole && s.day === day && s.shift === shift);
         return sub ? sub.notes : '';
       };
 
-      // Get time info for header
-      const timeInfo = getRelativeTimeLabel(selectedDay, selectedShift);
-      const totalScheduled = appData.volunteers.filter(v => v.scheduled && v.scheduled[`${selectedDay} ${selectedShift}`]).length;
+      // Count active filters
+      const activeFilters = (filterDay !== 'all' ? 1 : 0) + (filterShift !== 'all' ? 1 : 0) + (filterHole ? 1 : 0);
 
       return `
         <div class="checkins-header">
           <div style="display:flex;align-items:center;gap:15px;flex-wrap:wrap">
-            <h2 style="margin:0;font-size:16px">Check-In Records - ${timeInfo.label}</h2>
-            ${timeInfo.date ? `<span style="font-size:12px;color:#666">${timeInfo.date}</span>` : ''}
-            ${filterHole ? `
-              <span style="background:#e3f2fd;color:#1565c0;padding:4px 10px;border-radius:20px;font-size:12px;display:flex;align-items:center;gap:6px">
-                Filtered by: Hole #${filterHole}
-                <button onclick="clearHoleFilter()" style="background:none;border:none;cursor:pointer;font-size:14px;color:#1565c0">×</button>
-              </span>
-            ` : `<span style="font-size:12px;color:#666">Showing: All holes</span>`}
+            <h2 style="margin:0;font-size:16px">Check-In Records</h2>
+            <span style="font-size:12px;color:#666">${checkins.length} check-in${checkins.length !== 1 ? 's' : ''}</span>
           </div>
           <div style="text-align:right">
             <button class="export-btn" onclick="exportCSV()" style="font-size:13px;padding:8px 16px">Export Filtered Data</button>
-            <p style="font-size:10px;color:#888;margin-top:4px">Downloads check-in records for the current view</p>
           </div>
         </div>
-        <p style="font-size:12px;color:#666;margin-bottom:15px">${checkins.length} / ${totalScheduled} total volunteers checked in across all holes</p>
-        <p style="font-size:11px;color:#888;margin-bottom:10px">Click any row to view full check-in details</p>
-        <div class="table-container">
+
+        <!-- Filters -->
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:15px;align-items:center">
+          <select onchange="filterDay=this.value;render()" style="padding:8px 12px;border:1px solid #ddd;border-radius:6px;font-size:13px">
+            <option value="all" ${filterDay === 'all' ? 'selected' : ''}>All Days</option>
+            ${DAYS.map(d => {
+              const dateStr = getDateForDay(d);
+              return `<option value="${d}" ${filterDay === d ? 'selected' : ''}>${d} (${dateStr})</option>`;
+            }).join('')}
+          </select>
+
+          <select onchange="filterShift=this.value;render()" style="padding:8px 12px;border:1px solid #ddd;border-radius:6px;font-size:13px">
+            <option value="all" ${filterShift === 'all' ? 'selected' : ''}>All Shifts</option>
+            <option value="AM" ${filterShift === 'AM' ? 'selected' : ''}>Morning (AM)</option>
+            <option value="PM" ${filterShift === 'PM' ? 'selected' : ''}>Afternoon (PM)</option>
+          </select>
+
+          <select onchange="filterHole=this.value ? parseInt(this.value) : null;render()" style="padding:8px 12px;border:1px solid #ddd;border-radius:6px;font-size:13px">
+            <option value="" ${!filterHole ? 'selected' : ''}>All Holes</option>
+            ${[...Array(18).keys()].map(i => i + 1).map(h =>
+              `<option value="${h}" ${filterHole === h ? 'selected' : ''}>Hole #${h}</option>`
+            ).join('')}
+          </select>
+
+          ${activeFilters > 0 ? `
+            <button onclick="filterDay='all';filterShift='all';filterHole=null;render()" style="padding:8px 12px;background:#f5f5f5;border:1px solid #ddd;border-radius:6px;cursor:pointer;font-size:12px">
+              Clear Filters (${activeFilters})
+            </button>
+          ` : ''}
+        </div>
+
+        <div class="table-container" style="max-height:60vh;overflow-y:auto">
           <table>
             <thead>
               <tr>
-                <th>Name</th>
-                <th class="center">Hole</th>
-                <th>Time</th>
-                <th>Captain</th>
-                <th class="center">Type</th>
-                <th>Notes</th>
+                <th style="font-size:11px">Name</th>
+                <th style="font-size:11px" class="center">Hole</th>
+                <th style="font-size:11px">Day</th>
+                <th style="font-size:11px">Shift</th>
+                <th style="font-size:11px">Time</th>
+                <th style="font-size:11px">Captain</th>
+                <th style="font-size:11px" class="center">Type</th>
+                <th style="font-size:11px">Notes</th>
               </tr>
             </thead>
             <tbody>
               ${checkins.length === 0 ? `
-                <tr><td colspan="6" class="empty-row">${filterHole ? `No check-ins for Hole #${filterHole} this shift.` : 'No check-ins recorded for this shift yet.'}</td></tr>
-              ` : checkins.map(c => {
-                const notes = getSubmissionNotes(c.hole);
+                <tr><td colspan="8" class="empty-row" style="font-size:13px">No check-ins found${activeFilters > 0 ? ' for the selected filters' : ''}.</td></tr>
+              ` : checkins.slice(0, 200).map(c => {
+                const notes = getSubmissionNotes(c.hole, c.day, c.shift);
+                const dateStr = getDateForDay(c.day);
                 return `
-                <tr style="cursor:pointer" onclick="viewHoleCheckins(${c.hole})">
-                  <td style="font-size:13px">${c.volunteerName}</td>
-                  <td class="center" style="font-weight:600;font-size:13px">#${c.hole}</td>
-                  <td style="font-size:12px;color:#666">${formatTimestamp(c.timestamp)}</td>
-                  <td style="font-size:12px">${c.checkedInBy}</td>
-                  <td class="center"><span class="badge ${c.isAlternate ? 'alt' : 'sched'}" style="font-size:10px">${c.isAlternate ? 'ALT' : 'SCHED'}</span></td>
-                  <td style="font-size:11px;color:#666;max-width:150px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${notes || ''}</td>
+                <tr>
+                  <td style="font-size:12px">${c.volunteerName}</td>
+                  <td class="center" style="font-weight:600;font-size:12px">#${c.hole}</td>
+                  <td style="font-size:11px;color:#666">${c.day} (${dateStr})</td>
+                  <td style="font-size:11px;color:#666">${c.shift === 'AM' ? 'Morning' : 'Afternoon'}</td>
+                  <td style="font-size:11px;color:#666">${formatTimestamp(c.timestamp)}</td>
+                  <td style="font-size:11px">${c.checkedInBy}</td>
+                  <td class="center"><span class="badge ${c.isAlternate ? 'alt' : 'sched'}" style="font-size:9px">${c.isAlternate ? 'ALT' : 'SCHED'}</span></td>
+                  <td style="font-size:10px;color:#666;max-width:120px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${notes || ''}</td>
                 </tr>
               `}).join('')}
+              ${checkins.length > 200 ? `
+                <tr><td colspan="8" style="padding:15px;text-align:center;color:#666;font-size:12px">Showing first 200 of ${checkins.length} check-ins. Use filters to narrow down.</td></tr>
+              ` : ''}
             </tbody>
           </table>
         </div>
       `;
     }
-    
+
     function viewHoleCheckins(hole) {
       filterHole = hole;
+      filterDay = 'all';
+      filterShift = 'all';
       adminTab = 'checkins';
       render();
     }
@@ -1607,22 +1698,17 @@
       // Get relative time info
       const timeInfo = getRelativeTimeLabel(selectedDay, selectedShift);
 
-      // Build display list - scheduled first, then unscheduled if showing all
+      // Build display list - always show scheduled first, then unscheduled
       let displayVolunteers = [];
       if (searchTerm) {
         displayVolunteers = appData.volunteers.filter(v =>
           v.name.toLowerCase().includes(searchTerm.toLowerCase()) && v.type === 'Volunteer'
         );
-      } else if (showAllVolunteers) {
+      } else {
+        // Always show all volunteers: scheduled first, then unscheduled
         displayVolunteers = [...scheduledVolunteers.sort((a, b) => a.name.localeCompare(b.name)),
                             ...unscheduledVolunteers.sort((a, b) => a.name.localeCompare(b.name))];
-      } else {
-        displayVolunteers = scheduledVolunteers.sort((a, b) => a.name.localeCompare(b.name));
       }
-
-      const alternatesCount = appData.checkIns.filter(c =>
-        c.day === selectedDay && c.shift === selectedShift && c.hole === captainAuth.hole && c.isAlternate
-      ).length;
 
       // Build dynamic button text
       let buttonText = '';
@@ -1716,7 +1802,7 @@
               <select onchange="setSelectedDay(this.value)" aria-label="Select Day">
                 ${DAYS.map(d => {
                   const info = getRelativeTimeLabel(d, selectedShift);
-                  return `<option value="${d}" ${d === selectedDay ? 'selected' : ''}>${info.label.includes('This') ? info.label : d}</option>`;
+                  return `<option value="${d}" ${d === selectedDay ? 'selected' : ''}>${d} (${info.dateOnly})</option>`;
                 }).join('')}
               </select>
               <div class="shift-toggle">
@@ -1725,39 +1811,24 @@
                 `).join('')}
               </div>
             </div>
-            ${timeInfo.date ? `<p style="opacity:0.7;font-size:11px;margin-top:8px">${timeInfo.date}</p>` : ''}
-          </div>
-
-          <div class="progress-section">
-            <div class="progress-header">
-              <span>Your Progress</span>
-              <span>${checkedInIds.size} of ${scheduledVolunteers.length} checked in</span>
-            </div>
-            <div class="progress-track">
-              <div class="progress-bar-fill" style="width:${scheduledVolunteers.length > 0 ? (checkedInIds.size / scheduledVolunteers.length) * 100 : 0}%"></div>
-            </div>
           </div>
 
           <div class="search-section">
-            <input type="text" class="search-input" placeholder="🔍 Search for a volunteer by name..." value="${searchTerm}" oninput="setSearchTerm(this.value)">
-            <label class="show-all-label">
-              <input type="checkbox" ${showAllVolunteers ? 'checked' : ''} onchange="toggleShowAll(this.checked)">
-              Show all volunteers (including unscheduled)
-            </label>
+            <input type="text" class="search-input" placeholder="Search for a volunteer by name..." value="${searchTerm}" oninput="setSearchTerm(this.value)">
           </div>
 
-          <div class="volunteer-list" style="padding-bottom:280px">
+          <div class="volunteer-list" style="padding-bottom:180px">
             <p style="color:#666;font-size:12px;margin-bottom:10px;padding:0 5px">Tap names as volunteers arrive</p>
             ${displayVolunteers.length === 0 ? `
               <div class="empty-list">
-                ${searchTerm ? 'No volunteers found with that name' : 'No volunteers scheduled for this shift'}
+                ${searchTerm ? 'No volunteers found with that name' : 'No volunteers assigned to this hole'}
               </div>
             ` : displayVolunteers.map((v, idx) => {
               const isCheckedIn = checkedInIds.has(v.id);
               const isScheduled = v.scheduled && v.scheduled[`${selectedDay} ${selectedShift}`];
               // Add section header when transitioning from scheduled to unscheduled
               const prevIsScheduled = idx > 0 ? (displayVolunteers[idx-1].scheduled && displayVolunteers[idx-1].scheduled[`${selectedDay} ${selectedShift}`]) : true;
-              const showDivider = showAllVolunteers && !searchTerm && !isScheduled && prevIsScheduled;
+              const showDivider = !searchTerm && !isScheduled && prevIsScheduled;
               return `
                 ${showDivider ? '<div style="padding:15px 5px 8px;color:#999;font-size:11px;font-weight:600;text-transform:uppercase;border-top:1px solid #eee;margin-top:10px">Not Scheduled This Shift</div>' : ''}
                 <div class="volunteer-item ${isCheckedIn ? 'checked' : ''}" onclick="toggleCheckIn('${v.id}')">
@@ -1777,21 +1848,6 @@
           </div>
 
           <div class="floating-summary" style="padding-bottom:0">
-            <div class="summary-stats">
-              <div>
-                <div class="summary-stat-value green">${checkedInIds.size}</div>
-                <div class="summary-stat-label">Checked In</div>
-              </div>
-              <div>
-                <div class="summary-stat-value orange">${scheduledVolunteers.length - checkedInIds.size}</div>
-                <div class="summary-stat-label">Remaining</div>
-              </div>
-              <div>
-                <div class="summary-stat-value gray">${alternatesCount}</div>
-                <div class="summary-stat-label">Alternates</div>
-              </div>
-            </div>
-
             <!-- Notes Field -->
             <div style="padding:10px 0">
               <input type="text"
@@ -1875,6 +1931,21 @@
     function updateSetting(key, value) {
       appData.settings[key] = value;
       saveData();
+      showSaveConfirmation();
+    }
+
+    function showSaveConfirmation() {
+      // Clear any existing timeout
+      if (saveToastTimeout) clearTimeout(saveToastTimeout);
+
+      showSaveToast = true;
+      render();
+
+      // Hide after 2 seconds
+      saveToastTimeout = setTimeout(() => {
+        showSaveToast = false;
+        render();
+      }, 2000);
     }
 
     // Archive functions
