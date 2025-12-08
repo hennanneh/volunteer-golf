@@ -943,6 +943,7 @@
           ${hasContact ? `
             <div style="margin-top:30px;text-align:center;color:rgba(255,255,255,0.9)">
               <p style="font-size:13px;font-weight:600;margin-bottom:10px">Need help?</p>
+              ${appData.settings.helpName ? `<p style="font-size:14px;margin-bottom:8px">${appData.settings.helpName}</p>` : ''}
               ${appData.settings.helpPhone ? `<p style="font-size:13px;margin-bottom:6px"><a href="tel:${appData.settings.helpPhone.replace(/\D/g, '')}" style="color:white;text-decoration:none">${formatPhoneDisplay(appData.settings.helpPhone)}</a></p>` : ''}
               ${appData.settings.helpEmail ? `<p style="font-size:13px;margin-bottom:6px"><a href="mailto:${appData.settings.helpEmail}" style="color:white;text-decoration:none">${appData.settings.helpEmail}</a></p>` : ''}
               <p style="font-size:11px;opacity:0.7;margin-top:8px">Tournament staff available during event hours</p>
@@ -1026,7 +1027,7 @@
             ).join('')}
           </div>
           
-          ${(adminTab === 'overview' || adminTab === 'checkins') ? `
+          ${adminTab === 'overview' ? `
             <div class="shift-selector">
               <label>Viewing:</label>
               <select id="daySelect" onchange="setSelectedDay(this.value)">
@@ -1104,7 +1105,6 @@
               ${timeInfo.date ? `<p style="font-size:11px;color:#666;margin-top:4px">${timeInfo.date}</p>` : ''}
             </div>
             <div style="display:flex;gap:20px;font-size:13px">
-              <span><strong>${totalCheckedIn}</strong>/${totalScheduled} volunteers (${overallPct}%)</span>
               <span style="color:${submittedCount === activeHoles ? '#2e7d32' : '#e65100'}">
                 ${submittedCount === activeHoles ? '✓' : ''} ${submittedCount}/${activeHoles} holes submitted
               </span>
@@ -1578,6 +1578,10 @@
           <div class="settings-card">
             <h3>Contact Information</h3>
             <div style="margin-bottom:12px">
+              <label style="font-size:12px;color:#666;display:block;margin-bottom:4px">Contact Name</label>
+              <input type="text" placeholder="Tournament Coordinator" value="${appData.settings.helpName || ''}" onchange="updateSetting('helpName', this.value)" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:6px">
+            </div>
+            <div style="margin-bottom:12px">
               <label style="font-size:12px;color:#666;display:block;margin-bottom:4px">Help Phone</label>
               <input type="tel" placeholder="(555) 123-4567" value="${appData.settings.helpPhone || ''}" onchange="updateSetting('helpPhone', this.value)" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:6px">
             </div>
@@ -1713,19 +1717,33 @@
       // Build dynamic button text
       let buttonText = '';
       if (!isSubmitted) {
-        // New check-ins only
-        buttonText = checkedInIds.size === 1 ? 'Check In 1 Volunteer' : `Check In ${checkedInIds.size} Volunteers`;
+        // First submission - new check-ins only
+        if (checkedInIds.size === 0) {
+          buttonText = 'Submit';
+        } else if (checkedInIds.size === 1) {
+          buttonText = 'Check In 1 Volunteer';
+        } else {
+          buttonText = `Check In ${checkedInIds.size} Volunteers`;
+        }
       } else if (newCheckIns > 0 && removedCheckIns === 0) {
-        // Only new check-ins
-        buttonText = newCheckIns === 1 ? 'Check In 1 Volunteer' : `Check In ${newCheckIns} Volunteers`;
+        // Only new check-ins after initial submission
+        if (newCheckIns === 1) {
+          buttonText = 'Check In 1 Volunteer';
+        } else {
+          buttonText = `Check In ${newCheckIns} Volunteers`;
+        }
       } else if (newCheckIns === 0 && removedCheckIns > 0) {
-        // Only updates (removals)
-        buttonText = removedCheckIns === 1 ? 'Update 1 Change' : `Update ${removedCheckIns} Changes`;
+        // Only modifications (removals) after initial submission
+        if (removedCheckIns === 1) {
+          buttonText = 'Update 1 Change';
+        } else {
+          buttonText = `Update ${removedCheckIns} Changes`;
+        }
       } else if (newCheckIns > 0 && removedCheckIns > 0) {
-        // Both new check-ins and updates
+        // Both new check-ins and modifications
         buttonText = `Check In ${newCheckIns}, Update ${removedCheckIns}`;
       } else {
-        // No changes
+        // No changes since last submission
         buttonText = 'No Changes';
       }
 
@@ -1836,7 +1854,7 @@
                     <span class="volunteer-checkbox-icon">✓</span>
                   </div>
                   <div class="volunteer-info">
-                    <div class="volunteer-name">${v.name}</div>
+                    <div class="volunteer-name">${v.name}${isCheckedIn ? '<span style="font-size:10px;color:#2e7d32;background:#e8f5e9;padding:2px 6px;border-radius:4px;margin-left:8px;font-weight:500">checked in</span>' : ''}</div>
                     <div style="display:flex;gap:8px;align-items:center;margin-top:4px">
                       ${v.yearsWorked ? `<span style="font-size:11px;color:#555;background:#e8e8e8;padding:3px 6px;border-radius:4px;font-weight:500">${v.yearsWorked} yr${v.yearsWorked !== 1 ? 's' : ''}</span>` : ''}
                     </div>
@@ -2582,7 +2600,7 @@
         adminForm.onsubmit = function(e) {
           e.preventDefault();
           const password = document.getElementById('adminPassword').value;
-          if (password === appData.settings.adminPassword) {
+          if (password.toLowerCase() === appData.settings.adminPassword.toLowerCase()) {
             adminAuth = true;
             currentView = 'admin';
             render();
