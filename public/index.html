@@ -1,0 +1,2340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Volunteer Check-In | Colonial Volunteers Golf</title>
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://colonialvolunteers.golf/">
+  <meta property="og:title" content="Colonial Volunteers Golf">
+  <meta property="og:description" content="Volunteer check-in system for Colonial golf tournament">
+  <meta property="og:image" content="https://colonialvolunteers.golf/share-image.svg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://colonialvolunteers.golf/">
+  <meta name="twitter:title" content="Colonial Volunteers Golf">
+  <meta name="twitter:description" content="Volunteer check-in system for Colonial golf tournament">
+  <meta name="twitter:image" content="https://colonialvolunteers.golf/share-image.svg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Modal styles */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      padding: 20px;
+    }
+    .modal {
+      background: white;
+      border-radius: 16px;
+      padding: 30px;
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+    }
+    .modal h3 { color: #1a472a; margin-bottom: 15px; font-size: 20px; }
+    .modal p { color: #666; margin-bottom: 25px; line-height: 1.5; }
+    .modal-buttons { display: flex; gap: 10px; }
+    .modal-btn {
+      flex: 1;
+      padding: 14px;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+    }
+    .modal-btn.cancel { background: #f0f0f0; color: #666; }
+    .modal-btn.confirm { background: #1a472a; color: white; }
+    
+    /* Submit button */
+    .submit-section {
+      padding: 15px 20px;
+      background: white;
+      border-top: 1px solid #eee;
+    }
+    .submit-btn-large {
+      width: 100%;
+      padding: 16px;
+      border-radius: 12px;
+      font-size: 18px;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s;
+    }
+    .submit-btn-large.submit { background: #1a472a; color: white; }
+    .submit-btn-large.submit:hover { background: #2d5a3f; }
+    .submit-btn-large.resubmit { background: #ff9800; color: white; }
+    .submit-btn-large.resubmit:hover { background: #f57c00; }
+    .submit-btn-large:disabled { background: #ccc; cursor: not-allowed; }
+
+    .submission-status {
+      text-align: center;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 8px;
+      font-size: 13px;
+    }
+    .submission-status.submitted { background: #e8f5e9; color: #2e7d32; }
+    .submission-status.pending { background: #fff3e0; color: #e65100; }
+    
+    /* Alert time inputs */
+    .alert-times-section { margin-top: 20px; }
+    .alert-time-row {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .alert-time-row select, .alert-time-row input[type="time"] {
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+    .alert-time-row input[type="time"] { flex: 1; }
+    .alert-time-row button {
+      padding: 8px 12px;
+      background: #dc3545;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .add-alert-btn {
+      padding: 10px 20px;
+      background: #1a472a;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 500;
+      margin-top: 10px;
+    }
+    
+    /* SMS settings */
+    .sms-settings { margin-top: 15px; padding-top: 15px; border-top: 1px solid #eee; }
+    .sms-settings h4 { font-size: 14px; color: #333; margin-bottom: 10px; }
+    .sms-settings input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+    .sms-settings small { color: #999; font-size: 12px; }
+    
+    /* Submission status in admin */
+    .hole-submission-badge {
+      font-size: 10px;
+      padding: 2px 6px;
+      border-radius: 4px;
+      margin-top: 4px;
+      display: inline-block;
+    }
+    .hole-submission-badge.submitted { background: #e8f5e9; color: #2e7d32; }
+    .hole-submission-badge.not-submitted { background: #ffebee; color: #c62828; }
+    
+    /* Volunteer edit styles */
+    .volunteer-table { width: 100%; border-collapse: collapse; }
+    .volunteer-table th { 
+      padding: 10px; 
+      text-align: left; 
+      background: #f5f5f5; 
+      font-size: 12px; 
+      font-weight: 600;
+      position: sticky;
+      top: 0;
+    }
+    .volunteer-table td { 
+      padding: 8px 10px; 
+      border-top: 1px solid #eee; 
+      font-size: 13px;
+    }
+    .volunteer-table tr:hover { background: #f9f9f9; }
+    .edit-btn {
+      padding: 4px 10px;
+      background: #1a472a;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 12px;
+    }
+    .edit-btn:hover { background: #2d5a3f; }
+    
+    .edit-modal-form { text-align: left; }
+    .edit-modal-form label { 
+      display: block; 
+      font-size: 12px; 
+      font-weight: 600; 
+      color: #333; 
+      margin-bottom: 4px;
+      margin-top: 12px;
+    }
+    .edit-modal-form input, .edit-modal-form select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+    .edit-modal-form .schedule-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+      margin-top: 10px;
+    }
+    .edit-modal-form .schedule-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+    }
+    .edit-modal-form .schedule-item input { width: auto; }
+    
+    .search-bar {
+      padding: 12px 16px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 14px;
+      width: 300px;
+      max-width: 100%;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: #f5f5f5; }
+    .hidden { display: none !important; }
+    
+    /* Landing Page */
+    .landing {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #1a472a 0%, #2d5a3f 50%, #1a472a 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .landing-card {
+      background: rgba(255,255,255,0.97);
+      border-radius: 20px;
+      padding: 50px 40px;
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 25px 80px rgba(0,0,0,0.4);
+    }
+    .landing-icon { font-size: 60px; margin-bottom: 10px; }
+    .landing-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 26px;
+      color: #1a472a;
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+    .landing-subtitle { color: #666; margin-bottom: 40px; font-size: 16px; }
+    
+    .btn-primary {
+      width: 100%;
+      padding: 18px;
+      font-size: 18px;
+      font-weight: 600;
+      background: linear-gradient(135deg, #1a472a, #2d5a3f);
+      color: white;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      margin-bottom: 15px;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 15px rgba(26,71,42,0.3);
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(26,71,42,0.4); }
+
+    .btn-secondary {
+      width: 100%;
+      padding: 14px;
+      font-size: 15px;
+      font-weight: 500;
+      background: transparent;
+      color: #1a472a;
+      border: 2px solid #1a472a;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn-secondary:hover { background: #1a472a; color: white; }
+    
+    .footer-text { color: rgba(255,255,255,0.6); margin-top: 30px; font-size: 13px; }
+    
+    /* Login Pages */
+    .login-page {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .login-page.admin { background: #f5f5f5; }
+    .login-page.captain { background: linear-gradient(135deg, #1a472a 0%, #2d5a3f 100%); }
+    
+    .login-card {
+      background: white;
+      border-radius: 16px;
+      padding: 40px;
+      max-width: 380px;
+      width: 100%;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+    }
+    
+    .back-btn {
+      background: none;
+      border: none;
+      color: #666;
+      cursor: pointer;
+      font-size: 14px;
+      margin-bottom: 20px;
+      padding: 0;
+    }
+    
+    .login-header { text-align: center; margin-bottom: 30px; }
+    .login-header h2 { color: #1a472a; font-size: 22px; }
+    .login-header p { color: #666; font-size: 14px; margin-top: 8px; }
+    
+    .input-field {
+      width: 100%;
+      padding: 14px 16px;
+      font-size: 16px;
+      border: 2px solid #e0e0e0;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      transition: border-color 0.2s;
+    }
+    .input-field:focus { outline: none; border-color: #1a472a; }
+    .input-field.error { border-color: #dc3545; }
+    
+    .phone-input {
+      font-size: 28px;
+      font-weight: 600;
+      text-align: center;
+      letter-spacing: 8px;
+      padding: 18px;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 14px;
+      background: #1a472a;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .submit-btn:disabled { background: #ccc; cursor: not-allowed; }
+    
+    .error-msg { color: #dc3545; font-size: 13px; margin-bottom: 15px; text-align: center; }
+    
+    /* Admin Dashboard */
+    .admin-header {
+      background: white;
+      border-bottom: 1px solid #e0e0e0;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .admin-header-left { display: flex; align-items: center; gap: 15px; }
+    .admin-header h1 { font-size: 18px; color: #1a472a; }
+    .admin-header p { font-size: 12px; color: #666; }
+    
+    .tabs {
+      display: flex;
+      gap: 5px;
+      padding: 15px 20px;
+      background: white;
+      border-bottom: 1px solid #e0e0e0;
+      flex-wrap: wrap;
+    }
+    .tab-btn {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+      background: #f0f0f0;
+      color: #666;
+    }
+    .tab-btn.active { background: #1a472a; color: white; }
+    
+    .shift-selector {
+      padding: 15px 20px;
+      background: #f0f0f0;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .shift-selector label { font-weight: 500; color: #333; }
+    .shift-selector select {
+      padding: 8px 12px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+    .shift-selector .count { margin-left: auto; font-size: 13px; color: #666; }
+    
+    .content { padding: 20px; max-width: 1200px; margin: 0 auto; }
+    
+    /* Overview Grid */
+    .overview-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 15px;
+    }
+    .day-card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .day-card h3 { font-size: 16px; margin-bottom: 15px; color: #333; }
+    .shift-item {
+      padding: 12px;
+      margin-bottom: 8px;
+      border-radius: 8px;
+      background: #f5f5f5;
+      cursor: pointer;
+      border: 2px solid transparent;
+    }
+    .shift-item.selected { background: #e8f5e9; border-color: #1a472a; }
+    .shift-item-header { display: flex; justify-content: space-between; margin-bottom: 8px; }
+    .shift-item-header span:first-child { font-weight: 500; }
+    .progress-bar { height: 6px; background: #e0e0e0; border-radius: 3px; overflow: hidden; }
+    .progress-fill { height: 100%; transition: width 0.3s; }
+    .shift-stats { font-size: 12px; color: #666; margin-top: 6px; }
+    
+    /* Holes Grid */
+    .holes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 12px;
+    }
+    .hole-card {
+      background: white;
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      border-left: 4px solid #e0e0e0;
+    }
+    .hole-card.complete { border-left-color: #4caf50; }
+    .hole-card.partial { border-left-color: #ff9800; }
+    .hole-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+    .hole-number { font-size: 24px; font-weight: 700; color: #1a472a; }
+    .hole-badge {
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .hole-captain { font-size: 12px; color: #666; }
+    
+    /* Check-ins Table */
+    .checkins-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 10px; }
+    .checkins-header h2 { font-size: 20px; color: #333; }
+    .export-btn {
+      padding: 10px 20px;
+      background: #1a472a;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 500;
+    }
+    
+    .table-container { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+    table { width: 100%; border-collapse: collapse; }
+    th { padding: 12px 16px; text-align: left; font-weight: 600; font-size: 13px; background: #f5f5f5; }
+    th.center { text-align: center; }
+    td { padding: 12px 16px; border-top: 1px solid #eee; }
+    td.center { text-align: center; }
+    .badge { padding: 3px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+    .badge.alt { background: #fff3e0; color: #e65100; }
+    .badge.sched { background: #e8f5e9; color: #2e7d32; }
+    .empty-row { padding: 40px; text-align: center; color: #999; }
+    
+    /* Import Section */
+    .import-section { max-width: 600px; }
+    .import-card {
+      background: white;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .import-card p { color: #666; margin-bottom: 20px; line-height: 1.6; }
+    .import-card ul { color: #666; margin-bottom: 25px; padding-left: 20px; line-height: 1.8; }
+    .file-upload {
+      display: block;
+      padding: 40px;
+      border: 2px dashed #1a472a;
+      border-radius: 12px;
+      text-align: center;
+      cursor: pointer;
+      background: #f8fdf9;
+    }
+    .file-upload input { display: none; }
+    .file-upload-icon { font-size: 40px; margin-bottom: 10px; }
+    .file-upload-text { color: #1a472a; font-weight: 600; }
+    .import-success {
+      margin-top: 20px;
+      padding: 15px;
+      background: #e8f5e9;
+      border-radius: 8px;
+      color: #2e7d32;
+      font-weight: 500;
+    }
+    
+    /* Settings */
+    .settings-section { max-width: 600px; }
+    .settings-card {
+      background: white;
+      border-radius: 12px;
+      padding: 25px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .settings-card h3 { font-size: 16px; margin-bottom: 15px; }
+    .settings-card input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 15px;
+    }
+    .danger-zone {
+      background: #fff8f8;
+      border: 1px solid #ffcccc;
+    }
+    .danger-zone h3 { color: #c62828; }
+    .danger-btns { display: flex; gap: 10px; flex-wrap: wrap; }
+    .danger-btn {
+      padding: 10px 20px;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 500;
+    }
+    .danger-btn.warning { background: #ff9800; }
+    .danger-btn.danger { background: #c62828; }
+    
+    /* Captain Dashboard */
+    .captain-header {
+      background: linear-gradient(135deg, #1a472a, #2d5a3f);
+      color: white;
+      padding: 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .captain-header-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+    .captain-header h1 { font-size: 28px; font-weight: 700; }
+    .captain-header p { opacity: 0.8; font-size: 14px; margin-top: 5px; }
+    .logout-btn {
+      background: rgba(255,255,255,0.2);
+      border: none;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .captain-shift-selector { display: flex; gap: 10px; flex-wrap: wrap; }
+    .captain-shift-selector select {
+      padding: 10px 15px;
+      border-radius: 8px;
+      border: none;
+      font-size: 15px;
+      background: white;
+      font-weight: 500;
+    }
+    .shift-toggle { display: flex; border-radius: 8px; overflow: hidden; }
+    .shift-toggle button {
+      padding: 10px 20px;
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 15px;
+    }
+    .shift-toggle button.active { background: white; color: #1a472a; }
+    .shift-toggle button:not(.active) { background: rgba(255,255,255,0.2); color: white; }
+
+    .progress-section { padding: 15px 20px; background: white; border-bottom: 1px solid #eee; }
+    .progress-header { display: flex; justify-content: space-between; margin-bottom: 8px; }
+    .progress-header span:first-child { font-weight: 500; }
+    .progress-header span:last-child { font-weight: 600; color: #1a472a; }
+    .progress-track { height: 8px; background: #e0e0e0; border-radius: 4px; overflow: hidden; }
+    .progress-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #1a472a, #4caf50);
+      transition: width 0.3s;
+    }
+
+    .search-section { padding: 15px 20px; background: #f8f8f8; }
+    .search-input {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    .show-all-label { display: flex; align-items: center; gap: 8px; font-size: 14px; color: #666; }
+    .show-all-label input { width: 18px; height: 18px; }
+
+    .volunteer-list { padding: 10px 20px 100px; }
+    .volunteer-item {
+      display: flex;
+      align-items: center;
+      padding: 16px;
+      margin-bottom: 8px;
+      background: white;
+      border-radius: 12px;
+      cursor: pointer;
+      border: 2px solid transparent;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      transition: all 0.2s;
+    }
+    .volunteer-item.checked { border-color: #4caf50; }
+    .volunteer-checkbox {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      border: 2px solid #ddd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 15px;
+      flex-shrink: 0;
+      background: white;
+    }
+    .volunteer-item.checked .volunteer-checkbox { background: #4caf50; border: none; }
+    .volunteer-checkbox-icon { color: white; font-size: 16px; display: none; }
+    .volunteer-item.checked .volunteer-checkbox-icon { display: block; }
+    .volunteer-info { flex: 1; }
+    .volunteer-name { font-weight: 500; font-size: 16px; color: #333; }
+    .volunteer-alt {
+      display: inline-block;
+      margin-top: 4px;
+      padding: 2px 8px;
+      background: #fff3e0;
+      color: #e65100;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+    .volunteer-hole { font-size: 12px; color: #999; }
+    .empty-list {
+      text-align: center;
+      padding: 40px;
+      color: #999;
+      background: white;
+      border-radius: 12px;
+      margin-top: 10px;
+    }
+
+    .floating-summary {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: white;
+      padding: 15px 20px;
+      border-top: 1px solid #eee;
+      box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+    }
+    .summary-stats { display: flex; justify-content: space-around; text-align: center; }
+    .summary-stat-value { font-size: 24px; font-weight: 700; }
+    .summary-stat-value.green { color: #1a472a; }
+    .summary-stat-value.orange { color: #f57c00; }
+    .summary-stat-value.gray { color: #666; }
+    .summary-stat-label { font-size: 12px; color: #666; }
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+
+  <script>
+    // ==================== DATA STORE ====================
+    const DAYS = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+    const SHIFTS = ['AM', 'PM'];
+
+    const defaultData = {
+      volunteers: [],
+      checkIns: [],
+      submissions: [],
+      settings: {
+        adminPassword: 'admin2025',
+        tournamentName: 'Golf Tournament 2025',
+        alertTimes: [],
+        alertEmails: [],
+        gmailUser: '',
+        gmailAppPassword: ''
+      }
+    };
+
+    let appData = defaultData;
+    let dataLoaded = false;
+
+    let currentView = 'landing';
+    let adminAuth = false;
+    let captainAuth = null;
+    let selectedDay = null;
+    let selectedShift = null;
+    let adminTab = 'overview';
+    let showAllVolunteers = false;
+    let searchTerm = '';
+    let showModal = null;
+    let editingVolunteer = null;
+    let filterHole = null;
+
+    // Load data from server
+    async function loadDataFromServer() {
+      try {
+        var response = await fetch('/api/data');
+        var result = await response.json();
+        if (result.success && result.data) {
+          appData = result.data;
+          if (!appData.submissions) appData.submissions = [];
+          if (!appData.settings) appData.settings = defaultData.settings;
+        }
+      } catch (err) {
+        console.error('Failed to load data from server:', err);
+      }
+      // Also load archives
+      await loadArchivesFromServer();
+      dataLoaded = true;
+      var shift = getCurrentShift();
+      selectedDay = shift.day;
+      selectedShift = shift.shift;
+      render();
+    }
+
+    // Save data to server
+    var saveTimeout = null;
+    function saveData() {
+      // Debounce saves to avoid too many requests
+      if (saveTimeout) clearTimeout(saveTimeout);
+      saveTimeout = setTimeout(function() {
+        fetch('/api/data', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(appData)
+        }).catch(function(err) {
+          console.error('Failed to save data:', err);
+        });
+      }, 300);
+    }
+
+    // Archives stored on server
+    var serverArchives = [];
+
+    async function loadArchivesFromServer() {
+      try {
+        var response = await fetch('/api/archives');
+        var result = await response.json();
+        if (result.success && result.archives) {
+          serverArchives = result.archives;
+        }
+      } catch (err) {
+        console.error('Failed to load archives:', err);
+      }
+    }
+
+    function saveArchivesToServer() {
+      fetch('/api/archives', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ archives: serverArchives })
+      }).catch(function(err) {
+        console.error('Failed to save archives:', err);
+      });
+    }
+
+    function getArchives() {
+      return serverArchives;
+    }
+
+    function getCurrentShift() {
+      const now = new Date();
+      const dayIndex = (now.getDay() + 6) % 7;
+      return { day: DAYS[dayIndex], shift: now.getHours() < 13 ? 'AM' : 'PM' };
+    }
+
+    function formatPhone(phone) {
+      if (!phone) return '';
+      return String(phone).replace(/\D/g, '').slice(-4);
+    }
+
+    function formatTimestamp(ts) {
+      if (!ts) return '';
+      const d = new Date(ts);
+      return d.toLocaleString('en-US', { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit', hour12: true });
+    }
+
+    // ==================== RENDER ENGINE ====================
+    function render() {
+      const app = document.getElementById('app');
+
+      if (!dataLoaded) {
+        app.innerHTML = '<div class="landing"><div class="landing-card"><div class="landing-icon">⛳</div><p>Loading...</p></div></div>';
+        return;
+      }
+
+      if (currentView === 'landing') {
+        app.innerHTML = renderLanding();
+      } else if (currentView === 'adminLogin') {
+        app.innerHTML = renderAdminLogin();
+      } else if (currentView === 'admin') {
+        app.innerHTML = renderAdminDashboard();
+      } else if (currentView === 'captainLogin') {
+        app.innerHTML = renderCaptainLogin();
+      } else if (currentView === 'captain') {
+        app.innerHTML = renderCaptainDashboard();
+      }
+
+      attachEventListeners();
+    }
+
+    function renderLanding() {
+      return `
+        <div class="landing">
+          <div class="landing-card">
+            <div class="landing-icon">⛳</div>
+            <h1 class="landing-title">${appData.settings.tournamentName}</h1>
+            <p class="landing-subtitle">Volunteer Check-In System</p>
+            <button class="btn-primary" onclick="goTo('captainLogin')">🏌️ Hole Captain Check-In</button>
+            <button class="btn-secondary" onclick="goTo('adminLogin')">⚙️ Admin Dashboard</button>
+          </div>
+          <p class="footer-text">volunteer.golf</p>
+        </div>
+      `;
+    }
+
+    function renderAdminLogin() {
+      return `
+        <div class="login-page admin">
+          <div class="login-card">
+            <button class="back-btn" onclick="goTo('landing')">← Back</button>
+            <h2 style="color:#1a472a;margin-bottom:30px">Admin Login</h2>
+            <form id="adminLoginForm" novalidate>
+              <input type="text" id="adminPassword" class="input-field" placeholder="Enter admin password" autocomplete="off">
+              <div id="adminError" class="error-msg hidden"></div>
+              <button type="submit" class="submit-btn">Login</button>
+            </form>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderCaptainLogin() {
+      const captains = appData.volunteers.filter(v =>
+        v.type === 'Captain' || v.type === 'Asst. Chairman' || v.type === 'Chairman'
+      );
+
+      // Count captains per hole
+      const captainsPerHole = {};
+      captains.forEach(c => {
+        if (!captainsPerHole[c.hole]) captainsPerHole[c.hole] = [];
+        captainsPerHole[c.hole].push(c.name);
+      });
+      const multiCaptainHoles = Object.entries(captainsPerHole).filter(([h, caps]) => caps.length > 1).length;
+
+      return `
+        <div class="login-page captain">
+          <div class="login-card">
+            <button class="back-btn" onclick="goTo('landing')">← Back</button>
+            <div class="login-header">
+              <div style="font-size:50px;margin-bottom:10px">🏌️</div>
+              <h2>Hole Captain Login</h2>
+              <p>Enter the last 4 digits of your phone</p>
+            </div>
+            <form id="captainLoginForm" novalidate>
+              <input type="text" inputmode="numeric" id="captainPhone" class="input-field phone-input" placeholder="••••" maxlength="4" autocomplete="off">
+              <div id="captainError" class="error-msg hidden"></div>
+              <button type="submit" id="captainSubmit" class="submit-btn" disabled>Sign In</button>
+            </form>
+            ${captains.length === 0 ? '<p style="color:#999;font-size:13px;text-align:center;margin-top:20px">No captains loaded yet. Ask admin to import data.</p>' : ''}
+            ${captains.length > 0 ? `<p style="color:#999;font-size:12px;text-align:center;margin-top:20px">${captains.length} captains registered${multiCaptainHoles > 0 ? ` • ${multiCaptainHoles} holes with multiple captains` : ''}</p>` : ''}
+          </div>
+        </div>
+      `;
+    }
+
+    function renderAdminDashboard() {
+      const stats = getStats();
+      const currentStats = stats[`${selectedDay} ${selectedShift}`] || { scheduled: 0, checkedIn: 0 };
+      
+      return `
+        <div>
+          <div class="admin-header">
+            <div class="admin-header-left">
+              <span style="font-size:24px">⛳</span>
+              <div>
+                <h1>Admin Dashboard</h1>
+                <p>${appData.volunteers.length} volunteers loaded</p>
+              </div>
+            </div>
+            <button class="logout-btn" onclick="logout()">Logout</button>
+          </div>
+          
+          <div class="tabs">
+            ${['overview', 'checkins', 'volunteers', 'import', 'settings'].map(t => 
+              `<button class="tab-btn ${adminTab === t ? 'active' : ''}" onclick="setAdminTab('${t}')">${t === 'checkins' ? 'Check-ins' : t === 'volunteers' ? 'Edit Volunteers' : t.charAt(0).toUpperCase() + t.slice(1)}</button>`
+            ).join('')}
+          </div>
+          
+          ${(adminTab === 'overview' || adminTab === 'checkins') ? `
+            <div class="shift-selector">
+              <label>Viewing:</label>
+              <select id="daySelect" onchange="setSelectedDay(this.value)">
+                ${DAYS.map(d => `<option value="${d}" ${d === selectedDay ? 'selected' : ''}>${d}</option>`).join('')}
+              </select>
+              <select id="shiftSelect" onchange="setSelectedShift(this.value)">
+                ${SHIFTS.map(s => `<option value="${s}" ${s === selectedShift ? 'selected' : ''}>${s}</option>`).join('')}
+              </select>
+              <span class="count">${currentStats.checkedIn} / ${currentStats.scheduled} checked in</span>
+            </div>
+          ` : ''}
+          
+          <div class="content">
+            ${adminTab === 'overview' ? renderOverview(stats) : ''}
+            ${adminTab === 'checkins' ? renderCheckins() : ''}
+            ${adminTab === 'volunteers' ? renderVolunteersEdit() : ''}
+            ${adminTab === 'import' ? renderImport() : ''}
+            ${adminTab === 'settings' ? renderSettings() : ''}
+          </div>
+        </div>
+      `;
+    }
+
+    function getStats() {
+      const stats = {};
+      DAYS.forEach(day => {
+        SHIFTS.forEach(shift => {
+          const key = `${day} ${shift}`;
+          const scheduled = appData.volunteers.filter(v => v.scheduled && v.scheduled[key]);
+          const checkedIn = appData.checkIns.filter(c => c.day === day && c.shift === shift);
+          const alternates = checkedIn.filter(c => c.isAlternate);
+          stats[key] = {
+            scheduled: scheduled.length,
+            checkedIn: checkedIn.length,
+            alternates: alternates.length,
+            percentage: scheduled.length > 0 ? Math.round((checkedIn.length / scheduled.length) * 100) : 0
+          };
+        });
+      });
+      return stats;
+    }
+
+    function renderOverview(stats) {
+      // Calculate hole stats
+      const holes = {};
+      for (let i = 1; i <= 18; i++) {
+        const scheduled = appData.volunteers.filter(v => v.hole === i && v.scheduled && v.scheduled[`${selectedDay} ${selectedShift}`]);
+        const checkedIn = appData.checkIns.filter(c => c.hole === i && c.day === selectedDay && c.shift === selectedShift);
+        const captains = appData.volunteers.filter(v => v.hole === i && (v.type === 'Captain' || v.type === 'Asst. Chairman'));
+        const submission = appData.submissions.find(s => s.hole === i && s.day === selectedDay && s.shift === selectedShift);
+        holes[i] = {
+          scheduled: scheduled.length,
+          checkedIn: checkedIn.length,
+          percentage: scheduled.length > 0 ? Math.round((checkedIn.length / scheduled.length) * 100) : 0,
+          captains: captains.map(c => c.name.split(',')[0]).join(', ') || 'Unassigned',
+          submitted: !!submission,
+          submittedAt: submission ? formatTimestamp(submission.timestamp) : null
+        };
+      }
+      
+      const totalScheduled = Object.values(holes).reduce((sum, h) => sum + h.scheduled, 0);
+      const totalCheckedIn = Object.values(holes).reduce((sum, h) => sum + h.checkedIn, 0);
+      const submittedCount = Object.values(holes).filter(h => h.submitted && h.scheduled > 0).length;
+      const activeHoles = Object.values(holes).filter(h => h.scheduled > 0).length;
+      const overallPct = totalScheduled > 0 ? Math.round((totalCheckedIn / totalScheduled) * 100) : 0;
+      
+      return `
+        <div style="margin-bottom:20px">
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px">
+            <h2 style="font-size:20px;color:#333;margin:0">${selectedDay} ${selectedShift} Shift</h2>
+            <div style="display:flex;gap:20px;font-size:14px">
+              <span><strong>${totalCheckedIn}</strong>/${totalScheduled} volunteers (${overallPct}%)</span>
+              <span style="color:${submittedCount === activeHoles ? '#2e7d32' : '#e65100'}">
+                ${submittedCount === activeHoles ? '✓' : '⚠️'} ${submittedCount}/${activeHoles} holes submitted
+              </span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="holes-grid">
+          ${Object.entries(holes).map(([hole, s]) => `
+            <div class="hole-card ${s.percentage >= 100 ? 'complete' : s.percentage > 0 ? 'partial' : ''}" 
+                 onclick="viewHoleCheckins(${hole})" 
+                 style="cursor:pointer;transition:transform 0.2s;${s.scheduled === 0 ? 'opacity:0.5' : ''}"
+                 onmouseover="this.style.transform='translateY(-2px)'" 
+                 onmouseout="this.style.transform='translateY(0)'">
+              <div class="hole-header">
+                <span class="hole-number">#${hole}</span>
+                <span class="hole-badge" style="background:${s.percentage >= 100 ? '#e8f5e9' : s.percentage > 0 ? '#fff3e0' : '#f5f5f5'};color:${s.percentage >= 100 ? '#2e7d32' : s.percentage > 0 ? '#e65100' : '#999'}">
+                  ${s.percentage}%
+                </span>
+              </div>
+              <div style="font-size:13px;color:#666;margin:8px 0">${s.checkedIn}/${s.scheduled} checked in</div>
+              <div class="hole-captain" style="font-size:11px;color:#999;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${s.captains}</div>
+              ${s.scheduled > 0 ? `
+                <div class="hole-submission-badge ${s.submitted ? 'submitted' : 'not-submitted'}">
+                  ${s.submitted ? '✓ Submitted' : '⏳ Pending'}
+                </div>
+              ` : '<div style="font-size:11px;color:#999;margin-top:4px">No volunteers</div>'}
+            </div>
+          `).join('')}
+        </div>
+        
+        <div style="margin-top:30px">
+          <h3 style="font-size:16px;color:#333;margin-bottom:15px">Week Overview</h3>
+          <div class="overview-grid">
+            ${DAYS.map(day => `
+              <div class="day-card">
+                <h3>${day}</h3>
+                ${SHIFTS.map(shift => {
+                  const s = stats[`${day} ${shift}`];
+                  const isSelected = day === selectedDay && shift === selectedShift;
+                  const color = s.percentage >= 90 ? '#4caf50' : s.percentage >= 50 ? '#ff9800' : '#1a472a';
+                  return `
+                    <div class="shift-item ${isSelected ? 'selected' : ''}" onclick="selectShift('${day}', '${shift}')">
+                      <div class="shift-item-header">
+                        <span>${shift}</span>
+                        <span style="font-weight:600;color:${s.percentage >= 90 ? '#2e7d32' : s.percentage >= 50 ? '#f57c00' : '#666'}">${s.percentage}%</span>
+                      </div>
+                      <div class="progress-bar">
+                        <div class="progress-fill" style="width:${s.percentage}%;background:${color}"></div>
+                      </div>
+                      <div class="shift-stats">${s.checkedIn} / ${s.scheduled}${s.alternates > 0 ? ` (+${s.alternates} alt)` : ''}</div>
+                    </div>
+                  `;
+                }).join('')}
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      `;
+    }
+
+    function renderCheckins() {
+      let checkins = appData.checkIns
+        .filter(c => c.day === selectedDay && c.shift === selectedShift)
+        .sort((a, b) => a.hole - b.hole);
+      
+      // Apply hole filter if set
+      if (filterHole) {
+        checkins = checkins.filter(c => c.hole === filterHole);
+      }
+      
+      return `
+        <div class="checkins-header">
+          <div style="display:flex;align-items:center;gap:15px;flex-wrap:wrap">
+            <h2 style="margin:0">Check-In Records - ${selectedDay} ${selectedShift}</h2>
+            ${filterHole ? `
+              <span style="background:#e3f2fd;color:#1565c0;padding:6px 12px;border-radius:20px;font-size:13px;display:flex;align-items:center;gap:8px">
+                Hole #${filterHole}
+                <button onclick="clearHoleFilter()" style="background:none;border:none;cursor:pointer;font-size:16px;color:#1565c0">✕</button>
+              </span>
+            ` : ''}
+          </div>
+          <button class="export-btn" onclick="exportCSV()">📥 Export CSV</button>
+        </div>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th class="center">Hole</th>
+                <th>Time</th>
+                <th>Captain</th>
+                <th class="center">Type</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${checkins.length === 0 ? `
+                <tr><td colspan="5" class="empty-row">${filterHole ? `No check-ins for Hole #${filterHole} this shift.` : 'No check-ins recorded for this shift yet.'}</td></tr>
+              ` : checkins.map(c => `
+                <tr>
+                  <td>${c.volunteerName}</td>
+                  <td class="center" style="font-weight:600">#${c.hole}</td>
+                  <td style="font-size:13px;color:#666">${formatTimestamp(c.timestamp)}</td>
+                  <td style="font-size:13px">${c.checkedInBy}</td>
+                  <td class="center"><span class="badge ${c.isAlternate ? 'alt' : 'sched'}">${c.isAlternate ? 'ALT' : 'SCHED'}</span></td>
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+        </div>
+      `;
+    }
+    
+    function viewHoleCheckins(hole) {
+      filterHole = hole;
+      adminTab = 'checkins';
+      render();
+    }
+    
+    function clearHoleFilter() {
+      filterHole = null;
+      render();
+    }
+
+    function renderImport() {
+      return `
+        <div class="import-section">
+          <h2 style="font-size:20px;color:#333;margin-bottom:20px">Import Volunteers</h2>
+          <div class="import-card">
+            <p>Upload a CSV file with volunteer data. The file should include columns for:</p>
+            <ul>
+              <li><strong>__NamePK</strong> or <strong>Name</strong> - Volunteer name</li>
+              <li><strong>Volunteer Type</strong> - "Volunteer", "Captain", etc.</li>
+              <li><strong>Assigned Location</strong> or <strong>Hole</strong> - Hole number</li>
+              <li><strong>Phone_Cell</strong> or <strong>Cell</strong> - Phone number</li>
+              <li><strong>Years Worked</strong> or <strong>Years</strong> - Number of years volunteered</li>
+              <li><strong>Scheduled Monday AM</strong>, etc. - 1 if scheduled</li>
+            </ul>
+            <label class="file-upload">
+              <input type="file" accept=".csv" id="fileInput" onchange="handleFileUpload(this)">
+              <div class="file-upload-icon">📄</div>
+              <div class="file-upload-text">Click to upload CSV file</div>
+            </label>
+            ${appData.volunteers.length > 0 ? `
+              <div class="import-success">
+                ✓ ${appData.volunteers.length} volunteers loaded
+                <span style="color:#666;margin-left:10px">(${appData.volunteers.filter(v => v.type === 'Captain').length} captains)</span>
+              </div>
+            ` : ''}
+          </div>
+
+          <div class="import-card" style="margin-top:20px">
+            <h3 style="font-size:16px;color:#1a472a;margin-bottom:15px">Update Existing Volunteers</h3>
+            <p>Upload a CSV with <strong>Name</strong> and <strong>Years Worked</strong> columns to update years for existing volunteers. Names must match exactly.</p>
+            <label class="file-upload" style="border-color:#ff9800;background:#fffbf5">
+              <input type="file" accept=".csv" id="updateFileInput" onchange="handleUpdateUpload(this)">
+              <div class="file-upload-icon">🔄</div>
+              <div class="file-upload-text">Click to upload update CSV</div>
+            </label>
+          </div>
+        </div>
+      `;
+    }
+    
+    // Volunteer editing state
+    let volSearchTerm = '';
+    let volFilterType = 'all';
+    let volFilterHole = 'all';
+    
+    function renderVolunteersEdit() {
+      // Edit modal
+      const editModal = editingVolunteer ? `
+        <div class="modal-overlay" onclick="closeEditModal(event)">
+          <div class="modal" onclick="event.stopPropagation()" style="max-width:500px;max-height:90vh;overflow-y:auto">
+            <h3>Edit Volunteer</h3>
+            <div class="edit-modal-form">
+              <label>Name</label>
+              <input type="text" id="editName" value="${editingVolunteer.name}" placeholder="Last, First">
+              
+              <label>Type</label>
+              <select id="editType">
+                ${['Volunteer', 'Captain', 'Asst. Chairman', 'Chairman'].map(t => 
+                  `<option value="${t}" ${editingVolunteer.type === t ? 'selected' : ''}>${t}</option>`
+                ).join('')}
+              </select>
+              
+              <label>Hole Assignment</label>
+              <select id="editHole">
+                ${[...Array(19).keys()].slice(1).map(h => 
+                  `<option value="${h}" ${editingVolunteer.hole === h ? 'selected' : ''}>Hole ${h}</option>`
+                ).join('')}
+                <option value="99" ${editingVolunteer.hole === 99 ? 'selected' : ''}>Admin (99)</option>
+              </select>
+              
+              <label>Phone</label>
+              <input type="tel" id="editPhone" value="${editingVolunteer.phone || ''}" placeholder="(555) 123-4567">
+
+              <label>Years Worked</label>
+              <input type="number" id="editYears" value="${editingVolunteer.yearsWorked || 0}" min="0" placeholder="0">
+
+              <label>Schedule</label>
+              <div class="schedule-grid">
+                ${DAYS.map(day => 
+                  SHIFTS.map(shift => {
+                    const key = `${day} ${shift}`;
+                    const isChecked = editingVolunteer.scheduled && editingVolunteer.scheduled[key];
+                    return `
+                      <label class="schedule-item">
+                        <input type="checkbox" id="sched_${day}_${shift}" ${isChecked ? 'checked' : ''}>
+                        ${day.slice(0,3)} ${shift}
+                      </label>
+                    `;
+                  }).join('')
+                ).join('')}
+              </div>
+            </div>
+            <div class="modal-buttons" style="margin-top:20px">
+              <button class="modal-btn cancel" onclick="editingVolunteer=null;render()">Cancel</button>
+              <button class="modal-btn confirm" onclick="saveVolunteerEdit()">Save Changes</button>
+            </div>
+          </div>
+        </div>
+      ` : '';
+      
+      // Filter volunteers
+      let filtered = appData.volunteers;
+      if (volSearchTerm) {
+        filtered = filtered.filter(v => v.name.toLowerCase().includes(volSearchTerm.toLowerCase()));
+      }
+      if (volFilterType !== 'all') {
+        filtered = filtered.filter(v => v.type === volFilterType);
+      }
+      if (volFilterHole !== 'all') {
+        filtered = filtered.filter(v => v.hole === parseInt(volFilterHole));
+      }
+      filtered = filtered.sort((a, b) => a.name.localeCompare(b.name));
+      
+      return `
+        ${editModal}
+        <div style="margin-bottom:20px">
+          <h2 style="font-size:20px;color:#333;margin-bottom:15px">Edit Volunteers</h2>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+            <input type="text" class="search-bar" placeholder="Search by name..." value="${volSearchTerm}" oninput="volSearchTerm=this.value;render()">
+            <select onchange="volFilterType=this.value;render()" style="padding:10px;border:1px solid #ddd;border-radius:6px">
+              <option value="all" ${volFilterType === 'all' ? 'selected' : ''}>All Types</option>
+              <option value="Volunteer" ${volFilterType === 'Volunteer' ? 'selected' : ''}>Volunteers</option>
+              <option value="Captain" ${volFilterType === 'Captain' ? 'selected' : ''}>Captains</option>
+              <option value="Asst. Chairman" ${volFilterType === 'Asst. Chairman' ? 'selected' : ''}>Asst. Chairmen</option>
+            </select>
+            <select onchange="volFilterHole=this.value;render()" style="padding:10px;border:1px solid #ddd;border-radius:6px">
+              <option value="all" ${volFilterHole === 'all' ? 'selected' : ''}>All Holes</option>
+              ${[...Array(19).keys()].slice(1).map(h => 
+                `<option value="${h}" ${volFilterHole === String(h) ? 'selected' : ''}>Hole ${h}</option>`
+              ).join('')}
+            </select>
+            <span style="color:#666;font-size:13px">${filtered.length} results</span>
+          </div>
+        </div>
+        
+        <div class="table-container" style="max-height:60vh;overflow-y:auto">
+          <table class="volunteer-table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Hole</th>
+                <th>Years</th>
+                <th>Phone (last 4)</th>
+                <th>Shifts</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              ${filtered.length === 0 ? `
+                <tr><td colspan="7" style="padding:30px;text-align:center;color:#999">No volunteers found</td></tr>
+              ` : filtered.slice(0, 100).map(v => {
+                const shiftCount = v.scheduled ? Object.keys(v.scheduled).filter(k => v.scheduled[k]).length : 0;
+                return `
+                  <tr>
+                    <td style="font-weight:500">${v.name}</td>
+                    <td><span style="padding:2px 6px;border-radius:4px;font-size:11px;background:${v.type === 'Captain' ? '#e3f2fd' : v.type === 'Volunteer' ? '#f5f5f5' : '#fff3e0'}">${v.type}</span></td>
+                    <td>#${v.hole}</td>
+                    <td style="color:#666;text-align:center">${v.yearsWorked || 0}</td>
+                    <td style="color:#666">${formatPhone(v.phone) || '-'}</td>
+                    <td style="color:#666">${shiftCount} shifts</td>
+                    <td><button class="edit-btn" onclick="editVolunteer('${v.id}')">Edit</button></td>
+                  </tr>
+                `;
+              }).join('')}
+              ${filtered.length > 100 ? `
+                <tr><td colspan="7" style="padding:15px;text-align:center;color:#666;font-size:13px">Showing first 100 of ${filtered.length} results. Use search to narrow down.</td></tr>
+              ` : ''}
+            </tbody>
+          </table>
+        </div>
+      `;
+    }
+    
+    function editVolunteer(id) {
+      const vol = appData.volunteers.find(v => v.id === id);
+      if (vol) {
+        editingVolunteer = { ...vol, scheduled: { ...(vol.scheduled || {}) } };
+        render();
+      }
+    }
+    
+    function closeEditModal(event) {
+      if (event.target.classList.contains('modal-overlay')) {
+        editingVolunteer = null;
+        render();
+      }
+    }
+    
+    function saveVolunteerEdit() {
+      if (!editingVolunteer) return;
+      
+      const idx = appData.volunteers.findIndex(v => v.id === editingVolunteer.id);
+      if (idx === -1) return;
+      
+      // Get values from form
+      const newName = document.getElementById('editName').value.trim();
+      const newType = document.getElementById('editType').value;
+      const newHole = parseInt(document.getElementById('editHole').value);
+      const newPhone = document.getElementById('editPhone').value.trim();
+      const newYears = parseInt(document.getElementById('editYears').value) || 0;
+      
+      // Get schedule
+      const newSchedule = {};
+      DAYS.forEach(day => {
+        SHIFTS.forEach(shift => {
+          const checkbox = document.getElementById(`sched_${day}_${shift}`);
+          if (checkbox && checkbox.checked) {
+            newSchedule[`${day} ${shift}`] = true;
+          }
+        });
+      });
+      
+      // Update volunteer
+      appData.volunteers[idx] = {
+        ...appData.volunteers[idx],
+        name: newName,
+        type: newType,
+        hole: newHole,
+        phone: newPhone,
+        yearsWorked: newYears,
+        scheduled: newSchedule
+      };
+      
+      // Update any check-in records with new name
+      appData.checkIns = appData.checkIns.map(c => {
+        if (c.volunteerId === editingVolunteer.id) {
+          return { ...c, volunteerName: newName };
+        }
+        return c;
+      });
+      
+      saveData();
+      editingVolunteer = null;
+      render();
+      
+      alert('✓ Volunteer updated successfully!');
+    }
+
+    function renderSettings() {
+      const alertTimes = appData.settings.alertTimes || [];
+      
+      return `
+        <div class="settings-section">
+          <h2 style="font-size:20px;color:#333;margin-bottom:20px">Settings</h2>
+          <div class="settings-card">
+            <h3>Tournament Name</h3>
+            <input type="text" id="tournamentName" value="${appData.settings.tournamentName}" onchange="updateSetting('tournamentName', this.value)">
+          </div>
+          <div class="settings-card">
+            <h3>Admin Password</h3>
+            <input type="text" id="adminPasswordSetting" value="${appData.settings.adminPassword}" onchange="updateSetting('adminPassword', this.value)">
+          </div>
+          
+          <!-- Email alerts hidden - SMTP ports blocked on server. Contact Digital Ocean to enable. -->
+          
+          <div class="settings-card" style="border:2px solid #1a472a">
+            <h3 style="color:#1a472a">📁 Tournament Archives</h3>
+            <p style="color:#666;font-size:13px;margin-bottom:15px">Save your tournament data to use next year, or restore a previous year's data.</p>
+
+            <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px">
+              <button class="add-alert-btn" onclick="saveArchive()" style="background:#1a472a">💾 Save Current Year</button>
+              <button class="add-alert-btn" onclick="exportArchiveFile()" style="background:#2196F3">📥 Download Backup</button>
+              <label class="add-alert-btn" style="background:#ff9800;cursor:pointer;display:inline-block">
+                📤 Load Backup File
+                <input type="file" accept=".json" onchange="importArchiveFile(this)" style="display:none">
+              </label>
+            </div>
+
+            <div id="archivesList">
+              ${renderArchivesList()}
+            </div>
+          </div>
+
+          <div class="settings-card danger-zone">
+            <h3>Danger Zone</h3>
+            <div class="danger-btns">
+              <button class="danger-btn warning" onclick="clearCheckIns()">Clear Check-Ins Only</button>
+              <button class="danger-btn warning" onclick="clearSubmissions()" style="background:#9c27b0">Clear Submissions</button>
+              <button class="danger-btn danger" onclick="clearAllData()">Clear All Data</button>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderArchivesList() {
+      var archives = getArchives();
+      if (archives.length === 0) {
+        return '<p style="color:#999;font-size:13px;font-style:italic">No saved archives yet.</p>';
+      }
+
+      return `
+        <table style="width:100%;border-collapse:collapse;font-size:13px">
+          <thead>
+            <tr style="border-bottom:1px solid #ddd">
+              <th style="text-align:left;padding:8px 0">Year/Name</th>
+              <th style="text-align:center;padding:8px 0">Volunteers</th>
+              <th style="text-align:center;padding:8px 0">Check-ins</th>
+              <th style="text-align:right;padding:8px 0">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${archives.map((a, i) => `
+              <tr style="border-bottom:1px solid #eee">
+                <td style="padding:10px 0">
+                  <strong>${a.name}</strong>
+                  <div style="font-size:11px;color:#999">${new Date(a.savedAt).toLocaleDateString()}</div>
+                </td>
+                <td style="text-align:center">${a.volunteerCount}</td>
+                <td style="text-align:center">${a.checkInCount}</td>
+                <td style="text-align:right">
+                  <button onclick="restoreArchive(${i})" style="padding:5px 10px;background:#1a472a;color:white;border:none;border-radius:4px;cursor:pointer;font-size:12px;margin-right:5px">Restore</button>
+                  <button onclick="deleteArchive(${i})" style="padding:5px 10px;background:#dc3545;color:white;border:none;border-radius:4px;cursor:pointer;font-size:12px">Delete</button>
+                </td>
+              </tr>
+            `).join('')}
+          </tbody>
+        </table>
+      `;
+    }
+
+    function renderCaptainDashboard() {
+      const holeVolunteers = appData.volunteers.filter(v => v.hole === captainAuth.hole && v.type === 'Volunteer');
+      const scheduledVolunteers = holeVolunteers.filter(v => v.scheduled && v.scheduled[`${selectedDay} ${selectedShift}`]);
+      const checkedInIds = new Set(
+        appData.checkIns
+          .filter(c => c.day === selectedDay && c.shift === selectedShift && c.hole === captainAuth.hole)
+          .map(c => c.volunteerId)
+      );
+      
+      // Find co-captains
+      const coCaptains = appData.volunteers.filter(v => 
+        v.hole === captainAuth.hole && 
+        (v.type === 'Captain' || v.type === 'Asst. Chairman') && 
+        v.name !== captainAuth.name
+      );
+      
+      // Check if already submitted
+      const submission = appData.submissions.find(s => 
+        s.hole === captainAuth.hole && s.day === selectedDay && s.shift === selectedShift
+      );
+      const isSubmitted = !!submission;
+      
+      let displayVolunteers = showAllVolunteers ? holeVolunteers : scheduledVolunteers;
+      if (searchTerm) {
+        displayVolunteers = appData.volunteers.filter(v => 
+          v.name.toLowerCase().includes(searchTerm.toLowerCase()) && v.type === 'Volunteer'
+        );
+      }
+      displayVolunteers = displayVolunteers.sort((a, b) => a.name.localeCompare(b.name));
+      
+      const alternatesCount = appData.checkIns.filter(c => 
+        c.day === selectedDay && c.shift === selectedShift && c.hole === captainAuth.hole && c.isAlternate
+      ).length;
+      
+      const modalHtml = showModal ? `
+        <div class="modal-overlay" onclick="closeModal(event)">
+          <div class="modal" onclick="event.stopPropagation()">
+            <h3>${showModal === 'submit' ? '✅ Submit Check-In?' : '🔄 Re-submit Check-In?'}</h3>
+            <p>
+              ${showModal === 'submit' 
+                ? `You are submitting check-ins for <strong>Hole #${captainAuth.hole}</strong> - <strong>${selectedDay} ${selectedShift}</strong>.<br><br>
+                   <strong>${checkedInIds.size}</strong> volunteers checked in${alternatesCount > 0 ? ` (including ${alternatesCount} alternates)` : ''}.`
+                : `You are updating your submission for <strong>Hole #${captainAuth.hole}</strong> - <strong>${selectedDay} ${selectedShift}</strong>.<br><br>
+                   Updated count: <strong>${checkedInIds.size}</strong> volunteers.`
+              }
+            </p>
+            <div class="modal-buttons">
+              <button class="modal-btn cancel" onclick="showModal=null;render()">Cancel</button>
+              <button class="modal-btn confirm" onclick="confirmSubmission()">${showModal === 'submit' ? 'Submit' : 'Re-submit'}</button>
+            </div>
+          </div>
+        </div>
+      ` : '';
+      
+      return `
+        <div>
+          ${modalHtml}
+          <div class="captain-header">
+            <div class="captain-header-top">
+              <div>
+                <h1>Hole #${captainAuth.hole}</h1>
+                <p>Captain: ${captainAuth.name}</p>
+                ${coCaptains.length > 0 ? `<p style="opacity:0.85;font-size:14px;margin-top:4px">Also: ${coCaptains.map(c => c.name.split(',')[0]).join(', ')}</p>` : ''}
+              </div>
+              <button class="logout-btn" onclick="logout()">Sign Out</button>
+            </div>
+            <div class="captain-shift-selector">
+              <select onchange="setSelectedDay(this.value)" aria-label="Select Day">
+                ${DAYS.map(d => `<option value="${d}" ${d === selectedDay ? 'selected' : ''}>${d}</option>`).join('')}
+              </select>
+              <div class="shift-toggle">
+                ${SHIFTS.map(s => `
+                  <button class="${s === selectedShift ? 'active' : ''}" onclick="setSelectedShift('${s}')">${s === 'AM' ? 'Morning' : 'Afternoon'}</button>
+                `).join('')}
+              </div>
+            </div>
+          </div>
+
+          <!-- INSTRUCTIONS BANNER -->
+          <div style="background:#e8f5e9;border-bottom:2px solid #4caf50;padding:16px 20px">
+            <p style="color:#1b5e20;font-size:17px;font-weight:600;margin:0;line-height:1.5">
+              👆 <strong>TAP a name</strong> to check them in. Tap again to undo.
+            </p>
+          </div>
+
+          <div class="progress-section">
+            <div class="progress-header">
+              <span>Your Progress</span>
+              <span>${checkedInIds.size} of ${scheduledVolunteers.length} checked in</span>
+            </div>
+            <div class="progress-track">
+              <div class="progress-bar-fill" style="width:${scheduledVolunteers.length > 0 ? (checkedInIds.size / scheduledVolunteers.length) * 100 : 0}%"></div>
+            </div>
+          </div>
+
+          <div class="search-section">
+            <input type="text" class="search-input" placeholder="🔍 Search for a volunteer by name..." value="${searchTerm}" oninput="setSearchTerm(this.value)">
+            <label class="show-all-label">
+              <input type="checkbox" ${showAllVolunteers ? 'checked' : ''} onchange="toggleShowAll(this.checked)">
+              Show ALL volunteers (even if not scheduled today)
+            </label>
+          </div>
+
+          <div class="volunteer-list" style="padding-bottom:220px">
+            ${displayVolunteers.length === 0 ? `
+              <div class="empty-list">
+                ${searchTerm ? '❌ No volunteers found with that name' : '📋 No volunteers scheduled for this shift'}
+              </div>
+            ` : displayVolunteers.map(v => {
+              const isCheckedIn = checkedInIds.has(v.id);
+              const isScheduled = v.scheduled && v.scheduled[`${selectedDay} ${selectedShift}`];
+              return `
+                <div class="volunteer-item ${isCheckedIn ? 'checked' : ''}" onclick="toggleCheckIn('${v.id}')">
+                  <div class="volunteer-checkbox">
+                    <span class="volunteer-checkbox-icon">✓</span>
+                  </div>
+                  <div class="volunteer-info">
+                    <div class="volunteer-name">${v.name}</div>
+                    <div style="display:flex;gap:8px;align-items:center;margin-top:6px">
+                      ${v.yearsWorked ? `<span style="font-size:13px;color:#555;background:#e8e8e8;padding:4px 8px;border-radius:6px;font-weight:500">${v.yearsWorked} yr${v.yearsWorked !== 1 ? 's' : ''}</span>` : ''}
+                      ${!isScheduled ? '<span class="volunteer-alt">NOT SCHEDULED</span>' : ''}
+                    </div>
+                  </div>
+                  ${v.hole !== captainAuth.hole ? `<span class="volunteer-hole">From Hole #${v.hole}</span>` : ''}
+                </div>
+              `;
+            }).join('')}
+          </div>
+          
+          <div class="floating-summary" style="padding-bottom:0">
+            <div class="summary-stats">
+              <div>
+                <div class="summary-stat-value green">${checkedInIds.size}</div>
+                <div class="summary-stat-label">Checked In</div>
+              </div>
+              <div>
+                <div class="summary-stat-value orange">${scheduledVolunteers.length - checkedInIds.size}</div>
+                <div class="summary-stat-label">Remaining</div>
+              </div>
+              <div>
+                <div class="summary-stat-value gray">${alternatesCount}</div>
+                <div class="summary-stat-label">Alternates</div>
+              </div>
+            </div>
+            <div class="submit-section" style="padding:15px 0 10px">
+              <button 
+                class="submit-btn-large ${isSubmitted ? 'resubmit' : 'submit'}" 
+                onclick="showModal='${isSubmitted ? 'resubmit' : 'submit'}';render()"
+                ${checkedInIds.size === 0 ? 'disabled' : ''}
+              >
+                ${isSubmitted ? '🔄 Re-submit Check-In' : '✅ Submit Check-In'}
+              </button>
+              ${isSubmitted ? `
+                <div class="submission-status submitted">
+                  ✓ Submitted at ${formatTimestamp(submission.timestamp)}
+                </div>
+              ` : `
+                <div class="submission-status pending">
+                  ⏳ Not yet submitted
+                </div>
+              `}
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    // ==================== EVENT HANDLERS ====================
+    function goTo(view) {
+      currentView = view;
+      render();
+    }
+
+    function logout() {
+      adminAuth = false;
+      captainAuth = null;
+      currentView = 'landing';
+      render();
+    }
+
+    function setAdminTab(tab) {
+      adminTab = tab;
+      render();
+    }
+
+    function setSelectedDay(day) {
+      selectedDay = day;
+      render();
+    }
+
+    function setSelectedShift(shift) {
+      selectedShift = shift;
+      render();
+    }
+
+    function selectShift(day, shift) {
+      selectedDay = day;
+      selectedShift = shift;
+      render();
+    }
+
+    function setSearchTerm(term) {
+      searchTerm = term;
+      render();
+    }
+
+    function toggleShowAll(checked) {
+      showAllVolunteers = checked;
+      render();
+    }
+
+    function updateSetting(key, value) {
+      appData.settings[key] = value;
+      saveData();
+    }
+
+    // Archive functions
+    function saveArchive() {
+      const name = prompt('Enter a name for this archive (e.g., "2025 Tournament"):', appData.settings.tournamentName || 'Tournament ' + new Date().getFullYear());
+      if (!name) return;
+
+      const archive = {
+        name: name,
+        savedAt: new Date().toISOString(),
+        volunteerCount: appData.volunteers.length,
+        checkInCount: appData.checkIns.length,
+        data: JSON.parse(JSON.stringify(appData))
+      };
+
+      serverArchives.push(archive);
+      saveArchivesToServer();
+
+      alert('Archive "' + name + '" saved successfully!');
+      render();
+    }
+
+    function restoreArchive(index) {
+      const archive = serverArchives[index];
+
+      if (!archive) {
+        alert('Archive not found');
+        return;
+      }
+
+      const mode = prompt(
+        `Restore "${archive.name}"?\n\n` +
+        `Options:\n` +
+        `1 = Full restore (replace everything)\n` +
+        `2 = Volunteers only (keep current check-ins)\n` +
+        `3 = Merge volunteers (add years worked to current)\n\n` +
+        `Enter 1, 2, or 3:`,
+        '1'
+      );
+
+      if (mode === '1') {
+        appData = JSON.parse(JSON.stringify(archive.data));
+        saveData();
+        alert(`✓ Fully restored "${archive.name}"`);
+      } else if (mode === '2') {
+        const currentCheckIns = appData.checkIns;
+        const currentSubmissions = appData.submissions;
+        appData.volunteers = JSON.parse(JSON.stringify(archive.data.volunteers));
+        appData.checkIns = currentCheckIns;
+        appData.submissions = currentSubmissions;
+        saveData();
+        alert(`✓ Restored volunteers from "${archive.name}" (kept current check-ins)`);
+      } else if (mode === '3') {
+        // Merge: update yearsWorked for matching volunteers
+        let updated = 0;
+        archive.data.volunteers.forEach(archivedVol => {
+          const match = appData.volunteers.find(v =>
+            v.name.trim().toLowerCase() === archivedVol.name.trim().toLowerCase()
+          );
+          if (match && archivedVol.yearsWorked) {
+            match.yearsWorked = archivedVol.yearsWorked;
+            updated++;
+          }
+        });
+        saveData();
+        alert(`✓ Merged ${updated} volunteer(s) from "${archive.name}"`);
+      } else {
+        return;
+      }
+
+      render();
+    }
+
+    function deleteArchive(index) {
+      const archive = serverArchives[index];
+
+      if (!confirm('Delete archive "' + archive.name + '"? This cannot be undone.')) return;
+
+      serverArchives.splice(index, 1);
+      saveArchivesToServer();
+
+      alert('Archive deleted');
+      render();
+    }
+
+    function exportArchiveFile() {
+      const exportData = {
+        type: 'volunteer_golf_backup',
+        exportedAt: new Date().toISOString(),
+        currentData: appData,
+        archives: serverArchives
+      };
+
+      const blob = new Blob([JSON.stringify(exportData, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `volunteer_golf_backup_${new Date().toISOString().split('T')[0]}.json`;
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+
+    function importArchiveFile(input) {
+      const file = input.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        try {
+          const importData = JSON.parse(e.target.result);
+
+          if (importData.type !== 'volunteer_golf_backup') {
+            alert('Invalid backup file format');
+            return;
+          }
+
+          const mode = prompt(
+            'Found backup from ' + new Date(importData.exportedAt).toLocaleDateString() + '\n\n' +
+            'Contains:\n' +
+            '- ' + importData.currentData.volunteers.length + ' volunteers\n' +
+            '- ' + importData.currentData.checkIns.length + ' check-ins\n' +
+            '- ' + importData.archives.length + ' archived tournament(s)\n\n' +
+            'Options:\n' +
+            '1 = Restore everything (replace all data)\n' +
+            '2 = Import archives only (add to existing)\n' +
+            '3 = Cancel\n\n' +
+            'Enter 1, 2, or 3:',
+            '1'
+          );
+
+          if (mode === '1') {
+            appData = JSON.parse(JSON.stringify(importData.currentData));
+            saveData();
+            serverArchives = importData.archives || [];
+            saveArchivesToServer();
+            alert('Full backup restored!');
+          } else if (mode === '2') {
+            serverArchives = serverArchives.concat(importData.archives || []);
+            saveArchivesToServer();
+            alert('Added ' + importData.archives.length + ' archive(s)');
+          } else {
+            return;
+          }
+
+          render();
+        } catch (err) {
+          alert('Error reading backup file: ' + err.message);
+        }
+      };
+      reader.readAsText(file);
+      input.value = '';
+    }
+
+    function clearCheckIns() {
+      if (confirm('Clear all check-in records? Volunteer schedules will be preserved.')) {
+        appData.checkIns = [];
+        saveData();
+        render();
+      }
+    }
+
+    function clearAllData() {
+      if (confirm('Are you sure you want to clear ALL data? This cannot be undone.')) {
+        appData = { ...defaultData };
+        saveData();
+        render();
+      }
+    }
+
+    function toggleCheckIn(volunteerId) {
+      const existing = appData.checkIns.find(c => 
+        c.volunteerId === volunteerId && c.day === selectedDay && c.shift === selectedShift
+      );
+      
+      if (existing) {
+        appData.checkIns = appData.checkIns.filter(c => 
+          !(c.volunteerId === volunteerId && c.day === selectedDay && c.shift === selectedShift)
+        );
+      } else {
+        const volunteer = appData.volunteers.find(v => v.id === volunteerId);
+        appData.checkIns.push({
+          volunteerId,
+          volunteerName: volunteer ? volunteer.name : 'Unknown',
+          hole: captainAuth.hole,
+          day: selectedDay,
+          shift: selectedShift,
+          timestamp: new Date().toISOString(),
+          checkedInBy: captainAuth.name,
+          isAlternate: !(volunteer && volunteer.scheduled && volunteer.scheduled[`${selectedDay} ${selectedShift}`])
+        });
+      }
+      
+      saveData();
+      render();
+    }
+
+    function handleFileUpload(input) {
+      const file = input.files[0];
+      if (!file) return;
+      
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        try {
+          const text = e.target.result;
+          const rows = text.split('\n').map(r => {
+            const result = [];
+            let current = '';
+            let inQuotes = false;
+            for (let char of r) {
+              if (char === '"') inQuotes = !inQuotes;
+              else if (char === ',' && !inQuotes) { result.push(current.trim()); current = ''; }
+              else current += char;
+            }
+            result.push(current.trim());
+            return result;
+          });
+          
+          const headers = rows[0];
+          const nameCol = headers.findIndex(h => h.includes('NamePK') || h === 'Name');
+          const typeCol = headers.findIndex(h => h.includes('Volunteer Type') || h === 'Type');
+          const holeCol = headers.findIndex(h => h.includes('Assigned Location') || h === 'Hole');
+          const phoneCol = headers.findIndex(h => h.includes('Phone_Cell') || h.includes('Cell'));
+          const idCol = headers.findIndex(h => h.includes('Vol ID') || h === 'ID');
+          const yearsCol = headers.findIndex(h => h.includes('Years Worked') || h === 'Years' || h.includes('Years_Worked'));
+          
+          const volunteers = rows.slice(1).filter(r => r.length > 1 && r[nameCol]).map((row, idx) => {
+            const scheduled = {};
+            DAYS.forEach(day => {
+              SHIFTS.forEach(shift => {
+                const colName = `Scheduled ${day} ${shift}`;
+                const colIdx = headers.findIndex(h => h === colName);
+                if (colIdx >= 0 && row[colIdx] === '1') {
+                  scheduled[`${day} ${shift}`] = true;
+                }
+              });
+            });
+            
+            return {
+              id: idCol >= 0 && row[idCol] ? row[idCol] : String(idx + 1),
+              name: row[nameCol] || '',
+              type: typeCol >= 0 ? row[typeCol] : 'Volunteer',
+              hole: holeCol >= 0 ? parseInt(row[holeCol]) || 0 : 0,
+              phone: phoneCol >= 0 ? row[phoneCol] : '',
+              yearsWorked: yearsCol >= 0 ? parseInt(row[yearsCol]) || 0 : 0,
+              scheduled
+            };
+          });
+          
+          appData.volunteers = volunteers;
+          saveData();
+          alert(`Successfully imported ${volunteers.length} volunteers!`);
+          render();
+        } catch (err) {
+          alert('Error importing file: ' + err.message);
+        }
+      };
+      reader.readAsText(file);
+    }
+
+    function handleUpdateUpload(input) {
+      const file = input.files[0];
+      if (!file) return;
+
+      if (appData.volunteers.length === 0) {
+        alert('No volunteers loaded yet. Please import volunteers first.');
+        input.value = '';
+        return;
+      }
+
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        try {
+          const text = e.target.result;
+          const rows = text.split('\n').map(r => {
+            const result = [];
+            let current = '';
+            let inQuotes = false;
+            for (let char of r) {
+              if (char === '"') inQuotes = !inQuotes;
+              else if (char === ',' && !inQuotes) { result.push(current.trim()); current = ''; }
+              else current += char;
+            }
+            result.push(current.trim());
+            return result;
+          });
+
+          const headers = rows[0];
+          const nameCol = headers.findIndex(h => h.includes('NamePK') || h === 'Name' || h.includes('Name'));
+          const yearsCol = headers.findIndex(h => h.includes('Years Worked') || h === 'Years' || h.includes('Years_Worked'));
+
+          if (nameCol < 0) {
+            alert('CSV must have a "Name" column');
+            return;
+          }
+          if (yearsCol < 0) {
+            alert('CSV must have a "Years Worked" or "Years" column');
+            return;
+          }
+
+          let updated = 0;
+          let notFound = [];
+
+          rows.slice(1).filter(r => r.length > 1 && r[nameCol]).forEach(row => {
+            const name = row[nameCol].trim();
+            const years = parseInt(row[yearsCol]) || 0;
+
+            // Find volunteer by name (case-insensitive, trimmed)
+            const volIdx = appData.volunteers.findIndex(v =>
+              v.name.trim().toLowerCase() === name.toLowerCase()
+            );
+
+            if (volIdx >= 0) {
+              appData.volunteers[volIdx].yearsWorked = years;
+              updated++;
+            } else if (name) {
+              notFound.push(name);
+            }
+          });
+
+          saveData();
+
+          let msg = `Updated ${updated} volunteer(s).`;
+          if (notFound.length > 0) {
+            msg += `\n\n${notFound.length} name(s) not found:\n${notFound.slice(0, 10).join('\n')}`;
+            if (notFound.length > 10) msg += `\n...and ${notFound.length - 10} more`;
+          }
+          alert(msg);
+          render();
+        } catch (err) {
+          alert('Error processing file: ' + err.message);
+        }
+      };
+      reader.readAsText(file);
+      input.value = '';
+    }
+
+    function exportCSV() {
+      const headers = ['Name', 'Hole', 'Day', 'Shift', 'Check-In Time', 'Checked In By', 'Was Alternate'];
+      const rows = appData.checkIns.map(c => [
+        c.volunteerName,
+        c.hole,
+        c.day,
+        c.shift,
+        c.timestamp,
+        c.checkedInBy,
+        c.isAlternate ? 'Yes' : 'No'
+      ]);
+      const csv = [headers, ...rows].map(r => r.map(c => `"${String(c).replace(/"/g, '""')}"`).join(',')).join('\n');
+      const blob = new Blob([csv], { type: 'text/csv' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `volunteer_checkins_${new Date().toISOString().split('T')[0]}.csv`;
+      a.click();
+    }
+
+    // Modal functions
+    function closeModal(event) {
+      if (event.target.classList.contains('modal-overlay')) {
+        showModal = null;
+        render();
+      }
+    }
+
+    // Submission functions
+    function confirmSubmission() {
+      if (!captainAuth) return;
+      
+      // Remove existing submission for this hole/day/shift
+      appData.submissions = appData.submissions.filter(s => 
+        !(s.hole === captainAuth.hole && s.day === selectedDay && s.shift === selectedShift)
+      );
+      
+      // Add new submission
+      appData.submissions.push({
+        hole: captainAuth.hole,
+        day: selectedDay,
+        shift: selectedShift,
+        timestamp: new Date().toISOString(),
+        captainName: captainAuth.name
+      });
+      
+      saveData();
+      showModal = null;
+      render();
+      
+      // Show success message
+      alert(`✅ Check-in submitted for Hole #${captainAuth.hole} - ${selectedDay} ${selectedShift}`);
+    }
+
+    function clearSubmissions() {
+      if (confirm('Clear all submission records? Check-in data will be preserved.')) {
+        appData.submissions = [];
+        saveData();
+        render();
+      }
+    }
+
+    // Alert time functions
+    function addAlertTime() {
+      if (!appData.settings.alertTimes) appData.settings.alertTimes = [];
+      if (appData.settings.alertTimes.length >= 5) return;
+      
+      appData.settings.alertTimes.push({
+        day: DAYS[0],
+        shift: 'AM',
+        time: '09:00'
+      });
+      saveData();
+      render();
+    }
+
+    function updateAlertTime(index, field, value) {
+      if (appData.settings.alertTimes && appData.settings.alertTimes[index]) {
+        appData.settings.alertTimes[index][field] = value;
+        saveData();
+      }
+    }
+
+    function removeAlertTime(index) {
+      if (appData.settings.alertTimes) {
+        appData.settings.alertTimes.splice(index, 1);
+        saveData();
+        render();
+      }
+    }
+
+    // Email functions
+    function addAlertEmail() {
+      if (!appData.settings.alertEmails) appData.settings.alertEmails = [];
+      appData.settings.alertEmails.push('');
+      saveData();
+      render();
+    }
+    
+    function updateAlertEmail(index, value) {
+      if (appData.settings.alertEmails && appData.settings.alertEmails[index] !== undefined) {
+        appData.settings.alertEmails[index] = value;
+        saveData();
+      }
+    }
+    
+    function removeAlertEmail(index) {
+      if (appData.settings.alertEmails) {
+        appData.settings.alertEmails.splice(index, 1);
+        saveData();
+        render();
+      }
+    }
+
+    async function sendEmail(to, subject, message) {
+      try {
+        var gmailUser = String(appData.settings.gmailUser || '').trim();
+        var gmailAppPassword = String(appData.settings.gmailAppPassword || '').replace(/\s/g, '').replace(/-/g, '');
+
+        if (!gmailUser || !gmailAppPassword) {
+          throw new Error('Gmail credentials not configured. Please enter your Gmail address and App Password in Settings.');
+        }
+
+        // Ensure 'to' is an array of strings
+        var recipients = [];
+        if (Array.isArray(to)) {
+          for (var i = 0; i < to.length; i++) {
+            var email = String(to[i] || '').trim();
+            if (email.length > 0) {
+              recipients.push(email);
+            }
+          }
+        } else {
+          var singleEmail = String(to || '').trim();
+          if (singleEmail.length > 0) {
+            recipients.push(singleEmail);
+          }
+        }
+
+        if (recipients.length === 0) {
+          throw new Error('No valid email recipients');
+        }
+
+        var payload = {
+          to: recipients,
+          subject: String(subject || ''),
+          message: String(message || ''),
+          gmailUser: gmailUser,
+          gmailAppPassword: gmailAppPassword
+        };
+
+        var response = await fetch('/api/email', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+
+        var result = await response.json();
+
+        if (!result.success) {
+          throw new Error(result.error || 'Email failed');
+        }
+
+        return result;
+      } catch (err) {
+        var errMsg = (err && err.message) ? err.message : String(err);
+        if (errMsg.indexOf('Failed to fetch') >= 0) {
+          throw new Error('Could not connect to server. Please check your internet connection.');
+        }
+        throw new Error(errMsg);
+      }
+    }
+
+    async function testAlert() {
+      const emails = (appData.settings.alertEmails || []).filter(e => e);
+      if (emails.length === 0) {
+        alert('Please add at least one email address');
+        return;
+      }
+      
+      if (!appData.settings.gmailUser || !appData.settings.gmailAppPassword) {
+        alert('Please enter your Gmail address and App Password');
+        return;
+      }
+      
+      try {
+        await sendEmail(
+          emails,
+          'Test Alert - ' + (appData.settings.tournamentName || 'Volunteer Golf'),
+          'This is a test from your volunteer check-in system.\n\nAlerts are working!'
+        );
+        alert('Test email sent to: ' + emails.join(', '));
+      } catch (err) {
+        alert('Failed to send email: ' + err.message);
+      }
+    }
+
+    async function checkAlerts() {
+      const emails = (appData.settings.alertEmails || []).filter(e => e);
+      
+      if (emails.length === 0) {
+        alert('Please add at least one email address');
+        return;
+      }
+      
+      if (!appData.settings.gmailUser || !appData.settings.gmailAppPassword) {
+        alert('Please enter your Gmail address and App Password');
+        return;
+      }
+      
+      // Get current day/shift or use selected
+      const day = selectedDay;
+      const shift = selectedShift;
+      
+      // Find holes that haven't submitted
+      const missingHoles = [];
+      for (let hole = 1; hole <= 18; hole++) {
+        const hasVolunteers = appData.volunteers.some(v => v.hole === hole && v.scheduled && v.scheduled[`${day} ${shift}`]);
+        if (!hasVolunteers) continue;
+        
+        const submitted = appData.submissions.some(s => s.hole === hole && s.day === day && s.shift === shift);
+        if (!submitted) {
+          missingHoles.push(hole);
+        }
+      }
+      
+      if (missingHoles.length === 0) {
+        alert(`✅ All holes have submitted for ${day} ${shift}!`);
+        return;
+      }
+      
+      const subject = appData.settings.tournamentName + ' - Missing Submissions';
+      const message = day + ' ' + shift + ' Shift\n\nThe following holes have NOT submitted their check-ins:\n\nHoles: ' + missingHoles.join(', ') + '\n\nPlease follow up with these hole captains.';
+
+      try {
+        await sendEmail(emails, subject, message);
+        alert('Alert sent to ' + emails.length + ' recipient(s)!\n\nMissing holes: ' + missingHoles.join(', '));
+      } catch (err) {
+        alert('Failed to send alert: ' + err.message + '\n\nMissing holes: ' + missingHoles.join(', '));
+      }
+    }
+
+    // Auto-check alerts (runs every minute)
+    function startAlertChecker() {
+      setInterval(() => {
+        const now = new Date();
+        const currentDay = DAYS[(now.getDay() + 6) % 7];
+        const currentTime = `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
+        
+        const alertTimes = appData.settings.alertTimes || [];
+        const emails = (appData.settings.alertEmails || []).filter(e => e);
+        
+        if (emails.length === 0 || !appData.settings.gmailUser || !appData.settings.gmailAppPassword) return;
+        
+        alertTimes.forEach(alert => {
+          if (alert.day === currentDay && alert.time === currentTime) {
+            // Trigger alert check
+            const prevDay = selectedDay;
+            const prevShift = selectedShift;
+            selectedDay = alert.day;
+            selectedShift = alert.shift;
+            checkAlerts();
+            selectedDay = prevDay;
+            selectedShift = prevShift;
+          }
+        });
+      }, 60000); // Check every minute
+    }
+    
+    // Start alert checker
+    startAlertChecker();
+
+    function attachEventListeners() {
+      const adminForm = document.getElementById('adminLoginForm');
+      if (adminForm) {
+        adminForm.onsubmit = function(e) {
+          e.preventDefault();
+          const password = document.getElementById('adminPassword').value;
+          if (password === appData.settings.adminPassword) {
+            adminAuth = true;
+            currentView = 'admin';
+            render();
+          } else {
+            const err = document.getElementById('adminError');
+            err.textContent = 'Incorrect password';
+            err.classList.remove('hidden');
+            document.getElementById('adminPassword').classList.add('error');
+            setTimeout(() => { err.classList.add('hidden'); document.getElementById('adminPassword').classList.remove('error'); }, 2000);
+          }
+        };
+      }
+      
+      const captainForm = document.getElementById('captainLoginForm');
+      if (captainForm) {
+        const phoneInput = document.getElementById('captainPhone');
+        const submitBtn = document.getElementById('captainSubmit');
+        
+        phoneInput.oninput = function() {
+          try {
+            var val = String(this.value || '');
+            var digits = '';
+            for (var i = 0; i < val.length && digits.length < 4; i++) {
+              if (val[i] >= '0' && val[i] <= '9') {
+                digits += val[i];
+              }
+            }
+            this.value = digits;
+            submitBtn.disabled = digits.length < 4;
+          } catch (ex) {
+            // ignore
+          }
+        };
+        
+        captainForm.onsubmit = function(e) {
+          e.preventDefault();
+          try {
+            var phone4 = String(phoneInput.value || '');
+            var captains = appData.volunteers.filter(function(v) {
+              return v.type === 'Captain' || v.type === 'Asst. Chairman' || v.type === 'Chairman';
+            });
+            var captain = null;
+            for (var i = 0; i < captains.length; i++) {
+              if (formatPhone(captains[i].phone) === phone4) {
+                captain = captains[i];
+                break;
+              }
+            }
+
+            if (captain) {
+              captainAuth = { name: captain.name, hole: captain.hole, phone4: phone4 };
+              currentView = 'captain';
+              render();
+            } else {
+              var err = document.getElementById('captainError');
+              err.textContent = 'Phone number not found. Please use the last 4 digits of your registered phone.';
+              err.classList.remove('hidden');
+              phoneInput.classList.add('error');
+              setTimeout(function() { err.classList.add('hidden'); phoneInput.classList.remove('error'); }, 3000);
+            }
+          } catch (ex) {
+            alert('Login error: ' + ex.message);
+          }
+        };
+      }
+    }
+
+    // Initial render - show loading, then fetch data from server
+    render();
+    loadDataFromServer();
+  </script>
+</body>
+</html>
