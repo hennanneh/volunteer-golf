@@ -1673,16 +1673,43 @@
       const holeVolunteers = appData.volunteers.filter(v => v.hole === captainAuth.hole && v.type === 'Volunteer');
       const scheduledVolunteers = holeVolunteers.filter(v => v.scheduled && v.scheduled[`${selectedDay} ${selectedShift}`]);
       const unscheduledVolunteers = holeVolunteers.filter(v => !v.scheduled || !v.scheduled[`${selectedDay} ${selectedShift}`]);
+
+      // Get captains for this hole (including the logged-in captain)
+      const holeCaptains = appData.volunteers.filter(v =>
+        v.hole === captainAuth.hole &&
+        (v.type === 'Captain' || v.type === 'Asst. Chairman' || v.type === 'Chairman')
+      );
+
+      // Find the current captain's volunteer record
+      const currentCaptainRecord = holeCaptains.find(v => v.name === captainAuth.name);
+
       const checkedInIds = new Set(
         appData.checkIns
           .filter(c => c.day === selectedDay && c.shift === selectedShift && c.hole === captainAuth.hole)
           .map(c => c.volunteerId)
       );
 
-      // Track what was submitted vs current state for dynamic button
+      // Auto-check in the captain on first load if not already checked in and no submission yet
       const lastSubmission = appData.submissions.find(s =>
         s.hole === captainAuth.hole && s.day === selectedDay && s.shift === selectedShift
       );
+      if (currentCaptainRecord && !checkedInIds.has(currentCaptainRecord.id) && !lastSubmission) {
+        // Auto-add captain check-in
+        appData.checkIns.push({
+          volunteerId: currentCaptainRecord.id,
+          volunteerName: currentCaptainRecord.name,
+          hole: captainAuth.hole,
+          day: selectedDay,
+          shift: selectedShift,
+          timestamp: new Date().toISOString(),
+          checkedInBy: captainAuth.name,
+          isAlternate: false
+        });
+        checkedInIds.add(currentCaptainRecord.id);
+        saveData();
+      }
+
+      // Track what was submitted vs current state for dynamic button
       const submittedIds = lastSubmission ? new Set(lastSubmission.checkedInIds || []) : new Set();
 
       // Calculate changes since last submission
@@ -1690,27 +1717,30 @@
       const removedCheckIns = [...submittedIds].filter(id => !checkedInIds.has(id)).length;
       const totalChanges = newCheckIns + removedCheckIns;
 
-      // Find co-captains
-      const coCaptains = appData.volunteers.filter(v =>
-        v.hole === captainAuth.hole &&
-        (v.type === 'Captain' || v.type === 'Asst. Chairman') &&
-        v.name !== captainAuth.name
-      );
+      // Find co-captains (other captains, not the logged-in one)
+      const coCaptains = holeCaptains.filter(v => v.name !== captainAuth.name);
 
       const isSubmitted = !!lastSubmission;
 
       // Get relative time info
       const timeInfo = getRelativeTimeLabel(selectedDay, selectedShift);
 
-      // Build display list - always show scheduled first, then unscheduled
+      // Build display list - captains first, then scheduled volunteers, then unscheduled
       let displayVolunteers = [];
       if (searchTerm) {
         displayVolunteers = appData.volunteers.filter(v =>
-          v.name.toLowerCase().includes(searchTerm.toLowerCase()) && v.type === 'Volunteer'
+          v.name.toLowerCase().includes(searchTerm.toLowerCase()) &&
+          v.hole === captainAuth.hole
         );
       } else {
-        // Always show all volunteers: scheduled first, then unscheduled
-        displayVolunteers = [...scheduledVolunteers.sort((a, b) => a.name.localeCompare(b.name)),
+        // Show captains first (current captain at top), then scheduled, then unscheduled
+        const sortedCaptains = holeCaptains.sort((a, b) => {
+          if (a.name === captainAuth.name) return -1;
+          if (b.name === captainAuth.name) return 1;
+          return a.name.localeCompare(b.name);
+        });
+        displayVolunteers = [...sortedCaptains,
+                            ...scheduledVolunteers.sort((a, b) => a.name.localeCompare(b.name)),
                             ...unscheduledVolunteers.sort((a, b) => a.name.localeCompare(b.name))];
       }
 
@@ -1844,17 +1874,24 @@
             ` : displayVolunteers.map((v, idx) => {
               const isCheckedIn = checkedInIds.has(v.id);
               const isScheduled = v.scheduled && v.scheduled[`${selectedDay} ${selectedShift}`];
-              // Add section header when transitioning from scheduled to unscheduled
+              const isCaptain = v.type === 'Captain' || v.type === 'Asst. Chairman' || v.type === 'Chairman';
+              const isCurrentCaptain = v.name === captainAuth.name;
+              // Add section header when transitioning from captains to volunteers or scheduled to unscheduled
+              const prevIsCaptain = idx > 0 ? (displayVolunteers[idx-1].type === 'Captain' || displayVolunteers[idx-1].type === 'Asst. Chairman' || displayVolunteers[idx-1].type === 'Chairman') : false;
               const prevIsScheduled = idx > 0 ? (displayVolunteers[idx-1].scheduled && displayVolunteers[idx-1].scheduled[`${selectedDay} ${selectedShift}`]) : true;
-              const showDivider = !searchTerm && !isScheduled && prevIsScheduled;
+              const showVolunteerDivider = !searchTerm && !isCaptain && prevIsCaptain;
+              const showUnscheduledDivider = !searchTerm && !isCaptain && !isScheduled && prevIsScheduled && !prevIsCaptain;
               return `
-                ${showDivider ? '<div style="padding:15px 5px 8px;color:#999;font-size:11px;font-weight:600;text-transform:uppercase;border-top:1px solid #eee;margin-top:10px">Not Scheduled This Shift</div>' : ''}
+                ${showVolunteerDivider ? '<div style="padding:15px 5px 8px;color:#999;font-size:11px;font-weight:600;text-transform:uppercase;border-top:1px solid #eee;margin-top:10px">Volunteers</div>' : ''}
+                ${showUnscheduledDivider ? '<div style="padding:15px 5px 8px;color:#999;font-size:11px;font-weight:600;text-transform:uppercase;border-top:1px solid #eee;margin-top:10px">Not Scheduled This Shift</div>' : ''}
                 <div class="volunteer-item ${isCheckedIn ? 'checked' : ''}" onclick="toggleCheckIn('${v.id}')">
                   <div class="volunteer-checkbox">
                     <span class="volunteer-checkbox-icon">✓</span>
                   </div>
                   <div class="volunteer-info">
-                    <div class="volunteer-name">${v.name}${submittedIds.has(v.id) ? '<span style="font-size:10px;color:#2e7d32;background:#e8f5e9;padding:2px 6px;border-radius:4px;margin-left:8px;font-weight:500">checked in</span>' : ''}</div>
+                    <div class="volunteer-name">
+                      ${v.name}${isCurrentCaptain ? ' <span style="font-size:10px;color:#1a472a;background:#e3f2fd;padding:2px 6px;border-radius:4px;font-weight:500">You</span>' : isCaptain ? ` <span style="font-size:10px;color:#1565c0;background:#e3f2fd;padding:2px 6px;border-radius:4px;font-weight:500">${v.type}</span>` : ''}${submittedIds.has(v.id) ? '<span style="font-size:10px;color:#2e7d32;background:#e8f5e9;padding:2px 6px;border-radius:4px;margin-left:8px;font-weight:500">checked in</span>' : ''}
+                    </div>
                     <div style="display:flex;gap:8px;align-items:center;margin-top:4px">
                       ${v.yearsWorked ? `<span style="font-size:11px;color:#555;background:#e8e8e8;padding:3px 6px;border-radius:4px;font-weight:500">${v.yearsWorked} yr${v.yearsWorked !== 1 ? 's' : ''}</span>` : ''}
                     </div>
