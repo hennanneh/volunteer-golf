@@ -1349,29 +1349,30 @@
     
     function renderVolunteersEdit() {
       // Edit modal
+      const isNewVolunteer = editingVolunteer && editingVolunteer.isNew;
       const editModal = editingVolunteer ? `
         <div class="modal-overlay" onclick="closeEditModal(event)">
           <div class="modal" onclick="event.stopPropagation()" style="max-width:500px;max-height:90vh;overflow-y:auto">
-            <h3>Edit Volunteer</h3>
+            <h3>${isNewVolunteer ? 'Add Volunteer' : 'Edit Volunteer'}</h3>
             <div class="edit-modal-form">
               <label>Name</label>
               <input type="text" id="editName" value="${editingVolunteer.name}" placeholder="Last, First">
-              
+
               <label>Type</label>
               <select id="editType">
-                ${['Volunteer', 'Captain', 'Asst. Chairman', 'Chairman', 'Admin'].map(t => 
+                ${['Volunteer', 'Captain', 'Asst. Chairman', 'Chairman', 'Admin'].map(t =>
                   `<option value="${t}" ${editingVolunteer.type === t ? 'selected' : ''}>${t}</option>`
                 ).join('')}
               </select>
-              
+
               <label>Hole Assignment</label>
               <select id="editHole">
-                ${[...Array(19).keys()].slice(1).map(h => 
+                ${[...Array(19).keys()].slice(1).map(h =>
                   `<option value="${h}" ${editingVolunteer.hole === h ? 'selected' : ''}>Hole ${h}</option>`
                 ).join('')}
                 <option value="99" ${editingVolunteer.hole === 99 ? 'selected' : ''}>Admin (99)</option>
               </select>
-              
+
               <label>Phone</label>
               <input type="tel" id="editPhone" value="${editingVolunteer.phone || ''}" placeholder="(555) 123-4567">
 
@@ -1380,7 +1381,7 @@
 
               <label>Schedule</label>
               <div class="schedule-grid">
-                ${DAYS.map(day => 
+                ${DAYS.map(day =>
                   SHIFTS.map(shift => {
                     const key = `${day} ${shift}`;
                     const isChecked = editingVolunteer.scheduled && editingVolunteer.scheduled[key];
@@ -1396,7 +1397,7 @@
             </div>
             <div class="modal-buttons" style="margin-top:20px">
               <button class="modal-btn cancel" onclick="editingVolunteer=null;render()">Cancel</button>
-              <button class="modal-btn confirm" onclick="saveVolunteerEdit()">Save Changes</button>
+              <button class="modal-btn confirm" onclick="saveVolunteerEdit()">${isNewVolunteer ? 'Add Volunteer' : 'Save Changes'}</button>
             </div>
           </div>
         </div>
@@ -1418,7 +1419,10 @@
       return `
         ${editModal}
         <div style="margin-bottom:20px">
-          <h2 style="font-size:16px;color:#333;margin-bottom:15px">Edit Volunteers</h2>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:15px">
+            <h2 style="font-size:16px;color:#333;margin:0">Edit Volunteers</h2>
+            <button onclick="addNewVolunteer()" style="padding:8px 16px;background:#1a472a;color:white;border:none;border-radius:6px;font-size:13px;font-weight:500;cursor:pointer">+ Add Volunteer</button>
+          </div>
           <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
             <input type="text" class="search-bar" placeholder="Search by name..." value="${volSearchTerm}" oninput="volSearchTerm=this.value;render()" style="font-size:13px">
             <select onchange="volFilterType=this.value;render()" style="padding:8px;border:1px solid #ddd;border-radius:6px;font-size:13px">
@@ -1426,6 +1430,7 @@
               <option value="Volunteer" ${volFilterType === 'Volunteer' ? 'selected' : ''}>Volunteers</option>
               <option value="Captain" ${volFilterType === 'Captain' ? 'selected' : ''}>Captains</option>
               <option value="Asst. Chairman" ${volFilterType === 'Asst. Chairman' ? 'selected' : ''}>Asst. Chairmen</option>
+              <option value="Admin" ${volFilterType === 'Admin' ? 'selected' : ''}>Admins</option>
             </select>
             <select onchange="volFilterHole=this.value;render()" style="padding:8px;border:1px solid #ddd;border-radius:6px;font-size:13px">
               <option value="all" ${volFilterHole === 'all' ? 'selected' : ''}>All Holes</option>
@@ -1485,7 +1490,23 @@
         render();
       }
     }
-    
+
+    function addNewVolunteer() {
+      // Generate a unique ID
+      const newId = 'new_' + Date.now();
+      editingVolunteer = {
+        id: newId,
+        name: '',
+        type: 'Volunteer',
+        hole: 1,
+        phone: '',
+        yearsWorked: 0,
+        scheduled: {},
+        isNew: true
+      };
+      render();
+    }
+
     function closeEditModal(event) {
       if (event.target.classList.contains('modal-overlay')) {
         editingVolunteer = null;
@@ -1495,17 +1516,20 @@
     
     function saveVolunteerEdit() {
       if (!editingVolunteer) return;
-      
-      const idx = appData.volunteers.findIndex(v => v.id === editingVolunteer.id);
-      if (idx === -1) return;
-      
+
       // Get values from form
       const newName = document.getElementById('editName').value.trim();
       const newType = document.getElementById('editType').value;
       const newHole = parseInt(document.getElementById('editHole').value);
       const newPhone = document.getElementById('editPhone').value.trim();
       const newYears = parseInt(document.getElementById('editYears').value) || 0;
-      
+
+      // Validate name
+      if (!newName) {
+        alert('Please enter a name');
+        return;
+      }
+
       // Get schedule
       const newSchedule = {};
       DAYS.forEach(day => {
@@ -1516,31 +1540,53 @@
           }
         });
       });
-      
-      // Update volunteer
-      appData.volunteers[idx] = {
-        ...appData.volunteers[idx],
-        name: newName,
-        type: newType,
-        hole: newHole,
-        phone: newPhone,
-        yearsWorked: newYears,
-        scheduled: newSchedule
-      };
-      
-      // Update any check-in records with new name
-      appData.checkIns = appData.checkIns.map(c => {
-        if (c.volunteerId === editingVolunteer.id) {
-          return { ...c, volunteerName: newName };
-        }
-        return c;
-      });
-      
-      saveData();
-      editingVolunteer = null;
-      render();
-      
-      alert('✓ Volunteer updated successfully!');
+
+      if (editingVolunteer.isNew) {
+        // Add new volunteer
+        appData.volunteers.push({
+          id: editingVolunteer.id,
+          name: newName,
+          type: newType,
+          hole: newHole,
+          phone: newPhone,
+          yearsWorked: newYears,
+          scheduled: newSchedule
+        });
+
+        saveData();
+        editingVolunteer = null;
+        render();
+
+        alert('✓ Volunteer added successfully!');
+      } else {
+        // Update existing volunteer
+        const idx = appData.volunteers.findIndex(v => v.id === editingVolunteer.id);
+        if (idx === -1) return;
+
+        appData.volunteers[idx] = {
+          ...appData.volunteers[idx],
+          name: newName,
+          type: newType,
+          hole: newHole,
+          phone: newPhone,
+          yearsWorked: newYears,
+          scheduled: newSchedule
+        };
+
+        // Update any check-in records with new name
+        appData.checkIns = appData.checkIns.map(c => {
+          if (c.volunteerId === editingVolunteer.id) {
+            return { ...c, volunteerName: newName };
+          }
+          return c;
+        });
+
+        saveData();
+        editingVolunteer = null;
+        render();
+
+        alert('✓ Volunteer updated successfully!');
+      }
     }
 
     function renderSettings() {
