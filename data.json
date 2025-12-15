@@ -239,7 +239,7 @@
       "id": "6828",
       "name": "Barber, Michael",
       "type": "Captain",
-      "hole": 20,
+      "hole": 1,
       "phone": "(817) 996-2794",
       "yearsWorked": 9,
       "scheduled": {
@@ -252,7 +252,9 @@
         "Saturday PM": true,
         "Sunday AM": true,
         "Sunday PM": true
-      }
+      },
+      "email": "",
+      "customPin": "1111"
     },
     {
       "id": "9019",
@@ -330,7 +332,9 @@
         "Saturday PM": true,
         "Sunday AM": true,
         "Sunday PM": true
-      }
+      },
+      "email": "",
+      "customPin": "1111"
     },
     {
       "id": "7747",
@@ -1335,7 +1339,30 @@
         "Saturday PM": true,
         "Sunday AM": true,
         "Sunday PM": true
-      }
+      },
+      "email": "",
+      "assignedHoles": [
+        99,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ]
     },
     {
       "id": "4531",
@@ -1486,7 +1513,8 @@
         "Saturday PM": true,
         "Sunday AM": true,
         "Sunday PM": true
-      }
+      },
+      "customPin": "2881"
     },
     {
       "id": "8306",
@@ -1631,7 +1659,30 @@
         "Saturday PM": true,
         "Sunday AM": true,
         "Sunday PM": true
-      }
+      },
+      "email": "",
+      "assignedHoles": [
+        99,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ]
     },
     {
       "id": "9904",
@@ -1762,7 +1813,15 @@
         "Saturday PM": true,
         "Sunday AM": true,
         "Sunday PM": true
-      }
+      },
+      "email": "",
+      "assignedHoles": [
+        99,
+        1,
+        9,
+        10,
+        18
+      ]
     },
     {
       "id": "7532",
@@ -1797,8 +1856,8 @@
     {
       "id": "421",
       "name": "Gastinel, Ernest",
-      "type": "Captain",
-      "hole": 15,
+      "type": "Asst. Chairman",
+      "hole": 99,
       "phone": "(817) 578-4219",
       "yearsWorked": 22,
       "scheduled": {
@@ -1813,7 +1872,14 @@
         "Saturday PM": true,
         "Sunday AM": true,
         "Sunday PM": true
-      }
+      },
+      "email": "",
+      "assignedHoles": [
+        99,
+        16,
+        17,
+        18
+      ]
     },
     {
       "id": "9595",
@@ -1910,7 +1976,21 @@
         "Saturday PM": true,
         "Sunday AM": true,
         "Sunday PM": true
-      }
+      },
+      "email": "",
+      "assignedHoles": [
+        99,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ]
     },
     {
       "id": "7768",
@@ -2207,7 +2287,17 @@
         "Saturday PM": true,
         "Sunday AM": true,
         "Sunday PM": true
-      }
+      },
+      "email": "",
+      "assignedHoles": [
+        99,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8
+      ]
     },
     {
       "id": "8127",
@@ -2289,7 +2379,7 @@
     {
       "id": "4639",
       "name": "Hill, Michael",
-      "type": "Asst. Chairman",
+      "type": "Admin",
       "hole": 99,
       "phone": "(817) 689-4697",
       "yearsWorked": 13,
@@ -2461,6 +2551,28 @@
       }
     },
     {
+      "id": "new_1765215636668",
+      "name": "Howrey, Anne",
+      "type": "Volunteer",
+      "hole": 99,
+      "phone": "2148868611",
+      "yearsWorked": 0,
+      "scheduled": {
+        "Monday AM": true,
+        "Monday PM": true,
+        "Tuesday AM": true,
+        "Wednesday AM": true,
+        "Wednesday PM": true,
+        "Thursday AM": true,
+        "Friday AM": true,
+        "Saturday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true,
+        "Sunday PM": true
+      },
+      "email": "p.howrey@att.net"
+    },
+    {
       "id": "359",
       "name": "Howrey, Patrick",
       "type": "Asst. Chairman",
@@ -2480,7 +2592,15 @@
         "Saturday PM": true,
         "Sunday AM": true,
         "Sunday PM": true
-      }
+      },
+      "email": "p.howrey@att.net",
+      "assignedHoles": [
+        99,
+        8,
+        9,
+        11,
+        12
+      ]
     },
     {
       "id": "9874",
@@ -2534,7 +2654,13 @@
         "Saturday PM": true,
         "Sunday AM": true,
         "Sunday PM": true
-      }
+      },
+      "email": "",
+      "assignedHoles": [
+        99,
+        1,
+        10
+      ]
     },
     {
       "id": "9662",
@@ -4807,7 +4933,20 @@
         "Saturday PM": true,
         "Sunday AM": true,
         "Sunday PM": true
-      }
+      },
+      "email": "",
+      "assignedHoles": [
+        99,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
     },
     {
       "id": "8005",
@@ -5534,7 +5673,16 @@
         "Saturday PM": true,
         "Sunday AM": true,
         "Sunday PM": true
-      }
+      },
+      "email": "",
+      "assignedHoles": [
+        99,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
     },
     {
       "id": "10107",
@@ -6420,72 +6568,12 @@
       "isAlternate": false
     },
     {
-      "volunteerId": "5441",
-      "volunteerName": "Lee, Rodney",
-      "hole": 6,
-      "day": "Monday",
-      "shift": "AM",
-      "timestamp": "2025-12-08T16:54:45.652Z",
-      "checkedInBy": "Elkins, Paul",
-      "isAlternate": false
-    },
-    {
       "volunteerId": "10069",
       "volunteerName": "Quinonez, Eduardo",
       "hole": 6,
       "day": "Monday",
       "shift": "AM",
       "timestamp": "2025-12-08T16:54:46.894Z",
-      "checkedInBy": "Elkins, Paul",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "9195",
-      "volunteerName": "Greener, Jim",
-      "hole": 6,
-      "day": "Monday",
-      "shift": "AM",
-      "timestamp": "2025-12-08T16:55:19.375Z",
-      "checkedInBy": "Elkins, Paul",
-      "isAlternate": true
-    },
-    {
-      "volunteerId": "419",
-      "volunteerName": "Cantu, Doug",
-      "hole": 6,
-      "day": "Friday",
-      "shift": "AM",
-      "timestamp": "2025-12-08T16:56:41.710Z",
-      "checkedInBy": "Elkins, Paul",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "9461",
-      "volunteerName": "Goodenough, Timothy",
-      "hole": 6,
-      "day": "Friday",
-      "shift": "AM",
-      "timestamp": "2025-12-08T16:56:42.214Z",
-      "checkedInBy": "Elkins, Paul",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "9195",
-      "volunteerName": "Greener, Jim",
-      "hole": 6,
-      "day": "Friday",
-      "shift": "AM",
-      "timestamp": "2025-12-08T16:56:42.630Z",
-      "checkedInBy": "Elkins, Paul",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "5192",
-      "volunteerName": "Imboden, Thomas",
-      "hole": 6,
-      "day": "Friday",
-      "shift": "AM",
-      "timestamp": "2025-12-08T16:56:43.064Z",
       "checkedInBy": "Elkins, Paul",
       "isAlternate": false
     },
@@ -6518,6 +6606,376 @@
       "timestamp": "2025-12-08T16:57:23.998Z",
       "checkedInBy": "Elkins, Paul",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "5192",
+      "volunteerName": "Imboden, Thomas",
+      "hole": 6,
+      "day": "Friday",
+      "shift": "AM",
+      "timestamp": "2025-12-08T17:09:56.074Z",
+      "checkedInBy": "Elkins, Paul",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9195",
+      "volunteerName": "Greener, Jim",
+      "hole": 6,
+      "day": "Friday",
+      "shift": "AM",
+      "timestamp": "2025-12-08T17:09:56.598Z",
+      "checkedInBy": "Elkins, Paul",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9461",
+      "volunteerName": "Goodenough, Timothy",
+      "hole": 6,
+      "day": "Friday",
+      "shift": "AM",
+      "timestamp": "2025-12-08T17:09:57.027Z",
+      "checkedInBy": "Elkins, Paul",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "419",
+      "volunteerName": "Cantu, Doug",
+      "hole": 6,
+      "day": "Friday",
+      "shift": "AM",
+      "timestamp": "2025-12-08T17:09:57.468Z",
+      "checkedInBy": "Elkins, Paul",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7922",
+      "volunteerName": "Justice, Neal",
+      "hole": 6,
+      "day": "Friday",
+      "shift": "AM",
+      "timestamp": "2025-12-08T17:09:58.660Z",
+      "checkedInBy": "Elkins, Paul",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5192",
+      "volunteerName": "Imboden, Thomas",
+      "hole": 6,
+      "day": "Monday",
+      "shift": "AM",
+      "timestamp": "2025-12-08T17:25:47.592Z",
+      "checkedInBy": "Elkins, Paul",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "7922",
+      "volunteerName": "Justice, Neal",
+      "hole": 6,
+      "day": "Monday",
+      "shift": "AM",
+      "timestamp": "2025-12-08T17:25:48.065Z",
+      "checkedInBy": "Elkins, Paul",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "5441",
+      "volunteerName": "Lee, Rodney",
+      "hole": 6,
+      "day": "Monday",
+      "shift": "AM",
+      "timestamp": "2025-12-08T17:29:18.264Z",
+      "checkedInBy": "Elkins, Paul",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "419",
+      "volunteerName": "Cantu, Doug",
+      "hole": 6,
+      "day": "Monday",
+      "shift": "AM",
+      "timestamp": "2025-12-08T17:29:26.215Z",
+      "checkedInBy": "Elkins, Paul",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "9812",
+      "volunteerName": "ColóN, Orlando",
+      "hole": 6,
+      "day": "Monday",
+      "shift": "AM",
+      "timestamp": "2025-12-08T17:29:27.460Z",
+      "checkedInBy": "Elkins, Paul",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "9195",
+      "volunteerName": "Greener, Jim",
+      "hole": 6,
+      "day": "Monday",
+      "shift": "AM",
+      "timestamp": "2025-12-08T17:31:35.445Z",
+      "checkedInBy": "Elkins, Paul",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "4433",
+      "volunteerName": "Elkins, Paul",
+      "hole": 6,
+      "day": "Monday",
+      "shift": "AM",
+      "timestamp": "2025-12-08T17:40:08.369Z",
+      "checkedInBy": "Elkins, Paul",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4433",
+      "volunteerName": "Elkins, Paul",
+      "hole": 6,
+      "day": "Sunday",
+      "shift": "AM",
+      "timestamp": "2025-12-08T17:40:19.680Z",
+      "checkedInBy": "Elkins, Paul",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10089",
+      "volunteerName": "Conner, Jim",
+      "hole": 1,
+      "day": "Saturday",
+      "shift": "PM",
+      "timestamp": "2025-12-08T17:41:40.365Z",
+      "checkedInBy": "Howrey, Anne",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4433",
+      "volunteerName": "Elkins, Paul",
+      "hole": 6,
+      "day": "Saturday",
+      "shift": "PM",
+      "timestamp": "2025-12-08T17:43:10.392Z",
+      "checkedInBy": "Howrey, Anne",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2658",
+      "volunteerName": "Andrews, Joseph",
+      "hole": 6,
+      "day": "Saturday",
+      "shift": "PM",
+      "timestamp": "2025-12-08T17:43:28.549Z",
+      "checkedInBy": "Howrey, Anne",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "4433",
+      "volunteerName": "Elkins, Paul",
+      "hole": 6,
+      "day": "Monday",
+      "shift": "PM",
+      "timestamp": "2025-12-08T21:46:57.675Z",
+      "checkedInBy": "Elkins, Paul",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4433",
+      "volunteerName": "Elkins, Paul",
+      "hole": 6,
+      "day": "Tuesday",
+      "shift": "AM",
+      "timestamp": "2025-12-08T21:47:41.337Z",
+      "checkedInBy": "Elkins, Paul",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9461",
+      "volunteerName": "Goodenough, Timothy",
+      "hole": 6,
+      "day": "Thursday",
+      "shift": "AM",
+      "timestamp": "2025-12-08T21:49:23.277Z",
+      "checkedInBy": "Elkins, Paul",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "4433",
+      "volunteerName": "Elkins, Paul",
+      "hole": 6,
+      "day": "Wednesday",
+      "shift": "PM",
+      "timestamp": "2025-12-08T21:56:33.963Z",
+      "checkedInBy": "Elkins, Paul",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "1464",
+      "volunteerName": "Mcdaniel, Patrick",
+      "hole": 6,
+      "day": "Wednesday",
+      "shift": "PM",
+      "timestamp": "2025-12-08T21:56:41.075Z",
+      "checkedInBy": "Elkins, Paul",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4433",
+      "volunteerName": "Elkins, Paul",
+      "hole": 6,
+      "day": "Wednesday",
+      "shift": "AM",
+      "timestamp": "2025-12-08T21:56:47.140Z",
+      "checkedInBy": "Elkins, Paul",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "1464",
+      "volunteerName": "Mcdaniel, Patrick",
+      "hole": 6,
+      "day": "Monday",
+      "shift": "PM",
+      "timestamp": "2025-12-08T21:58:13.991Z",
+      "checkedInBy": "Elkins, Paul",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "2658",
+      "volunteerName": "Andrews, Joseph",
+      "hole": 6,
+      "day": "Monday",
+      "shift": "PM",
+      "timestamp": "2025-12-08T21:58:17.377Z",
+      "checkedInBy": "Elkins, Paul",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "419",
+      "volunteerName": "Cantu, Doug",
+      "hole": 6,
+      "day": "Monday",
+      "shift": "PM",
+      "timestamp": "2025-12-08T22:23:13.413Z",
+      "checkedInBy": "Elkins, Paul",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "9812",
+      "volunteerName": "ColóN, Orlando",
+      "hole": 6,
+      "day": "Monday",
+      "shift": "PM",
+      "timestamp": "2025-12-08T22:23:14.532Z",
+      "checkedInBy": "Elkins, Paul",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "5192",
+      "volunteerName": "Imboden, Thomas",
+      "hole": 6,
+      "day": "Monday",
+      "shift": "PM",
+      "timestamp": "2025-12-08T22:23:18.206Z",
+      "checkedInBy": "Elkins, Paul",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "9195",
+      "volunteerName": "Greener, Jim",
+      "hole": 6,
+      "day": "Monday",
+      "shift": "PM",
+      "timestamp": "2025-12-08T22:37:43.147Z",
+      "checkedInBy": "Elkins, Paul",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "5441",
+      "volunteerName": "Lee, Rodney",
+      "hole": 6,
+      "day": "Monday",
+      "shift": "PM",
+      "timestamp": "2025-12-08T23:31:55.344Z",
+      "checkedInBy": "Elkins, Paul",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "9834",
+      "volunteerName": "Piper, Kathleen",
+      "hole": 6,
+      "day": "Monday",
+      "shift": "PM",
+      "timestamp": "2025-12-08T23:31:59.745Z",
+      "checkedInBy": "Elkins, Paul",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "1459",
+      "volunteerName": "Bell, Bob",
+      "hole": 9,
+      "day": "Monday",
+      "shift": "PM",
+      "timestamp": "2025-12-10T20:21:57.467Z",
+      "checkedInBy": "Bell, Bob",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "359",
+      "volunteerName": "Howrey, Patrick",
+      "hole": 99,
+      "day": "Sunday",
+      "shift": "PM",
+      "timestamp": "2025-12-14T23:39:11.073Z",
+      "checkedInBy": "Howrey, Patrick",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5401",
+      "volunteerName": "Badalamenti, Jim",
+      "hole": 8,
+      "day": "Sunday",
+      "shift": "PM",
+      "timestamp": "2025-12-15T00:04:20.792Z",
+      "checkedInBy": "Howrey, Patrick",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9860",
+      "volunteerName": "Sidway, David",
+      "hole": 8,
+      "day": "Sunday",
+      "shift": "PM",
+      "timestamp": "2025-12-15T00:04:23.530Z",
+      "checkedInBy": "Howrey, Patrick",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "359",
+      "volunteerName": "Howrey, Patrick",
+      "hole": 99,
+      "day": "Monday",
+      "shift": "AM",
+      "timestamp": "2025-12-15T17:02:53.170Z",
+      "checkedInBy": "Howrey, Patrick",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "1459",
+      "volunteerName": "Bell, Bob",
+      "hole": 9,
+      "day": "Monday",
+      "shift": "AM",
+      "timestamp": "2025-12-15T17:14:11.899Z",
+      "checkedInBy": "Howrey, Patrick",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "359",
+      "volunteerName": "Howrey, Patrick",
+      "hole": 99,
+      "day": "Tuesday",
+      "shift": "PM",
+      "timestamp": "2025-12-15T17:31:23.575Z",
+      "checkedInBy": "Howrey, Patrick",
+      "isAlternate": false
     }
   ],
   "submissions": [
@@ -6526,13 +6984,6 @@
       "day": "Thursday",
       "shift": "PM",
       "timestamp": "2025-12-06T23:26:13.098Z",
-      "captainName": "Elkins, Paul"
-    },
-    {
-      "hole": 6,
-      "day": "Saturday",
-      "shift": "PM",
-      "timestamp": "2025-12-06T23:56:27.383Z",
       "captainName": "Elkins, Paul"
     },
     {
@@ -6558,15 +7009,87 @@
     },
     {
       "hole": 6,
+      "day": "Monday",
+      "shift": "AM",
+      "timestamp": "2025-12-08T17:25:33.126Z",
+      "captainName": "Elkins, Paul",
+      "notes": "",
+      "checkedInIds": [
+        "9461",
+        "5441",
+        "10069",
+        "9195",
+        "7922",
+        "5192"
+      ]
+    },
+    {
+      "hole": 6,
+      "day": "Saturday",
+      "shift": "PM",
+      "timestamp": "2025-12-08T17:43:33.748Z",
+      "captainName": "Howrey, Anne",
+      "notes": "",
+      "checkedInIds": [
+        "419",
+        "9461",
+        "5192",
+        "9195",
+        "7922",
+        "6744",
+        "4433",
+        "2658"
+      ]
+    },
+    {
+      "hole": 6,
       "day": "Thursday",
       "shift": "AM",
-      "timestamp": "2025-12-08T16:57:29.652Z",
+      "timestamp": "2025-12-08T21:49:53.273Z",
       "captainName": "Elkins, Paul",
-      "notes": "thursday",
+      "notes": "",
       "checkedInIds": [
         "2658",
         "5192",
-        "5441"
+        "5441",
+        "9461"
+      ]
+    },
+    {
+      "hole": 6,
+      "day": "Wednesday",
+      "shift": "PM",
+      "timestamp": "2025-12-08T21:56:42.541Z",
+      "captainName": "Elkins, Paul",
+      "notes": "",
+      "checkedInIds": [
+        "4433",
+        "1464"
+      ]
+    },
+    {
+      "hole": 6,
+      "day": "Monday",
+      "shift": "PM",
+      "timestamp": "2025-12-08T21:58:19.844Z",
+      "captainName": "Elkins, Paul",
+      "notes": "",
+      "checkedInIds": [
+        "4433",
+        "1464",
+        "2658"
+      ]
+    },
+    {
+      "hole": 8,
+      "day": "Sunday",
+      "shift": "PM",
+      "timestamp": "2025-12-15T00:05:16.347Z",
+      "captainName": "Howrey, Patrick",
+      "notes": "",
+      "checkedInIds": [
+        "5401",
+        "9860"
       ]
     }
   ],
@@ -6580,8 +7103,13 @@
     "gmailUser": "1122howrey@gmail.com",
     "gmailAppPassword": "fatPu2-jacjir-zarhyf",
     "helpPhone": "2148868611",
-    "helpEmail": "annehowrey@yahoo.com",
-    "tournamentStartDate": "2025-12-08",
-    "tournamentEndDate": "2025-12-14"
+    "helpEmail": "",
+    "tournamentStartDate": "2025-12-15",
+    "tournamentEndDate": "2025-12-21",
+    "helpName": "Anne Howrey",
+    "numberOfHoles": 19,
+    "amShiftCutoff": "00:00",
+    "pmShiftCutoff": "00:00",
+    "viewAdminPassword": "view2025"
   }
 }
