@@ -1,8 +1,11 @@
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
-const nodemailer = require('nodemailer');
+const { Resend } = require('resend');
 const app = express();
+
+const RESEND_API_KEY = 're_3JFh9EMD_B2pKepK2bgWzW9J4XseuWVrM';
+const resend = new Resend(RESEND_API_KEY);
 
 app.use(express.json({ limit: '10mb' }));
 app.use(express.static(path.join(__dirname, 'public')));
@@ -18,11 +21,7 @@ const defaultData = {
   submissions: [],
   settings: {
     adminPassword: 'admin2025',
-    tournamentName: 'Golf Tournament 2025',
-    alertTimes: [],
-    alertEmails: [],
-    gmailUser: '',
-    gmailAppPassword: ''
+    tournamentName: 'Golf Tournament 2025'
   }
 };
 
@@ -108,34 +107,31 @@ app.post('/api/archives', (req, res) => {
 
 // Email endpoint
 app.post('/api/email', async (req, res) => {
-  const { to, subject, message, gmailUser, gmailAppPassword } = req.body;
+  const { to, subject, message } = req.body;
 
   if (!to || !subject || !message) {
     return res.status(400).json({ success: false, error: 'To, subject, and message required' });
   }
 
-  if (!gmailUser || !gmailAppPassword) {
-    return res.status(400).json({ success: false, error: 'Gmail credentials not configured' });
-  }
-
   try {
-    const transporter = nodemailer.createTransport({
-      service: 'gmail',
-      auth: {
-        user: gmailUser,
-        pass: gmailAppPassword
-      }
-    });
+    const recipients = Array.isArray(to) ? to : [to];
 
-    const recipients = Array.isArray(to) ? to.join(', ') : to;
+    // Check if message is already HTML
+    const isHtml = message.trim().startsWith('<!DOCTYPE') || message.trim().startsWith('<html');
+    const htmlContent = isHtml ? message : message.replace(/\n/g, '<br>');
+    const textContent = isHtml ? message.replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim() : message;
 
-    await transporter.sendMail({
-      from: gmailUser,
+    const { data, error } = await resend.emails.send({
+      from: 'Volunteer Golf <hello@colonialvolunteers.golf>',
       to: recipients,
       subject: subject,
-      text: message,
-      html: message.replace(/\n/g, '<br>')
+      text: textContent,
+      html: htmlContent
     });
+
+    if (error) {
+      return res.status(500).json({ success: false, error: error.message });
+    }
 
     res.json({ success: true });
   } catch (err) {

@@ -95,29 +95,6 @@
     .submission-status.submitted { background: #e8f5e9; color: #2e7d32; }
     .submission-status.pending { background: #fff3e0; color: #e65100; }
     
-    /* Alert time inputs */
-    .alert-times-section { margin-top: 20px; }
-    .alert-time-row {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-      margin-bottom: 10px;
-    }
-    .alert-time-row select, .alert-time-row input[type="time"] {
-      padding: 10px;
-      border: 1px solid #ddd;
-      border-radius: 6px;
-      font-size: 14px;
-    }
-    .alert-time-row input[type="time"] { flex: 1; }
-    .alert-time-row button {
-      padding: 8px 12px;
-      background: #dc3545;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-    }
     .add-alert-btn {
       padding: 10px 20px;
       background: #1a472a;
@@ -724,19 +701,24 @@
         tournamentEndDate: '',
         helpPhone: '',
         helpEmail: '',
-        alertTimes: [],
-        alertEmails: [],
-        gmailUser: '',
-        gmailAppPassword: ''
+        amShiftCutoff: '12:00',
+        pmShiftCutoff: '18:00',
+        numberOfHoles: 18
       }
     };
+
+    // Helper to get current number of holes
+    function getNumberOfHoles() {
+      return appData.settings.numberOfHoles || 18;
+    }
 
     let appData = defaultData;
     let dataLoaded = false;
 
     let currentView = 'landing';
-    let adminAuth = false;
+    let adminAuth = false; // false, 'full', or 'viewOnly'
     let captainAuth = null;
+    let volunteerAuth = null; // logged in volunteer object
     let selectedDay = null;
     let selectedShift = null;
     let adminTab = 'overview';
@@ -753,6 +735,11 @@
     let successMessage = '';
     let showSaveToast = false;
     let saveToastTimeout = null;
+    let showPinSetupModal = false;
+    let captainEditingVolunteer = null; // For captain editing volunteer schedules
+    let showReportsModal = false; // For captain reports view
+    let currentReport = null; // Currently selected report type
+    let reportFilters = { hole: 'all', day: 'all', shift: 'all' }; // Current report filters
 
     // Success messages for rotation
     const SUCCESS_MESSAGES = [
@@ -886,6 +873,43 @@
       return { day: DAYS[dayIndex], shift: now.getHours() < 13 ? 'AM' : 'PM' };
     }
 
+    // Check if a shift is locked for captains (past cutoff time) - uses Central US time
+    function isShiftLocked(day, shift) {
+      // Get current time in Central US timezone
+      const now = new Date();
+      const centralTime = new Date(now.toLocaleString('en-US', { timeZone: 'America/Chicago' }));
+      const currentDayIndex = (centralTime.getDay() + 6) % 7; // Monday = 0
+      const targetDayIndex = DAYS.indexOf(day);
+
+      // Calculate target date based on tournament start or current week
+      let targetDate;
+      if (appData.settings.tournamentStartDate) {
+        const startDate = new Date(appData.settings.tournamentStartDate);
+        const dayOffset = targetDayIndex - ((startDate.getDay() + 6) % 7);
+        targetDate = new Date(startDate);
+        targetDate.setDate(startDate.getDate() + dayOffset);
+        if (dayOffset < 0) targetDate.setDate(targetDate.getDate() + 7);
+      } else {
+        // Calculate based on current week
+        targetDate = new Date(centralTime);
+        const diff = targetDayIndex - currentDayIndex;
+        targetDate.setDate(centralTime.getDate() + diff);
+      }
+
+      // Get cutoff time for the shift
+      const cutoffTime = shift === 'AM'
+        ? (appData.settings.amShiftCutoff || '12:00')
+        : (appData.settings.pmShiftCutoff || '18:00');
+      const [cutoffHour, cutoffMin] = cutoffTime.split(':').map(Number);
+
+      // Create cutoff datetime in Central time
+      const cutoffDate = new Date(targetDate);
+      cutoffDate.setHours(cutoffHour, cutoffMin, 0, 0);
+
+      // Shift is locked if current Central time is past the cutoff
+      return centralTime > cutoffDate;
+    }
+
     function formatPhone(phone) {
       if (!phone) return '';
       return String(phone).replace(/\D/g, '').slice(-4);
@@ -917,6 +941,10 @@
         content = renderCaptainLogin();
       } else if (currentView === 'captain') {
         content = renderCaptainDashboard();
+      } else if (currentView === 'volunteerLogin') {
+        content = renderVolunteerLogin();
+      } else if (currentView === 'volunteer') {
+        content = renderVolunteerDashboard();
       }
 
       // Add save toast if visible
@@ -938,7 +966,7 @@
             <h1 class="landing-title">${appData.settings.tournamentName}</h1>
             <p class="landing-subtitle">Volunteer Check-In System</p>
             <button class="btn-primary" onclick="goTo('captainLogin')">Hole Captain Check-In</button>
-            <button class="btn-secondary" onclick="goTo('adminLogin')">Admin Dashboard</button>
+            <button class="btn-secondary" onclick="goTo('volunteerLogin')" style="margin-top:12px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3)">Volunteer Portal</button>
           </div>
           ${hasContact ? `
             <div style="margin-top:30px;text-align:center;color:rgba(255,255,255,0.9)">
@@ -949,6 +977,7 @@
               <p style="font-size:11px;opacity:0.7;margin-top:8px">Tournament staff available during event hours</p>
             </div>
           ` : ''}
+          <a href="#" onclick="goTo('adminLogin'); return false;" style="display:block;margin-top:20px;font-size:12px;color:rgba(255,255,255,0.6);text-decoration:none;">Admin Login</a>
           <p class="footer-text">volunteer.golf</p>
         </div>
       `;
@@ -990,7 +1019,7 @@
             <div class="login-header">
               <div style="font-size:50px;margin-bottom:10px">🏌️</div>
               <h2>Hole Captain Login</h2>
-              <p>Enter the last 4 digits of your phone</p>
+              <p>Enter your 4-digit PIN (or last 4 of phone for first login)</p>
             </div>
             <form id="captainLoginForm" novalidate>
               <input type="text" inputmode="numeric" id="captainPhone" class="input-field phone-input" placeholder="••••" maxlength="4" autocomplete="off">
@@ -1002,6 +1031,192 @@
           </div>
         </div>
       `;
+    }
+
+    function renderVolunteerLogin() {
+      const volunteersWithPhone = appData.volunteers.filter(v => v.phone && v.phone.length >= 4);
+
+      return `
+        <div class="login-page captain">
+          <div class="login-card">
+            <button class="back-btn" onclick="goTo('landing')">← Back</button>
+            <div class="login-header">
+              <div style="font-size:50px;margin-bottom:10px">👤</div>
+              <h2>Volunteer Portal</h2>
+              <p>Enter the last 4 digits of your phone number</p>
+            </div>
+            <form id="volunteerLoginForm" novalidate>
+              <input type="text" inputmode="numeric" id="volunteerPhone" class="input-field phone-input" placeholder="••••" maxlength="4" autocomplete="off">
+              <div id="volunteerError" class="error-msg hidden"></div>
+              <button type="submit" id="volunteerSubmit" class="submit-btn" disabled>Sign In</button>
+            </form>
+            ${volunteersWithPhone.length === 0 ? '<p style="color:#999;font-size:13px;text-align:center;margin-top:20px">No volunteers with phone numbers loaded yet.</p>' : ''}
+            ${volunteersWithPhone.length > 0 ? `<p style="color:#999;font-size:12px;text-align:center;margin-top:20px">${volunteersWithPhone.length} volunteers registered</p>` : ''}
+          </div>
+        </div>
+      `;
+    }
+
+    function renderVolunteerDashboard() {
+      if (!volunteerAuth) return '';
+
+      const vol = volunteerAuth;
+      const days = DAYS;
+
+      // Build schedule grid
+      const scheduleRows = days.map(day => {
+        const amScheduled = vol.scheduled && vol.scheduled[day + ' AM'];
+        const pmScheduled = vol.scheduled && vol.scheduled[day + ' PM'];
+        const amCheckedIn = appData.checkIns.some(c => c.volunteerId === vol.id && c.day === day && c.shift === 'AM');
+        const pmCheckedIn = appData.checkIns.some(c => c.volunteerId === vol.id && c.day === day && c.shift === 'PM');
+
+        if (!amScheduled && !pmScheduled) return null;
+
+        const dayInfo = getRelativeTimeLabel(day, 'AM');
+        return `
+          <tr>
+            <td style="padding:12px;border:1px solid #ddd;font-weight:500">${day}<br><span style="font-size:11px;color:#666;font-weight:normal">${dayInfo.dateOnly}</span></td>
+            <td style="padding:12px;border:1px solid #ddd;text-align:center">
+              ${amScheduled ? (amCheckedIn ? '<span style="color:#4caf50;font-weight:600">✓ Checked In</span>' : '<span style="color:#1a472a">Scheduled</span>') : '<span style="color:#ccc">—</span>'}
+            </td>
+            <td style="padding:12px;border:1px solid #ddd;text-align:center">
+              ${pmScheduled ? (pmCheckedIn ? '<span style="color:#4caf50;font-weight:600">✓ Checked In</span>' : '<span style="color:#1a472a">Scheduled</span>') : '<span style="color:#ccc">—</span>'}
+            </td>
+          </tr>
+        `;
+      }).filter(r => r).join('');
+
+      const totalScheduled = days.reduce((sum, day) => {
+        return sum + (vol.scheduled && vol.scheduled[day + ' AM'] ? 1 : 0) + (vol.scheduled && vol.scheduled[day + ' PM'] ? 1 : 0);
+      }, 0);
+
+      return `
+        <div style="min-height:100vh;background:linear-gradient(135deg, #1a472a 0%, #2d5a3d 100%)">
+          <div style="background:#1a472a;color:white;padding:20px">
+            <div style="display:flex;justify-content:space-between;align-items:center;max-width:600px;margin:0 auto">
+              <div>
+                <h1 style="font-size:20px;font-weight:700;margin:0">${vol.name}</h1>
+                <p style="opacity:0.8;font-size:13px;margin-top:4px">Hole #${vol.hole} • ${vol.type || 'Volunteer'}</p>
+              </div>
+              <button onclick="volunteerAuth=null;goTo('landing')" style="background:rgba(255,255,255,0.2);border:none;color:white;padding:8px 16px;border-radius:8px;cursor:pointer;font-size:14px">Logout</button>
+            </div>
+          </div>
+
+          <div style="max-width:600px;margin:0 auto;padding:20px">
+            <!-- Schedule Section -->
+            <div style="background:white;border-radius:12px;padding:20px;margin-bottom:20px;box-shadow:0 2px 8px rgba(0,0,0,0.1)">
+              <h2 style="font-size:16px;color:#1a472a;margin:0 0 15px 0">Your Schedule</h2>
+              ${totalScheduled === 0 ? `
+                <p style="color:#666;font-size:14px">No shifts scheduled yet.</p>
+              ` : `
+                <table style="width:100%;border-collapse:collapse;font-size:14px">
+                  <thead>
+                    <tr style="background:#f8f9fa">
+                      <th style="padding:10px;border:1px solid #ddd;text-align:left">Day</th>
+                      <th style="padding:10px;border:1px solid #ddd;text-align:center">Morning</th>
+                      <th style="padding:10px;border:1px solid #ddd;text-align:center">Afternoon</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    ${scheduleRows}
+                  </tbody>
+                </table>
+                <p style="font-size:12px;color:#666;margin-top:10px">${totalScheduled} shift${totalScheduled !== 1 ? 's' : ''} scheduled</p>
+              `}
+            </div>
+
+            <!-- Update Email Section -->
+            <div style="background:white;border-radius:12px;padding:20px;margin-bottom:20px;box-shadow:0 2px 8px rgba(0,0,0,0.1)">
+              <h2 style="font-size:16px;color:#1a472a;margin:0 0 15px 0">Your Email</h2>
+              <p style="font-size:13px;color:#666;margin-bottom:10px">Keep your email updated to receive schedule notifications.</p>
+              <div style="display:flex;gap:10px">
+                <input type="email" id="volunteerEmail" value="${vol.email || ''}" placeholder="your@email.com" style="flex:1;padding:10px 12px;border:1px solid #ddd;border-radius:6px;font-size:14px">
+                <button onclick="updateVolunteerEmail()" style="padding:10px 20px;background:#1a472a;color:white;border:none;border-radius:6px;cursor:pointer;font-size:14px">Save</button>
+              </div>
+            </div>
+
+            <!-- Pairing Preferences Section (for outing) -->
+            <div style="background:white;border-radius:12px;padding:20px;box-shadow:0 2px 8px rgba(0,0,0,0.1)">
+              <h2 style="font-size:16px;color:#1a472a;margin:0 0 15px 0">Volunteer Outing Preferences</h2>
+              <p style="font-size:13px;color:#666;margin-bottom:15px">Who would you like to be paired with at the volunteer golf outing? Select up to 3 people.</p>
+              <div id="pairingSection">
+                ${renderPairingPreferences()}
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderPairingPreferences() {
+      const vol = volunteerAuth;
+      if (!vol) return '';
+
+      const pairings = vol.pairingPreferences || [];
+      const otherVolunteers = appData.volunteers.filter(v => v.id !== vol.id).sort((a, b) => a.name.localeCompare(b.name));
+
+      const noPreference = vol.noOutingPreference || false;
+
+      return `
+        <div>
+          <label style="display:flex;align-items:center;gap:8px;margin-bottom:15px;cursor:pointer">
+            <input type="checkbox" ${noPreference ? 'checked' : ''} onchange="updateNoOutingPreference(this.checked)" style="width:18px;height:18px;cursor:pointer">
+            <span style="font-size:14px;color:#333">No preference - pair me with anyone</span>
+          </label>
+          ${noPreference ? `
+            <p style="font-size:13px;color:#666;font-style:italic">You'll be paired with other volunteers who have no preference.</p>
+          ` : `
+            ${[0, 1, 2].map(i => `
+              <div style="margin-bottom:10px">
+                <label style="font-size:12px;color:#666;display:block;margin-bottom:4px">Choice ${i + 1}</label>
+                <select onchange="updatePairingPreference(${i}, this.value)" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:6px;font-size:14px">
+                  <option value="">-- Select a person --</option>
+                  ${otherVolunteers.map(v => `
+                    <option value="${v.id}" ${pairings[i] === v.id ? 'selected' : ''}>${v.name}${v.hole ? ' (Hole #' + v.hole + ')' : ''}</option>
+                  `).join('')}
+                </select>
+              </div>
+            `).join('')}
+            <p style="font-size:11px;color:#999;margin-top:10px">Your preferences will be considered when forming groups for the volunteer outing.</p>
+          `}
+        </div>
+      `;
+    }
+
+    async function updateVolunteerEmail() {
+      const emailInput = document.getElementById('volunteerEmail');
+      const newEmail = emailInput.value.trim();
+
+      const volIdx = appData.volunteers.findIndex(v => v.id === volunteerAuth.id);
+      if (volIdx >= 0) {
+        appData.volunteers[volIdx].email = newEmail;
+        volunteerAuth.email = newEmail;
+        await saveData();
+        alert('Email updated!');
+        render();
+      }
+    }
+
+    async function updatePairingPreference(index, volunteerId) {
+      const volIdx = appData.volunteers.findIndex(v => v.id === volunteerAuth.id);
+      if (volIdx >= 0) {
+        if (!appData.volunteers[volIdx].pairingPreferences) {
+          appData.volunteers[volIdx].pairingPreferences = [];
+        }
+        appData.volunteers[volIdx].pairingPreferences[index] = volunteerId || null;
+        volunteerAuth.pairingPreferences = appData.volunteers[volIdx].pairingPreferences;
+        await saveData();
+      }
+    }
+
+    async function updateNoOutingPreference(checked) {
+      const volIdx = appData.volunteers.findIndex(v => v.id === volunteerAuth.id);
+      if (volIdx >= 0) {
+        appData.volunteers[volIdx].noOutingPreference = checked;
+        volunteerAuth.noOutingPreference = checked;
+        await saveData();
+        render();
+      }
     }
 
     function renderAdminDashboard() {
@@ -1018,12 +1233,14 @@
                 <p>${appData.volunteers.length} volunteers loaded</p>
               </div>
             </div>
-            <button class="logout-btn" onclick="logout()">Logout</button>
+            <button onclick="logout()" style="background:#1a472a;border:none;color:white;padding:8px 16px;border-radius:8px;cursor:pointer;font-size:14px">Logout</button>
           </div>
-          
+
           <div class="tabs">
-            ${['overview', 'checkins', 'volunteers', 'import', 'settings'].map(t => 
-              `<button class="tab-btn ${adminTab === t ? 'active' : ''}" onclick="setAdminTab('${t}')">${t === 'checkins' ? 'Check-ins' : t === 'volunteers' ? 'Edit Volunteers' : t.charAt(0).toUpperCase() + t.slice(1)}</button>`
+            ${['overview', 'checkins', 'volunteers', 'reports', 'import', 'settings']
+              .filter(t => adminAuth === 'full' || (t !== 'import' && t !== 'settings'))
+              .map(t =>
+              `<button class="tab-btn ${adminTab === t ? 'active' : ''}" onclick="setAdminTab('${t}')">${t === 'checkins' ? 'Check-ins' : t === 'volunteers' ? (adminAuth === 'full' ? 'Edit Volunteers' : 'Volunteers') : t.charAt(0).toUpperCase() + t.slice(1)}</button>`
             ).join('')}
           </div>
           
@@ -1031,7 +1248,10 @@
             <div class="shift-selector">
               <label>Viewing:</label>
               <select id="daySelect" onchange="setSelectedDay(this.value)">
-                ${DAYS.map(d => `<option value="${d}" ${d === selectedDay ? 'selected' : ''}>${d}</option>`).join('')}
+                ${DAYS.map(d => {
+                  const dayInfo = getRelativeTimeLabel(d, 'AM');
+                  return `<option value="${d}" ${d === selectedDay ? 'selected' : ''}>${d} (${dayInfo.dateOnly})</option>`;
+                }).join('')}
               </select>
               <select id="shiftSelect" onchange="setSelectedShift(this.value)">
                 ${SHIFTS.map(s => `<option value="${s}" ${s === selectedShift ? 'selected' : ''}>${s}</option>`).join('')}
@@ -1044,6 +1264,7 @@
             ${adminTab === 'overview' ? renderOverview(stats) : ''}
             ${adminTab === 'checkins' ? renderCheckins() : ''}
             ${adminTab === 'volunteers' ? renderVolunteersEdit() : ''}
+            ${adminTab === 'reports' ? renderReports(false) : ''}
             ${adminTab === 'import' ? renderImport() : ''}
             ${adminTab === 'settings' ? renderSettings() : ''}
           </div>
@@ -1073,7 +1294,7 @@
     function renderOverview(stats) {
       // Calculate hole stats
       const holes = {};
-      for (let i = 1; i <= 18; i++) {
+      for (let i = 1; i <= getNumberOfHoles(); i++) {
         const scheduled = appData.volunteers.filter(v => v.hole === i && v.scheduled && v.scheduled[`${selectedDay} ${selectedShift}`]);
         const checkedIn = appData.checkIns.filter(c => c.hole === i && c.day === selectedDay && c.shift === selectedShift);
         const captains = appData.volunteers.filter(v => v.hole === i && (v.type === 'Captain' || v.type === 'Asst. Chairman'));
@@ -1236,7 +1457,7 @@
 
           <select onchange="filterHole=this.value ? parseInt(this.value) : null;render()" style="padding:8px 12px;border:1px solid #ddd;border-radius:6px;font-size:13px">
             <option value="" ${!filterHole ? 'selected' : ''}>All Holes</option>
-            ${[...Array(18).keys()].map(i => i + 1).map(h =>
+            ${[...Array(getNumberOfHoles()).keys()].map(i => i + 1).map(h =>
               `<option value="${h}" ${filterHole === h ? 'selected' : ''}>Hole #${h}</option>`
             ).join('')}
           </select>
@@ -1313,6 +1534,7 @@
               <li><strong>Volunteer Type</strong> - "Volunteer", "Captain", etc.</li>
               <li><strong>Assigned Location</strong> or <strong>Hole</strong> - Hole number</li>
               <li><strong>Phone_Cell</strong> or <strong>Cell</strong> - Phone number</li>
+              <li><strong>Email</strong> - Email address</li>
               <li><strong>Years Worked</strong> or <strong>Years</strong> - Number of years volunteered</li>
               <li><strong>Scheduled Monday AM</strong>, etc. - 1 if scheduled</li>
             </ul>
@@ -1331,7 +1553,7 @@
 
           <div class="import-card" style="margin-top:20px">
             <h3 style="font-size:16px;color:#1a472a;margin-bottom:15px">Update Existing Volunteers</h3>
-            <p>Upload a CSV with <strong>Name</strong> and <strong>Years Worked</strong> columns to update years for existing volunteers. Names must match exactly.</p>
+            <p>Upload a CSV with <strong>Name</strong> column plus any fields to update: <em>Email, Phone, Type, Hole, Years Worked, Custom PIN</em>. Names must match exactly.</p>
             <label class="file-upload" style="border-color:#ff9800;background:#fffbf5">
               <input type="file" accept=".csv" id="updateFileInput" onchange="handleUpdateUpload(this)">
               <div class="file-upload-icon">🔄</div>
@@ -1346,6 +1568,22 @@
     let volSearchTerm = '';
     let volFilterType = 'all';
     let volFilterHole = 'all';
+
+    // Debounced volunteer search
+    let volSearchDebounceTimeout = null;
+    function setVolSearchTerm(term) {
+      volSearchTerm = term;
+      if (volSearchDebounceTimeout) clearTimeout(volSearchDebounceTimeout);
+      volSearchDebounceTimeout = setTimeout(() => {
+        render();
+        // Restore focus to volunteer search input after render
+        const searchInput = document.querySelector('.search-bar');
+        if (searchInput) {
+          searchInput.focus();
+          searchInput.setSelectionRange(searchInput.value.length, searchInput.value.length);
+        }
+      }, 150);
+    }
     
     function renderVolunteersEdit() {
       // Edit modal
@@ -1365,16 +1603,45 @@
                 ).join('')}
               </select>
 
-              <label>Hole Assignment</label>
+              <label>Primary Hole</label>
               <select id="editHole">
-                ${[...Array(19).keys()].slice(1).map(h =>
+                ${[...Array(getNumberOfHoles()).keys()].map(i => i + 1).map(h =>
                   `<option value="${h}" ${editingVolunteer.hole === h ? 'selected' : ''}>Hole ${h}</option>`
                 ).join('')}
                 <option value="99" ${editingVolunteer.hole === 99 ? 'selected' : ''}>Admin (99)</option>
               </select>
 
+              ${(editingVolunteer.type === 'Chairman' || editingVolunteer.type === 'Asst. Chairman') ? `
+              <label>Assigned Holes</label>
+              <div style="display:flex;flex-wrap:wrap;gap:8px;padding:12px;background:#f8f9fa;border-radius:6px;border:1px solid #e0e0e0">
+                ${[...Array(getNumberOfHoles()).keys()].map(i => i + 1).map(h => {
+                  const isAssigned = editingVolunteer.assignedHoles && editingVolunteer.assignedHoles.includes(h);
+                  const isPrimary = editingVolunteer.hole === h;
+                  const isChecked = isAssigned || isPrimary;
+                  return `<div onclick="${isPrimary ? '' : `this.classList.toggle('hole-selected');this.querySelector('input').checked=!this.querySelector('input').checked`}" class="${isChecked ? 'hole-selected' : ''}" style="width:44px;height:36px;display:flex;align-items:center;justify-content:center;background:${isChecked ? '#1a472a' : '#fff'};color:${isChecked ? '#fff' : '#333'};border:2px solid ${isPrimary ? '#4caf50' : (isChecked ? '#1a472a' : '#ccc')};border-radius:6px;cursor:${isPrimary ? 'default' : 'pointer'};font-size:14px;font-weight:${isChecked ? '600' : '400'}">
+                    <input type="checkbox" class="assignedHoleCheckbox" value="${h}" ${isChecked ? 'checked' : ''} ${isPrimary ? 'disabled' : ''} style="display:none">
+                    ${h}
+                  </div>`;
+                }).join('')}
+              </div>
+              <p style="font-size:11px;color:#666;margin-top:6px">Click holes to assign. Primary hole (${editingVolunteer.hole}) is always included.</p>
+              <style>.hole-selected{background:#1a472a !important;color:#fff !important;border-color:#1a472a !important;font-weight:600 !important}</style>
+              ` : ''}
+
               <label>Phone</label>
               <input type="tel" id="editPhone" value="${editingVolunteer.phone || ''}" placeholder="(555) 123-4567">
+
+              <label>Email</label>
+              <input type="email" id="editEmail" value="${editingVolunteer.email || ''}" placeholder="volunteer@example.com">
+
+              ${(editingVolunteer.type === 'Captain' || editingVolunteer.type === 'Asst. Chairman' || editingVolunteer.type === 'Chairman' || editingVolunteer.type === 'Admin') && !editingVolunteer.isNew ? `
+              <label>Login PIN</label>
+              <div style="display:flex;gap:10px;align-items:center">
+                <input type="text" id="editPin" value="${editingVolunteer.customPin || ''}" placeholder="${formatPhone(editingVolunteer.phone) || 'Not set'}" maxlength="4" style="width:80px;text-align:center">
+                ${editingVolunteer.customPin ? `<button type="button" onclick="resetVolunteerPin()" style="padding:6px 12px;background:#ff9800;color:white;border:none;border-radius:4px;font-size:12px;cursor:pointer">Reset to Phone</button>` : '<span style="color:#666;font-size:11px">Using last 4 of phone</span>'}
+              </div>
+              <p style="font-size:10px;color:#999;margin-top:4px">Custom 4-digit PIN for captain login, or blank to use last 4 of phone</p>
+              ` : ''}
 
               <label>Years Worked</label>
               <input type="number" id="editYears" value="${editingVolunteer.yearsWorked || 0}" min="0" placeholder="0">
@@ -1395,6 +1662,15 @@
                 ).join('')}
               </div>
             </div>
+            ${!isNewVolunteer ? `
+            <div style="margin-top:20px;padding-top:15px;border-top:1px solid #eee">
+              <label style="display:flex;align-items:center;gap:8px;font-size:13px;cursor:pointer">
+                <input type="checkbox" id="adminSendScheduleEmail" style="flex-shrink:0">
+                <span>Send updated schedule to volunteer via email</span>
+              </label>
+              ${editingVolunteer.email ? '<p style="font-size:11px;color:#666;margin-top:5px;margin-left:24px">Email: ' + editingVolunteer.email + '</p>' : '<p style="font-size:11px;color:#e65100;margin-top:5px;margin-left:24px">No email on file for this volunteer</p>'}
+            </div>
+            ` : ''}
             <div class="modal-buttons" style="margin-top:20px">
               <button class="modal-btn cancel" onclick="editingVolunteer=null;render()">Cancel</button>
               <button class="modal-btn confirm" onclick="saveVolunteerEdit()">${isNewVolunteer ? 'Add Volunteer' : 'Save Changes'}</button>
@@ -1420,11 +1696,11 @@
         ${editModal}
         <div style="margin-bottom:20px">
           <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:15px">
-            <h2 style="font-size:16px;color:#333;margin:0">Edit Volunteers</h2>
-            <button onclick="addNewVolunteer()" style="padding:8px 16px;background:#1a472a;color:white;border:none;border-radius:6px;font-size:13px;font-weight:500;cursor:pointer">+ Add Volunteer</button>
+            <h2 style="font-size:16px;color:#333;margin:0">${adminAuth === 'full' ? 'Edit Volunteers' : 'Volunteers'}</h2>
+            ${adminAuth === 'full' ? `<button onclick="addNewVolunteer()" style="padding:8px 16px;background:#1a472a;color:white;border:none;border-radius:6px;font-size:13px;font-weight:500;cursor:pointer">+ Add Volunteer</button>` : ''}
           </div>
           <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
-            <input type="text" class="search-bar" placeholder="Search by name..." value="${volSearchTerm}" oninput="volSearchTerm=this.value;render()" style="font-size:13px">
+            <input type="text" class="search-bar" placeholder="Search by name..." value="${volSearchTerm}" oninput="setVolSearchTerm(this.value)" style="font-size:13px">
             <select onchange="volFilterType=this.value;render()" style="padding:8px;border:1px solid #ddd;border-radius:6px;font-size:13px">
               <option value="all" ${volFilterType === 'all' ? 'selected' : ''}>All Types</option>
               <option value="Volunteer" ${volFilterType === 'Volunteer' ? 'selected' : ''}>Volunteers</option>
@@ -1434,7 +1710,7 @@
             </select>
             <select onchange="volFilterHole=this.value;render()" style="padding:8px;border:1px solid #ddd;border-radius:6px;font-size:13px">
               <option value="all" ${volFilterHole === 'all' ? 'selected' : ''}>All Holes</option>
-              ${[...Array(19).keys()].slice(1).map(h =>
+              ${[...Array(getNumberOfHoles()).keys()].map(i => i + 1).map(h =>
                 `<option value="${h}" ${volFilterHole === String(h) ? 'selected' : ''}>Hole ${h}</option>`
               ).join('')}
             </select>
@@ -1442,7 +1718,7 @@
           </div>
         </div>
 
-        <p style="font-size:11px;color:#888;margin-bottom:10px">Click any row to edit volunteer details</p>
+        ${adminAuth === 'full' ? `<p style="font-size:11px;color:#888;margin-bottom:10px">Click any row to edit volunteer details</p>` : ''}
 
         <div class="table-container" style="max-height:60vh;overflow-y:auto">
           <table class="volunteer-table">
@@ -1463,14 +1739,14 @@
               ` : filtered.slice(0, 100).map(v => {
                 const shiftCount = v.scheduled ? Object.keys(v.scheduled).filter(k => v.scheduled[k]).length : 0;
                 return `
-                  <tr style="cursor:pointer" onclick="editVolunteer('${v.id}')">
+                  <tr style="${adminAuth === 'full' ? 'cursor:pointer' : ''}" ${adminAuth === 'full' ? `onclick="editVolunteer('${v.id}')"` : ''}>
                     <td style="font-weight:500;font-size:13px">${v.name}</td>
                     <td><span style="padding:2px 6px;border-radius:4px;font-size:10px;background:${v.type === 'Captain' ? '#e3f2fd' : v.type === 'Volunteer' ? '#f5f5f5' : '#fff3e0'}">${v.type}</span></td>
                     <td style="font-size:12px">#${v.hole}</td>
                     <td style="color:#666;text-align:center;font-size:12px">${v.yearsWorked || 0}</td>
                     <td style="color:#666;font-size:12px">${formatPhone(v.phone) || '-'}</td>
                     <td style="color:#666;font-size:12px">${shiftCount} shifts</td>
-                    <td><button class="edit-btn" onclick="event.stopPropagation();editVolunteer('${v.id}')" style="font-size:11px;padding:3px 8px">Edit</button></td>
+                    <td>${adminAuth === 'full' ? `<button class="edit-btn" onclick="event.stopPropagation();editVolunteer('${v.id}')" style="font-size:11px;padding:3px 8px">Edit</button>` : ''}</td>
                   </tr>
                 `;
               }).join('')}
@@ -1513,7 +1789,17 @@
         render();
       }
     }
-    
+
+    function resetVolunteerPin() {
+      const pinInput = document.getElementById('editPin');
+      if (pinInput) {
+        pinInput.value = '';
+      }
+      if (editingVolunteer) {
+        editingVolunteer.customPin = '';
+      }
+    }
+
     function saveVolunteerEdit() {
       if (!editingVolunteer) return;
 
@@ -1522,7 +1808,21 @@
       const newType = document.getElementById('editType').value;
       const newHole = parseInt(document.getElementById('editHole').value);
       const newPhone = document.getElementById('editPhone').value.trim();
+      const newEmail = document.getElementById('editEmail').value.trim();
       const newYears = parseInt(document.getElementById('editYears').value) || 0;
+      const pinInput = document.getElementById('editPin');
+      const newPin = pinInput ? pinInput.value.trim() : null;
+
+      // Get assigned holes for Chairman types
+      let newAssignedHoles = null;
+      if (newType === 'Chairman' || newType === 'Asst. Chairman') {
+        const checkboxes = document.querySelectorAll('.assignedHoleCheckbox:checked');
+        newAssignedHoles = Array.from(checkboxes).map(cb => parseInt(cb.value)).sort((a, b) => a - b);
+        // Ensure primary hole is included
+        if (!newAssignedHoles.includes(newHole)) {
+          newAssignedHoles.unshift(newHole);
+        }
+      }
 
       // Validate name
       if (!newName) {
@@ -1543,15 +1843,20 @@
 
       if (editingVolunteer.isNew) {
         // Add new volunteer
-        appData.volunteers.push({
+        const newVol = {
           id: editingVolunteer.id,
           name: newName,
           type: newType,
           hole: newHole,
           phone: newPhone,
+          email: newEmail,
           yearsWorked: newYears,
           scheduled: newSchedule
-        });
+        };
+        if (newAssignedHoles) {
+          newVol.assignedHoles = newAssignedHoles;
+        }
+        appData.volunteers.push(newVol);
 
         saveData();
         editingVolunteer = null;
@@ -1563,15 +1868,31 @@
         const idx = appData.volunteers.findIndex(v => v.id === editingVolunteer.id);
         if (idx === -1) return;
 
-        appData.volunteers[idx] = {
+        const updatedVol = {
           ...appData.volunteers[idx],
           name: newName,
           type: newType,
           hole: newHole,
           phone: newPhone,
+          email: newEmail,
           yearsWorked: newYears,
           scheduled: newSchedule
         };
+        // Update assigned holes for Chairman types
+        if (newAssignedHoles) {
+          updatedVol.assignedHoles = newAssignedHoles;
+        } else {
+          delete updatedVol.assignedHoles;
+        }
+        // Update PIN if the field exists (only for captains)
+        if (newPin !== null) {
+          if (newPin === '') {
+            delete updatedVol.customPin;
+          } else if (/^\d{4}$/.test(newPin)) {
+            updatedVol.customPin = newPin;
+          }
+        }
+        appData.volunteers[idx] = updatedVol;
 
         // Update any check-in records with new name
         appData.checkIns = appData.checkIns.map(c => {
@@ -1582,16 +1903,760 @@
         });
 
         saveData();
+
+        // Check if we should send schedule email
+        const sendEmailCheckbox = document.getElementById('adminSendScheduleEmail');
+        if (sendEmailCheckbox && sendEmailCheckbox.checked && newEmail) {
+          sendScheduleEmail(updatedVol, newSchedule)
+            .then(() => {
+              alert('✓ Volunteer updated and schedule email sent!');
+            })
+            .catch(err => {
+              alert('✓ Volunteer updated, but email failed: ' + err.message);
+            });
+        } else {
+          alert('✓ Volunteer updated successfully!');
+        }
+
         editingVolunteer = null;
         render();
+      }
+    }
 
-        alert('✓ Volunteer updated successfully!');
+    // Reports System
+    let customReportConfig = {
+      columns: ['name', 'hole', 'type'],
+      filters: { hole: 'all', type: 'all', dayScheduled: 'all' },
+      sortBy: 'name',
+      sortDir: 'asc'
+    };
+
+    function renderReports(isCaptainView = false, captainHole = null) {
+      const reportTypes = [
+        { id: 'volunteer-totals', name: 'Volunteer Totals', desc: 'Total shifts worked per volunteer' },
+        { id: 'hole-roster', name: 'Hole Roster', desc: 'Full schedule for a hole' },
+        { id: 'custom', name: 'Custom Report', desc: 'Build your own report with custom columns and filters' }
+      ];
+
+      const availableReports = reportTypes;
+
+      if (!currentReport) {
+        // Show report selection
+        return `
+          <div class="reports-section">
+            <p style="color:#666;font-size:13px;margin-bottom:20px">Select a report to run${isCaptainView ? ' for your hole' : ''}</p>
+
+            <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px">
+              ${availableReports.map(r => `
+                <div style="background:#fff;border:1px solid #ddd;border-radius:8px;padding:15px;cursor:pointer;transition:all 0.2s" onclick="selectReport('${r.id}')" onmouseover="this.style.borderColor='#1a472a';this.style.background='#f8f9fa'" onmouseout="this.style.borderColor='#ddd';this.style.background='#fff'">
+                  <div style="font-weight:600;font-size:14px;color:#333">${r.name}</div>
+                  <div style="font-size:12px;color:#666;margin-top:6px">${r.desc}</div>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        `;
+      }
+
+      // Show selected report with filters and results
+      const report = reportTypes.find(r => r.id === currentReport);
+      const isHoleRoster = currentReport === 'hole-roster';
+      const currentHoleNum = parseInt(reportFilters.hole) || 1;
+      return `
+        <div class="reports-section">
+          ${showEmailHoleModal ? `
+            <div class="modal-overlay" onclick="closeEmailHoleModal()">
+              <div class="modal" onclick="event.stopPropagation()" style="max-width:500px;text-align:left">
+                <h3 style="margin:0 0 15px 0">Email Hole #${emailHoleNumber} Roster</h3>
+                <p style="color:#666;font-size:13px;margin-bottom:15px">This will send the roster to all volunteers and captains on Hole #${emailHoleNumber} who have email addresses.</p>
+                <div style="margin-bottom:15px">
+                  <label style="font-size:12px;color:#666;display:block;margin-bottom:6px;font-weight:600">Add a message (optional)</label>
+                  <textarea id="emailHoleMessage" placeholder="Enter any additional message you'd like to include..." style="width:100%;height:100px;padding:10px;border:1px solid #ddd;border-radius:6px;font-size:13px;font-family:inherit;resize:vertical"></textarea>
+                </div>
+                <div class="modal-buttons">
+                  <button class="modal-btn cancel" onclick="closeEmailHoleModal()">Cancel</button>
+                  <button id="sendEmailHoleBtn" class="modal-btn confirm" onclick="sendEmailToHole()">Send Email</button>
+                </div>
+              </div>
+            </div>
+          ` : ''}
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;flex-wrap:wrap;gap:10px">
+            <div>
+              <button onclick="currentReport=null;render()" style="background:none;border:none;color:#1a472a;cursor:pointer;font-size:13px;padding:0;margin-bottom:5px">&larr; Back to Reports</button>
+              <h3 style="margin:0;font-size:18px;color:#333">${report?.name || currentReport}</h3>
+            </div>
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              ${isHoleRoster ? `
+                <button onclick="downloadPDF(${currentHoleNum})" style="padding:8px 16px;background:#fff;border:1px solid #ddd;border-radius:6px;cursor:pointer;font-size:13px">Download PDF</button>
+                <button onclick="openEmailHoleModal(${currentHoleNum})" style="padding:8px 16px;background:#1a472a;color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:13px">Email to Hole</button>
+              ` : ''}
+              <button onclick="printReport()" style="padding:8px 16px;background:#fff;border:1px solid #ddd;border-radius:6px;cursor:pointer;font-size:13px">Print</button>
+              <button onclick="exportReportCSV()" style="padding:8px 16px;background:#fff;border:1px solid #ddd;border-radius:6px;cursor:pointer;font-size:13px">Export CSV</button>
+            </div>
+          </div>
+
+          ${renderReportFilters(isCaptainView, captainHole)}
+          ${renderReportResults(isCaptainView, captainHole)}
+        </div>
+      `;
+    }
+
+    function renderReportFilters(isCaptainView, captainHole) {
+      const showHoleFilter = !isCaptainView && ['volunteer-totals', 'hole-roster'].includes(currentReport);
+      const showDayFilter = currentReport === 'hole-roster';
+
+      if (!showHoleFilter && !showDayFilter) return '';
+
+      return `
+        <div style="background:#f8f9fa;border-radius:8px;padding:15px;margin-bottom:20px;display:flex;flex-wrap:wrap;gap:15px;align-items:center">
+          <span style="font-size:13px;color:#666;font-weight:600">Filters:</span>
+
+          ${showHoleFilter ? `
+            <div>
+              <label style="font-size:12px;color:#666;display:block;margin-bottom:4px">Hole</label>
+              <select onchange="reportFilters.hole=this.value;render()" style="padding:8px 12px;border:1px solid #ddd;border-radius:6px;font-size:13px">
+                ${currentReport !== 'hole-roster' ? `<option value="all" ${reportFilters.hole === 'all' ? 'selected' : ''}>All Holes</option>` : ''}
+                ${[...Array(getNumberOfHoles()).keys()].map(i => i + 1).map(h =>
+                  `<option value="${h}" ${reportFilters.hole == h || (currentReport === 'hole-roster' && reportFilters.hole === 'all' && h === 1) ? 'selected' : ''}>Hole #${h}</option>`
+                ).join('')}
+              </select>
+            </div>
+          ` : ''}
+
+          ${showDayFilter ? `
+            <div>
+              <label style="font-size:12px;color:#666;display:block;margin-bottom:4px">Day</label>
+              <select onchange="reportFilters.day=this.value;render()" style="padding:8px 12px;border:1px solid #ddd;border-radius:6px;font-size:13px">
+                <option value="all" ${reportFilters.day === 'all' ? 'selected' : ''}>All Days</option>
+                ${DAYS.map(d => `<option value="${d}" ${reportFilters.day === d ? 'selected' : ''}>${d}</option>`).join('')}
+              </select>
+            </div>
+          ` : ''}
+        </div>
+      `;
+    }
+
+    function renderReportResults(isCaptainView, captainHole) {
+      const holeFilter = isCaptainView ? captainHole : (reportFilters.hole === 'all' ? null : parseInt(reportFilters.hole));
+
+      switch (currentReport) {
+        case 'volunteer-totals':
+          return renderVolunteerTotalsReport(holeFilter);
+        case 'hole-roster':
+          return renderHoleRosterReport(holeFilter || 1);
+        case 'custom':
+          return renderCustomReport();
+        default:
+          return '<p>Unknown report type</p>';
+      }
+    }
+
+    function renderVolunteerTotalsReport(holeFilter) {
+      let volunteers = [...appData.volunteers];
+      if (holeFilter) volunteers = volunteers.filter(v => v.hole === holeFilter);
+
+      const data = volunteers.map(v => {
+        let scheduledCount = 0;
+        let workedCount = 0;
+
+        DAYS.forEach(day => {
+          SHIFTS.forEach(shift => {
+            const key = day + ' ' + shift;
+            if (v.scheduled && v.scheduled[key]) {
+              scheduledCount++;
+              if (appData.checkIns.some(c => c.volunteerId === v.id && c.day === day && c.shift === shift)) {
+                workedCount++;
+              }
+            }
+          });
+        });
+
+        return { volunteer: v, scheduledCount, workedCount };
+      });
+
+      // Sort by worked count descending
+      data.sort((a, b) => b.workedCount - a.workedCount);
+
+      return `
+        <div id="report-content">
+          <table style="width:100%;border-collapse:collapse;font-size:14px">
+            <thead>
+              <tr style="background:#f8f9fa">
+                <th style="text-align:left;padding:12px;border-bottom:2px solid #ddd">Volunteer</th>
+                <th style="text-align:center;padding:12px;border-bottom:2px solid #ddd">Hole</th>
+                <th style="text-align:center;padding:12px;border-bottom:2px solid #ddd">Shifts Scheduled</th>
+                <th style="text-align:center;padding:12px;border-bottom:2px solid #ddd">Shifts Worked</th>
+                <th style="text-align:center;padding:12px;border-bottom:2px solid #ddd">Attendance</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${data.map(r => `
+                <tr>
+                  <td style="padding:10px 12px;border-bottom:1px solid #eee">${r.volunteer.name}</td>
+                  <td style="text-align:center;padding:10px 12px;border-bottom:1px solid #eee">#${r.volunteer.hole}</td>
+                  <td style="text-align:center;padding:10px 12px;border-bottom:1px solid #eee">${r.scheduledCount}</td>
+                  <td style="text-align:center;padding:10px 12px;border-bottom:1px solid #eee">${r.workedCount}</td>
+                  <td style="text-align:center;padding:10px 12px;border-bottom:1px solid #eee">${r.scheduledCount > 0 ? Math.round(r.workedCount / r.scheduledCount * 100) : 0}%</td>
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+        </div>
+      `;
+    }
+
+    function renderHoleRosterReport(holeNum, options = {}) {
+      const { hideViewAll = false, hideTitle = false } = options;
+      const dayFilter = reportFilters.day;
+      const showAllHoles = reportFilters.hole === 'all-export' && !hideViewAll;
+      const hole = showAllHoles ? null : (parseInt(reportFilters.hole) || holeNum || 1);
+      const days = dayFilter === 'all' ? DAYS : [dayFilter];
+
+      // Helper to render a single hole's roster
+      function renderSingleHoleRoster(holeNumber) {
+        const volunteers = appData.volunteers.filter(v => v.hole === holeNumber);
+
+        // Calculate totals per shift
+        const shiftTotals = {};
+        days.forEach(day => {
+          SHIFTS.forEach(shift => {
+            const key = day + ' ' + shift;
+            shiftTotals[key] = volunteers.filter(v => v.scheduled && v.scheduled[key]).length;
+          });
+        });
+
+        if (volunteers.length === 0) {
+          return `<div style="margin-bottom:30px"><h4 style="margin:0 0 10px 0;color:#1a472a">Hole #${holeNumber}</h4><p style="color:#666">No volunteers assigned.</p></div>`;
+        }
+
+        return `
+          <div class="hole-roster" style="margin-bottom:30px;">
+            ${hideTitle ? '' : `<h4 style="margin:0 0 15px 0;color:#1a472a">Hole #${holeNumber} - Full Roster</h4>`}
+            <table style="width:100%;border-collapse:collapse;font-size:14px;border:1px solid #ccc">
+              <thead>
+                <tr style="background:#f8f9fa">
+                  <th style="text-align:left;padding:12px;border:1px solid #ccc">Volunteer</th>
+                  <th style="text-align:left;padding:12px;border:1px solid #ccc">Type</th>
+                  ${days.map(d => `
+                    <th style="text-align:center;padding:12px;border:1px solid #ccc" colspan="2">${d.slice(0, 3)}</th>
+                  `).join('')}
+                </tr>
+                <tr style="background:#f8f9fa">
+                  <th style="border:1px solid #ccc"></th>
+                  <th style="border:1px solid #ccc"></th>
+                  ${days.map(() => `
+                    <th style="text-align:center;padding:6px;border:1px solid #ccc;font-size:11px;font-weight:normal;color:#666">AM</th>
+                    <th style="text-align:center;padding:6px;border:1px solid #ccc;font-size:11px;font-weight:normal;color:#666">PM</th>
+                  `).join('')}
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="background:#f0f7f0;font-weight:600">
+                  <td style="padding:10px 12px;border:1px solid #ccc" colspan="2">Total Scheduled</td>
+                  ${days.map(day =>
+                    SHIFTS.map(shift => {
+                      const key = day + ' ' + shift;
+                      return `<td style="text-align:center;padding:10px 6px;border:1px solid #ccc;color:#1a472a">${shiftTotals[key]}</td>`;
+                    }).join('')
+                  ).join('')}
+                </tr>
+                ${volunteers.map(v => `
+                  <tr>
+                    <td style="padding:10px 12px;border:1px solid #ccc">${v.name}</td>
+                    <td style="padding:10px 12px;border:1px solid #ccc;font-size:12px;color:#666">${v.type || '-'}</td>
+                    ${days.map(day =>
+                      SHIFTS.map(shift => {
+                        const key = day + ' ' + shift;
+                        const isScheduled = v.scheduled && v.scheduled[key];
+                        const isCheckedIn = appData.checkIns.some(c => c.volunteerId === v.id && c.day === day && c.shift === shift);
+                        let icon = '';
+                        let color = '#ccc';
+                        if (isScheduled && isCheckedIn) { icon = '✓'; color = '#4caf50'; }
+                        else if (isScheduled) { icon = '○'; color = '#1a472a'; }
+                        return `<td style="text-align:center;padding:10px 6px;border:1px solid #ccc;color:${color};font-weight:600">${icon}</td>`;
+                      }).join('')
+                    ).join('')}
+                  </tr>
+                `).join('')}
+              </tbody>
+            </table>
+          </div>
+        `;
+      }
+
+      if (showAllHoles) {
+        // Render all holes
+        const allHoles = [...Array(getNumberOfHoles()).keys()].map(i => i + 1);
+        return `
+          <div id="report-content">
+            <div style="margin-bottom:20px">
+              <button onclick="reportFilters.hole='all';render()" style="background:none;border:none;color:#1a472a;cursor:pointer;font-size:13px;padding:0">&larr; Back to single hole view</button>
+            </div>
+            ${allHoles.map(h => renderSingleHoleRoster(h)).join('')}
+            <div style="margin-top:15px;font-size:12px;color:#666">
+              <span style="color:#4caf50;font-weight:600">✓</span> = Checked in &nbsp;&nbsp;
+              <span style="color:#1a472a;font-weight:600">○</span> = Scheduled
+            </div>
+          </div>
+        `;
+      }
+
+      return `
+        <div id="report-content">
+          ${hideViewAll ? '' : `<div style="margin-bottom:15px">
+            <button onclick="reportFilters.hole='all-export';render()" style="padding:8px 16px;background:#1a472a;color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:13px">View All Holes</button>
+          </div>`}
+
+          ${renderSingleHoleRoster(hole)}
+
+          <div style="font-size:12px;color:#666">
+            <span style="color:#4caf50;font-weight:600">✓</span> = Checked in &nbsp;&nbsp;
+            <span style="color:#1a472a;font-weight:600">○</span> = Scheduled
+          </div>
+        </div>
+      `;
+    }
+
+    function renderCustomReport() {
+      const availableColumns = [
+        { id: 'name', label: 'Name' },
+        { id: 'hole', label: 'Hole' },
+        { id: 'type', label: 'Type' },
+        { id: 'email', label: 'Email' },
+        { id: 'phone', label: 'Phone' },
+        { id: 'yearsWorked', label: 'Years' },
+        { id: 'totalScheduled', label: 'Shifts Scheduled' },
+        { id: 'totalWorked', label: 'Shifts Worked' },
+        { id: 'attendance', label: 'Attendance %' }
+      ];
+
+      // Add individual day columns
+      DAYS.forEach(day => {
+        availableColumns.push({ id: 'sched_' + day, label: day + ' Schedule' });
+      });
+
+      const volunteerTypes = [...new Set(appData.volunteers.map(v => v.type).filter(t => t))].sort();
+
+      // Apply filters
+      let filtered = [...appData.volunteers];
+
+      if (customReportConfig.filters.hole !== 'all') {
+        filtered = filtered.filter(v => v.hole === parseInt(customReportConfig.filters.hole));
+      }
+      if (customReportConfig.filters.type !== 'all') {
+        filtered = filtered.filter(v => v.type === customReportConfig.filters.type);
+      }
+      if (customReportConfig.filters.dayScheduled !== 'all') {
+        const day = customReportConfig.filters.dayScheduled;
+        filtered = filtered.filter(v => v.scheduled && (v.scheduled[day + ' AM'] || v.scheduled[day + ' PM']));
+      }
+
+      // Calculate derived fields
+      const data = filtered.map(v => {
+        let totalScheduled = 0;
+        let totalWorked = 0;
+        const schedByDay = {};
+
+        DAYS.forEach(day => {
+          let daySchedule = [];
+          SHIFTS.forEach(shift => {
+            const key = day + ' ' + shift;
+            if (v.scheduled && v.scheduled[key]) {
+              totalScheduled++;
+              daySchedule.push(shift);
+              if (appData.checkIns.some(c => c.volunteerId === v.id && c.day === day && c.shift === shift)) {
+                totalWorked++;
+              }
+            }
+          });
+          schedByDay['sched_' + day] = daySchedule.length > 0 ? daySchedule.join('/') : '-';
+        });
+
+        return {
+          ...v,
+          totalScheduled,
+          totalWorked,
+          attendance: totalScheduled > 0 ? Math.round(totalWorked / totalScheduled * 100) + '%' : '-',
+          ...schedByDay
+        };
+      });
+
+      // Sort
+      const sortKey = customReportConfig.sortBy;
+      const sortDir = customReportConfig.sortDir === 'asc' ? 1 : -1;
+      data.sort((a, b) => {
+        let aVal = a[sortKey] ?? '';
+        let bVal = b[sortKey] ?? '';
+        if (typeof aVal === 'number' && typeof bVal === 'number') {
+          return (aVal - bVal) * sortDir;
+        }
+        return String(aVal).localeCompare(String(bVal)) * sortDir;
+      });
+
+      return `
+        <div id="report-content">
+          <div style="background:#f8f9fa;border-radius:8px;padding:15px;margin-bottom:20px">
+            <div style="margin-bottom:15px">
+              <label style="font-size:12px;color:#666;display:block;margin-bottom:8px;font-weight:600">Columns to Display</label>
+              <div style="display:flex;flex-wrap:wrap;gap:8px">
+                ${availableColumns.map(col => `
+                  <label style="display:flex;align-items:center;gap:4px;font-size:12px;background:${customReportConfig.columns.includes(col.id) ? '#e8f5e9' : '#fff'};border:1px solid ${customReportConfig.columns.includes(col.id) ? '#4caf50' : '#ddd'};padding:6px 10px;border-radius:4px;cursor:pointer">
+                    <input type="checkbox" ${customReportConfig.columns.includes(col.id) ? 'checked' : ''} onchange="toggleCustomColumn('${col.id}')" style="margin:0">
+                    ${col.label}
+                  </label>
+                `).join('')}
+              </div>
+            </div>
+
+            <div style="display:flex;flex-wrap:wrap;gap:15px;margin-bottom:15px">
+              <div>
+                <label style="font-size:12px;color:#666;display:block;margin-bottom:4px">Filter by Hole</label>
+                <select onchange="customReportConfig.filters.hole=this.value;render()" style="padding:8px 12px;border:1px solid #ddd;border-radius:6px;font-size:13px">
+                  <option value="all">All Holes</option>
+                  ${[...Array(getNumberOfHoles()).keys()].map(i => i + 1).map(h =>
+                    `<option value="${h}" ${customReportConfig.filters.hole == h ? 'selected' : ''}>Hole #${h}</option>`
+                  ).join('')}
+                </select>
+              </div>
+              <div>
+                <label style="font-size:12px;color:#666;display:block;margin-bottom:4px">Filter by Type</label>
+                <select onchange="customReportConfig.filters.type=this.value;render()" style="padding:8px 12px;border:1px solid #ddd;border-radius:6px;font-size:13px">
+                  <option value="all">All Types</option>
+                  ${volunteerTypes.map(t => `<option value="${t}" ${customReportConfig.filters.type === t ? 'selected' : ''}>${t}</option>`).join('')}
+                </select>
+              </div>
+              <div>
+                <label style="font-size:12px;color:#666;display:block;margin-bottom:4px">Scheduled on Day</label>
+                <select onchange="customReportConfig.filters.dayScheduled=this.value;render()" style="padding:8px 12px;border:1px solid #ddd;border-radius:6px;font-size:13px">
+                  <option value="all">Any Day</option>
+                  ${DAYS.map(d => `<option value="${d}" ${customReportConfig.filters.dayScheduled === d ? 'selected' : ''}>${d}</option>`).join('')}
+                </select>
+              </div>
+            </div>
+
+            <div style="display:flex;flex-wrap:wrap;gap:15px">
+              <div>
+                <label style="font-size:12px;color:#666;display:block;margin-bottom:4px">Sort By</label>
+                <select onchange="customReportConfig.sortBy=this.value;render()" style="padding:8px 12px;border:1px solid #ddd;border-radius:6px;font-size:13px">
+                  ${availableColumns.filter(c => customReportConfig.columns.includes(c.id)).map(col =>
+                    `<option value="${col.id}" ${customReportConfig.sortBy === col.id ? 'selected' : ''}>${col.label}</option>`
+                  ).join('')}
+                </select>
+              </div>
+              <div>
+                <label style="font-size:12px;color:#666;display:block;margin-bottom:4px">Direction</label>
+                <select onchange="customReportConfig.sortDir=this.value;render()" style="padding:8px 12px;border:1px solid #ddd;border-radius:6px;font-size:13px">
+                  <option value="asc" ${customReportConfig.sortDir === 'asc' ? 'selected' : ''}>A → Z / Low → High</option>
+                  <option value="desc" ${customReportConfig.sortDir === 'desc' ? 'selected' : ''}>Z → A / High → Low</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <p style="color:#666;font-size:13px;margin-bottom:15px">${data.length} volunteer${data.length !== 1 ? 's' : ''} found</p>
+
+          ${data.length === 0 ? '<p style="color:#999;text-align:center;padding:40px">No volunteers match the selected filters.</p>' : `
+            <table style="width:100%;border-collapse:collapse;font-size:13px">
+              <thead>
+                <tr style="background:#f8f9fa">
+                  ${customReportConfig.columns.map(colId => {
+                    const col = availableColumns.find(c => c.id === colId);
+                    return `<th style="text-align:left;padding:10px 8px;border-bottom:2px solid #ddd;white-space:nowrap">${col?.label || colId}</th>`;
+                  }).join('')}
+                </tr>
+              </thead>
+              <tbody>
+                ${data.map(row => `
+                  <tr>
+                    ${customReportConfig.columns.map(colId => {
+                      let val = row[colId] ?? '-';
+                      if (colId === 'hole') val = '#' + val;
+                      return `<td style="padding:8px;border-bottom:1px solid #eee">${val}</td>`;
+                    }).join('')}
+                  </tr>
+                `).join('')}
+              </tbody>
+            </table>
+          `}
+        </div>
+      `;
+    }
+
+    function toggleCustomColumn(colId) {
+      const idx = customReportConfig.columns.indexOf(colId);
+      if (idx >= 0) {
+        customReportConfig.columns.splice(idx, 1);
+      } else {
+        customReportConfig.columns.push(colId);
+      }
+      // Reset sort if current sort column was removed
+      if (!customReportConfig.columns.includes(customReportConfig.sortBy)) {
+        customReportConfig.sortBy = customReportConfig.columns[0] || 'name';
+      }
+      render();
+    }
+
+    function selectReport(reportId) {
+      currentReport = reportId;
+      reportFilters = { hole: 'all', day: 'all', shift: 'all' };
+      render();
+    }
+
+    function printReport() {
+      const content = document.getElementById('report-content');
+      if (!content) return;
+
+      const printWindow = window.open('', '_blank');
+      printWindow.document.write(`
+        <!DOCTYPE html>
+        <html>
+        <head>
+          <title>Report - ${appData.settings.tournamentName || 'Volunteer Golf'}</title>
+          <style>
+            @page {
+              size: 8.5in 11in portrait;
+              margin: 0.4in;
+            }
+            body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; padding: 10px; margin: 0; }
+            h1 { font-size: 14px; color: #1a472a; margin-bottom: 3px; }
+            h2 { font-size: 11px; color: #666; font-weight: normal; margin-bottom: 10px; }
+            h4 { font-size: 12px; color: #1a472a; margin: 0 0 6px 0; }
+            table { width: 100%; border-collapse: collapse; font-size: 9px; border: 1px solid #ccc; }
+            th, td { padding: 3px 4px; text-align: left; border: 1px solid #ccc; }
+            th { background: #f5f5f5; font-weight: 600; }
+            .hole-roster { page-break-inside: avoid; margin-bottom: 15px; }
+            @media print {
+              body { padding: 0; }
+              button { display: none !important; }
+            }
+          </style>
+        </head>
+        <body>
+          <h1>${appData.settings.tournamentName || 'Volunteer Golf'}</h1>
+          <h2>${currentReport.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())} - Generated ${new Date().toLocaleDateString()}</h2>
+          ${content.innerHTML}
+        </body>
+        </html>
+      `);
+      printWindow.document.close();
+      printWindow.print();
+    }
+
+    function exportReportCSV() {
+      const content = document.getElementById('report-content');
+      if (!content) return;
+
+      const table = content.querySelector('table');
+      if (!table) {
+        alert('No table data to export');
+        return;
+      }
+
+      let csv = [];
+      const rows = table.querySelectorAll('tr');
+      rows.forEach(row => {
+        const cols = row.querySelectorAll('th, td');
+        const rowData = [];
+        cols.forEach(col => {
+          let text = col.innerText.replace(/"/g, '""');
+          rowData.push('"' + text + '"');
+        });
+        csv.push(rowData.join(','));
+      });
+
+      const blob = new Blob([csv.join('\n')], { type: 'text/csv' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = currentReport + '-' + new Date().toISOString().split('T')[0] + '.csv';
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+
+    function downloadPDF(holeNumber) {
+      const hole = holeNumber || reportFilters.hole || 1;
+      const content = document.getElementById('report-content');
+      if (!content) return;
+
+      // Extract only the table, skip buttons and legend divs
+      const table = content.querySelector('table');
+      if (!table) return;
+
+      const printWindow = window.open('', '_blank');
+      printWindow.document.write(`
+        <!DOCTYPE html>
+        <html>
+        <head>
+          <title>Hole #${hole} Roster - ${appData.settings.tournamentName || 'Volunteer Golf'}</title>
+          <style>
+            @page {
+              size: 8.5in 11in portrait;
+              margin: 0.4in;
+            }
+            * { box-sizing: border-box; }
+            body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; padding: 0; margin: 0; }
+            h1 { font-size: 14px; color: #1a472a; margin: 0 0 3px 0; }
+            h2 { font-size: 11px; color: #666; font-weight: normal; margin: 0 0 10px 0; }
+            table { width: 100%; border-collapse: collapse; font-size: 9px; border: 1px solid #ccc; }
+            th, td { padding: 3px 4px; text-align: left; border: 1px solid #ccc; }
+            th { background: #f5f5f5; font-weight: 600; }
+            .legend { font-size: 10px; color: #666; margin-top: 8px; }
+          </style>
+        </head>
+        <body>
+          <h1>${appData.settings.tournamentName || 'Volunteer Golf'}</h1>
+          <h2>Hole #${hole} Roster - Generated ${new Date().toLocaleDateString()}</h2>
+          ${table.outerHTML}
+          <div class="legend">
+            <span style="color:#4caf50;font-weight:600">✓</span> = Checked in &nbsp;&nbsp;
+            <span style="color:#1a472a;font-weight:600">○</span> = Scheduled
+          </div>
+          <script>
+            window.onload = function() {
+              window.print();
+            }
+          <\/script>
+        </body>
+        </html>
+      `);
+      printWindow.document.close();
+    }
+
+    // Email to entire hole modal state
+    let showEmailHoleModal = false;
+    let emailHoleNumber = null;
+    let emailHoleMessage = '';
+
+    function openEmailHoleModal(holeNum) {
+      emailHoleNumber = holeNum;
+      emailHoleMessage = '';
+      showEmailHoleModal = true;
+      render();
+    }
+
+    function closeEmailHoleModal() {
+      showEmailHoleModal = false;
+      emailHoleNumber = null;
+      emailHoleMessage = '';
+      render();
+    }
+
+    async function sendEmailToHole() {
+      const hole = emailHoleNumber;
+      if (!hole) return;
+
+      // Get all volunteers and captains on this hole
+      const holeVolunteers = appData.volunteers.filter(v => v.hole === hole && v.email);
+
+      if (holeVolunteers.length === 0) {
+        alert('No volunteers with email addresses found for this hole.');
+        return;
+      }
+
+      const emails = holeVolunteers.map(v => v.email).filter(e => e && e.trim());
+
+      if (emails.length === 0) {
+        alert('No valid email addresses found for volunteers on this hole.');
+        return;
+      }
+
+      // Build the roster HTML for the email
+      const dayFilter = reportFilters.day;
+      const days = dayFilter === 'all' ? DAYS : [dayFilter];
+
+      let rosterHtml = '<table style="width:100%;border-collapse:collapse;font-size:14px;margin-top:20px">';
+      rosterHtml += '<thead><tr style="background:#f8f9fa">';
+      rosterHtml += '<th style="text-align:left;padding:10px;border:1px solid #ddd">Volunteer</th>';
+      rosterHtml += '<th style="text-align:left;padding:10px;border:1px solid #ddd">Type</th>';
+      days.forEach(d => {
+        rosterHtml += '<th style="text-align:center;padding:10px;border:1px solid #ddd" colspan="2">' + d.slice(0, 3) + '</th>';
+      });
+      rosterHtml += '</tr><tr style="background:#f8f9fa">';
+      rosterHtml += '<th style="border:1px solid #ddd"></th><th style="border:1px solid #ddd"></th>';
+      days.forEach(() => {
+        rosterHtml += '<th style="text-align:center;padding:6px;border:1px solid #ddd;font-size:11px;font-weight:normal;color:#666">AM</th>';
+        rosterHtml += '<th style="text-align:center;padding:6px;border:1px solid #ddd;font-size:11px;font-weight:normal;color:#666">PM</th>';
+      });
+      rosterHtml += '</tr></thead><tbody>';
+
+      // Calculate totals
+      const shiftTotals = {};
+      days.forEach(day => {
+        SHIFTS.forEach(shift => {
+          const key = day + ' ' + shift;
+          shiftTotals[key] = holeVolunteers.filter(v => v.scheduled && v.scheduled[key]).length;
+        });
+      });
+
+      // Add totals row at top
+      rosterHtml += '<tr style="background:#f0f7f0;font-weight:600">';
+      rosterHtml += '<td style="padding:10px;border:1px solid #ddd" colspan="2">Total Scheduled</td>';
+      days.forEach(day => {
+        SHIFTS.forEach(shift => {
+          const key = day + ' ' + shift;
+          rosterHtml += '<td style="text-align:center;padding:10px;border:1px solid #ddd;color:#1a472a">' + shiftTotals[key] + '</td>';
+        });
+      });
+      rosterHtml += '</tr>';
+
+      // Add volunteers
+      holeVolunteers.forEach(v => {
+        rosterHtml += '<tr>';
+        rosterHtml += '<td style="padding:10px;border:1px solid #ddd">' + v.name + '</td>';
+        rosterHtml += '<td style="padding:10px;border:1px solid #ddd;font-size:12px;color:#666">' + (v.type || '-') + '</td>';
+        days.forEach(day => {
+          SHIFTS.forEach(shift => {
+            const key = day + ' ' + shift;
+            const isScheduled = v.scheduled && v.scheduled[key];
+            let icon = '';
+            let color = '#ccc';
+            if (isScheduled) { icon = '●'; color = '#1a472a'; }
+            rosterHtml += '<td style="text-align:center;padding:10px;border:1px solid #ddd;color:' + color + ';font-weight:600">' + icon + '</td>';
+          });
+        });
+        rosterHtml += '</tr>';
+      });
+      rosterHtml += '</tbody></table>';
+
+      // Get custom message from textarea
+      const customMessage = document.getElementById('emailHoleMessage')?.value || '';
+
+      const subject = 'Hole #' + hole + ' Roster - ' + (appData.settings.tournamentName || 'Volunteer Golf');
+      let message = '<div style="font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:800px;margin:0 auto">';
+      message += '<h2 style="color:#1a472a;margin-bottom:10px">Hole #' + hole + ' Roster</h2>';
+      message += '<p style="color:#666;margin-bottom:20px">' + (appData.settings.tournamentName || 'Volunteer Golf') + '</p>';
+
+      if (customMessage) {
+        message += '<div style="background:#f8f9fa;border-left:4px solid #1a472a;padding:15px;margin-bottom:20px">';
+        message += '<p style="margin:0;color:#333;white-space:pre-wrap">' + customMessage.replace(/</g, '&lt;').replace(/>/g, '&gt;') + '</p>';
+        message += '</div>';
+      }
+
+      message += rosterHtml;
+      message += '<p style="color:#666;font-size:12px;margin-top:20px">● = Scheduled</p>';
+      message += '</div>';
+
+      try {
+        const btn = document.getElementById('sendEmailHoleBtn');
+        if (btn) {
+          btn.disabled = true;
+          btn.textContent = 'Sending...';
+        }
+
+        await sendEmail(emails, subject, message);
+        alert('Email sent successfully to ' + emails.length + ' volunteer(s)!');
+        closeEmailHoleModal();
+      } catch (err) {
+        alert('Failed to send email: ' + err.message);
+        const btn = document.getElementById('sendEmailHoleBtn');
+        if (btn) {
+          btn.disabled = false;
+          btn.textContent = 'Send Email';
+        }
       }
     }
 
     function renderSettings() {
-      const alertTimes = appData.settings.alertTimes || [];
-
       return `
         <div class="settings-section">
           <h2 style="font-size:18px;color:#333;margin-bottom:20px">Settings</h2>
@@ -1617,8 +2682,24 @@
           </div>
 
           <div class="settings-card">
+            <h3>Number of Holes</h3>
+            <div style="display:flex;align-items:center;gap:15px">
+              <input type="number" min="1" max="36" value="${getNumberOfHoles()}" onchange="updateSetting('numberOfHoles', parseInt(this.value) || 18)" style="width:100px;padding:10px;border:1px solid #ddd;border-radius:6px">
+              <span style="color:#666;font-size:13px">holes</span>
+            </div>
+            <p style="color:#999;font-size:11px;margin-top:8px">Set the number of holes for your tournament (typically 18). This controls the hole options throughout the system.</p>
+          </div>
+
+          <div class="settings-card">
             <h3>Admin Password</h3>
             <input type="text" id="adminPasswordSetting" value="${appData.settings.adminPassword}" onchange="updateSetting('adminPassword', this.value)">
+            <p style="color:#666;font-size:11px;margin-top:6px">Full access to all admin features</p>
+          </div>
+
+          <div class="settings-card">
+            <h3>View-Only Admin Password</h3>
+            <input type="text" id="viewAdminPasswordSetting" value="${appData.settings.viewAdminPassword || ''}" onchange="updateSetting('viewAdminPassword', this.value)" placeholder="Leave blank to disable">
+            <p style="color:#666;font-size:11px;margin-top:6px">Can view Overview and Volunteers tabs only (no editing, no Import/Settings)</p>
           </div>
 
           <div class="settings-card">
@@ -1636,6 +2717,22 @@
               <input type="email" placeholder="volunteers@tournament.golf" value="${appData.settings.helpEmail || ''}" onchange="updateSetting('helpEmail', this.value)" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:6px">
             </div>
             <p style="color:#999;font-size:11px;margin-top:8px">This contact info appears on the landing page for volunteers and captains who need assistance.</p>
+          </div>
+
+          <div class="settings-card">
+            <h3>Shift Cutoff Times</h3>
+            <p style="color:#666;font-size:12px;margin-bottom:15px">Captains cannot modify check-ins after these times (Central US time). Past shifts become read-only.</p>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:15px">
+              <div>
+                <label style="font-size:12px;color:#666;display:block;margin-bottom:4px">AM Shift Cutoff</label>
+                <input type="time" value="${appData.settings.amShiftCutoff || '12:00'}" onchange="updateSetting('amShiftCutoff', this.value)" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:6px">
+              </div>
+              <div>
+                <label style="font-size:12px;color:#666;display:block;margin-bottom:4px">PM Shift Cutoff</label>
+                <input type="time" value="${appData.settings.pmShiftCutoff || '18:00'}" onchange="updateSetting('pmShiftCutoff', this.value)" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:6px">
+              </div>
+            </div>
+            <p style="color:#999;font-size:11px;margin-top:8px">Example: Set AM cutoff to 12:00 PM (noon) and PM cutoff to 6:00 PM. After these times, captains can view but not change that day's check-ins.</p>
           </div>
 
           <div class="settings-card" style="border:2px solid #1a472a">
@@ -1705,6 +2802,7 @@
                 <td style="text-align:center">${a.volunteerCount}</td>
                 <td style="text-align:center">${a.checkInCount}</td>
                 <td style="text-align:right">
+                  <button onclick="downloadArchiveCSV(${i})" style="padding:5px 10px;background:#2196F3;color:white;border:none;border-radius:4px;cursor:pointer;font-size:12px;margin-right:5px">CSV</button>
                   <button onclick="restoreArchive(${i})" style="padding:5px 10px;background:#1a472a;color:white;border:none;border-radius:4px;cursor:pointer;font-size:12px;margin-right:5px">Restore</button>
                   <button onclick="deleteArchive(${i})" style="padding:5px 10px;background:#dc3545;color:white;border:none;border-radius:4px;cursor:pointer;font-size:12px">Delete</button>
                 </td>
@@ -1715,13 +2813,21 @@
       `;
     }
 
-    // Track selected hole for admin users
+    // Track selected hole for admin users and chair users
     let adminSelectedHole = 1;
+    let chairSelectedHole = null; // Will be set to first assigned hole on login
 
     function renderCaptainDashboard() {
       // For Admin users, use the selected hole instead of their assigned hole
       const isAdminUser = captainAuth.isAdmin;
-      const activeHole = isAdminUser ? adminSelectedHole : captainAuth.hole;
+      const isChairUser = captainAuth.isChair && captainAuth.assignedHoles && captainAuth.assignedHoles.length > 1;
+
+      // Initialize chairSelectedHole if not set
+      if (isChairUser && !chairSelectedHole) {
+        chairSelectedHole = captainAuth.assignedHoles[0];
+      }
+
+      const activeHole = isAdminUser ? adminSelectedHole : (isChairUser ? chairSelectedHole : captainAuth.hole);
 
       const holeVolunteers = appData.volunteers.filter(v => v.hole === activeHole && v.type === 'Volunteer');
       const scheduledVolunteers = holeVolunteers.filter(v => v.scheduled && v.scheduled[`${selectedDay} ${selectedShift}`]);
@@ -1746,7 +2852,9 @@
       const lastSubmission = appData.submissions.find(s =>
         s.hole === activeHole && s.day === selectedDay && s.shift === selectedShift
       );
-      if (!isAdminUser && currentUserRecord && currentUserRecord.hole === activeHole && !checkedInIds.has(currentUserRecord.id) && !lastSubmission) {
+      // Don't auto-check-in if shift is locked
+      const shiftIsLocked = !isAdminUser && isShiftLocked(selectedDay, selectedShift);
+      if (!shiftIsLocked && !isAdminUser && currentUserRecord && currentUserRecord.hole === activeHole && !checkedInIds.has(currentUserRecord.id) && !lastSubmission) {
         // Auto-add captain check-in
         appData.checkIns.push({
           volunteerId: currentUserRecord.id,
@@ -1774,6 +2882,9 @@
       const coCaptains = holeCaptains.filter(v => v.name !== captainAuth.name);
 
       const isSubmitted = !!lastSubmission;
+
+      // Check if this shift is locked (past cutoff time) - admin users can always edit
+      const shiftLocked = !isAdminUser && isShiftLocked(selectedDay, selectedShift);
 
       // Get relative time info
       const timeInfo = getRelativeTimeLabel(selectedDay, selectedShift);
@@ -1865,20 +2976,116 @@
       const helpModalHtml = showHelpModal ? `
         <div class="modal-overlay" onclick="showHelpModal=false;render()">
           <div class="modal" onclick="event.stopPropagation()" style="max-width:450px;text-align:left">
-            <h3 style="text-align:center">How to check in volunteers</h3>
+            <h3 style="text-align:center">How to Check In Volunteers</h3>
             <ol style="padding-left:20px;line-height:1.8;color:#444;font-size:13px">
-              <li>Select your day and shift time at the top.</li>
-              <li>Your name appears first and is pre-checked. Other captains and volunteers are listed below.</li>
-              <li>Tap each volunteer's name as they arrive. A green checkmark and "checked in" tag confirms they're here.</li>
-              <li>Add a note if needed (optional) - let staff know about any issues.</li>
-              <li>Tap the submit button. It shows exactly what you're submitting (e.g., "Check In 3 Volunteers").</li>
-              <li>After submitting, the button updates to show only new changes. Submit as many times as needed.</li>
+              <li>Select your <strong>day</strong> and <strong>shift</strong> (Morning/Afternoon) at the top.</li>
+              <li>Volunteers are organized into sections: <strong>Captains</strong>, <strong>Scheduled Volunteers</strong>, and <strong>Not Scheduled This Shift</strong>.</li>
+              <li>Tap a volunteer's name as they arrive. A green checkmark confirms they're checked in.</li>
+              <li>Check-ins save automatically - no submit button needed.</li>
+              <li>Tap the <strong>Submit</strong> button at the bottom to finalize the shift and add any notes.</li>
             </ol>
             <p style="margin-top:15px;font-size:13px;color:#666"><strong>If someone doesn't show up:</strong> Just leave them unchecked. Only mark the people who actually arrive.</p>
-            <p style="margin-top:10px;font-size:13px;color:#666"><strong>If you make a mistake:</strong> Tap their name again to uncheck them, then submit to update.</p>
-            ${isAdminUser ? `<p style="margin-top:10px;font-size:13px;color:#1a472a"><strong>Admin mode:</strong> Use the hole selector dropdown to switch between any hole.</p>` : ''}
+            <p style="margin-top:10px;font-size:13px;color:#666"><strong>If you make a mistake:</strong> Tap their name again to uncheck them.</p>
+            <p style="margin-top:10px;font-size:13px;color:#1a472a"><strong>Edit schedules:</strong> Tap the "Edit" button next to a volunteer to modify their schedule.</p>
+            ${isChairUser ? `<p style="margin-top:10px;font-size:13px;color:#1a472a"><strong>Multiple holes:</strong> Use the hole dropdown at the top to switch between your assigned holes.</p>` : ''}
+            ${isAdminUser ? `<p style="margin-top:10px;font-size:13px;color:#1a472a"><strong>Admin mode:</strong> Use the hole dropdown to switch between any hole.</p>` : ''}
+            <p style="margin-top:10px;font-size:13px;color:#666"><strong>Roster:</strong> Tap the "Roster" button to view or print your hole's full schedule.</p>
             <div class="modal-buttons" style="margin-top:20px;justify-content:center">
               <button class="modal-btn confirm" onclick="showHelpModal=false;render()">Got it</button>
+            </div>
+          </div>
+        </div>
+      ` : '';
+
+      // PIN setup modal (first-time login)
+      const pinSetupModalHtml = showPinSetupModal ? `
+        <div class="modal-overlay">
+          <div class="modal" onclick="event.stopPropagation()" style="max-width:400px;text-align:left">
+            <h3 style="text-align:center;margin-bottom:15px">Set Your PIN</h3>
+            <p style="font-size:13px;color:#666;margin-bottom:20px;text-align:center">Welcome! Please create a 4-digit PIN for future logins. This replaces using your phone number.</p>
+            <form id="pinSetupForm">
+              <div style="margin-bottom:15px">
+                <label style="font-size:12px;color:#666;display:block;margin-bottom:4px">New 4-Digit PIN</label>
+                <input type="tel" id="newPinInput" maxlength="4" pattern="[0-9]{4}" inputmode="numeric" placeholder="0000" style="width:100%;padding:12px;border:1px solid #ddd;border-radius:6px;font-size:18px;text-align:center;letter-spacing:8px" required>
+              </div>
+              <div style="margin-bottom:20px">
+                <label style="font-size:12px;color:#666;display:block;margin-bottom:4px">Confirm PIN</label>
+                <input type="tel" id="confirmPinInput" maxlength="4" pattern="[0-9]{4}" inputmode="numeric" placeholder="0000" style="width:100%;padding:12px;border:1px solid #ddd;border-radius:6px;font-size:18px;text-align:center;letter-spacing:8px" required>
+              </div>
+              <div class="modal-buttons">
+                <button type="button" class="modal-btn cancel" onclick="showPinSetupModal=false;render()">Skip for Now</button>
+                <button type="submit" class="modal-btn confirm">Set PIN</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      ` : '';
+
+      // Captain editing volunteer schedule modal
+      const captainEditModalHtml = captainEditingVolunteer ? `
+        <div class="modal-overlay" onclick="captainEditingVolunteer=null;render()">
+          <div class="modal" onclick="event.stopPropagation()" style="max-width:500px;max-height:90vh;overflow-y:auto;text-align:left">
+            <h3 style="text-align:center;margin-bottom:15px">Edit Schedule: ${captainEditingVolunteer.name}</h3>
+            <p style="font-size:12px;color:#666;margin-bottom:15px;text-align:center">Modify this volunteer's schedule for your hole</p>
+            <div class="edit-modal-form">
+              <label style="font-size:13px;font-weight:600;margin-bottom:8px;display:block">Schedule</label>
+              <div class="schedule-grid" style="display:grid;grid-template-columns:repeat(2,1fr);gap:8px">
+                ${DAYS.map(day =>
+                  SHIFTS.map(shift => {
+                    const key = day + ' ' + shift;
+                    const isChecked = captainEditingVolunteer.scheduled && captainEditingVolunteer.scheduled[key];
+                    return '<label class="schedule-item" style="display:flex;align-items:center;gap:6px;font-size:12px"><input type="checkbox" id="cap_sched_' + day + '_' + shift + '" ' + (isChecked ? 'checked' : '') + '>' + day.slice(0,3) + ' ' + shift + '</label>';
+                  }).join('')
+                ).join('')}
+              </div>
+            </div>
+            <div style="margin-top:20px;padding-top:15px;border-top:1px solid #eee">
+              <label style="display:flex;align-items:center;gap:8px;font-size:13px;cursor:pointer">
+                <input type="checkbox" id="sendScheduleEmail" style="flex-shrink:0">
+                <span>Send updated schedule to volunteer via email</span>
+              </label>
+              ${captainEditingVolunteer.email ? '<p style="font-size:11px;color:#666;margin-top:5px;margin-left:24px">Email: ' + captainEditingVolunteer.email + '</p>' : '<p style="font-size:11px;color:#e65100;margin-top:5px;margin-left:24px">No email on file for this volunteer</p>'}
+            </div>
+            <div class="modal-buttons" style="margin-top:20px">
+              <button class="modal-btn cancel" onclick="captainEditingVolunteer=null;render()">Cancel</button>
+              <button class="modal-btn confirm" onclick="saveCaptainVolunteerEdit()">Save Schedule</button>
+            </div>
+          </div>
+        </div>
+      ` : '';
+
+      // Roster modal for captain view
+      const reportsModalHtml = showReportsModal ? `
+        <div class="modal-overlay" onclick="showReportsModal=false;render()">
+          <div class="modal" onclick="event.stopPropagation()" style="max-width:900px;width:95%;max-height:90vh;overflow-y:auto;text-align:left">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:15px">
+              <h3 style="margin:0">Roster - Hole #${activeHole}</h3>
+              <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+                <button onclick="downloadPDF(${activeHole})" style="padding:8px 16px;background:#fff;border:1px solid #ddd;border-radius:6px;cursor:pointer;font-size:13px">Download PDF</button>
+                <button onclick="openEmailHoleModal(${activeHole})" style="padding:8px 16px;background:#1a472a;color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:13px">Email to Hole</button>
+                <button onclick="printReport()" style="padding:8px 16px;background:#fff;border:1px solid #ddd;border-radius:6px;cursor:pointer;font-size:13px">Print</button>
+                <button onclick="exportReportCSV()" style="padding:8px 16px;background:#fff;border:1px solid #ddd;border-radius:6px;cursor:pointer;font-size:13px">Export CSV</button>
+                <button onclick="showReportsModal=false;render()" style="background:none;border:none;font-size:24px;cursor:pointer;color:#666">&times;</button>
+              </div>
+            </div>
+            ${renderHoleRosterReport(activeHole, { hideViewAll: true, hideTitle: true })}
+          </div>
+        </div>
+      ` : '';
+
+      // Email to hole modal
+      const emailHoleModalHtml = showEmailHoleModal ? `
+        <div class="modal-overlay" onclick="closeEmailHoleModal()">
+          <div class="modal" onclick="event.stopPropagation()" style="max-width:500px;text-align:left">
+            <h3 style="margin:0 0 15px 0">Email Hole #${emailHoleNumber} Roster</h3>
+            <p style="color:#666;font-size:13px;margin-bottom:15px">This will send the roster to all volunteers and captains on Hole #${emailHoleNumber} who have email addresses.</p>
+            <div style="margin-bottom:15px">
+              <label style="font-size:12px;color:#666;display:block;margin-bottom:6px;font-weight:600">Add a message (optional)</label>
+              <textarea id="emailHoleMessage" placeholder="Enter any additional message you'd like to include..." style="width:100%;height:100px;padding:10px;border:1px solid #ddd;border-radius:6px;font-size:13px;font-family:inherit;resize:vertical"></textarea>
+            </div>
+            <div class="modal-buttons">
+              <button class="modal-btn cancel" onclick="closeEmailHoleModal()">Cancel</button>
+              <button id="sendEmailHoleBtn" class="modal-btn confirm" onclick="sendEmailToHole()">Send Email</button>
             </div>
           </div>
         </div>
@@ -1889,16 +3096,27 @@
           ${modalHtml}
           ${successModalHtml}
           ${helpModalHtml}
+          ${pinSetupModalHtml}
+          ${captainEditModalHtml}
+          ${reportsModalHtml}
+          ${emailHoleModalHtml}
           <div class="captain-header">
             <div class="captain-header-top">
               <div>
                 ${isAdminUser ? `
                   <h1 style="display:flex;align-items:center;gap:10px">
                     <select onchange="adminSelectedHole=parseInt(this.value);render()" style="font-size:20px;font-weight:700;padding:4px 8px;border-radius:6px;border:none;background:rgba(255,255,255,0.9);color:#1a472a">
-                      ${[...Array(18).keys()].map(i => i + 1).map(h => `<option value="${h}" ${h === adminSelectedHole ? 'selected' : ''}>Hole #${h}</option>`).join('')}
+                      ${[...Array(getNumberOfHoles()).keys()].map(i => i + 1).map(h => `<option value="${h}" ${h === adminSelectedHole ? 'selected' : ''}>Hole #${h}</option>`).join('')}
                     </select>
                   </h1>
                   <p>Admin: ${captainAuth.name}</p>
+                ` : isChairUser ? `
+                  <h1 style="display:flex;align-items:center;gap:10px">
+                    <select onchange="chairSelectedHole=parseInt(this.value);render()" style="font-size:20px;font-weight:700;padding:4px 8px;border-radius:6px;border:none;background:rgba(255,255,255,0.9);color:#1a472a">
+                      ${captainAuth.assignedHoles.map(h => `<option value="${h}" ${h === chairSelectedHole ? 'selected' : ''}>Hole #${h}</option>`).join('')}
+                    </select>
+                  </h1>
+                  <p>Chair: ${captainAuth.name}</p>
                 ` : `
                   <h1>Hole #${activeHole}</h1>
                   <p>Captain: ${captainAuth.name}</p>
@@ -1906,6 +3124,7 @@
                 `}
               </div>
               <div style="display:flex;gap:8px;align-items:center">
+                <button onclick="showReportsModal=true;currentReport='hole-roster';reportFilters={hole:'all',day:'all',shift:'all'};render()" style="background:rgba(255,255,255,0.2);border:none;color:white;padding:8px 12px;border-radius:8px;cursor:pointer;font-size:13px">Roster</button>
                 <button onclick="showHelpModal=true;render()" style="background:rgba(255,255,255,0.2);border:none;color:white;padding:8px 12px;border-radius:8px;cursor:pointer;font-size:13px">?</button>
                 <button class="logout-btn" onclick="logout()">Logout</button>
               </div>
@@ -1930,7 +3149,12 @@
           </div>
 
           <div class="volunteer-list" style="padding-bottom:180px">
-            <p style="color:#666;font-size:12px;margin-bottom:10px;padding:0 5px">Tap names as volunteers arrive</p>
+            ${shiftLocked ? `
+              <div style="background:#fff3e0;border:1px solid #ffcc80;border-radius:8px;padding:12px 15px;margin-bottom:15px">
+                <p style="color:#e65100;font-size:13px;font-weight:600;margin:0">This shift is closed</p>
+                <p style="color:#f57c00;font-size:12px;margin:5px 0 0 0">Check-ins can no longer be modified for this day/shift. Contact tournament staff if changes are needed.</p>
+              </div>
+            ` : `<p style="color:#666;font-size:12px;margin-bottom:10px;padding:0 5px">Tap names as volunteers arrive</p>`}
             ${displayVolunteers.length === 0 ? `
               <div class="empty-list">
                 ${searchTerm ? 'No volunteers found with that name' : 'No volunteers assigned to this hole'}
@@ -1946,9 +3170,10 @@
               const showVolunteerDivider = !searchTerm && !isCaptain && prevIsCaptain;
               const showUnscheduledDivider = !searchTerm && !isCaptain && !isScheduled && prevIsScheduled && !prevIsCaptain;
               return `
-                ${showVolunteerDivider ? '<div style="padding:15px 5px 8px;color:#999;font-size:11px;font-weight:600;text-transform:uppercase;border-top:1px solid #eee;margin-top:10px">Volunteers</div>' : ''}
+                ${idx === 0 && isCaptain && !searchTerm ? '<div style="padding:5px 5px 8px;color:#999;font-size:11px;font-weight:600;text-transform:uppercase">Captains</div>' : ''}
+                ${showVolunteerDivider ? '<div style="padding:15px 5px 8px;color:#999;font-size:11px;font-weight:600;text-transform:uppercase;border-top:1px solid #eee;margin-top:10px">Scheduled Volunteers</div>' : ''}
                 ${showUnscheduledDivider ? '<div style="padding:15px 5px 8px;color:#999;font-size:11px;font-weight:600;text-transform:uppercase;border-top:1px solid #eee;margin-top:10px">Not Scheduled This Shift</div>' : ''}
-                <div class="volunteer-item ${isCheckedIn ? 'checked' : ''}" onclick="toggleCheckIn('${v.id}')">
+                <div class="volunteer-item ${isCheckedIn ? 'checked' : ''}" ${shiftLocked ? '' : `onclick="toggleCheckIn('${v.id}')"`} style="${shiftLocked ? 'cursor:default;opacity:0.8' : ''}">
                   <div class="volunteer-checkbox">
                     <span class="volunteer-checkbox-icon">✓</span>
                   </div>
@@ -1956,16 +3181,24 @@
                     <div class="volunteer-name">
                       ${v.name}${isCurrentCaptain ? ' <span style="font-size:10px;color:#1a472a;background:#e3f2fd;padding:2px 6px;border-radius:4px;font-weight:500">You</span>' : isCaptain ? ` <span style="font-size:10px;color:#1565c0;background:#e3f2fd;padding:2px 6px;border-radius:4px;font-weight:500">${v.type}</span>` : ''}${submittedIds.has(v.id) ? '<span style="font-size:10px;color:#2e7d32;background:#e8f5e9;padding:2px 6px;border-radius:4px;margin-left:8px;font-weight:500">checked in</span>' : ''}
                     </div>
-                    <div style="display:flex;gap:8px;align-items:center;margin-top:4px">
-                      ${v.yearsWorked ? `<span style="font-size:11px;color:#555;background:#e8e8e8;padding:3px 6px;border-radius:4px;font-weight:500">${v.yearsWorked} yr${v.yearsWorked !== 1 ? 's' : ''}</span>` : ''}
-                    </div>
                   </div>
-                  ${v.hole !== captainAuth.hole ? `<span class="volunteer-hole">From #${v.hole}</span>` : ''}
+                  ${v.hole !== activeHole ? `<span class="volunteer-hole">From #${v.hole}</span>` : ''}
+                  ${!isCaptain && v.hole === activeHole ? `<button onclick="event.stopPropagation();openCaptainEditVolunteer('${v.id}')" style="padding:4px 8px;background:#f0f0f0;border:1px solid #ddd;border-radius:4px;font-size:11px;color:#666;cursor:pointer;margin-left:8px">Edit</button>` : ''}
                 </div>
               `;
             }).join('')}
           </div>
 
+          ${shiftLocked ? `
+          <div class="floating-summary" style="padding-bottom:0">
+            <div style="padding:15px 0;text-align:center">
+              <p style="color:#999;font-size:13px;margin:0">Viewing ${selectedDay} ${selectedShift} check-ins (read-only)</p>
+              ${isSubmitted ? `
+                <p style="color:#666;font-size:12px;margin-top:5px">Submitted at ${new Date(lastSubmission.timestamp).toLocaleTimeString('en-US', {hour: 'numeric', minute: '2-digit'})}</p>
+              ` : ''}
+            </div>
+          </div>
+          ` : `
           <div class="floating-summary" style="padding-bottom:0">
             <!-- Notes Field -->
             <div style="padding:10px 0">
@@ -1993,6 +3226,7 @@
               ` : ''}
             </div>
           </div>
+          `}
         </div>
       `;
     }
@@ -2012,6 +3246,8 @@
     function logout() {
       adminAuth = false;
       captainAuth = null;
+      volunteerAuth = null;
+      chairSelectedHole = null;
       currentView = 'landing';
       render();
     }
@@ -2037,9 +3273,20 @@
       render();
     }
 
+    // Debounced search to prevent losing cursor position
+    let searchDebounceTimeout = null;
     function setSearchTerm(term) {
       searchTerm = term;
-      render();
+      if (searchDebounceTimeout) clearTimeout(searchDebounceTimeout);
+      searchDebounceTimeout = setTimeout(() => {
+        render();
+        // Restore focus to search input after render
+        const searchInput = document.querySelector('.search-input');
+        if (searchInput) {
+          searchInput.focus();
+          searchInput.setSelectionRange(searchInput.value.length, searchInput.value.length);
+        }
+      }, 150);
     }
 
     function toggleShowAll(checked) {
@@ -2150,6 +3397,96 @@
       render();
     }
 
+    function downloadArchiveCSV(index) {
+      const archive = serverArchives[index];
+      if (!archive) {
+        alert('Archive not found');
+        return;
+      }
+
+      const data = archive.data;
+      const rows = [];
+
+      // CSV header
+      rows.push([
+        'Name',
+        'Type',
+        'Hole',
+        'Phone',
+        'Years Worked',
+        'Checked In',
+        'Check-In Day',
+        'Check-In Shift',
+        'Check-In Time',
+        'Checked In By'
+      ].join(','));
+
+      // Build a map of check-ins by volunteer ID
+      const checkInMap = {};
+      (data.checkIns || []).forEach(ci => {
+        if (!checkInMap[ci.volunteerId]) {
+          checkInMap[ci.volunteerId] = [];
+        }
+        checkInMap[ci.volunteerId].push(ci);
+      });
+
+      // Add a row for each volunteer
+      (data.volunteers || []).forEach(vol => {
+        const checkIns = checkInMap[vol.id] || [];
+
+        if (checkIns.length === 0) {
+          // Volunteer with no check-ins
+          rows.push([
+            escapeCSV(vol.name),
+            escapeCSV(vol.type),
+            vol.hole,
+            escapeCSV(vol.phone || ''),
+            vol.yearsWorked || 0,
+            'No',
+            '',
+            '',
+            '',
+            ''
+          ].join(','));
+        } else {
+          // One row per check-in
+          checkIns.forEach(ci => {
+            rows.push([
+              escapeCSV(vol.name),
+              escapeCSV(vol.type),
+              vol.hole,
+              escapeCSV(vol.phone || ''),
+              vol.yearsWorked || 0,
+              'Yes',
+              escapeCSV(ci.day || ''),
+              escapeCSV(ci.shift || ''),
+              ci.timestamp ? new Date(ci.timestamp).toLocaleString() : '',
+              escapeCSV(ci.checkedInBy || '')
+            ].join(','));
+          });
+        }
+      });
+
+      // Create and download the file
+      const csvContent = rows.join('\n');
+      const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `${archive.name.replace(/[^a-z0-9]/gi, '_')}_export.csv`;
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+
+    function escapeCSV(str) {
+      if (str == null) return '';
+      str = String(str);
+      if (str.includes(',') || str.includes('"') || str.includes('\n')) {
+        return '"' + str.replace(/"/g, '""') + '"';
+      }
+      return str;
+    }
+
     function exportArchiveFile() {
       const exportData = {
         type: 'volunteer_golf_backup',
@@ -2254,8 +3591,9 @@
     }
 
     function toggleCheckIn(volunteerId) {
-      // For admin users, use the selected hole; for captains, use their assigned hole
-      const activeHole = captainAuth.isAdmin ? adminSelectedHole : captainAuth.hole;
+      // For admin users, use the selected hole; for chair users, use selected hole; for captains, use their assigned hole
+      const isChairUser = captainAuth.isChair && captainAuth.assignedHoles && captainAuth.assignedHoles.length > 1;
+      const activeHole = captainAuth.isAdmin ? adminSelectedHole : (isChairUser ? chairSelectedHole : captainAuth.hole);
 
       const existing = appData.checkIns.find(c =>
         c.volunteerId === volunteerId && c.day === selectedDay && c.shift === selectedShift && c.hole === activeHole
@@ -2281,6 +3619,146 @@
       
       saveData();
       render();
+    }
+
+    // Captain editing volunteer schedule functions
+    function openCaptainEditVolunteer(volunteerId) {
+      const vol = appData.volunteers.find(v => v.id === volunteerId);
+      if (vol) {
+        captainEditingVolunteer = { ...vol, scheduled: { ...(vol.scheduled || {}) } };
+        render();
+      }
+    }
+
+    async function saveCaptainVolunteerEdit() {
+      if (!captainEditingVolunteer) return;
+
+      // Get new schedule from form
+      const newSchedule = {};
+      DAYS.forEach(day => {
+        SHIFTS.forEach(shift => {
+          const checkbox = document.getElementById('cap_sched_' + day + '_' + shift);
+          if (checkbox && checkbox.checked) {
+            newSchedule[day + ' ' + shift] = true;
+          }
+        });
+      });
+
+      // Find and update the volunteer
+      const idx = appData.volunteers.findIndex(v => v.id === captainEditingVolunteer.id);
+      if (idx === -1) {
+        alert('Volunteer not found');
+        return;
+      }
+
+      const oldSchedule = appData.volunteers[idx].scheduled || {};
+      appData.volunteers[idx].scheduled = newSchedule;
+      saveData();
+
+      // Check if we should send email
+      const sendEmail = document.getElementById('sendScheduleEmail');
+      if (sendEmail && sendEmail.checked) {
+        const vol = appData.volunteers[idx];
+        if (vol.email) {
+          try {
+            await sendScheduleEmail(vol, newSchedule);
+            alert('Schedule updated and email sent to ' + vol.email);
+          } catch (err) {
+            alert('Schedule updated but email failed: ' + err.message);
+          }
+        } else {
+          alert('Schedule updated but no email on file for this volunteer.');
+        }
+      } else {
+        alert('Schedule updated successfully!');
+      }
+
+      captainEditingVolunteer = null;
+      render();
+    }
+
+    async function sendScheduleEmail(volunteer, schedule) {
+      if (!volunteer.email) {
+        throw new Error('No email address for this volunteer');
+      }
+
+      // Build schedule text
+      const scheduledShifts = [];
+      DAYS.forEach(day => {
+        SHIFTS.forEach(shift => {
+          if (schedule[day + ' ' + shift]) {
+            const dateInfo = getRelativeTimeLabel(day, shift);
+            scheduledShifts.push(day + ' ' + shift + ' (' + dateInfo.dateOnly + ')');
+          }
+        });
+      });
+
+      const subject = appData.settings.tournamentName + ' - Your Updated Schedule';
+      const firstName = volunteer.name.split(',')[1]?.trim() || volunteer.name;
+
+      // Build HTML schedule grid
+      let scheduleRows = '';
+      DAYS.forEach(day => {
+        const dateInfo = getRelativeTimeLabel(day, 'AM');
+        scheduleRows += '<tr><td colspan="2" style="padding:12px 8px 6px 8px;font-weight:600;color:#1a472a;font-size:14px;border-bottom:1px solid #eee">' + day + ' <span style="font-weight:normal;color:#666;font-size:12px">(' + dateInfo.dateOnly + ')</span></td></tr>';
+        scheduleRows += '<tr>';
+        SHIFTS.forEach(shift => {
+          const key = day + ' ' + shift;
+          const isScheduled = schedule[key];
+          const icon = isScheduled
+            ? '<span style="display:inline-block;width:20px;height:20px;background:#1a472a;border-radius:50%;color:white;text-align:center;line-height:20px;font-size:14px">✓</span>'
+            : '<span style="display:inline-block;width:20px;height:20px;background:#f5f5f5;border:2px solid #ddd;border-radius:50%;"></span>';
+          const labelStyle = isScheduled ? 'color:#1a472a;font-weight:600' : 'color:#999';
+          const shiftLabel = shift === 'AM' ? 'Morning' : 'Afternoon';
+          scheduleRows += '<td style="padding:8px;width:50%"><div style="display:flex;align-items:center;gap:10px">' + icon + ' <span style="' + labelStyle + '">' + shiftLabel + '</span></div></td>';
+        });
+        scheduleRows += '</tr>';
+      });
+
+      const message = `
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"></head>
+<body style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;margin:0;padding:20px;background:#f5f5f5">
+  <div style="max-width:500px;margin:0 auto;background:white;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.1)">
+    <div style="background:#1a472a;color:white;padding:20px;text-align:center">
+      <h1 style="margin:0;font-size:20px">${appData.settings.tournamentName}</h1>
+      <p style="margin:8px 0 0 0;opacity:0.9;font-size:14px">Schedule Update</p>
+    </div>
+    <div style="padding:20px">
+      <p style="margin:0 0 5px 0;font-size:16px">Hi ${firstName},</p>
+      <p style="margin:0 0 20px 0;color:#666;font-size:14px">Your schedule has been updated.</p>
+
+      <div style="background:#f8f9fa;border-radius:8px;padding:15px;margin-bottom:20px">
+        <p style="margin:0;font-size:14px"><strong>Hole:</strong> <span style="color:#1a472a;font-weight:600">#${volunteer.hole}</span></p>
+      </div>
+
+      <h3 style="margin:0 0 15px 0;font-size:15px;color:#333">Your Schedule</h3>
+      <table style="width:100%;border-collapse:collapse">
+        ${scheduleRows}
+      </table>
+
+      <p style="margin:25px 0 0 0;padding-top:20px;border-top:1px solid #eee;color:#666;font-size:13px">If you have any questions, please contact your hole captain.</p>
+      <p style="margin:15px 0 0 0;color:#333;font-size:13px">Thank you!</p>
+    </div>
+  </div>
+</body>
+</html>`;
+
+      const response = await fetch('/api/email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          to: [volunteer.email],
+          subject: subject,
+          message: message
+        })
+      });
+
+      const result = await response.json();
+      if (!result.success) {
+        throw new Error(result.error || 'Email failed');
+      }
     }
 
     function handleFileUpload(input) {
@@ -2375,23 +3853,43 @@
 
           const headers = rows[0];
           const nameCol = headers.findIndex(h => h.includes('NamePK') || h === 'Name' || h.includes('Name'));
-          const yearsCol = headers.findIndex(h => h.includes('Years Worked') || h === 'Years' || h.includes('Years_Worked'));
 
           if (nameCol < 0) {
             alert('CSV must have a "Name" column');
             return;
           }
-          if (yearsCol < 0) {
-            alert('CSV must have a "Years Worked" or "Years" column');
+
+          // Map CSV headers to volunteer fields
+          const fieldMappings = [
+            { field: 'email', match: h => h.toLowerCase() === 'email' || h.toLowerCase().includes('email'), type: 'string' },
+            { field: 'phone', match: h => h.toLowerCase() === 'phone' || h.toLowerCase().includes('phone'), type: 'string' },
+            { field: 'type', match: h => h.toLowerCase() === 'type' || h.toLowerCase() === 'volunteer type', type: 'string' },
+            { field: 'hole', match: h => h.toLowerCase() === 'hole' || h.toLowerCase().includes('hole'), type: 'int' },
+            { field: 'yearsWorked', match: h => h.includes('Years Worked') || h === 'Years' || h.includes('Years_Worked') || h.toLowerCase() === 'years', type: 'int' },
+            { field: 'customPin', match: h => h.toLowerCase().includes('pin') || h.toLowerCase().includes('custom pin'), type: 'string' }
+          ];
+
+          // Find which columns exist in the CSV
+          const columnsToUpdate = [];
+          fieldMappings.forEach(mapping => {
+            const colIdx = headers.findIndex(mapping.match);
+            if (colIdx >= 0 && colIdx !== nameCol) {
+              columnsToUpdate.push({ ...mapping, colIdx });
+            }
+          });
+
+          if (columnsToUpdate.length === 0) {
+            alert('CSV must have at least one field to update (Email, Phone, Type, Hole, Years Worked, or Custom PIN)');
             return;
           }
 
           let updated = 0;
           let notFound = [];
+          const fieldCounts = {};
+          columnsToUpdate.forEach(c => fieldCounts[c.field] = 0);
 
           rows.slice(1).filter(r => r.length > 1 && r[nameCol]).forEach(row => {
             const name = row[nameCol].trim();
-            const years = parseInt(row[yearsCol]) || 0;
 
             // Find volunteer by name (case-insensitive, trimmed)
             const volIdx = appData.volunteers.findIndex(v =>
@@ -2399,8 +3897,20 @@
             );
 
             if (volIdx >= 0) {
-              appData.volunteers[volIdx].yearsWorked = years;
-              updated++;
+              let wasUpdated = false;
+              columnsToUpdate.forEach(col => {
+                const value = row[col.colIdx];
+                if (value !== undefined && value.toString().trim() !== '') {
+                  if (col.type === 'int') {
+                    appData.volunteers[volIdx][col.field] = parseInt(value) || 0;
+                  } else {
+                    appData.volunteers[volIdx][col.field] = value.trim();
+                  }
+                  fieldCounts[col.field]++;
+                  wasUpdated = true;
+                }
+              });
+              if (wasUpdated) updated++;
             } else if (name) {
               notFound.push(name);
             }
@@ -2409,6 +3919,12 @@
           saveData();
 
           let msg = `Updated ${updated} volunteer(s).`;
+          const fieldLabels = { email: 'emails', phone: 'phones', type: 'types', hole: 'holes', yearsWorked: 'years', customPin: 'PINs' };
+          columnsToUpdate.forEach(col => {
+            if (fieldCounts[col.field] > 0) {
+              msg += `\n• ${fieldCounts[col.field]} ${fieldLabels[col.field] || col.field} updated`;
+            }
+          });
           if (notFound.length > 0) {
             msg += `\n\n${notFound.length} name(s) not found:\n${notFound.slice(0, 10).join('\n')}`;
             if (notFound.length > 10) msg += `\n...and ${notFound.length - 10} more`;
@@ -2455,8 +3971,9 @@
     function confirmSubmission() {
       if (!captainAuth) return;
 
-      // For admin users, use the selected hole; for captains, use their assigned hole
-      const activeHole = captainAuth.isAdmin ? adminSelectedHole : captainAuth.hole;
+      // For admin users, use the selected hole; for chair users, use selected hole; for captains, use their assigned hole
+      const isChairUser = captainAuth.isChair && captainAuth.assignedHoles && captainAuth.assignedHoles.length > 1;
+      const activeHole = captainAuth.isAdmin ? adminSelectedHole : (isChairUser ? chairSelectedHole : captainAuth.hole);
 
       // Get current checked-in IDs for tracking
       const checkedInIds = appData.checkIns
@@ -2491,67 +4008,9 @@
       render();
     }
 
-    // Alert time functions
-    function addAlertTime() {
-      if (!appData.settings.alertTimes) appData.settings.alertTimes = [];
-      if (appData.settings.alertTimes.length >= 5) return;
-      
-      appData.settings.alertTimes.push({
-        day: DAYS[0],
-        shift: 'AM',
-        time: '09:00'
-      });
-      saveData();
-      render();
-    }
-
-    function updateAlertTime(index, field, value) {
-      if (appData.settings.alertTimes && appData.settings.alertTimes[index]) {
-        appData.settings.alertTimes[index][field] = value;
-        saveData();
-      }
-    }
-
-    function removeAlertTime(index) {
-      if (appData.settings.alertTimes) {
-        appData.settings.alertTimes.splice(index, 1);
-        saveData();
-        render();
-      }
-    }
-
-    // Email functions
-    function addAlertEmail() {
-      if (!appData.settings.alertEmails) appData.settings.alertEmails = [];
-      appData.settings.alertEmails.push('');
-      saveData();
-      render();
-    }
-    
-    function updateAlertEmail(index, value) {
-      if (appData.settings.alertEmails && appData.settings.alertEmails[index] !== undefined) {
-        appData.settings.alertEmails[index] = value;
-        saveData();
-      }
-    }
-    
-    function removeAlertEmail(index) {
-      if (appData.settings.alertEmails) {
-        appData.settings.alertEmails.splice(index, 1);
-        saveData();
-        render();
-      }
-    }
-
+    // Email function
     async function sendEmail(to, subject, message) {
       try {
-        var gmailUser = String(appData.settings.gmailUser || '').trim();
-        var gmailAppPassword = String(appData.settings.gmailAppPassword || '').replace(/\s/g, '').replace(/-/g, '');
-
-        if (!gmailUser || !gmailAppPassword) {
-          throw new Error('Gmail credentials not configured. Please enter your Gmail address and App Password in Settings.');
-        }
-
         // Ensure 'to' is an array of strings
         var recipients = [];
         if (Array.isArray(to)) {
@@ -2575,9 +4034,7 @@
         var payload = {
           to: recipients,
           subject: String(subject || ''),
-          message: String(message || ''),
-          gmailUser: gmailUser,
-          gmailAppPassword: gmailAppPassword
+          message: String(message || '')
         };
 
         var response = await fetch('/api/email', {
@@ -2602,113 +4059,21 @@
       }
     }
 
-    async function testAlert() {
-      const emails = (appData.settings.alertEmails || []).filter(e => e);
-      if (emails.length === 0) {
-        alert('Please add at least one email address');
-        return;
-      }
-      
-      if (!appData.settings.gmailUser || !appData.settings.gmailAppPassword) {
-        alert('Please enter your Gmail address and App Password');
-        return;
-      }
-      
-      try {
-        await sendEmail(
-          emails,
-          'Test Alert - ' + (appData.settings.tournamentName || 'Volunteer Golf'),
-          'This is a test from your volunteer check-in system.\n\nAlerts are working!'
-        );
-        alert('Test email sent to: ' + emails.join(', '));
-      } catch (err) {
-        alert('Failed to send email: ' + err.message);
-      }
-    }
-
-    async function checkAlerts() {
-      const emails = (appData.settings.alertEmails || []).filter(e => e);
-      
-      if (emails.length === 0) {
-        alert('Please add at least one email address');
-        return;
-      }
-      
-      if (!appData.settings.gmailUser || !appData.settings.gmailAppPassword) {
-        alert('Please enter your Gmail address and App Password');
-        return;
-      }
-      
-      // Get current day/shift or use selected
-      const day = selectedDay;
-      const shift = selectedShift;
-      
-      // Find holes that haven't submitted
-      const missingHoles = [];
-      for (let hole = 1; hole <= 18; hole++) {
-        const hasVolunteers = appData.volunteers.some(v => v.hole === hole && v.scheduled && v.scheduled[`${day} ${shift}`]);
-        if (!hasVolunteers) continue;
-        
-        const submitted = appData.submissions.some(s => s.hole === hole && s.day === day && s.shift === shift);
-        if (!submitted) {
-          missingHoles.push(hole);
-        }
-      }
-      
-      if (missingHoles.length === 0) {
-        alert(`✅ All holes have submitted for ${day} ${shift}!`);
-        return;
-      }
-      
-      const subject = appData.settings.tournamentName + ' - Missing Submissions';
-      const message = day + ' ' + shift + ' Shift\n\nThe following holes have NOT submitted their check-ins:\n\nHoles: ' + missingHoles.join(', ') + '\n\nPlease follow up with these hole captains.';
-
-      try {
-        await sendEmail(emails, subject, message);
-        alert('Alert sent to ' + emails.length + ' recipient(s)!\n\nMissing holes: ' + missingHoles.join(', '));
-      } catch (err) {
-        alert('Failed to send alert: ' + err.message + '\n\nMissing holes: ' + missingHoles.join(', '));
-      }
-    }
-
-    // Auto-check alerts (runs every minute)
-    function startAlertChecker() {
-      setInterval(() => {
-        const now = new Date();
-        const currentDay = DAYS[(now.getDay() + 6) % 7];
-        const currentTime = `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
-        
-        const alertTimes = appData.settings.alertTimes || [];
-        const emails = (appData.settings.alertEmails || []).filter(e => e);
-        
-        if (emails.length === 0 || !appData.settings.gmailUser || !appData.settings.gmailAppPassword) return;
-        
-        alertTimes.forEach(alert => {
-          if (alert.day === currentDay && alert.time === currentTime) {
-            // Trigger alert check
-            const prevDay = selectedDay;
-            const prevShift = selectedShift;
-            selectedDay = alert.day;
-            selectedShift = alert.shift;
-            checkAlerts();
-            selectedDay = prevDay;
-            selectedShift = prevShift;
-          }
-        });
-      }, 60000); // Check every minute
-    }
-    
-    // Start alert checker
-    startAlertChecker();
-
     function attachEventListeners() {
       const adminForm = document.getElementById('adminLoginForm');
       if (adminForm) {
         adminForm.onsubmit = function(e) {
           e.preventDefault();
           const password = document.getElementById('adminPassword').value;
+          // Check full admin password first
           if (password.toLowerCase() === appData.settings.adminPassword.toLowerCase()) {
-            adminAuth = true;
+            adminAuth = 'full';
+            currentView = 'admin';
+            render();
+          // Then check view-only admin password
+          } else if (appData.settings.viewAdminPassword && password.toLowerCase() === appData.settings.viewAdminPassword.toLowerCase()) {
+            adminAuth = 'viewOnly';
+            adminTab = 'overview'; // Start on overview tab
             currentView = 'admin';
             render();
           } else {
@@ -2745,24 +4110,106 @@
         captainForm.onsubmit = function(e) {
           e.preventDefault();
           try {
-            var phone4 = String(phoneInput.value || '');
+            var pin4 = String(phoneInput.value || '');
             var captains = appData.volunteers.filter(function(v) {
               return v.type === 'Captain' || v.type === 'Asst. Chairman' || v.type === 'Chairman' || v.type === 'Admin';
             });
             var captain = null;
+            var usedPhoneLogin = false;
+
+            // First try to match custom PIN
             for (var i = 0; i < captains.length; i++) {
-              if (formatPhone(captains[i].phone) === phone4) {
+              if (captains[i].customPin && captains[i].customPin === pin4) {
                 captain = captains[i];
                 break;
               }
             }
 
+            // If no custom PIN match, try phone number (first-time login)
+            if (!captain) {
+              for (var i = 0; i < captains.length; i++) {
+                if (formatPhone(captains[i].phone) === pin4 && !captains[i].customPin) {
+                  captain = captains[i];
+                  usedPhoneLogin = true;
+                  break;
+                }
+              }
+            }
+
             if (captain) {
-              captainAuth = { name: captain.name, hole: captain.hole, phone4: phone4, isAdmin: captain.type === 'Admin' };
+              const isChair = captain.type === 'Chairman' || captain.type === 'Asst. Chairman';
+              captainAuth = {
+                name: captain.name,
+                hole: captain.hole,
+                phone4: pin4,
+                isAdmin: captain.type === 'Admin',
+                isChair: isChair,
+                assignedHoles: isChair && captain.assignedHoles ? captain.assignedHoles : [captain.hole],
+                odId: captain.id
+              };
               currentView = 'captain';
+
+              // If first-time login (used phone, no custom PIN), show PIN setup modal
+              if (usedPhoneLogin && !captain.customPin) {
+                showPinSetupModal = true;
+              }
+
               render();
             } else {
               var err = document.getElementById('captainError');
+              err.textContent = 'PIN not found. Use the last 4 digits of your phone for first login, or your custom PIN.';
+              err.classList.remove('hidden');
+              phoneInput.classList.add('error');
+              setTimeout(function() { err.classList.add('hidden'); phoneInput.classList.remove('error'); }, 3000);
+            }
+          } catch (ex) {
+            alert('Login error: ' + ex.message);
+          }
+        };
+      }
+
+      // Handle volunteer login form
+      const volunteerForm = document.getElementById('volunteerLoginForm');
+      if (volunteerForm) {
+        const phoneInput = document.getElementById('volunteerPhone');
+        const submitBtn = document.getElementById('volunteerSubmit');
+
+        phoneInput.oninput = function() {
+          try {
+            var val = String(this.value || '');
+            var digits = '';
+            for (var i = 0; i < val.length && digits.length < 4; i++) {
+              if (val[i] >= '0' && val[i] <= '9') {
+                digits += val[i];
+              }
+            }
+            this.value = digits;
+            submitBtn.disabled = digits.length < 4;
+          } catch (ex) {
+            // ignore
+          }
+        };
+
+        volunteerForm.onsubmit = function(e) {
+          e.preventDefault();
+          try {
+            var phone4 = String(phoneInput.value || '');
+            var volunteer = null;
+
+            // Find volunteer by last 4 of phone
+            for (var i = 0; i < appData.volunteers.length; i++) {
+              if (formatPhone(appData.volunteers[i].phone) === phone4) {
+                volunteer = appData.volunteers[i];
+                break;
+              }
+            }
+
+            if (volunteer) {
+              volunteerAuth = volunteer;
+              currentView = 'volunteer';
+              render();
+            } else {
+              var err = document.getElementById('volunteerError');
               err.textContent = 'Phone number not found. Please use the last 4 digits of your registered phone.';
               err.classList.remove('hidden');
               phoneInput.classList.add('error');
@@ -2770,6 +4217,36 @@
             }
           } catch (ex) {
             alert('Login error: ' + ex.message);
+          }
+        };
+      }
+
+      // Handle PIN setup form
+      const pinSetupForm = document.getElementById('pinSetupForm');
+      if (pinSetupForm) {
+        pinSetupForm.onsubmit = function(e) {
+          e.preventDefault();
+          const newPin = document.getElementById('newPinInput').value;
+          const confirmPin = document.getElementById('confirmPinInput').value;
+
+          if (newPin.length !== 4 || !/^\d{4}$/.test(newPin)) {
+            alert('PIN must be exactly 4 digits');
+            return;
+          }
+
+          if (newPin !== confirmPin) {
+            alert('PINs do not match');
+            return;
+          }
+
+          // Save custom PIN
+          const captain = appData.volunteers.find(v => v.name === captainAuth.name);
+          if (captain) {
+            captain.customPin = newPin;
+            saveData();
+            showPinSetupModal = false;
+            alert('Your PIN has been set! Use ' + newPin + ' to log in next time.');
+            render();
           }
         };
       }
