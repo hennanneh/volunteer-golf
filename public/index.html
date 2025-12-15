@@ -680,10 +680,85 @@
       from { opacity: 0; transform: translateX(-50%) translateY(10px); }
       to { opacity: 1; transform: translateX(-50%) translateY(0); }
     }
+    /* Demo Mode Banner */
+    .demo-banner {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+      color: white;
+      padding: 12px 20px;
+      text-align: center;
+      font-weight: 600;
+      font-size: 14px;
+      z-index: 9999;
+      display: none;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+    .demo-banner.visible { display: block; }
+    .demo-banner a { color: white; text-decoration: underline; margin-left: 15px; }
+    body.demo-mode { padding-top: 48px; }
+
+    /* Powered By Footer */
+    .powered-by-footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255,255,255,0.95);
+      border-top: 1px solid #eee;
+      padding: 8px 20px;
+      text-align: center;
+      font-size: 12px;
+      color: #999;
+      z-index: 100;
+    }
+    .powered-by-footer a { color: #666; text-decoration: none; }
+    .powered-by-footer a:hover { text-decoration: underline; }
+    body.has-powered-by { padding-bottom: 40px; }
+
+    /* Real-time Toast Notifications */
+    .realtime-toast {
+      position: fixed;
+      bottom: 80px;
+      left: 50%;
+      transform: translateX(-50%) translateY(20px);
+      background: #333;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 14px;
+      opacity: 0;
+      transition: all 0.3s ease;
+      z-index: 10000;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    .realtime-toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+    
+    /* Connection Status Indicator */
+    .connection-status {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      display: inline-block;
+      margin-left: 8px;
+    }
+    .connection-status.connected { background: #4caf50; }
+    .connection-status.disconnected { background: #f44336; animation: pulse 1s infinite; }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
   </style>
+  <script src="/socket.io/socket.io.js"></script>
 </head>
 <body>
+  <div id="demo-banner" class="demo-banner">
+    Demo Mode - Data resets hourly. <a href="?demo=false">Exit Demo</a>
+  </div>
   <div id="app"></div>
+  <div id="powered-by-footer" class="powered-by-footer" style="display:none"></div>
 
   <script>
     // ==================== DATA STORE ====================
@@ -720,6 +795,7 @@
     let captainAuth = null;
     let volunteerAuth = null; // logged in volunteer object
     let selectedDay = null;
+    var socket = null; // WebSocket connection
     let selectedShift = null;
     let adminTab = 'overview';
     let showAllVolunteers = false;
@@ -806,6 +882,11 @@
         var response = await fetch('/api/data');
         var result = await response.json();
         if (result.success && result.data) {
+          // Check for demo mode
+          if (result.demoMode) {
+            document.getElementById("demo-banner").classList.add("visible");
+            document.body.classList.add("demo-mode");
+          }
           appData = result.data;
           if (!appData.submissions) appData.submissions = [];
           if (!appData.settings) appData.settings = defaultData.settings;
@@ -830,7 +911,7 @@
       saveTimeout = setTimeout(function() {
         fetch('/api/data', {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
+          headers: { 'Content-Type': 'application/json', 'X-Socket-ID': (socket && socket.id) || '' },
           body: JSON.stringify(appData)
         }).catch(function(err) {
           console.error('Failed to save data:', err);
@@ -856,7 +937,7 @@
     function saveArchivesToServer() {
       fetch('/api/archives', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json', 'X-Socket-ID': (socket && socket.id) || '' },
         body: JSON.stringify({ archives: serverArchives })
       }).catch(function(err) {
         console.error('Failed to save archives:', err);
@@ -954,6 +1035,7 @@
 
       app.innerHTML = content;
       attachEventListeners();
+      updatePoweredByFooter();
     }
 
     function renderLanding() {
@@ -2753,6 +2835,29 @@
             </div>
           </div>
 
+          <div class="settings-card" style="border:2px solid #9c27b0">
+            <h3 style="color:#9c27b0">Branding / White Label</h3>
+            <p style="color:#666;font-size:12px;margin-bottom:15px">Customize the "Powered by" footer that appears on all pages.</p>
+            
+            <div style="margin-bottom:15px">
+              <label style="display:flex;align-items:center;gap:10px;cursor:pointer">
+                <input type="checkbox" ${appData.settings.showPoweredBy !== false ? "checked" : ""} onchange="updateSetting('showPoweredBy', this.checked)" style="width:18px;height:18px">
+                <span style="font-size:14px">Show "Powered by" footer</span>
+              </label>
+            </div>
+            
+            <div style="margin-bottom:12px">
+              <label style="font-size:12px;color:#666;display:block;margin-bottom:4px">Brand Name</label>
+              <input type="text" placeholder="Volunteer Golf" value="${appData.settings.poweredByText || 'Volunteer Golf'}" onchange="updateSetting('poweredByText', this.value)" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:6px">
+            </div>
+            
+            <div style="margin-bottom:12px">
+              <label style="font-size:12px;color:#666;display:block;margin-bottom:4px">Brand URL (optional)</label>
+              <input type="url" placeholder="https://yourcompany.com" value="${appData.settings.poweredByUrl || ''}" onchange="updateSetting('poweredByUrl', this.value)" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:6px">
+            </div>
+            <p style="color:#999;font-size:11px;margin-top:8px">Leave URL blank to show text without a link. Uncheck to completely hide the footer.</p>
+          </div>
+
           <div class="settings-card danger-zone">
             <h3>Danger Zone</h3>
             <p style="color:#666;font-size:12px;margin-bottom:15px">These actions permanently delete data and cannot be undone.</p>
@@ -3747,7 +3852,7 @@
 
       const response = await fetch('/api/email', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json', 'X-Socket-ID': (socket && socket.id) || '' },
         body: JSON.stringify({
           to: [volunteer.email],
           subject: subject,
@@ -4039,7 +4144,7 @@
 
         var response = await fetch('/api/email', {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
+          headers: { 'Content-Type': 'application/json', 'X-Socket-ID': (socket && socket.id) || '' },
           body: JSON.stringify(payload)
         });
 
@@ -4056,6 +4161,26 @@
           throw new Error('Could not connect to server. Please check your internet connection.');
         }
         throw new Error(errMsg);
+      }
+    }
+
+    function updatePoweredByFooter() {
+      var footer = document.getElementById('powered-by-footer');
+      if (!footer) return;
+      var show = appData.settings.showPoweredBy !== false;
+      var text = appData.settings.poweredByText || 'Volunteer Golf';
+      var url = appData.settings.poweredByUrl;
+      if (show) {
+        footer.style.display = 'block';
+        document.body.classList.add('has-powered-by');
+        if (url) {
+          footer.innerHTML = 'Powered by <a href="' + url + '" target="_blank">' + text + '</a>';
+        } else {
+          footer.innerHTML = 'Powered by ' + text;
+        }
+      } else {
+        footer.style.display = 'none';
+        document.body.classList.remove('has-powered-by');
       }
     }
 
@@ -4254,7 +4379,90 @@
 
     // Initial render - show loading, then fetch data from server
     render();
+
+    // WebSocket for real-time updates
+    var isConnected = false;
+    
+    function initWebSocket() {
+      if (socket) return;
+      
+      socket = io();
+      
+      socket.on('connect', function() {
+        console.log('WebSocket connected');
+        isConnected = true;
+        // Join appropriate room based on demo mode
+        var demoMode = document.cookie.includes('demoMode=true');
+        socket.emit('joinRoom', demoMode ? 'demo' : 'live');
+        updateConnectionStatus(true);
+      });
+      
+      socket.on('disconnect', function() {
+        console.log('WebSocket disconnected');
+        isConnected = false;
+        updateConnectionStatus(false);
+      });
+      
+      socket.on('dataUpdated', function(event) {
+        console.log('Data updated:', event.type);
+        if (event.type === 'fullUpdate') {
+          // Full data update - reload
+          appData = event.data;
+          if (!appData.submissions) appData.submissions = [];
+          if (!appData.settings) appData.settings = defaultData.settings;
+          render();
+          showToast('Data updated by another user');
+        } else if (event.type === 'checkIn') {
+          // Single check-in added
+          if (!appData.checkIns.find(c => c.volunteerId === event.data.volunteerId && c.day === event.data.day && c.shift === event.data.shift)) {
+            appData.checkIns.push(event.data);
+            render();
+            showToast(event.data.volunteerName + ' checked in');
+          }
+        } else if (event.type === 'checkOut') {
+          // Check-in removed
+          appData.checkIns = appData.checkIns.filter(c => 
+            !(c.volunteerId === event.data.volunteerId && c.day === event.data.day && c.shift === event.data.shift)
+          );
+          render();
+          showToast('Check-in removed');
+        }
+      });
+      
+      socket.on('demoReset', function() {
+        if (document.cookie.includes('demoMode=true')) {
+          loadDataFromServer();
+          showToast('Demo data has been reset');
+        }
+      });
+    }
+    
+    function updateConnectionStatus(connected) {
+      var indicator = document.getElementById('connection-status');
+      if (indicator) {
+        indicator.className = 'connection-status ' + (connected ? 'connected' : 'disconnected');
+        indicator.title = connected ? 'Real-time updates active' : 'Reconnecting...';
+      }
+    }
+    
+    function showToast(message) {
+      var existing = document.querySelector('.realtime-toast');
+      if (existing) existing.remove();
+      
+      var toast = document.createElement('div');
+      toast.className = 'realtime-toast';
+      toast.textContent = message;
+      document.body.appendChild(toast);
+      
+      setTimeout(function() { toast.classList.add('show'); }, 10);
+      setTimeout(function() { 
+        toast.classList.remove('show');
+        setTimeout(function() { toast.remove(); }, 300);
+      }, 3000);
+    }
+
     loadDataFromServer();
+    initWebSocket();
   </script>
 </body>
 </html>
