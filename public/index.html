@@ -567,7 +567,7 @@
       font-size: 13px;
     }
     .shift-toggle button.active { background: white; color: #1a472a; }
-    .shift-toggle button:not(.active) { background: rgba(255,255,255,0.2); color: white; }
+    .shift-toggle button:not(.active) { background: #0d2818; color: rgba(255,255,255,0.5); }
 
     .progress-section { padding: 15px 20px; background: white; border-bottom: 1px solid #eee; }
     .progress-header { display: flex; justify-content: space-between; margin-bottom: 8px; }
@@ -716,7 +716,8 @@
     }
     .powered-by-footer a { color: #666; text-decoration: none; }
     .powered-by-footer a:hover { text-decoration: underline; }
-    body.has-powered-by { padding-bottom: 40px; }
+    body.has-powered-by { padding-bottom: 60px; }
+    body.has-powered-by .floating-summary { bottom: 35px; }
 
     /* Real-time Toast Notifications */
     .realtime-toast {
@@ -996,6 +997,23 @@
       return String(phone).replace(/\D/g, '').slice(-4);
     }
 
+    function isWeakPin(pin) {
+      if (!pin || pin.length !== 4) return true;
+      var p = pin.toUpperCase();
+      // All same character
+      if (p[0] === p[1] && p[1] === p[2] && p[2] === p[3]) return true;
+      // Sequential ascending or descending
+      var asc = true, desc = true;
+      for (var i = 1; i < 4; i++) {
+        if (p.charCodeAt(i) !== p.charCodeAt(i-1) + 1) asc = false;
+        if (p.charCodeAt(i) !== p.charCodeAt(i-1) - 1) desc = false;
+      }
+      if (asc || desc) return true;
+      // Common weak patterns
+      var weak = ["0000","1111","2222","3333","4444","5555","6666","7777","8888","9999","1234","4321","0123","3210","1122","2211","1212","2121"];
+      return weak.includes(p);
+    }
+
     function formatTimestamp(ts) {
       if (!ts) return '';
       const d = new Date(ts);
@@ -1048,7 +1066,8 @@
             <h1 class="landing-title">${appData.settings.tournamentName}</h1>
             <p class="landing-subtitle">Volunteer Check-In System</p>
             <button class="btn-primary" onclick="goTo('captainLogin')">Hole Captain Check-In</button>
-            <button class="btn-secondary" onclick="goTo('volunteerLogin')" style="margin-top:12px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3)">Volunteer Portal</button>
+            <button class="btn-secondary" onclick="goTo('volunteerLogin')">Volunteer Portal</button>
+            ${(appData.settings.showPairingsLink !== false && appData.settings.pairingsUrl) ? `<a href="${appData.settings.pairingsUrl}" target="_blank" class="btn-secondary" style="display:block;margin-top:12px;text-decoration:none">${appData.settings.pairingsText || 'Pairings Sheet'}</a>` : ''}
           </div>
           ${hasContact ? `
             <div style="margin-top:30px;text-align:center;color:rgba(255,255,255,0.9)">
@@ -2628,14 +2647,15 @@
       if (!hole) return;
 
       // Get all volunteers and captains on this hole
-      const holeVolunteers = appData.volunteers.filter(v => v.hole === hole && v.email);
+      const holeVolunteers = appData.volunteers.filter(v => v.hole === hole);
+      const volunteersWithEmail = holeVolunteers.filter(v => v.email);
 
-      if (holeVolunteers.length === 0) {
+      if (volunteersWithEmail.length === 0) {
         alert('No volunteers with email addresses found for this hole.');
         return;
       }
 
-      const emails = holeVolunteers.map(v => v.email).filter(e => e && e.trim());
+      const emails = volunteersWithEmail.map(v => v.email).filter(e => e && e.trim());
 
       if (emails.length === 0) {
         alert('No valid email addresses found for volunteers on this hole.');
@@ -2835,6 +2855,28 @@
             </div>
           </div>
 
+
+          <div class="settings-card" style="border:2px solid #2196f3">
+            <h3 style="color:#2196f3">Pairings Sheet</h3>
+            <p style="color:#666;font-size:12px;margin-bottom:15px">Add a link to the tournament pairings sheet on the landing page.</p>
+            
+            <div style="margin-bottom:15px">
+              <label style="display:flex;align-items:center;gap:10px;cursor:pointer">
+                <input type="checkbox" ${appData.settings.showPairingsLink !== false ? "checked" : ""} onchange="updateSetting('showPairingsLink', this.checked)" style="width:18px;height:18px">
+                <span style="font-size:14px">Show Pairings Sheet link</span>
+              </label>
+            </div>
+            
+            <div style="margin-bottom:15px">
+              <label style="font-size:12px;color:#666;display:block;margin-bottom:4px">Link Text</label>
+              <input type="text" placeholder="Pairings Sheet" value="${appData.settings.pairingsText || 'Pairings Sheet'}" onchange="updateSetting('pairingsText', this.value)" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:6px">
+            </div>
+            
+            <div style="margin-bottom:15px">
+              <label style="font-size:12px;color:#666;display:block;margin-bottom:4px">Pairings URL</label>
+              <input type="url" placeholder="https://pgatour.com/..." value="${appData.settings.pairingsUrl || ''}" onchange="updateSetting('pairingsUrl', this.value)" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:6px">
+            </div>
+          </div>
           <div class="settings-card" style="border:2px solid #9c27b0">
             <h3 style="color:#9c27b0">Branding / White Label</h3>
             <p style="color:#666;font-size:12px;margin-bottom:15px">Customize the "Powered by" footer that appears on all pages.</p>
@@ -4356,6 +4398,11 @@
 
           if (newPin.length !== 4 || !/^\d{4}$/.test(newPin)) {
             alert('PIN must be exactly 4 digits');
+            return;
+          }
+
+          if (isWeakPin(newPin)) {
+            alert("That PIN is too easy to guess. Please pick something more unique - avoid patterns like 1234 or repeated digits.");
             return;
           }
 
