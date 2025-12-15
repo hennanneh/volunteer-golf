@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Volunteer Golf - Help Guide</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { 
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      background: #f8f9fa;
+    }
+    h1 { color: #1a472a; margin-bottom: 10px; font-size: 28px; }
+    h2 { color: #1a472a; margin: 30px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #1a472a; font-size: 22px; }
+    h3 { color: #2d5a3f; margin: 20px 0 10px; font-size: 18px; }
+    p { margin-bottom: 12px; }
+    .subtitle { color: #666; font-size: 16px; margin-bottom: 30px; }
+    .quick-start { 
+      background: linear-gradient(135deg, #1a472a, #2d5a3f);
+      color: white;
+      padding: 25px;
+      border-radius: 12px;
+      margin: 20px 0 30px;
+    }
+    .quick-start h2 { color: white; border-bottom-color: rgba(255,255,255,0.3); margin-top: 0; }
+    .quick-start ol { margin-left: 20px; }
+    .quick-start li { margin-bottom: 12px; }
+    .quick-start strong { color: #90EE90; }
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .card h3 { margin-top: 0; }
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 15px;
+      margin: 20px 0;
+    }
+    code {
+      background: #e9ecef;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    ul, ol { margin-left: 20px; margin-bottom: 15px; }
+    li { margin-bottom: 6px; }
+    .tip {
+      background: #e8f5e9;
+      border-left: 4px solid #1a472a;
+      padding: 12px 15px;
+      margin: 15px 0;
+      border-radius: 0 8px 8px 0;
+    }
+    .tip strong { color: #1a472a; }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 20px;
+      color: #1a472a;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .back-link:hover { text-decoration: underline; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    th, td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #eee;
+    }
+    th { background: #1a472a; color: white; }
+    tr:hover { background: #f8f9fa; }
+  </style>
+</head>
+<body>
+  <a href="/" class="back-link">← Back to App</a>
+  
+  <h1>Volunteer Golf Help Guide</h1>
+  <p class="subtitle">Everything you need to manage tournament volunteers</p>
+
+  <div class="quick-start">
+    <h2>Quick Start: Checking In Volunteers</h2>
+    <p style="margin-bottom:15px;opacity:0.9">Get your hole checked in in under 60 seconds:</p>
+    <ol>
+      <li><strong>Open the app</strong> on your phone and tap <strong>"Hole Captain Check-In"</strong></li>
+      <li><strong>Enter your PIN</strong> (last 4 digits of your phone, or your custom PIN)</li>
+      <li><strong>Select AM or PM</strong> shift using the toggle at the top</li>
+      <li><strong>Tap each volunteer's name</strong> as they arrive - a green checkmark appears</li>
+      <li><strong>Tap "Save Check-Ins"</strong> when done - that's it!</li>
+    </ol>
+    <div class="tip" style="background:rgba(255,255,255,0.15);border-left-color:rgba(255,255,255,0.5)">
+      <strong style="color:white">Pro Tip:</strong> You can check in volunteers throughout the shift. No need to wait until everyone arrives - just save whenever you make changes.
+    </div>
+  </div>
+
+  <h2>User Roles</h2>
+  <div class="feature-grid">
+    <div class="card">
+      <h3>Hole Captain</h3>
+      <p>Checks in volunteers at their assigned hole. Can view their hole's roster and email volunteers.</p>
+    </div>
+    <div class="card">
+      <h3>Chairman / Asst. Chairman</h3>
+      <p>Like a captain but can switch between multiple assigned holes. Oversees a section of the course.</p>
+    </div>
+    <div class="card">
+      <h3>Admin</h3>
+      <p>Full access to all features: edit volunteers, view all holes, run reports, manage settings.</p>
+    </div>
+    <div class="card">
+      <h3>Volunteer</h3>
+      <p>Can view their own schedule and check-in status via the Volunteer Portal.</p>
+    </div>
+  </div>
+
+  <h2>Admin Features</h2>
+
+  <h3>Overview Tab</h3>
+  <div class="card">
+    <p>Your command center showing real-time tournament status:</p>
+    <ul>
+      <li><strong>Week at a Glance</strong> - Visual grid of all shifts showing scheduled vs checked-in counts</li>
+      <li><strong>Color coding</strong> - Green = fully staffed, Yellow = partial, Gray = no data yet</li>
+      <li><strong>Click any cell</strong> to drill down into that day/shift's details</li>
+    </ul>
+  </div>
+
+  <h3>Check-ins Tab</h3>
+  <div class="card">
+    <p>Real-time view of all check-in activity:</p>
+    <ul>
+      <li>See who checked in, when, and which captain recorded it</li>
+      <li>Filter by day, shift, or hole</li>
+      <li>Monitor progress across the tournament</li>
+    </ul>
+  </div>
+
+  <h3>Edit Volunteers Tab</h3>
+  <div class="card">
+    <p>Manage your volunteer roster:</p>
+    <ul>
+      <li><strong>Search & Filter</strong> - Find volunteers by name, type, or hole</li>
+      <li><strong>Add Volunteer</strong> - Click the + button to add new volunteers</li>
+      <li><strong>Edit</strong> - Click any volunteer to update their info, schedule, or PIN</li>
+      <li><strong>Bulk Update</strong> - Use Import to update multiple volunteers at once</li>
+    </ul>
+    <div class="tip">
+      <strong>Tip:</strong> Volunteer types are Captain, Asst. Chairman, Chairman, Admin, or Volunteer. Only Captain+ roles can check in others.
+    </div>
+  </div>
+
+  <h3>Reports Tab</h3>
+  <div class="card">
+    <p>Generate insights and export data:</p>
+    <table>
+      <tr><th>Report</th><th>Description</th></tr>
+      <tr><td>Volunteer Totals</td><td>Total shifts scheduled and worked per volunteer</td></tr>
+      <tr><td>Hole Roster</td><td>Complete schedule for a specific hole - great for printing</td></tr>
+      <tr><td>Custom Report</td><td>Build your own with selectable columns and filters</td></tr>
+    </table>
+    <p>All reports can be <strong>printed</strong> or <strong>exported to CSV</strong> for Excel.</p>
+  </div>
+
+  <h3>Import Tab</h3>
+  <div class="card">
+    <p>Bulk import or update volunteers from a spreadsheet:</p>
+    <ol>
+      <li>Prepare a CSV file with columns: Name, Phone, Email, Type, Hole, Schedule</li>
+      <li>Upload the file - the system auto-maps columns</li>
+      <li>Review the preview and click Import</li>
+    </ol>
+    <div class="tip">
+      <strong>Tip:</strong> You can re-import to update existing volunteers. The system matches by name.
+    </div>
+  </div>
+
+  <h3>Settings Tab</h3>
+  <div class="card">
+    <p>Configure your tournament:</p>
+    <table>
+      <tr><th>Setting</th><th>What it does</th></tr>
+      <tr><td>Tournament Name</td><td>Displayed on the home screen and in emails</td></tr>
+      <tr><td>Tournament Dates</td><td>Start/end dates for the event</td></tr>
+      <tr><td>Number of Holes</td><td>Usually 18, but can be adjusted</td></tr>
+      <tr><td>Admin Password</td><td>Full admin access password</td></tr>
+      <tr><td>View-Only Password</td><td>Limited admin access (can view but not edit)</td></tr>
+      <tr><td>Contact Info</td><td>Help desk name, phone, email shown to users</td></tr>
+      <tr><td>Shift Cutoff Times</td><td>When AM ends and PM begins</td></tr>
+      <tr><td>Pairings Sheet</td><td>Link to tournament pairings on landing page</td></tr>
+      <tr><td>Branding</td><td>Customize the "Powered by" footer</td></tr>
+      <tr><td>Archives</td><td>Save this year's data for historical reference</td></tr>
+      <tr><td>Danger Zone</td><td>Clear all check-ins or reset all data</td></tr>
+    </table>
+  </div>
+
+  <h2>Captain Features</h2>
+  
+  <div class="card">
+    <h3>Check-In Screen</h3>
+    <ul>
+      <li><strong>AM/PM Toggle</strong> - Switch between morning and afternoon shifts</li>
+      <li><strong>Volunteer List</strong> - Shows all volunteers scheduled for your hole and current shift</li>
+      <li><strong>Tap to Check In</strong> - Tap a name to toggle their check-in status</li>
+      <li><strong>Progress Bar</strong> - Shows how many are checked in vs scheduled</li>
+      <li><strong>Save Check-Ins</strong> - Saves your changes to the server</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Roster View</h3>
+    <p>Tap the "Roster" button to see your full hole roster for all days/shifts. You can also email the roster to all volunteers with email addresses on file.</p>
+  </div>
+
+  <div class="card">
+    <h3>Custom PIN</h3>
+    <p>On first login, you'll be prompted to set a custom 4-digit PIN. This replaces using your phone number and is more secure.</p>
+    <div class="tip">
+      <strong>Note:</strong> Easy PINs like 1234, 1111, or 0000 are not allowed.
+    </div>
+  </div>
+
+  <h2>Volunteer Portal</h2>
+  <div class="card">
+    <p>Volunteers can log in with the last 4 digits of their phone to:</p>
+    <ul>
+      <li>View their scheduled shifts</li>
+      <li>See which shifts they've been checked into</li>
+      <li>Update their email address</li>
+      <li>View their hole assignment</li>
+    </ul>
+  </div>
+
+  <h2>Real-Time Updates</h2>
+  <div class="card">
+    <p>The app uses WebSockets for instant synchronization:</p>
+    <ul>
+      <li>When a captain checks in volunteers, admins see updates immediately</li>
+      <li>Multiple captains on the same hole see each other's changes</li>
+      <li>No need to refresh - data syncs automatically</li>
+      <li>A toast notification appears when data is updated by another user</li>
+    </ul>
+  </div>
+
+  <h2>Demo Mode</h2>
+  <div class="card">
+    <p>Add <code>?demo=true</code> to the URL to enter demo mode:</p>
+    <ul>
+      <li>Uses separate demo data that won't affect real data</li>
+      <li>Data resets every hour automatically</li>
+      <li>Perfect for training or showing prospects</li>
+      <li>Exit by clicking the demo banner or adding <code>?demo=false</code></li>
+    </ul>
+  </div>
+
+  <h2>Tips & Best Practices</h2>
+  <div class="card">
+    <ul>
+      <li><strong>Import early</strong> - Get your volunteer list imported a few days before the event</li>
+      <li><strong>Test with captains</strong> - Have captains log in before event day to set their PINs</li>
+      <li><strong>Use the Overview</strong> - The admin Overview tab is your best friend during the tournament</li>
+      <li><strong>Email rosters</strong> - Send hole rosters to volunteers before their shift</li>
+      <li><strong>Archive when done</strong> - Save the tournament data to archives after the event</li>
+    </ul>
+  </div>
+
+  <h2>Troubleshooting</h2>
+  <div class="card">
+    <table>
+      <tr><th>Problem</th><th>Solution</th></tr>
+      <tr><td>Can't log in</td><td>Make sure you're using the last 4 digits of your registered phone, or your custom PIN if you set one</td></tr>
+      <tr><td>Don't see my volunteers</td><td>Check the AM/PM toggle - you might be viewing the wrong shift</td></tr>
+      <tr><td>Changes not saving</td><td>Check your internet connection. The app needs connectivity to save.</td></tr>
+      <tr><td>Seeing old data</td><td>Try a hard refresh: Ctrl+Shift+R (Windows) or Cmd+Shift+R (Mac)</td></tr>
+    </table>
+  </div>
+
+  <div style="margin-top:40px;padding-top:20px;border-top:1px solid #ddd;color:#666;font-size:13px;text-align:center">
+    <p>Volunteer Golf - Tournament Volunteer Management System</p>
+    <p><a href="/" style="color:#1a472a">Return to App</a></p>
+  </div>
+</body>
+</html>
