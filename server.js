@@ -44,7 +44,6 @@ const defaultData = {
   checkIns: [],
   submissions: [],
   settings: {
-    adminPassword: 'admin2025',
     tournamentName: 'Golf Tournament 2025'
   }
 };
@@ -264,6 +263,30 @@ app.post('/api/email', async (req, res) => {
     res.json({ success: true });
   } catch (err) {
     res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+app.post('/api/hat-delivered', (req, res) => {
+  const { volunteerId } = req.body;
+
+  if (!volunteerId) {
+    return res.status(400).json({ success: false, error: 'volunteerId required' });
+  }
+
+  const data = loadData(req.demoMode);
+  const volIdx = data.volunteers.findIndex(v => v.id === volunteerId);
+
+  if (volIdx === -1) {
+    return res.status(404).json({ success: false, error: 'Volunteer not found' });
+  }
+
+  data.volunteers[volIdx].hatReceived = true;
+
+  if (saveData(data, req.demoMode)) {
+    broadcastUpdate(req.demoMode, 'hatDelivered', { volunteerId, volunteer: data.volunteers[volIdx] });
+    res.json({ success: true, volunteer: data.volunteers[volIdx] });
+  } else {
+    res.status(500).json({ success: false, error: 'Failed to save' });
   }
 });
 

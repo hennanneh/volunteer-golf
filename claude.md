@@ -59,6 +59,7 @@ A web-based volunteer check-in and management system for golf tournaments. Built
 - **Asst. Chairman** - Oversees multiple holes (uses assignedHoles field)
 - **Chairman** - Oversees multiple holes (uses assignedHoles field)
 - **Admin** - Full captain portal access to all holes
+- **View Admin** - Read-only admin access to all data
 
 ## Key Features
 - Shift-based check-ins (AM/PM shifts across tournament days)
@@ -86,9 +87,19 @@ pm2 logs volunteer-golf     # View server logs
 - `GET /api/archives` - Load archives
 - `POST /api/archives` - Save archives
 - `POST /api/email` - Send email (to, subject, message)
+- `POST /api/hat-delivered` - Mark volunteer hat as delivered
 - `GET /api/health` - Health check
 
-## Recent Changes (Dec 2024)
+## Recent Changes (Jan 2025)
+- **PWA Support** - Installable on home screen (manifest.json, service worker, icons)
+- **Hat Pickup Tracking** - QR code-scannable page for hat distribution (/hat-pickup.html)
+- **Pull-to-Refresh** - Mobile swipe-down to refresh data
+- **Session Persistence** - Auth state saved to localStorage (survives page refreshes)
+- **Password Change Prompts** - Users prompted to set secure custom PINs
+- **View Admin Type** - Read-only admin access for volunteers
+- **QR Code Generation** - Admin can generate QR codes for hat pickup
+
+## Changes (Dec 2024)
 - Added multi-hole assignment for Chairman/Asst. Chairman types
 - Added view-only admin access level
 - Removed email alerts feature (unused)

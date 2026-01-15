@@ -21,10 +21,18 @@
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <link rel="apple-touch-icon" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/icon-192.png">
+
+  <!-- PWA -->
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#1a472a">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Volunteers">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
   <style>
     /* Modal styles */
     .modal-overlay {
@@ -751,6 +759,7 @@
     .connection-status.connected { background: #4caf50; }
     .connection-status.disconnected { background: #f44336; animation: pulse 1s infinite; }
     @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+    @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
   </style>
   <script src="/socket.io/socket.io.js"></script>
 </head>
@@ -771,7 +780,6 @@
       checkIns: [],
       submissions: [],
       settings: {
-        adminPassword: 'admin2025',
         tournamentName: 'Golf Tournament 2025',
         tournamentStartDate: '',
         tournamentEndDate: '',
@@ -793,6 +801,7 @@
 
     let currentView = 'landing';
     let adminAuth = false; // false, 'full', or 'viewOnly'
+    let adminAuthUser = null; // The volunteer object for logged-in admin
     let captainAuth = null;
     let volunteerAuth = null; // logged in volunteer object
     let selectedDay = null;
@@ -813,10 +822,68 @@
     let showSaveToast = false;
     let saveToastTimeout = null;
     let showPinSetupModal = false;
+    let showAdminPasswordChangeModal = false; // For admin password change prompt
+    let showPasswordChangeModal = false; // For captain password change prompt
+    let showVolunteerPasswordChangeModal = false; // For volunteer password change prompt
     let captainEditingVolunteer = null; // For captain editing volunteer schedules
     let showReportsModal = false; // For captain reports view
     let currentReport = null; // Currently selected report type
     let reportFilters = { hole: 'all', day: 'all', shift: 'all' }; // Current report filters
+
+    // Save auth state to localStorage
+    function saveAuthState() {
+      const authState = {
+        currentView,
+        adminAuth,
+        adminAuthUserId: adminAuthUser ? adminAuthUser.id : null,
+        captainAuth,
+        volunteerAuth,
+        adminTab
+      };
+      localStorage.setItem('volunteerGolfAuth', JSON.stringify(authState));
+    }
+
+    // Restore auth state from localStorage
+    function restoreAuthState() {
+      try {
+        const saved = localStorage.getItem('volunteerGolfAuth');
+        if (saved) {
+          const authState = JSON.parse(saved);
+
+          // Validate the saved volunteer/captain still exists
+          if (authState.volunteerAuth) {
+            const vol = appData.volunteers.find(v => v.id === authState.volunteerAuth.id);
+            if (vol) {
+              volunteerAuth = vol;
+              currentView = 'volunteer';
+            }
+          } else if (authState.captainAuth) {
+            const cap = appData.volunteers.find(v => v.id === authState.captainAuth.id);
+            if (cap) {
+              captainAuth = { ...authState.captainAuth, name: cap.name };
+              currentView = 'captain';
+            }
+          } else if (authState.adminAuth && authState.adminAuthUserId) {
+            // Validate the admin user still exists and is still an admin type
+            const admin = appData.volunteers.find(v => v.id === authState.adminAuthUserId);
+            if (admin && (admin.type === 'Admin' || admin.type === 'View Admin')) {
+              adminAuth = admin.type === 'Admin' ? 'full' : 'viewOnly';
+              adminAuthUser = admin;
+              adminTab = authState.adminTab || 'overview';
+              currentView = 'admin';
+            }
+          }
+        }
+      } catch (e) {
+        console.error('Error restoring auth state:', e);
+        localStorage.removeItem('volunteerGolfAuth');
+      }
+    }
+
+    // Clear auth state (for logout)
+    function clearAuthState() {
+      localStorage.removeItem('volunteerGolfAuth');
+    }
 
     // Success messages for rotation
     const SUCCESS_MESSAGES = [
@@ -901,7 +968,139 @@
       var shift = getCurrentShift();
       selectedDay = shift.day;
       selectedShift = shift.shift;
+      // Restore auth state from localStorage
+      restoreAuthState();
       render();
+    }
+
+    // Refresh data from server (user-triggered)
+    let isRefreshing = false;
+    async function refreshData() {
+      if (isRefreshing) return;
+      isRefreshing = true;
+
+      // Show loading indicator
+      const btn = event?.target;
+      if (btn) {
+        btn.style.opacity = '0.5';
+        btn.style.animation = 'spin 1s linear infinite';
+      }
+
+      try {
+        const response = await fetch('/api/data');
+        const result = await response.json();
+        if (result.success && result.data) {
+          appData = result.data;
+          if (!appData.submissions) appData.submissions = [];
+          if (!appData.settings) appData.settings = defaultData.settings;
+
+          // Update volunteer/captain auth with fresh data
+          if (volunteerAuth) {
+            const freshVol = appData.volunteers.find(v => v.id === volunteerAuth.id);
+            if (freshVol) volunteerAuth = freshVol;
+          }
+          if (captainAuth && captainAuth.id) {
+            const freshCap = appData.volunteers.find(v => v.id === captainAuth.id);
+            if (freshCap) {
+              captainAuth.name = freshCap.name;
+              captainAuth.hole = freshCap.hole;
+            }
+          }
+
+          render();
+          showToast('Data refreshed');
+        }
+      } catch (err) {
+        console.error('Failed to refresh:', err);
+        showToast('Refresh failed');
+      } finally {
+        isRefreshing = false;
+        if (btn) {
+          btn.style.opacity = '1';
+          btn.style.animation = '';
+        }
+      }
+    }
+
+    // Pull-to-refresh for mobile
+    let pullStartY = 0;
+    let pullMoveY = 0;
+    let isPulling = false;
+    let pullIndicator = null;
+
+    function initPullToRefresh() {
+      document.addEventListener('touchstart', (e) => {
+        if (window.scrollY === 0 && !isRefreshing) {
+          pullStartY = e.touches[0].clientY;
+          isPulling = true;
+        }
+      }, { passive: true });
+
+      document.addEventListener('touchmove', (e) => {
+        if (!isPulling || isRefreshing) return;
+
+        pullMoveY = e.touches[0].clientY;
+        const pullDistance = pullMoveY - pullStartY;
+
+        if (pullDistance > 0 && window.scrollY === 0) {
+          if (!pullIndicator) {
+            pullIndicator = document.createElement('div');
+            pullIndicator.id = 'pullIndicator';
+            pullIndicator.style.cssText = 'position:fixed;top:0;left:0;right:0;text-align:center;padding:15px;background:#1a472a;color:white;font-size:14px;transform:translateY(-100%);transition:transform 0.2s;z-index:9999';
+            pullIndicator.textContent = 'Pull to refresh...';
+            document.body.appendChild(pullIndicator);
+          }
+
+          const progress = Math.min(pullDistance / 80, 1);
+          pullIndicator.style.transform = `translateY(${progress * 100 - 100}%)`;
+
+          if (pullDistance > 80) {
+            pullIndicator.textContent = 'Release to refresh';
+          } else {
+            pullIndicator.textContent = 'Pull to refresh...';
+          }
+        }
+      }, { passive: true });
+
+      document.addEventListener('touchend', () => {
+        if (!isPulling) return;
+
+        const pullDistance = pullMoveY - pullStartY;
+
+        if (pullDistance > 80 && window.scrollY === 0 && !isRefreshing) {
+          if (pullIndicator) {
+            pullIndicator.textContent = 'Refreshing...';
+            pullIndicator.style.transform = 'translateY(0)';
+          }
+          refreshData().then(() => {
+            setTimeout(() => {
+              if (pullIndicator) {
+                pullIndicator.style.transform = 'translateY(-100%)';
+                setTimeout(() => {
+                  if (pullIndicator) {
+                    pullIndicator.remove();
+                    pullIndicator = null;
+                  }
+                }, 200);
+              }
+            }, 500);
+          });
+        } else {
+          if (pullIndicator) {
+            pullIndicator.style.transform = 'translateY(-100%)';
+            setTimeout(() => {
+              if (pullIndicator) {
+                pullIndicator.remove();
+                pullIndicator = null;
+              }
+            }, 200);
+          }
+        }
+
+        isPulling = false;
+        pullStartY = 0;
+        pullMoveY = 0;
+      }, { passive: true });
     }
 
     // Save data to server
@@ -997,6 +1196,12 @@
       return String(phone).replace(/\D/g, '').slice(-4);
     }
 
+    // Get phone as 10-digit string for default password
+    function getPhoneDigits(phone) {
+      if (!phone) return '';
+      return String(phone).replace(/\D/g, '').slice(-10);
+    }
+
     function isWeakPin(pin) {
       if (!pin || pin.length !== 4) return true;
       var p = pin.toUpperCase();
@@ -1064,7 +1269,7 @@
           <div class="landing-card">
             <div class="landing-icon">⛳</div>
             <h1 class="landing-title">${appData.settings.tournamentName}</h1>
-            <p class="landing-subtitle">Volunteer Check-In System</p>
+            <p class="landing-subtitle">Tournament Volunteer Manager</p>
             <button class="btn-primary" onclick="goTo('captainLogin')">Hole Captain Check-In</button>
             <button class="btn-secondary" onclick="goTo('volunteerLogin')">Volunteer Portal</button>
             ${(appData.settings.showPairingsLink !== false && appData.settings.pairingsUrl) ? `<a href="${appData.settings.pairingsUrl}" target="_blank" class="btn-secondary" style="display:block;margin-top:12px;text-decoration:none">${appData.settings.pairingsText || 'Pairings Sheet'}</a>` : ''}
@@ -1091,7 +1296,8 @@
             <button class="back-btn" onclick="goTo('landing')">← Back</button>
             <h2 style="color:#1a472a;margin-bottom:30px">Admin Login</h2>
             <form id="adminLoginForm" novalidate>
-              <input type="text" id="adminPassword" class="input-field" placeholder="Enter admin password" autocomplete="off">
+              <input type="email" id="adminEmail" class="input-field" placeholder="Email" autocomplete="email" style="margin-bottom:15px">
+              <input type="password" id="adminPassword" class="input-field" placeholder="Password" autocomplete="current-password">
               <div id="adminError" class="error-msg hidden"></div>
               <button type="submit" class="submit-btn">Login</button>
             </form>
@@ -1102,7 +1308,7 @@
 
     function renderCaptainLogin() {
       const captains = appData.volunteers.filter(v =>
-        v.type === 'Captain' || v.type === 'Asst. Chairman' || v.type === 'Chairman' || v.type === 'Admin'
+        v.type === 'Captain' || v.type === 'Asst. Chairman' || v.type === 'Chairman' || v.type === 'View Admin' || v.type === 'Admin'
       );
 
       // Count captains per hole
@@ -1120,13 +1326,15 @@
             <div class="login-header">
               <div style="font-size:50px;margin-bottom:10px">🏌️</div>
               <h2>Hole Captain Login</h2>
-              <p>Enter your 4-digit PIN (or last 4 of phone for first login)</p>
+              <p>Enter your email and password</p>
             </div>
             <form id="captainLoginForm" novalidate>
-              <input type="text" inputmode="numeric" id="captainPhone" class="input-field phone-input" placeholder="••••" maxlength="4" autocomplete="off">
+              <input type="email" id="captainEmail" class="input-field" placeholder="Email" autocomplete="email" style="margin-bottom:15px">
+              <input type="password" id="captainPassword" class="input-field" placeholder="Password" autocomplete="current-password">
               <div id="captainError" class="error-msg hidden"></div>
-              <button type="submit" id="captainSubmit" class="submit-btn" disabled>Sign In</button>
+              <button type="submit" id="captainSubmit" class="submit-btn">Sign In</button>
             </form>
+            <p style="color:#999;font-size:11px;text-align:center;margin-top:15px">Initial password is your phone number (10 digits)</p>
             ${captains.length === 0 ? '<p style="color:#999;font-size:13px;text-align:center;margin-top:20px">No captains loaded yet. Ask admin to import data.</p>' : ''}
             ${captains.length > 0 ? `<p style="color:#999;font-size:12px;text-align:center;margin-top:20px">${captains.length} captains registered${multiCaptainHoles > 0 ? ` • ${multiCaptainHoles} holes with multiple captains` : ''}</p>` : ''}
           </div>
@@ -1135,7 +1343,7 @@
     }
 
     function renderVolunteerLogin() {
-      const volunteersWithPhone = appData.volunteers.filter(v => v.phone && v.phone.length >= 4);
+      const volunteersWithEmail = appData.volunteers.filter(v => v.email && v.email.length > 0);
 
       return `
         <div class="login-page captain">
@@ -1144,15 +1352,17 @@
             <div class="login-header">
               <div style="font-size:50px;margin-bottom:10px">👤</div>
               <h2>Volunteer Portal</h2>
-              <p>Enter the last 4 digits of your phone number</p>
+              <p>Enter your email and password</p>
             </div>
             <form id="volunteerLoginForm" novalidate>
-              <input type="text" inputmode="numeric" id="volunteerPhone" class="input-field phone-input" placeholder="••••" maxlength="4" autocomplete="off">
+              <input type="email" id="volunteerEmail" class="input-field" placeholder="Email" autocomplete="email" style="margin-bottom:15px">
+              <input type="password" id="volunteerPassword" class="input-field" placeholder="Password" autocomplete="current-password">
               <div id="volunteerError" class="error-msg hidden"></div>
-              <button type="submit" id="volunteerSubmit" class="submit-btn" disabled>Sign In</button>
+              <button type="submit" id="volunteerSubmit" class="submit-btn">Sign In</button>
             </form>
-            ${volunteersWithPhone.length === 0 ? '<p style="color:#999;font-size:13px;text-align:center;margin-top:20px">No volunteers with phone numbers loaded yet.</p>' : ''}
-            ${volunteersWithPhone.length > 0 ? `<p style="color:#999;font-size:12px;text-align:center;margin-top:20px">${volunteersWithPhone.length} volunteers registered</p>` : ''}
+            <p style="color:#999;font-size:11px;text-align:center;margin-top:15px">Initial password is your phone number (10 digits)</p>
+            ${volunteersWithEmail.length === 0 ? '<p style="color:#999;font-size:13px;text-align:center;margin-top:20px">No volunteers with email addresses loaded yet.</p>' : ''}
+            ${volunteersWithEmail.length > 0 ? `<p style="color:#999;font-size:12px;text-align:center;margin-top:20px">${volunteersWithEmail.length} volunteers registered</p>` : ''}
           </div>
         </div>
       `;
@@ -1199,9 +1409,40 @@
                 <h1 style="font-size:20px;font-weight:700;margin:0">${vol.name}</h1>
                 <p style="opacity:0.8;font-size:13px;margin-top:4px">Hole #${vol.hole} • ${vol.type || 'Volunteer'}</p>
               </div>
-              <button onclick="volunteerAuth=null;goTo('landing')" style="background:rgba(255,255,255,0.2);border:none;color:white;padding:8px 16px;border-radius:8px;cursor:pointer;font-size:14px">Logout</button>
+              <div style="display:flex;gap:8px;align-items:center">
+                <button onclick="refreshData()" title="Refresh" style="background:rgba(255,255,255,0.2);border:none;color:white;padding:8px 10px;border-radius:8px;cursor:pointer;font-size:16px;line-height:1">&#8635;</button>
+                <button onclick="showVolunteerPasswordChangeModal=true;render()" style="background:rgba(255,255,255,0.2);border:none;color:white;padding:8px 12px;border-radius:8px;cursor:pointer;font-size:11px">Password</button>
+                <button onclick="logout()" style="background:rgba(255,255,255,0.2);border:none;color:white;padding:8px 16px;border-radius:8px;cursor:pointer;font-size:14px">Logout</button>
+              </div>
             </div>
           </div>
+
+          ${showVolunteerPasswordChangeModal ? `
+          <div class="modal-overlay" onclick="showVolunteerPasswordChangeModal=false;render()">
+            <div class="modal" onclick="event.stopPropagation()" style="max-width:400px;text-align:left">
+              <h3 style="text-align:center;margin-bottom:15px">${vol.volunteerPassword ? 'Change Your Password' : 'Set Your Password'}</h3>
+              <p style="font-size:13px;color:#666;margin-bottom:20px;text-align:center">${vol.volunteerPassword ? 'Enter your current password and choose a new one.' : 'Welcome! Please create a new password for your account.'}</p>
+              <form id="volunteerPasswordChangeForm">
+                <div style="margin-bottom:15px">
+                  <label style="font-size:12px;color:#666;display:block;margin-bottom:4px">Current Password</label>
+                  <input type="password" id="currentVolPassword" style="width:100%;padding:12px;border:1px solid #ddd;border-radius:6px;font-size:14px" placeholder="Enter current password" required>
+                </div>
+                <div style="margin-bottom:15px">
+                  <label style="font-size:12px;color:#666;display:block;margin-bottom:4px">New Password</label>
+                  <input type="password" id="newVolPassword" style="width:100%;padding:12px;border:1px solid #ddd;border-radius:6px;font-size:14px" placeholder="Enter new password" required>
+                </div>
+                <div style="margin-bottom:20px">
+                  <label style="font-size:12px;color:#666;display:block;margin-bottom:4px">Confirm New Password</label>
+                  <input type="password" id="confirmVolPassword" style="width:100%;padding:12px;border:1px solid #ddd;border-radius:6px;font-size:14px" placeholder="Confirm new password" required>
+                </div>
+                <div class="modal-buttons">
+                  <button type="button" class="modal-btn cancel" onclick="showVolunteerPasswordChangeModal=false;render()">${vol.volunteerPassword ? 'Cancel' : 'Skip for Now'}</button>
+                  <button type="submit" class="modal-btn confirm">Set Password</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          ` : ''}
 
           <div style="max-width:600px;margin:0 auto;padding:20px">
             <!-- Schedule Section -->
@@ -1231,12 +1472,13 @@
               <h2 style="font-size:16px;color:#1a472a;margin:0 0 15px 0">Your Email</h2>
               <p style="font-size:13px;color:#666;margin-bottom:10px">Keep your email updated to receive schedule notifications.</p>
               <div style="display:flex;gap:10px">
-                <input type="email" id="volunteerEmail" value="${vol.email || ''}" placeholder="your@email.com" style="flex:1;padding:10px 12px;border:1px solid #ddd;border-radius:6px;font-size:14px">
+                <input type="email" id="volunteerEmailUpdate" value="${vol.email || ''}" placeholder="your@email.com" style="flex:1;padding:10px 12px;border:1px solid #ddd;border-radius:6px;font-size:14px">
                 <button onclick="updateVolunteerEmail()" style="padding:10px 20px;background:#1a472a;color:white;border:none;border-radius:6px;cursor:pointer;font-size:14px">Save</button>
               </div>
             </div>
 
             <!-- Pairing Preferences Section (for outing) -->
+            ${appData.settings.showOutingPreferences !== false ? `
             <div style="background:white;border-radius:12px;padding:20px;box-shadow:0 2px 8px rgba(0,0,0,0.1)">
               <h2 style="font-size:16px;color:#1a472a;margin:0 0 15px 0">Volunteer Outing Preferences</h2>
               <p style="font-size:13px;color:#666;margin-bottom:15px">Who would you like to be paired with at the volunteer golf outing? Select up to 3 people.</p>
@@ -1244,6 +1486,7 @@
                 ${renderPairingPreferences()}
               </div>
             </div>
+            ` : ''}
           </div>
         </div>
       `;
@@ -1285,7 +1528,7 @@
     }
 
     async function updateVolunteerEmail() {
-      const emailInput = document.getElementById('volunteerEmail');
+      const emailInput = document.getElementById('volunteerEmailUpdate');
       const newEmail = emailInput.value.trim();
 
       const volIdx = appData.volunteers.findIndex(v => v.id === volunteerAuth.id);
@@ -1334,7 +1577,9 @@
                 <p>${appData.volunteers.length} volunteers loaded</p>
               </div>
             </div>
-            <div style="display:flex;gap:10px;align-items:center"><a href="/help.html" target="_blank" style="color:#1a472a;font-size:14px;text-decoration:none">Help</a><button onclick="logout()" style="background:#1a472a;border:none;color:white;padding:8px 16px;border-radius:8px;cursor:pointer;font-size:14px">Logout</button></div>
+            <div style="display:flex;gap:10px;align-items:center">
+              ${adminAuthUser ? `<span style="color:#666;font-size:13px;margin-right:5px">${adminAuthUser.name.split(',')[0]}${adminAuth === 'viewOnly' ? ' (View Only)' : ''}</span><button onclick="showAdminPasswordChangeModal=true;render()" style="background:none;border:1px solid #888;color:#666;padding:6px 10px;border-radius:6px;cursor:pointer;font-size:12px">Change Password</button>` : ''}
+              <button onclick="refreshData()" title="Refresh" style="background:none;border:1px solid #1a472a;color:#1a472a;padding:8px 10px;border-radius:8px;cursor:pointer;font-size:16px;line-height:1">&#8635;</button><a href="/help.html" target="_blank" style="color:#1a472a;font-size:14px;text-decoration:none">Help</a><button onclick="logout()" style="background:#1a472a;border:none;color:white;padding:8px 16px;border-radius:8px;cursor:pointer;font-size:14px">Logout</button></div>
           </div>
 
           <div class="tabs">
@@ -1369,6 +1614,33 @@
             ${adminTab === 'import' ? renderImport() : ''}
             ${adminTab === 'settings' ? renderSettings() : ''}
           </div>
+
+          ${showAdminPasswordChangeModal && adminAuthUser ? `
+          <div class="modal-overlay" onclick="showAdminPasswordChangeModal=false;render()">
+            <div class="modal" onclick="event.stopPropagation()" style="max-width:400px;text-align:left">
+              <h3 style="text-align:center;margin-bottom:15px">${adminAuthUser.adminPasswordSetAt ? 'Change Your Password' : 'Set Your Password'}</h3>
+              <p style="font-size:13px;color:#666;margin-bottom:20px;text-align:center">${adminAuthUser.adminPasswordSetAt ? 'Enter your current password and choose a new one.' : 'Welcome! Please create a new password for your admin account.'}</p>
+              <form id="adminPasswordChangeForm">
+                <div style="margin-bottom:15px">
+                  <label style="font-size:12px;color:#666;display:block;margin-bottom:4px">Current Password</label>
+                  <input type="password" id="currentAdminPassword" style="width:100%;padding:12px;border:1px solid #ddd;border-radius:6px;font-size:14px" placeholder="Enter current password" required>
+                </div>
+                <div style="margin-bottom:15px">
+                  <label style="font-size:12px;color:#666;display:block;margin-bottom:4px">New Password</label>
+                  <input type="password" id="newAdminPassword" style="width:100%;padding:12px;border:1px solid #ddd;border-radius:6px;font-size:14px" placeholder="Enter new password" required>
+                </div>
+                <div style="margin-bottom:20px">
+                  <label style="font-size:12px;color:#666;display:block;margin-bottom:4px">Confirm New Password</label>
+                  <input type="password" id="confirmNewAdminPassword" style="width:100%;padding:12px;border:1px solid #ddd;border-radius:6px;font-size:14px" placeholder="Confirm new password" required>
+                </div>
+                <div class="modal-buttons">
+                  <button type="button" class="modal-btn cancel" onclick="showAdminPasswordChangeModal=false;render()">${adminAuthUser.adminPasswordSetAt ? 'Cancel' : 'Skip for Now'}</button>
+                  <button type="submit" class="modal-btn confirm">Change Password</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          ` : ''}
         </div>
       `;
     }
@@ -1654,7 +1926,7 @@
 
           <div class="import-card" style="margin-top:20px">
             <h3 style="font-size:16px;color:#1a472a;margin-bottom:15px">Update Existing Volunteers</h3>
-            <p>Upload a CSV with <strong>Name</strong> column plus any fields to update: <em>Email, Phone, Type, Hole, Years Worked, Custom PIN</em>. Names must match exactly.</p>
+            <p>Upload a CSV with <strong>Name</strong> column plus any fields to update: <em>Email, Phone, Type, Hole, Years Worked, Custom PIN, Hat</em>. Names must match exactly.</p>
             <label class="file-upload" style="border-color:#ff9800;background:#fffbf5">
               <input type="file" accept=".csv" id="updateFileInput" onchange="handleUpdateUpload(this)">
               <div class="file-upload-icon">🔄</div>
@@ -1699,7 +1971,7 @@
 
               <label>Type</label>
               <select id="editType">
-                ${['Volunteer', 'Captain', 'Asst. Chairman', 'Chairman', 'Admin'].map(t =>
+                ${['Volunteer', 'Captain', 'Asst. Chairman', 'Chairman', 'View Admin', 'Admin'].map(t =>
                   `<option value="${t}" ${editingVolunteer.type === t ? 'selected' : ''}>${t}</option>`
                 ).join('')}
               </select>
@@ -1712,7 +1984,7 @@
                 <option value="99" ${editingVolunteer.hole === 99 ? 'selected' : ''}>Admin (99)</option>
               </select>
 
-              ${(editingVolunteer.type === 'Chairman' || editingVolunteer.type === 'Asst. Chairman') ? `
+              ${(editingVolunteer.type === 'Chairman' || editingVolunteer.type === 'Asst. Chairman' || editingVolunteer.type === 'View Admin' || editingVolunteer.type === 'Admin') ? `
               <label>Assigned Holes</label>
               <div style="display:flex;flex-wrap:wrap;gap:8px;padding:12px;background:#f8f9fa;border-radius:6px;border:1px solid #e0e0e0">
                 ${[...Array(getNumberOfHoles()).keys()].map(i => i + 1).map(h => {
@@ -1735,7 +2007,7 @@
               <label>Email</label>
               <input type="email" id="editEmail" value="${editingVolunteer.email || ''}" placeholder="volunteer@example.com">
 
-              ${(editingVolunteer.type === 'Captain' || editingVolunteer.type === 'Asst. Chairman' || editingVolunteer.type === 'Chairman' || editingVolunteer.type === 'Admin') && !editingVolunteer.isNew ? `
+              ${(editingVolunteer.type === 'Captain' || editingVolunteer.type === 'Asst. Chairman' || editingVolunteer.type === 'Chairman' || editingVolunteer.type === 'View Admin' || editingVolunteer.type === 'Admin') && !editingVolunteer.isNew ? `
               <label>Login PIN</label>
               <div style="display:flex;gap:10px;align-items:center">
                 <input type="text" id="editPin" value="${editingVolunteer.customPin || ''}" placeholder="${formatPhone(editingVolunteer.phone) || 'Not set'}" maxlength="4" style="width:80px;text-align:center">
@@ -1744,8 +2016,35 @@
               <p style="font-size:10px;color:#999;margin-top:4px">Custom 4-digit PIN for captain login, or blank to use last 4 of phone</p>
               ` : ''}
 
+              ${(editingVolunteer.type === 'Admin' || editingVolunteer.type === 'View Admin') && !isNewVolunteer ? `
+              <label>Admin Password</label>
+              <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+                <span style="color:#666;font-size:12px;padding:8px 12px;background:#f5f5f5;border-radius:4px">
+                  ${editingVolunteer.adminPasswordSetAt ? 'Custom password set' : 'Using default password (admin2025)'}
+                </span>
+                <button type="button" onclick="resetAdminPassword('${editingVolunteer.id}')" style="padding:6px 12px;background:#ff9800;color:white;border:none;border-radius:4px;font-size:12px;cursor:pointer">Reset to Default</button>
+              </div>
+              <p style="font-size:10px;color:#999;margin-top:4px">Click reset to set password back to default "admin2025"</p>
+              ` : ''}
+
               <label>Years Worked</label>
               <input type="number" id="editYears" value="${editingVolunteer.yearsWorked || 0}" min="0" placeholder="0">
+
+              <label>Hat</label>
+              <select id="editHat">
+                <option value="" ${!editingVolunteer.hat ? 'selected' : ''}>-- Select Hat --</option>
+                ${['Cap', 'Ladies Visor', 'S/M Sun Hat', 'L/XL Sun Hat'].map(h =>
+                  `<option value="${h}" ${editingVolunteer.hat === h ? 'selected' : ''}>${h}</option>`
+                ).join('')}
+              </select>
+
+              <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-top:10px;margin-bottom:10px;padding:10px;background:#f8f9fa;border-radius:6px">
+                <label style="display:flex;align-items:center;gap:8px;margin:0;cursor:pointer">
+                  <input type="checkbox" id="editHatReceived" ${editingVolunteer.hatReceived ? 'checked' : ''} style="width:auto">
+                  <span>Hat Received</span>
+                </label>
+                ${!isNewVolunteer ? `<button type="button" onclick="showVolunteerQR('${editingVolunteer.id}')" style="padding:6px 12px;background:#2196F3;color:white;border:none;border-radius:4px;font-size:12px;cursor:pointer;white-space:nowrap">Show QR Code</button>` : ''}
+              </div>
 
               <label>Schedule</label>
               <div class="schedule-grid">
@@ -1807,6 +2106,7 @@
               <option value="Volunteer" ${volFilterType === 'Volunteer' ? 'selected' : ''}>Volunteers</option>
               <option value="Captain" ${volFilterType === 'Captain' ? 'selected' : ''}>Captains</option>
               <option value="Asst. Chairman" ${volFilterType === 'Asst. Chairman' ? 'selected' : ''}>Asst. Chairmen</option>
+              <option value="View Admin" ${volFilterType === 'View Admin' ? 'selected' : ''}>View Admins</option>
               <option value="Admin" ${volFilterType === 'Admin' ? 'selected' : ''}>Admins</option>
             </select>
             <select onchange="volFilterHole=this.value;render()" style="padding:8px;border:1px solid #ddd;border-radius:6px;font-size:13px">
@@ -1878,6 +2178,8 @@
         hole: 1,
         phone: '',
         yearsWorked: 0,
+        hat: '',
+        hatReceived: false,
         scheduled: {},
         isNew: true
       };
@@ -1901,6 +2203,179 @@
       }
     }
 
+    function resetAdminPassword(volunteerId) {
+      const volunteer = appData.volunteers.find(v => v.id === volunteerId);
+      if (volunteer) {
+        volunteer.adminPassword = 'admin2025';
+        volunteer.adminPasswordSetAt = null;
+        saveData();
+        showToast('Password reset to default (admin2025)');
+        render();
+      }
+    }
+
+    let qrModalVolunteer = null;
+
+    function showVolunteerQR(volunteerId) {
+      const vol = appData.volunteers.find(v => v.id === volunteerId);
+      if (!vol) return;
+      qrModalVolunteer = vol;
+
+      // Create modal
+      const modal = document.createElement('div');
+      modal.className = 'modal-overlay';
+      modal.id = 'qrModal';
+      modal.onclick = function(e) { if (e.target === modal) closeQRModal(); };
+
+      const hatPickupUrl = window.location.origin + '/hat-pickup.html?id=' + volunteerId;
+
+      modal.innerHTML = `
+        <div class="modal" onclick="event.stopPropagation()" style="max-width:400px;text-align:center">
+          <h3 style="margin-bottom:15px">Hat Pickup QR Code</h3>
+          <p style="font-size:14px;color:#666;margin-bottom:5px">${vol.name}</p>
+          <p style="font-size:16px;font-weight:600;color:#1a472a;margin-bottom:20px">${vol.hat || 'No hat selected'}</p>
+          <div id="qrCodeContainer" style="display:flex;justify-content:center;margin-bottom:20px"></div>
+          <p style="font-size:11px;color:#999;margin-bottom:15px;word-break:break-all">${hatPickupUrl}</p>
+          <div style="display:flex;gap:10px;justify-content:center">
+            <button onclick="printQRCode()" style="padding:8px 16px;background:#1a472a;color:white;border:none;border-radius:6px;cursor:pointer">Print</button>
+            <button onclick="closeQRModal()" style="padding:8px 16px;background:#666;color:white;border:none;border-radius:6px;cursor:pointer">Close</button>
+          </div>
+        </div>
+      `;
+
+      document.body.appendChild(modal);
+
+      // Generate QR code
+      const qrContainer = document.getElementById('qrCodeContainer');
+      new QRCode(qrContainer, {
+        text: hatPickupUrl,
+        width: 200,
+        height: 200,
+        colorDark: '#1a472a',
+        colorLight: '#ffffff'
+      });
+    }
+
+    function closeQRModal() {
+      const modal = document.getElementById('qrModal');
+      if (modal) modal.remove();
+      qrModalVolunteer = null;
+    }
+
+    function printQRCode() {
+      const qrContainer = document.getElementById('qrCodeContainer');
+      if (!qrContainer || !qrModalVolunteer) return;
+
+      const printWindow = window.open('', '_blank');
+      printWindow.document.write(`
+        <html>
+        <head>
+          <title>Hat Pickup - ${qrModalVolunteer.name}</title>
+          <style>
+            body { font-family: Arial, sans-serif; text-align: center; padding: 40px; }
+            h1 { font-size: 24px; margin-bottom: 10px; }
+            .hat-type { font-size: 20px; color: #1a472a; font-weight: bold; margin-bottom: 30px; }
+            .qr-code { margin: 20px auto; }
+            .instructions { font-size: 14px; color: #666; margin-top: 30px; }
+          </style>
+        </head>
+        <body>
+          <h1>${qrModalVolunteer.name}</h1>
+          <div class="hat-type">${qrModalVolunteer.hat || 'No hat selected'}</div>
+          <div class="qr-code">${qrContainer.innerHTML}</div>
+          <p class="instructions">Scan this QR code at hat pickup to confirm delivery</p>
+        </body>
+        </html>
+      `);
+      printWindow.document.close();
+      printWindow.print();
+    }
+
+    function showSiteQRCode() {
+      const siteUrl = window.location.origin;
+
+      const modal = document.createElement('div');
+      modal.className = 'modal-overlay';
+      modal.id = 'siteQRModal';
+      modal.onclick = function(e) { if (e.target === modal) closeSiteQRModal(); };
+
+      modal.innerHTML = `
+        <div class="modal" onclick="event.stopPropagation()" style="max-width:450px;text-align:center">
+          <h3 style="margin-bottom:10px">Site QR Code</h3>
+          <p style="font-size:14px;color:#666;margin-bottom:20px">Scan to access the volunteer site</p>
+          <div id="siteQRContainer" style="display:flex;justify-content:center;margin-bottom:20px"></div>
+          <p style="font-size:13px;color:#1a472a;font-weight:600;margin-bottom:20px">${siteUrl}</p>
+          <div style="background:#f8f9fa;padding:15px;border-radius:8px;margin-bottom:20px;text-align:left">
+            <p style="font-size:12px;color:#666;margin-bottom:8px"><strong>To add to home screen:</strong></p>
+            <p style="font-size:11px;color:#888;margin-bottom:4px">iPhone: Tap Share → "Add to Home Screen"</p>
+            <p style="font-size:11px;color:#888">Android: Tap Menu → "Install app"</p>
+          </div>
+          <div style="display:flex;gap:10px;justify-content:center">
+            <button onclick="printSiteQRCode()" style="padding:10px 20px;background:#1a472a;color:white;border:none;border-radius:6px;cursor:pointer;font-size:14px">Print</button>
+            <button onclick="closeSiteQRModal()" style="padding:10px 20px;background:#666;color:white;border:none;border-radius:6px;cursor:pointer;font-size:14px">Close</button>
+          </div>
+        </div>
+      `;
+
+      document.body.appendChild(modal);
+
+      // Generate QR code
+      const qrContainer = document.getElementById('siteQRContainer');
+      new QRCode(qrContainer, {
+        text: siteUrl,
+        width: 250,
+        height: 250,
+        colorDark: '#1a472a',
+        colorLight: '#ffffff'
+      });
+    }
+
+    function closeSiteQRModal() {
+      const modal = document.getElementById('siteQRModal');
+      if (modal) modal.remove();
+    }
+
+    function printSiteQRCode() {
+      const qrContainer = document.getElementById('siteQRContainer');
+      if (!qrContainer) return;
+
+      const siteUrl = window.location.origin;
+      const tournamentName = appData.settings?.tournamentName || 'Golf Tournament';
+
+      const printWindow = window.open('', '_blank');
+      printWindow.document.write(`
+        <html>
+        <head>
+          <title>Volunteer Site QR Code</title>
+          <style>
+            body { font-family: Arial, sans-serif; text-align: center; padding: 40px; }
+            h1 { font-size: 28px; color: #1a472a; margin-bottom: 10px; }
+            .subtitle { font-size: 18px; color: #666; margin-bottom: 30px; }
+            .qr-code { margin: 30px auto; text-align: center; }
+            .qr-code img, .qr-code canvas { display: inline-block; margin: 0 auto; }
+            .url { font-size: 16px; color: #1a472a; font-weight: bold; margin: 20px 0; }
+            .instructions { font-size: 14px; color: #666; margin-top: 30px; line-height: 1.8; }
+            .instructions strong { color: #333; }
+          </style>
+        </head>
+        <body>
+          <h1>${tournamentName}</h1>
+          <div class="subtitle">Volunteer Check-In</div>
+          <div class="qr-code">${qrContainer.innerHTML}</div>
+          <div class="url">${siteUrl}</div>
+          <div class="instructions">
+            <p><strong>Scan this QR code</strong> with your phone camera</p>
+            <p>Then add to your home screen for easy access:</p>
+            <p>iPhone: Tap Share → "Add to Home Screen"</p>
+            <p>Android: Tap Menu → "Install app"</p>
+          </div>
+        </body>
+        </html>
+      `);
+      printWindow.document.close();
+      printWindow.print();
+    }
+
     function saveVolunteerEdit() {
       if (!editingVolunteer) return;
 
@@ -1911,12 +2386,14 @@
       const newPhone = document.getElementById('editPhone').value.trim();
       const newEmail = document.getElementById('editEmail').value.trim();
       const newYears = parseInt(document.getElementById('editYears').value) || 0;
+      const newHat = document.getElementById('editHat').value;
+      const newHatReceived = document.getElementById('editHatReceived').checked;
       const pinInput = document.getElementById('editPin');
       const newPin = pinInput ? pinInput.value.trim() : null;
 
       // Get assigned holes for Chairman types
       let newAssignedHoles = null;
-      if (newType === 'Chairman' || newType === 'Asst. Chairman') {
+      if (newType === 'Chairman' || newType === 'Asst. Chairman' || newType === 'View Admin' || newType === 'Admin') {
         const checkboxes = document.querySelectorAll('.assignedHoleCheckbox:checked');
         newAssignedHoles = Array.from(checkboxes).map(cb => parseInt(cb.value)).sort((a, b) => a - b);
         // Ensure primary hole is included
@@ -1929,6 +2406,24 @@
       if (!newName) {
         alert('Please enter a name');
         return;
+      }
+
+      // Validate email for Admin/View Admin types
+      if (newType === 'Admin' || newType === 'View Admin') {
+        if (!newEmail) {
+          alert('Email is required for Admin and View Admin users');
+          return;
+        }
+        // Check for duplicate email among other admins
+        const duplicateEmail = appData.volunteers.find(v =>
+          v.id !== editingVolunteer.id &&
+          (v.type === 'Admin' || v.type === 'View Admin') &&
+          v.email && v.email.toLowerCase() === newEmail.toLowerCase()
+        );
+        if (duplicateEmail) {
+          alert('This email is already used by another admin user: ' + duplicateEmail.name);
+          return;
+        }
       }
 
       // Get schedule
@@ -1952,10 +2447,17 @@
           phone: newPhone,
           email: newEmail,
           yearsWorked: newYears,
+          hat: newHat,
+          hatReceived: newHatReceived,
           scheduled: newSchedule
         };
         if (newAssignedHoles) {
           newVol.assignedHoles = newAssignedHoles;
+        }
+        // Initialize admin password for new Admin/View Admin users
+        if (newType === 'Admin' || newType === 'View Admin') {
+          newVol.adminPassword = 'admin2025';
+          newVol.adminPasswordSetAt = null;
         }
         appData.volunteers.push(newVol);
 
@@ -1977,6 +2479,8 @@
           phone: newPhone,
           email: newEmail,
           yearsWorked: newYears,
+          hat: newHat,
+          hatReceived: newHatReceived,
           scheduled: newSchedule
         };
         // Update assigned holes for Chairman types
@@ -1992,6 +2496,19 @@
           } else if (/^\d{4}$/.test(newPin)) {
             updatedVol.customPin = newPin;
           }
+        }
+        // Handle admin password when type changes
+        const oldType = appData.volunteers[idx].type;
+        const wasAdmin = oldType === 'Admin' || oldType === 'View Admin';
+        const isAdmin = newType === 'Admin' || newType === 'View Admin';
+        if (!wasAdmin && isAdmin) {
+          // Changed TO admin type - initialize password
+          updatedVol.adminPassword = 'admin2025';
+          updatedVol.adminPasswordSetAt = null;
+        } else if (wasAdmin && !isAdmin) {
+          // Changed FROM admin type - clear admin fields
+          delete updatedVol.adminPassword;
+          delete updatedVol.adminPasswordSetAt;
         }
         appData.volunteers[idx] = updatedVol;
 
@@ -2036,6 +2553,7 @@
       const reportTypes = [
         { id: 'volunteer-totals', name: 'Volunteer Totals', desc: 'Total shifts worked per volunteer' },
         { id: 'hole-roster', name: 'Hole Roster', desc: 'Full schedule for a hole' },
+        { id: 'hat-qr-codes', name: 'Hat QR Codes', desc: 'Print all volunteer QR codes for hat pickup' },
         { id: 'custom', name: 'Custom Report', desc: 'Build your own report with custom columns and filters' }
       ];
 
@@ -2103,6 +2621,7 @@
     }
 
     function renderReportFilters(isCaptainView, captainHole) {
+      if (currentReport === 'hat-qr-codes') return ''; // Has its own filters
       const showHoleFilter = !isCaptainView && ['volunteer-totals', 'hole-roster'].includes(currentReport);
       const showDayFilter = currentReport === 'hole-roster';
 
@@ -2145,6 +2664,8 @@
           return renderVolunteerTotalsReport(holeFilter);
         case 'hole-roster':
           return renderHoleRosterReport(holeFilter || 1);
+        case 'hat-qr-codes':
+          return renderHatQRCodesReport();
         case 'custom':
           return renderCustomReport();
         default:
@@ -2216,6 +2737,15 @@
       // Helper to render a single hole's roster
       function renderSingleHoleRoster(holeNumber) {
         const volunteers = appData.volunteers.filter(v => v.hole === holeNumber);
+
+        // Sort: captains first, then alphabetically
+        volunteers.sort((a, b) => {
+          const aIsCaptain = ['Captain', 'Asst. Chairman', 'Chairman'].includes(a.type);
+          const bIsCaptain = ['Captain', 'Asst. Chairman', 'Chairman'].includes(b.type);
+          if (aIsCaptain && !bIsCaptain) return -1;
+          if (!aIsCaptain && bIsCaptain) return 1;
+          return a.name.localeCompare(b.name);
+        });
 
         // Calculate totals per shift
         const shiftTotals = {};
@@ -2318,6 +2848,194 @@
       `;
     }
 
+    let hatQRFilter = { hat: 'all', received: 'pending' };
+
+    function renderHatQRCodesReport() {
+      // Filter volunteers
+      let volunteers = appData.volunteers
+        .filter(v => v.hat && v.hat.trim() !== '')
+        .sort((a, b) => a.name.localeCompare(b.name));
+
+      if (hatQRFilter.hat !== 'all') {
+        volunteers = volunteers.filter(v => v.hat === hatQRFilter.hat);
+      }
+      if (hatQRFilter.received === 'pending') {
+        volunteers = volunteers.filter(v => !v.hatReceived);
+      } else if (hatQRFilter.received === 'received') {
+        volunteers = volunteers.filter(v => v.hatReceived);
+      }
+
+      const hatTypes = ['Cap', 'Ladies Visor', 'S/M Sun Hat', 'L/XL Sun Hat'];
+
+      return `
+        <div id="hatQRReport">
+          <div style="background:#f8f9fa;border-radius:8px;padding:15px;margin-bottom:20px;display:flex;flex-wrap:wrap;gap:15px;align-items:center">
+            <span style="font-size:13px;color:#666;font-weight:600">Filters:</span>
+            <div>
+              <label style="font-size:12px;color:#666;display:block;margin-bottom:4px">Hat Type</label>
+              <select onchange="hatQRFilter.hat=this.value;render()" style="padding:8px 12px;border:1px solid #ddd;border-radius:6px;font-size:13px">
+                <option value="all" ${hatQRFilter.hat === 'all' ? 'selected' : ''}>All Types</option>
+                ${hatTypes.map(h => `<option value="${h}" ${hatQRFilter.hat === h ? 'selected' : ''}>${h}</option>`).join('')}
+              </select>
+            </div>
+            <div>
+              <label style="font-size:12px;color:#666;display:block;margin-bottom:4px">Status</label>
+              <select onchange="hatQRFilter.received=this.value;render()" style="padding:8px 12px;border:1px solid #ddd;border-radius:6px;font-size:13px">
+                <option value="pending" ${hatQRFilter.received === 'pending' ? 'selected' : ''}>Not Received</option>
+                <option value="received" ${hatQRFilter.received === 'received' ? 'selected' : ''}>Received</option>
+                <option value="all" ${hatQRFilter.received === 'all' ? 'selected' : ''}>All</option>
+              </select>
+            </div>
+            <div style="margin-left:auto">
+              <button onclick="generateAllQRCodes()" style="padding:10px 20px;background:#1a472a;color:white;border:none;border-radius:6px;cursor:pointer;font-size:14px;font-weight:500">
+                Generate ${volunteers.length} QR Codes for Printing
+              </button>
+            </div>
+          </div>
+
+          <p style="color:#666;font-size:13px;margin-bottom:15px">
+            Showing <strong>${volunteers.length}</strong> volunteer(s) with hats assigned.
+            Click "Generate QR Codes for Printing" to open a printable page with all QR codes.
+          </p>
+
+          <div style="max-height:400px;overflow-y:auto;border:1px solid #eee;border-radius:8px">
+            <table style="width:100%;border-collapse:collapse;font-size:13px">
+              <thead style="position:sticky;top:0;background:#f8f9fa">
+                <tr>
+                  <th style="text-align:left;padding:12px 10px;border-bottom:2px solid #ddd">Name</th>
+                  <th style="text-align:left;padding:12px 10px;border-bottom:2px solid #ddd">Hat Type</th>
+                  <th style="text-align:center;padding:12px 10px;border-bottom:2px solid #ddd">Status</th>
+                  <th style="text-align:center;padding:12px 10px;border-bottom:2px solid #ddd">QR Code</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${volunteers.length === 0 ? `
+                  <tr><td colspan="4" style="padding:40px;text-align:center;color:#999">No volunteers match the selected filters</td></tr>
+                ` : volunteers.map(v => `
+                  <tr>
+                    <td style="padding:10px;border-bottom:1px solid #eee">${v.name}</td>
+                    <td style="padding:10px;border-bottom:1px solid #eee">${v.hat}</td>
+                    <td style="padding:10px;border-bottom:1px solid #eee;text-align:center">
+                      <span style="padding:4px 10px;border-radius:12px;font-size:11px;font-weight:600;${v.hatReceived ? 'background:#e8f5e9;color:#2e7d32' : 'background:#fff3e0;color:#e65100'}">
+                        ${v.hatReceived ? 'Received' : 'Pending'}
+                      </span>
+                    </td>
+                    <td style="padding:10px;border-bottom:1px solid #eee;text-align:center">
+                      <button onclick="showVolunteerQR('${v.id}')" style="padding:5px 12px;background:#2196F3;color:white;border:none;border-radius:4px;font-size:11px;cursor:pointer">View QR</button>
+                    </td>
+                  </tr>
+                `).join('')}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      `;
+    }
+
+    function generateAllQRCodes() {
+      let volunteers = appData.volunteers
+        .filter(v => v.hat && v.hat.trim() !== '')
+        .sort((a, b) => a.name.localeCompare(b.name));
+
+      if (hatQRFilter.hat !== 'all') {
+        volunteers = volunteers.filter(v => v.hat === hatQRFilter.hat);
+      }
+      if (hatQRFilter.received === 'pending') {
+        volunteers = volunteers.filter(v => !v.hatReceived);
+      } else if (hatQRFilter.received === 'received') {
+        volunteers = volunteers.filter(v => v.hatReceived);
+      }
+
+      if (volunteers.length === 0) {
+        alert('No volunteers match the current filters.');
+        return;
+      }
+
+      const printWindow = window.open('', '_blank');
+      printWindow.document.write(`
+        <!DOCTYPE html>
+        <html>
+        <head>
+          <title>Hat Pickup QR Codes</title>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"><\/script>
+          <style>
+            * { box-sizing: border-box; margin: 0; padding: 0; }
+            body { font-family: Arial, sans-serif; padding: 20px; }
+            h1 { text-align: center; margin-bottom: 20px; font-size: 24px; }
+            .grid {
+              display: grid;
+              grid-template-columns: repeat(3, 1fr);
+              gap: 20px;
+            }
+            .qr-card {
+              border: 1px solid #ccc;
+              border-radius: 8px;
+              padding: 15px;
+              text-align: center;
+              page-break-inside: avoid;
+            }
+            .volunteer-name {
+              font-size: 14px;
+              font-weight: bold;
+              margin-bottom: 5px;
+              word-wrap: break-word;
+            }
+            .hat-type {
+              font-size: 12px;
+              color: #1a472a;
+              font-weight: 600;
+              margin-bottom: 10px;
+            }
+            .qr-container {
+              display: flex;
+              justify-content: center;
+              margin-bottom: 5px;
+            }
+            .qr-container canvas, .qr-container img { max-width: 120px; max-height: 120px; }
+            @media print {
+              body { padding: 10px; }
+              .grid { gap: 10px; }
+              .qr-card { border: 1px solid #999; padding: 10px; }
+              .no-print { display: none; }
+            }
+          </style>
+        </head>
+        <body>
+          <div class="no-print" style="text-align:center;margin-bottom:20px">
+            <button onclick="window.print()" style="padding:12px 30px;font-size:16px;background:#1a472a;color:white;border:none;border-radius:6px;cursor:pointer">Print All QR Codes</button>
+          </div>
+          <h1>Hat Pickup QR Codes</h1>
+          <div class="grid">
+            ${volunteers.map((v, i) => `
+              <div class="qr-card">
+                <div class="volunteer-name">${v.name}</div>
+                <div class="hat-type">${v.hat}</div>
+                <div class="qr-container" id="qr-${i}"></div>
+              </div>
+            `).join('')}
+          </div>
+          <script>
+            const baseUrl = '${window.location.origin}';
+            const volunteers = ${JSON.stringify(volunteers.map(v => ({ id: v.id })))};
+            volunteers.forEach((v, i) => {
+              const container = document.getElementById('qr-' + i);
+              if (container) {
+                new QRCode(container, {
+                  text: baseUrl + '/hat-pickup.html?id=' + v.id,
+                  width: 120,
+                  height: 120,
+                  colorDark: '#1a472a',
+                  colorLight: '#ffffff'
+                });
+              }
+            });
+          <\/script>
+        </body>
+        </html>
+      `);
+      printWindow.document.close();
+    }
+
     function renderCustomReport() {
       const availableColumns = [
         { id: 'name', label: 'Name' },
@@ -2326,6 +3044,8 @@
         { id: 'email', label: 'Email' },
         { id: 'phone', label: 'Phone' },
         { id: 'yearsWorked', label: 'Years' },
+        { id: 'hat', label: 'Hat' },
+        { id: 'hatReceived', label: 'Hat Received' },
         { id: 'totalScheduled', label: 'Shifts Scheduled' },
         { id: 'totalWorked', label: 'Shifts Worked' },
         { id: 'attendance', label: 'Attendance %' }
@@ -2472,6 +3192,7 @@
                     ${customReportConfig.columns.map(colId => {
                       let val = row[colId] ?? '-';
                       if (colId === 'hole') val = '#' + val;
+                      if (colId === 'hatReceived') val = row[colId] ? 'Yes' : 'No';
                       return `<td style="padding:8px;border-bottom:1px solid #eee">${val}</td>`;
                     }).join('')}
                   </tr>
@@ -2758,165 +3479,316 @@
       }
     }
 
+    async function sendEmailToSelf(hole) {
+      if (!hole) return;
+
+      // Get the current captain's email
+      const currentUserRecord = appData.volunteers.find(v => v.name === captainAuth.name);
+      if (!currentUserRecord || !currentUserRecord.email) {
+        alert('No email address on file for your account. Please contact tournament staff to add your email.');
+        return;
+      }
+
+      const captainEmail = currentUserRecord.email;
+
+      // Get all volunteers on this hole for the roster
+      const holeVolunteers = appData.volunteers.filter(v => v.hole === hole);
+
+      // Sort: captains first, then alphabetically
+      holeVolunteers.sort((a, b) => {
+        const aIsCaptain = ['Captain', 'Asst. Chairman', 'Chairman'].includes(a.type);
+        const bIsCaptain = ['Captain', 'Asst. Chairman', 'Chairman'].includes(b.type);
+        if (aIsCaptain && !bIsCaptain) return -1;
+        if (!aIsCaptain && bIsCaptain) return 1;
+        return a.name.localeCompare(b.name);
+      });
+
+      // Build the roster HTML for the email
+      const dayFilter = reportFilters.day;
+      const days = dayFilter === 'all' ? DAYS : [dayFilter];
+
+      let rosterHtml = '<table style="width:100%;border-collapse:collapse;font-size:14px;margin-top:20px">';
+      rosterHtml += '<thead><tr style="background:#f8f9fa">';
+      rosterHtml += '<th style="text-align:left;padding:10px;border:1px solid #ddd">Volunteer</th>';
+      rosterHtml += '<th style="text-align:left;padding:10px;border:1px solid #ddd">Type</th>';
+      days.forEach(d => {
+        rosterHtml += '<th style="text-align:center;padding:10px;border:1px solid #ddd" colspan="2">' + d.slice(0, 3) + '</th>';
+      });
+      rosterHtml += '</tr><tr style="background:#f8f9fa">';
+      rosterHtml += '<th style="border:1px solid #ddd"></th><th style="border:1px solid #ddd"></th>';
+      days.forEach(() => {
+        rosterHtml += '<th style="text-align:center;padding:6px;border:1px solid #ddd;font-size:11px;font-weight:normal;color:#666">AM</th>';
+        rosterHtml += '<th style="text-align:center;padding:6px;border:1px solid #ddd;font-size:11px;font-weight:normal;color:#666">PM</th>';
+      });
+      rosterHtml += '</tr></thead><tbody>';
+
+      // Calculate totals
+      const shiftTotals = {};
+      days.forEach(day => {
+        SHIFTS.forEach(shift => {
+          const key = day + ' ' + shift;
+          shiftTotals[key] = holeVolunteers.filter(v => v.scheduled && v.scheduled[key]).length;
+        });
+      });
+
+      // Add totals row at top
+      rosterHtml += '<tr style="background:#f0f7f0;font-weight:600">';
+      rosterHtml += '<td style="padding:10px;border:1px solid #ddd" colspan="2">Total Scheduled</td>';
+      days.forEach(day => {
+        SHIFTS.forEach(shift => {
+          const key = day + ' ' + shift;
+          rosterHtml += '<td style="text-align:center;padding:10px;border:1px solid #ddd;color:#1a472a">' + shiftTotals[key] + '</td>';
+        });
+      });
+      rosterHtml += '</tr>';
+
+      // Add volunteers
+      holeVolunteers.forEach(v => {
+        rosterHtml += '<tr>';
+        rosterHtml += '<td style="padding:10px;border:1px solid #ddd">' + v.name + '</td>';
+        rosterHtml += '<td style="padding:10px;border:1px solid #ddd;font-size:12px;color:#666">' + (v.type || '-') + '</td>';
+        days.forEach(day => {
+          SHIFTS.forEach(shift => {
+            const key = day + ' ' + shift;
+            const isScheduled = v.scheduled && v.scheduled[key];
+            let icon = '';
+            let color = '#ccc';
+            if (isScheduled) { icon = '●'; color = '#1a472a'; }
+            rosterHtml += '<td style="text-align:center;padding:10px;border:1px solid #ddd;color:' + color + ';font-weight:600">' + icon + '</td>';
+          });
+        });
+        rosterHtml += '</tr>';
+      });
+      rosterHtml += '</tbody></table>';
+
+      const subject = 'Hole #' + hole + ' Roster - ' + (appData.settings.tournamentName || 'Volunteer Golf');
+      let message = '<div style="font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;max-width:800px;margin:0 auto">';
+      message += '<h2 style="color:#1a472a;margin-bottom:10px">Hole #' + hole + ' Roster</h2>';
+      message += '<p style="color:#666;margin-bottom:20px">' + (appData.settings.tournamentName || 'Volunteer Golf') + '</p>';
+      message += rosterHtml;
+      message += '<p style="color:#666;font-size:12px;margin-top:20px">● = Scheduled</p>';
+      message += '</div>';
+
+      try {
+        await sendEmail([captainEmail], subject, message);
+        alert('Roster emailed to ' + captainEmail);
+      } catch (err) {
+        alert('Failed to send email: ' + err.message);
+      }
+    }
+
     function renderSettings() {
       return `
         <div class="settings-section">
-          <h2 style="font-size:18px;color:#333;margin-bottom:20px">Settings</h2>
+          <h2 style="font-size:20px;color:#1a472a;margin-bottom:25px;padding-bottom:10px;border-bottom:2px solid #1a472a">Settings</h2>
 
-          <div class="settings-card">
-            <h3>Tournament Name</h3>
-            <input type="text" id="tournamentName" value="${appData.settings.tournamentName}" onchange="updateSetting('tournamentName', this.value)">
-          </div>
+          <!-- Tournament Setup Section -->
+          <div style="margin-bottom:30px">
+            <h3 style="font-size:14px;color:#666;text-transform:uppercase;letter-spacing:1px;margin-bottom:15px">Tournament Setup</h3>
 
-          <div class="settings-card">
-            <h3>Tournament Dates</h3>
+            <div class="settings-card">
+              <h3>Tournament Name</h3>
+              <input type="text" id="tournamentName" value="${appData.settings.tournamentName}" onchange="updateSetting('tournamentName', this.value)">
+            </div>
+
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:15px">
-              <div>
-                <label style="font-size:12px;color:#666;display:block;margin-bottom:4px">Start Date</label>
-                <input type="date" value="${appData.settings.tournamentStartDate || ''}" onchange="updateSetting('tournamentStartDate', this.value)" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:6px">
+              <div class="settings-card">
+                <h3>Tournament Dates</h3>
+                <div style="display:flex;flex-direction:column;gap:12px">
+                  <div>
+                    <label style="font-size:12px;color:#666;display:block;margin-bottom:4px">Start Date</label>
+                    <input type="date" value="${appData.settings.tournamentStartDate || ''}" onchange="updateSetting('tournamentStartDate', this.value)" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:6px">
+                  </div>
+                  <div>
+                    <label style="font-size:12px;color:#666;display:block;margin-bottom:4px">End Date</label>
+                    <input type="date" value="${appData.settings.tournamentEndDate || ''}" onchange="updateSetting('tournamentEndDate', this.value)" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:6px">
+                  </div>
+                </div>
               </div>
-              <div>
-                <label style="font-size:12px;color:#666;display:block;margin-bottom:4px">End Date</label>
-                <input type="date" value="${appData.settings.tournamentEndDate || ''}" onchange="updateSetting('tournamentEndDate', this.value)" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:6px">
+
+              <div class="settings-card">
+                <h3>Number of Holes</h3>
+                <div style="display:flex;align-items:center;gap:15px;margin-bottom:10px">
+                  <input type="number" min="1" max="36" value="${getNumberOfHoles()}" onchange="updateSetting('numberOfHoles', parseInt(this.value) || 18)" style="width:100px;padding:10px;border:1px solid #ddd;border-radius:6px">
+                  <span style="color:#666;font-size:13px">holes</span>
+                </div>
+                <p style="color:#999;font-size:11px">Typically 18. Controls hole options throughout the system.</p>
               </div>
             </div>
-            <p style="color:#999;font-size:11px;margin-top:8px">Set the first and last day of your tournament. This controls which dates appear throughout the system.</p>
           </div>
 
-          <div class="settings-card">
-            <h3>Number of Holes</h3>
-            <div style="display:flex;align-items:center;gap:15px">
-              <input type="number" min="1" max="36" value="${getNumberOfHoles()}" onchange="updateSetting('numberOfHoles', parseInt(this.value) || 18)" style="width:100px;padding:10px;border:1px solid #ddd;border-radius:6px">
-              <span style="color:#666;font-size:13px">holes</span>
+          <!-- Admin Access Info Section -->
+          <div style="margin-bottom:30px">
+            <h3 style="font-size:14px;color:#666;text-transform:uppercase;letter-spacing:1px;margin-bottom:15px">Admin Access</h3>
+
+            <div class="settings-card">
+              <h3>Managing Admin Users</h3>
+              <p style="color:#666;font-size:13px;margin-top:10px">Admin access is managed through volunteer types in the Edit Volunteers tab:</p>
+              <ul style="color:#666;font-size:13px;margin-top:10px;margin-left:20px">
+                <li><strong>Admin</strong> - Full access to all admin features</li>
+                <li><strong>View Admin</strong> - Read-only access to view data</li>
+              </ul>
+              <p style="color:#666;font-size:13px;margin-top:10px">To add admin users:</p>
+              <ol style="color:#666;font-size:13px;margin-top:8px;margin-left:20px">
+                <li>Go to Edit Volunteers tab</li>
+                <li>Edit or add a volunteer</li>
+                <li>Set their Type to "Admin" or "View Admin"</li>
+                <li>Enter their email address (required)</li>
+              </ol>
+              <p style="color:#999;font-size:11px;margin-top:15px">Default password is "admin2025". Users will be prompted to change it on first login. Full admins can reset any admin's password from the volunteer edit form.</p>
             </div>
-            <p style="color:#999;font-size:11px;margin-top:8px">Set the number of holes for your tournament (typically 18). This controls the hole options throughout the system.</p>
           </div>
 
-          <div class="settings-card">
-            <h3>Admin Password</h3>
-            <input type="text" id="adminPasswordSetting" value="${appData.settings.adminPassword}" onchange="updateSetting('adminPassword', this.value)">
-            <p style="color:#666;font-size:11px;margin-top:6px">Full access to all admin features</p>
-          </div>
+          <!-- Contact & Help Section -->
+          <div style="margin-bottom:30px">
+            <h3 style="font-size:14px;color:#666;text-transform:uppercase;letter-spacing:1px;margin-bottom:15px">Contact & Help</h3>
 
-          <div class="settings-card">
-            <h3>View-Only Admin Password</h3>
-            <input type="text" id="viewAdminPasswordSetting" value="${appData.settings.viewAdminPassword || ''}" onchange="updateSetting('viewAdminPassword', this.value)" placeholder="Leave blank to disable">
-            <p style="color:#666;font-size:11px;margin-top:6px">Can view Overview and Volunteers tabs only (no editing, no Import/Settings)</p>
-          </div>
-
-          <div class="settings-card">
-            <h3>Contact Information</h3>
-            <div style="margin-bottom:12px">
-              <label style="font-size:12px;color:#666;display:block;margin-bottom:4px">Contact Name</label>
-              <input type="text" placeholder="Tournament Coordinator" value="${appData.settings.helpName || ''}" onchange="updateSetting('helpName', this.value)" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:6px">
+            <div class="settings-card">
+              <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:15px">
+                <div>
+                  <label style="font-size:12px;color:#666;display:block;margin-bottom:4px">Contact Name</label>
+                  <input type="text" placeholder="Tournament Coordinator" value="${appData.settings.helpName || ''}" onchange="updateSetting('helpName', this.value)" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:6px">
+                </div>
+                <div>
+                  <label style="font-size:12px;color:#666;display:block;margin-bottom:4px">Help Phone</label>
+                  <input type="tel" placeholder="(555) 123-4567" value="${appData.settings.helpPhone || ''}" onchange="updateSetting('helpPhone', this.value)" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:6px">
+                </div>
+                <div>
+                  <label style="font-size:12px;color:#666;display:block;margin-bottom:4px">Help Email</label>
+                  <input type="email" placeholder="volunteers@tournament.golf" value="${appData.settings.helpEmail || ''}" onchange="updateSetting('helpEmail', this.value)" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:6px">
+                </div>
+              </div>
+              <p style="color:#999;font-size:11px;margin-top:10px">Displayed on the landing page for volunteers and captains who need assistance.</p>
             </div>
-            <div style="margin-bottom:12px">
-              <label style="font-size:12px;color:#666;display:block;margin-bottom:4px">Help Phone</label>
-              <input type="tel" placeholder="(555) 123-4567" value="${appData.settings.helpPhone || ''}" onchange="updateSetting('helpPhone', this.value)" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:6px">
-            </div>
-            <div>
-              <label style="font-size:12px;color:#666;display:block;margin-bottom:4px">Help Email</label>
-              <input type="email" placeholder="volunteers@tournament.golf" value="${appData.settings.helpEmail || ''}" onchange="updateSetting('helpEmail', this.value)" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:6px">
-            </div>
-            <p style="color:#999;font-size:11px;margin-top:8px">This contact info appears on the landing page for volunteers and captains who need assistance.</p>
           </div>
 
-          <div class="settings-card">
-            <h3>Shift Cutoff Times</h3>
-            <p style="color:#666;font-size:12px;margin-bottom:15px">Captains cannot modify check-ins after these times (Central US time). Past shifts become read-only.</p>
+          <!-- Check-In Settings Section -->
+          <div style="margin-bottom:30px">
+            <h3 style="font-size:14px;color:#666;text-transform:uppercase;letter-spacing:1px;margin-bottom:15px">Check-In Settings</h3>
+
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:15px">
-              <div>
-                <label style="font-size:12px;color:#666;display:block;margin-bottom:4px">AM Shift Cutoff</label>
-                <input type="time" value="${appData.settings.amShiftCutoff || '12:00'}" onchange="updateSetting('amShiftCutoff', this.value)" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:6px">
+              <div class="settings-card">
+                <h3>Shift Cutoff Times</h3>
+                <p style="color:#666;font-size:12px;margin-bottom:12px">Past shifts become read-only after these times (Central).</p>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+                  <div>
+                    <label style="font-size:11px;color:#666;display:block;margin-bottom:4px">AM Cutoff</label>
+                    <input type="time" value="${appData.settings.amShiftCutoff || '12:00'}" onchange="updateSetting('amShiftCutoff', this.value)" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:6px">
+                  </div>
+                  <div>
+                    <label style="font-size:11px;color:#666;display:block;margin-bottom:4px">PM Cutoff</label>
+                    <input type="time" value="${appData.settings.pmShiftCutoff || '18:00'}" onchange="updateSetting('pmShiftCutoff', this.value)" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:6px">
+                  </div>
+                </div>
               </div>
-              <div>
-                <label style="font-size:12px;color:#666;display:block;margin-bottom:4px">PM Shift Cutoff</label>
-                <input type="time" value="${appData.settings.pmShiftCutoff || '18:00'}" onchange="updateSetting('pmShiftCutoff', this.value)" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:6px">
+
+              <div class="settings-card">
+                <h3>Volunteer Portal</h3>
+                <label style="display:flex;align-items:center;gap:10px;cursor:pointer;margin-top:10px">
+                  <input type="checkbox" ${appData.settings.showOutingPreferences !== false ? 'checked' : ''} onchange="updateSetting('showOutingPreferences', this.checked)" style="width:18px;height:18px;cursor:pointer">
+                  <span style="font-size:14px">Show Outing Preferences</span>
+                </label>
+                <p style="color:#666;font-size:11px;margin-top:10px">Allow volunteers to select pairing preferences for the volunteer outing.</p>
               </div>
             </div>
-            <p style="color:#999;font-size:11px;margin-top:8px">Example: Set AM cutoff to 12:00 PM (noon) and PM cutoff to 6:00 PM. After these times, captains can view but not change that day's check-ins.</p>
           </div>
 
-          <div class="settings-card" style="border:2px solid #1a472a">
-            <h3 style="color:#1a472a">Tournament Archives</h3>
-            <p style="color:#666;font-size:12px;margin-bottom:15px">Save your current tournament data before starting a new year, or restore data from a previous year.</p>
+          <!-- Landing Page Section -->
+          <div style="margin-bottom:30px">
+            <h3 style="font-size:14px;color:#666;text-transform:uppercase;letter-spacing:1px;margin-bottom:15px">Landing Page</h3>
 
-            <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px">
-              <button class="add-alert-btn" onclick="saveArchive()" style="background:#1a472a">Save Current Year</button>
-              <button class="add-alert-btn" onclick="exportArchiveFile()" style="background:#2196F3">Download Backup</button>
-              <label class="add-alert-btn" style="background:#ff9800;cursor:pointer;display:inline-block">
-                Load Backup File
-                <input type="file" accept=".json" onchange="importArchiveFile(this)" style="display:none">
-              </label>
-            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:15px">
+              <div class="settings-card" style="border-left:3px solid #2196f3">
+                <h3 style="color:#2196f3">Pairings Sheet Link</h3>
+                <label style="display:flex;align-items:center;gap:10px;cursor:pointer;margin-bottom:12px">
+                  <input type="checkbox" ${appData.settings.showPairingsLink !== false ? "checked" : ""} onchange="updateSetting('showPairingsLink', this.checked)" style="width:18px;height:18px">
+                  <span style="font-size:14px">Show on landing page</span>
+                </label>
+                <div style="margin-bottom:10px">
+                  <label style="font-size:11px;color:#666;display:block;margin-bottom:4px">Link Text</label>
+                  <input type="text" placeholder="Pairings Sheet" value="${appData.settings.pairingsText || 'Pairings Sheet'}" onchange="updateSetting('pairingsText', this.value)" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:6px">
+                </div>
+                <div>
+                  <label style="font-size:11px;color:#666;display:block;margin-bottom:4px">URL</label>
+                  <input type="url" placeholder="https://pgatour.com/..." value="${appData.settings.pairingsUrl || ''}" onchange="updateSetting('pairingsUrl', this.value)" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:6px">
+                </div>
+              </div>
 
-            <div id="archivesList">
-              ${renderArchivesList()}
+              <div class="settings-card" style="border-left:3px solid #9c27b0">
+                <h3 style="color:#9c27b0">Branding</h3>
+                <label style="display:flex;align-items:center;gap:10px;cursor:pointer;margin-bottom:12px">
+                  <input type="checkbox" ${appData.settings.showPoweredBy !== false ? "checked" : ""} onchange="updateSetting('showPoweredBy', this.checked)" style="width:18px;height:18px">
+                  <span style="font-size:14px">Show "Powered by" footer</span>
+                </label>
+                <div style="margin-bottom:10px">
+                  <label style="font-size:11px;color:#666;display:block;margin-bottom:4px">Brand Name</label>
+                  <input type="text" placeholder="Volunteer Golf" value="${appData.settings.poweredByText || 'Volunteer Golf'}" onchange="updateSetting('poweredByText', this.value)" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:6px">
+                </div>
+                <div>
+                  <label style="font-size:11px;color:#666;display:block;margin-bottom:4px">Brand URL (optional)</label>
+                  <input type="url" placeholder="https://yourcompany.com" value="${appData.settings.poweredByUrl || ''}" onchange="updateSetting('poweredByUrl', this.value)" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:6px">
+                </div>
+              </div>
             </div>
           </div>
 
+          <!-- Site QR Code Section -->
+          <div style="margin-bottom:30px">
+            <h3 style="font-size:14px;color:#666;text-transform:uppercase;letter-spacing:1px;margin-bottom:15px">Site QR Code</h3>
 
-          <div class="settings-card" style="border:2px solid #2196f3">
-            <h3 style="color:#2196f3">Pairings Sheet</h3>
-            <p style="color:#666;font-size:12px;margin-bottom:15px">Add a link to the tournament pairings sheet on the landing page.</p>
-            
-            <div style="margin-bottom:15px">
-              <label style="display:flex;align-items:center;gap:10px;cursor:pointer">
-                <input type="checkbox" ${appData.settings.showPairingsLink !== false ? "checked" : ""} onchange="updateSetting('showPairingsLink', this.checked)" style="width:18px;height:18px">
-                <span style="font-size:14px">Show Pairings Sheet link</span>
-              </label>
-            </div>
-            
-            <div style="margin-bottom:15px">
-              <label style="font-size:12px;color:#666;display:block;margin-bottom:4px">Link Text</label>
-              <input type="text" placeholder="Pairings Sheet" value="${appData.settings.pairingsText || 'Pairings Sheet'}" onchange="updateSetting('pairingsText', this.value)" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:6px">
-            </div>
-            
-            <div style="margin-bottom:15px">
-              <label style="font-size:12px;color:#666;display:block;margin-bottom:4px">Pairings URL</label>
-              <input type="url" placeholder="https://pgatour.com/..." value="${appData.settings.pairingsUrl || ''}" onchange="updateSetting('pairingsUrl', this.value)" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:6px">
+            <div class="settings-card">
+              <h3>Share Site with Volunteers</h3>
+              <p style="color:#666;font-size:12px;margin-bottom:15px">Display or print a QR code that volunteers can scan to access the site and add it to their home screen.</p>
+              <button onclick="showSiteQRCode()" style="padding:10px 20px;background:#1a472a;color:white;border:none;border-radius:6px;cursor:pointer;font-size:14px">Show Site QR Code</button>
             </div>
           </div>
-          <div class="settings-card" style="border:2px solid #9c27b0">
-            <h3 style="color:#9c27b0">Branding / White Label</h3>
-            <p style="color:#666;font-size:12px;margin-bottom:15px">Customize the "Powered by" footer that appears on all pages.</p>
-            
-            <div style="margin-bottom:15px">
-              <label style="display:flex;align-items:center;gap:10px;cursor:pointer">
-                <input type="checkbox" ${appData.settings.showPoweredBy !== false ? "checked" : ""} onchange="updateSetting('showPoweredBy', this.checked)" style="width:18px;height:18px">
-                <span style="font-size:14px">Show "Powered by" footer</span>
-              </label>
+
+          <!-- Data Management Section -->
+          <div style="margin-bottom:30px">
+            <h3 style="font-size:14px;color:#666;text-transform:uppercase;letter-spacing:1px;margin-bottom:15px">Data Management</h3>
+
+            <div class="settings-card" style="border:2px solid #1a472a">
+              <h3 style="color:#1a472a">Tournament Archives</h3>
+              <p style="color:#666;font-size:12px;margin-bottom:15px">Save your current tournament data before starting a new year, or restore data from a previous year.</p>
+
+              <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px">
+                <button class="add-alert-btn" onclick="saveArchive()" style="background:#1a472a">Save Current Year</button>
+                <button class="add-alert-btn" onclick="exportArchiveFile()" style="background:#2196F3">Download Backup</button>
+                <label class="add-alert-btn" style="background:#ff9800;cursor:pointer;display:inline-block">
+                  Load Backup File
+                  <input type="file" accept=".json" onchange="importArchiveFile(this)" style="display:none">
+                </label>
+              </div>
+
+              <div id="archivesList">
+                ${renderArchivesList()}
+              </div>
             </div>
-            
-            <div style="margin-bottom:12px">
-              <label style="font-size:12px;color:#666;display:block;margin-bottom:4px">Brand Name</label>
-              <input type="text" placeholder="Volunteer Golf" value="${appData.settings.poweredByText || 'Volunteer Golf'}" onchange="updateSetting('poweredByText', this.value)" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:6px">
-            </div>
-            
-            <div style="margin-bottom:12px">
-              <label style="font-size:12px;color:#666;display:block;margin-bottom:4px">Brand URL (optional)</label>
-              <input type="url" placeholder="https://yourcompany.com" value="${appData.settings.poweredByUrl || ''}" onchange="updateSetting('poweredByUrl', this.value)" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:6px">
-            </div>
-            <p style="color:#999;font-size:11px;margin-top:8px">Leave URL blank to show text without a link. Uncheck to completely hide the footer.</p>
           </div>
 
-          <div class="settings-card danger-zone">
-            <h3>Danger Zone</h3>
-            <p style="color:#666;font-size:12px;margin-bottom:15px">These actions permanently delete data and cannot be undone.</p>
+          <!-- Danger Zone Section -->
+          <div style="margin-bottom:30px">
+            <h3 style="font-size:14px;color:#c62828;text-transform:uppercase;letter-spacing:1px;margin-bottom:15px">Danger Zone</h3>
 
-            <div style="margin-bottom:15px">
-              <button class="danger-btn warning" onclick="confirmClearCheckIns()">Clear Check-Ins Only</button>
-              <p style="color:#888;font-size:11px;margin-top:5px">Removes all check-in records but keeps volunteer information and assignments.</p>
-            </div>
+            <div class="settings-card danger-zone">
+              <p style="color:#666;font-size:12px;margin-bottom:15px">These actions permanently delete data and cannot be undone.</p>
 
-            <div style="margin-bottom:15px">
-              <button class="danger-btn warning" onclick="confirmClearSubmissions()" style="background:#9c27b0">Clear Submissions</button>
-              <p style="color:#888;font-size:11px;margin-top:5px">Removes all captain submissions but keeps volunteer information.</p>
-            </div>
+              <div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:15px">
+                <div style="text-align:center">
+                  <button class="danger-btn warning" onclick="confirmClearCheckIns()" style="width:100%">Clear Check-Ins</button>
+                  <p style="color:#888;font-size:10px;margin-top:8px">Removes check-in records only</p>
+                </div>
 
-            <div>
-              <button class="danger-btn danger" onclick="confirmClearAllData()">Clear All Data</button>
-              <p style="color:#888;font-size:11px;margin-top:5px">Deletes everything: volunteers, check-ins, submissions, and all tournament data.</p>
+                <div style="text-align:center">
+                  <button class="danger-btn warning" onclick="confirmClearSubmissions()" style="background:#9c27b0;width:100%">Clear Submissions</button>
+                  <p style="color:#888;font-size:10px;margin-top:8px">Removes captain submissions</p>
+                </div>
+
+                <div style="text-align:center">
+                  <button class="danger-btn danger" onclick="confirmClearAllData()" style="width:100%">Clear All Data</button>
+                  <p style="color:#888;font-size:10px;margin-top:8px">Deletes everything</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -2969,9 +3841,10 @@
       const isAdminUser = captainAuth.isAdmin;
       const isChairUser = captainAuth.isChair && captainAuth.assignedHoles && captainAuth.assignedHoles.length > 1;
 
-      // Initialize chairSelectedHole if not set
+      // Initialize chairSelectedHole if not set (exclude hole 99)
+      const chairHolesFiltered = isChairUser ? captainAuth.assignedHoles.filter(h => h !== 99) : [];
       if (isChairUser && !chairSelectedHole) {
-        chairSelectedHole = captainAuth.assignedHoles[0];
+        chairSelectedHole = chairHolesFiltered[0];
       }
 
       const activeHole = isAdminUser ? adminSelectedHole : (isChairUser ? chairSelectedHole : captainAuth.hole);
@@ -3168,6 +4041,34 @@
         </div>
       ` : '';
 
+      // Password change modal for captains
+      const passwordChangeModalHtml = showPasswordChangeModal && captainAuth ? `
+        <div class="modal-overlay">
+          <div class="modal" onclick="event.stopPropagation()" style="max-width:400px;text-align:left">
+            <h3 style="text-align:center;margin-bottom:15px">Set Your Password</h3>
+            <p style="font-size:13px;color:#666;margin-bottom:20px;text-align:center">Welcome! Please create a new password for your account.</p>
+            <form id="captainPasswordChangeForm">
+              <div style="margin-bottom:15px">
+                <label style="font-size:12px;color:#666;display:block;margin-bottom:4px">Current Password (your phone number)</label>
+                <input type="password" id="currentCaptainPassword" style="width:100%;padding:12px;border:1px solid #ddd;border-radius:6px;font-size:14px" placeholder="Enter current password" required>
+              </div>
+              <div style="margin-bottom:15px">
+                <label style="font-size:12px;color:#666;display:block;margin-bottom:4px">New Password</label>
+                <input type="password" id="newCaptainPassword" style="width:100%;padding:12px;border:1px solid #ddd;border-radius:6px;font-size:14px" placeholder="Enter new password" required>
+              </div>
+              <div style="margin-bottom:20px">
+                <label style="font-size:12px;color:#666;display:block;margin-bottom:4px">Confirm New Password</label>
+                <input type="password" id="confirmCaptainPassword" style="width:100%;padding:12px;border:1px solid #ddd;border-radius:6px;font-size:14px" placeholder="Confirm new password" required>
+              </div>
+              <div class="modal-buttons">
+                <button type="button" class="modal-btn cancel" onclick="showPasswordChangeModal=false;render()">Skip for Now</button>
+                <button type="submit" class="modal-btn confirm">Set Password</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      ` : '';
+
       // Captain editing volunteer schedule modal
       const captainEditModalHtml = captainEditingVolunteer ? `
         <div class="modal-overlay" onclick="captainEditingVolunteer=null;render()">
@@ -3209,7 +4110,7 @@
               <h3 style="margin:0">Roster - Hole #${activeHole}</h3>
               <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
                 <button onclick="downloadPDF(${activeHole})" style="padding:8px 16px;background:#fff;border:1px solid #ddd;border-radius:6px;cursor:pointer;font-size:13px">Download PDF</button>
-                <button onclick="openEmailHoleModal(${activeHole})" style="padding:8px 16px;background:#1a472a;color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:13px">Email to Hole</button>
+                <button onclick="sendEmailToSelf(${activeHole})" style="padding:8px 16px;background:#1a472a;color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:13px">Email to Self</button>
                 <button onclick="printReport()" style="padding:8px 16px;background:#fff;border:1px solid #ddd;border-radius:6px;cursor:pointer;font-size:13px">Print</button>
                 <button onclick="exportReportCSV()" style="padding:8px 16px;background:#fff;border:1px solid #ddd;border-radius:6px;cursor:pointer;font-size:13px">Export CSV</button>
                 <button onclick="showReportsModal=false;render()" style="background:none;border:none;font-size:24px;cursor:pointer;color:#666">&times;</button>
@@ -3244,6 +4145,7 @@
           ${successModalHtml}
           ${helpModalHtml}
           ${pinSetupModalHtml}
+          ${passwordChangeModalHtml}
           ${captainEditModalHtml}
           ${reportsModalHtml}
           ${emailHoleModalHtml}
@@ -3260,7 +4162,7 @@
                 ` : isChairUser ? `
                   <h1 style="display:flex;align-items:center;gap:10px">
                     <select onchange="chairSelectedHole=parseInt(this.value);render()" style="font-size:20px;font-weight:700;padding:4px 8px;border-radius:6px;border:none;background:rgba(255,255,255,0.9);color:#1a472a">
-                      ${captainAuth.assignedHoles.map(h => `<option value="${h}" ${h === chairSelectedHole ? 'selected' : ''}>Hole #${h}</option>`).join('')}
+                      ${chairHolesFiltered.map(h => `<option value="${h}" ${h === chairSelectedHole ? 'selected' : ''}>Hole #${h}</option>`).join('')}
                     </select>
                   </h1>
                   <p>Chair: ${captainAuth.name}</p>
@@ -3271,8 +4173,10 @@
                 `}
               </div>
               <div style="display:flex;gap:8px;align-items:center">
+                <button onclick="refreshData()" title="Refresh" style="background:rgba(255,255,255,0.2);border:none;color:white;padding:8px 10px;border-radius:8px;cursor:pointer;font-size:16px;line-height:1">&#8635;</button>
                 <button onclick="showReportsModal=true;currentReport='hole-roster';reportFilters={hole:'all',day:'all',shift:'all'};render()" style="background:rgba(255,255,255,0.2);border:none;color:white;padding:8px 12px;border-radius:8px;cursor:pointer;font-size:13px">Roster</button>
                 <button onclick="showHelpModal=true;render()" style="background:rgba(255,255,255,0.2);border:none;color:white;padding:8px 12px;border-radius:8px;cursor:pointer;font-size:13px">?</button>
+                <button onclick="showPasswordChangeModal=true;render()" style="background:rgba(255,255,255,0.2);border:none;color:white;padding:8px 12px;border-radius:8px;cursor:pointer;font-size:11px">Password</button>
                 <button class="logout-btn" onclick="logout()">Logout</button>
               </div>
             </div>
@@ -3330,7 +4234,7 @@
                     </div>
                   </div>
                   ${v.hole !== activeHole ? `<span class="volunteer-hole">From #${v.hole}</span>` : ''}
-                  ${!isCaptain && v.hole === activeHole ? `<button onclick="event.stopPropagation();openCaptainEditVolunteer('${v.id}')" style="padding:4px 8px;background:#f0f0f0;border:1px solid #ddd;border-radius:4px;font-size:11px;color:#666;cursor:pointer;margin-left:8px">Edit</button>` : ''}
+                  ${v.hole === activeHole ? `<button onclick="event.stopPropagation();openCaptainEditVolunteer('${v.id}')" style="padding:4px 8px;background:#f0f0f0;border:1px solid #ddd;border-radius:4px;font-size:11px;color:#666;cursor:pointer;margin-left:8px">Edit</button>` : ''}
                 </div>
               `;
             }).join('')}
@@ -3392,15 +4296,18 @@
 
     function logout() {
       adminAuth = false;
+      adminAuthUser = null;
       captainAuth = null;
       volunteerAuth = null;
       chairSelectedHole = null;
       currentView = 'landing';
+      clearAuthState();
       render();
     }
 
     function setAdminTab(tab) {
       adminTab = tab;
+      saveAuthState();
       render();
     }
 
@@ -3936,6 +4843,7 @@
           const phoneCol = headers.findIndex(h => h.includes('Phone_Cell') || h.includes('Cell'));
           const idCol = headers.findIndex(h => h.includes('Vol ID') || h === 'ID');
           const yearsCol = headers.findIndex(h => h.includes('Years Worked') || h === 'Years' || h.includes('Years_Worked'));
+          const hatCol = headers.findIndex(h => h.toLowerCase() === 'hat' || h.toLowerCase().includes('hat'));
           
           const volunteers = rows.slice(1).filter(r => r.length > 1 && r[nameCol]).map((row, idx) => {
             const scheduled = {};
@@ -3956,6 +4864,7 @@
               hole: holeCol >= 0 ? parseInt(row[holeCol]) || 0 : 0,
               phone: phoneCol >= 0 ? row[phoneCol] : '',
               yearsWorked: yearsCol >= 0 ? parseInt(row[yearsCol]) || 0 : 0,
+              hat: hatCol >= 0 ? row[hatCol] : '',
               scheduled
             };
           });
@@ -4013,7 +4922,8 @@
             { field: 'type', match: h => h.toLowerCase() === 'type' || h.toLowerCase() === 'volunteer type', type: 'string' },
             { field: 'hole', match: h => h.toLowerCase() === 'hole' || h.toLowerCase().includes('hole'), type: 'int' },
             { field: 'yearsWorked', match: h => h.includes('Years Worked') || h === 'Years' || h.includes('Years_Worked') || h.toLowerCase() === 'years', type: 'int' },
-            { field: 'customPin', match: h => h.toLowerCase().includes('pin') || h.toLowerCase().includes('custom pin'), type: 'string' }
+            { field: 'customPin', match: h => h.toLowerCase().includes('pin') || h.toLowerCase().includes('custom pin'), type: 'string' },
+            { field: 'hat', match: h => h.toLowerCase() === 'hat' || h.toLowerCase().includes('hat'), type: 'string' }
           ];
 
           // Find which columns exist in the CSV
@@ -4026,7 +4936,7 @@
           });
 
           if (columnsToUpdate.length === 0) {
-            alert('CSV must have at least one field to update (Email, Phone, Type, Hole, Years Worked, or Custom PIN)');
+            alert('CSV must have at least one field to update (Email, Phone, Type, Hole, Years Worked, Custom PIN, or Hat)');
             return;
           }
 
@@ -4066,7 +4976,7 @@
           saveData();
 
           let msg = `Updated ${updated} volunteer(s).`;
-          const fieldLabels = { email: 'emails', phone: 'phones', type: 'types', hole: 'holes', yearsWorked: 'years', customPin: 'PINs' };
+          const fieldLabels = { email: 'emails', phone: 'phones', type: 'types', hole: 'holes', yearsWorked: 'years', customPin: 'PINs', hat: 'hats' };
           columnsToUpdate.forEach(col => {
             if (fieldCounts[col.field] > 0) {
               msg += `\n• ${fieldCounts[col.field]} ${fieldLabels[col.field] || col.field} updated`;
@@ -4231,160 +5141,268 @@
       if (adminForm) {
         adminForm.onsubmit = function(e) {
           e.preventDefault();
+          const email = document.getElementById('adminEmail').value.trim().toLowerCase();
           const password = document.getElementById('adminPassword').value;
-          // Check full admin password first
-          if (password.toLowerCase() === appData.settings.adminPassword.toLowerCase()) {
-            adminAuth = 'full';
-            currentView = 'admin';
+
+          // Find volunteer with this email who is Admin or View Admin type
+          const adminVolunteer = appData.volunteers.find(v =>
+            (v.type === 'Admin' || v.type === 'View Admin') &&
+            v.email && v.email.toLowerCase() === email
+          );
+
+          if (adminVolunteer) {
+            // Check password (adminPassword field, or default "admin2025" if not set)
+            const storedPassword = adminVolunteer.adminPassword || 'admin2025';
+            if (password === storedPassword) {
+              adminAuth = adminVolunteer.type === 'Admin' ? 'full' : 'viewOnly';
+              adminAuthUser = adminVolunteer;
+              if (adminVolunteer.type === 'View Admin') {
+                adminTab = 'overview';
+              }
+              currentView = 'admin';
+
+              // Check if using default password - prompt to change
+              if (!adminVolunteer.adminPasswordSetAt) {
+                showAdminPasswordChangeModal = true;
+              }
+
+              saveAuthState();
+              render();
+              return;
+            }
+          }
+
+          // Show error
+          const err = document.getElementById('adminError');
+          err.textContent = 'Invalid email or password';
+          err.classList.remove('hidden');
+          document.getElementById('adminEmail').classList.add('error');
+          document.getElementById('adminPassword').classList.add('error');
+          setTimeout(() => { err.classList.add('hidden'); document.getElementById('adminEmail').classList.remove('error'); document.getElementById('adminPassword').classList.remove('error'); }, 2000);
+        };
+      }
+
+      // Admin password change form handler
+      const adminPasswordChangeForm = document.getElementById('adminPasswordChangeForm');
+      if (adminPasswordChangeForm) {
+        adminPasswordChangeForm.onsubmit = function(e) {
+          e.preventDefault();
+          if (!adminAuthUser) return;
+
+          const currentPassword = document.getElementById('currentAdminPassword').value;
+          const newPassword = document.getElementById('newAdminPassword').value;
+          const confirmPassword = document.getElementById('confirmNewAdminPassword').value;
+
+          // Validate current password
+          const storedPassword = adminAuthUser.adminPassword || 'admin2025';
+          if (currentPassword !== storedPassword) {
+            alert('Current password is incorrect');
+            return;
+          }
+
+          // Validate new password
+          if (newPassword.length < 4) {
+            alert('New password must be at least 4 characters');
+            return;
+          }
+
+          if (newPassword !== confirmPassword) {
+            alert('New passwords do not match');
+            return;
+          }
+
+          // Update password
+          const volunteer = appData.volunteers.find(v => v.id === adminAuthUser.id);
+          if (volunteer) {
+            volunteer.adminPassword = newPassword;
+            volunteer.adminPasswordSetAt = new Date().toISOString();
+            adminAuthUser = volunteer; // Update the reference
+            saveData();
+            showAdminPasswordChangeModal = false;
+            showToast('Password changed successfully');
             render();
-          // Then check view-only admin password
-          } else if (appData.settings.viewAdminPassword && password.toLowerCase() === appData.settings.viewAdminPassword.toLowerCase()) {
-            adminAuth = 'viewOnly';
-            adminTab = 'overview'; // Start on overview tab
-            currentView = 'admin';
-            render();
-          } else {
-            const err = document.getElementById('adminError');
-            err.textContent = 'Incorrect password';
-            err.classList.remove('hidden');
-            document.getElementById('adminPassword').classList.add('error');
-            setTimeout(() => { err.classList.add('hidden'); document.getElementById('adminPassword').classList.remove('error'); }, 2000);
           }
         };
       }
-      
+
       const captainForm = document.getElementById('captainLoginForm');
       if (captainForm) {
-        const phoneInput = document.getElementById('captainPhone');
-        const submitBtn = document.getElementById('captainSubmit');
-        
-        phoneInput.oninput = function() {
-          try {
-            var val = String(this.value || '');
-            var digits = '';
-            for (var i = 0; i < val.length && digits.length < 4; i++) {
-              if (val[i] >= '0' && val[i] <= '9') {
-                digits += val[i];
-              }
-            }
-            this.value = digits;
-            submitBtn.disabled = digits.length < 4;
-          } catch (ex) {
-            // ignore
-          }
-        };
-        
         captainForm.onsubmit = function(e) {
           e.preventDefault();
-          try {
-            var pin4 = String(phoneInput.value || '');
-            var captains = appData.volunteers.filter(function(v) {
-              return v.type === 'Captain' || v.type === 'Asst. Chairman' || v.type === 'Chairman' || v.type === 'Admin';
-            });
-            var captain = null;
-            var usedPhoneLogin = false;
+          const email = document.getElementById('captainEmail').value.trim().toLowerCase();
+          const password = document.getElementById('captainPassword').value;
 
-            // First try to match custom PIN
-            for (var i = 0; i < captains.length; i++) {
-              if (captains[i].customPin && captains[i].customPin === pin4) {
-                captain = captains[i];
-                break;
-              }
-            }
+          // Find captain by email
+          const captainTypes = ['Captain', 'Asst. Chairman', 'Chairman', 'View Admin', 'Admin'];
+          const captain = appData.volunteers.find(v =>
+            captainTypes.includes(v.type) &&
+            v.email && v.email.toLowerCase() === email
+          );
 
-            // If no custom PIN match, try phone number (first-time login)
-            if (!captain) {
-              for (var i = 0; i < captains.length; i++) {
-                if (formatPhone(captains[i].phone) === pin4 && !captains[i].customPin) {
-                  captain = captains[i];
-                  usedPhoneLogin = true;
-                  break;
-                }
-              }
-            }
+          if (captain) {
+            // Check password (volunteerPassword field, or default to phone digits)
+            const defaultPassword = getPhoneDigits(captain.phone);
+            const storedPassword = captain.volunteerPassword || defaultPassword;
 
-            if (captain) {
-              const isChair = captain.type === 'Chairman' || captain.type === 'Asst. Chairman';
+            if (password === storedPassword) {
+              const isChair = captain.type === 'Chairman' || captain.type === 'Asst. Chairman' || captain.type === 'View Admin' || captain.type === 'Admin';
               captainAuth = {
+                id: captain.id,
                 name: captain.name,
                 hole: captain.hole,
-                phone4: pin4,
-                isAdmin: captain.type === 'Admin',
+                isAdmin: captain.type === 'Admin' || captain.type === 'View Admin',
                 isChair: isChair,
                 assignedHoles: isChair && captain.assignedHoles ? captain.assignedHoles : [captain.hole],
                 odId: captain.id
               };
               currentView = 'captain';
 
-              // If first-time login (used phone, no custom PIN), show PIN setup modal
-              if (usedPhoneLogin && !captain.customPin) {
-                showPinSetupModal = true;
+              // If using default password, prompt to change
+              if (!captain.volunteerPassword) {
+                showPasswordChangeModal = true;
               }
 
+              saveAuthState();
               render();
-            } else {
-              var err = document.getElementById('captainError');
-              err.textContent = 'PIN not found. Use the last 4 digits of your phone for first login, or your custom PIN.';
-              err.classList.remove('hidden');
-              phoneInput.classList.add('error');
-              setTimeout(function() { err.classList.add('hidden'); phoneInput.classList.remove('error'); }, 3000);
+              return;
             }
-          } catch (ex) {
-            alert('Login error: ' + ex.message);
           }
+
+          // Show error
+          const err = document.getElementById('captainError');
+          err.textContent = 'Invalid email or password';
+          err.classList.remove('hidden');
+          document.getElementById('captainEmail').classList.add('error');
+          document.getElementById('captainPassword').classList.add('error');
+          setTimeout(() => { err.classList.add('hidden'); document.getElementById('captainEmail').classList.remove('error'); document.getElementById('captainPassword').classList.remove('error'); }, 3000);
         };
       }
 
       // Handle volunteer login form
       const volunteerForm = document.getElementById('volunteerLoginForm');
       if (volunteerForm) {
-        const phoneInput = document.getElementById('volunteerPhone');
-        const submitBtn = document.getElementById('volunteerSubmit');
-
-        phoneInput.oninput = function() {
-          try {
-            var val = String(this.value || '');
-            var digits = '';
-            for (var i = 0; i < val.length && digits.length < 4; i++) {
-              if (val[i] >= '0' && val[i] <= '9') {
-                digits += val[i];
-              }
-            }
-            this.value = digits;
-            submitBtn.disabled = digits.length < 4;
-          } catch (ex) {
-            // ignore
-          }
-        };
-
         volunteerForm.onsubmit = function(e) {
           e.preventDefault();
-          try {
-            var phone4 = String(phoneInput.value || '');
-            var volunteer = null;
+          const email = document.getElementById('volunteerEmail').value.trim().toLowerCase();
+          const password = document.getElementById('volunteerPassword').value;
 
-            // Find volunteer by last 4 of phone
-            for (var i = 0; i < appData.volunteers.length; i++) {
-              if (formatPhone(appData.volunteers[i].phone) === phone4) {
-                volunteer = appData.volunteers[i];
-                break;
-              }
-            }
+          // Find volunteer by email
+          const volunteer = appData.volunteers.find(v =>
+            v.email && v.email.toLowerCase() === email
+          );
 
-            if (volunteer) {
+          if (volunteer) {
+            // Check password (volunteerPassword field, or default to phone digits)
+            const defaultPassword = getPhoneDigits(volunteer.phone);
+            const storedPassword = volunteer.volunteerPassword || defaultPassword;
+
+            if (password === storedPassword) {
               volunteerAuth = volunteer;
               currentView = 'volunteer';
+
+              // If using default password, prompt to change
+              if (!volunteer.volunteerPassword) {
+                showVolunteerPasswordChangeModal = true;
+              }
+
+              saveAuthState();
               render();
-            } else {
-              var err = document.getElementById('volunteerError');
-              err.textContent = 'Phone number not found. Please use the last 4 digits of your registered phone.';
-              err.classList.remove('hidden');
-              phoneInput.classList.add('error');
-              setTimeout(function() { err.classList.add('hidden'); phoneInput.classList.remove('error'); }, 3000);
+              return;
             }
-          } catch (ex) {
-            alert('Login error: ' + ex.message);
           }
+
+          // Show error
+          const err = document.getElementById('volunteerError');
+          err.textContent = 'Invalid email or password';
+          err.classList.remove('hidden');
+          document.getElementById('volunteerEmail').classList.add('error');
+          document.getElementById('volunteerPassword').classList.add('error');
+          setTimeout(() => { err.classList.add('hidden'); document.getElementById('volunteerEmail').classList.remove('error'); document.getElementById('volunteerPassword').classList.remove('error'); }, 3000);
+        };
+      }
+
+      // Handle captain password change form
+      const captainPasswordChangeForm = document.getElementById('captainPasswordChangeForm');
+      if (captainPasswordChangeForm) {
+        captainPasswordChangeForm.onsubmit = function(e) {
+          e.preventDefault();
+          if (!captainAuth) return;
+
+          const currentPassword = document.getElementById('currentCaptainPassword').value;
+          const newPassword = document.getElementById('newCaptainPassword').value;
+          const confirmPassword = document.getElementById('confirmCaptainPassword').value;
+
+          const volunteer = appData.volunteers.find(v => v.id === captainAuth.id);
+          if (!volunteer) return;
+
+          // Validate current password
+          const defaultPassword = getPhoneDigits(volunteer.phone);
+          const storedPassword = volunteer.volunteerPassword || defaultPassword;
+          if (currentPassword !== storedPassword) {
+            alert('Current password is incorrect');
+            return;
+          }
+
+          // Validate new password
+          if (newPassword.length < 4) {
+            alert('New password must be at least 4 characters');
+            return;
+          }
+
+          if (newPassword !== confirmPassword) {
+            alert('New passwords do not match');
+            return;
+          }
+
+          // Update password
+          volunteer.volunteerPassword = newPassword;
+          saveData();
+          showPasswordChangeModal = false;
+          showToast('Password changed successfully');
+          render();
+        };
+      }
+
+      // Handle volunteer password change form
+      const volunteerPasswordChangeForm = document.getElementById('volunteerPasswordChangeForm');
+      if (volunteerPasswordChangeForm) {
+        volunteerPasswordChangeForm.onsubmit = function(e) {
+          e.preventDefault();
+          if (!volunteerAuth) return;
+
+          const currentPassword = document.getElementById('currentVolPassword').value;
+          const newPassword = document.getElementById('newVolPassword').value;
+          const confirmPassword = document.getElementById('confirmVolPassword').value;
+
+          const volunteer = appData.volunteers.find(v => v.id === volunteerAuth.id);
+          if (!volunteer) return;
+
+          // Validate current password
+          const defaultPassword = getPhoneDigits(volunteer.phone);
+          const storedPassword = volunteer.volunteerPassword || defaultPassword;
+          if (currentPassword !== storedPassword) {
+            alert('Current password is incorrect');
+            return;
+          }
+
+          // Validate new password
+          if (newPassword.length < 4) {
+            alert('New password must be at least 4 characters');
+            return;
+          }
+
+          if (newPassword !== confirmPassword) {
+            alert('New passwords do not match');
+            return;
+          }
+
+          // Update password
+          volunteer.volunteerPassword = newPassword;
+          volunteerAuth = volunteer; // Update the reference
+          saveData();
+          showVolunteerPasswordChangeModal = false;
+          showToast('Password changed successfully');
+          render();
         };
       }
 
@@ -4452,27 +5470,29 @@
       
       socket.on('dataUpdated', function(event) {
         console.log('Data updated:', event.type);
+        // Only show toasts if user is logged in (admin or captain view)
+        const isLoggedIn = currentView === 'admin' || currentView === 'captain';
         if (event.type === 'fullUpdate') {
           // Full data update - reload
           appData = event.data;
           if (!appData.submissions) appData.submissions = [];
           if (!appData.settings) appData.settings = defaultData.settings;
           render();
-          showToast('Data updated by another user');
+          if (isLoggedIn) showToast('Data updated by another user');
         } else if (event.type === 'checkIn') {
           // Single check-in added
           if (!appData.checkIns.find(c => c.volunteerId === event.data.volunteerId && c.day === event.data.day && c.shift === event.data.shift)) {
             appData.checkIns.push(event.data);
             render();
-            showToast(event.data.volunteerName + ' checked in');
+            if (isLoggedIn) showToast(event.data.volunteerName + ' checked in');
           }
         } else if (event.type === 'checkOut') {
           // Check-in removed
-          appData.checkIns = appData.checkIns.filter(c => 
+          appData.checkIns = appData.checkIns.filter(c =>
             !(c.volunteerId === event.data.volunteerId && c.day === event.data.day && c.shift === event.data.shift)
           );
           render();
-          showToast('Check-in removed');
+          if (isLoggedIn) showToast('Check-in removed');
         }
       });
       
@@ -4510,6 +5530,28 @@
 
     loadDataFromServer();
     initWebSocket();
+    initPullToRefresh();
+
+    // Register service worker for PWA
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then((registration) => {
+          console.log('ServiceWorker registered:', registration.scope);
+          // Check for updates
+          registration.addEventListener('updatefound', () => {
+            const newWorker = registration.installing;
+            newWorker.addEventListener('statechange', () => {
+              if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                // New version available
+                console.log('New version available');
+              }
+            });
+          });
+        })
+        .catch((error) => {
+          console.log('ServiceWorker registration failed:', error);
+        });
+    }
   </script>
 </body>
 </html>

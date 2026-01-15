@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" width="192" height="192">
+  <!-- Background circle - green -->
+  <circle cx="96" cy="96" r="96" fill="#1a472a"/>
+
+  <!-- Flag pole -->
+  <rect x="60" y="36" width="12" height="120" fill="#E8E8E8" rx="6"/>
+
+  <!-- Flag (waving triangle) -->
+  <path d="M 72 36 Q 132 48, 156 66 Q 132 84, 72 96 Z" fill="#DC143C"/>
+
+  <!-- Golf hole -->
+  <ellipse cx="66" cy="156" rx="30" ry="12" fill="#0d2818"/>
+</svg>

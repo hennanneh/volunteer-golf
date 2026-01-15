@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Hat Pickup | Colonial Volunteers Golf</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: linear-gradient(135deg, #1a472a 0%, #2d5a3d 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 16px;
+      padding: 40px;
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    }
+    .logo {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-size: 24px;
+      color: #1a472a;
+      margin-bottom: 8px;
+    }
+    .volunteer-name {
+      font-size: 28px;
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 20px;
+    }
+    .hat-label {
+      font-size: 14px;
+      color: #666;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+    .hat-type {
+      font-size: 32px;
+      font-weight: 700;
+      color: #1a472a;
+      margin-bottom: 30px;
+      padding: 15px;
+      background: #f0f7f0;
+      border-radius: 12px;
+    }
+    .hat-type.no-hat {
+      color: #e65100;
+      background: #fff3e0;
+    }
+    .status {
+      padding: 15px 25px;
+      border-radius: 10px;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    .status.pending {
+      background: #fff3e0;
+      color: #e65100;
+    }
+    .status.received {
+      background: #e8f5e9;
+      color: #2e7d32;
+    }
+    .deliver-btn {
+      width: 100%;
+      padding: 18px 30px;
+      font-size: 20px;
+      font-weight: 600;
+      color: white;
+      background: #1a472a;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .deliver-btn:hover {
+      background: #2d5a3d;
+      transform: translateY(-2px);
+    }
+    .deliver-btn:active {
+      transform: translateY(0);
+    }
+    .deliver-btn:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+      transform: none;
+    }
+    .success-icon {
+      font-size: 60px;
+      margin-bottom: 15px;
+    }
+    .error {
+      color: #d32f2f;
+      background: #ffebee;
+      padding: 20px;
+      border-radius: 12px;
+    }
+    .loading {
+      color: #666;
+      font-size: 18px;
+    }
+    .back-link {
+      display: inline-block;
+      margin-top: 20px;
+      color: #666;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    .back-link:hover {
+      color: #1a472a;
+    }
+  </style>
+</head>
+<body>
+  <div class="card" id="content">
+    <div class="loading">Loading...</div>
+  </div>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const volunteerId = urlParams.get('id');
+    const contentDiv = document.getElementById('content');
+
+    if (!volunteerId) {
+      contentDiv.innerHTML = `
+        <div class="error">
+          <h2>Invalid Link</h2>
+          <p>No volunteer ID provided.</p>
+        </div>
+        <a href="/" class="back-link">Go to main site</a>
+      `;
+    } else {
+      loadVolunteer();
+    }
+
+    async function loadVolunteer() {
+      try {
+        const response = await fetch('/api/data');
+        const result = await response.json();
+        const data = result.data;
+
+        const volunteer = data.volunteers.find(v => v.id === volunteerId);
+
+        if (!volunteer) {
+          contentDiv.innerHTML = `
+            <div class="error">
+              <h2>Volunteer Not Found</h2>
+              <p>Could not find a volunteer with this ID.</p>
+            </div>
+            <a href="/" class="back-link">Go to main site</a>
+          `;
+          return;
+        }
+
+        renderVolunteer(volunteer);
+      } catch (err) {
+        contentDiv.innerHTML = `
+          <div class="error">
+            <h2>Error Loading Data</h2>
+            <p>${err.message}</p>
+          </div>
+          <a href="/" class="back-link">Go to main site</a>
+        `;
+      }
+    }
+
+    function renderVolunteer(volunteer) {
+      const hasHat = volunteer.hat && volunteer.hat.trim() !== '';
+
+      if (volunteer.hatReceived) {
+        contentDiv.innerHTML = `
+          <div class="success-icon">✓</div>
+          <h1>Hat Already Delivered</h1>
+          <div class="volunteer-name">${volunteer.name}</div>
+          <div class="hat-label">Hat Type</div>
+          <div class="hat-type">${volunteer.hat || 'None'}</div>
+          <div class="status received">Received</div>
+          <a href="/" class="back-link">Go to main site</a>
+        `;
+      } else {
+        contentDiv.innerHTML = `
+          <div class="logo">🧢</div>
+          <h1>Hat Pickup</h1>
+          <div class="volunteer-name">${volunteer.name}</div>
+          <div class="hat-label">Hat Type</div>
+          <div class="hat-type ${!hasHat ? 'no-hat' : ''}">${volunteer.hat || 'No hat selected'}</div>
+          <div class="status pending">Not Yet Received</div>
+          ${hasHat ? `<button class="deliver-btn" onclick="markDelivered('${volunteer.id}')">Mark as Delivered</button>` : `<p style="color:#666;font-size:14px">No hat was ordered for this volunteer.</p>`}
+          <a href="/" class="back-link">Go to main site</a>
+        `;
+      }
+    }
+
+    async function markDelivered(id) {
+      const btn = document.querySelector('.deliver-btn');
+      if (btn) {
+        btn.disabled = true;
+        btn.textContent = 'Processing...';
+      }
+
+      try {
+        const response = await fetch('/api/hat-delivered', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ volunteerId: id })
+        });
+
+        if (!response.ok) {
+          throw new Error('Failed to update');
+        }
+
+        const result = await response.json();
+
+        // Show success
+        contentDiv.innerHTML = `
+          <div class="success-icon">✓</div>
+          <h1>Hat Delivered!</h1>
+          <div class="volunteer-name">${result.volunteer.name}</div>
+          <div class="hat-label">Hat Type</div>
+          <div class="hat-type">${result.volunteer.hat}</div>
+          <div class="status received">Received</div>
+          <a href="/" class="back-link">Go to main site</a>
+        `;
+      } catch (err) {
+        if (btn) {
+          btn.disabled = false;
+          btn.textContent = 'Mark as Delivered';
+        }
+        alert('Error: ' + err.message);
+      }
+    }
+  </script>
+</body>
+</html>
