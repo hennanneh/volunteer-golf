@@ -56,19 +56,20 @@
       width: 100%;
       text-align: center;
     }
-    .modal h3 { color: #1a472a; margin-bottom: 15px; font-size: 18px; }
-    .modal p { color: #666; margin-bottom: 25px; line-height: 1.5; }
-    .modal-buttons { display: flex; gap: 10px; }
+    .modal h3 { color: #1a472a; margin-bottom: 15px; font-size: 20px; }
+    .modal p { color: #555; margin-bottom: 25px; line-height: 1.6; font-size: 16px; }
+    .modal-buttons { display: flex; gap: 12px; }
     .modal-btn {
       flex: 1;
-      padding: 14px;
+      padding: 16px;
       border-radius: 10px;
-      font-size: 14px;
+      font-size: 16px;
       font-weight: 600;
       cursor: pointer;
       border: none;
+      min-height: 50px;
     }
-    .modal-btn.cancel { background: #f0f0f0; color: #666; }
+    .modal-btn.cancel { background: #f0f0f0; color: #555; }
     .modal-btn.confirm { background: #1a472a; color: white; }
     
     /* Submit button */
@@ -79,13 +80,14 @@
     }
     .submit-btn-large {
       width: 100%;
-      padding: 14px;
+      padding: 18px;
       border-radius: 12px;
-      font-size: 16px;
+      font-size: 18px;
       font-weight: 600;
       cursor: pointer;
       border: none;
       transition: all 0.2s;
+      min-height: 56px;
     }
     .submit-btn-large.submit { background: #1a472a; color: white; }
     .submit-btn-large.submit:hover { background: #2d5a3f; }
@@ -95,10 +97,10 @@
 
     .submission-status {
       text-align: center;
-      padding: 10px;
+      padding: 12px;
       margin-top: 10px;
       border-radius: 8px;
-      font-size: 13px;
+      font-size: 15px;
     }
     .submission-status.submitted { background: #e8f5e9; color: #2e7d32; }
     .submission-status.pending { background: #fff3e0; color: #e65100; }
@@ -373,6 +375,132 @@
       color: #666;
     }
     .tab-btn.active { background: #1a472a; color: white; }
+
+    /* Mobile tab dropdown */
+    .tabs-mobile-select {
+      display: none;
+      padding: 12px 16px;
+      font-size: 16px;
+      font-weight: 600;
+      border: 2px solid #1a472a;
+      border-radius: 8px;
+      background: white;
+      color: #1a472a;
+      cursor: pointer;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%231a472a' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 12px center;
+      box-sizing: border-box;
+    }
+
+    /* Admin header buttons - hide on mobile, show hamburger */
+    .admin-header-buttons {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .admin-hamburger-menu {
+      display: none;
+      position: relative;
+    }
+    .admin-hamburger-btn {
+      background: #1a472a;
+      border: none;
+      color: white;
+      min-width: 48px;
+      padding: 8px 10px 6px;
+      border-radius: 8px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+    }
+    .admin-hamburger-btn .hamburger-lines {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .admin-hamburger-btn span.line {
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: white;
+      border-radius: 2px;
+      transition: all 0.2s;
+    }
+    .admin-hamburger-btn.open span.line:nth-child(1) {
+      transform: rotate(45deg) translate(4px, 5px);
+    }
+    .admin-hamburger-btn.open span.line:nth-child(2) {
+      opacity: 0;
+    }
+    .admin-hamburger-btn.open span.line:nth-child(3) {
+      transform: rotate(-45deg) translate(4px, -5px);
+    }
+    .admin-hamburger-btn .menu-label {
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-top: 2px;
+    }
+    .admin-hamburger-dropdown {
+      position: absolute;
+      top: calc(100% + 8px);
+      right: 0;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+      min-width: 200px;
+      overflow: hidden;
+      z-index: 200;
+      animation: slideDown 0.15s ease-out;
+    }
+    .admin-hamburger-dropdown button,
+    .admin-hamburger-dropdown a {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      width: 100%;
+      padding: 16px 20px;
+      border: none;
+      background: none;
+      font-size: 17px;
+      color: #333;
+      cursor: pointer;
+      text-align: left;
+      text-decoration: none;
+    }
+    .admin-hamburger-dropdown button:hover,
+    .admin-hamburger-dropdown a:hover {
+      background: #f5f5f5;
+    }
+    .admin-hamburger-dropdown button:not(:last-child),
+    .admin-hamburger-dropdown a:not(:last-child) {
+      border-bottom: 1px solid #eee;
+    }
+    .admin-hamburger-dropdown .menu-icon {
+      font-size: 20px;
+      width: 24px;
+      text-align: center;
+    }
+    .admin-hamburger-dropdown .logout-item {
+      color: #c62828;
+    }
+
+    @media (max-width: 768px) {
+      .tabs { display: none; }
+      .tabs-mobile-select {
+        display: block;
+        margin: 15px 20px;
+        width: calc(100% - 40px);
+      }
+      .admin-header-buttons { display: none; }
+      .admin-hamburger-menu { display: block; }
+      .admin-mobile-refresh { display: block !important; }
+    }
     
     .shift-selector {
       padding: 15px 20px;
@@ -535,7 +663,7 @@
     .danger-btn.warning { background: #ff9800; }
     .danger-btn.danger { background: #c62828; }
     
-    /* Captain Dashboard */
+    /* Captain Dashboard - Accessible sizing for older users */
     .captain-header {
       background: linear-gradient(135deg, #1a472a, #2d5a3f);
       color: white;
@@ -544,38 +672,131 @@
       top: 0;
       z-index: 100;
     }
-    .captain-header-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
-    .captain-header h1 { font-size: 24px; font-weight: 700; }
-    .captain-header p { opacity: 0.8; font-size: 13px; margin-top: 5px; }
+    .captain-header-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; gap: 10px; }
+    .captain-header h1 { font-size: 28px; font-weight: 700; }
+    .captain-header p { opacity: 0.9; font-size: 16px; margin-top: 5px; }
     .logout-btn {
       background: rgba(255,255,255,0.2);
       border: none;
       color: white;
-      padding: 8px 16px;
+      padding: 12px 20px;
       border-radius: 8px;
       cursor: pointer;
-      font-size: 14px;
+      font-size: 16px;
+      min-height: 44px;
     }
 
-    .captain-shift-selector { display: flex; gap: 10px; flex-wrap: wrap; }
+    /* Hamburger menu for captain header */
+    .hamburger-menu {
+      position: relative;
+    }
+    .hamburger-btn {
+      background: rgba(255,255,255,0.2);
+      border: none;
+      color: white;
+      min-width: 48px;
+      padding: 8px 10px 6px;
+      border-radius: 8px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+    }
+    .hamburger-lines {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .hamburger-btn span.line {
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: white;
+      border-radius: 2px;
+      transition: all 0.2s;
+    }
+    .hamburger-btn .menu-label {
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-top: 2px;
+    }
+    .hamburger-btn.open span.line:nth-child(1) {
+      transform: rotate(45deg) translate(4px, 5px);
+    }
+    .hamburger-btn.open span.line:nth-child(2) {
+      opacity: 0;
+    }
+    .hamburger-btn.open span.line:nth-child(3) {
+      transform: rotate(-45deg) translate(4px, -5px);
+    }
+    .hamburger-dropdown {
+      position: absolute;
+      top: calc(100% + 8px);
+      right: 0;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+      min-width: 180px;
+      overflow: hidden;
+      z-index: 200;
+      animation: slideDown 0.15s ease-out;
+    }
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .hamburger-dropdown button {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      width: 100%;
+      padding: 16px 20px;
+      border: none;
+      background: none;
+      font-size: 17px;
+      color: #333;
+      cursor: pointer;
+      text-align: left;
+    }
+    .hamburger-dropdown button:hover {
+      background: #f5f5f5;
+    }
+    .hamburger-dropdown button:not(:last-child) {
+      border-bottom: 1px solid #eee;
+    }
+    .hamburger-dropdown .menu-icon {
+      font-size: 20px;
+      width: 24px;
+      text-align: center;
+    }
+    .hamburger-dropdown .logout-item {
+      color: #c62828;
+    }
+
+    .captain-shift-selector { display: flex; gap: 12px; flex-wrap: wrap; }
     .captain-shift-selector select {
-      padding: 8px 12px;
+      padding: 12px 16px;
       border-radius: 8px;
       border: none;
-      font-size: 13px;
+      font-size: 16px;
       background: white;
       font-weight: 500;
+      min-height: 48px;
     }
     .shift-toggle { display: flex; border-radius: 8px; overflow: hidden; }
     .shift-toggle button {
-      padding: 8px 16px;
+      padding: 12px 20px;
       border: none;
       font-weight: 600;
       cursor: pointer;
-      font-size: 13px;
+      font-size: 16px;
+      min-height: 48px;
     }
     .shift-toggle button.active { background: white; color: #1a472a; }
-    .shift-toggle button:not(.active) { background: #0d2818; color: rgba(255,255,255,0.5); }
+    .shift-toggle button:not(.active) { background: #0d2818; color: rgba(255,255,255,0.6); }
 
     .progress-section { padding: 15px 20px; background: white; border-bottom: 1px solid #eee; }
     .progress-header { display: flex; justify-content: space-between; margin-bottom: 8px; }
@@ -591,64 +812,67 @@
     .search-section { padding: 15px 20px; background: #f8f8f8; }
     .search-input {
       width: 100%;
-      padding: 10px 14px;
+      padding: 14px 16px;
       border: 1px solid #ddd;
       border-radius: 10px;
-      font-size: 14px;
+      font-size: 18px;
       margin-bottom: 10px;
+      min-height: 48px;
     }
-    .show-all-label { display: flex; align-items: center; gap: 8px; font-size: 13px; color: #666; }
-    .show-all-label input { width: 18px; height: 18px; }
+    .show-all-label { display: flex; align-items: center; gap: 10px; font-size: 16px; color: #666; }
+    .show-all-label input { width: 22px; height: 22px; }
 
     .volunteer-list { padding: 10px 20px 100px; }
     .volunteer-item {
       display: flex;
       align-items: center;
-      padding: 16px;
-      margin-bottom: 8px;
+      padding: 18px 16px;
+      margin-bottom: 10px;
       background: white;
       border-radius: 12px;
       cursor: pointer;
       border: 2px solid transparent;
       box-shadow: 0 2px 4px rgba(0,0,0,0.05);
       transition: all 0.2s;
+      min-height: 64px;
     }
     .volunteer-item.checked { border-color: #4caf50; }
     .volunteer-checkbox {
-      width: 28px;
-      height: 28px;
+      width: 36px;
+      height: 36px;
       border-radius: 50%;
-      border: 2px solid #ddd;
+      border: 2px solid #bbb;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-right: 15px;
+      margin-right: 16px;
       flex-shrink: 0;
       background: white;
     }
     .volunteer-item.checked .volunteer-checkbox { background: #4caf50; border: none; }
-    .volunteer-checkbox-icon { color: white; font-size: 16px; display: none; }
+    .volunteer-checkbox-icon { color: white; font-size: 22px; display: none; }
     .volunteer-item.checked .volunteer-checkbox-icon { display: block; }
     .volunteer-info { flex: 1; }
-    .volunteer-name { font-weight: 500; font-size: 14px; color: #333; }
+    .volunteer-name { font-weight: 500; font-size: 18px; color: #333; }
     .volunteer-alt {
       display: inline-block;
       margin-top: 4px;
-      padding: 2px 8px;
+      padding: 4px 10px;
       background: #fff3e0;
       color: #e65100;
       border-radius: 4px;
-      font-size: 11px;
+      font-size: 14px;
       font-weight: 600;
     }
-    .volunteer-hole { font-size: 12px; color: #999; }
+    .volunteer-hole { font-size: 15px; color: #888; }
     .empty-list {
       text-align: center;
       padding: 40px;
-      color: #999;
+      color: #888;
       background: white;
       border-radius: 12px;
       margin-top: 10px;
+      font-size: 16px;
     }
 
     .floating-summary {
@@ -662,11 +886,11 @@
       box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
     }
     .summary-stats { display: flex; justify-content: space-around; text-align: center; }
-    .summary-stat-value { font-size: 20px; font-weight: 700; }
+    .summary-stat-value { font-size: 24px; font-weight: 700; }
     .summary-stat-value.green { color: #1a472a; }
     .summary-stat-value.orange { color: #f57c00; }
     .summary-stat-value.gray { color: #666; }
-    .summary-stat-label { font-size: 11px; color: #666; }
+    .summary-stat-label { font-size: 14px; color: #666; }
 
     /* Save toast notification */
     .save-toast {
@@ -821,7 +1045,6 @@
     let successMessage = '';
     let showSaveToast = false;
     let saveToastTimeout = null;
-    let showPinSetupModal = false;
     let showAdminPasswordChangeModal = false; // For admin password change prompt
     let showPasswordChangeModal = false; // For captain password change prompt
     let showVolunteerPasswordChangeModal = false; // For volunteer password change prompt
@@ -829,6 +1052,10 @@
     let showReportsModal = false; // For captain reports view
     let currentReport = null; // Currently selected report type
     let reportFilters = { hole: 'all', day: 'all', shift: 'all' }; // Current report filters
+    let serviceRecognitionSort = { col: 'years', dir: 'desc' }; // Service recognition report sort
+    let showHoleHistory = false; // Show moved volunteers on hole roster
+    let hamburgerMenuOpen = false; // For captain header hamburger menu
+    let adminHamburgerMenuOpen = false; // For admin header hamburger menu
 
     // Save auth state to localStorage
     function saveAuthState() {
@@ -866,7 +1093,7 @@
           } else if (authState.adminAuth && authState.adminAuthUserId) {
             // Validate the admin user still exists and is still an admin type
             const admin = appData.volunteers.find(v => v.id === authState.adminAuthUserId);
-            if (admin && (admin.type === 'Admin' || admin.type === 'View Admin')) {
+            if (admin && (admin.type === 'Admin' || admin.type === 'Chairman' || admin.type === 'Asst. Chairman')) {
               adminAuth = admin.type === 'Admin' ? 'full' : 'viewOnly';
               adminAuthUser = admin;
               adminTab = authState.adminTab || 'overview';
@@ -1101,6 +1328,20 @@
         pullStartY = 0;
         pullMoveY = 0;
       }, { passive: true });
+
+      // Close hamburger menus when clicking outside
+      document.addEventListener('click', (e) => {
+        let shouldRender = false;
+        if (hamburgerMenuOpen && !e.target.closest('.hamburger-menu')) {
+          hamburgerMenuOpen = false;
+          shouldRender = true;
+        }
+        if (adminHamburgerMenuOpen && !e.target.closest('.admin-hamburger-menu')) {
+          adminHamburgerMenuOpen = false;
+          shouldRender = true;
+        }
+        if (shouldRender) render();
+      });
     }
 
     // Save data to server
@@ -1117,6 +1358,32 @@
           console.error('Failed to save data:', err);
         });
       }, 300);
+    }
+
+    // Activity logging function
+    function logActivity(action, target, details) {
+      const user = adminAuthUser || (captainAuth ? appData.volunteers.find(v => v.id === captainAuth.id) : null) || volunteerAuth;
+      if (!user) return;
+
+      const entry = {
+        id: Date.now().toString(),
+        timestamp: new Date().toISOString(),
+        user: user.name,
+        userType: adminAuth ? 'Admin' : (captainAuth ? 'Captain' : 'Volunteer'),
+        action: action,
+        target: target || '',
+        details: details || ''
+      };
+
+      if (!appData.activityLog) appData.activityLog = [];
+      appData.activityLog.unshift(entry);
+
+      // Keep last 1000 entries to prevent unbounded growth
+      if (appData.activityLog.length > 1000) {
+        appData.activityLog = appData.activityLog.slice(0, 1000);
+      }
+
+      saveData();
     }
 
     // Archives stored on server
@@ -1200,23 +1467,6 @@
     function getPhoneDigits(phone) {
       if (!phone) return '';
       return String(phone).replace(/\D/g, '').slice(-10);
-    }
-
-    function isWeakPin(pin) {
-      if (!pin || pin.length !== 4) return true;
-      var p = pin.toUpperCase();
-      // All same character
-      if (p[0] === p[1] && p[1] === p[2] && p[2] === p[3]) return true;
-      // Sequential ascending or descending
-      var asc = true, desc = true;
-      for (var i = 1; i < 4; i++) {
-        if (p.charCodeAt(i) !== p.charCodeAt(i-1) + 1) asc = false;
-        if (p.charCodeAt(i) !== p.charCodeAt(i-1) - 1) desc = false;
-      }
-      if (asc || desc) return true;
-      // Common weak patterns
-      var weak = ["0000","1111","2222","3333","4444","5555","6666","7777","8888","9999","1234","4321","0123","3210","1122","2211","1212","2121"];
-      return weak.includes(p);
     }
 
     function formatTimestamp(ts) {
@@ -1308,7 +1558,7 @@
 
     function renderCaptainLogin() {
       const captains = appData.volunteers.filter(v =>
-        v.type === 'Captain' || v.type === 'Asst. Chairman' || v.type === 'Chairman' || v.type === 'View Admin' || v.type === 'Admin'
+        v.type === 'Captain' || v.type === 'Asst. Chairman' || v.type === 'Chairman' || v.type === 'Admin'
       );
 
       // Count captains per hole
@@ -1577,18 +1827,59 @@
                 <p>${appData.volunteers.length} volunteers loaded</p>
               </div>
             </div>
-            <div style="display:flex;gap:10px;align-items:center">
+            <div class="admin-header-buttons">
               ${adminAuthUser ? `<span style="color:#666;font-size:13px;margin-right:5px">${adminAuthUser.name.split(',')[0]}${adminAuth === 'viewOnly' ? ' (View Only)' : ''}</span><button onclick="showAdminPasswordChangeModal=true;render()" style="background:none;border:1px solid #888;color:#666;padding:6px 10px;border-radius:6px;cursor:pointer;font-size:12px">Change Password</button>` : ''}
-              <button onclick="refreshData()" title="Refresh" style="background:none;border:1px solid #1a472a;color:#1a472a;padding:8px 10px;border-radius:8px;cursor:pointer;font-size:16px;line-height:1">&#8635;</button><a href="/help.html" target="_blank" style="color:#1a472a;font-size:14px;text-decoration:none">Help</a><button onclick="logout()" style="background:#1a472a;border:none;color:white;padding:8px 16px;border-radius:8px;cursor:pointer;font-size:14px">Logout</button></div>
+              <button onclick="refreshData()" title="Refresh" style="background:none;border:1px solid #1a472a;color:#1a472a;padding:8px 10px;border-radius:8px;cursor:pointer;font-size:16px;line-height:1">&#8635;</button>
+              <a href="/help.html" target="_blank" style="color:#1a472a;font-size:14px;text-decoration:none">Help</a>
+              <button onclick="logout()" style="background:#1a472a;border:none;color:white;padding:8px 16px;border-radius:8px;cursor:pointer;font-size:14px">Logout</button>
+            </div>
+            <div style="display:flex;gap:8px;align-items:center">
+              <button onclick="refreshData()" title="Refresh" style="background:#1a472a;border:none;color:white;padding:8px 10px;border-radius:8px;cursor:pointer;font-size:16px;line-height:1;min-width:44px;min-height:44px;display:none" class="admin-mobile-refresh">&#8635;</button>
+              <div class="admin-hamburger-menu">
+              <button class="admin-hamburger-btn ${adminHamburgerMenuOpen ? 'open' : ''}" onclick="toggleAdminHamburgerMenu()">
+                <div class="hamburger-lines">
+                  <span class="line"></span>
+                  <span class="line"></span>
+                  <span class="line"></span>
+                </div>
+                <span class="menu-label">Menu</span>
+              </button>
+              ${adminHamburgerMenuOpen ? `
+                <div class="admin-hamburger-dropdown">
+                  ${adminAuthUser ? `
+                  <button onclick="adminHamburgerMenuOpen=false;showAdminPasswordChangeModal=true;render()">
+                    <span class="menu-icon">🔑</span> Change Password
+                  </button>
+                  ` : ''}
+                  <button onclick="adminHamburgerMenuOpen=false;refreshData()">
+                    <span class="menu-icon">🔄</span> Refresh
+                  </button>
+                  <a href="/help.html" target="_blank" onclick="adminHamburgerMenuOpen=false">
+                    <span class="menu-icon">❓</span> Help
+                  </a>
+                  <button class="logout-item" onclick="logout()">
+                    <span class="menu-icon">🚪</span> Logout
+                  </button>
+                </div>
+              ` : ''}
+            </div>
+            </div>
           </div>
 
           <div class="tabs">
-            ${['overview', 'checkins', 'volunteers', 'reports', 'import', 'settings']
-              .filter(t => adminAuth === 'full' || (t !== 'import' && t !== 'settings'))
+            ${['overview', 'checkins', 'volunteers', 'reports', 'summary', 'activity', 'import', 'settings']
+              .filter(t => adminAuth === 'full' || (t !== 'import' && t !== 'settings' && t !== 'activity'))
               .map(t =>
-              `<button class="tab-btn ${adminTab === t ? 'active' : ''}" onclick="setAdminTab('${t}')">${t === 'checkins' ? 'Check-ins' : t === 'volunteers' ? (adminAuth === 'full' ? 'Edit Volunteers' : 'Volunteers') : t.charAt(0).toUpperCase() + t.slice(1)}</button>`
+              `<button class="tab-btn ${adminTab === t ? 'active' : ''}" onclick="setAdminTab('${t}')">${t === 'checkins' ? 'Check-ins' : t === 'volunteers' ? (adminAuth === 'full' ? 'Edit Volunteers' : 'Volunteers') : t === 'activity' ? 'Activity Log' : t === 'summary' ? 'Tournament Summary' : t.charAt(0).toUpperCase() + t.slice(1)}</button>`
             ).join('')}
           </div>
+          <select class="tabs-mobile-select" onchange="setAdminTab(this.value)">
+            ${['overview', 'checkins', 'volunteers', 'reports', 'summary', 'activity', 'import', 'settings']
+              .filter(t => adminAuth === 'full' || (t !== 'import' && t !== 'settings' && t !== 'activity'))
+              .map(t =>
+              `<option value="${t}" ${adminTab === t ? 'selected' : ''}>${t === 'checkins' ? 'Check-ins' : t === 'volunteers' ? (adminAuth === 'full' ? 'Edit Volunteers' : 'Volunteers') : t === 'activity' ? 'Activity Log' : t === 'summary' ? 'Tournament Summary' : t.charAt(0).toUpperCase() + t.slice(1)}</option>`
+            ).join('')}
+          </select>
           
           ${adminTab === 'overview' ? `
             <div class="shift-selector">
@@ -1611,6 +1902,8 @@
             ${adminTab === 'checkins' ? renderCheckins() : ''}
             ${adminTab === 'volunteers' ? renderVolunteersEdit() : ''}
             ${adminTab === 'reports' ? renderReports(false) : ''}
+            ${adminTab === 'summary' ? renderTournamentSummary(stats) : ''}
+            ${adminTab === 'activity' ? renderActivityLog() : ''}
             ${adminTab === 'import' ? renderImport() : ''}
             ${adminTab === 'settings' ? renderSettings() : ''}
           </div>
@@ -1729,37 +2022,6 @@
               ${s.scheduled === 0 ? '<div style="font-size:10px;color:#999;margin-top:4px">No volunteers</div>' : ''}
             </div>
           `).join('')}
-        </div>
-
-        <div style="margin-top:30px">
-          <h3 style="font-size:14px;color:#333;margin-bottom:15px">Week at a Glance</h3>
-          <div class="overview-grid">
-            ${DAYS.map(day => {
-              const dayInfo = getRelativeTimeLabel(day, 'AM');
-              return `
-              <div class="day-card">
-                <h3>${day} <span style="font-weight:normal;font-size:11px;color:#666">(${dayInfo.dateOnly})</span></h3>
-                ${SHIFTS.map(shift => {
-                  const s = stats[`${day} ${shift}`];
-                  const isSelected = day === selectedDay && shift === selectedShift;
-                  const color = s.percentage >= 90 ? '#4caf50' : s.percentage >= 50 ? '#ff9800' : '#1a472a';
-                  const shiftLabel = shift === 'AM' ? 'morning' : 'afternoon';
-                  return `
-                    <div class="shift-item ${isSelected ? 'selected' : ''}" onclick="selectShift('${day}', '${shift}')">
-                      <div class="shift-item-header">
-                        <span style="font-size:12px">${shiftLabel}</span>
-                        <span style="font-weight:600;font-size:12px;color:${s.percentage >= 90 ? '#2e7d32' : s.percentage >= 50 ? '#f57c00' : '#666'}">${s.percentage}%</span>
-                      </div>
-                      <div class="progress-bar">
-                        <div class="progress-fill" style="width:${s.percentage}%;background:${color}"></div>
-                      </div>
-                      <div class="shift-stats" style="font-size:11px">${s.checkedIn} / ${s.scheduled} checked in</div>
-                    </div>
-                  `;
-                }).join('')}
-              </div>
-            `}).join('')}
-          </div>
         </div>
       `;
     }
@@ -1926,7 +2188,7 @@
 
           <div class="import-card" style="margin-top:20px">
             <h3 style="font-size:16px;color:#1a472a;margin-bottom:15px">Update Existing Volunteers</h3>
-            <p>Upload a CSV with <strong>Name</strong> column plus any fields to update: <em>Email, Phone, Type, Hole, Years Worked, Custom PIN, Hat</em>. Names must match exactly.</p>
+            <p>Upload a CSV with <strong>Name</strong> column plus any fields to update: <em>Email, Phone, Type, Hole, Years Worked, Hat</em>. Names must match exactly.</p>
             <label class="file-upload" style="border-color:#ff9800;background:#fffbf5">
               <input type="file" accept=".csv" id="updateFileInput" onchange="handleUpdateUpload(this)">
               <div class="file-upload-icon">🔄</div>
@@ -1971,7 +2233,7 @@
 
               <label>Type</label>
               <select id="editType">
-                ${['Volunteer', 'Captain', 'Asst. Chairman', 'Chairman', 'View Admin', 'Admin'].map(t =>
+                ${['Volunteer', 'Captain', 'Asst. Chairman', 'Chairman', 'Admin'].map(t =>
                   `<option value="${t}" ${editingVolunteer.type === t ? 'selected' : ''}>${t}</option>`
                 ).join('')}
               </select>
@@ -1984,7 +2246,7 @@
                 <option value="99" ${editingVolunteer.hole === 99 ? 'selected' : ''}>Admin (99)</option>
               </select>
 
-              ${(editingVolunteer.type === 'Chairman' || editingVolunteer.type === 'Asst. Chairman' || editingVolunteer.type === 'View Admin' || editingVolunteer.type === 'Admin') ? `
+              ${(editingVolunteer.type === 'Chairman' || editingVolunteer.type === 'Asst. Chairman' || editingVolunteer.type === 'Admin') ? `
               <label>Assigned Holes</label>
               <div style="display:flex;flex-wrap:wrap;gap:8px;padding:12px;background:#f8f9fa;border-radius:6px;border:1px solid #e0e0e0">
                 ${[...Array(getNumberOfHoles()).keys()].map(i => i + 1).map(h => {
@@ -2007,16 +2269,7 @@
               <label>Email</label>
               <input type="email" id="editEmail" value="${editingVolunteer.email || ''}" placeholder="volunteer@example.com">
 
-              ${(editingVolunteer.type === 'Captain' || editingVolunteer.type === 'Asst. Chairman' || editingVolunteer.type === 'Chairman' || editingVolunteer.type === 'View Admin' || editingVolunteer.type === 'Admin') && !editingVolunteer.isNew ? `
-              <label>Login PIN</label>
-              <div style="display:flex;gap:10px;align-items:center">
-                <input type="text" id="editPin" value="${editingVolunteer.customPin || ''}" placeholder="${formatPhone(editingVolunteer.phone) || 'Not set'}" maxlength="4" style="width:80px;text-align:center">
-                ${editingVolunteer.customPin ? `<button type="button" onclick="resetVolunteerPin()" style="padding:6px 12px;background:#ff9800;color:white;border:none;border-radius:4px;font-size:12px;cursor:pointer">Reset to Phone</button>` : '<span style="color:#666;font-size:11px">Using last 4 of phone</span>'}
-              </div>
-              <p style="font-size:10px;color:#999;margin-top:4px">Custom 4-digit PIN for captain login, or blank to use last 4 of phone</p>
-              ` : ''}
-
-              ${(editingVolunteer.type === 'Admin' || editingVolunteer.type === 'View Admin') && !isNewVolunteer ? `
+              ${(editingVolunteer.type === 'Admin' || editingVolunteer.type === 'Chairman' || editingVolunteer.type === 'Asst. Chairman') && !isNewVolunteer ? `
               <label>Admin Password</label>
               <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
                 <span style="color:#666;font-size:12px;padding:8px 12px;background:#f5f5f5;border-radius:4px">
@@ -2106,7 +2359,7 @@
               <option value="Volunteer" ${volFilterType === 'Volunteer' ? 'selected' : ''}>Volunteers</option>
               <option value="Captain" ${volFilterType === 'Captain' ? 'selected' : ''}>Captains</option>
               <option value="Asst. Chairman" ${volFilterType === 'Asst. Chairman' ? 'selected' : ''}>Asst. Chairmen</option>
-              <option value="View Admin" ${volFilterType === 'View Admin' ? 'selected' : ''}>View Admins</option>
+              <option value="Chairman" ${volFilterType === 'Chairman' ? 'selected' : ''}>Chairmen</option>
               <option value="Admin" ${volFilterType === 'Admin' ? 'selected' : ''}>Admins</option>
             </select>
             <select onchange="volFilterHole=this.value;render()" style="padding:8px;border:1px solid #ddd;border-radius:6px;font-size:13px">
@@ -2129,14 +2382,13 @@
                 <th style="font-size:11px">Type</th>
                 <th style="font-size:11px">Hole</th>
                 <th style="font-size:11px">Years</th>
-                <th style="font-size:11px">Phone (last 4 digits)</th>
                 <th style="font-size:11px">Shifts</th>
                 <th></th>
               </tr>
             </thead>
             <tbody>
               ${filtered.length === 0 ? `
-                <tr><td colspan="7" style="padding:30px;text-align:center;color:#999;font-size:13px">No volunteers found</td></tr>
+                <tr><td colspan="6" style="padding:30px;text-align:center;color:#999;font-size:13px">No volunteers found</td></tr>
               ` : filtered.slice(0, 100).map(v => {
                 const shiftCount = v.scheduled ? Object.keys(v.scheduled).filter(k => v.scheduled[k]).length : 0;
                 return `
@@ -2145,14 +2397,13 @@
                     <td><span style="padding:2px 6px;border-radius:4px;font-size:10px;background:${v.type === 'Captain' ? '#e3f2fd' : v.type === 'Volunteer' ? '#f5f5f5' : '#fff3e0'}">${v.type}</span></td>
                     <td style="font-size:12px">#${v.hole}</td>
                     <td style="color:#666;text-align:center;font-size:12px">${v.yearsWorked || 0}</td>
-                    <td style="color:#666;font-size:12px">${formatPhone(v.phone) || '-'}</td>
                     <td style="color:#666;font-size:12px">${shiftCount} shifts</td>
                     <td>${adminAuth === 'full' ? `<button class="edit-btn" onclick="event.stopPropagation();editVolunteer('${v.id}')" style="font-size:11px;padding:3px 8px">Edit</button>` : ''}</td>
                   </tr>
                 `;
               }).join('')}
               ${filtered.length > 100 ? `
-                <tr><td colspan="7" style="padding:15px;text-align:center;color:#666;font-size:12px">Showing first 100 of ${filtered.length} results. Use search to narrow down.</td></tr>
+                <tr><td colspan="6" style="padding:15px;text-align:center;color:#666;font-size:12px">Showing first 100 of ${filtered.length} results. Use search to narrow down.</td></tr>
               ` : ''}
             </tbody>
           </table>
@@ -2190,16 +2441,6 @@
       if (event.target.classList.contains('modal-overlay')) {
         editingVolunteer = null;
         render();
-      }
-    }
-
-    function resetVolunteerPin() {
-      const pinInput = document.getElementById('editPin');
-      if (pinInput) {
-        pinInput.value = '';
-      }
-      if (editingVolunteer) {
-        editingVolunteer.customPin = '';
       }
     }
 
@@ -2388,12 +2629,10 @@
       const newYears = parseInt(document.getElementById('editYears').value) || 0;
       const newHat = document.getElementById('editHat').value;
       const newHatReceived = document.getElementById('editHatReceived').checked;
-      const pinInput = document.getElementById('editPin');
-      const newPin = pinInput ? pinInput.value.trim() : null;
 
       // Get assigned holes for Chairman types
       let newAssignedHoles = null;
-      if (newType === 'Chairman' || newType === 'Asst. Chairman' || newType === 'View Admin' || newType === 'Admin') {
+      if (newType === 'Chairman' || newType === 'Asst. Chairman' || newType === 'Admin') {
         const checkboxes = document.querySelectorAll('.assignedHoleCheckbox:checked');
         newAssignedHoles = Array.from(checkboxes).map(cb => parseInt(cb.value)).sort((a, b) => a - b);
         // Ensure primary hole is included
@@ -2408,16 +2647,16 @@
         return;
       }
 
-      // Validate email for Admin/View Admin types
-      if (newType === 'Admin' || newType === 'View Admin') {
+      // Validate email for Admin/Chairman/Asst. Chairman types (they can log into admin portal)
+      if (newType === 'Admin' || newType === 'Chairman' || newType === 'Asst. Chairman') {
         if (!newEmail) {
-          alert('Email is required for Admin and View Admin users');
+          alert('Email is required for Admin, Chairman, and Asst. Chairman users');
           return;
         }
         // Check for duplicate email among other admins
         const duplicateEmail = appData.volunteers.find(v =>
           v.id !== editingVolunteer.id &&
-          (v.type === 'Admin' || v.type === 'View Admin') &&
+          (v.type === 'Admin' || v.type === 'Chairman' || v.type === 'Asst. Chairman') &&
           v.email && v.email.toLowerCase() === newEmail.toLowerCase()
         );
         if (duplicateEmail) {
@@ -2454,14 +2693,16 @@
         if (newAssignedHoles) {
           newVol.assignedHoles = newAssignedHoles;
         }
-        // Initialize admin password for new Admin/View Admin users
-        if (newType === 'Admin' || newType === 'View Admin') {
+        // Initialize admin password for new Admin/Chairman/Asst. Chairman users
+        if (newType === 'Admin' || newType === 'Chairman' || newType === 'Asst. Chairman') {
           newVol.adminPassword = 'admin2025';
           newVol.adminPasswordSetAt = null;
         }
         appData.volunteers.push(newVol);
 
-        saveData();
+        // Log the addition
+        logActivity('add-volunteer', newName, 'Added new volunteer (Type: ' + newType + ', Hole: ' + newHole + ')');
+
         editingVolunteer = null;
         render();
 
@@ -2471,8 +2712,9 @@
         const idx = appData.volunteers.findIndex(v => v.id === editingVolunteer.id);
         if (idx === -1) return;
 
+        const oldVol = appData.volunteers[idx];
         const updatedVol = {
-          ...appData.volunteers[idx],
+          ...oldVol,
           name: newName,
           type: newType,
           hole: newHole,
@@ -2483,24 +2725,25 @@
           hatReceived: newHatReceived,
           scheduled: newSchedule
         };
+        // Track original hole for move history
+        if (newHole !== oldVol.hole) {
+          if (oldVol.originalHole === undefined) {
+            updatedVol.originalHole = oldVol.hole;
+          } else if (newHole === oldVol.originalHole) {
+            // Moving back to original hole - clear tracking
+            delete updatedVol.originalHole;
+          }
+        }
         // Update assigned holes for Chairman types
         if (newAssignedHoles) {
           updatedVol.assignedHoles = newAssignedHoles;
         } else {
           delete updatedVol.assignedHoles;
         }
-        // Update PIN if the field exists (only for captains)
-        if (newPin !== null) {
-          if (newPin === '') {
-            delete updatedVol.customPin;
-          } else if (/^\d{4}$/.test(newPin)) {
-            updatedVol.customPin = newPin;
-          }
-        }
         // Handle admin password when type changes
         const oldType = appData.volunteers[idx].type;
-        const wasAdmin = oldType === 'Admin' || oldType === 'View Admin';
-        const isAdmin = newType === 'Admin' || newType === 'View Admin';
+        const wasAdmin = oldType === 'Admin' || oldType === 'Chairman' || oldType === 'Asst. Chairman';
+        const isAdmin = newType === 'Admin' || newType === 'Chairman' || newType === 'Asst. Chairman';
         if (!wasAdmin && isAdmin) {
           // Changed TO admin type - initialize password
           updatedVol.adminPassword = 'admin2025';
@@ -2519,6 +2762,9 @@
           }
           return c;
         });
+
+        // Log the edit
+        logActivity('edit-volunteer', newName, 'Edited volunteer (Type: ' + newType + ', Hole: ' + newHole + ')');
 
         saveData();
 
@@ -2553,6 +2799,7 @@
       const reportTypes = [
         { id: 'volunteer-totals', name: 'Volunteer Totals', desc: 'Total shifts worked per volunteer' },
         { id: 'hole-roster', name: 'Hole Roster', desc: 'Full schedule for a hole' },
+        { id: 'service-recognition', name: 'Service Recognition', desc: 'Volunteers with 5, 10, 15, 20+ years of service' },
         { id: 'hat-qr-codes', name: 'Hat QR Codes', desc: 'Print all volunteer QR codes for hat pickup' },
         { id: 'custom', name: 'Custom Report', desc: 'Build your own report with custom columns and filters' }
       ];
@@ -2620,21 +2867,35 @@
       `;
     }
 
+    function toggleHoleHistory(checked) {
+      showHoleHistory = checked;
+      render();
+    }
+
+    function clearHoleHistory() {
+      if (confirm('Clear all move history?')) {
+        appData.volunteers.forEach(v => { delete v.originalHole; });
+        saveData();
+        render();
+      }
+    }
+
     function renderReportFilters(isCaptainView, captainHole) {
       if (currentReport === 'hat-qr-codes') return ''; // Has its own filters
       const showHoleFilter = !isCaptainView && ['volunteer-totals', 'hole-roster'].includes(currentReport);
       const showDayFilter = currentReport === 'hole-roster';
+      const isHoleRoster = currentReport === 'hole-roster';
+      const showHistoryCheckbox = isHoleRoster && !isCaptainView;
+      const movedCount = appData.volunteers.filter(v => v.originalHole !== undefined).length;
 
-      if (!showHoleFilter && !showDayFilter) return '';
+      if (!showHoleFilter && !showDayFilter && !showHistoryCheckbox) return '';
 
       return `
-        <div style="background:#f8f9fa;border-radius:8px;padding:15px;margin-bottom:20px;display:flex;flex-wrap:wrap;gap:15px;align-items:center">
-          <span style="font-size:13px;color:#666;font-weight:600">Filters:</span>
-
+        <div style="background:#f8f9fa;border-radius:8px;padding:12px 15px;margin-bottom:20px;display:flex;flex-wrap:wrap;gap:12px;align-items:center">
           ${showHoleFilter ? `
-            <div>
-              <label style="font-size:12px;color:#666;display:block;margin-bottom:4px">Hole</label>
-              <select onchange="reportFilters.hole=this.value;render()" style="padding:8px 12px;border:1px solid #ddd;border-radius:6px;font-size:13px">
+            <div style="display:flex;align-items:center;gap:8px">
+              <label style="font-size:13px;color:#666">Hole:</label>
+              <select onchange="reportFilters.hole=this.value;render()" style="padding:6px 10px;border:1px solid #ddd;border-radius:6px;font-size:13px">
                 ${currentReport !== 'hole-roster' ? `<option value="all" ${reportFilters.hole === 'all' ? 'selected' : ''}>All Holes</option>` : ''}
                 ${[...Array(getNumberOfHoles()).keys()].map(i => i + 1).map(h =>
                   `<option value="${h}" ${reportFilters.hole == h || (currentReport === 'hole-roster' && reportFilters.hole === 'all' && h === 1) ? 'selected' : ''}>Hole #${h}</option>`
@@ -2644,13 +2905,28 @@
           ` : ''}
 
           ${showDayFilter ? `
-            <div>
-              <label style="font-size:12px;color:#666;display:block;margin-bottom:4px">Day</label>
-              <select onchange="reportFilters.day=this.value;render()" style="padding:8px 12px;border:1px solid #ddd;border-radius:6px;font-size:13px">
+            <div style="display:flex;align-items:center;gap:8px">
+              <label style="font-size:13px;color:#666">Day:</label>
+              <select onchange="reportFilters.day=this.value;render()" style="padding:6px 10px;border:1px solid #ddd;border-radius:6px;font-size:13px">
                 <option value="all" ${reportFilters.day === 'all' ? 'selected' : ''}>All Days</option>
                 ${DAYS.map(d => `<option value="${d}" ${reportFilters.day === d ? 'selected' : ''}>${d}</option>`).join('')}
               </select>
             </div>
+          ` : ''}
+
+          ${showHistoryCheckbox ? `
+            <div style="border-left:1px solid #ddd;padding-left:12px;display:flex;align-items:center;gap:6px">
+              <label style="display:flex;align-items:center;gap:6px;cursor:pointer;font-size:13px">
+                <input type="checkbox" ${showHoleHistory ? 'checked' : ''} onchange="toggleHoleHistory(this.checked)" style="width:15px;height:15px;cursor:pointer">
+                Show move history
+              </label>
+              ${movedCount > 0 ? `<span style="background:#ff9800;color:white;padding:2px 6px;border-radius:10px;font-size:11px">${movedCount}</span>` : ''}
+              ${movedCount > 0 && showHoleHistory ? `<button onclick="clearHoleHistory()" style="background:none;border:none;color:#999;font-size:11px;cursor:pointer;text-decoration:underline">Clear</button>` : ''}
+            </div>
+          ` : ''}
+
+          ${isHoleRoster && !isCaptainView ? `
+            <button onclick="reportFilters.hole='all-export';render()" style="margin-left:auto;padding:6px 14px;background:#1a472a;color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:13px">View All Holes</button>
           ` : ''}
         </div>
       `;
@@ -2663,7 +2939,9 @@
         case 'volunteer-totals':
           return renderVolunteerTotalsReport(holeFilter);
         case 'hole-roster':
-          return renderHoleRosterReport(holeFilter || 1);
+          return renderHoleRosterReport(holeFilter || 1, { showMoveColumn: true });
+        case 'service-recognition':
+          return renderServiceRecognitionReport();
         case 'hat-qr-codes':
           return renderHatQRCodesReport();
         case 'custom':
@@ -2727,19 +3005,130 @@
       `;
     }
 
+    function sortServiceRecognition(col) {
+      if (serviceRecognitionSort.col === col) {
+        serviceRecognitionSort.dir = serviceRecognitionSort.dir === 'asc' ? 'desc' : 'asc';
+      } else {
+        serviceRecognitionSort.col = col;
+        serviceRecognitionSort.dir = col === 'name' ? 'asc' : 'desc';
+      }
+      render();
+    }
+
+    function renderServiceRecognitionReport() {
+      // Filter volunteers with years of service that are multiples of 5
+      let eligibleVolunteers = appData.volunteers
+        .filter(v => v.yearsWorked && v.yearsWorked >= 5 && v.yearsWorked % 5 === 0);
+
+      // Apply sorting
+      const { col, dir } = serviceRecognitionSort;
+      const mult = dir === 'asc' ? 1 : -1;
+      eligibleVolunteers.sort((a, b) => {
+        if (col === 'name') return a.name.localeCompare(b.name) * mult;
+        if (col === 'hole') return (a.hole - b.hole) * mult;
+        if (col === 'years') return (a.yearsWorked - b.yearsWorked) * mult;
+        return 0;
+      });
+
+      if (eligibleVolunteers.length === 0) {
+        return `
+          <div id="report-content" style="text-align:center;padding:40px;color:#666">
+            <p style="font-size:16px;margin-bottom:10px">No volunteers eligible for service recognition</p>
+            <p style="font-size:13px">Volunteers with 5, 10, 15, 20+ years of service will appear here</p>
+          </div>
+        `;
+      }
+
+      // Group by milestone
+      const milestones = {};
+      eligibleVolunteers.forEach(v => {
+        if (!milestones[v.yearsWorked]) milestones[v.yearsWorked] = [];
+        milestones[v.yearsWorked].push(v);
+      });
+
+      const sortArrow = (c) => serviceRecognitionSort.col === c ? (serviceRecognitionSort.dir === 'asc' ? ' ▲' : ' ▼') : '';
+      const thStyle = 'padding:12px;border-bottom:2px solid #ddd;cursor:pointer;user-select:none';
+
+      return `
+        <div id="report-content">
+          <p style="color:#666;font-size:13px;margin-bottom:20px">${eligibleVolunteers.length} volunteer${eligibleVolunteers.length !== 1 ? 's' : ''} eligible for service recognition awards</p>
+          <table style="width:100%;border-collapse:collapse;font-size:14px">
+            <thead>
+              <tr style="background:#f8f9fa">
+                <th style="text-align:left;${thStyle}" onclick="sortServiceRecognition('name')">Name${sortArrow('name')}</th>
+                <th style="text-align:center;${thStyle}" onclick="sortServiceRecognition('hole')">Hole${sortArrow('hole')}</th>
+                <th style="text-align:center;${thStyle}" onclick="sortServiceRecognition('years')">Years of Service${sortArrow('years')}</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${eligibleVolunteers.map(v => `
+                <tr>
+                  <td style="padding:10px 12px;border-bottom:1px solid #eee">${v.name}</td>
+                  <td style="text-align:center;padding:10px 12px;border-bottom:1px solid #eee">#${v.hole}</td>
+                  <td style="text-align:center;padding:10px 12px;border-bottom:1px solid #eee">
+                    <span style="background:${v.yearsWorked >= 20 ? '#ffd700' : v.yearsWorked >= 15 ? '#c0c0c0' : v.yearsWorked >= 10 ? '#cd7f32' : '#1a472a'};color:${v.yearsWorked >= 20 ? '#333' : v.yearsWorked >= 15 ? '#333' : '#fff'};padding:4px 10px;border-radius:12px;font-weight:600">${v.yearsWorked} years</span>
+                  </td>
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+
+          <div style="margin-top:30px;padding:20px;background:#f8f9fa;border-radius:8px">
+            <h4 style="margin:0 0 15px 0;font-size:14px;color:#333">Summary by Milestone</h4>
+            <div style="display:flex;flex-wrap:wrap;gap:15px">
+              ${Object.keys(milestones).sort((a, b) => b - a).map(years => `
+                <div style="background:#fff;padding:12px 20px;border-radius:8px;border:1px solid #ddd;text-align:center">
+                  <div style="font-size:24px;font-weight:700;color:#1a472a">${milestones[years].length}</div>
+                  <div style="font-size:12px;color:#666">${years} years</div>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function moveVolunteerToHole(volunteerId, newHole) {
+      const vol = appData.volunteers.find(v => v.id === volunteerId);
+      if (vol && newHole !== vol.hole) {
+        const oldHole = vol.hole;
+        // Track original hole if not already set
+        if (vol.originalHole === undefined) {
+          vol.originalHole = oldHole;
+        }
+        // If moving back to original hole, clear the tracking
+        if (newHole === vol.originalHole) {
+          delete vol.originalHole;
+        }
+        vol.hole = newHole;
+        saveData();
+        logActivity('edit', vol.name, `Moved from Hole #${oldHole} to Hole #${newHole}`);
+        render();
+      }
+    }
+
     function renderHoleRosterReport(holeNum, options = {}) {
-      const { hideViewAll = false, hideTitle = false } = options;
+      const { hideViewAll = false, hideTitle = false, showMoveColumn = false } = options;
       const dayFilter = reportFilters.day;
       const showAllHoles = reportFilters.hole === 'all-export' && !hideViewAll;
       const hole = showAllHoles ? null : (parseInt(reportFilters.hole) || holeNum || 1);
       const days = dayFilter === 'all' ? DAYS : [dayFilter];
+      const numHoles = getNumberOfHoles();
 
       // Helper to render a single hole's roster
       function renderSingleHoleRoster(holeNumber) {
-        const volunteers = appData.volunteers.filter(v => v.hole === holeNumber);
+        // Current volunteers on this hole
+        const currentVolunteers = appData.volunteers.filter(v => v.hole === holeNumber);
+
+        // Volunteers who were moved away from this hole (show if history enabled)
+        const movedAwayVolunteers = showHoleHistory ?
+          appData.volunteers.filter(v => v.originalHole === holeNumber && v.hole !== holeNumber) : [];
+
+        // Combine lists for display
+        const allVolunteers = [...currentVolunteers, ...movedAwayVolunteers];
 
         // Sort: captains first, then alphabetically
-        volunteers.sort((a, b) => {
+        allVolunteers.sort((a, b) => {
           const aIsCaptain = ['Captain', 'Asst. Chairman', 'Chairman'].includes(a.type);
           const bIsCaptain = ['Captain', 'Asst. Chairman', 'Chairman'].includes(b.type);
           if (aIsCaptain && !bIsCaptain) return -1;
@@ -2747,16 +3136,16 @@
           return a.name.localeCompare(b.name);
         });
 
-        // Calculate totals per shift
+        // Calculate totals per shift (only current volunteers)
         const shiftTotals = {};
         days.forEach(day => {
           SHIFTS.forEach(shift => {
             const key = day + ' ' + shift;
-            shiftTotals[key] = volunteers.filter(v => v.scheduled && v.scheduled[key]).length;
+            shiftTotals[key] = currentVolunteers.filter(v => v.scheduled && v.scheduled[key]).length;
           });
         });
 
-        if (volunteers.length === 0) {
+        if (allVolunteers.length === 0) {
           return `<div style="margin-bottom:30px"><h4 style="margin:0 0 10px 0;color:#1a472a">Hole #${holeNumber}</h4><p style="color:#666">No volunteers assigned.</p></div>`;
         }
 
@@ -2768,6 +3157,7 @@
                 <tr style="background:#f8f9fa">
                   <th style="text-align:left;padding:12px;border:1px solid #ccc">Volunteer</th>
                   <th style="text-align:left;padding:12px;border:1px solid #ccc">Type</th>
+                  ${showMoveColumn ? `<th style="text-align:center;padding:12px;border:1px solid #ccc">Move</th>` : ''}
                   ${days.map(d => `
                     <th style="text-align:center;padding:12px;border:1px solid #ccc" colspan="2">${d.slice(0, 3)}</th>
                   `).join('')}
@@ -2775,6 +3165,7 @@
                 <tr style="background:#f8f9fa">
                   <th style="border:1px solid #ccc"></th>
                   <th style="border:1px solid #ccc"></th>
+                  ${showMoveColumn ? `<th style="border:1px solid #ccc"></th>` : ''}
                   ${days.map(() => `
                     <th style="text-align:center;padding:6px;border:1px solid #ccc;font-size:11px;font-weight:normal;color:#666">AM</th>
                     <th style="text-align:center;padding:6px;border:1px solid #ccc;font-size:11px;font-weight:normal;color:#666">PM</th>
@@ -2783,7 +3174,7 @@
               </thead>
               <tbody>
                 <tr style="background:#f0f7f0;font-weight:600">
-                  <td style="padding:10px 12px;border:1px solid #ccc" colspan="2">Total Scheduled</td>
+                  <td style="padding:10px 12px;border:1px solid #ccc" colspan="${showMoveColumn ? 3 : 2}">Total Scheduled</td>
                   ${days.map(day =>
                     SHIFTS.map(shift => {
                       const key = day + ' ' + shift;
@@ -2791,42 +3182,67 @@
                     }).join('')
                   ).join('')}
                 </tr>
-                ${volunteers.map(v => `
-                  <tr>
-                    <td style="padding:10px 12px;border:1px solid #ccc">${v.name}</td>
+                ${allVolunteers.map(v => {
+                  const isMovedAway = v.originalHole === holeNumber && v.hole !== holeNumber;
+                  const isNewHere = v.originalHole !== undefined && v.originalHole !== holeNumber && v.hole === holeNumber;
+                  const rowStyle = isMovedAway ? 'opacity:0.5;background:#f5f5f5;' : '';
+
+                  return `
+                  <tr style="${rowStyle}">
+                    <td style="padding:10px 12px;border:1px solid #ccc">
+                      ${isNewHere && showHoleHistory ? '<span style="background:#4caf50;color:white;padding:2px 6px;border-radius:4px;font-size:10px;margin-right:6px">NEW</span>' : ''}
+                      ${v.name}
+                      ${isMovedAway ? '<span style="color:#999;font-size:11px;margin-left:6px">(moved)</span>' : ''}
+                    </td>
                     <td style="padding:10px 12px;border:1px solid #ccc;font-size:12px;color:#666">${v.type || '-'}</td>
+                    ${showMoveColumn ? `
+                      <td style="padding:6px;border:1px solid #ccc;text-align:center">
+                        <select onchange="moveVolunteerToHole('${v.id}', parseInt(this.value))" style="padding:4px 8px;border:1px solid #ddd;border-radius:4px;font-size:12px;cursor:pointer;${isMovedAway ? 'background:#fff3cd;' : ''}">
+                          ${[...Array(numHoles).keys()].map(i => i + 1).map(h =>
+                            `<option value="${h}" ${h === v.hole ? 'selected' : ''}>#${h}</option>`
+                          ).join('')}
+                        </select>
+                      </td>
+                    ` : ''}
                     ${days.map(day =>
                       SHIFTS.map(shift => {
                         const key = day + ' ' + shift;
                         const isScheduled = v.scheduled && v.scheduled[key];
                         const isCheckedIn = appData.checkIns.some(c => c.volunteerId === v.id && c.day === day && c.shift === shift);
                         let icon = '';
-                        let color = '#ccc';
-                        if (isScheduled && isCheckedIn) { icon = '✓'; color = '#4caf50'; }
-                        else if (isScheduled) { icon = '○'; color = '#1a472a'; }
+                        let color = isMovedAway ? '#ccc' : '#ccc';
+                        if (isScheduled && isCheckedIn) { icon = '✓'; color = isMovedAway ? '#ccc' : '#4caf50'; }
+                        else if (isScheduled) { icon = '○'; color = isMovedAway ? '#ccc' : '#1a472a'; }
                         return `<td style="text-align:center;padding:10px 6px;border:1px solid #ccc;color:${color};font-weight:600">${icon}</td>`;
                       }).join('')
                     ).join('')}
                   </tr>
-                `).join('')}
+                `}).join('')}
               </tbody>
             </table>
           </div>
         `;
       }
 
+      const historyLegend = showHoleHistory ? `
+        &nbsp;&nbsp;
+        <span style="background:#4caf50;color:white;padding:1px 5px;border-radius:3px;font-size:10px">NEW</span> = moved here &nbsp;&nbsp;
+        <span style="opacity:0.5">Grayed</span> = moved away
+      ` : '';
+
       if (showAllHoles) {
         // Render all holes
         const allHoles = [...Array(getNumberOfHoles()).keys()].map(i => i + 1);
         return `
           <div id="report-content">
-            <div style="margin-bottom:20px">
+            <div style="margin-bottom:20px;display:flex;align-items:center;gap:20px;flex-wrap:wrap">
               <button onclick="reportFilters.hole='all';render()" style="background:none;border:none;color:#1a472a;cursor:pointer;font-size:13px;padding:0">&larr; Back to single hole view</button>
             </div>
             ${allHoles.map(h => renderSingleHoleRoster(h)).join('')}
             <div style="margin-top:15px;font-size:12px;color:#666">
               <span style="color:#4caf50;font-weight:600">✓</span> = Checked in &nbsp;&nbsp;
               <span style="color:#1a472a;font-weight:600">○</span> = Scheduled
+              ${historyLegend}
             </div>
           </div>
         `;
@@ -2834,15 +3250,12 @@
 
       return `
         <div id="report-content">
-          ${hideViewAll ? '' : `<div style="margin-bottom:15px">
-            <button onclick="reportFilters.hole='all-export';render()" style="padding:8px 16px;background:#1a472a;color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:13px">View All Holes</button>
-          </div>`}
-
           ${renderSingleHoleRoster(hole)}
 
           <div style="font-size:12px;color:#666">
             <span style="color:#4caf50;font-weight:600">✓</span> = Checked in &nbsp;&nbsp;
             <span style="color:#1a472a;font-weight:600">○</span> = Scheduled
+            ${historyLegend}
           </div>
         </div>
       `;
@@ -3577,6 +3990,359 @@
       }
     }
 
+    // Tournament Summary tab - day filter state
+    let summaryDayFilter = 'all';
+    let weekAtGlanceOpen = true;
+
+    function setSummaryDayFilter(day) {
+      summaryDayFilter = day;
+      render();
+    }
+
+    function toggleWeekAtGlance() {
+      weekAtGlanceOpen = !weekAtGlanceOpen;
+      render();
+    }
+
+    function renderTournamentSummary(stats) {
+      // Week at a Glance section (collapsible)
+      var weekAtGlance = '<div style="margin-bottom:40px">' +
+        '<div onclick="toggleWeekAtGlance()" style="display:flex;align-items:center;cursor:pointer;margin-bottom:15px">' +
+        '<span style="font-size:14px;margin-right:8px;transition:transform 0.2s;transform:rotate(' + (weekAtGlanceOpen ? '90' : '0') + 'deg)">&#9654;</span>' +
+        '<h3 style="font-size:16px;color:#1a472a;margin:0">Week at a Glance</h3>' +
+        '</div>';
+
+      if (weekAtGlanceOpen) {
+        weekAtGlance += '<div class="overview-grid">';
+
+      DAYS.forEach(function(day) {
+        var dayInfo = getRelativeTimeLabel(day, 'AM');
+        weekAtGlance += '<div class="day-card">' +
+          '<h3>' + day + ' <span style="font-weight:normal;font-size:11px;color:#666">(' + dayInfo.dateOnly + ')</span></h3>';
+
+        SHIFTS.forEach(function(shift) {
+          var s = stats[day + ' ' + shift];
+          var isSelected = day === selectedDay && shift === selectedShift;
+          var color = s.percentage >= 90 ? '#4caf50' : (s.percentage >= 50 ? '#ff9800' : '#1a472a');
+          var shiftLabel = shift === 'AM' ? 'morning' : 'afternoon';
+          var pctColor = s.percentage >= 90 ? '#2e7d32' : (s.percentage >= 50 ? '#f57c00' : '#666');
+
+          weekAtGlance += '<div class="shift-item' + (isSelected ? ' selected' : '') + '" onclick="selectShift(\'' + day + '\', \'' + shift + '\')">' +
+            '<div class="shift-item-header">' +
+            '<span style="font-size:12px">' + shiftLabel + '</span>' +
+            '<span style="font-weight:600;font-size:12px;color:' + pctColor + '">' + s.percentage + '%</span>' +
+            '</div>' +
+            '<div class="progress-bar"><div class="progress-fill" style="width:' + s.percentage + '%;background:' + color + '"></div></div>' +
+            '<div class="shift-stats" style="font-size:11px">' + s.checkedIn + ' / ' + s.scheduled + ' checked in</div>' +
+            '</div>';
+        });
+
+        weekAtGlance += '</div>';
+      });
+
+        weekAtGlance += '</div>';
+      }
+      weekAtGlance += '</div>';
+
+      // Hole Summary Table section
+      var daysToShow = summaryDayFilter === 'all' ? DAYS : [summaryDayFilter];
+      var numHoles = getNumberOfHoles();
+
+      // Day filter and View Full Roster button row
+      var dayFilterHtml = '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;flex-wrap:wrap;gap:10px">' +
+        '<div><label style="font-size:12px;color:#666;margin-right:10px">Filter by Day:</label>' +
+        '<select onchange="setSummaryDayFilter(this.value)" style="padding:8px 12px;border:1px solid #ddd;border-radius:6px;font-size:13px">' +
+        '<option value="all"' + (summaryDayFilter === 'all' ? ' selected' : '') + '>All Days</option>';
+
+      DAYS.forEach(function(d) {
+        var dayInfo = getRelativeTimeLabel(d, 'AM');
+        dayFilterHtml += '<option value="' + d + '"' + (summaryDayFilter === d ? ' selected' : '') + '>' + d + ' (' + dayInfo.dateOnly + ')</option>';
+      });
+      dayFilterHtml += '</select></div>' +
+        '<button onclick="reportFilters.report=\'hole-roster\';reportFilters.hole=\'all-export\';setAdminTab(\'reports\')" style="background:#1a472a;color:white;border:none;padding:10px 20px;border-radius:6px;cursor:pointer;font-size:13px;font-weight:500">View Full Roster</button>' +
+        '</div>';
+
+      // Build the summary table
+      var tableHtml = '<div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;font-size:14px;border:1px solid #ccc">';
+
+      // Header row 1 - Day names
+      tableHtml += '<thead><tr style="background:#f5f5f5">' +
+        '<th style="text-align:left;padding:12px;border:1px solid #ccc;color:#1a472a;font-weight:600" rowspan="2">Hole</th>';
+
+      daysToShow.forEach(function(day) {
+        var dayInfo = getRelativeTimeLabel(day, 'AM');
+        tableHtml += '<th style="text-align:center;padding:12px;border:1px solid #ccc;color:#1a472a;font-weight:600" colspan="3">' + day + ' <span style="font-weight:normal;font-size:11px;color:#666">(' + dayInfo.dateOnly + ')</span></th>';
+      });
+      tableHtml += '</tr>';
+
+      // Header row 2 - AM/PM/Total
+      tableHtml += '<tr style="background:#f5f5f5">';
+      daysToShow.forEach(function() {
+        tableHtml += '<th style="text-align:center;padding:8px;border:1px solid #ccc;font-size:12px;font-weight:500;color:#333">AM</th>' +
+          '<th style="text-align:center;padding:8px;border:1px solid #ccc;font-size:12px;font-weight:500;color:#333">PM</th>' +
+          '<th style="text-align:center;padding:8px;border:1px solid #ccc;font-size:12px;font-weight:600;color:#1a472a">Total</th>';
+      });
+      tableHtml += '</tr></thead><tbody>';
+
+      // Calculate totals for footer
+      var grandTotals = {};
+      daysToShow.forEach(function(day) {
+        grandTotals[day + ' AM'] = 0;
+        grandTotals[day + ' PM'] = 0;
+        grandTotals[day + ' Total'] = 0;
+      });
+
+      // Data rows - one per hole
+      for (var h = 1; h <= numHoles; h++) {
+        var rowBg = h % 2 === 0 ? '#f9f9f9' : '#fff';
+        tableHtml += '<tr style="background:' + rowBg + '">' +
+          '<td style="padding:10px 12px;border:1px solid #ccc;font-weight:600;color:#1a472a">Hole ' + h + '</td>';
+
+        daysToShow.forEach(function(day) {
+          var amCount = appData.volunteers.filter(function(v) {
+            return v.hole === h && v.scheduled && v.scheduled[day + ' AM'];
+          }).length;
+          var pmCount = appData.volunteers.filter(function(v) {
+            return v.hole === h && v.scheduled && v.scheduled[day + ' PM'];
+          }).length;
+          var total = amCount + pmCount;
+
+          grandTotals[day + ' AM'] += amCount;
+          grandTotals[day + ' PM'] += pmCount;
+          grandTotals[day + ' Total'] += total;
+
+          tableHtml += '<td style="text-align:center;padding:10px 6px;border:1px solid #ccc">' + amCount + '</td>' +
+            '<td style="text-align:center;padding:10px 6px;border:1px solid #ccc">' + pmCount + '</td>' +
+            '<td style="text-align:center;padding:10px 6px;border:1px solid #ccc;font-weight:600;background:#f0f7f0">' + total + '</td>';
+        });
+
+        tableHtml += '</tr>';
+      }
+
+      // Totals row
+      tableHtml += '<tr style="background:#e8f5e9;font-weight:600">' +
+        '<td style="padding:12px;border:1px solid #ccc;color:#1a472a">TOTALS</td>';
+
+      daysToShow.forEach(function(day) {
+        tableHtml += '<td style="text-align:center;padding:12px 6px;border:1px solid #ccc;color:#333">' + grandTotals[day + ' AM'] + '</td>' +
+          '<td style="text-align:center;padding:12px 6px;border:1px solid #ccc;color:#333">' + grandTotals[day + ' PM'] + '</td>' +
+          '<td style="text-align:center;padding:12px 6px;border:1px solid #ccc;color:#1a472a;background:#c8e6c9">' + grandTotals[day + ' Total'] + '</td>';
+      });
+
+      tableHtml += '</tr></tbody></table></div>';
+
+      return '<div class="tournament-summary-section">' +
+        '<h2 style="font-size:20px;color:#1a472a;margin-bottom:25px;padding-bottom:10px;border-bottom:2px solid #1a472a">Tournament Summary</h2>' +
+        weekAtGlance +
+        '<h3 style="font-size:16px;color:#1a472a;margin-bottom:15px">Volunteers Scheduled by Hole</h3>' +
+        dayFilterHtml +
+        tableHtml +
+        '</div>';
+    }
+
+    // Activity log filter state
+    let activityFilterAction = 'all';
+    let activityFilterUser = 'all';
+    let activityFilterDate = 'all';
+
+    function setActivityFilter(type, value) {
+      if (type === 'action') activityFilterAction = value;
+      if (type === 'user') activityFilterUser = value;
+      if (type === 'date') activityFilterDate = value;
+      render();
+    }
+
+    function clearActivityFilters() {
+      activityFilterAction = 'all';
+      activityFilterUser = 'all';
+      activityFilterDate = 'all';
+      render();
+    }
+
+    function clearActivityLog() {
+      if (confirm('Are you sure you want to clear the entire activity log? This cannot be undone.')) {
+        appData.activityLog = [];
+        saveData();
+        render();
+        showToast('Activity log cleared');
+      }
+    }
+
+    function exportActivityLog() {
+      const logs = appData.activityLog || [];
+      if (logs.length === 0) {
+        alert('No activity log entries to export');
+        return;
+      }
+
+      const headers = ['Timestamp', 'User', 'Type', 'Action', 'Target', 'Details'];
+      const rows = logs.map(log => [
+        new Date(log.timestamp).toLocaleString(),
+        log.user,
+        log.userType,
+        log.action,
+        log.target,
+        log.details
+      ]);
+
+      const csvContent = [headers, ...rows]
+        .map(row => row.map(cell => '"' + String(cell || '').replace(/"/g, '""') + '"').join(','))
+        .join('\n');
+
+      const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = 'activity-log-' + new Date().toISOString().split('T')[0] + '.csv';
+      link.click();
+    }
+
+    function renderActivityLog() {
+      const logs = appData.activityLog || [];
+
+      // Get unique users and actions for filters
+      const uniqueUsers = [...new Set(logs.map(l => l.user))].sort();
+      const uniqueActions = [...new Set(logs.map(l => l.action))].sort();
+
+      // Filter logs
+      let filteredLogs = logs;
+      if (activityFilterAction !== 'all') {
+        filteredLogs = filteredLogs.filter(l => l.action === activityFilterAction);
+      }
+      if (activityFilterUser !== 'all') {
+        filteredLogs = filteredLogs.filter(l => l.user === activityFilterUser);
+      }
+      if (activityFilterDate !== 'all') {
+        const now = new Date();
+        const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+        const weekAgo = new Date(today.getTime() - 7 * 24 * 60 * 60 * 1000);
+
+        filteredLogs = filteredLogs.filter(l => {
+          const logDate = new Date(l.timestamp);
+          if (activityFilterDate === 'today') {
+            return logDate >= today;
+          } else if (activityFilterDate === 'week') {
+            return logDate >= weekAgo;
+          }
+          return true;
+        });
+      }
+
+      // Limit display to 200 entries
+      const displayLogs = filteredLogs.slice(0, 200);
+      const hasMore = filteredLogs.length > 200;
+
+      const actionLabels = {
+        'login': 'Login',
+        'logout': 'Logout',
+        'check-in': 'Check In',
+        'check-out': 'Check Out',
+        'edit-volunteer': 'Edit',
+        'add-volunteer': 'Add',
+        'delete-volunteer': 'Delete',
+        'schedule-change': 'Schedule',
+        'password-change': 'Password',
+        'import': 'Import',
+        'submission': 'Submission',
+        'settings-change': 'Settings'
+      };
+
+      // Build the table rows
+      var tableRows = '';
+      displayLogs.forEach(function(log) {
+        var logDate = new Date(log.timestamp);
+        var isToday = logDate.toDateString() === new Date().toDateString();
+        var timeStr = isToday
+          ? logDate.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+          : logDate.toLocaleDateString([], { month: 'short', day: 'numeric' }) + ' ' + logDate.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+        var actionColors = {
+          'login': '#28a745',
+          'logout': '#6c757d',
+          'check-in': '#007bff',
+          'check-out': '#fd7e14',
+          'edit-volunteer': '#17a2b8',
+          'add-volunteer': '#28a745',
+          'delete-volunteer': '#dc3545',
+          'password-change': '#6f42c1',
+          'import': '#20c997',
+          'submission': '#007bff',
+          'settings-change': '#ffc107'
+        };
+        var actionColor = actionColors[log.action] || '#666';
+        var typeColor = log.userType === 'Admin' ? '#1a472a' : (log.userType === 'Captain' ? '#007bff' : '#6c757d');
+
+        tableRows += '<tr>' +
+          '<td style="font-size:12px;color:#666">' + timeStr + '</td>' +
+          '<td style="font-weight:500">' + log.user + '</td>' +
+          '<td><span style="background:' + typeColor + ';color:white;padding:2px 8px;border-radius:4px;font-size:11px">' + log.userType + '</span></td>' +
+          '<td><span style="color:' + actionColor + ';font-weight:500">' + (actionLabels[log.action] || log.action) + '</span></td>' +
+          '<td style="font-size:13px">' + (log.target || '-') + '</td>' +
+          '<td style="font-size:12px;color:#666">' + (log.details || '-') + '</td>' +
+          '</tr>';
+      });
+
+      // Build action filter options
+      var actionOptions = '<option value="all"' + (activityFilterAction === 'all' ? ' selected' : '') + '>All Actions</option>';
+      uniqueActions.forEach(function(a) {
+        actionOptions += '<option value="' + a + '"' + (activityFilterAction === a ? ' selected' : '') + '>' + (actionLabels[a] || a) + '</option>';
+      });
+
+      // Build user filter options
+      var userOptions = '<option value="all"' + (activityFilterUser === 'all' ? ' selected' : '') + '>All Users</option>';
+      uniqueUsers.forEach(function(u) {
+        userOptions += '<option value="' + u + '"' + (activityFilterUser === u ? ' selected' : '') + '>' + u + '</option>';
+      });
+
+      var emptyState = displayLogs.length === 0 ?
+        '<div style="text-align:center;padding:60px 20px;color:#999">' +
+        '<div style="font-size:48px;margin-bottom:15px">📋</div>' +
+        '<p style="font-size:16px;margin-bottom:5px">No activity logged yet</p>' +
+        '<p style="font-size:13px">Activity will appear here as users interact with the system</p>' +
+        '</div>' : '';
+
+      var tableContent = displayLogs.length > 0 ?
+        '<div style="overflow-x:auto">' +
+        '<table class="volunteer-table" style="min-width:800px">' +
+        '<thead><tr>' +
+        '<th style="width:140px">Time</th>' +
+        '<th style="width:150px">User</th>' +
+        '<th style="width:70px">Type</th>' +
+        '<th style="width:90px">Action</th>' +
+        '<th style="width:150px">Target</th>' +
+        '<th>Details</th>' +
+        '</tr></thead>' +
+        '<tbody>' + tableRows + '</tbody>' +
+        '</table></div>' : '';
+
+      return '<div class="activity-log-section">' +
+        '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;flex-wrap:wrap;gap:10px">' +
+        '<h2 style="font-size:20px;color:#1a472a;margin:0">Activity Log</h2>' +
+        '<div style="display:flex;gap:10px">' +
+        '<button onclick="exportActivityLog()" style="background:#1a472a;color:white;border:none;padding:8px 16px;border-radius:6px;cursor:pointer;font-size:13px">Export CSV</button>' +
+        '<button onclick="clearActivityLog()" style="background:#dc3545;color:white;border:none;padding:8px 16px;border-radius:6px;cursor:pointer;font-size:13px">Clear Log</button>' +
+        '</div></div>' +
+        '<div style="display:flex;gap:15px;margin-bottom:20px;flex-wrap:wrap;align-items:center">' +
+        '<div><label style="font-size:12px;color:#666;display:block;margin-bottom:4px">Action</label>' +
+        '<select onchange="setActivityFilter(\'action\', this.value)" style="padding:8px 12px;border:1px solid #ddd;border-radius:6px;font-size:13px">' + actionOptions + '</select></div>' +
+        '<div><label style="font-size:12px;color:#666;display:block;margin-bottom:4px">User</label>' +
+        '<select onchange="setActivityFilter(\'user\', this.value)" style="padding:8px 12px;border:1px solid #ddd;border-radius:6px;font-size:13px">' + userOptions + '</select></div>' +
+        '<div><label style="font-size:12px;color:#666;display:block;margin-bottom:4px">Date</label>' +
+        '<select onchange="setActivityFilter(\'date\', this.value)" style="padding:8px 12px;border:1px solid #ddd;border-radius:6px;font-size:13px">' +
+        '<option value="all"' + (activityFilterDate === 'all' ? ' selected' : '') + '>All Time</option>' +
+        '<option value="today"' + (activityFilterDate === 'today' ? ' selected' : '') + '>Today</option>' +
+        '<option value="week"' + (activityFilterDate === 'week' ? ' selected' : '') + '>Last 7 Days</option>' +
+        '</select></div>' +
+        '<button onclick="clearActivityFilters()" style="background:#f5f5f5;border:1px solid #ddd;padding:8px 12px;border-radius:6px;cursor:pointer;font-size:13px;margin-top:18px">Clear Filters</button>' +
+        '</div>' +
+        '<p style="color:#666;font-size:13px;margin-bottom:15px">' +
+        'Showing ' + displayLogs.length + ' of ' + filteredLogs.length + ' entries' +
+        (hasMore ? ' <span style="color:#dc3545">(limited to 200)</span>' : '') +
+        (logs.length > 0 ? ' &bull; Total: ' + logs.length + ' entries' : '') +
+        '</p>' +
+        emptyState + tableContent +
+        '</div>';
+    }
+
     function renderSettings() {
       return `
         <div class="settings-section">
@@ -3626,13 +4392,13 @@
               <p style="color:#666;font-size:13px;margin-top:10px">Admin access is managed through volunteer types in the Edit Volunteers tab:</p>
               <ul style="color:#666;font-size:13px;margin-top:10px;margin-left:20px">
                 <li><strong>Admin</strong> - Full access to all admin features</li>
-                <li><strong>View Admin</strong> - Read-only access to view data</li>
+                <li><strong>Chairman / Asst. Chairman</strong> - Read-only admin access (can view all data but cannot edit)</li>
               </ul>
               <p style="color:#666;font-size:13px;margin-top:10px">To add admin users:</p>
               <ol style="color:#666;font-size:13px;margin-top:8px;margin-left:20px">
                 <li>Go to Edit Volunteers tab</li>
                 <li>Edit or add a volunteer</li>
-                <li>Set their Type to "Admin" or "View Admin"</li>
+                <li>Set their Type to "Admin", "Chairman", or "Asst. Chairman"</li>
                 <li>Enter their email address (required)</li>
               </ol>
               <p style="color:#999;font-size:11px;margin-top:15px">Default password is "admin2025". Users will be prompted to change it on first login. Full admins can reset any admin's password from the volunteer edit form.</p>
@@ -3995,48 +4761,24 @@
       // Help modal
       const helpModalHtml = showHelpModal ? `
         <div class="modal-overlay" onclick="showHelpModal=false;render()">
-          <div class="modal" onclick="event.stopPropagation()" style="max-width:450px;text-align:left">
-            <h3 style="text-align:center">How to Check In Volunteers</h3>
-            <ol style="padding-left:20px;line-height:1.8;color:#444;font-size:13px">
+          <div class="modal" onclick="event.stopPropagation()" style="max-width:500px;text-align:left">
+            <h3 style="text-align:center;font-size:22px">How to Check In Volunteers</h3>
+            <ol style="padding-left:24px;line-height:2;color:#333;font-size:16px">
               <li>Select your <strong>day</strong> and <strong>shift</strong> (Morning/Afternoon) at the top.</li>
               <li>Volunteers are organized into sections: <strong>Captains</strong>, <strong>Scheduled Volunteers</strong>, and <strong>Not Scheduled This Shift</strong>.</li>
               <li>Tap a volunteer's name as they arrive. A green checkmark confirms they're checked in.</li>
               <li>Check-ins save automatically - no submit button needed.</li>
               <li>Tap the <strong>Submit</strong> button at the bottom to finalize the shift and add any notes.</li>
             </ol>
-            <p style="margin-top:15px;font-size:13px;color:#666"><strong>If someone doesn't show up:</strong> Just leave them unchecked. Only mark the people who actually arrive.</p>
-            <p style="margin-top:10px;font-size:13px;color:#666"><strong>If you make a mistake:</strong> Tap their name again to uncheck them.</p>
-            <p style="margin-top:10px;font-size:13px;color:#1a472a"><strong>Edit schedules:</strong> Tap the "Edit" button next to a volunteer to modify their schedule.</p>
-            ${isChairUser ? `<p style="margin-top:10px;font-size:13px;color:#1a472a"><strong>Multiple holes:</strong> Use the hole dropdown at the top to switch between your assigned holes.</p>` : ''}
-            ${isAdminUser ? `<p style="margin-top:10px;font-size:13px;color:#1a472a"><strong>Admin mode:</strong> Use the hole dropdown to switch between any hole.</p>` : ''}
-            <p style="margin-top:10px;font-size:13px;color:#666"><strong>Roster:</strong> Tap the "Roster" button to view or print your hole's full schedule.</p>
-            <div class="modal-buttons" style="margin-top:20px;justify-content:center">
-              <button class="modal-btn confirm" onclick="showHelpModal=false;render()">Got it</button>
+            <p style="margin-top:18px;font-size:16px;color:#555"><strong>If someone doesn't show up:</strong> Just leave them unchecked. Only mark the people who actually arrive.</p>
+            <p style="margin-top:12px;font-size:16px;color:#555"><strong>If you make a mistake:</strong> Tap their name again to uncheck them.</p>
+            <p style="margin-top:12px;font-size:16px;color:#1a472a"><strong>Edit schedules:</strong> Tap the "Edit" button next to a volunteer to modify their schedule.</p>
+            ${isChairUser ? `<p style="margin-top:12px;font-size:16px;color:#1a472a"><strong>Multiple holes:</strong> Use the hole dropdown at the top to switch between your assigned holes.</p>` : ''}
+            ${isAdminUser ? `<p style="margin-top:12px;font-size:16px;color:#1a472a"><strong>Admin mode:</strong> Use the hole dropdown to switch between any hole.</p>` : ''}
+            <p style="margin-top:12px;font-size:16px;color:#555"><strong>Roster:</strong> Tap the "Roster" button to view or print your hole's full schedule.</p>
+            <div class="modal-buttons" style="margin-top:24px;justify-content:center">
+              <button class="modal-btn confirm" style="font-size:16px;padding:14px 28px" onclick="showHelpModal=false;render()">Got it</button>
             </div>
-          </div>
-        </div>
-      ` : '';
-
-      // PIN setup modal (first-time login)
-      const pinSetupModalHtml = showPinSetupModal ? `
-        <div class="modal-overlay">
-          <div class="modal" onclick="event.stopPropagation()" style="max-width:400px;text-align:left">
-            <h3 style="text-align:center;margin-bottom:15px">Set Your PIN</h3>
-            <p style="font-size:13px;color:#666;margin-bottom:20px;text-align:center">Welcome! Please create a 4-digit PIN for future logins. This replaces using your phone number.</p>
-            <form id="pinSetupForm">
-              <div style="margin-bottom:15px">
-                <label style="font-size:12px;color:#666;display:block;margin-bottom:4px">New 4-Digit PIN</label>
-                <input type="tel" id="newPinInput" maxlength="4" pattern="[0-9]{4}" inputmode="numeric" placeholder="0000" style="width:100%;padding:12px;border:1px solid #ddd;border-radius:6px;font-size:18px;text-align:center;letter-spacing:8px" required>
-              </div>
-              <div style="margin-bottom:20px">
-                <label style="font-size:12px;color:#666;display:block;margin-bottom:4px">Confirm PIN</label>
-                <input type="tel" id="confirmPinInput" maxlength="4" pattern="[0-9]{4}" inputmode="numeric" placeholder="0000" style="width:100%;padding:12px;border:1px solid #ddd;border-radius:6px;font-size:18px;text-align:center;letter-spacing:8px" required>
-              </div>
-              <div class="modal-buttons">
-                <button type="button" class="modal-btn cancel" onclick="showPinSetupModal=false;render()">Skip for Now</button>
-                <button type="submit" class="modal-btn confirm">Set PIN</button>
-              </div>
-            </form>
           </div>
         </div>
       ` : '';
@@ -4096,6 +4838,7 @@
             </div>
             <div class="modal-buttons" style="margin-top:20px">
               <button class="modal-btn cancel" onclick="captainEditingVolunteer=null;render()">Cancel</button>
+              ${captainEditingVolunteer.email ? '<a href="mailto:' + captainEditingVolunteer.email + '" class="modal-btn" style="background:#fff;border:1px solid #ddd;color:#333;text-decoration:none;text-align:center">Create Blank Email</a>' : ''}
               <button class="modal-btn confirm" onclick="saveCaptainVolunteerEdit()">Save Schedule</button>
             </div>
           </div>
@@ -4144,7 +4887,6 @@
           ${modalHtml}
           ${successModalHtml}
           ${helpModalHtml}
-          ${pinSetupModalHtml}
           ${passwordChangeModalHtml}
           ${captainEditModalHtml}
           ${reportsModalHtml}
@@ -4154,14 +4896,14 @@
               <div>
                 ${isAdminUser ? `
                   <h1 style="display:flex;align-items:center;gap:10px">
-                    <select onchange="adminSelectedHole=parseInt(this.value);render()" style="font-size:20px;font-weight:700;padding:4px 8px;border-radius:6px;border:none;background:rgba(255,255,255,0.9);color:#1a472a">
+                    <select onchange="adminSelectedHole=parseInt(this.value);render()" style="font-size:24px;font-weight:700;padding:8px 12px;border-radius:6px;border:none;background:rgba(255,255,255,0.9);color:#1a472a;min-height:48px">
                       ${[...Array(getNumberOfHoles()).keys()].map(i => i + 1).map(h => `<option value="${h}" ${h === adminSelectedHole ? 'selected' : ''}>Hole #${h}</option>`).join('')}
                     </select>
                   </h1>
                   <p>Admin: ${captainAuth.name}</p>
                 ` : isChairUser ? `
                   <h1 style="display:flex;align-items:center;gap:10px">
-                    <select onchange="chairSelectedHole=parseInt(this.value);render()" style="font-size:20px;font-weight:700;padding:4px 8px;border-radius:6px;border:none;background:rgba(255,255,255,0.9);color:#1a472a">
+                    <select onchange="chairSelectedHole=parseInt(this.value);render()" style="font-size:24px;font-weight:700;padding:8px 12px;border-radius:6px;border:none;background:rgba(255,255,255,0.9);color:#1a472a;min-height:48px">
                       ${chairHolesFiltered.map(h => `<option value="${h}" ${h === chairSelectedHole ? 'selected' : ''}>Hole #${h}</option>`).join('')}
                     </select>
                   </h1>
@@ -4169,15 +4911,37 @@
                 ` : `
                   <h1>Hole #${activeHole}</h1>
                   <p>Captain: ${captainAuth.name}</p>
-                  ${coCaptains.length > 0 ? `<p style="opacity:0.85;font-size:12px;margin-top:4px">Also: ${coCaptains.map(c => c.name.split(',')[0]).join(', ')}</p>` : ''}
+                  ${coCaptains.length > 0 ? `<p style="opacity:0.9;font-size:14px;margin-top:5px">Also: ${coCaptains.map(c => c.name.split(',')[0]).join(', ')}</p>` : ''}
                 `}
               </div>
               <div style="display:flex;gap:8px;align-items:center">
-                <button onclick="refreshData()" title="Refresh" style="background:rgba(255,255,255,0.2);border:none;color:white;padding:8px 10px;border-radius:8px;cursor:pointer;font-size:16px;line-height:1">&#8635;</button>
-                <button onclick="showReportsModal=true;currentReport='hole-roster';reportFilters={hole:'all',day:'all',shift:'all'};render()" style="background:rgba(255,255,255,0.2);border:none;color:white;padding:8px 12px;border-radius:8px;cursor:pointer;font-size:13px">Roster</button>
-                <button onclick="showHelpModal=true;render()" style="background:rgba(255,255,255,0.2);border:none;color:white;padding:8px 12px;border-radius:8px;cursor:pointer;font-size:13px">?</button>
-                <button onclick="showPasswordChangeModal=true;render()" style="background:rgba(255,255,255,0.2);border:none;color:white;padding:8px 12px;border-radius:8px;cursor:pointer;font-size:11px">Password</button>
-                <button class="logout-btn" onclick="logout()">Logout</button>
+                <button onclick="refreshData()" title="Refresh" style="background:rgba(255,255,255,0.2);border:none;color:white;padding:12px 14px;border-radius:8px;cursor:pointer;font-size:20px;line-height:1;min-width:48px;min-height:48px">&#8635;</button>
+                <div class="hamburger-menu">
+                  <button class="hamburger-btn ${hamburgerMenuOpen ? 'open' : ''}" onclick="toggleHamburgerMenu()">
+                    <div class="hamburger-lines">
+                      <span class="line"></span>
+                      <span class="line"></span>
+                      <span class="line"></span>
+                    </div>
+                    <span class="menu-label">Menu</span>
+                  </button>
+                  ${hamburgerMenuOpen ? `
+                    <div class="hamburger-dropdown">
+                      <button onclick="hamburgerMenuOpen=false;showReportsModal=true;currentReport='hole-roster';reportFilters={hole:'all',day:'all',shift:'all'};render()">
+                        <span class="menu-icon">📋</span> Roster
+                      </button>
+                      <button onclick="hamburgerMenuOpen=false;showHelpModal=true;render()">
+                        <span class="menu-icon">❓</span> Help
+                      </button>
+                      <button onclick="hamburgerMenuOpen=false;showPasswordChangeModal=true;render()">
+                        <span class="menu-icon">🔑</span> Change Password
+                      </button>
+                      <button class="logout-item" onclick="logout()">
+                        <span class="menu-icon">🚪</span> Logout
+                      </button>
+                    </div>
+                  ` : ''}
+                </div>
               </div>
             </div>
             <div class="captain-shift-selector">
@@ -4195,17 +4959,19 @@
             </div>
           </div>
 
+          ${(holeVolunteers.length + holeCaptains.length > 25) || searchTerm ? `
           <div class="search-section">
             <input type="text" class="search-input" placeholder="Search for a volunteer by name..." value="${searchTerm}" oninput="setSearchTerm(this.value)">
           </div>
+          ` : ''}
 
           <div class="volunteer-list" style="padding-bottom:180px">
             ${shiftLocked ? `
-              <div style="background:#fff3e0;border:1px solid #ffcc80;border-radius:8px;padding:12px 15px;margin-bottom:15px">
-                <p style="color:#e65100;font-size:13px;font-weight:600;margin:0">This shift is closed</p>
-                <p style="color:#f57c00;font-size:12px;margin:5px 0 0 0">Check-ins can no longer be modified for this day/shift. Contact tournament staff if changes are needed.</p>
+              <div style="background:#fff3e0;border:1px solid #ffcc80;border-radius:8px;padding:14px 16px;margin-bottom:15px">
+                <p style="color:#e65100;font-size:16px;font-weight:600;margin:0">This shift is closed</p>
+                <p style="color:#f57c00;font-size:15px;margin:5px 0 0 0">Check-ins can no longer be modified for this day/shift. Contact tournament staff if changes are needed.</p>
               </div>
-            ` : `<p style="color:#666;font-size:12px;margin-bottom:10px;padding:0 5px">Tap names as volunteers arrive</p>`}
+            ` : `<p style="color:#666;font-size:15px;margin-bottom:12px;padding:0 5px">Tap names as volunteers arrive</p>`}
             ${displayVolunteers.length === 0 ? `
               <div class="empty-list">
                 ${searchTerm ? 'No volunteers found with that name' : 'No volunteers assigned to this hole'}
@@ -4221,20 +4987,20 @@
               const showVolunteerDivider = !searchTerm && !isCaptain && prevIsCaptain;
               const showUnscheduledDivider = !searchTerm && !isCaptain && !isScheduled && prevIsScheduled && !prevIsCaptain;
               return `
-                ${idx === 0 && isCaptain && !searchTerm ? '<div style="padding:5px 5px 8px;color:#999;font-size:11px;font-weight:600;text-transform:uppercase">Captains</div>' : ''}
-                ${showVolunteerDivider ? '<div style="padding:15px 5px 8px;color:#999;font-size:11px;font-weight:600;text-transform:uppercase;border-top:1px solid #eee;margin-top:10px">Scheduled Volunteers</div>' : ''}
-                ${showUnscheduledDivider ? '<div style="padding:15px 5px 8px;color:#999;font-size:11px;font-weight:600;text-transform:uppercase;border-top:1px solid #eee;margin-top:10px">Not Scheduled This Shift</div>' : ''}
+                ${idx === 0 && isCaptain && !searchTerm ? '<div style="padding:12px 14px;color:#fff;font-size:15px;font-weight:600;text-transform:uppercase;background:#1a472a;margin:0 -15px 12px -15px;border-radius:0">Captains</div>' : ''}
+                ${showVolunteerDivider ? '<div style="padding:12px 14px;color:#fff;font-size:15px;font-weight:600;text-transform:uppercase;background:#1a472a;margin:15px -15px 12px -15px;border-radius:0">Scheduled Volunteers</div>' : ''}
+                ${showUnscheduledDivider ? '<div style="padding:12px 14px;color:#fff;font-size:15px;font-weight:600;text-transform:uppercase;background:#6b7c6b;margin:15px -15px 12px -15px;border-radius:0">Not Scheduled This Shift</div>' : ''}
                 <div class="volunteer-item ${isCheckedIn ? 'checked' : ''}" ${shiftLocked ? '' : `onclick="toggleCheckIn('${v.id}')"`} style="${shiftLocked ? 'cursor:default;opacity:0.8' : ''}">
                   <div class="volunteer-checkbox">
                     <span class="volunteer-checkbox-icon">✓</span>
                   </div>
                   <div class="volunteer-info">
                     <div class="volunteer-name">
-                      ${v.name}${isCurrentCaptain ? ' <span style="font-size:10px;color:#1a472a;background:#e3f2fd;padding:2px 6px;border-radius:4px;font-weight:500">You</span>' : isCaptain ? ` <span style="font-size:10px;color:#1565c0;background:#e3f2fd;padding:2px 6px;border-radius:4px;font-weight:500">${v.type}</span>` : ''}${submittedIds.has(v.id) ? '<span style="font-size:10px;color:#2e7d32;background:#e8f5e9;padding:2px 6px;border-radius:4px;margin-left:8px;font-weight:500">checked in</span>' : ''}
+                      ${v.name}${isCurrentCaptain ? ' <span style="font-size:13px;color:#1a472a;background:#e3f2fd;padding:3px 8px;border-radius:4px;font-weight:500">You</span>' : isCaptain ? ` <span style="font-size:13px;color:#1565c0;background:#e3f2fd;padding:3px 8px;border-radius:4px;font-weight:500">${v.type}</span>` : ''}${submittedIds.has(v.id) ? '<span style="font-size:13px;color:#2e7d32;background:#e8f5e9;padding:3px 8px;border-radius:4px;margin-left:8px;font-weight:500">checked in</span>' : ''}
                     </div>
                   </div>
                   ${v.hole !== activeHole ? `<span class="volunteer-hole">From #${v.hole}</span>` : ''}
-                  ${v.hole === activeHole ? `<button onclick="event.stopPropagation();openCaptainEditVolunteer('${v.id}')" style="padding:4px 8px;background:#f0f0f0;border:1px solid #ddd;border-radius:4px;font-size:11px;color:#666;cursor:pointer;margin-left:8px">Edit</button>` : ''}
+                  ${v.hole === activeHole ? `<button onclick="event.stopPropagation();openCaptainEditVolunteer('${v.id}')" style="padding:8px 12px;background:#f0f0f0;border:1px solid #ddd;border-radius:6px;font-size:14px;color:#555;cursor:pointer;margin-left:8px;min-height:40px">Edit</button>` : ''}
                 </div>
               `;
             }).join('')}
@@ -4243,9 +5009,9 @@
           ${shiftLocked ? `
           <div class="floating-summary" style="padding-bottom:0">
             <div style="padding:15px 0;text-align:center">
-              <p style="color:#999;font-size:13px;margin:0">Viewing ${selectedDay} ${selectedShift} check-ins (read-only)</p>
+              <p style="color:#888;font-size:16px;margin:0">Viewing ${selectedDay} ${selectedShift} check-ins (read-only)</p>
               ${isSubmitted ? `
-                <p style="color:#666;font-size:12px;margin-top:5px">Submitted at ${new Date(lastSubmission.timestamp).toLocaleTimeString('en-US', {hour: 'numeric', minute: '2-digit'})}</p>
+                <p style="color:#666;font-size:15px;margin-top:8px">Submitted at ${new Date(lastSubmission.timestamp).toLocaleTimeString('en-US', {hour: 'numeric', minute: '2-digit'})}</p>
               ` : ''}
             </div>
           </div>
@@ -4258,7 +5024,7 @@
                 value="${captainNotes}"
                 oninput="captainNotes=this.value"
                 maxlength="200"
-                style="width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:13px">
+                style="width:100%;padding:14px 16px;border:1px solid #ddd;border-radius:8px;font-size:16px">
             </div>
 
             <div class="submit-section" style="padding:10px 0">
@@ -4295,6 +5061,10 @@
     }
 
     function logout() {
+      // Log before clearing auth
+      const portal = adminAuth ? 'Admin' : (captainAuth ? 'Captain' : 'Volunteer');
+      logActivity('logout', '', 'Logged out of ' + portal + ' portal');
+
       adminAuth = false;
       adminAuthUser = null;
       captainAuth = null;
@@ -4302,6 +5072,20 @@
       chairSelectedHole = null;
       currentView = 'landing';
       clearAuthState();
+      render();
+    }
+
+    function toggleHamburgerMenu() {
+      hamburgerMenuOpen = !hamburgerMenuOpen;
+      render();
+    }
+
+    function closeHamburgerMenu() {
+      hamburgerMenuOpen = false;
+    }
+
+    function toggleAdminHamburgerMenu() {
+      adminHamburgerMenuOpen = !adminHamburgerMenuOpen;
       render();
     }
 
@@ -4350,6 +5134,7 @@
 
     function updateSetting(key, value) {
       appData.settings[key] = value;
+      logActivity('settings-change', key, 'Updated setting: ' + key);
       saveData();
       showSaveConfirmation();
     }
@@ -4653,15 +5438,19 @@
         c.volunteerId === volunteerId && c.day === selectedDay && c.shift === selectedShift && c.hole === activeHole
       );
 
+      const volunteer = appData.volunteers.find(v => v.id === volunteerId);
+      const volunteerName = volunteer ? volunteer.name : 'Unknown';
+
       if (existing) {
         appData.checkIns = appData.checkIns.filter(c =>
           !(c.volunteerId === volunteerId && c.day === selectedDay && c.shift === selectedShift && c.hole === activeHole)
         );
+        // Log check-out
+        logActivity('check-out', volunteerName, 'Checked out for ' + selectedDay + ' ' + selectedShift + ' on Hole ' + activeHole);
       } else {
-        const volunteer = appData.volunteers.find(v => v.id === volunteerId);
         appData.checkIns.push({
           volunteerId,
-          volunteerName: volunteer ? volunteer.name : 'Unknown',
+          volunteerName: volunteerName,
           hole: activeHole,
           day: selectedDay,
           shift: selectedShift,
@@ -4669,8 +5458,10 @@
           checkedInBy: captainAuth.name,
           isAlternate: !(volunteer && volunteer.scheduled && volunteer.scheduled[`${selectedDay} ${selectedShift}`])
         });
+        // Log check-in
+        logActivity('check-in', volunteerName, 'Checked in for ' + selectedDay + ' ' + selectedShift + ' on Hole ' + activeHole);
       }
-      
+
       saveData();
       render();
     }
@@ -4870,6 +5661,7 @@
           });
           
           appData.volunteers = volunteers;
+          logActivity('import', '', 'Imported ' + volunteers.length + ' volunteers from CSV');
           saveData();
           alert(`Successfully imported ${volunteers.length} volunteers!`);
           render();
@@ -4922,7 +5714,6 @@
             { field: 'type', match: h => h.toLowerCase() === 'type' || h.toLowerCase() === 'volunteer type', type: 'string' },
             { field: 'hole', match: h => h.toLowerCase() === 'hole' || h.toLowerCase().includes('hole'), type: 'int' },
             { field: 'yearsWorked', match: h => h.includes('Years Worked') || h === 'Years' || h.includes('Years_Worked') || h.toLowerCase() === 'years', type: 'int' },
-            { field: 'customPin', match: h => h.toLowerCase().includes('pin') || h.toLowerCase().includes('custom pin'), type: 'string' },
             { field: 'hat', match: h => h.toLowerCase() === 'hat' || h.toLowerCase().includes('hat'), type: 'string' }
           ];
 
@@ -4936,7 +5727,7 @@
           });
 
           if (columnsToUpdate.length === 0) {
-            alert('CSV must have at least one field to update (Email, Phone, Type, Hole, Years Worked, Custom PIN, or Hat)');
+            alert('CSV must have at least one field to update (Email, Phone, Type, Hole, Years Worked, or Hat)');
             return;
           }
 
@@ -4976,7 +5767,7 @@
           saveData();
 
           let msg = `Updated ${updated} volunteer(s).`;
-          const fieldLabels = { email: 'emails', phone: 'phones', type: 'types', hole: 'holes', yearsWorked: 'years', customPin: 'PINs', hat: 'hats' };
+          const fieldLabels = { email: 'emails', phone: 'phones', type: 'types', hole: 'holes', yearsWorked: 'years', hat: 'hats' };
           columnsToUpdate.forEach(col => {
             if (fieldCounts[col.field] > 0) {
               msg += `\n• ${fieldCounts[col.field]} ${fieldLabels[col.field] || col.field} updated`;
@@ -5052,6 +5843,9 @@
         notes: captainNotes || '',
         checkedInIds: checkedInIds
       });
+
+      // Log the submission
+      logActivity('submission', 'Hole ' + activeHole, 'Submitted ' + selectedDay + ' ' + selectedShift + ' for Hole ' + activeHole);
 
       saveData();
       showModal = null;
@@ -5144,9 +5938,9 @@
           const email = document.getElementById('adminEmail').value.trim().toLowerCase();
           const password = document.getElementById('adminPassword').value;
 
-          // Find volunteer with this email who is Admin or View Admin type
+          // Find volunteer with this email who is Admin, Chairman, or Asst. Chairman type
           const adminVolunteer = appData.volunteers.find(v =>
-            (v.type === 'Admin' || v.type === 'View Admin') &&
+            (v.type === 'Admin' || v.type === 'Chairman' || v.type === 'Asst. Chairman') &&
             v.email && v.email.toLowerCase() === email
           );
 
@@ -5156,10 +5950,13 @@
             if (password === storedPassword) {
               adminAuth = adminVolunteer.type === 'Admin' ? 'full' : 'viewOnly';
               adminAuthUser = adminVolunteer;
-              if (adminVolunteer.type === 'View Admin') {
+              if (adminVolunteer.type === 'Chairman' || adminVolunteer.type === 'Asst. Chairman') {
                 adminTab = 'overview';
               }
               currentView = 'admin';
+
+              // Log the login
+              logActivity('login', '', 'Logged into Admin portal');
 
               // Check if using default password - prompt to change
               if (!adminVolunteer.adminPasswordSetAt) {
@@ -5217,6 +6014,7 @@
             volunteer.adminPassword = newPassword;
             volunteer.adminPasswordSetAt = new Date().toISOString();
             adminAuthUser = volunteer; // Update the reference
+            logActivity('password-change', '', 'Changed admin password');
             saveData();
             showAdminPasswordChangeModal = false;
             showToast('Password changed successfully');
@@ -5233,7 +6031,7 @@
           const password = document.getElementById('captainPassword').value;
 
           // Find captain by email
-          const captainTypes = ['Captain', 'Asst. Chairman', 'Chairman', 'View Admin', 'Admin'];
+          const captainTypes = ['Captain', 'Asst. Chairman', 'Chairman', 'Admin'];
           const captain = appData.volunteers.find(v =>
             captainTypes.includes(v.type) &&
             v.email && v.email.toLowerCase() === email
@@ -5245,17 +6043,20 @@
             const storedPassword = captain.volunteerPassword || defaultPassword;
 
             if (password === storedPassword) {
-              const isChair = captain.type === 'Chairman' || captain.type === 'Asst. Chairman' || captain.type === 'View Admin' || captain.type === 'Admin';
+              const isChair = captain.type === 'Chairman' || captain.type === 'Asst. Chairman' || captain.type === 'Admin';
               captainAuth = {
                 id: captain.id,
                 name: captain.name,
                 hole: captain.hole,
-                isAdmin: captain.type === 'Admin' || captain.type === 'View Admin',
+                isAdmin: captain.type === 'Admin',
                 isChair: isChair,
                 assignedHoles: isChair && captain.assignedHoles ? captain.assignedHoles : [captain.hole],
                 odId: captain.id
               };
               currentView = 'captain';
+
+              // Log the login
+              logActivity('login', '', 'Logged into Captain portal');
 
               // If using default password, prompt to change
               if (!captain.volunteerPassword) {
@@ -5299,6 +6100,9 @@
             if (password === storedPassword) {
               volunteerAuth = volunteer;
               currentView = 'volunteer';
+
+              // Log the login
+              logActivity('login', '', 'Logged into Volunteer portal');
 
               // If using default password, prompt to change
               if (!volunteer.volunteerPassword) {
@@ -5356,6 +6160,7 @@
 
           // Update password
           volunteer.volunteerPassword = newPassword;
+          logActivity('password-change', '', 'Changed captain password');
           saveData();
           showPasswordChangeModal = false;
           showToast('Password changed successfully');
@@ -5399,6 +6204,7 @@
           // Update password
           volunteer.volunteerPassword = newPassword;
           volunteerAuth = volunteer; // Update the reference
+          logActivity('password-change', '', 'Changed volunteer password');
           saveData();
           showVolunteerPasswordChangeModal = false;
           showToast('Password changed successfully');
@@ -5406,40 +6212,6 @@
         };
       }
 
-      // Handle PIN setup form
-      const pinSetupForm = document.getElementById('pinSetupForm');
-      if (pinSetupForm) {
-        pinSetupForm.onsubmit = function(e) {
-          e.preventDefault();
-          const newPin = document.getElementById('newPinInput').value;
-          const confirmPin = document.getElementById('confirmPinInput').value;
-
-          if (newPin.length !== 4 || !/^\d{4}$/.test(newPin)) {
-            alert('PIN must be exactly 4 digits');
-            return;
-          }
-
-          if (isWeakPin(newPin)) {
-            alert("That PIN is too easy to guess. Please pick something more unique - avoid patterns like 1234 or repeated digits.");
-            return;
-          }
-
-          if (newPin !== confirmPin) {
-            alert('PINs do not match');
-            return;
-          }
-
-          // Save custom PIN
-          const captain = appData.volunteers.find(v => v.name === captainAuth.name);
-          if (captain) {
-            captain.customPin = newPin;
-            saveData();
-            showPinSetupModal = false;
-            alert('Your PIN has been set! Use ' + newPin + ' to log in next time.');
-            render();
-          }
-        };
-      }
     }
 
     // Initial render - show loading, then fetch data from server

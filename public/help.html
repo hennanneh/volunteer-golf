@@ -97,10 +97,10 @@
     <p style="margin-bottom:15px;opacity:0.9">Get your hole checked in in under 60 seconds:</p>
     <ol>
       <li><strong>Open the app</strong> on your phone and tap <strong>"Hole Captain Check-In"</strong></li>
-      <li><strong>Enter your PIN</strong> (last 4 digits of your phone, or your custom PIN)</li>
+      <li><strong>Enter your email and password</strong> (initial password is your 10-digit phone number)</li>
       <li><strong>Select AM or PM</strong> shift using the toggle at the top</li>
       <li><strong>Tap each volunteer's name</strong> as they arrive - a green checkmark appears</li>
-      <li><strong>Tap "Save Check-Ins"</strong> when done - that's it!</li>
+      <li><strong>Tap "Submit"</strong> when done to finalize the shift - that's it!</li>
     </ol>
     <div class="tip" style="background:rgba(255,255,255,0.15);border-left-color:rgba(255,255,255,0.5)">
       <strong style="color:white">Pro Tip:</strong> You can check in volunteers throughout the shift. No need to wait until everyone arrives - just save whenever you make changes.
@@ -110,25 +110,62 @@
   <h2>User Roles</h2>
   <div class="feature-grid">
     <div class="card">
+      <h3>Volunteer</h3>
+      <p>Can view their own schedule and check-in status via the Volunteer Portal.</p>
+    </div>
+    <div class="card">
       <h3>Hole Captain</h3>
       <p>Checks in volunteers at their assigned hole. Can view their hole's roster and email volunteers.</p>
     </div>
     <div class="card">
       <h3>Chairman / Asst. Chairman</h3>
-      <p>Like a captain but can switch between multiple assigned holes. Oversees a section of the course.</p>
+      <p>Like a captain but can switch between multiple assigned holes. Also has read-only access to the Admin portal to view all tournament data.</p>
     </div>
     <div class="card">
       <h3>Admin</h3>
       <p>Full access to all features: edit volunteers, view all holes, run reports, manage settings.</p>
     </div>
-    <div class="card">
-      <h3>View Admin</h3>
-      <p>Read-only admin access. Can view all data and reports but cannot make changes.</p>
-    </div>
-    <div class="card">
-      <h3>Volunteer</h3>
-      <p>Can view their own schedule and check-in status via the Volunteer Portal.</p>
-    </div>
+  </div>
+
+  <h3>Access Summary</h3>
+  <div class="card">
+    <table>
+      <thead>
+        <tr>
+          <th>Role</th>
+          <th>Captain Portal</th>
+          <th>Admin Portal</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Volunteer</strong></td>
+          <td>No</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td><strong>Captain</strong></td>
+          <td>Yes (own hole)</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td><strong>Chairman</strong></td>
+          <td>Yes (assigned holes)</td>
+          <td>Yes (read-only)</td>
+        </tr>
+        <tr>
+          <td><strong>Asst. Chairman</strong></td>
+          <td>Yes (assigned holes)</td>
+          <td>Yes (read-only)</td>
+        </tr>
+        <tr>
+          <td><strong>Admin</strong></td>
+          <td>Yes (all holes)</td>
+          <td>Yes (full access)</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="margin-top:15px;font-size:14px;color:#666">Chairman and Asst. Chairman require an email address and use the admin password (default: "admin2025") to access the Admin portal.</p>
   </div>
 
   <h2>Admin Features</h2>
@@ -159,7 +196,7 @@
     <ul>
       <li><strong>Search & Filter</strong> - Find volunteers by name, type, or hole</li>
       <li><strong>Add Volunteer</strong> - Click the + button to add new volunteers</li>
-      <li><strong>Edit</strong> - Click any volunteer to update their info, schedule, or PIN</li>
+      <li><strong>Edit</strong> - Click any volunteer to update their info and schedule</li>
       <li><strong>Bulk Update</strong> - Use Import to update multiple volunteers at once</li>
     </ul>
     <div class="tip">
@@ -173,7 +210,8 @@
     <table>
       <tr><th>Report</th><th>Description</th></tr>
       <tr><td>Volunteer Totals</td><td>Total shifts scheduled and worked per volunteer</td></tr>
-      <tr><td>Hole Roster</td><td>Complete schedule for a specific hole - great for printing</td></tr>
+      <tr><td>Hole Roster</td><td>Complete schedule for a specific hole - great for printing. Admins can also move volunteers between holes.</td></tr>
+      <tr><td>Service Recognition</td><td>Volunteers with 5, 10, 15, or 20+ years of service for milestone awards</td></tr>
       <tr><td>Custom Report</td><td>Build your own with selectable columns and filters</td></tr>
     </table>
     <p>All reports can be <strong>printed</strong> or <strong>exported to CSV</strong> for Excel.</p>
@@ -230,21 +268,22 @@
   </div>
 
   <div class="card">
-    <h3>Custom PIN</h3>
-    <p>On first login, you'll be prompted to set a custom 4-digit PIN. This replaces using your phone number and is more secure.</p>
+    <h3>Password</h3>
+    <p>On first login, you'll be prompted to set a custom password. Your initial password is your 10-digit phone number.</p>
     <div class="tip">
-      <strong>Note:</strong> Easy PINs like 1234, 1111, or 0000 are not allowed.
+      <strong>Note:</strong> You can change your password anytime via the menu (hamburger icon).
     </div>
   </div>
 
   <h2>Volunteer Portal</h2>
   <div class="card">
-    <p>Volunteers can log in with the last 4 digits of their phone to:</p>
+    <p>Volunteers can log in with their email and password (initial password is their 10-digit phone number) to:</p>
     <ul>
       <li>View their scheduled shifts</li>
       <li>See which shifts they've been checked into</li>
       <li>Update their email address</li>
       <li>View their hole assignment</li>
+      <li>Change their password</li>
     </ul>
   </div>
 
@@ -320,7 +359,7 @@
   <div class="card">
     <ul>
       <li><strong>Import early</strong> - Get your volunteer list imported a few days before the event</li>
-      <li><strong>Test with captains</strong> - Have captains log in before event day to set their PINs</li>
+      <li><strong>Test with captains</strong> - Have captains log in before event day to set their passwords</li>
       <li><strong>Use the Overview</strong> - The admin Overview tab is your best friend during the tournament</li>
       <li><strong>Email rosters</strong> - Send hole rosters to volunteers before their shift</li>
       <li><strong>Archive when done</strong> - Save the tournament data to archives after the event</li>
@@ -331,7 +370,7 @@
   <div class="card">
     <table>
       <tr><th>Problem</th><th>Solution</th></tr>
-      <tr><td>Can't log in</td><td>Make sure you're using the last 4 digits of your registered phone, or your custom PIN if you set one</td></tr>
+      <tr><td>Can't log in</td><td>Make sure you're using your registered email and correct password. Initial password is your 10-digit phone number.</td></tr>
       <tr><td>Don't see my volunteers</td><td>Check the AM/PM toggle - you might be viewing the wrong shift</td></tr>
       <tr><td>Changes not saving</td><td>Check your internet connection. The app needs connectivity to save.</td></tr>
       <tr><td>Seeing old data</td><td>Pull down to refresh (mobile) or tap the refresh button in the header</td></tr>

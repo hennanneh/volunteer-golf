@@ -1,0 +1,1650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Volunteer Training - Colonial Golf Tournament</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #1a472a;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Presentation Controls */
+    .presentation-controls {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      gap: 10px;
+      z-index: 1000;
+    }
+    .presentation-controls button {
+      padding: 15px 25px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background: #fff;
+      color: #1a472a;
+      font-weight: 600;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+    .presentation-controls button:hover {
+      background: #f0f0f0;
+    }
+    .slide-counter {
+      position: fixed;
+      bottom: 25px;
+      left: 20px;
+      color: rgba(255,255,255,0.7);
+      font-size: 18px;
+      z-index: 1000;
+    }
+
+    /* Slides */
+    .slide {
+      display: none;
+      min-height: 100vh;
+      padding: 40px 60px;
+      background: linear-gradient(135deg, #1a472a 0%, #2d5a3f 100%);
+    }
+    .slide.active {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .slide-content {
+      max-width: 1400px;
+      width: 100%;
+      margin: 0 auto;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    h1 { color: #fff; font-size: 56px; text-align: center; margin-bottom: 15px; }
+    h2 { color: #fff; font-size: 44px; text-align: center; margin-bottom: 30px; }
+    h3 { color: #fff; font-size: 32px; margin-bottom: 20px; }
+    .subtitle { color: rgba(255,255,255,0.85); font-size: 26px; text-align: center; margin-bottom: 40px; }
+
+    /* Phone Mockup */
+    .phone {
+      background: #1a1a1a;
+      border-radius: 40px;
+      padding: 10px;
+      width: 300px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+      flex-shrink: 0;
+    }
+    .phone-screen {
+      background: #f5f5f5;
+      border-radius: 32px;
+      overflow: hidden;
+      min-height: 550px;
+    }
+    .phone-notch {
+      width: 100px;
+      height: 24px;
+      background: #1a1a1a;
+      border-radius: 0 0 14px 14px;
+      margin: 0 auto;
+    }
+    .phone-label {
+      color: #fff;
+      text-align: center;
+      font-size: 18px;
+      margin-top: 15px;
+      font-weight: 500;
+    }
+
+    /* Mockup UI Elements - Landing */
+    .mock-landing {
+      background: linear-gradient(135deg, #1a472a 0%, #2d5a3f 100%);
+      min-height: 550px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 30px 20px;
+      text-align: center;
+    }
+    .mock-landing-icon { font-size: 48px; margin-bottom: 15px; }
+    .mock-landing h3 { color: #fff; font-size: 20px; margin-bottom: 5px; }
+    .mock-landing p { color: rgba(255,255,255,0.8); font-size: 13px; margin-bottom: 25px; }
+    .mock-btn-primary {
+      display: block;
+      width: 100%;
+      padding: 14px;
+      background: #fff;
+      color: #1a472a;
+      border: none;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .mock-btn-secondary {
+      display: block;
+      width: 100%;
+      padding: 14px;
+      background: transparent;
+      color: #fff;
+      border: 2px solid rgba(255,255,255,0.5);
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    /* Mockup UI - Login */
+    .mock-login {
+      background: #fff;
+      min-height: 550px;
+      padding: 20px;
+    }
+    .mock-back { color: #1a472a; font-size: 14px; margin-bottom: 20px; }
+    .mock-login-header { text-align: center; margin-bottom: 25px; }
+    .mock-login-header .icon { font-size: 50px; margin-bottom: 10px; }
+    .mock-login-header h3 { color: #1a472a; font-size: 20px; margin-bottom: 5px; }
+    .mock-login-header p { color: #666; font-size: 13px; }
+    .mock-input {
+      display: block;
+      width: 100%;
+      padding: 14px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 14px;
+      margin-bottom: 12px;
+      color: #999;
+      background: #fff;
+    }
+    .mock-submit {
+      display: block;
+      width: 100%;
+      padding: 14px;
+      background: #1a472a;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 600;
+      margin-top: 10px;
+    }
+    .mock-hint { color: #999; font-size: 11px; text-align: center; margin-top: 15px; }
+
+    /* Mockup UI - Captain Dashboard */
+    .mock-captain {
+      background: #f5f5f5;
+      min-height: 550px;
+    }
+    .mock-captain-header {
+      background: linear-gradient(135deg, #1a472a, #2d5a3f);
+      color: white;
+      padding: 15px;
+    }
+    .mock-captain-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 12px;
+    }
+    .mock-captain-header h4 { font-size: 22px; font-weight: 700; }
+    .mock-captain-header p { font-size: 13px; opacity: 0.9; margin-top: 3px; }
+    .mock-header-btns { display: flex; gap: 6px; align-items: center; }
+    .mock-header-btn {
+      background: rgba(255,255,255,0.2);
+      border: none;
+      color: white;
+      padding: 10px 12px;
+      border-radius: 8px;
+      font-size: 16px;
+      min-width: 44px;
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .mock-hamburger-btn {
+      background: rgba(255,255,255,0.2);
+      border: none;
+      color: white;
+      padding: 6px 10px;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3px;
+      min-width: 44px;
+      min-height: 44px;
+    }
+    .mock-hamburger-lines {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+    .mock-hamburger-lines span {
+      display: block;
+      width: 18px;
+      height: 2px;
+      background: white;
+      border-radius: 2px;
+    }
+    .mock-hamburger-label {
+      font-size: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .mock-shift-row { display: flex; gap: 8px; margin-top: 10px; }
+    .mock-day-select {
+      background: white;
+      border: none;
+      padding: 10px 12px;
+      border-radius: 8px;
+      font-size: 13px;
+      color: #333;
+      min-height: 44px;
+    }
+    .mock-shift-toggle { display: flex; border-radius: 8px; overflow: hidden; }
+    .mock-shift-btn {
+      padding: 10px 14px;
+      border: none;
+      font-size: 12px;
+      font-weight: 600;
+      min-height: 44px;
+    }
+    .mock-shift-btn.active { background: white; color: #1a472a; }
+    .mock-shift-btn.inactive { background: #0d2818; color: rgba(255,255,255,0.5); }
+
+    .mock-search {
+      padding: 12px 15px;
+      background: #f0f0f0;
+    }
+    .mock-search-input {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      font-size: 14px;
+      color: #999;
+      background: white;
+    }
+
+    .mock-volunteer-list { padding: 10px 15px; }
+    .mock-section-header {
+      background: #1a472a;
+      color: white;
+      padding: 8px 12px;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin: 0 -15px 10px -15px;
+      letter-spacing: 0.5px;
+    }
+    .mock-section-header.gray { background: #6b7c6b; }
+    .mock-volunteer-item {
+      display: flex;
+      align-items: center;
+      padding: 14px;
+      background: white;
+      border-radius: 12px;
+      margin-bottom: 8px;
+      border: 2px solid transparent;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    .mock-volunteer-item.checked { border-color: #4caf50; background: #f8fff8; }
+    .mock-checkbox {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      border: 2px solid #ddd;
+      margin-right: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      color: white;
+      flex-shrink: 0;
+    }
+    .mock-checkbox.checked { background: #4caf50; border: none; }
+    .mock-vol-name { font-size: 15px; font-weight: 500; flex: 1; }
+    .mock-badge {
+      font-size: 10px;
+      padding: 3px 6px;
+      border-radius: 4px;
+      margin-left: 8px;
+      font-weight: 500;
+    }
+    .mock-badge.you { background: #e3f2fd; color: #1565c0; }
+    .mock-badge.captain { background: #fff3e0; color: #e65100; }
+    .mock-badge.checked { background: #e8f5e9; color: #2e7d32; }
+    .mock-edit-btn {
+      padding: 6px 10px;
+      background: #f5f5f5;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-size: 11px;
+      color: #666;
+      margin-left: 8px;
+    }
+
+    .mock-floating-bottom {
+      background: white;
+      padding: 15px;
+      border-top: 1px solid #eee;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+    .mock-notes-input {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 13px;
+      margin-bottom: 10px;
+      color: #999;
+    }
+    .mock-submit-btn {
+      width: 100%;
+      padding: 14px;
+      background: #1a472a;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 600;
+    }
+    .mock-submit-btn.disabled {
+      background: #ccc;
+      color: #666;
+    }
+
+    /* Mockup UI - Volunteer Dashboard */
+    .mock-vol-dash {
+      background: linear-gradient(135deg, #1a472a 0%, #2d5a3d 100%);
+      min-height: 550px;
+    }
+    .mock-vol-header {
+      background: #1a472a;
+      color: white;
+      padding: 20px;
+    }
+    .mock-vol-header h4 { font-size: 18px; font-weight: 700; }
+    .mock-vol-header p { font-size: 13px; opacity: 0.8; margin-top: 4px; }
+    .mock-vol-content { padding: 20px; }
+    .mock-vol-card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .mock-vol-card h5 { color: #1a472a; font-size: 15px; margin-bottom: 12px; font-weight: 600; }
+    .mock-vol-card p { color: #666; font-size: 13px; margin-bottom: 10px; }
+    .mock-schedule-table {
+      width: 100%;
+      font-size: 12px;
+      border-collapse: collapse;
+    }
+    .mock-schedule-table th {
+      background: #f8f9fa;
+      padding: 10px 8px;
+      border: 1px solid #ddd;
+      text-align: left;
+      font-weight: 600;
+      color: #333;
+    }
+    .mock-schedule-table td {
+      padding: 10px 8px;
+      border: 1px solid #ddd;
+    }
+    .mock-status-scheduled { color: #1a472a; font-size: 11px; }
+    .mock-status-checked { color: #4caf50; font-weight: 600; font-size: 11px; }
+
+    /* Hamburger Dropdown */
+    .mock-dropdown {
+      position: absolute;
+      top: 60px;
+      right: 10px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      min-width: 180px;
+      overflow: hidden;
+      z-index: 100;
+    }
+    .mock-dropdown-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 18px;
+      border-bottom: 1px solid #eee;
+      font-size: 15px;
+      color: #333;
+    }
+    .mock-dropdown-item:last-child { border-bottom: none; }
+    .mock-dropdown-item.logout { color: #c62828; }
+    .mock-dropdown-icon { font-size: 18px; width: 24px; text-align: center; }
+
+    /* Layout */
+    .flex-row {
+      display: flex;
+      gap: 50px;
+      align-items: flex-start;
+      justify-content: center;
+      flex: 1;
+    }
+    .text-content { flex: 1; max-width: 600px; }
+
+    /* Step List */
+    .step-list { list-style: none; padding: 0; }
+    .step-list li {
+      color: #fff;
+      font-size: 22px;
+      padding: 15px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.15);
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+    }
+    .step-list li:last-child { border-bottom: none; }
+    .step-number {
+      background: #fff;
+      color: #1a472a;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    /* Task Card */
+    .task-card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 35px 40px;
+      margin: 20px auto;
+      max-width: 950px;
+    }
+    .task-card h3 { color: #1a472a; font-size: 28px; margin-bottom: 20px; }
+    .task-card ol { font-size: 20px; padding-left: 28px; color: #333; }
+    .task-card li { margin-bottom: 12px; line-height: 1.5; }
+    .task-card .hint {
+      background: #e8f5e9;
+      padding: 18px 22px;
+      border-radius: 10px;
+      margin-top: 22px;
+      font-size: 18px;
+      color: #2e7d32;
+      border-left: 4px solid #4caf50;
+    }
+
+    /* Callout */
+    .callout {
+      background: rgba(255,255,255,0.12);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin: 15px 0;
+    }
+    .callout p { color: #fff; font-size: 20px; }
+    .callout.tip { border-left: 4px solid #4caf50; }
+    .callout.warning { border-left: 4px solid #ff9800; }
+    .callout.info { border-left: 4px solid #2196f3; }
+
+    /* Feature Grid */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+      margin-top: 35px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .feature-card {
+      background: rgba(255,255,255,0.1);
+      border-radius: 16px;
+      padding: 28px;
+      text-align: center;
+    }
+    .feature-card .icon { font-size: 48px; margin-bottom: 12px; }
+    .feature-card h4 { color: #fff; font-size: 22px; margin-bottom: 8px; }
+    .feature-card p { color: rgba(255,255,255,0.8); font-size: 17px; }
+
+    /* Two-column */
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 20px; }
+    .col-card {
+      background: rgba(255,255,255,0.1);
+      border-radius: 16px;
+      padding: 25px;
+    }
+    .col-card h4 { color: #fff; font-size: 24px; margin-bottom: 15px; }
+    .col-card ul { color: rgba(255,255,255,0.9); font-size: 18px; padding-left: 22px; line-height: 1.8; }
+
+    /* Key point */
+    .key-point {
+      background: linear-gradient(135deg, #fff 0%, #f5f5f5 100%);
+      border-radius: 16px;
+      padding: 25px 30px;
+      margin: 12px 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+    }
+    .key-point-icon { font-size: 32px; flex-shrink: 0; }
+    .key-point-text h4 { color: #1a472a; font-size: 22px; margin-bottom: 6px; }
+    .key-point-text p { color: #555; font-size: 18px; }
+
+    /* Comparison table */
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: rgba(255,255,255,0.95);
+      border-radius: 12px;
+      overflow: hidden;
+      margin-top: 20px;
+    }
+    .comparison-table th { background: #1a472a; color: #fff; padding: 16px 18px; font-size: 18px; text-align: left; }
+    .comparison-table td { padding: 14px 18px; font-size: 16px; border-bottom: 1px solid #eee; }
+    .comparison-table .check { color: #4caf50; font-size: 20px; }
+    .comparison-table .x { color: #ccc; font-size: 20px; }
+
+    .centered-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+      text-align: center;
+    }
+
+    .big-icon { font-size: 100px; text-align: center; margin-bottom: 25px; }
+
+    /* Annotation arrow */
+    .annotated-phone { position: relative; }
+    .annotation {
+      position: absolute;
+      background: #ff5722;
+      color: white;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .annotation::before {
+      content: '';
+      position: absolute;
+      border: 8px solid transparent;
+    }
+    .annotation.left::before { right: -16px; border-left-color: #ff5722; top: 50%; transform: translateY(-50%); }
+    .annotation.right::before { left: -16px; border-right-color: #ff5722; top: 50%; transform: translateY(-50%); }
+    .annotation.bottom::before { top: -16px; border-bottom-color: #ff5722; left: 50%; transform: translateX(-50%); }
+
+    /* Mobile */
+    @media (max-width: 900px) {
+      .slide { padding: 20px; }
+      h1 { font-size: 32px; }
+      h2 { font-size: 26px; }
+      .two-col, .features-grid { grid-template-columns: 1fr; }
+      .flex-row { flex-direction: column; align-items: center; }
+      .phone { width: 260px; }
+      .phone-screen { min-height: 480px; }
+      .step-list li { font-size: 18px; }
+      .annotation { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Slide 1: Welcome -->
+<div class="slide active" id="slide-1">
+  <div class="slide-content centered-content">
+    <div class="big-icon">⛳</div>
+    <h1>Volunteer Check-In Training</h1>
+    <p class="subtitle">Colonial Golf Tournament</p>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="icon">📱</div>
+        <h4>Mobile First</h4>
+        <p>Designed for your phone</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">✅</div>
+        <h4>Simple Check-Ins</h4>
+        <p>Tap names as people arrive</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">📅</div>
+        <h4>View Schedules</h4>
+        <p>Know who's working each shift</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">🔒</div>
+        <h4>Secure Login</h4>
+        <p>Email and password access</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Slide 2: Two Portals - Landing Page -->
+<div class="slide" id="slide-2">
+  <div class="slide-content">
+    <h2>Two Ways to Access the System</h2>
+    <div class="flex-row">
+      <div class="annotated-phone">
+        <div class="phone">
+          <div class="phone-screen">
+            <div class="phone-notch"></div>
+            <div class="mock-landing">
+              <div class="mock-landing-icon">⛳</div>
+              <h3>Colonial Invitational</h3>
+              <p>Tournament Volunteer Manager</p>
+              <div style="width:100%;max-width:220px">
+                <div class="mock-btn-primary">Hole Captain Check-In</div>
+                <div class="mock-btn-secondary">Volunteer Portal</div>
+              </div>
+              <div style="margin-top:30px;font-size:11px;opacity:0.8">
+                <p style="font-weight:600;margin-bottom:8px">Need help?</p>
+                <p>Tournament Coordinator</p>
+                <p style="margin-top:5px;opacity:0.7">Staff available during event</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="phone-label">Home Page</p>
+        <div class="annotation left" style="left:-180px;top:220px">For Captains</div>
+        <div class="annotation left" style="left:-180px;top:280px">For All Volunteers</div>
+      </div>
+      <div class="text-content">
+        <div class="col-card" style="margin-bottom:25px">
+          <h4>🏌️ Captain Portal</h4>
+          <ul>
+            <li>Check in volunteers on your hole</li>
+            <li>View your hole's full roster</li>
+            <li>Edit volunteer schedules</li>
+            <li>Submit shift reports with notes</li>
+          </ul>
+        </div>
+        <div class="col-card">
+          <h4>👤 Volunteer Portal</h4>
+          <ul>
+            <li>View your personal schedule</li>
+            <li>See your check-in status</li>
+            <li>Update your email address</li>
+            <li>Change your password</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Slide 3: Captain Login -->
+<div class="slide" id="slide-3">
+  <div class="slide-content">
+    <h2>Captain Portal: Logging In</h2>
+    <div class="flex-row">
+      <div>
+        <div class="phone">
+          <div class="phone-screen">
+            <div class="phone-notch"></div>
+            <div class="mock-login">
+              <div class="mock-back">← Back</div>
+              <div class="mock-login-header">
+                <div class="icon">🏌️</div>
+                <h3>Hole Captain Login</h3>
+                <p>Enter your email and password</p>
+              </div>
+              <div class="mock-input">Email</div>
+              <div class="mock-input">Password</div>
+              <div class="mock-submit">Sign In</div>
+              <p class="mock-hint">Initial password is your phone number (10 digits)</p>
+            </div>
+          </div>
+        </div>
+        <p class="phone-label">Captain Login</p>
+      </div>
+      <div class="text-content">
+        <ul class="step-list">
+          <li><span class="step-number">1</span><span>Go to <strong>colonialvolunteers.golf</strong></span></li>
+          <li><span class="step-number">2</span><span>Tap <strong>"Hole Captain Check-In"</strong></span></li>
+          <li><span class="step-number">3</span><span>Enter your <strong>email address</strong></span></li>
+          <li><span class="step-number">4</span><span>Enter your <strong>password</strong><br><span style="font-size:16px;color:rgba(255,255,255,0.7)">(First time? Use your 10-digit phone number)</span></span></li>
+          <li><span class="step-number">5</span><span>Tap <strong>"Sign In"</strong></span></li>
+        </ul>
+        <div class="callout info" style="margin-top:20px">
+          <p>💡 After first login, you'll be prompted to set a new password.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Slide 4: Captain Dashboard Overview -->
+<div class="slide" id="slide-4">
+  <div class="slide-content">
+    <h2>Captain Dashboard Overview</h2>
+    <div class="flex-row">
+      <div class="annotated-phone">
+        <div class="phone">
+          <div class="phone-screen">
+            <div class="mock-captain" style="position:relative;padding-bottom:100px">
+              <div class="mock-captain-header">
+                <div class="mock-captain-header-row">
+                  <div>
+                    <h4>Hole #7</h4>
+                    <p>Captain: Smith, John</p>
+                  </div>
+                  <div class="mock-header-btns">
+                    <span class="mock-header-btn">↻</span>
+                    <div class="mock-hamburger-btn">
+                      <div class="mock-hamburger-lines">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      </div>
+                      <span class="mock-hamburger-label">Menu</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="mock-shift-row">
+                  <span class="mock-day-select">Thursday (May 22)</span>
+                  <div class="mock-shift-toggle">
+                    <span class="mock-shift-btn active">Morning</span>
+                    <span class="mock-shift-btn inactive">Afternoon</span>
+                  </div>
+                </div>
+              </div>
+              <div class="mock-search">
+                <div class="mock-search-input">Search for a volunteer...</div>
+              </div>
+              <div class="mock-volunteer-list">
+                <div class="mock-section-header">Captains</div>
+                <div class="mock-volunteer-item checked">
+                  <div class="mock-checkbox checked">✓</div>
+                  <span class="mock-vol-name">Smith, John<span class="mock-badge you">You</span></span>
+                </div>
+                <div class="mock-section-header">Scheduled Volunteers</div>
+                <div class="mock-volunteer-item">
+                  <div class="mock-checkbox"></div>
+                  <span class="mock-vol-name">Adams, Mike</span>
+                  <span class="mock-edit-btn">Edit</span>
+                </div>
+              </div>
+              <div class="mock-floating-bottom">
+                <div class="mock-notes-input">Notes (optional)</div>
+                <div class="mock-submit-btn">Check In 1 Volunteer</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="phone-label">Captain Dashboard</p>
+        <div class="annotation left" style="left:-150px;top:55px">Your Hole</div>
+        <div class="annotation left" style="left:-150px;top:120px">Day & Shift</div>
+        <div class="annotation left" style="left:-150px;top:290px">Tap to check in</div>
+        <div class="annotation left" style="left:-150px;top:430px">Submit shift</div>
+      </div>
+      <div class="text-content">
+        <div class="key-point">
+          <span class="key-point-icon">🏁</span>
+          <div class="key-point-text">
+            <h4>Header</h4>
+            <p>Your hole number and name. Refresh button and Menu for Roster, Help, Change Password, Logout.</p>
+          </div>
+        </div>
+        <div class="key-point">
+          <span class="key-point-icon">📅</span>
+          <div class="key-point-text">
+            <h4>Day & Shift Selector</h4>
+            <p>Choose which day and shift (Morning/Afternoon) you're checking in. <strong>Always verify this first!</strong></p>
+          </div>
+        </div>
+        <div class="key-point">
+          <span class="key-point-icon">👥</span>
+          <div class="key-point-text">
+            <h4>Volunteer List</h4>
+            <p>Organized by Captains, Scheduled Volunteers, and Not Scheduled. Tap to check in.</p>
+          </div>
+        </div>
+        <div class="key-point">
+          <span class="key-point-icon">📝</span>
+          <div class="key-point-text">
+            <h4>Submit Button</h4>
+            <p>Add notes and submit your check-ins. You can submit multiple times!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Slide 5: The Menu Button -->
+<div class="slide" id="slide-5">
+  <div class="slide-content">
+    <h2>The Menu Button</h2>
+    <div class="flex-row">
+      <div>
+        <div class="phone">
+          <div class="phone-screen">
+            <div class="mock-captain" style="position:relative">
+              <div class="mock-captain-header">
+                <div class="mock-captain-header-row">
+                  <div>
+                    <h4>Hole #7</h4>
+                    <p>Captain: Smith, John</p>
+                  </div>
+                  <div class="mock-header-btns">
+                    <span class="mock-header-btn">↻</span>
+                    <div class="mock-hamburger-btn" style="background:white">
+                      <div class="mock-hamburger-lines">
+                        <span style="background:#1a472a;transform:rotate(45deg) translate(3px,4px)"></span>
+                        <span style="opacity:0"></span>
+                        <span style="background:#1a472a;transform:rotate(-45deg) translate(3px,-4px)"></span>
+                      </div>
+                      <span class="mock-hamburger-label" style="color:#1a472a">Menu</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mock-dropdown">
+                <div class="mock-dropdown-item"><span class="mock-dropdown-icon">📋</span> Roster</div>
+                <div class="mock-dropdown-item"><span class="mock-dropdown-icon">❓</span> Help</div>
+                <div class="mock-dropdown-item"><span class="mock-dropdown-icon">🔑</span> Change Password</div>
+                <div class="mock-dropdown-item logout"><span class="mock-dropdown-icon">🚪</span> Logout</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="phone-label">Menu Open</p>
+      </div>
+      <div class="text-content">
+        <div class="key-point">
+          <span class="key-point-icon">📋</span>
+          <div class="key-point-text">
+            <h4>Roster</h4>
+            <p>View your hole's complete schedule for all days. Download as PDF or email to yourself.</p>
+          </div>
+        </div>
+        <div class="key-point">
+          <span class="key-point-icon">❓</span>
+          <div class="key-point-text">
+            <h4>Help</h4>
+            <p>Quick reference guide for how to use the check-in system.</p>
+          </div>
+        </div>
+        <div class="key-point">
+          <span class="key-point-icon">🔑</span>
+          <div class="key-point-text">
+            <h4>Change Password</h4>
+            <p>Update your login password anytime.</p>
+          </div>
+        </div>
+        <div class="key-point">
+          <span class="key-point-icon">🚪</span>
+          <div class="key-point-text">
+            <h4>Logout</h4>
+            <p>Sign out when you're done. Your check-ins are saved automatically.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Slide 6: Checking In Volunteers -->
+<div class="slide" id="slide-6">
+  <div class="slide-content">
+    <h2>How to Check In Volunteers</h2>
+    <div class="flex-row">
+      <div>
+        <div class="phone">
+          <div class="phone-screen" style="padding:30px 20px;display:flex;flex-direction:column;justify-content:center;background:#f5f5f5">
+            <p style="text-align:center;color:#666;font-size:13px;margin-bottom:15px">Before: Not checked in</p>
+            <div class="mock-volunteer-item" style="margin:0 0 20px 0">
+              <div class="mock-checkbox"></div>
+              <span class="mock-vol-name">Adams, Mike</span>
+              <span class="mock-edit-btn">Edit</span>
+            </div>
+            <div style="text-align:center;font-size:36px;color:#1a472a;margin:10px 0">👆</div>
+            <p style="text-align:center;color:#1a472a;font-weight:600;font-size:16px;margin:10px 0">TAP the row</p>
+            <div style="text-align:center;font-size:36px;color:#1a472a;margin:10px 0">👇</div>
+            <p style="text-align:center;color:#666;font-size:13px;margin:15px 0 15px 0">After: Checked in!</p>
+            <div class="mock-volunteer-item checked" style="margin:0">
+              <div class="mock-checkbox checked">✓</div>
+              <span class="mock-vol-name">Adams, Mike<span class="mock-badge checked">checked in</span></span>
+              <span class="mock-edit-btn">Edit</span>
+            </div>
+          </div>
+        </div>
+        <p class="phone-label">Tap to Check In</p>
+      </div>
+      <div class="text-content">
+        <div class="key-point">
+          <span class="key-point-icon">👆</span>
+          <div class="key-point-text">
+            <h4>Tap the volunteer's row</h4>
+            <p>A green checkmark and border appears. They're checked in!</p>
+          </div>
+        </div>
+        <div class="key-point">
+          <span class="key-point-icon">🔄</span>
+          <div class="key-point-text">
+            <h4>Made a mistake? Tap again</h4>
+            <p>Tapping a checked-in volunteer unchecks them.</p>
+          </div>
+        </div>
+        <div class="key-point">
+          <span class="key-point-icon">💾</span>
+          <div class="key-point-text">
+            <h4>Saves automatically</h4>
+            <p>Every tap saves immediately. No save button needed!</p>
+          </div>
+        </div>
+        <div class="key-point">
+          <span class="key-point-icon">🔎</span>
+          <div class="key-point-text">
+            <h4>Use Search</h4>
+            <p>Can't find someone? Use the search bar to find them quickly.</p>
+          </div>
+        </div>
+        <div class="callout warning" style="margin-top:20px">
+          <p>⚠️ Only check in volunteers who actually show up!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Slide 7: Volunteer Sections -->
+<div class="slide" id="slide-7">
+  <div class="slide-content">
+    <h2>Understanding Volunteer Sections</h2>
+    <div class="flex-row">
+      <div>
+        <div class="phone">
+          <div class="phone-screen" style="background:#f5f5f5">
+            <div style="padding:15px">
+              <div class="mock-section-header" style="margin:0 -15px 10px -15px">Captains</div>
+              <div class="mock-volunteer-item checked" style="margin-bottom:8px">
+                <div class="mock-checkbox checked">✓</div>
+                <span class="mock-vol-name">Smith, John<span class="mock-badge you">You</span></span>
+              </div>
+              <div class="mock-volunteer-item" style="margin-bottom:15px">
+                <div class="mock-checkbox"></div>
+                <span class="mock-vol-name">Jones, Mary<span class="mock-badge captain">Co-Captain</span></span>
+              </div>
+
+              <div class="mock-section-header" style="margin:0 -15px 10px -15px">Scheduled Volunteers</div>
+              <div class="mock-volunteer-item checked" style="margin-bottom:8px">
+                <div class="mock-checkbox checked">✓</div>
+                <span class="mock-vol-name">Adams, Mike<span class="mock-badge checked">checked in</span></span>
+                <span class="mock-edit-btn">Edit</span>
+              </div>
+              <div class="mock-volunteer-item" style="margin-bottom:15px">
+                <div class="mock-checkbox"></div>
+                <span class="mock-vol-name">Brown, Sarah</span>
+                <span class="mock-edit-btn">Edit</span>
+              </div>
+
+              <div class="mock-section-header gray" style="margin:0 -15px 10px -15px">Not Scheduled This Shift</div>
+              <div class="mock-volunteer-item" style="opacity:0.7">
+                <div class="mock-checkbox"></div>
+                <span class="mock-vol-name">Clark, Tom</span>
+                <span class="mock-edit-btn">Edit</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="phone-label">Volunteer Sections</p>
+      </div>
+      <div class="text-content">
+        <div class="key-point">
+          <span class="key-point-icon">🏆</span>
+          <div class="key-point-text">
+            <h4>Captains Section</h4>
+            <p>You and any co-captains for this hole. You're auto-checked-in when you log in.</p>
+          </div>
+        </div>
+        <div class="key-point">
+          <span class="key-point-icon">📋</span>
+          <div class="key-point-text">
+            <h4>Scheduled Volunteers</h4>
+            <p>Volunteers assigned to work THIS specific day and shift. These are your expected arrivals.</p>
+          </div>
+        </div>
+        <div class="key-point">
+          <span class="key-point-icon">📝</span>
+          <div class="key-point-text">
+            <h4>Not Scheduled This Shift</h4>
+            <p>Other volunteers on your hole, but not scheduled for this particular shift. Useful if someone covers for another.</p>
+          </div>
+        </div>
+        <div class="callout tip" style="margin-top:15px">
+          <p>💡 The "Edit" button lets you modify a volunteer's schedule if needed.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Slide 8: Submitting Your Shift -->
+<div class="slide" id="slide-8">
+  <div class="slide-content">
+    <h2>Submitting Your Shift Report</h2>
+    <div class="flex-row">
+      <div>
+        <div class="phone">
+          <div class="phone-screen" style="background:#f5f5f5;display:flex;flex-direction:column;justify-content:flex-end">
+            <div style="padding:15px">
+              <div class="mock-volunteer-item checked" style="margin-bottom:8px">
+                <div class="mock-checkbox checked">✓</div>
+                <span class="mock-vol-name">Smith, John</span>
+              </div>
+              <div class="mock-volunteer-item checked" style="margin-bottom:8px">
+                <div class="mock-checkbox checked">✓</div>
+                <span class="mock-vol-name">Brown, Sarah</span>
+              </div>
+              <div class="mock-volunteer-item checked">
+                <div class="mock-checkbox checked">✓</div>
+                <span class="mock-vol-name">Davis, Tom</span>
+              </div>
+            </div>
+            <div style="background:white;padding:15px;border-top:1px solid #eee">
+              <input type="text" value="Miller called in sick" style="width:100%;padding:12px;border:1px solid #ddd;border-radius:8px;font-size:13px;margin-bottom:10px">
+              <button style="width:100%;padding:14px;background:#1a472a;color:white;border:none;border-radius:10px;font-size:15px;font-weight:600">Check In 3 Volunteers</button>
+              <p style="text-align:center;font-size:11px;color:#666;margin-top:8px">Last submitted at 8:45 AM</p>
+            </div>
+          </div>
+        </div>
+        <p class="phone-label">Submit at Bottom</p>
+      </div>
+      <div class="text-content">
+        <ul class="step-list">
+          <li><span class="step-number">1</span><span>Scroll to the bottom of the screen</span></li>
+          <li><span class="step-number">2</span><span>Add <strong>notes</strong> about issues or no-shows (optional)</span></li>
+          <li><span class="step-number">3</span><span>Tap the green <strong>Submit</strong> button</span></li>
+          <li><span class="step-number">4</span><span>Confirm in the popup</span></li>
+        </ul>
+        <div class="callout tip" style="margin-top:20px">
+          <p>💡 You can submit multiple times! Late arrival? Check them in and submit again.</p>
+        </div>
+        <div class="callout info" style="margin-top:15px">
+          <p>📊 The button text updates dynamically: "Check In 3 Volunteers", "Update 1 Change", or "No Changes".</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Slide 9: Practice Task 1 -->
+<div class="slide" id="slide-9">
+  <div class="slide-content">
+    <h2>📝 Try It Yourself!</h2>
+    <p class="subtitle">Practice logging in and checking in volunteers</p>
+    <div class="task-card">
+      <h3>Task 1: Log In and Check In</h3>
+      <ol>
+        <li>Open <strong>colonialvolunteers.golf</strong> on your phone</li>
+        <li>Tap <strong>"Hole Captain Check-In"</strong></li>
+        <li>Enter your email and password (first time: 10-digit phone number)</li>
+        <li>Verify the correct <strong>day and shift</strong> at the top</li>
+        <li>Find yourself in the Captains section (look for "You" badge)</li>
+        <li>Check in <strong>one volunteer</strong> by tapping their row</li>
+        <li><strong>Uncheck</strong> them by tapping again</li>
+        <li>Try the <strong>Search</strong> bar to find a specific name</li>
+      </ol>
+      <div class="hint">💡 Your check-ins save automatically and persist even if you close the app!</div>
+    </div>
+  </div>
+</div>
+
+<!-- Slide 10: Editing Schedules -->
+<div class="slide" id="slide-10">
+  <div class="slide-content">
+    <h2>Editing a Volunteer's Schedule</h2>
+    <div class="flex-row">
+      <div>
+        <div class="phone">
+          <div class="phone-screen" style="background:#fff;padding:20px">
+            <h3 style="text-align:center;color:#1a472a;font-size:16px;margin-bottom:15px">Edit Schedule: Adams, Mike</h3>
+            <p style="color:#666;font-size:12px;text-align:center;margin-bottom:15px">Modify this volunteer's schedule for your hole</p>
+            <div style="margin-bottom:15px">
+              <label style="font-size:13px;font-weight:600;display:block;margin-bottom:10px">Schedule</label>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+                <label style="display:flex;align-items:center;gap:6px;font-size:12px"><input type="checkbox" checked> Thu AM</label>
+                <label style="display:flex;align-items:center;gap:6px;font-size:12px"><input type="checkbox"> Thu PM</label>
+                <label style="display:flex;align-items:center;gap:6px;font-size:12px"><input type="checkbox" checked> Fri AM</label>
+                <label style="display:flex;align-items:center;gap:6px;font-size:12px"><input type="checkbox" checked> Fri PM</label>
+                <label style="display:flex;align-items:center;gap:6px;font-size:12px"><input type="checkbox"> Sat AM</label>
+                <label style="display:flex;align-items:center;gap:6px;font-size:12px"><input type="checkbox"> Sat PM</label>
+              </div>
+            </div>
+            <div style="padding:12px;background:#f8f8f8;border-radius:8px;margin-bottom:15px">
+              <label style="display:flex;align-items:center;gap:8px;font-size:13px"><input type="checkbox"> Send updated schedule via email</label>
+            </div>
+            <div style="padding:12px;background:#e3f2fd;border-radius:8px;margin-bottom:20px">
+              <p style="font-size:13px;color:#1565c0">📧 Create Blank Email</p>
+            </div>
+            <div style="display:flex;gap:10px">
+              <button style="flex:1;padding:12px;background:#f0f0f0;border:none;border-radius:8px;font-size:14px">Cancel</button>
+              <button style="flex:1;padding:12px;background:#1a472a;color:white;border:none;border-radius:8px;font-size:14px">Save Schedule</button>
+            </div>
+          </div>
+        </div>
+        <p class="phone-label">Edit Schedule Modal</p>
+      </div>
+      <div class="text-content">
+        <ul class="step-list">
+          <li><span class="step-number">1</span><span>Tap <strong>"Edit"</strong> button next to a volunteer</span></li>
+          <li><span class="step-number">2</span><span>Check/uncheck shifts to modify their schedule</span></li>
+          <li><span class="step-number">3</span><span>Optionally send them an email notification</span></li>
+          <li><span class="step-number">4</span><span>Tap <strong>"Save Schedule"</strong></span></li>
+        </ul>
+        <div class="callout info" style="margin-top:20px">
+          <p>📧 Use "Create Blank Email" to contact a volunteer directly about schedule questions.</p>
+        </div>
+        <div class="callout warning" style="margin-top:15px">
+          <p>⚠️ Only edit schedules if you're sure about the changes. When in doubt, contact the volunteer first.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Slide 11: Viewing Roster -->
+<div class="slide" id="slide-11">
+  <div class="slide-content">
+    <h2>Viewing Your Hole's Roster</h2>
+    <div class="flex-row">
+      <div>
+        <div class="phone">
+          <div class="phone-screen" style="background:#fff">
+            <div style="padding:12px;border-bottom:1px solid #eee;display:flex;justify-content:space-between;align-items:center">
+              <span style="font-weight:600;color:#1a472a;font-size:14px">Roster - Hole #7</span>
+              <div style="display:flex;gap:5px;align-items:center">
+                <span style="padding:6px 10px;background:#f0f0f0;border-radius:6px;font-size:11px">📥 PDF</span>
+                <span style="padding:6px 10px;background:#f0f0f0;border-radius:6px;font-size:11px">📧 Email</span>
+                <span style="font-size:20px;color:#666;padding:0 5px">×</span>
+              </div>
+            </div>
+            <div style="padding:12px;overflow:auto">
+              <table style="width:100%;font-size:10px;border-collapse:collapse">
+                <thead>
+                  <tr style="background:#f5f5f5">
+                    <th style="padding:8px;text-align:left;border:1px solid #ddd">Name</th>
+                    <th style="padding:8px;text-align:center;border:1px solid #ddd">Thu AM</th>
+                    <th style="padding:8px;text-align:center;border:1px solid #ddd">Thu PM</th>
+                    <th style="padding:8px;text-align:center;border:1px solid #ddd">Fri AM</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td style="padding:8px;border:1px solid #ddd"><strong>Smith, John</strong><br><span style="font-size:9px;color:#888">Captain</span></td><td style="padding:8px;text-align:center;border:1px solid #ddd;color:#4caf50">✓</td><td style="padding:8px;text-align:center;border:1px solid #ddd;color:#4caf50">✓</td><td style="padding:8px;text-align:center;border:1px solid #ddd">-</td></tr>
+                  <tr><td style="padding:8px;border:1px solid #ddd">Adams, Mike</td><td style="padding:8px;text-align:center;border:1px solid #ddd;color:#4caf50">✓</td><td style="padding:8px;text-align:center;border:1px solid #ddd">-</td><td style="padding:8px;text-align:center;border:1px solid #ddd;color:#4caf50">✓</td></tr>
+                  <tr><td style="padding:8px;border:1px solid #ddd">Brown, Sarah</td><td style="padding:8px;text-align:center;border:1px solid #ddd">-</td><td style="padding:8px;text-align:center;border:1px solid #ddd;color:#4caf50">✓</td><td style="padding:8px;text-align:center;border:1px solid #ddd;color:#4caf50">✓</td></tr>
+                  <tr><td style="padding:8px;border:1px solid #ddd">Davis, Tom</td><td style="padding:8px;text-align:center;border:1px solid #ddd;color:#4caf50">✓</td><td style="padding:8px;text-align:center;border:1px solid #ddd;color:#4caf50">✓</td><td style="padding:8px;text-align:center;border:1px solid #ddd;color:#4caf50">✓</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <p class="phone-label">Roster View</p>
+      </div>
+      <div class="text-content">
+        <ul class="step-list">
+          <li><span class="step-number">1</span><span>Tap <strong>Menu</strong> → <strong>Roster</strong></span></li>
+          <li><span class="step-number">2</span><span>See all volunteers scheduled for your hole</span></li>
+          <li><span class="step-number">3</span><span>Green checkmarks = scheduled shifts</span></li>
+        </ul>
+        <h3 style="margin-top:25px">Roster Actions:</h3>
+        <div class="two-col" style="margin-top:15px">
+          <div class="col-card" style="padding:15px;text-align:center"><h4 style="font-size:18px">📥 Download PDF</h4><p style="font-size:14px;color:rgba(255,255,255,0.8);margin-top:8px">Print for reference</p></div>
+          <div class="col-card" style="padding:15px;text-align:center"><h4 style="font-size:18px">📧 Email to Self</h4><p style="font-size:14px;color:rgba(255,255,255,0.8);margin-top:8px">Send a copy to your inbox</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Slide 12: Chairman Multi-Hole -->
+<div class="slide" id="slide-12">
+  <div class="slide-content">
+    <h2>Chairmen: Multi-Hole Access</h2>
+    <div class="flex-row">
+      <div>
+        <div class="phone">
+          <div class="phone-screen">
+            <div class="mock-captain">
+              <div class="mock-captain-header">
+                <div class="mock-captain-header-row">
+                  <div>
+                    <div style="display:flex;align-items:center;gap:8px">
+                      <select style="font-size:18px;font-weight:700;padding:6px 10px;border-radius:6px;border:none;background:rgba(255,255,255,0.9);color:#1a472a">
+                        <option>Hole #3</option>
+                        <option>Hole #7</option>
+                        <option>Hole #12</option>
+                      </select>
+                    </div>
+                    <p style="margin-top:5px">Chair: Johnson, Mary</p>
+                  </div>
+                  <div class="mock-header-btns">
+                    <span class="mock-header-btn">↻</span>
+                    <div class="mock-hamburger-btn">
+                      <div class="mock-hamburger-lines">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      </div>
+                      <span class="mock-hamburger-label">Menu</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div style="padding:25px;text-align:center;color:#666">
+                <p style="font-size:15px;margin-bottom:15px">Chairmen see a <strong>dropdown</strong> to switch between their assigned holes.</p>
+                <p style="font-size:14px">All captain features work the same for each hole.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="phone-label">Chairman View</p>
+      </div>
+      <div class="text-content">
+        <div class="key-point">
+          <span class="key-point-icon">🔽</span>
+          <div class="key-point-text">
+            <h4>Hole Selector Dropdown</h4>
+            <p>Instead of a fixed hole number, Chairmen see a dropdown to select any of their assigned holes.</p>
+          </div>
+        </div>
+        <ul class="step-list" style="margin-top:20px">
+          <li><span class="step-number">1</span><span>Log in normally with your email/password</span></li>
+          <li><span class="step-number">2</span><span>Tap the <strong>hole dropdown</strong> in the header</span></li>
+          <li><span class="step-number">3</span><span>Select a different hole</span></li>
+          <li><span class="step-number">4</span><span>The volunteer list updates to show that hole's roster</span></li>
+        </ul>
+        <div class="callout info" style="margin-top:20px">
+          <p>💡 You can check in volunteers and submit reports for any of your assigned holes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Slide 13: Practice Task 2 -->
+<div class="slide" id="slide-13">
+  <div class="slide-content">
+    <h2>📝 Try It Yourself!</h2>
+    <p class="subtitle">Practice the full captain workflow</p>
+    <div class="task-card">
+      <h3>Task 2: Complete Captain Workflow</h3>
+      <ol>
+        <li>Tap <strong>Menu</strong> → <strong>Roster</strong> to view your hole's schedule</li>
+        <li>Close the roster by tapping <strong>X</strong></li>
+        <li>Tap <strong>"Edit"</strong> next to any volunteer</li>
+        <li>Look at their schedule checkboxes (don't change anything)</li>
+        <li>Tap <strong>"Cancel"</strong></li>
+        <li>Check in 2-3 volunteers by tapping their rows</li>
+        <li>Scroll down and type a note: <strong>"Testing the system"</strong></li>
+        <li>Tap the <strong>Submit</strong> button and confirm</li>
+        <li>Notice the button now says "No Changes"</li>
+      </ol>
+      <div class="hint">💡 After submitting, the button updates to show only new changes since the last submission.</div>
+    </div>
+  </div>
+</div>
+
+<!-- Slide 14: Volunteer Login -->
+<div class="slide" id="slide-14">
+  <div class="slide-content">
+    <h2>Volunteer Portal: Logging In</h2>
+    <div class="flex-row">
+      <div>
+        <div class="phone">
+          <div class="phone-screen">
+            <div class="phone-notch"></div>
+            <div class="mock-login">
+              <div class="mock-back">← Back</div>
+              <div class="mock-login-header">
+                <div class="icon">👤</div>
+                <h3>Volunteer Portal</h3>
+                <p>Enter your email and password</p>
+              </div>
+              <div class="mock-input">Email</div>
+              <div class="mock-input">Password</div>
+              <div class="mock-submit">Sign In</div>
+              <p class="mock-hint">Initial password is your phone number (10 digits)</p>
+            </div>
+          </div>
+        </div>
+        <p class="phone-label">Volunteer Login</p>
+      </div>
+      <div class="text-content">
+        <ul class="step-list">
+          <li><span class="step-number">1</span><span>Go to <strong>colonialvolunteers.golf</strong></span></li>
+          <li><span class="step-number">2</span><span>Tap <strong>"Volunteer Portal"</strong></span></li>
+          <li><span class="step-number">3</span><span>Enter your <strong>email address</strong></span></li>
+          <li><span class="step-number">4</span><span>Enter your <strong>password</strong><br><span style="font-size:16px;color:rgba(255,255,255,0.7)">(First time: your 10-digit phone number)</span></span></li>
+          <li><span class="step-number">5</span><span>Tap <strong>"Sign In"</strong></span></li>
+        </ul>
+        <div class="callout info" style="margin-top:20px">
+          <p>👤 All volunteers (including Captains) can use this portal to view their personal schedule.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Slide 15: Volunteer Dashboard -->
+<div class="slide" id="slide-15">
+  <div class="slide-content">
+    <h2>Volunteer Portal: Your Dashboard</h2>
+    <div class="flex-row">
+      <div>
+        <div class="phone">
+          <div class="phone-screen">
+            <div class="mock-vol-dash">
+              <div class="mock-vol-header">
+                <div style="display:flex;justify-content:space-between;align-items:center">
+                  <div>
+                    <h4>Johnson, Emily</h4>
+                    <p>Hole #12 • Volunteer</p>
+                  </div>
+                  <div style="display:flex;gap:6px">
+                    <span style="background:rgba(255,255,255,0.2);padding:8px 10px;border-radius:8px;font-size:14px">↻</span>
+                    <span style="background:rgba(255,255,255,0.2);padding:8px 12px;border-radius:8px;font-size:11px">Password</span>
+                    <span style="background:rgba(255,255,255,0.2);padding:8px 14px;border-radius:8px;font-size:13px">Logout</span>
+                  </div>
+                </div>
+              </div>
+              <div class="mock-vol-content">
+                <div class="mock-vol-card">
+                  <h5>Your Schedule</h5>
+                  <table class="mock-schedule-table">
+                    <thead><tr><th>Day</th><th>Morning</th><th>Afternoon</th></tr></thead>
+                    <tbody>
+                      <tr><td>Thursday<br><span style="font-size:10px;color:#888">May 22</span></td><td class="mock-status-checked">✓ Checked In</td><td class="mock-status-scheduled">Scheduled</td></tr>
+                      <tr><td>Friday<br><span style="font-size:10px;color:#888">May 23</span></td><td class="mock-status-scheduled">Scheduled</td><td style="color:#ccc">—</td></tr>
+                      <tr><td>Saturday<br><span style="font-size:10px;color:#888">May 24</span></td><td style="color:#ccc">—</td><td class="mock-status-scheduled">Scheduled</td></tr>
+                    </tbody>
+                  </table>
+                  <p style="font-size:11px;color:#666;margin-top:10px">4 shifts scheduled</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="phone-label">Volunteer Dashboard</p>
+      </div>
+      <div class="text-content">
+        <div class="key-point">
+          <span class="key-point-icon">📅</span>
+          <div class="key-point-text">
+            <h4>Your Schedule</h4>
+            <p>See all your assigned shifts with dates. Green = scheduled for that shift.</p>
+          </div>
+        </div>
+        <div class="key-point">
+          <span class="key-point-icon">✅</span>
+          <div class="key-point-text">
+            <h4>Check-In Status</h4>
+            <p>"Checked In" means your Captain marked you as arrived for that shift.</p>
+          </div>
+        </div>
+        <div class="key-point">
+          <span class="key-point-icon">🔑</span>
+          <div class="key-point-text">
+            <h4>Password Button</h4>
+            <p>Change your login password anytime from this screen.</p>
+          </div>
+        </div>
+        <div class="callout warning" style="margin-top:15px">
+          <p>⚠️ You cannot check yourself in. Your Captain does that when you arrive at your hole.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Slide 16: Practice Task 3 -->
+<div class="slide" id="slide-16">
+  <div class="slide-content">
+    <h2>📝 Try It Yourself!</h2>
+    <p class="subtitle">Practice using the Volunteer portal</p>
+    <div class="task-card">
+      <h3>Task 3: Check Your Schedule</h3>
+      <ol>
+        <li>Go to <strong>colonialvolunteers.golf</strong></li>
+        <li>Tap <strong>"Volunteer Portal"</strong></li>
+        <li>Enter your email and password</li>
+        <li>Look at your schedule table</li>
+        <li>Note <strong>which days and shifts</strong> you're working</li>
+        <li>Tap <strong>"Password"</strong> to see the password change screen</li>
+        <li>Tap <strong>"Cancel"</strong> or close the modal</li>
+        <li>Tap <strong>"Logout"</strong> when done</li>
+      </ol>
+      <div class="hint">💡 Check your schedule before the tournament so you know when and where to be!</div>
+    </div>
+  </div>
+</div>
+
+<!-- Slide 17: Captain Quick Reference -->
+<div class="slide" id="slide-17">
+  <div class="slide-content">
+    <h2>Quick Reference: Captains</h2>
+    <div class="two-col" style="max-width:1100px;margin:0 auto">
+      <div class="col-card">
+        <h4>✅ DO</h4>
+        <ul>
+          <li>Check in volunteers <strong>as they arrive</strong></li>
+          <li>Verify the correct <strong>day and shift</strong> first</li>
+          <li>Submit your shift report with notes</li>
+          <li>Add notes about no-shows or issues</li>
+          <li>Use Edit to fix schedule mistakes</li>
+          <li>Tap <strong>Menu → Help</strong> if you need guidance</li>
+          <li>Download the Roster for reference</li>
+        </ul>
+      </div>
+      <div class="col-card">
+        <h4>❌ DON'T</h4>
+        <ul>
+          <li>Check in people who didn't actually show up</li>
+          <li>Forget to verify the day/shift selector</li>
+          <li>Worry about mistakes - just tap again to uncheck!</li>
+          <li>Wait until shift end to check everyone in</li>
+          <li>Edit schedules without being sure of changes</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout tip" style="margin-top:25px;max-width:700px;margin-left:auto;margin-right:auto">
+      <p>💡 You can submit multiple times. Late arrival? Check them in and submit again!</p>
+    </div>
+  </div>
+</div>
+
+<!-- Slide 18: Volunteer Quick Reference -->
+<div class="slide" id="slide-18">
+  <div class="slide-content">
+    <h2>Quick Reference: Volunteers</h2>
+    <div class="two-col" style="max-width:1100px;margin:0 auto">
+      <div class="col-card">
+        <h4>📅 Your Responsibilities</h4>
+        <ul>
+          <li>Know your <strong>hole number</strong></li>
+          <li>Check your schedule before the tournament</li>
+          <li>Arrive <strong>on time</strong> for your shifts</li>
+          <li>Check in with your Captain on arrival</li>
+          <li>Set a secure password after first login</li>
+        </ul>
+      </div>
+      <div class="col-card">
+        <h4>📱 Using the Website</h4>
+        <ul>
+          <li>Log in with your email and password</li>
+          <li>View your complete schedule</li>
+          <li>See if you've been checked in</li>
+          <li>Change your password anytime</li>
+          <li><strong>You cannot</strong> check yourself in</li>
+        </ul>
+      </div>
+    </div>
+    <table class="comparison-table" style="margin-top:30px;max-width:800px;margin-left:auto;margin-right:auto">
+      <thead>
+        <tr><th>Feature</th><th>Volunteer Portal</th><th>Captain Portal</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>View your schedule</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Check in volunteers</td><td class="x">✗</td><td class="check">✓</td></tr>
+        <tr><td>Edit schedules</td><td class="x">✗</td><td class="check">✓</td></tr>
+        <tr><td>View hole roster</td><td class="x">✗</td><td class="check">✓</td></tr>
+        <tr><td>Change your password</td><td class="check">✓</td><td class="check">✓</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Slide 19: Troubleshooting -->
+<div class="slide" id="slide-19">
+  <div class="slide-content">
+    <h2>Troubleshooting</h2>
+    <div class="two-col" style="max-width:1100px;margin:0 auto">
+      <div>
+        <div class="key-point">
+          <span class="key-point-icon">🔐</span>
+          <div class="key-point-text">
+            <h4>"Login Failed"</h4>
+            <p>Check your email spelling. First-time password is your 10-digit phone number (no dashes or spaces).</p>
+          </div>
+        </div>
+        <div class="key-point">
+          <span class="key-point-icon">🚫</span>
+          <div class="key-point-text">
+            <h4>"This shift is closed"</h4>
+            <p>Check-ins lock after shift cutoff time. Contact tournament staff for changes.</p>
+          </div>
+        </div>
+        <div class="key-point">
+          <span class="key-point-icon">👤</span>
+          <div class="key-point-text">
+            <h4>Can't find my name</h4>
+            <p>Make sure you're in the right portal (Captain vs Volunteer) and the correct day/shift is selected.</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="key-point">
+          <span class="key-point-icon">🔄</span>
+          <div class="key-point-text">
+            <h4>Page stuck or not loading</h4>
+            <p>Tap the refresh button (↻) or pull down to refresh. Check your internet connection.</p>
+          </div>
+        </div>
+        <div class="key-point">
+          <span class="key-point-icon">📱</span>
+          <div class="key-point-text">
+            <h4>Buttons too small</h4>
+            <p>Use your phone's zoom feature, or try landscape orientation.</p>
+          </div>
+        </div>
+        <div class="key-point">
+          <span class="key-point-icon">🔑</span>
+          <div class="key-point-text">
+            <h4>Forgot my password</h4>
+            <p>Contact tournament staff to reset your password to your phone number.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Slide 20: Help -->
+<div class="slide" id="slide-20">
+  <div class="slide-content centered-content">
+    <div class="big-icon">❓</div>
+    <h1>Need Help?</h1>
+    <p class="subtitle">Here's how to get assistance</p>
+    <div class="two-col" style="max-width:700px;margin-top:30px">
+      <div class="col-card" style="text-align:center">
+        <h4 style="justify-content:center">📱 In the App</h4>
+        <p style="color:rgba(255,255,255,0.9);font-size:18px">Tap <strong>Menu → Help</strong></p>
+      </div>
+      <div class="col-card" style="text-align:center">
+        <h4 style="justify-content:center">👥 At the Tournament</h4>
+        <p style="color:rgba(255,255,255,0.9);font-size:18px">Ask staff or another captain</p>
+      </div>
+    </div>
+    <div class="callout info" style="margin-top:30px;max-width:600px">
+      <p>📞 Contact information is shown on the home page of the app</p>
+    </div>
+  </div>
+</div>
+
+<!-- Slide 21: Done -->
+<div class="slide" id="slide-21">
+  <div class="slide-content centered-content">
+    <div class="big-icon">⛳</div>
+    <h1>You're All Set!</h1>
+    <p class="subtitle">Thank you for volunteering!</p>
+    <div style="margin-top:40px;color:rgba(255,255,255,0.85);font-size:24px">
+      <p>See you at the tournament!</p>
+      <p style="margin-top:25px;font-size:20px;background:rgba(255,255,255,0.1);display:inline-block;padding:15px 30px;border-radius:10px">🌐 colonialvolunteers.golf</p>
+    </div>
+    <div style="margin-top:40px">
+      <p style="color:rgba(255,255,255,0.7);font-size:16px">Remember:</p>
+      <p style="color:rgba(255,255,255,0.9);font-size:18px;margin-top:10px">Email + Password (first time: 10-digit phone number)</p>
+    </div>
+  </div>
+</div>
+
+<!-- Navigation -->
+<div class="presentation-controls">
+  <button onclick="prevSlide()">◀ Prev</button>
+  <button onclick="nextSlide()">Next ▶</button>
+</div>
+<div class="slide-counter">Slide <span id="currentSlide">1</span> / <span id="totalSlides">21</span></div>
+
+<script>
+  let currentSlide = 1;
+  const totalSlides = 21;
+  document.getElementById('totalSlides').textContent = totalSlides;
+
+  function showSlide(n) {
+    if (n > totalSlides) currentSlide = 1;
+    if (n < 1) currentSlide = totalSlides;
+    document.querySelectorAll('.slide').forEach(s => s.classList.remove('active'));
+    document.getElementById('slide-' + currentSlide).classList.add('active');
+    document.getElementById('currentSlide').textContent = currentSlide;
+  }
+
+  function nextSlide() { currentSlide++; showSlide(currentSlide); }
+  function prevSlide() { currentSlide--; showSlide(currentSlide); }
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'Enter') { e.preventDefault(); nextSlide(); }
+    else if (e.key === 'ArrowLeft' || e.key === 'Backspace') { e.preventDefault(); prevSlide(); }
+  });
+
+  let touchStartX = 0;
+  document.addEventListener('touchstart', e => { touchStartX = e.changedTouches[0].screenX; });
+  document.addEventListener('touchend', e => {
+    const diff = touchStartX - e.changedTouches[0].screenX;
+    if (diff > 50) nextSlide();
+    else if (diff < -50) prevSlide();
+  });
+</script>
+
+</body>
+</html>
