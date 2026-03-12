@@ -1547,7 +1547,7 @@
             <h2 style="color:#1a472a;margin-bottom:30px">Admin Login</h2>
             <form id="adminLoginForm" novalidate>
               <input type="email" id="adminEmail" class="input-field" placeholder="Email" autocomplete="email" style="margin-bottom:15px">
-              <input type="password" id="adminPassword" class="input-field" placeholder="Password" autocomplete="current-password">
+              <div style="position:relative;margin-bottom:15px"><input type="password" id="adminPassword" class="input-field" placeholder="Password" autocomplete="current-password" style="padding-right:50px;margin-bottom:0"><button type="button" onclick="togglePassword('adminPassword')" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;font-size:16px;line-height:1;padding:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button></div>
               <div id="adminError" class="error-msg hidden"></div>
               <button type="submit" class="submit-btn">Login</button>
             </form>
@@ -1580,7 +1580,7 @@
             </div>
             <form id="captainLoginForm" novalidate>
               <input type="email" id="captainEmail" class="input-field" placeholder="Email" autocomplete="email" style="margin-bottom:15px">
-              <input type="password" id="captainPassword" class="input-field" placeholder="Password" autocomplete="current-password">
+              <div style="position:relative;margin-bottom:15px"><input type="password" id="captainPassword" class="input-field" placeholder="Password" autocomplete="current-password" style="padding-right:50px;margin-bottom:0"><button type="button" onclick="togglePassword('captainPassword')" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;font-size:16px;line-height:1;padding:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button></div>
               <div id="captainError" class="error-msg hidden"></div>
               <button type="submit" id="captainSubmit" class="submit-btn">Sign In</button>
             </form>
@@ -1606,7 +1606,7 @@
             </div>
             <form id="volunteerLoginForm" novalidate>
               <input type="email" id="volunteerEmail" class="input-field" placeholder="Email" autocomplete="email" style="margin-bottom:15px">
-              <input type="password" id="volunteerPassword" class="input-field" placeholder="Password" autocomplete="current-password">
+              <div style="position:relative;margin-bottom:15px"><input type="password" id="volunteerPassword" class="input-field" placeholder="Password" autocomplete="current-password" style="padding-right:50px;margin-bottom:0"><button type="button" onclick="togglePassword('volunteerPassword')" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;font-size:16px;line-height:1;padding:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button></div>
               <div id="volunteerError" class="error-msg hidden"></div>
               <button type="submit" id="volunteerSubmit" class="submit-btn">Sign In</button>
             </form>
@@ -1675,15 +1675,15 @@
               <form id="volunteerPasswordChangeForm">
                 <div style="margin-bottom:15px">
                   <label style="font-size:12px;color:#666;display:block;margin-bottom:4px">Current Password</label>
-                  <input type="password" id="currentVolPassword" style="width:100%;padding:12px;border:1px solid #ddd;border-radius:6px;font-size:14px" placeholder="Enter current password" required>
+                  <div style="position:relative"><input type="password" id="currentVolPassword" style="width:100%;padding:12px;padding-right:50px;border:1px solid #ddd;border-radius:6px;font-size:14px" placeholder="Enter current password" required><button type="button" onclick="togglePassword('currentVolPassword')" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;font-size:16px;line-height:1;padding:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button></div>
                 </div>
                 <div style="margin-bottom:15px">
                   <label style="font-size:12px;color:#666;display:block;margin-bottom:4px">New Password</label>
-                  <input type="password" id="newVolPassword" style="width:100%;padding:12px;border:1px solid #ddd;border-radius:6px;font-size:14px" placeholder="Enter new password" required>
+                  <div style="position:relative"><input type="password" id="newVolPassword" style="width:100%;padding:12px;padding-right:50px;border:1px solid #ddd;border-radius:6px;font-size:14px" placeholder="Enter new password" required><button type="button" onclick="togglePassword('newVolPassword')" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;font-size:16px;line-height:1;padding:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button></div>
                 </div>
                 <div style="margin-bottom:20px">
                   <label style="font-size:12px;color:#666;display:block;margin-bottom:4px">Confirm New Password</label>
-                  <input type="password" id="confirmVolPassword" style="width:100%;padding:12px;border:1px solid #ddd;border-radius:6px;font-size:14px" placeholder="Confirm new password" required>
+                  <div style="position:relative"><input type="password" id="confirmVolPassword" style="width:100%;padding:12px;padding-right:50px;border:1px solid #ddd;border-radius:6px;font-size:14px" placeholder="Confirm new password" required><button type="button" onclick="togglePassword('confirmVolPassword')" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;font-size:16px;line-height:1;padding:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button></div>
                 </div>
                 <div class="modal-buttons">
                   <button type="button" class="modal-btn cancel" onclick="showVolunteerPasswordChangeModal=false;render()">${vol.volunteerPassword ? 'Cancel' : 'Skip for Now'}</button>
@@ -1916,15 +1916,15 @@
               <form id="adminPasswordChangeForm">
                 <div style="margin-bottom:15px">
                   <label style="font-size:12px;color:#666;display:block;margin-bottom:4px">Current Password</label>
-                  <input type="password" id="currentAdminPassword" style="width:100%;padding:12px;border:1px solid #ddd;border-radius:6px;font-size:14px" placeholder="Enter current password" required>
+                  <div style="position:relative"><input type="password" id="currentAdminPassword" style="width:100%;padding:12px;padding-right:50px;border:1px solid #ddd;border-radius:6px;font-size:14px" placeholder="Enter current password" required><button type="button" onclick="togglePassword('currentAdminPassword')" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;font-size:16px;line-height:1;padding:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button></div>
                 </div>
                 <div style="margin-bottom:15px">
                   <label style="font-size:12px;color:#666;display:block;margin-bottom:4px">New Password</label>
-                  <input type="password" id="newAdminPassword" style="width:100%;padding:12px;border:1px solid #ddd;border-radius:6px;font-size:14px" placeholder="Enter new password" required>
+                  <div style="position:relative"><input type="password" id="newAdminPassword" style="width:100%;padding:12px;padding-right:50px;border:1px solid #ddd;border-radius:6px;font-size:14px" placeholder="Enter new password" required><button type="button" onclick="togglePassword('newAdminPassword')" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;font-size:16px;line-height:1;padding:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button></div>
                 </div>
                 <div style="margin-bottom:20px">
                   <label style="font-size:12px;color:#666;display:block;margin-bottom:4px">Confirm New Password</label>
-                  <input type="password" id="confirmNewAdminPassword" style="width:100%;padding:12px;border:1px solid #ddd;border-radius:6px;font-size:14px" placeholder="Confirm new password" required>
+                  <div style="position:relative"><input type="password" id="confirmNewAdminPassword" style="width:100%;padding:12px;padding-right:50px;border:1px solid #ddd;border-radius:6px;font-size:14px" placeholder="Confirm new password" required><button type="button" onclick="togglePassword('confirmNewAdminPassword')" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;font-size:16px;line-height:1;padding:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button></div>
                 </div>
                 <div class="modal-buttons">
                   <button type="button" class="modal-btn cancel" onclick="showAdminPasswordChangeModal=false;render()">${adminAuthUser.adminPasswordSetAt ? 'Cancel' : 'Skip for Now'}</button>
@@ -4801,15 +4801,15 @@
             <form id="captainPasswordChangeForm">
               <div style="margin-bottom:15px">
                 <label style="font-size:12px;color:#666;display:block;margin-bottom:4px">Current Password (your phone number)</label>
-                <input type="password" id="currentCaptainPassword" style="width:100%;padding:12px;border:1px solid #ddd;border-radius:6px;font-size:14px" placeholder="Enter current password" required>
+                <div style="position:relative"><input type="password" id="currentCaptainPassword" style="width:100%;padding:12px;padding-right:50px;border:1px solid #ddd;border-radius:6px;font-size:14px" placeholder="Enter current password" required><button type="button" onclick="togglePassword('currentCaptainPassword')" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;font-size:16px;line-height:1;padding:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button></div>
               </div>
               <div style="margin-bottom:15px">
                 <label style="font-size:12px;color:#666;display:block;margin-bottom:4px">New Password</label>
-                <input type="password" id="newCaptainPassword" style="width:100%;padding:12px;border:1px solid #ddd;border-radius:6px;font-size:14px" placeholder="Enter new password" required>
+                <div style="position:relative"><input type="password" id="newCaptainPassword" style="width:100%;padding:12px;padding-right:50px;border:1px solid #ddd;border-radius:6px;font-size:14px" placeholder="Enter new password" required><button type="button" onclick="togglePassword('newCaptainPassword')" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;font-size:16px;line-height:1;padding:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button></div>
               </div>
               <div style="margin-bottom:20px">
                 <label style="font-size:12px;color:#666;display:block;margin-bottom:4px">Confirm New Password</label>
-                <input type="password" id="confirmCaptainPassword" style="width:100%;padding:12px;border:1px solid #ddd;border-radius:6px;font-size:14px" placeholder="Confirm new password" required>
+                <div style="position:relative"><input type="password" id="confirmCaptainPassword" style="width:100%;padding:12px;padding-right:50px;border:1px solid #ddd;border-radius:6px;font-size:14px" placeholder="Confirm new password" required><button type="button" onclick="togglePassword('confirmCaptainPassword')" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;font-size:16px;line-height:1;padding:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button></div>
               </div>
               <div class="modal-buttons">
                 <button type="button" class="modal-btn cancel" onclick="showPasswordChangeModal=false;render()">Skip for Now</button>
@@ -6322,6 +6322,20 @@
       }
     }
     
+    function togglePassword(inputId) {
+      var input = document.getElementById(inputId);
+      var btn = input.nextElementSibling;
+      var eyeOpen = '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>';
+      var eyeClosed = '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94"/><path d="M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19"/><path d="M14.12 14.12a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>';
+      if (input.type === 'password') {
+        input.type = 'text';
+        btn.innerHTML = eyeClosed;
+      } else {
+        input.type = 'password';
+        btn.innerHTML = eyeOpen;
+      }
+    }
+
     function showToast(message) {
       var existing = document.querySelector('.realtime-toast');
       if (existing) existing.remove();
