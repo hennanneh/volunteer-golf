@@ -1814,14 +1814,16 @@
         "Sunday AM": true,
         "Sunday PM": true
       },
-      "email": "",
+      "email": "llackey@colonialfw.com",
       "assignedHoles": [
         99,
         1,
         9,
         10,
         18
-      ]
+      ],
+      "hat": "",
+      "hatReceived": false
     },
     {
       "id": "7532",
@@ -2396,7 +2398,13 @@
         "Saturday PM": true,
         "Sunday AM": true,
         "Sunday PM": true
-      }
+      },
+      "email": "mike@hulenbend.com",
+      "hat": "",
+      "hatReceived": false,
+      "assignedHoles": [
+        99
+      ]
     },
     {
       "id": "6903",
@@ -2570,7 +2578,7 @@
         "Sunday AM": true,
         "Sunday PM": true
       },
-      "email": "annhowrey@yahoo.com"
+      "email": "annehowrey@yahoo.com"
     },
     {
       "id": "359",
@@ -7111,5 +7119,70 @@
     "amShiftCutoff": "00:00",
     "pmShiftCutoff": "00:00",
     "viewAdminPassword": "view2025"
-  }
+  },
+  "activityLog": [
+    {
+      "id": "1773177467640",
+      "timestamp": "2026-03-10T21:17:47.640Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Galvan, Bob",
+      "details": "Edited volunteer (Type: Asst. Chairman, Hole: 99)"
+    },
+    {
+      "id": "1773177442144",
+      "timestamp": "2026-03-10T21:17:22.144Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1773177412527",
+      "timestamp": "2026-03-10T21:16:52.527Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1773176831958",
+      "timestamp": "2026-03-10T21:07:11.958Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1773176822746",
+      "timestamp": "2026-03-10T21:07:02.746Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1773176810539",
+      "timestamp": "2026-03-10T21:06:50.539Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Hill, Michael",
+      "details": "Edited volunteer (Type: Admin, Hole: 99)"
+    },
+    {
+      "id": "1773176777007",
+      "timestamp": "2026-03-10T21:06:17.007Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    }
+  ]
 }
