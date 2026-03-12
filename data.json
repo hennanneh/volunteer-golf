@@ -7132,6 +7132,15 @@
   },
   "activityLog": [
     {
+      "id": "1773338671380",
+      "timestamp": "2026-03-12T18:04:31.380Z",
+      "user": "Adams, Stephen",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
       "id": "1773334348606",
       "timestamp": "2026-03-12T16:52:28.606Z",
       "user": "Adams, Stephen",
