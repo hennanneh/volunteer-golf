@@ -3,7 +3,7 @@
     {
       "id": "7133",
       "name": "Adams, Stephen",
-      "type": "Volunteer",
+      "type": "Asst. Chairman",
       "hole": 9,
       "phone": "(214) 906-1615",
       "yearsWorked": 8,
@@ -13,7 +13,15 @@
         "Friday AM": true,
         "Saturday PM": true,
         "Sunday AM": true
-      }
+      },
+      "email": "hi@hi.com",
+      "hat": "",
+      "hatReceived": false,
+      "assignedHoles": [
+        9
+      ],
+      "adminPassword": "admin2025",
+      "adminPasswordSetAt": null
     },
     {
       "id": "8895",
@@ -254,7 +262,8 @@
         "Sunday PM": true
       },
       "email": "",
-      "customPin": "1111"
+      "customPin": "1111",
+      "notes": "michael barber notes test "
     },
     {
       "id": "9019",
@@ -2578,7 +2587,8 @@
         "Sunday AM": true,
         "Sunday PM": true
       },
-      "email": "annehowrey@yahoo.com"
+      "email": "annehowrey@yahoo.com",
+      "volunteerPassword": "admin2025"
     },
     {
       "id": "359",
@@ -7121,6 +7131,96 @@
     "viewAdminPassword": "view2025"
   },
   "activityLog": [
+    {
+      "id": "1773334348606",
+      "timestamp": "2026-03-12T16:52:28.606Z",
+      "user": "Adams, Stephen",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1773334337835",
+      "timestamp": "2026-03-12T16:52:17.835Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1773334334274",
+      "timestamp": "2026-03-12T16:52:14.274Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Adams, Stephen",
+      "details": "Edited volunteer (Type: Asst. Chairman, Hole: 9)"
+    },
+    {
+      "id": "1773334321412",
+      "timestamp": "2026-03-12T16:52:01.412Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Adams, Stephen",
+      "details": "Edited volunteer (Type: Chairman, Hole: 9)"
+    },
+    {
+      "id": "1773334311473",
+      "timestamp": "2026-03-12T16:51:51.473Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Adams, Stephen",
+      "details": "Edited volunteer (Type: Volunteer, Hole: 9)"
+    },
+    {
+      "id": "1773334216150",
+      "timestamp": "2026-03-12T16:50:16.150Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1773334211717",
+      "timestamp": "2026-03-12T16:50:11.717Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1773334201968",
+      "timestamp": "2026-03-12T16:50:01.968Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "edit-notes",
+      "target": "Barber, Michael",
+      "details": "Updated volunteer notes"
+    },
+    {
+      "id": "1773333884038",
+      "timestamp": "2026-03-12T16:44:44.038Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed captain password"
+    },
+    {
+      "id": "1773333869786",
+      "timestamp": "2026-03-12T16:44:29.786Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1773177467640",
       "timestamp": "2026-03-10T21:17:47.640Z",

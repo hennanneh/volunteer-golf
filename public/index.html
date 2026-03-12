@@ -2223,23 +2223,25 @@
     function renderVolunteersEdit() {
       // Edit modal
       const isNewVolunteer = editingVolunteer && editingVolunteer.isNew;
+      const isReadOnly = adminAuth === 'viewOnly';
+      const disabledAttr = isReadOnly ? 'disabled' : '';
       const editModal = editingVolunteer ? `
         <div class="modal-overlay" onclick="closeEditModal(event)">
           <div class="modal" onclick="event.stopPropagation()" style="max-width:500px;max-height:90vh;overflow-y:auto">
-            <h3>${isNewVolunteer ? 'Add Volunteer' : 'Edit Volunteer'}</h3>
+            <h3>${isNewVolunteer ? 'Add Volunteer' : (isReadOnly ? 'View Volunteer' : 'Edit Volunteer')}</h3>
             <div class="edit-modal-form">
               <label>Name</label>
-              <input type="text" id="editName" value="${editingVolunteer.name}" placeholder="Last, First">
+              <input type="text" id="editName" value="${editingVolunteer.name}" placeholder="Last, First" ${disabledAttr}>
 
               <label>Type</label>
-              <select id="editType">
+              <select id="editType" ${disabledAttr}>
                 ${['Volunteer', 'Captain', 'Asst. Chairman', 'Chairman', 'Admin'].map(t =>
                   `<option value="${t}" ${editingVolunteer.type === t ? 'selected' : ''}>${t}</option>`
                 ).join('')}
               </select>
 
               <label>Primary Hole</label>
-              <select id="editHole">
+              <select id="editHole" ${disabledAttr}>
                 ${[...Array(getNumberOfHoles()).keys()].map(i => i + 1).map(h =>
                   `<option value="${h}" ${editingVolunteer.hole === h ? 'selected' : ''}>Hole ${h}</option>`
                 ).join('')}
@@ -2253,8 +2255,8 @@
                   const isAssigned = editingVolunteer.assignedHoles && editingVolunteer.assignedHoles.includes(h);
                   const isPrimary = editingVolunteer.hole === h;
                   const isChecked = isAssigned || isPrimary;
-                  return `<div onclick="${isPrimary ? '' : `this.classList.toggle('hole-selected');this.querySelector('input').checked=!this.querySelector('input').checked`}" class="${isChecked ? 'hole-selected' : ''}" style="width:44px;height:36px;display:flex;align-items:center;justify-content:center;background:${isChecked ? '#1a472a' : '#fff'};color:${isChecked ? '#fff' : '#333'};border:2px solid ${isPrimary ? '#4caf50' : (isChecked ? '#1a472a' : '#ccc')};border-radius:6px;cursor:${isPrimary ? 'default' : 'pointer'};font-size:14px;font-weight:${isChecked ? '600' : '400'}">
-                    <input type="checkbox" class="assignedHoleCheckbox" value="${h}" ${isChecked ? 'checked' : ''} ${isPrimary ? 'disabled' : ''} style="display:none">
+                  return `<div onclick="${isPrimary || isReadOnly ? '' : `this.classList.toggle('hole-selected');this.querySelector('input').checked=!this.querySelector('input').checked`}" class="${isChecked ? 'hole-selected' : ''}" style="width:44px;height:36px;display:flex;align-items:center;justify-content:center;background:${isChecked ? '#1a472a' : '#fff'};color:${isChecked ? '#fff' : '#333'};border:2px solid ${isPrimary ? '#4caf50' : (isChecked ? '#1a472a' : '#ccc')};border-radius:6px;cursor:${isPrimary || isReadOnly ? 'default' : 'pointer'};font-size:14px;font-weight:${isChecked ? '600' : '400'}">
+                    <input type="checkbox" class="assignedHoleCheckbox" value="${h}" ${isChecked ? 'checked' : ''} ${isPrimary || isReadOnly ? 'disabled' : ''} style="display:none">
                     ${h}
                   </div>`;
                 }).join('')}
@@ -2264,10 +2266,10 @@
               ` : ''}
 
               <label>Phone</label>
-              <input type="tel" id="editPhone" value="${editingVolunteer.phone || ''}" placeholder="(555) 123-4567">
+              <input type="tel" id="editPhone" value="${editingVolunteer.phone || ''}" placeholder="(555) 123-4567" ${disabledAttr}>
 
               <label>Email</label>
-              <input type="email" id="editEmail" value="${editingVolunteer.email || ''}" placeholder="volunteer@example.com">
+              <input type="email" id="editEmail" value="${editingVolunteer.email || ''}" placeholder="volunteer@example.com" ${disabledAttr}>
 
               ${(editingVolunteer.type === 'Admin' || editingVolunteer.type === 'Chairman' || editingVolunteer.type === 'Asst. Chairman') && !isNewVolunteer ? `
               <label>Admin Password</label>
@@ -2275,16 +2277,16 @@
                 <span style="color:#666;font-size:12px;padding:8px 12px;background:#f5f5f5;border-radius:4px">
                   ${editingVolunteer.adminPasswordSetAt ? 'Custom password set' : 'Using default password (admin2025)'}
                 </span>
-                <button type="button" onclick="resetAdminPassword('${editingVolunteer.id}')" style="padding:6px 12px;background:#ff9800;color:white;border:none;border-radius:4px;font-size:12px;cursor:pointer">Reset to Default</button>
+                ${!isReadOnly ? `<button type="button" onclick="resetAdminPassword('${editingVolunteer.id}')" style="padding:6px 12px;background:#ff9800;color:white;border:none;border-radius:4px;font-size:12px;cursor:pointer">Reset to Default</button>` : ''}
               </div>
-              <p style="font-size:10px;color:#999;margin-top:4px">Click reset to set password back to default "admin2025"</p>
+              ${!isReadOnly ? `<p style="font-size:10px;color:#999;margin-top:4px">Click reset to set password back to default "admin2025"</p>` : ''}
               ` : ''}
 
               <label>Years Worked</label>
-              <input type="number" id="editYears" value="${editingVolunteer.yearsWorked || 0}" min="0" placeholder="0">
+              <input type="number" id="editYears" value="${editingVolunteer.yearsWorked || 0}" min="0" placeholder="0" ${disabledAttr}>
 
               <label>Hat</label>
-              <select id="editHat">
+              <select id="editHat" ${disabledAttr}>
                 <option value="" ${!editingVolunteer.hat ? 'selected' : ''}>-- Select Hat --</option>
                 ${['Cap', 'Ladies Visor', 'S/M Sun Hat', 'L/XL Sun Hat'].map(h =>
                   `<option value="${h}" ${editingVolunteer.hat === h ? 'selected' : ''}>${h}</option>`
@@ -2293,7 +2295,7 @@
 
               <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-top:10px;margin-bottom:10px;padding:10px;background:#f8f9fa;border-radius:6px">
                 <label style="display:flex;align-items:center;gap:8px;margin:0;cursor:pointer">
-                  <input type="checkbox" id="editHatReceived" ${editingVolunteer.hatReceived ? 'checked' : ''} style="width:auto">
+                  <input type="checkbox" id="editHatReceived" ${editingVolunteer.hatReceived ? 'checked' : ''} style="width:auto" ${disabledAttr}>
                   <span>Hat Received</span>
                 </label>
                 ${!isNewVolunteer ? `<button type="button" onclick="showVolunteerQR('${editingVolunteer.id}')" style="padding:6px 12px;background:#2196F3;color:white;border:none;border-radius:4px;font-size:12px;cursor:pointer;white-space:nowrap">Show QR Code</button>` : ''}
@@ -2307,7 +2309,7 @@
                     const isChecked = editingVolunteer.scheduled && editingVolunteer.scheduled[key];
                     return `
                       <label class="schedule-item">
-                        <input type="checkbox" id="sched_${day}_${shift}" ${isChecked ? 'checked' : ''}>
+                        <input type="checkbox" id="sched_${day}_${shift}" ${isChecked ? 'checked' : ''} ${disabledAttr}>
                         ${day.slice(0,3)} ${shift}
                       </label>
                     `;
@@ -2315,7 +2317,7 @@
                 ).join('')}
               </div>
             </div>
-            ${!isNewVolunteer ? `
+            ${!isNewVolunteer && !isReadOnly ? `
             <div style="margin-top:20px;padding-top:15px;border-top:1px solid #eee">
               <label style="display:flex;align-items:center;gap:8px;font-size:13px;cursor:pointer">
                 <input type="checkbox" id="adminSendScheduleEmail" style="flex-shrink:0">
@@ -2325,9 +2327,16 @@
             </div>
             ` : ''}
             <div class="modal-buttons" style="margin-top:20px">
-              <button class="modal-btn cancel" onclick="editingVolunteer=null;render()">Cancel</button>
-              <button class="modal-btn confirm" onclick="saveVolunteerEdit()">${isNewVolunteer ? 'Add Volunteer' : 'Save Changes'}</button>
+              <button class="modal-btn cancel" onclick="editingVolunteer=null;render()">${isReadOnly ? 'Close' : 'Cancel'}</button>
+              ${!isReadOnly ? `<button class="modal-btn confirm" onclick="saveVolunteerEdit()">${isNewVolunteer ? 'Add Volunteer' : 'Save Changes'}</button>` : ''}
             </div>
+            ${!isNewVolunteer ? `
+            <div style="margin-top:20px;padding-top:15px;border-top:1px solid #eee">
+              <label style="font-size:13px;font-weight:600;margin-bottom:8px;display:block">Notes</label>
+              <textarea id="editNotes" rows="4" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:6px;font-size:13px;resize:vertical;font-family:inherit" placeholder="${isReadOnly ? 'No notes' : 'Add notes about this volunteer...'}" ${isReadOnly ? 'disabled' : ''}>${editingVolunteer.notes || ''}</textarea>
+              ${!isReadOnly ? `<button type="button" onclick="saveVolunteerNotes()" class="modal-btn confirm" style="margin-top:10px;width:auto">Save Notes</button>` : ''}
+            </div>
+            ` : ''}
           </div>
         </div>
       ` : '';
@@ -2372,7 +2381,7 @@
           </div>
         </div>
 
-        ${adminAuth === 'full' ? `<p style="font-size:11px;color:#888;margin-bottom:10px">Click any row to edit volunteer details</p>` : ''}
+        <p style="font-size:11px;color:#888;margin-bottom:10px">Click any row to ${adminAuth === 'full' ? 'edit' : 'view'} volunteer details</p>
 
         <div class="table-container" style="max-height:60vh;overflow-y:auto">
           <table class="volunteer-table">
@@ -2392,13 +2401,13 @@
               ` : filtered.slice(0, 100).map(v => {
                 const shiftCount = v.scheduled ? Object.keys(v.scheduled).filter(k => v.scheduled[k]).length : 0;
                 return `
-                  <tr style="${adminAuth === 'full' ? 'cursor:pointer' : ''}" ${adminAuth === 'full' ? `onclick="editVolunteer('${v.id}')"` : ''}>
+                  <tr style="cursor:pointer" onclick="editVolunteer('${v.id}')">
                     <td style="font-weight:500;font-size:13px">${v.name}</td>
                     <td><span style="padding:2px 6px;border-radius:4px;font-size:10px;background:${v.type === 'Captain' ? '#e3f2fd' : v.type === 'Volunteer' ? '#f5f5f5' : '#fff3e0'}">${v.type}</span></td>
                     <td style="font-size:12px">#${v.hole}</td>
                     <td style="color:#666;text-align:center;font-size:12px">${v.yearsWorked || 0}</td>
                     <td style="color:#666;font-size:12px">${shiftCount} shifts</td>
-                    <td>${adminAuth === 'full' ? `<button class="edit-btn" onclick="event.stopPropagation();editVolunteer('${v.id}')" style="font-size:11px;padding:3px 8px">Edit</button>` : ''}</td>
+                    <td>${adminAuth === 'full' ? `<button class="edit-btn" onclick="event.stopPropagation();editVolunteer('${v.id}')" style="font-size:11px;padding:3px 8px">Edit</button>` : `<button class="edit-btn" onclick="event.stopPropagation();editVolunteer('${v.id}')" style="font-size:11px;padding:3px 8px;background:#eee;color:#666">View</button>`}</td>
                   </tr>
                 `;
               }).join('')}
@@ -4841,6 +4850,11 @@
               ${captainEditingVolunteer.email ? '<a href="mailto:' + captainEditingVolunteer.email + '" class="modal-btn" style="background:#fff;border:1px solid #ddd;color:#333;text-decoration:none;text-align:center">Create Blank Email</a>' : ''}
               <button class="modal-btn confirm" onclick="saveCaptainVolunteerEdit()">Save Schedule</button>
             </div>
+            <div style="margin-top:20px;padding-top:15px;border-top:1px solid #eee">
+              <label style="font-size:13px;font-weight:600;margin-bottom:8px;display:block">Notes</label>
+              <textarea id="captainEditNotes" rows="4" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:6px;font-size:13px;resize:vertical;font-family:inherit" placeholder="Add notes about this volunteer...">${captainEditingVolunteer.notes || ''}</textarea>
+              <button type="button" onclick="saveCaptainVolunteerNotes()" class="modal-btn confirm" style="margin-top:10px;width:auto">Save Notes</button>
+            </div>
           </div>
         </div>
       ` : '';
@@ -5520,6 +5534,30 @@
 
       captainEditingVolunteer = null;
       render();
+    }
+
+    function saveCaptainVolunteerNotes() {
+      if (!captainEditingVolunteer) return;
+      const notes = document.getElementById('captainEditNotes').value;
+      const idx = appData.volunteers.findIndex(v => v.id === captainEditingVolunteer.id);
+      if (idx === -1) { alert('Volunteer not found'); return; }
+      appData.volunteers[idx].notes = notes;
+      captainEditingVolunteer.notes = notes;
+      saveData();
+      logActivity('edit-notes', appData.volunteers[idx].name, 'Updated volunteer notes');
+      alert('Notes saved!');
+    }
+
+    function saveVolunteerNotes() {
+      if (!editingVolunteer) return;
+      const notes = document.getElementById('editNotes').value;
+      const idx = appData.volunteers.findIndex(v => v.id === editingVolunteer.id);
+      if (idx === -1) { alert('Volunteer not found'); return; }
+      appData.volunteers[idx].notes = notes;
+      editingVolunteer.notes = notes;
+      saveData();
+      logActivity('edit-notes', appData.volunteers[idx].name, 'Updated volunteer notes');
+      alert('Notes saved!');
     }
 
     async function sendScheduleEmail(volunteer, schedule) {
