@@ -7132,6 +7132,33 @@
   },
   "activityLog": [
     {
+      "id": "1774296869897",
+      "timestamp": "2026-03-23T20:14:29.897Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1774296855632",
+      "timestamp": "2026-03-23T20:14:15.632Z",
+      "user": "Howrey, Anne",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1774296848368",
+      "timestamp": "2026-03-23T20:14:08.368Z",
+      "user": "Howrey, Anne",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
       "id": "1773338671380",
       "timestamp": "2026-03-12T18:04:31.380Z",
       "user": "Adams, Stephen",
