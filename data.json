@@ -342,8 +342,10 @@
         "Sunday AM": true,
         "Sunday PM": true
       },
-      "email": "",
-      "customPin": "1111"
+      "email": "bobbell@gmail.com",
+      "customPin": "1111",
+      "hat": "",
+      "hatReceived": false
     },
     {
       "id": "7747",
@@ -7146,6 +7148,87 @@
     "viewAdminPassword": "view2025"
   },
   "activityLog": [
+    {
+      "id": "1774475837414",
+      "timestamp": "2026-03-25T21:57:17.414Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1774475709427",
+      "timestamp": "2026-03-25T21:55:09.427Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1774475687857",
+      "timestamp": "2026-03-25T21:54:47.857Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1774475594025",
+      "timestamp": "2026-03-25T21:53:14.025Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1774475465055",
+      "timestamp": "2026-03-25T21:51:05.055Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1774475376740",
+      "timestamp": "2026-03-25T21:49:36.740Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1774475372372",
+      "timestamp": "2026-03-25T21:49:32.372Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Bell, Bob",
+      "details": "Edited volunteer (Type: Captain, Hole: 9)"
+    },
+    {
+      "id": "1774472617892",
+      "timestamp": "2026-03-25T21:03:37.892Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1774472422843",
+      "timestamp": "2026-03-25T21:00:22.843Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
     {
       "id": "1774472379331",
       "timestamp": "2026-03-25T20:59:39.331Z",
