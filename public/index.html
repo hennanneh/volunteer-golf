@@ -1509,6 +1509,9 @@
       app.innerHTML = content;
       attachEventListeners();
       updatePoweredByFooter();
+      if (currentView === 'admin' && adminTab === 'volunteers') {
+        initVolunteerScroll();
+      }
     }
 
     function renderLanding() {
@@ -1870,14 +1873,14 @@
             ${['overview', 'checkins', 'volunteers', 'reports', 'summary', 'activity', 'import', 'settings']
               .filter(t => adminAuth === 'full' || (t !== 'import' && t !== 'settings' && t !== 'activity'))
               .map(t =>
-              `<button class="tab-btn ${adminTab === t ? 'active' : ''}" onclick="setAdminTab('${t}')">${t === 'checkins' ? 'Check-ins' : t === 'volunteers' ? (adminAuth === 'full' ? 'Edit Volunteers' : 'Volunteers') : t === 'activity' ? 'Activity Log' : t === 'summary' ? 'Tournament Summary' : t.charAt(0).toUpperCase() + t.slice(1)}</button>`
+              `<button class="tab-btn ${adminTab === t ? 'active' : ''}" onclick="setAdminTab('${t}')">${t === 'checkins' ? 'Check-ins' : t === 'volunteers' ? 'Volunteers' : t === 'activity' ? 'Activity Log' : t === 'summary' ? 'Tournament Summary' : t.charAt(0).toUpperCase() + t.slice(1)}</button>`
             ).join('')}
           </div>
           <select class="tabs-mobile-select" onchange="setAdminTab(this.value)">
             ${['overview', 'checkins', 'volunteers', 'reports', 'summary', 'activity', 'import', 'settings']
               .filter(t => adminAuth === 'full' || (t !== 'import' && t !== 'settings' && t !== 'activity'))
               .map(t =>
-              `<option value="${t}" ${adminTab === t ? 'selected' : ''}>${t === 'checkins' ? 'Check-ins' : t === 'volunteers' ? (adminAuth === 'full' ? 'Edit Volunteers' : 'Volunteers') : t === 'activity' ? 'Activity Log' : t === 'summary' ? 'Tournament Summary' : t.charAt(0).toUpperCase() + t.slice(1)}</option>`
+              `<option value="${t}" ${adminTab === t ? 'selected' : ''}>${t === 'checkins' ? 'Check-ins' : t === 'volunteers' ? 'Volunteers' : t === 'activity' ? 'Activity Log' : t === 'summary' ? 'Tournament Summary' : t.charAt(0).toUpperCase() + t.slice(1)}</option>`
             ).join('')}
           </select>
           
@@ -2203,11 +2206,14 @@
     let volSearchTerm = '';
     let volFilterType = 'all';
     let volFilterHole = 'all';
+    let volVisibleColumns = { name: true, type: true, hole: true, phone: false, email: true, years: false, hat: false, shifts: false };
+    let volDisplayLimit = 100;
 
     // Debounced volunteer search
     let volSearchDebounceTimeout = null;
     function setVolSearchTerm(term) {
       volSearchTerm = term;
+      volDisplayLimit = 100;
       if (volSearchDebounceTimeout) clearTimeout(volSearchDebounceTimeout);
       volSearchDebounceTimeout = setTimeout(() => {
         render();
@@ -2358,12 +2364,12 @@
         ${editModal}
         <div style="margin-bottom:20px">
           <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:15px">
-            <h2 style="font-size:16px;color:#333;margin:0">${adminAuth === 'full' ? 'Edit Volunteers' : 'Volunteers'}</h2>
+            <h2 style="font-size:16px;color:#333;margin:0">Volunteers</h2>
             ${adminAuth === 'full' ? `<button onclick="addNewVolunteer()" style="padding:8px 16px;background:#1a472a;color:white;border:none;border-radius:6px;font-size:13px;font-weight:500;cursor:pointer">+ Add Volunteer</button>` : ''}
           </div>
           <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
             <input type="text" class="search-bar" placeholder="Search by name..." value="${volSearchTerm}" oninput="setVolSearchTerm(this.value)" style="font-size:13px">
-            <select onchange="volFilterType=this.value;render()" style="padding:8px;border:1px solid #ddd;border-radius:6px;font-size:13px">
+            <select onchange="volFilterType=this.value;volDisplayLimit=100;render()" style="padding:8px;border:1px solid #ddd;border-radius:6px;font-size:13px">
               <option value="all" ${volFilterType === 'all' ? 'selected' : ''}>All Types</option>
               <option value="Volunteer" ${volFilterType === 'Volunteer' ? 'selected' : ''}>Volunteers</option>
               <option value="Captain" ${volFilterType === 'Captain' ? 'selected' : ''}>Captains</option>
@@ -2371,7 +2377,7 @@
               <option value="Chairman" ${volFilterType === 'Chairman' ? 'selected' : ''}>Chairmen</option>
               <option value="Admin" ${volFilterType === 'Admin' ? 'selected' : ''}>Admins</option>
             </select>
-            <select onchange="volFilterHole=this.value;render()" style="padding:8px;border:1px solid #ddd;border-radius:6px;font-size:13px">
+            <select onchange="volFilterHole=this.value;volDisplayLimit=100;render()" style="padding:8px;border:1px solid #ddd;border-radius:6px;font-size:13px">
               <option value="all" ${volFilterHole === 'all' ? 'selected' : ''}>All Holes</option>
               ${[...Array(getNumberOfHoles()).keys()].map(i => i + 1).map(h =>
                 `<option value="${h}" ${volFilterHole === String(h) ? 'selected' : ''}>Hole ${h}</option>`
@@ -2387,37 +2393,72 @@
           <table class="volunteer-table">
             <thead>
               <tr>
-                <th style="font-size:11px">Name</th>
-                <th style="font-size:11px">Type</th>
-                <th style="font-size:11px">Hole</th>
-                <th style="font-size:11px">Years</th>
-                <th style="font-size:11px">Shifts</th>
+                ${volVisibleColumns.name ? '<th style="font-size:11px">Name</th>' : ''}
+                ${volVisibleColumns.type ? '<th style="font-size:11px">Type</th>' : ''}
+                ${volVisibleColumns.hole ? '<th style="font-size:11px">Hole</th>' : ''}
+                ${volVisibleColumns.phone ? '<th style="font-size:11px">Phone</th>' : ''}
+                ${volVisibleColumns.email ? '<th style="font-size:11px">Email</th>' : ''}
+                ${volVisibleColumns.years ? '<th style="font-size:11px">Years</th>' : ''}
+                ${volVisibleColumns.hat ? '<th style="font-size:11px">Hat</th>' : ''}
+                ${volVisibleColumns.shifts ? '<th style="font-size:11px">Shifts</th>' : ''}
                 <th></th>
               </tr>
             </thead>
             <tbody>
               ${filtered.length === 0 ? `
-                <tr><td colspan="6" style="padding:30px;text-align:center;color:#999;font-size:13px">No volunteers found</td></tr>
-              ` : filtered.slice(0, 100).map(v => {
+                <tr><td colspan="${Object.values(volVisibleColumns).filter(Boolean).length + 1}" style="padding:30px;text-align:center;color:#999;font-size:13px">No volunteers found</td></tr>
+              ` : filtered.slice(0, volDisplayLimit).map(v => {
                 const shiftCount = v.scheduled ? Object.keys(v.scheduled).filter(k => v.scheduled[k]).length : 0;
                 return `
                   <tr style="cursor:pointer" onclick="editVolunteer('${v.id}')">
-                    <td style="font-weight:500;font-size:13px">${v.name}</td>
-                    <td><span style="padding:2px 6px;border-radius:4px;font-size:10px;background:${v.type === 'Captain' ? '#e3f2fd' : v.type === 'Volunteer' ? '#f5f5f5' : '#fff3e0'}">${v.type}</span></td>
-                    <td style="font-size:12px">#${v.hole}</td>
-                    <td style="color:#666;text-align:center;font-size:12px">${v.yearsWorked || 0}</td>
-                    <td style="color:#666;font-size:12px">${shiftCount} shifts</td>
+                    ${volVisibleColumns.name ? `<td style="font-weight:500;font-size:13px">${v.name}</td>` : ''}
+                    ${volVisibleColumns.type ? `<td><span style="padding:2px 6px;border-radius:4px;font-size:10px;background:${v.type === 'Captain' ? '#e3f2fd' : v.type === 'Volunteer' ? '#f5f5f5' : '#fff3e0'}">${v.type}</span></td>` : ''}
+                    ${volVisibleColumns.hole ? `<td style="font-size:12px">#${v.hole}</td>` : ''}
+                    ${volVisibleColumns.phone ? `<td style="font-size:12px;color:#666">${v.phone || '-'}</td>` : ''}
+                    ${volVisibleColumns.email ? `<td style="font-size:12px;color:#666;max-width:180px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${v.email || '-'}</td>` : ''}
+                    ${volVisibleColumns.years ? `<td style="color:#666;text-align:center;font-size:12px">${v.yearsWorked || 0}</td>` : ''}
+                    ${volVisibleColumns.hat ? `<td style="font-size:12px;color:#666">${v.hat || '-'}${v.hatReceived ? ' ✓' : ''}</td>` : ''}
+                    ${volVisibleColumns.shifts ? `<td style="color:#666;font-size:12px">${shiftCount} shifts</td>` : ''}
                     <td>${adminAuth === 'full' ? `<button class="edit-btn" onclick="event.stopPropagation();editVolunteer('${v.id}')" style="font-size:11px;padding:3px 8px">Edit</button>` : `<button class="edit-btn" onclick="event.stopPropagation();editVolunteer('${v.id}')" style="font-size:11px;padding:3px 8px;background:#eee;color:#666">View</button>`}</td>
                   </tr>
                 `;
               }).join('')}
-              ${filtered.length > 100 ? `
-                <tr><td colspan="6" style="padding:15px;text-align:center;color:#666;font-size:12px">Showing first 100 of ${filtered.length} results. Use search to narrow down.</td></tr>
+              ${filtered.length > volDisplayLimit ? `
+                <tr><td colspan="${Object.values(volVisibleColumns).filter(Boolean).length + 1}" style="padding:15px;text-align:center;color:#666;font-size:12px">Showing ${volDisplayLimit} of ${filtered.length} — scroll down for more</td></tr>
               ` : ''}
             </tbody>
           </table>
         </div>
       `;
+    }
+
+    function initVolunteerScroll() {
+      const container = document.querySelector('.table-container');
+      if (!container || container._volScrollBound) return;
+      container._volScrollBound = true;
+      container.addEventListener('scroll', function() {
+        if (container.scrollTop + container.clientHeight >= container.scrollHeight - 50) {
+          const filtered = getFilteredVolunteers();
+          if (volDisplayLimit < filtered.length) {
+            volDisplayLimit += 100;
+            render();
+          }
+        }
+      });
+    }
+
+    function getFilteredVolunteers() {
+      let filtered = appData.volunteers;
+      if (volSearchTerm) {
+        filtered = filtered.filter(v => v.name.toLowerCase().includes(volSearchTerm.toLowerCase()));
+      }
+      if (volFilterType !== 'all') {
+        filtered = filtered.filter(v => v.type === volFilterType);
+      }
+      if (volFilterHole !== 'all') {
+        filtered = filtered.filter(v => v.hole === parseInt(volFilterHole));
+      }
+      return filtered.sort((a, b) => a.name.localeCompare(b.name));
     }
     
     function editVolunteer(id) {
@@ -2810,6 +2851,8 @@
         { id: 'hole-roster', name: 'Hole Roster', desc: 'Full schedule for a hole' },
         { id: 'service-recognition', name: 'Service Recognition', desc: 'Volunteers with 5, 10, 15, 20+ years of service' },
         { id: 'hat-qr-codes', name: 'Hat QR Codes', desc: 'Print all volunteer QR codes for hat pickup' },
+        { id: 'vols-per-hole', name: 'Volunteers per Hole', desc: 'Captain and volunteer counts by hole' },
+        { id: 'assists-per-hole', name: 'Assists per Hole', desc: 'Asst. Chairman assignments by hole' },
         { id: 'custom', name: 'Custom Report', desc: 'Build your own report with custom columns and filters' }
       ];
 
@@ -2855,9 +2898,11 @@
               </div>
             </div>
           ` : ''}
+          <div style="margin-bottom:15px">
+            <button onclick="currentReport=null;render()" style="background:#f0f7f0;border:2px solid #1a472a;color:#1a472a;cursor:pointer;font-size:14px;padding:10px 20px;border-radius:8px;font-weight:600;display:inline-flex;align-items:center;gap:6px;margin-bottom:15px">&larr; All Reports</button>
+          </div>
           <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;flex-wrap:wrap;gap:10px">
             <div>
-              <button onclick="currentReport=null;render()" style="background:none;border:none;color:#1a472a;cursor:pointer;font-size:13px;padding:0;margin-bottom:5px">&larr; Back to Reports</button>
               <h3 style="margin:0;font-size:18px;color:#333">${report?.name || currentReport}</h3>
             </div>
             <div style="display:flex;gap:8px;flex-wrap:wrap">
@@ -2890,7 +2935,7 @@
     }
 
     function renderReportFilters(isCaptainView, captainHole) {
-      if (currentReport === 'hat-qr-codes') return ''; // Has its own filters
+      if (currentReport === 'hat-qr-codes' || currentReport === 'vols-per-hole' || currentReport === 'assists-per-hole') return ''; // No filters needed
       const showHoleFilter = !isCaptainView && ['volunteer-totals', 'hole-roster'].includes(currentReport);
       const showDayFilter = currentReport === 'hole-roster';
       const isHoleRoster = currentReport === 'hole-roster';
@@ -2953,6 +2998,10 @@
           return renderServiceRecognitionReport();
         case 'hat-qr-codes':
           return renderHatQRCodesReport();
+        case 'vols-per-hole':
+          return buildVolsPerHoleTable();
+        case 'assists-per-hole':
+          return buildAssistsPerHoleTable();
         case 'custom':
           return renderCustomReport();
         default:
@@ -3999,9 +4048,11 @@
       }
     }
 
-    // Tournament Summary tab - day filter state
+    // Tournament Summary tab - collapsible section states
     let summaryDayFilter = 'all';
     let weekAtGlanceOpen = true;
+    let volsPerHoleOpen = true;
+    let assistsPerHoleOpen = true;
 
     function setSummaryDayFilter(day) {
       summaryDayFilter = day;
@@ -4013,9 +4064,126 @@
       render();
     }
 
+    function toggleVolsPerHole() {
+      volsPerHoleOpen = !volsPerHoleOpen;
+      render();
+    }
+
+    function toggleAssistsPerHole() {
+      assistsPerHoleOpen = !assistsPerHoleOpen;
+      render();
+    }
+
+    function buildVolsPerHoleTable() {
+      var numHoles = getNumberOfHoles();
+      var html = '<div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;font-size:14px;border:1px solid #ccc">';
+      html += '<thead><tr style="background:#f5f5f5">' +
+        '<th style="text-align:left;padding:12px;border:1px solid #ccc;color:#1a472a;font-weight:600">Hole</th>' +
+        '<th style="text-align:center;padding:12px;border:1px solid #ccc;color:#1a472a;font-weight:600">Captain</th>' +
+        '<th style="text-align:center;padding:12px;border:1px solid #ccc;color:#1a472a;font-weight:600">Volunteer</th>' +
+        '<th style="text-align:center;padding:12px;border:1px solid #ccc;color:#1a472a;font-weight:600">Total</th>' +
+        '</tr></thead><tbody>';
+
+      var totalCaptains = 0, totalVolunteers = 0, totalAll = 0;
+
+      for (var h = 1; h <= numHoles; h++) {
+        var holeVols = appData.volunteers.filter(function(v) { return v.hole === h; });
+        var captainCount = holeVols.filter(function(v) { return v.type === 'Captain'; }).length;
+        var volunteerCount = holeVols.filter(function(v) { return v.type === 'Volunteer'; }).length;
+        var total = captainCount + volunteerCount;
+        totalCaptains += captainCount;
+        totalVolunteers += volunteerCount;
+        totalAll += total;
+
+        var rowBg = h % 2 === 0 ? '#f9f9f9' : '#fff';
+        html += '<tr style="background:' + rowBg + '">' +
+          '<td style="padding:10px 12px;border:1px solid #ccc;font-weight:600;color:#1a472a">Hole ' + h + '</td>' +
+          '<td style="text-align:center;padding:10px 6px;border:1px solid #ccc">' + captainCount + '</td>' +
+          '<td style="text-align:center;padding:10px 6px;border:1px solid #ccc">' + volunteerCount + '</td>' +
+          '<td style="text-align:center;padding:10px 6px;border:1px solid #ccc;font-weight:600;background:#f0f7f0">' + total + '</td>' +
+          '</tr>';
+      }
+
+      html += '<tr style="background:#e8f5e9;font-weight:600">' +
+        '<td style="padding:12px;border:1px solid #ccc;color:#1a472a">TOTALS</td>' +
+        '<td style="text-align:center;padding:12px 6px;border:1px solid #ccc;color:#333">' + totalCaptains + '</td>' +
+        '<td style="text-align:center;padding:12px 6px;border:1px solid #ccc;color:#333">' + totalVolunteers + '</td>' +
+        '<td style="text-align:center;padding:12px 6px;border:1px solid #ccc;color:#1a472a;background:#c8e6c9">' + totalAll + '</td>' +
+        '</tr></tbody></table></div>';
+
+      return html;
+    }
+
+    function buildAssistsPerHoleTable() {
+      var numHoles = getNumberOfHoles();
+      // Collect all unique holes that have Asst. Chairman assigned (including via assignedHoles)
+      var holeCounts = {};
+      for (var i = 1; i <= numHoles; i++) holeCounts[i] = 0;
+
+      appData.volunteers.forEach(function(v) {
+        if (v.type !== 'Asst. Chairman') return;
+        // Count primary hole
+        if (v.hole && v.hole >= 1 && v.hole <= numHoles) {
+          holeCounts[v.hole]++;
+        }
+        // Count additional assigned holes
+        if (v.assignedHoles && Array.isArray(v.assignedHoles)) {
+          v.assignedHoles.forEach(function(ah) {
+            if (ah >= 1 && ah <= numHoles && ah !== v.hole) {
+              holeCounts[ah]++;
+            }
+          });
+        }
+      });
+
+      // Also check for holes beyond numHoles (e.g. Hole 99)
+      var extraHoles = {};
+      appData.volunteers.forEach(function(v) {
+        if (v.type !== 'Asst. Chairman') return;
+        if (v.hole && v.hole > numHoles) {
+          if (!extraHoles[v.hole]) extraHoles[v.hole] = 0;
+          extraHoles[v.hole]++;
+        }
+      });
+
+      var html = '<div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;font-size:14px;border:1px solid #ccc">';
+      html += '<thead><tr style="background:#f5f5f5">' +
+        '<th style="text-align:left;padding:12px;border:1px solid #ccc;color:#1a472a;font-weight:600">Hole</th>' +
+        '<th style="text-align:center;padding:12px;border:1px solid #ccc;color:#1a472a;font-weight:600">Asst. Chairman</th>' +
+        '</tr></thead><tbody>';
+
+      var grandTotal = 0;
+
+      for (var h = 1; h <= numHoles; h++) {
+        var count = holeCounts[h];
+        grandTotal += count;
+        var rowBg = h % 2 === 0 ? '#f9f9f9' : '#fff';
+        html += '<tr style="background:' + rowBg + '">' +
+          '<td style="padding:10px 12px;border:1px solid #ccc;font-weight:600;color:#1a472a">Hole ' + h + '</td>' +
+          '<td style="text-align:center;padding:10px 6px;border:1px solid #ccc">' + count + '</td>' +
+          '</tr>';
+      }
+
+      // Extra holes (e.g. Hole 99)
+      Object.keys(extraHoles).sort(function(a, b) { return a - b; }).forEach(function(eh) {
+        grandTotal += extraHoles[eh];
+        html += '<tr style="background:#fff">' +
+          '<td style="padding:10px 12px;border:1px solid #ccc;font-weight:600;color:#1a472a">Hole ' + eh + '</td>' +
+          '<td style="text-align:center;padding:10px 6px;border:1px solid #ccc">' + extraHoles[eh] + '</td>' +
+          '</tr>';
+      });
+
+      html += '<tr style="background:#e8f5e9;font-weight:600">' +
+        '<td style="padding:12px;border:1px solid #ccc;color:#1a472a">TOTAL</td>' +
+        '<td style="text-align:center;padding:12px 6px;border:1px solid #ccc;color:#1a472a;background:#c8e6c9">' + grandTotal + '</td>' +
+        '</tr></tbody></table></div>';
+
+      return html;
+    }
+
     function renderTournamentSummary(stats) {
-      // Week at a Glance section (collapsible)
-      var weekAtGlance = '<div style="margin-bottom:40px">' +
+      // Section 1: Week at a Glance (collapsible)
+      var weekAtGlance = '<div style="margin-bottom:30px">' +
         '<div onclick="toggleWeekAtGlance()" style="display:flex;align-items:center;cursor:pointer;margin-bottom:15px">' +
         '<span style="font-size:14px;margin-right:8px;transition:transform 0.2s;transform:rotate(' + (weekAtGlanceOpen ? '90' : '0') + 'deg)">&#9654;</span>' +
         '<h3 style="font-size:16px;color:#1a472a;margin:0">Week at a Glance</h3>' +
@@ -4053,99 +4221,38 @@
       }
       weekAtGlance += '</div>';
 
-      // Hole Summary Table section
-      var daysToShow = summaryDayFilter === 'all' ? DAYS : [summaryDayFilter];
-      var numHoles = getNumberOfHoles();
-
-      // Day filter and View Full Roster button row
-      var dayFilterHtml = '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;flex-wrap:wrap;gap:10px">' +
-        '<div><label style="font-size:12px;color:#666;margin-right:10px">Filter by Day:</label>' +
-        '<select onchange="setSummaryDayFilter(this.value)" style="padding:8px 12px;border:1px solid #ddd;border-radius:6px;font-size:13px">' +
-        '<option value="all"' + (summaryDayFilter === 'all' ? ' selected' : '') + '>All Days</option>';
-
-      DAYS.forEach(function(d) {
-        var dayInfo = getRelativeTimeLabel(d, 'AM');
-        dayFilterHtml += '<option value="' + d + '"' + (summaryDayFilter === d ? ' selected' : '') + '>' + d + ' (' + dayInfo.dateOnly + ')</option>';
-      });
-      dayFilterHtml += '</select></div>' +
-        '<button onclick="reportFilters.report=\'hole-roster\';reportFilters.hole=\'all-export\';setAdminTab(\'reports\')" style="background:#1a472a;color:white;border:none;padding:10px 20px;border-radius:6px;cursor:pointer;font-size:13px;font-weight:500">View Full Roster</button>' +
+      // Section 2: Volunteers per Hole (collapsible)
+      var volsPerHole = '<div style="margin-bottom:30px">' +
+        '<div onclick="toggleVolsPerHole()" style="display:flex;align-items:center;cursor:pointer;margin-bottom:15px">' +
+        '<span style="font-size:14px;margin-right:8px;transition:transform 0.2s;transform:rotate(' + (volsPerHoleOpen ? '90' : '0') + 'deg)">&#9654;</span>' +
+        '<h3 style="font-size:16px;color:#1a472a;margin:0">Volunteers Scheduled by Hole</h3>' +
         '</div>';
 
-      // Build the summary table
-      var tableHtml = '<div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;font-size:14px;border:1px solid #ccc">';
-
-      // Header row 1 - Day names
-      tableHtml += '<thead><tr style="background:#f5f5f5">' +
-        '<th style="text-align:left;padding:12px;border:1px solid #ccc;color:#1a472a;font-weight:600" rowspan="2">Hole</th>';
-
-      daysToShow.forEach(function(day) {
-        var dayInfo = getRelativeTimeLabel(day, 'AM');
-        tableHtml += '<th style="text-align:center;padding:12px;border:1px solid #ccc;color:#1a472a;font-weight:600" colspan="3">' + day + ' <span style="font-weight:normal;font-size:11px;color:#666">(' + dayInfo.dateOnly + ')</span></th>';
-      });
-      tableHtml += '</tr>';
-
-      // Header row 2 - AM/PM/Total
-      tableHtml += '<tr style="background:#f5f5f5">';
-      daysToShow.forEach(function() {
-        tableHtml += '<th style="text-align:center;padding:8px;border:1px solid #ccc;font-size:12px;font-weight:500;color:#333">AM</th>' +
-          '<th style="text-align:center;padding:8px;border:1px solid #ccc;font-size:12px;font-weight:500;color:#333">PM</th>' +
-          '<th style="text-align:center;padding:8px;border:1px solid #ccc;font-size:12px;font-weight:600;color:#1a472a">Total</th>';
-      });
-      tableHtml += '</tr></thead><tbody>';
-
-      // Calculate totals for footer
-      var grandTotals = {};
-      daysToShow.forEach(function(day) {
-        grandTotals[day + ' AM'] = 0;
-        grandTotals[day + ' PM'] = 0;
-        grandTotals[day + ' Total'] = 0;
-      });
-
-      // Data rows - one per hole
-      for (var h = 1; h <= numHoles; h++) {
-        var rowBg = h % 2 === 0 ? '#f9f9f9' : '#fff';
-        tableHtml += '<tr style="background:' + rowBg + '">' +
-          '<td style="padding:10px 12px;border:1px solid #ccc;font-weight:600;color:#1a472a">Hole ' + h + '</td>';
-
-        daysToShow.forEach(function(day) {
-          var amCount = appData.volunteers.filter(function(v) {
-            return v.hole === h && v.scheduled && v.scheduled[day + ' AM'];
-          }).length;
-          var pmCount = appData.volunteers.filter(function(v) {
-            return v.hole === h && v.scheduled && v.scheduled[day + ' PM'];
-          }).length;
-          var total = amCount + pmCount;
-
-          grandTotals[day + ' AM'] += amCount;
-          grandTotals[day + ' PM'] += pmCount;
-          grandTotals[day + ' Total'] += total;
-
-          tableHtml += '<td style="text-align:center;padding:10px 6px;border:1px solid #ccc">' + amCount + '</td>' +
-            '<td style="text-align:center;padding:10px 6px;border:1px solid #ccc">' + pmCount + '</td>' +
-            '<td style="text-align:center;padding:10px 6px;border:1px solid #ccc;font-weight:600;background:#f0f7f0">' + total + '</td>';
-        });
-
-        tableHtml += '</tr>';
+      if (volsPerHoleOpen) {
+        volsPerHole += '<div style="display:flex;justify-content:flex-end;margin-bottom:15px">' +
+          '<button onclick="reportFilters.report=\'hole-roster\';reportFilters.hole=\'all-export\';setAdminTab(\'reports\')" style="background:#1a472a;color:white;border:none;padding:10px 20px;border-radius:6px;cursor:pointer;font-size:13px;font-weight:500">View Full Roster</button>' +
+          '</div>';
+        volsPerHole += buildVolsPerHoleTable();
       }
+      volsPerHole += '</div>';
 
-      // Totals row
-      tableHtml += '<tr style="background:#e8f5e9;font-weight:600">' +
-        '<td style="padding:12px;border:1px solid #ccc;color:#1a472a">TOTALS</td>';
+      // Section 3: Assists per Hole (collapsible)
+      var assistsPerHole = '<div style="margin-bottom:30px">' +
+        '<div onclick="toggleAssistsPerHole()" style="display:flex;align-items:center;cursor:pointer;margin-bottom:15px">' +
+        '<span style="font-size:14px;margin-right:8px;transition:transform 0.2s;transform:rotate(' + (assistsPerHoleOpen ? '90' : '0') + 'deg)">&#9654;</span>' +
+        '<h3 style="font-size:16px;color:#1a472a;margin:0">Assists per Hole</h3>' +
+        '</div>';
 
-      daysToShow.forEach(function(day) {
-        tableHtml += '<td style="text-align:center;padding:12px 6px;border:1px solid #ccc;color:#333">' + grandTotals[day + ' AM'] + '</td>' +
-          '<td style="text-align:center;padding:12px 6px;border:1px solid #ccc;color:#333">' + grandTotals[day + ' PM'] + '</td>' +
-          '<td style="text-align:center;padding:12px 6px;border:1px solid #ccc;color:#1a472a;background:#c8e6c9">' + grandTotals[day + ' Total'] + '</td>';
-      });
-
-      tableHtml += '</tr></tbody></table></div>';
+      if (assistsPerHoleOpen) {
+        assistsPerHole += buildAssistsPerHoleTable();
+      }
+      assistsPerHole += '</div>';
 
       return '<div class="tournament-summary-section">' +
         '<h2 style="font-size:20px;color:#1a472a;margin-bottom:25px;padding-bottom:10px;border-bottom:2px solid #1a472a">Tournament Summary</h2>' +
         weekAtGlance +
-        '<h3 style="font-size:16px;color:#1a472a;margin-bottom:15px">Volunteers Scheduled by Hole</h3>' +
-        dayFilterHtml +
-        tableHtml +
+        volsPerHole +
+        assistsPerHole +
         '</div>';
     }
 
@@ -4398,14 +4505,14 @@
 
             <div class="settings-card">
               <h3>Managing Admin Users</h3>
-              <p style="color:#666;font-size:13px;margin-top:10px">Admin access is managed through volunteer types in the Edit Volunteers tab:</p>
+              <p style="color:#666;font-size:13px;margin-top:10px">Admin access is managed through volunteer types in the Volunteers tab:</p>
               <ul style="color:#666;font-size:13px;margin-top:10px;margin-left:20px">
                 <li><strong>Admin</strong> - Full access to all admin features</li>
                 <li><strong>Chairman / Asst. Chairman</strong> - Read-only admin access (can view all data but cannot edit)</li>
               </ul>
               <p style="color:#666;font-size:13px;margin-top:10px">To add admin users:</p>
               <ol style="color:#666;font-size:13px;margin-top:8px;margin-left:20px">
-                <li>Go to Edit Volunteers tab</li>
+                <li>Go to Volunteers tab</li>
                 <li>Edit or add a volunteer</li>
                 <li>Set their Type to "Admin", "Chairman", or "Asst. Chairman"</li>
                 <li>Enter their email address (required)</li>
@@ -4822,8 +4929,9 @@
 
       // Captain editing volunteer schedule modal
       const captainEditModalHtml = captainEditingVolunteer ? `
-        <div class="modal-overlay" onclick="captainEditingVolunteer=null;render()">
-          <div class="modal" onclick="event.stopPropagation()" style="max-width:500px;max-height:90vh;overflow-y:auto;text-align:left">
+        <div class="modal-overlay" onclick="closeCaptainEditModal()">
+          <div class="modal" onclick="event.stopPropagation()" style="max-width:500px;max-height:90vh;overflow-y:auto;text-align:left;position:relative;padding-top:20px">
+            <button onclick="closeCaptainEditModal()" style="position:sticky;top:0;float:right;background:#f5f5f5;border:1px solid #ddd;width:36px;height:36px;border-radius:50%;cursor:pointer;font-size:20px;color:#666;display:flex;align-items:center;justify-content:center;z-index:10;flex-shrink:0">&times;</button>
             <h3 style="text-align:center;margin-bottom:15px">Edit Schedule: ${captainEditingVolunteer.name}</h3>
             <p style="font-size:12px;color:#666;margin-bottom:15px;text-align:center">Modify this volunteer's schedule for your hole</p>
             <div class="edit-modal-form">
@@ -4846,7 +4954,7 @@
               ${captainEditingVolunteer.email ? '<p style="font-size:11px;color:#666;margin-top:5px;margin-left:24px">Email: ' + captainEditingVolunteer.email + '</p>' : '<p style="font-size:11px;color:#e65100;margin-top:5px;margin-left:24px">No email on file for this volunteer</p>'}
             </div>
             <div class="modal-buttons" style="margin-top:20px">
-              <button class="modal-btn cancel" onclick="captainEditingVolunteer=null;render()">Cancel</button>
+              <button class="modal-btn cancel" onclick="closeCaptainEditModal()">Cancel</button>
               ${captainEditingVolunteer.email ? '<a href="mailto:' + captainEditingVolunteer.email + '" class="modal-btn" style="background:#fff;border:1px solid #ddd;color:#333;text-decoration:none;text-align:center">Create Blank Email</a>' : ''}
               <button class="modal-btn confirm" onclick="saveCaptainVolunteerEdit()">Save Schedule</button>
             </div>
@@ -4862,15 +4970,15 @@
       // Roster modal for captain view
       const reportsModalHtml = showReportsModal ? `
         <div class="modal-overlay" onclick="showReportsModal=false;render()">
-          <div class="modal" onclick="event.stopPropagation()" style="max-width:900px;width:95%;max-height:90vh;overflow-y:auto;text-align:left">
-            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:15px">
-              <h3 style="margin:0">Roster - Hole #${activeHole}</h3>
-              <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
-                <button onclick="downloadPDF(${activeHole})" style="padding:8px 16px;background:#fff;border:1px solid #ddd;border-radius:6px;cursor:pointer;font-size:13px">Download PDF</button>
-                <button onclick="sendEmailToSelf(${activeHole})" style="padding:8px 16px;background:#1a472a;color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:13px">Email to Self</button>
-                <button onclick="printReport()" style="padding:8px 16px;background:#fff;border:1px solid #ddd;border-radius:6px;cursor:pointer;font-size:13px">Print</button>
-                <button onclick="exportReportCSV()" style="padding:8px 16px;background:#fff;border:1px solid #ddd;border-radius:6px;cursor:pointer;font-size:13px">Export CSV</button>
-                <button onclick="showReportsModal=false;render()" style="background:none;border:none;font-size:24px;cursor:pointer;color:#666">&times;</button>
+          <div class="modal" onclick="event.stopPropagation()" style="max-width:900px;width:95%;max-height:90vh;overflow-y:auto;text-align:left;position:relative;padding-top:20px">
+            <button onclick="showReportsModal=false;render()" style="position:sticky;top:0;float:right;background:#f5f5f5;border:1px solid #ddd;width:36px;height:36px;border-radius:50%;cursor:pointer;font-size:20px;color:#666;display:flex;align-items:center;justify-content:center;z-index:10;flex-shrink:0">&times;</button>
+            <div style="margin-bottom:15px">
+              <h3 style="margin:0 0 12px 0">Roster - Hole #${activeHole}</h3>
+              <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:8px;max-width:360px">
+                <button onclick="downloadPDF(${activeHole})" style="padding:10px 12px;background:#fff;border:1px solid #ccc;border-radius:8px;cursor:pointer;font-size:14px;font-weight:500;text-align:center">Download PDF</button>
+                <button onclick="sendEmailToSelf(${activeHole})" style="padding:10px 12px;background:#1a472a;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:14px;font-weight:500;text-align:center">Email to Self</button>
+                <button onclick="printReport()" style="padding:10px 12px;background:#fff;border:1px solid #ccc;border-radius:8px;cursor:pointer;font-size:14px;font-weight:500;text-align:center">Print</button>
+                <button onclick="exportReportCSV()" style="padding:10px 12px;background:#fff;border:1px solid #ccc;border-radius:8px;cursor:pointer;font-size:14px;font-weight:500;text-align:center">Export CSV</button>
               </div>
             </div>
             ${renderHoleRosterReport(activeHole, { hideViewAll: true, hideTitle: true })}
@@ -5487,6 +5595,30 @@
         captainEditingVolunteer = { ...vol, scheduled: { ...(vol.scheduled || {}) } };
         render();
       }
+    }
+
+    function hasCaptainScheduleChanged() {
+      if (!captainEditingVolunteer) return false;
+      var original = captainEditingVolunteer.scheduled || {};
+      var changed = false;
+      DAYS.forEach(function(day) {
+        SHIFTS.forEach(function(shift) {
+          var key = day + ' ' + shift;
+          var checkbox = document.getElementById('cap_sched_' + day + '_' + shift);
+          var isNowChecked = checkbox && checkbox.checked;
+          var wasChecked = !!original[key];
+          if (isNowChecked !== wasChecked) changed = true;
+        });
+      });
+      return changed;
+    }
+
+    function closeCaptainEditModal() {
+      if (hasCaptainScheduleChanged()) {
+        if (!confirm('You have unsaved changes. Close without saving?')) return;
+      }
+      captainEditingVolunteer = null;
+      render();
     }
 
     async function saveCaptainVolunteerEdit() {
@@ -6288,13 +6420,11 @@
           if (!appData.submissions) appData.submissions = [];
           if (!appData.settings) appData.settings = defaultData.settings;
           render();
-          if (isLoggedIn) showToast('Data updated by another user');
         } else if (event.type === 'checkIn') {
           // Single check-in added
           if (!appData.checkIns.find(c => c.volunteerId === event.data.volunteerId && c.day === event.data.day && c.shift === event.data.shift)) {
             appData.checkIns.push(event.data);
             render();
-            if (isLoggedIn) showToast(event.data.volunteerName + ' checked in');
           }
         } else if (event.type === 'checkOut') {
           // Check-in removed
@@ -6302,7 +6432,6 @@
             !(c.volunteerId === event.data.volunteerId && c.day === event.data.day && c.shift === event.data.shift)
           );
           render();
-          if (isLoggedIn) showToast('Check-in removed');
         }
       });
       
