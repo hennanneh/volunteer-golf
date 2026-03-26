@@ -7214,6 +7214,24 @@
   },
   "activityLog": [
     {
+      "id": "1774562453008",
+      "timestamp": "2026-03-26T22:00:53.008Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1774562434482",
+      "timestamp": "2026-03-26T22:00:34.482Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
       "id": "1774529759627",
       "timestamp": "2026-03-26T12:55:59.627Z",
       "user": "Bell, Bob",
