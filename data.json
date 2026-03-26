@@ -366,7 +366,7 @@
       "customPin": "1111",
       "hat": "",
       "hatReceived": false,
-      "noOutingPreference": true
+      "noOutingPreference": false
     },
     {
       "id": "7747",
@@ -739,6 +739,7 @@
       "phone": "(817) 201-3737",
       "yearsWorked": 22,
       "scheduled": {
+        "Monday PM": true,
         "Tuesday AM": true,
         "Wednesday AM": true,
         "Thursday PM": true,
@@ -7169,6 +7170,51 @@
     "viewAdminPassword": "view2025"
   },
   "activityLog": [
+    {
+      "id": "1774529759627",
+      "timestamp": "2026-03-26T12:55:59.627Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1774529748536",
+      "timestamp": "2026-03-26T12:55:48.536Z",
+      "user": "Bell, Bob",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1774529688084",
+      "timestamp": "2026-03-26T12:54:48.084Z",
+      "user": "Bell, Bob",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1774529657819",
+      "timestamp": "2026-03-26T12:54:17.819Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1774529540142",
+      "timestamp": "2026-03-26T12:52:20.142Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1774476575854",
       "timestamp": "2026-03-25T22:09:35.854Z",
