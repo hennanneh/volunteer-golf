@@ -739,10 +739,9 @@
       "phone": "(817) 201-3737",
       "yearsWorked": 22,
       "scheduled": {
-        "Monday PM": true,
         "Tuesday AM": true,
         "Wednesday AM": true,
-        "Thursday PM": true,
+        "Thursday AM": true,
         "Friday AM": true,
         "Saturday PM": true,
         "Sunday AM": true
