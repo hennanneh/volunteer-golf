@@ -7214,6 +7214,33 @@
   },
   "activityLog": [
     {
+      "id": "1774618146202",
+      "timestamp": "2026-03-27T13:29:06.202Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1774617976157",
+      "timestamp": "2026-03-27T13:26:16.157Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1774617968880",
+      "timestamp": "2026-03-27T13:26:08.880Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
       "id": "1774562453008",
       "timestamp": "2026-03-26T22:00:53.008Z",
       "user": "Howrey, Anne",
