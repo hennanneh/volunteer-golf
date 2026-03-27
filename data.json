@@ -7214,6 +7214,15 @@
   },
   "activityLog": [
     {
+      "id": "1774625379820",
+      "timestamp": "2026-03-27T15:29:39.820Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
       "id": "1774618146202",
       "timestamp": "2026-03-27T13:29:06.202Z",
       "user": "Hill, Michael",
