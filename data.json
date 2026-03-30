@@ -7080,8 +7080,8 @@
       "volunteerName": "Bell, Bob",
       "hole": 9,
       "day": "Friday",
-      "shift": "PM",
-      "timestamp": "2026-03-27T22:03:28.950Z",
+      "shift": "AM",
+      "timestamp": "2026-03-27T16:00:34.880Z",
       "checkedInBy": "Bell, Bob",
       "isAlternate": false
     }
@@ -7223,6 +7223,15 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1774885755334",
+      "timestamp": "2026-03-30T15:49:15.334Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
     {
       "id": "1774625379820",
       "timestamp": "2026-03-27T15:29:39.820Z",
