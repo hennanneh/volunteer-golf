@@ -7094,6 +7094,66 @@
       "timestamp": "2026-04-01T15:44:06.776Z",
       "checkedInBy": "Bell, Bob",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "6828",
+      "volunteerName": "Barber, Michael",
+      "hole": 1,
+      "day": "Wednesday",
+      "shift": "AM",
+      "timestamp": "2026-04-01T16:43:28.342Z",
+      "checkedInBy": "Howrey, Anne",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "380",
+      "volunteerName": "Johnson, Kenny",
+      "hole": 1,
+      "day": "Wednesday",
+      "shift": "AM",
+      "timestamp": "2026-04-01T16:43:28.977Z",
+      "checkedInBy": "Howrey, Anne",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "6828",
+      "volunteerName": "Barber, Michael",
+      "hole": 1,
+      "day": "Wednesday",
+      "shift": "PM",
+      "timestamp": "2026-04-01T16:43:39.432Z",
+      "checkedInBy": "Howrey, Anne",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "380",
+      "volunteerName": "Johnson, Kenny",
+      "hole": 1,
+      "day": "Wednesday",
+      "shift": "PM",
+      "timestamp": "2026-04-01T16:43:40.182Z",
+      "checkedInBy": "Howrey, Anne",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "1459",
+      "volunteerName": "Bell, Bob",
+      "hole": 9,
+      "day": "Wednesday",
+      "shift": "AM",
+      "timestamp": "2026-04-01T16:57:14.628Z",
+      "checkedInBy": "Bell, Bob",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "3034",
+      "volunteerName": "Burnett, Eric",
+      "hole": 9,
+      "day": "Wednesday",
+      "shift": "AM",
+      "timestamp": "2026-04-01T16:57:17.831Z",
+      "checkedInBy": "Bell, Bob",
+      "isAlternate": false
     }
   ],
   "submissions": [
@@ -7209,6 +7269,30 @@
         "5401",
         "9860"
       ]
+    },
+    {
+      "hole": 1,
+      "day": "Wednesday",
+      "shift": "AM",
+      "timestamp": "2026-04-01T16:43:34.505Z",
+      "captainName": "Howrey, Anne",
+      "notes": "",
+      "checkedInIds": [
+        "6828",
+        "380"
+      ]
+    },
+    {
+      "hole": 1,
+      "day": "Wednesday",
+      "shift": "PM",
+      "timestamp": "2026-04-01T16:43:42.426Z",
+      "captainName": "Howrey, Anne",
+      "notes": "",
+      "checkedInIds": [
+        "6828",
+        "380"
+      ]
     }
   ],
   "settings": {
@@ -7226,13 +7310,193 @@
     "tournamentEndDate": "2026-04-05",
     "helpName": "Anne Howrey",
     "numberOfHoles": 19,
-    "amShiftCutoff": "00:00",
-    "pmShiftCutoff": "00:00",
+    "amShiftCutoff": "23:00",
+    "pmShiftCutoff": "23:00",
     "viewAdminPassword": "view2025",
     "showOutingPreferences": false,
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1775062637831",
+      "timestamp": "2026-04-01T16:57:17.831Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Burnett, Eric",
+      "details": "Checked in for Wednesday AM on Hole 9"
+    },
+    {
+      "id": "1775062634627",
+      "timestamp": "2026-04-01T16:57:14.627Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1775062598243",
+      "timestamp": "2026-04-01T16:56:38.243Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1775062593399",
+      "timestamp": "2026-04-01T16:56:33.399Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "settings-change",
+      "target": "pmShiftCutoff",
+      "details": "Updated setting: pmShiftCutoff"
+    },
+    {
+      "id": "1775062585231",
+      "timestamp": "2026-04-01T16:56:25.231Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "settings-change",
+      "target": "amShiftCutoff",
+      "details": "Updated setting: amShiftCutoff"
+    },
+    {
+      "id": "1775062562596",
+      "timestamp": "2026-04-01T16:56:02.596Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1775062540857",
+      "timestamp": "2026-04-01T16:55:40.857Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1775062325742",
+      "timestamp": "2026-04-01T16:52:05.742Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1775062282486",
+      "timestamp": "2026-04-01T16:51:22.486Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1775061933224",
+      "timestamp": "2026-04-01T16:45:33.224Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1775061908260",
+      "timestamp": "2026-04-01T16:45:08.260Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1775061846833",
+      "timestamp": "2026-04-01T16:44:06.833Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1775061835504",
+      "timestamp": "2026-04-01T16:43:55.504Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1775061822426",
+      "timestamp": "2026-04-01T16:43:42.426Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 1",
+      "details": "Submitted Wednesday PM for Hole 1"
+    },
+    {
+      "id": "1775061820182",
+      "timestamp": "2026-04-01T16:43:40.182Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Johnson, Kenny",
+      "details": "Checked in for Wednesday PM on Hole 1"
+    },
+    {
+      "id": "1775061819432",
+      "timestamp": "2026-04-01T16:43:39.432Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Barber, Michael",
+      "details": "Checked in for Wednesday PM on Hole 1"
+    },
+    {
+      "id": "1775061814505",
+      "timestamp": "2026-04-01T16:43:34.505Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 1",
+      "details": "Submitted Wednesday AM for Hole 1"
+    },
+    {
+      "id": "1775061808977",
+      "timestamp": "2026-04-01T16:43:28.977Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Johnson, Kenny",
+      "details": "Checked in for Wednesday AM on Hole 1"
+    },
+    {
+      "id": "1775061808342",
+      "timestamp": "2026-04-01T16:43:28.342Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Barber, Michael",
+      "details": "Checked in for Wednesday AM on Hole 1"
+    },
+    {
+      "id": "1775061805629",
+      "timestamp": "2026-04-01T16:43:25.629Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1775058574154",
       "timestamp": "2026-04-01T15:49:34.154Z",
