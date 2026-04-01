@@ -7084,6 +7084,16 @@
       "timestamp": "2026-03-27T16:00:34.880Z",
       "checkedInBy": "Bell, Bob",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "1459",
+      "volunteerName": "Bell, Bob",
+      "hole": 9,
+      "day": "Thursday",
+      "shift": "AM",
+      "timestamp": "2026-04-01T15:44:06.776Z",
+      "checkedInBy": "Bell, Bob",
+      "isAlternate": false
     }
   ],
   "submissions": [
@@ -7223,6 +7233,42 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1775058574154",
+      "timestamp": "2026-04-01T15:49:34.154Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1775058539801",
+      "timestamp": "2026-04-01T15:48:59.801Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1775058480422",
+      "timestamp": "2026-04-01T15:48:00.422Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1775058287318",
+      "timestamp": "2026-04-01T15:44:47.318Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
     {
       "id": "1774885755334",
       "timestamp": "2026-03-30T15:49:15.334Z",
