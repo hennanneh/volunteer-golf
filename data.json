@@ -7321,7 +7321,7 @@
       "hole": 9,
       "day": "Saturday",
       "shift": "AM",
-      "timestamp": "2026-04-02T18:59:58.895Z",
+      "timestamp": "2026-04-02T19:02:15.563Z",
       "checkedInBy": "Bell, Bob",
       "isAlternate": false
     }
@@ -7512,6 +7512,51 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1775157165110",
+      "timestamp": "2026-04-02T19:12:45.110Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1775157123292",
+      "timestamp": "2026-04-02T19:12:03.292Z",
+      "user": "Bell, Bob",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1775156535563",
+      "timestamp": "2026-04-02T19:02:15.563Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Bell, Bob",
+      "details": "Checked out for Saturday AM on Hole 9"
+    },
+    {
+      "id": "1775156534925",
+      "timestamp": "2026-04-02T19:02:14.925Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Bell, Bob",
+      "details": "Checked out for Saturday AM on Hole 9"
+    },
+    {
+      "id": "1775156534109",
+      "timestamp": "2026-04-02T19:02:14.109Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Bell, Bob",
+      "details": "Checked out for Saturday AM on Hole 9"
+    },
     {
       "id": "1775156372560",
       "timestamp": "2026-04-02T18:59:32.560Z",
