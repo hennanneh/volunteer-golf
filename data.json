@@ -7079,16 +7079,6 @@
       "volunteerId": "1459",
       "volunteerName": "Bell, Bob",
       "hole": 9,
-      "day": "Friday",
-      "shift": "AM",
-      "timestamp": "2026-03-27T16:00:34.880Z",
-      "checkedInBy": "Bell, Bob",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "1459",
-      "volunteerName": "Bell, Bob",
-      "hole": 9,
       "day": "Thursday",
       "shift": "AM",
       "timestamp": "2026-04-01T15:44:06.776Z",
@@ -7161,7 +7151,177 @@
       "hole": 9,
       "day": "Thursday",
       "shift": "PM",
-      "timestamp": "2026-04-02T14:01:12.134Z",
+      "timestamp": "2026-04-02T18:19:26.361Z",
+      "checkedInBy": "Bell, Bob",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5704",
+      "volunteerName": "Thomas, Tim",
+      "hole": 9,
+      "day": "Thursday",
+      "shift": "PM",
+      "timestamp": "2026-04-02T18:34:14.141Z",
+      "checkedInBy": "Bell, Bob",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8463",
+      "volunteerName": "Simmons, Vance",
+      "hole": 9,
+      "day": "Thursday",
+      "shift": "PM",
+      "timestamp": "2026-04-02T18:34:14.872Z",
+      "checkedInBy": "Bell, Bob",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9109",
+      "volunteerName": "Sippel, Mark",
+      "hole": 9,
+      "day": "Thursday",
+      "shift": "PM",
+      "timestamp": "2026-04-02T18:34:16.006Z",
+      "checkedInBy": "Bell, Bob",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8462",
+      "volunteerName": "Simmons, Kim",
+      "hole": 9,
+      "day": "Thursday",
+      "shift": "PM",
+      "timestamp": "2026-04-02T18:34:16.571Z",
+      "checkedInBy": "Bell, Bob",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9950",
+      "volunteerName": "Sierra, Bill",
+      "hole": 9,
+      "day": "Thursday",
+      "shift": "PM",
+      "timestamp": "2026-04-02T18:34:18.821Z",
+      "checkedInBy": "Bell, Bob",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2919",
+      "volunteerName": "Loveland, Ed",
+      "hole": 9,
+      "day": "Thursday",
+      "shift": "PM",
+      "timestamp": "2026-04-02T18:34:19.492Z",
+      "checkedInBy": "Bell, Bob",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9663",
+      "volunteerName": "Neunaber, Dean",
+      "hole": 9,
+      "day": "Thursday",
+      "shift": "PM",
+      "timestamp": "2026-04-02T18:34:20.356Z",
+      "checkedInBy": "Bell, Bob",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9811",
+      "volunteerName": "Land, Angela",
+      "hole": 9,
+      "day": "Thursday",
+      "shift": "PM",
+      "timestamp": "2026-04-02T18:34:21.993Z",
+      "checkedInBy": "Bell, Bob",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9658",
+      "volunteerName": "Jutras, Michael",
+      "hole": 9,
+      "day": "Thursday",
+      "shift": "PM",
+      "timestamp": "2026-04-02T18:34:22.707Z",
+      "checkedInBy": "Bell, Bob",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8291",
+      "volunteerName": "Keith, Stephen",
+      "hole": 9,
+      "day": "Thursday",
+      "shift": "PM",
+      "timestamp": "2026-04-02T18:34:24.183Z",
+      "checkedInBy": "Bell, Bob",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8179",
+      "volunteerName": "Deese, Buddy",
+      "hole": 9,
+      "day": "Thursday",
+      "shift": "PM",
+      "timestamp": "2026-04-02T18:34:24.793Z",
+      "checkedInBy": "Bell, Bob",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8056",
+      "volunteerName": "Daly, Lee",
+      "hole": 9,
+      "day": "Thursday",
+      "shift": "PM",
+      "timestamp": "2026-04-02T18:34:25.349Z",
+      "checkedInBy": "Bell, Bob",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8152",
+      "volunteerName": "Citty, Derek",
+      "hole": 9,
+      "day": "Thursday",
+      "shift": "PM",
+      "timestamp": "2026-04-02T18:34:27.503Z",
+      "checkedInBy": "Bell, Bob",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9996",
+      "volunteerName": "Ayanegui, Giancarlo",
+      "hole": 9,
+      "day": "Thursday",
+      "shift": "PM",
+      "timestamp": "2026-04-02T18:34:29.446Z",
+      "checkedInBy": "Bell, Bob",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "1459",
+      "volunteerName": "Bell, Bob",
+      "hole": 9,
+      "day": "Friday",
+      "shift": "PM",
+      "timestamp": "2026-04-02T18:38:32.318Z",
+      "checkedInBy": "Bell, Bob",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "1459",
+      "volunteerName": "Bell, Bob",
+      "hole": 9,
+      "day": "Friday",
+      "shift": "AM",
+      "timestamp": "2026-04-02T18:59:32.562Z",
+      "checkedInBy": "Bell, Bob",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "1459",
+      "volunteerName": "Bell, Bob",
+      "hole": 9,
+      "day": "Saturday",
+      "shift": "AM",
+      "timestamp": "2026-04-02T18:59:58.895Z",
       "checkedInBy": "Bell, Bob",
       "isAlternate": false
     }
@@ -7303,6 +7463,31 @@
         "6828",
         "380"
       ]
+    },
+    {
+      "hole": 9,
+      "day": "Thursday",
+      "shift": "PM",
+      "timestamp": "2026-04-02T18:34:49.879Z",
+      "captainName": "Bell, Bob",
+      "notes": "No issues",
+      "checkedInIds": [
+        "1459",
+        "5704",
+        "8463",
+        "9109",
+        "8462",
+        "9950",
+        "2919",
+        "9663",
+        "9811",
+        "9658",
+        "8291",
+        "8179",
+        "8056",
+        "8152",
+        "9996"
+      ]
     }
   ],
   "settings": {
@@ -7327,6 +7512,546 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1775156372560",
+      "timestamp": "2026-04-02T18:59:32.560Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Bell, Bob",
+      "details": "Checked out for Friday AM on Hole 9"
+    },
+    {
+      "id": "1775156372080",
+      "timestamp": "2026-04-02T18:59:32.080Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Bell, Bob",
+      "details": "Checked out for Friday AM on Hole 9"
+    },
+    {
+      "id": "1775156364751",
+      "timestamp": "2026-04-02T18:59:24.751Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Bell, Bob",
+      "details": "Checked out for Friday AM on Hole 9"
+    },
+    {
+      "id": "1775156364283",
+      "timestamp": "2026-04-02T18:59:24.283Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Bell, Bob",
+      "details": "Checked out for Friday AM on Hole 9"
+    },
+    {
+      "id": "1775156363528",
+      "timestamp": "2026-04-02T18:59:23.528Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Bell, Bob",
+      "details": "Checked out for Friday AM on Hole 9"
+    },
+    {
+      "id": "1775156352983",
+      "timestamp": "2026-04-02T18:59:12.983Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Bell, Bob",
+      "details": "Checked out for Friday AM on Hole 9"
+    },
+    {
+      "id": "1775156352549",
+      "timestamp": "2026-04-02T18:59:12.549Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Bell, Bob",
+      "details": "Checked out for Friday AM on Hole 9"
+    },
+    {
+      "id": "1775156351114",
+      "timestamp": "2026-04-02T18:59:11.114Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Burnett, Eric",
+      "details": "Checked out for Friday AM on Hole 9"
+    },
+    {
+      "id": "1775156350530",
+      "timestamp": "2026-04-02T18:59:10.530Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Edwards, Bill",
+      "details": "Checked out for Friday AM on Hole 9"
+    },
+    {
+      "id": "1775156349914",
+      "timestamp": "2026-04-02T18:59:09.914Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Burnett, Eric",
+      "details": "Checked in for Friday AM on Hole 9"
+    },
+    {
+      "id": "1775156349296",
+      "timestamp": "2026-04-02T18:59:09.296Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Edwards, Bill",
+      "details": "Checked in for Friday AM on Hole 9"
+    },
+    {
+      "id": "1775156348145",
+      "timestamp": "2026-04-02T18:59:08.145Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Bell, Bob",
+      "details": "Checked out for Friday AM on Hole 9"
+    },
+    {
+      "id": "1775156346961",
+      "timestamp": "2026-04-02T18:59:06.961Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Burnett, Eric",
+      "details": "Checked out for Friday AM on Hole 9"
+    },
+    {
+      "id": "1775156345711",
+      "timestamp": "2026-04-02T18:59:05.711Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Burnett, Eric",
+      "details": "Checked in for Friday AM on Hole 9"
+    },
+    {
+      "id": "1775156344721",
+      "timestamp": "2026-04-02T18:59:04.721Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Bell, Bob",
+      "details": "Checked out for Friday AM on Hole 9"
+    },
+    {
+      "id": "1775156332804",
+      "timestamp": "2026-04-02T18:58:52.804Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Bell, Bob",
+      "details": "Checked out for Friday AM on Hole 9"
+    },
+    {
+      "id": "1775156332220",
+      "timestamp": "2026-04-02T18:58:52.220Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Bell, Bob",
+      "details": "Checked out for Friday AM on Hole 9"
+    },
+    {
+      "id": "1775156331431",
+      "timestamp": "2026-04-02T18:58:51.431Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Bell, Bob",
+      "details": "Checked out for Friday AM on Hole 9"
+    },
+    {
+      "id": "1775156330188",
+      "timestamp": "2026-04-02T18:58:50.188Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Bell, Bob",
+      "details": "Checked out for Friday AM on Hole 9"
+    },
+    {
+      "id": "1775156241146",
+      "timestamp": "2026-04-02T18:57:21.146Z",
+      "user": "Bell, Bob",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1775156235224",
+      "timestamp": "2026-04-02T18:57:15.224Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1775154889879",
+      "timestamp": "2026-04-02T18:34:49.879Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 9",
+      "details": "Submitted Thursday PM for Hole 9"
+    },
+    {
+      "id": "1775154869446",
+      "timestamp": "2026-04-02T18:34:29.446Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Ayanegui, Giancarlo",
+      "details": "Checked in for Thursday PM on Hole 9"
+    },
+    {
+      "id": "1775154867503",
+      "timestamp": "2026-04-02T18:34:27.503Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Citty, Derek",
+      "details": "Checked in for Thursday PM on Hole 9"
+    },
+    {
+      "id": "1775154865350",
+      "timestamp": "2026-04-02T18:34:25.350Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Daly, Lee",
+      "details": "Checked in for Thursday PM on Hole 9"
+    },
+    {
+      "id": "1775154864793",
+      "timestamp": "2026-04-02T18:34:24.793Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Deese, Buddy",
+      "details": "Checked in for Thursday PM on Hole 9"
+    },
+    {
+      "id": "1775154864183",
+      "timestamp": "2026-04-02T18:34:24.183Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Keith, Stephen",
+      "details": "Checked in for Thursday PM on Hole 9"
+    },
+    {
+      "id": "1775154862707",
+      "timestamp": "2026-04-02T18:34:22.708Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Jutras, Michael",
+      "details": "Checked in for Thursday PM on Hole 9"
+    },
+    {
+      "id": "1775154861993",
+      "timestamp": "2026-04-02T18:34:21.993Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Land, Angela",
+      "details": "Checked in for Thursday PM on Hole 9"
+    },
+    {
+      "id": "1775154860356",
+      "timestamp": "2026-04-02T18:34:20.356Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Neunaber, Dean",
+      "details": "Checked in for Thursday PM on Hole 9"
+    },
+    {
+      "id": "1775154859493",
+      "timestamp": "2026-04-02T18:34:19.493Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Loveland, Ed",
+      "details": "Checked in for Thursday PM on Hole 9"
+    },
+    {
+      "id": "1775154858821",
+      "timestamp": "2026-04-02T18:34:18.821Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Sierra, Bill",
+      "details": "Checked in for Thursday PM on Hole 9"
+    },
+    {
+      "id": "1775154856571",
+      "timestamp": "2026-04-02T18:34:16.571Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Simmons, Kim",
+      "details": "Checked in for Thursday PM on Hole 9"
+    },
+    {
+      "id": "1775154856006",
+      "timestamp": "2026-04-02T18:34:16.006Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Sippel, Mark",
+      "details": "Checked in for Thursday PM on Hole 9"
+    },
+    {
+      "id": "1775154854872",
+      "timestamp": "2026-04-02T18:34:14.872Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Simmons, Vance",
+      "details": "Checked in for Thursday PM on Hole 9"
+    },
+    {
+      "id": "1775154854141",
+      "timestamp": "2026-04-02T18:34:14.141Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Thomas, Tim",
+      "details": "Checked in for Thursday PM on Hole 9"
+    },
+    {
+      "id": "1775154845844",
+      "timestamp": "2026-04-02T18:34:05.844Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1775154841328",
+      "timestamp": "2026-04-02T18:34:01.328Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1775154448398",
+      "timestamp": "2026-04-02T18:27:28.398Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 9",
+      "details": "Submitted Thursday PM for Hole 9"
+    },
+    {
+      "id": "1775154442314",
+      "timestamp": "2026-04-02T18:27:22.314Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 9",
+      "details": "Submitted Thursday PM for Hole 9"
+    },
+    {
+      "id": "1775154236053",
+      "timestamp": "2026-04-02T18:23:56.053Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 9",
+      "details": "Submitted Thursday PM for Hole 9"
+    },
+    {
+      "id": "1775154233918",
+      "timestamp": "2026-04-02T18:23:53.918Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Ayanegui, Giancarlo",
+      "details": "Checked out for Thursday PM on Hole 9"
+    },
+    {
+      "id": "1775154217955",
+      "timestamp": "2026-04-02T18:23:37.955Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Ayanegui, Giancarlo",
+      "details": "Checked in for Thursday PM on Hole 9"
+    },
+    {
+      "id": "1775154175642",
+      "timestamp": "2026-04-02T18:22:55.642Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Ayanegui, Giancarlo",
+      "details": "Checked out for Thursday PM on Hole 9"
+    },
+    {
+      "id": "1775154163641",
+      "timestamp": "2026-04-02T18:22:43.641Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1775154158546",
+      "timestamp": "2026-04-02T18:22:38.546Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1775154147641",
+      "timestamp": "2026-04-02T18:22:27.641Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 9",
+      "details": "Submitted Thursday PM for Hole 9"
+    },
+    {
+      "id": "1775154124651",
+      "timestamp": "2026-04-02T18:22:04.651Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1775154118485",
+      "timestamp": "2026-04-02T18:21:58.485Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1775153966360",
+      "timestamp": "2026-04-02T18:19:26.360Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Bell, Bob",
+      "details": "Checked out for Thursday PM on Hole 9"
+    },
+    {
+      "id": "1775153965296",
+      "timestamp": "2026-04-02T18:19:25.296Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Bell, Bob",
+      "details": "Checked out for Thursday PM on Hole 9"
+    },
+    {
+      "id": "1775153964051",
+      "timestamp": "2026-04-02T18:19:24.051Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Bell, Bob",
+      "details": "Checked out for Thursday PM on Hole 9"
+    },
+    {
+      "id": "1775153958739",
+      "timestamp": "2026-04-02T18:19:18.739Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Ayanegui, Giancarlo",
+      "details": "Checked in for Thursday PM on Hole 9"
+    },
+    {
+      "id": "1775153296075",
+      "timestamp": "2026-04-02T18:08:16.075Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1775153282612",
+      "timestamp": "2026-04-02T18:08:02.612Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1775153263689",
+      "timestamp": "2026-04-02T18:07:43.689Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1775153131095",
+      "timestamp": "2026-04-02T18:05:31.095Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1775152910578",
+      "timestamp": "2026-04-02T18:01:50.578Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1775152832004",
+      "timestamp": "2026-04-02T18:00:32.004Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1775152819280",
+      "timestamp": "2026-04-02T18:00:19.280Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
     {
       "id": "1775152772199",
       "timestamp": "2026-04-02T17:59:32.199Z",
