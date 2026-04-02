@@ -7318,6 +7318,24 @@
   },
   "activityLog": [
     {
+      "id": "1775138375610",
+      "timestamp": "2026-04-02T13:59:35.610Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1775138308478",
+      "timestamp": "2026-04-02T13:58:28.478Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
       "id": "1775062637831",
       "timestamp": "2026-04-01T16:57:17.831Z",
       "user": "Bell, Bob",
