@@ -6383,7 +6383,7 @@
         "Thursday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
-        "Sunday PM": true
+        "Sunday AM": true
       }
     },
     {
@@ -7154,6 +7154,16 @@
       "timestamp": "2026-04-01T16:57:17.831Z",
       "checkedInBy": "Bell, Bob",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "1459",
+      "volunteerName": "Bell, Bob",
+      "hole": 9,
+      "day": "Thursday",
+      "shift": "PM",
+      "timestamp": "2026-04-02T14:01:12.134Z",
+      "checkedInBy": "Bell, Bob",
+      "isAlternate": false
     }
   ],
   "submissions": [
@@ -7317,6 +7327,33 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1775138447620",
+      "timestamp": "2026-04-02T14:00:47.620Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Edwards, Bill",
+      "details": "Checked out for Thursday AM on Hole 9"
+    },
+    {
+      "id": "1775138445485",
+      "timestamp": "2026-04-02T14:00:45.485Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Edwards, Bill",
+      "details": "Checked in for Thursday AM on Hole 9"
+    },
+    {
+      "id": "1775138424638",
+      "timestamp": "2026-04-02T14:00:24.638Z",
+      "user": "Bell, Bob",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1775138375610",
       "timestamp": "2026-04-02T13:59:35.610Z",
