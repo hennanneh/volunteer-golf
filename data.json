@@ -1774,6 +1774,29 @@
       }
     },
     {
+      "id": 280,
+      "name": "Howrey, Anne",
+      "type": "Admin",
+      "hole": 99,
+      "phone": "2148868611",
+      "email": "annehowrey@yahoo.com",
+      "yearsWorked": 0,
+      "scheduled": {}
+    },
+    {
+      "id": 281,
+      "name": "Howrey, Patrick",
+      "type": "Admin",
+      "hole": 99,
+      "phone": "6824297313",
+      "email": "p.howrey@att.net",
+      "yearsWorked": 23,
+      "scheduled": {},
+      "volunteerPassword": "admin2025",
+      "adminPassword": "admin2025",
+      "adminPasswordSetAt": null
+    },
+    {
       "id": "111",
       "name": "Hughes, Allen",
       "type": "Volunteer",
@@ -3033,22 +3056,6 @@
       }
     },
     {
-      "id": "189",
-      "name": "Oakley, Jeff",
-      "type": "Volunteer",
-      "hole": 11,
-      "phone": "(817) 264-5529",
-      "yearsWorked": 10,
-      "hat": "",
-      "scheduled": {
-        "Tuesday AM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true
-      }
-    },
-    {
       "id": "190",
       "name": "O'Hanlon, Katherine",
       "type": "Volunteer",
@@ -3058,6 +3065,22 @@
       "hat": "",
       "scheduled": {
         "Wednesday PM": true,
+        "Thursday PM": true,
+        "Friday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true
+      }
+    },
+    {
+      "id": "189",
+      "name": "Oakley, Jeff",
+      "type": "Volunteer",
+      "hole": 11,
+      "phone": "(817) 264-5529",
+      "yearsWorked": 10,
+      "hat": "",
+      "scheduled": {
+        "Tuesday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
         "Saturday PM": true,
@@ -4534,7 +4557,18 @@
       }
     }
   ],
-  "checkIns": [],
+  "checkIns": [
+    {
+      "volunteerId": "14",
+      "volunteerName": "Bird, Bob",
+      "hole": 18,
+      "day": "Saturday",
+      "shift": "PM",
+      "timestamp": "2026-04-04T22:10:21.397Z",
+      "checkedInBy": "Howrey, Patrick",
+      "isAlternate": false
+    }
+  ],
   "submissions": [],
   "settings": {
     "tournamentName": "Golf Tournament 2026",
@@ -4544,10 +4578,166 @@
     "helpEmail": "mike@hulenbend.net",
     "amShiftCutoff": "13:00",
     "pmShiftCutoff": "19:00",
-    "numberOfHoles": 18,
-    "helpName": "Mike Hill"
+    "numberOfHoles": 19,
+    "helpName": "Mike Hill",
+    "showPairingsLink": false,
+    "showPoweredBy": false,
+    "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1775341925384",
+      "timestamp": "2026-04-04T22:32:05.384Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1775341140616",
+      "timestamp": "2026-04-04T22:19:00.616Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "settings-change",
+      "target": "showOutingPreferences",
+      "details": "Updated setting: showOutingPreferences"
+    },
+    {
+      "id": "1775340785029",
+      "timestamp": "2026-04-04T22:13:05.029Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "settings-change",
+      "target": "showPoweredBy",
+      "details": "Updated setting: showPoweredBy"
+    },
+    {
+      "id": "1775340784020",
+      "timestamp": "2026-04-04T22:13:04.020Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "settings-change",
+      "target": "showPairingsLink",
+      "details": "Updated setting: showPairingsLink"
+    },
+    {
+      "id": "1775340777061",
+      "timestamp": "2026-04-04T22:12:57.061Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "settings-change",
+      "target": "numberOfHoles",
+      "details": "Updated setting: numberOfHoles"
+    },
+    {
+      "id": "1775340729556",
+      "timestamp": "2026-04-04T22:12:09.556Z",
+      "user": "Howrey, Patrick",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "White, Gary",
+      "details": "Checked out for Saturday PM on Hole 18"
+    },
+    {
+      "id": "1775340728815",
+      "timestamp": "2026-04-04T22:12:08.815Z",
+      "user": "Howrey, Patrick",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "White, Gary",
+      "details": "Checked in for Saturday PM on Hole 18"
+    },
+    {
+      "id": "1775340728311",
+      "timestamp": "2026-04-04T22:12:08.311Z",
+      "user": "Howrey, Patrick",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "White, Gary",
+      "details": "Checked out for Saturday PM on Hole 18"
+    },
+    {
+      "id": "1775340727155",
+      "timestamp": "2026-04-04T22:12:07.155Z",
+      "user": "Howrey, Patrick",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "White, Gary",
+      "details": "Checked in for Saturday PM on Hole 18"
+    },
+    {
+      "id": "1775340726672",
+      "timestamp": "2026-04-04T22:12:06.672Z",
+      "user": "Howrey, Patrick",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "White, Gary",
+      "details": "Checked out for Saturday PM on Hole 18"
+    },
+    {
+      "id": "1775340725746",
+      "timestamp": "2026-04-04T22:12:05.746Z",
+      "user": "Howrey, Patrick",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "White, Gary",
+      "details": "Checked in for Saturday PM on Hole 18"
+    },
+    {
+      "id": "1775340725530",
+      "timestamp": "2026-04-04T22:12:05.530Z",
+      "user": "Howrey, Patrick",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "White, Gary",
+      "details": "Checked out for Saturday PM on Hole 18"
+    },
+    {
+      "id": "1775340725335",
+      "timestamp": "2026-04-04T22:12:05.335Z",
+      "user": "Howrey, Patrick",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "White, Gary",
+      "details": "Checked in for Saturday PM on Hole 18"
+    },
+    {
+      "id": "1775340621397",
+      "timestamp": "2026-04-04T22:10:21.397Z",
+      "user": "Howrey, Patrick",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Bird, Bob",
+      "details": "Checked in for Saturday PM on Hole 18"
+    },
+    {
+      "id": "1775340576804",
+      "timestamp": "2026-04-04T22:09:36.804Z",
+      "user": "Howrey, Patrick",
+      "userType": "Captain",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed captain password"
+    },
+    {
+      "id": "1775340515984",
+      "timestamp": "2026-04-04T22:08:35.984Z",
+      "user": "Howrey, Patrick",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1775340431925",
+      "timestamp": "2026-04-04T22:07:11.925Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
     {
       "id": "1775330030081",
       "timestamp": "2026-04-04T19:13:50.081Z",
