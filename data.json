@@ -959,7 +959,8 @@
         "Sunday PM": true
       },
       "volId": "8194",
-      "address": "2628 MIMOSA PARK DR RICHLAND HILLS, TX 76118"
+      "address": "2628 MIMOSA PARK DR RICHLAND HILLS, TX 76118",
+      "hatReceived": false
     },
     {
       "id": "8056",
@@ -1021,7 +1022,7 @@
     {
       "id": "636",
       "name": "Deering, Brad",
-      "type": "",
+      "type": "Volunteer",
       "hole": 99,
       "phone": "(817) 929-5892",
       "email": "brad@dcincorporated.net",
@@ -1029,7 +1030,8 @@
       "hat": "",
       "scheduled": {},
       "volId": "636",
-      "address": "3621 Country Club Circle Fort Worth, TX 76109"
+      "address": "3621 Country Club Circle Fort Worth, TX 76109",
+      "hatReceived": false
     },
     {
       "id": "8179",
@@ -1186,7 +1188,7 @@
     {
       "id": "6962",
       "name": "Eisen, Scott",
-      "type": "",
+      "type": "Volunteer",
       "hole": 13,
       "phone": "(817) 808-0518",
       "email": "scotteisen44@gmail.com",
@@ -1200,7 +1202,8 @@
         "Sunday AM": true
       },
       "volId": "6962",
-      "address": "2200 E State Hwy 121 apt 3059 Lewisville, TX 75056"
+      "address": "2200 E State Hwy 121 apt 3059 Lewisville, TX 75056",
+      "hatReceived": false
     },
     {
       "id": "10328",
@@ -1342,7 +1345,7 @@
     {
       "id": "8009",
       "name": "Fescenmeyer, Brent",
-      "type": "",
+      "type": "Volunteer",
       "hole": 99,
       "phone": "(817) 223-8110",
       "email": "brent.fescenmeyer@umb.com",
@@ -1350,7 +1353,8 @@
       "hat": "",
       "scheduled": {},
       "volId": "8009",
-      "address": "4721 Springwillow Road Fort Worth, TX 76109"
+      "address": "4721 Springwillow Road Fort Worth, TX 76109",
+      "hatReceived": false
     },
     {
       "id": "7052",
@@ -1996,8 +2000,8 @@
     {
       "id": "4639",
       "name": "Hill, Michael",
-      "type": "Asst. Chairman",
-      "hole": 11,
+      "type": "Admin",
+      "hole": 99,
       "phone": "(817) 689-4697",
       "email": "mike@hulenbend.net",
       "yearsWorked": 14,
@@ -2010,6 +2014,7 @@
       "assignedHoles": [
         99,
         3,
+        11,
         12,
         13,
         14
@@ -2111,6 +2116,40 @@
       },
       "volId": "167",
       "address": "2222 Fairmount Ave Fort Worth, TX 76110"
+    },
+    {
+      "id": "superadmin",
+      "email": "annehowrey@yahoo.com",
+      "name": "Howrey, Anne",
+      "type": "Admin",
+      "phone": "2148868611",
+      "hole": 99,
+      "yearsWorked": 0,
+      "scheduled": {
+        "Monday AM": true,
+        "Monday PM": true,
+        "Tuesday AM": true,
+        "Tuesday PM": true,
+        "Wednesday AM": true,
+        "Wednesday PM": true,
+        "Thursday AM": true,
+        "Thursday PM": true,
+        "Friday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true,
+        "Sunday PM": true
+      },
+      "hat": "",
+      "hatReceived": false,
+      "notes": "",
+      "address": "4130 Wycliff Ave #108\nDallas, TX 75219",
+      "volId": "",
+      "originalHole": "",
+      "assignedHoles": [
+        99
+      ]
     },
     {
       "id": "9874",
@@ -5394,6 +5433,87 @@
     "helpName": "Mike Hill"
   },
   "activityLog": [
+    {
+      "id": "1775404086742",
+      "timestamp": "2026-04-05T15:48:06.742Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Howrey, Anne",
+      "details": "Edited volunteer (Type: Admin, Hole: 99)"
+    },
+    {
+      "id": "1775403898456",
+      "timestamp": "2026-04-05T15:44:58.456Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Howrey, Anne",
+      "details": "Edited volunteer (Type: Admin, Hole: 99)"
+    },
+    {
+      "id": "1775402084622",
+      "timestamp": "2026-04-05T15:14:44.622Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Croxdale, Jack",
+      "details": "Edited volunteer (Type: Volunteer, Hole: 10)"
+    },
+    {
+      "id": "1775401873658",
+      "timestamp": "2026-04-05T15:11:13.658Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Fescenmeyer, Brent",
+      "details": "Edited volunteer (Type: Volunteer, Hole: 99)"
+    },
+    {
+      "id": "1775401818595",
+      "timestamp": "2026-04-05T15:10:18.595Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Eisen, Scott",
+      "details": "Edited volunteer (Type: Volunteer, Hole: 13)"
+    },
+    {
+      "id": "1775401801751",
+      "timestamp": "2026-04-05T15:10:01.751Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Deering, Brad",
+      "details": "Edited volunteer (Type: Volunteer, Hole: 99)"
+    },
+    {
+      "id": "1775401587392",
+      "timestamp": "2026-04-05T15:06:27.392Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Hill, Michael",
+      "details": "Edited volunteer (Type: Admin, Hole: 99)"
+    },
+    {
+      "id": "1775401498318",
+      "timestamp": "2026-04-05T15:04:58.318Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Hill, Michael",
+      "details": "Edited volunteer (Type: Admin, Hole: 11)"
+    },
+    {
+      "id": "1775401480305",
+      "timestamp": "2026-04-05T15:04:40.305Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
     {
       "id": "1775401076414",
       "timestamp": "2026-04-05T14:57:56.414Z",
