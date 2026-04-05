@@ -5395,6 +5395,24 @@
   },
   "activityLog": [
     {
+      "id": "1775401076414",
+      "timestamp": "2026-04-05T14:57:56.414Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1775400513117",
+      "timestamp": "2026-04-05T14:48:33.117Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
       "id": "1775356957924",
       "timestamp": "2026-04-05T02:42:37.924Z",
       "user": "Hill, Michael",
