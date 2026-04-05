@@ -2152,6 +2152,42 @@
       ]
     },
     {
+      "id": "new_1775404134803",
+      "name": "Howrey, Pat",
+      "type": "Admin",
+      "hole": 99,
+      "phone": "6824297313",
+      "email": "p.howrey@att.net",
+      "yearsWorked": 0,
+      "hat": "",
+      "hatReceived": false,
+      "scheduled": {
+        "Monday AM": true,
+        "Monday PM": true,
+        "Tuesday AM": true,
+        "Tuesday PM": true,
+        "Wednesday AM": true,
+        "Wednesday PM": true,
+        "Thursday AM": true,
+        "Thursday PM": true,
+        "Friday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true,
+        "Sunday PM": true
+      },
+      "assignedHoles": [
+        99
+      ],
+      "adminPassword": "admin2025",
+      "adminPasswordSetAt": null,
+      "notes": "",
+      "address": "2424 River Rock Circle\nArlington, TX 76006",
+      "volId": "",
+      "volunteerPassword": "admin2025"
+    },
+    {
       "id": "9874",
       "name": "Hughes, Allen",
       "type": "Volunteer",
@@ -5433,6 +5469,60 @@
     "helpName": "Mike Hill"
   },
   "activityLog": [
+    {
+      "id": "1775404697631",
+      "timestamp": "2026-04-05T15:58:17.631Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1775404685341",
+      "timestamp": "2026-04-05T15:58:05.341Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1775404577339",
+      "timestamp": "2026-04-05T15:56:17.339Z",
+      "user": "Howrey, Pat",
+      "userType": "Captain",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed captain password"
+    },
+    {
+      "id": "1775404505814",
+      "timestamp": "2026-04-05T15:55:05.814Z",
+      "user": "Howrey, Pat",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1775404199065",
+      "timestamp": "2026-04-05T15:49:59.065Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Howrey, Pat",
+      "details": "Edited volunteer (Type: Admin, Hole: 99)"
+    },
+    {
+      "id": "1775404171786",
+      "timestamp": "2026-04-05T15:49:31.786Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "add-volunteer",
+      "target": "Howrey, Pat",
+      "details": "Added new volunteer (Type: Admin, Hole: 99)"
+    },
     {
       "id": "1775404086742",
       "timestamp": "2026-04-05T15:48:06.742Z",
