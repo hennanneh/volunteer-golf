@@ -2152,42 +2152,6 @@
       ]
     },
     {
-      "id": "new_1775404134803",
-      "name": "Howrey, Pat",
-      "type": "Admin",
-      "hole": 99,
-      "phone": "6824297313",
-      "email": "p.howrey@att.net",
-      "yearsWorked": 0,
-      "hat": "",
-      "hatReceived": false,
-      "scheduled": {
-        "Monday AM": true,
-        "Monday PM": true,
-        "Tuesday AM": true,
-        "Tuesday PM": true,
-        "Wednesday AM": true,
-        "Wednesday PM": true,
-        "Thursday AM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
-        "Friday PM": true,
-        "Saturday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true,
-        "Sunday PM": true
-      },
-      "assignedHoles": [
-        99
-      ],
-      "adminPassword": "admin2025",
-      "adminPasswordSetAt": null,
-      "notes": "",
-      "address": "2424 River Rock Circle\nArlington, TX 76006",
-      "volId": "",
-      "volunteerPassword": "admin2025"
-    },
-    {
       "id": "9874",
       "name": "Hughes, Allen",
       "type": "Volunteer",
@@ -5453,6 +5417,42 @@
       },
       "volId": "9427",
       "address": "1610 Hoveden Drive Katy, TX 77450"
+    },
+    {
+      "id": "new_1775404134803",
+      "name": "Howrey, Pat",
+      "type": "Admin",
+      "hole": 99,
+      "phone": "6824297313",
+      "email": "p.howrey@att.net",
+      "yearsWorked": 0,
+      "hat": "",
+      "hatReceived": false,
+      "scheduled": {
+        "Monday AM": true,
+        "Monday PM": true,
+        "Tuesday AM": true,
+        "Tuesday PM": true,
+        "Wednesday AM": true,
+        "Wednesday PM": true,
+        "Thursday AM": true,
+        "Thursday PM": true,
+        "Friday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true,
+        "Sunday PM": true
+      },
+      "assignedHoles": [
+        99
+      ],
+      "adminPassword": "admin2025",
+      "adminPasswordSetAt": "2026-04-05T16:25:21.515Z",
+      "notes": "",
+      "address": "2424 River Rock Circle\nArlington, TX 76006",
+      "volId": "",
+      "volunteerPassword": "admin2025"
     }
   ],
   "checkIns": [],
@@ -5465,36 +5465,108 @@
     "helpEmail": "mike@hulenbend.net",
     "amShiftCutoff": "13:00",
     "pmShiftCutoff": "19:00",
-    "numberOfHoles": 18,
+    "numberOfHoles": 19,
     "helpName": "Mike Hill"
   },
   "activityLog": [
     {
-      "id": "1775404697631",
-      "timestamp": "2026-04-05T15:58:17.631Z",
-      "user": "Howrey, Anne",
+      "id": "1775407995169",
+      "timestamp": "2026-04-05T16:53:15.169Z",
+      "user": "Howrey, Pat",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1775407943622",
+      "timestamp": "2026-04-05T16:52:23.622Z",
+      "user": "Howrey, Pat",
       "userType": "Captain",
       "action": "login",
       "target": "",
       "details": "Logged into Captain portal"
     },
     {
-      "id": "1775404685341",
-      "timestamp": "2026-04-05T15:58:05.341Z",
-      "user": "Hill, Michael",
+      "id": "1775407940649",
+      "timestamp": "2026-04-05T16:52:20.649Z",
+      "user": "Howrey, Pat",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1775407937958",
+      "timestamp": "2026-04-05T16:52:17.958Z",
+      "user": "Howrey, Pat",
+      "userType": "Captain",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed captain password"
+    },
+    {
+      "id": "1775407914830",
+      "timestamp": "2026-04-05T16:51:54.830Z",
+      "user": "Howrey, Pat",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1775407693670",
+      "timestamp": "2026-04-05T16:48:13.670Z",
+      "user": "Howrey, Pat",
       "userType": "Admin",
       "action": "logout",
       "target": "",
       "details": "Logged out of Admin portal"
     },
     {
-      "id": "1775404577339",
-      "timestamp": "2026-04-05T15:56:17.339Z",
+      "id": "1775407671688",
+      "timestamp": "2026-04-05T16:47:51.688Z",
       "user": "Howrey, Pat",
-      "userType": "Captain",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1775406988064",
+      "timestamp": "2026-04-05T16:36:28.064Z",
+      "user": "Howrey, Pat",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1775406832463",
+      "timestamp": "2026-04-05T16:33:52.463Z",
+      "user": "Howrey, Pat",
+      "userType": "Admin",
+      "action": "settings-change",
+      "target": "numberOfHoles",
+      "details": "Updated setting: numberOfHoles"
+    },
+    {
+      "id": "1775406321515",
+      "timestamp": "2026-04-05T16:25:21.515Z",
+      "user": "Howrey, Pat",
+      "userType": "Admin",
       "action": "password-change",
       "target": "",
-      "details": "Changed captain password"
+      "details": "Changed admin password"
+    },
+    {
+      "id": "1775406279460",
+      "timestamp": "2026-04-05T16:24:39.460Z",
+      "user": "Howrey, Pat",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
     },
     {
       "id": "1775404505814",
