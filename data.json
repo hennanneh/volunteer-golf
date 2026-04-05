@@ -5466,9 +5466,46 @@
     "amShiftCutoff": "13:00",
     "pmShiftCutoff": "19:00",
     "numberOfHoles": 19,
-    "helpName": "Mike Hill"
+    "helpName": "Mike Hill",
+    "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1775413121771",
+      "timestamp": "2026-04-05T18:18:41.771Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1775413103737",
+      "timestamp": "2026-04-05T18:18:23.737Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "settings-change",
+      "target": "pairingsUrl",
+      "details": "Updated setting: pairingsUrl"
+    },
+    {
+      "id": "1775413021683",
+      "timestamp": "2026-04-05T18:17:01.683Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1775413005793",
+      "timestamp": "2026-04-05T18:16:45.793Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
     {
       "id": "1775407995169",
       "timestamp": "2026-04-05T16:53:15.169Z",
