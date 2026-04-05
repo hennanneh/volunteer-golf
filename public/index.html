@@ -1138,7 +1138,8 @@
       // Always calculate date - use tournament start date if set, otherwise calculate from current week
       let targetDate;
       if (appData.settings.tournamentStartDate) {
-        const startDate = new Date(appData.settings.tournamentStartDate);
+        const [y, m, d] = appData.settings.tournamentStartDate.split('-').map(Number);
+        const startDate = new Date(y, m - 1, d);
         const dayOffset = targetIndex - ((startDate.getDay() + 6) % 7);
         targetDate = new Date(startDate);
         targetDate.setDate(startDate.getDate() + dayOffset);
@@ -1432,7 +1433,8 @@
       // Calculate target date based on tournament start or current week
       let targetDate;
       if (appData.settings.tournamentStartDate) {
-        const startDate = new Date(appData.settings.tournamentStartDate);
+        const [y, m, d] = appData.settings.tournamentStartDate.split('-').map(Number);
+        const startDate = new Date(y, m - 1, d);
         const dayOffset = targetDayIndex - ((startDate.getDay() + 6) % 7);
         targetDate = new Date(startDate);
         targetDate.setDate(startDate.getDate() + dayOffset);
@@ -1484,6 +1486,10 @@
         return;
       }
 
+      // Save scroll position and lock height to prevent scroll reset during re-render
+      const scrollY = window.scrollY;
+      app.style.minHeight = app.offsetHeight + 'px';
+
       let content = '';
       if (currentView === 'landing') {
         content = renderLanding();
@@ -1509,6 +1515,10 @@
       app.innerHTML = content;
       attachEventListeners();
       updatePoweredByFooter();
+
+      // Restore scroll position after re-render, then release height lock
+      window.scrollTo(0, scrollY);
+      requestAnimationFrame(() => { app.style.minHeight = ''; });
       if (currentView === 'admin' && adminTab === 'volunteers') {
         initVolunteerScroll();
       }
@@ -2169,11 +2179,17 @@
             <p>Upload a CSV file with volunteer data. The file should include columns for:</p>
             <ul>
               <li><strong>__NamePK</strong> or <strong>Name</strong> - Volunteer name</li>
-              <li><strong>Volunteer Type</strong> - "Volunteer", "Captain", etc.</li>
+              <li><strong>Volunteer Type</strong> or <strong>Type</strong> - "Volunteer", "Captain", etc.</li>
               <li><strong>Assigned Location</strong> or <strong>Hole</strong> - Hole number</li>
               <li><strong>Phone_Cell</strong> or <strong>Cell</strong> - Phone number</li>
               <li><strong>Email</strong> - Email address</li>
               <li><strong>Years Worked</strong> or <strong>Years</strong> - Number of years volunteered</li>
+              <li><strong>Hat</strong> - Hat type</li>
+              <li><strong>Hat Received</strong> - 1, Yes, or True</li>
+              <li><strong>Notes</strong> - Volunteer notes</li>
+              <li><strong>Address</strong> - Volunteer address</li>
+              <li><strong>Vol ID</strong> - Volunteer ID number</li>
+              <li><strong>Assigned Holes</strong> - Semicolon-separated hole numbers (e.g. 1;2;3)</li>
               <li><strong>Scheduled Monday AM</strong>, etc. - 1 if scheduled</li>
             </ul>
             <label class="file-upload">
@@ -2191,7 +2207,7 @@
 
           <div class="import-card" style="margin-top:20px">
             <h3 style="font-size:16px;color:#1a472a;margin-bottom:15px">Update Existing Volunteers</h3>
-            <p>Upload a CSV with <strong>Name</strong> column plus any fields to update: <em>Email, Phone, Type, Hole, Years Worked, Hat</em>. Names must match exactly.</p>
+            <p>Upload a CSV with <strong>Name</strong> column plus any fields to update: <em>Email, Phone, Type, Hole, Years Worked, Hat, Hat Received, Notes, Assigned Holes, Scheduled shifts</em>. Names must match exactly.</p>
             <label class="file-upload" style="border-color:#ff9800;background:#fffbf5">
               <input type="file" accept=".csv" id="updateFileInput" onchange="handleUpdateUpload(this)">
               <div class="file-upload-icon">🔄</div>
@@ -2236,9 +2252,29 @@
           <div class="modal" onclick="event.stopPropagation()" style="max-width:500px;max-height:90vh;overflow-y:auto">
             <h3>${isNewVolunteer ? 'Add Volunteer' : (isReadOnly ? 'View Volunteer' : 'Edit Volunteer')}</h3>
             <div class="edit-modal-form">
+
+              <!-- Identity -->
               <label>Name</label>
               <input type="text" id="editName" value="${editingVolunteer.name}" placeholder="Last, First" ${disabledAttr}>
 
+              ${!isNewVolunteer ? `
+              <label>Vol ID</label>
+              <input id="editVolId" type="text" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:6px;font-size:13px;font-family:inherit" placeholder="${isReadOnly ? 'No Vol ID' : 'Enter volunteer ID number...'}" ${isReadOnly ? 'disabled' : ''} value="${editingVolunteer.volId || ''}">
+              ` : ''}
+
+              <label>Phone</label>
+              <input type="tel" id="editPhone" value="${editingVolunteer.phone || ''}" placeholder="(555) 123-4567" ${disabledAttr}>
+
+              <label>Email</label>
+              <input type="email" id="editEmail" value="${editingVolunteer.email || ''}" placeholder="volunteer@example.com" ${disabledAttr}>
+
+              ${!isNewVolunteer ? `
+              <label>Address</label>
+              <textarea id="editAddress" rows="3" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:6px;font-size:13px;resize:vertical;font-family:inherit" placeholder="${isReadOnly ? 'No address' : 'Enter volunteer address...'}" ${isReadOnly ? 'disabled' : ''}>${editingVolunteer.address || ''}</textarea>
+              ` : ''}
+
+              <!-- Role & Assignment -->
+              <div style="margin-top:8px;padding-top:12px;border-top:1px solid #eee">
               <label>Type</label>
               <select id="editType" ${disabledAttr}>
                 ${['Volunteer', 'Captain', 'Asst. Chairman', 'Chairman', 'Admin'].map(t =>
@@ -2271,11 +2307,8 @@
               <style>.hole-selected{background:#1a472a !important;color:#fff !important;border-color:#1a472a !important;font-weight:600 !important}</style>
               ` : ''}
 
-              <label>Phone</label>
-              <input type="tel" id="editPhone" value="${editingVolunteer.phone || ''}" placeholder="(555) 123-4567" ${disabledAttr}>
-
-              <label>Email</label>
-              <input type="email" id="editEmail" value="${editingVolunteer.email || ''}" placeholder="volunteer@example.com" ${disabledAttr}>
+              <label>Years Worked</label>
+              <input type="number" id="editYears" value="${editingVolunteer.yearsWorked || 0}" min="0" placeholder="0" ${disabledAttr}>
 
               ${(editingVolunteer.type === 'Admin' || editingVolunteer.type === 'Chairman' || editingVolunteer.type === 'Asst. Chairman') && !isNewVolunteer ? `
               <label>Admin Password</label>
@@ -2287,26 +2320,10 @@
               </div>
               ${!isReadOnly ? `<p style="font-size:10px;color:#999;margin-top:4px">Click reset to set password back to default "admin2025"</p>` : ''}
               ` : ''}
-
-              <label>Years Worked</label>
-              <input type="number" id="editYears" value="${editingVolunteer.yearsWorked || 0}" min="0" placeholder="0" ${disabledAttr}>
-
-              <label>Hat</label>
-              <select id="editHat" ${disabledAttr}>
-                <option value="" ${!editingVolunteer.hat ? 'selected' : ''}>-- Select Hat --</option>
-                ${['Cap', 'Ladies Visor', 'S/M Sun Hat', 'L/XL Sun Hat'].map(h =>
-                  `<option value="${h}" ${editingVolunteer.hat === h ? 'selected' : ''}>${h}</option>`
-                ).join('')}
-              </select>
-
-              <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-top:10px;margin-bottom:10px;padding:10px;background:#f8f9fa;border-radius:6px">
-                <label style="display:flex;align-items:center;gap:8px;margin:0;cursor:pointer">
-                  <input type="checkbox" id="editHatReceived" ${editingVolunteer.hatReceived ? 'checked' : ''} style="width:auto" ${disabledAttr}>
-                  <span>Hat Received</span>
-                </label>
-                ${!isNewVolunteer ? `<button type="button" onclick="showVolunteerQR('${editingVolunteer.id}')" style="padding:6px 12px;background:#2196F3;color:white;border:none;border-radius:4px;font-size:12px;cursor:pointer;white-space:nowrap">Show QR Code</button>` : ''}
               </div>
 
+              <!-- Schedule -->
+              <div style="margin-top:8px;padding-top:12px;border-top:1px solid #eee">
               <label>Schedule</label>
               <div class="schedule-grid">
                 ${DAYS.map(day =>
@@ -2322,27 +2339,49 @@
                   }).join('')
                 ).join('')}
               </div>
+              ${!isNewVolunteer && !isReadOnly ? `
+              <div style="margin-top:10px">
+                <label style="display:flex;align-items:flex-start;gap:8px;font-size:13px;cursor:pointer;min-width:0">
+                  <input type="checkbox" id="adminSendScheduleEmail" style="flex-shrink:0;margin-top:2px;width:auto">
+                  <span style="word-wrap:break-word">Send updated schedule via email</span>
+                </label>
+                ${editingVolunteer.email ? '<p style="font-size:11px;color:#666;margin-top:5px;margin-left:24px">Email: ' + editingVolunteer.email + '</p>' : '<p style="font-size:11px;color:#e65100;margin-top:5px;margin-left:24px">No email on file for this volunteer</p>'}
+              </div>
+              ` : ''}
+              </div>
+
+              <!-- Hat & QR -->
+              <div style="margin-top:8px;padding-top:12px;border-top:1px solid #eee">
+              <label>Hat</label>
+              <select id="editHat" ${disabledAttr}>
+                <option value="" ${!editingVolunteer.hat ? 'selected' : ''}>-- Select Hat --</option>
+                ${['Cap', 'Ladies Visor', 'S/M Sun Hat', 'L/XL Sun Hat'].map(h =>
+                  `<option value="${h}" ${editingVolunteer.hat === h ? 'selected' : ''}>${h}</option>`
+                ).join('')}
+              </select>
+
+              <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-top:10px;margin-bottom:10px;padding:10px;background:#f8f9fa;border-radius:6px">
+                <label style="display:flex;align-items:center;gap:8px;margin:0;cursor:pointer">
+                  <input type="checkbox" id="editHatReceived" ${editingVolunteer.hatReceived ? 'checked' : ''} style="width:auto" ${disabledAttr}>
+                  <span>Hat Received</span>
+                </label>
+                ${!isNewVolunteer ? `<button type="button" onclick="showVolunteerQR('${editingVolunteer.id}')" style="padding:6px 12px;background:#2196F3;color:white;border:none;border-radius:4px;font-size:12px;cursor:pointer;white-space:nowrap">Show QR Code</button>` : ''}
+              </div>
+              </div>
+
+              <!-- Notes -->
+              ${!isNewVolunteer ? `
+              <div style="margin-top:8px;padding-top:12px;border-top:1px solid #eee">
+              <label>Notes</label>
+              <textarea id="editNotes" rows="3" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:6px;font-size:13px;resize:vertical;font-family:inherit" placeholder="${isReadOnly ? 'No notes' : 'Add notes about this volunteer...'}" ${isReadOnly ? 'disabled' : ''}>${editingVolunteer.notes || ''}</textarea>
+              </div>
+              ` : ''}
+
             </div>
-            ${!isNewVolunteer && !isReadOnly ? `
-            <div style="margin-top:20px;padding-top:15px;border-top:1px solid #eee">
-              <label style="display:flex;align-items:center;gap:8px;font-size:13px;cursor:pointer">
-                <input type="checkbox" id="adminSendScheduleEmail" style="flex-shrink:0">
-                <span>Send updated schedule to volunteer via email</span>
-              </label>
-              ${editingVolunteer.email ? '<p style="font-size:11px;color:#666;margin-top:5px;margin-left:24px">Email: ' + editingVolunteer.email + '</p>' : '<p style="font-size:11px;color:#e65100;margin-top:5px;margin-left:24px">No email on file for this volunteer</p>'}
-            </div>
-            ` : ''}
             <div class="modal-buttons" style="margin-top:20px">
               <button class="modal-btn cancel" onclick="editingVolunteer=null;render()">${isReadOnly ? 'Close' : 'Cancel'}</button>
               ${!isReadOnly ? `<button class="modal-btn confirm" onclick="saveVolunteerEdit()">${isNewVolunteer ? 'Add Volunteer' : 'Save Changes'}</button>` : ''}
             </div>
-            ${!isNewVolunteer ? `
-            <div style="margin-top:20px;padding-top:15px;border-top:1px solid #eee">
-              <label style="font-size:13px;font-weight:600;margin-bottom:8px;display:block">Notes</label>
-              <textarea id="editNotes" rows="4" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:6px;font-size:13px;resize:vertical;font-family:inherit" placeholder="${isReadOnly ? 'No notes' : 'Add notes about this volunteer...'}" ${isReadOnly ? 'disabled' : ''}>${editingVolunteer.notes || ''}</textarea>
-              ${!isReadOnly ? `<button type="button" onclick="saveVolunteerNotes()" class="modal-btn confirm" style="margin-top:10px;width:auto">Save Notes</button>` : ''}
-            </div>
-            ` : ''}
           </div>
         </div>
       ` : '';
@@ -2365,7 +2404,10 @@
         <div style="margin-bottom:20px">
           <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:15px">
             <h2 style="font-size:16px;color:#333;margin:0">Volunteers</h2>
-            ${adminAuth === 'full' ? `<button onclick="addNewVolunteer()" style="padding:8px 16px;background:#1a472a;color:white;border:none;border-radius:6px;font-size:13px;font-weight:500;cursor:pointer">+ Add Volunteer</button>` : ''}
+            <div style="display:flex;gap:8px">
+              <button onclick="exportVolunteersCSV()" style="padding:8px 16px;background:#fff;border:1px solid #ddd;border-radius:6px;font-size:13px;cursor:pointer">Export CSV</button>
+              ${adminAuth === 'full' ? `<button onclick="addNewVolunteer()" style="padding:8px 16px;background:#1a472a;color:white;border:none;border-radius:6px;font-size:13px;font-weight:500;cursor:pointer">+ Add Volunteer</button>` : ''}
+            </div>
           </div>
           <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
             <input type="text" class="search-bar" placeholder="Search by name..." value="${volSearchTerm}" oninput="setVolSearchTerm(this.value)" style="font-size:13px">
@@ -2462,7 +2504,7 @@
     }
     
     function editVolunteer(id) {
-      const vol = appData.volunteers.find(v => v.id === id);
+      const vol = appData.volunteers.find(v => String(v.id) === String(id));
       if (vol) {
         editingVolunteer = { ...vol, scheduled: { ...(vol.scheduled || {}) } };
         render();
@@ -2495,7 +2537,7 @@
     }
 
     function resetAdminPassword(volunteerId) {
-      const volunteer = appData.volunteers.find(v => v.id === volunteerId);
+      const volunteer = appData.volunteers.find(v => String(v.id) === String(volunteerId));
       if (volunteer) {
         volunteer.adminPassword = 'admin2025';
         volunteer.adminPasswordSetAt = null;
@@ -2508,7 +2550,7 @@
     let qrModalVolunteer = null;
 
     function showVolunteerQR(volunteerId) {
-      const vol = appData.volunteers.find(v => v.id === volunteerId);
+      const vol = appData.volunteers.find(v => String(v.id) === String(volunteerId));
       if (!vol) return;
       qrModalVolunteer = vol;
 
@@ -2679,6 +2721,9 @@
       const newYears = parseInt(document.getElementById('editYears').value) || 0;
       const newHat = document.getElementById('editHat').value;
       const newHatReceived = document.getElementById('editHatReceived').checked;
+      const newNotes = (document.getElementById('editNotes') || {}).value || '';
+      const newAddress = (document.getElementById('editAddress') || {}).value || '';
+      const newVolId = (document.getElementById('editVolId') || {}).value || '';
 
       // Get assigned holes for Chairman types
       let newAssignedHoles = null;
@@ -2773,7 +2818,10 @@
           yearsWorked: newYears,
           hat: newHat,
           hatReceived: newHatReceived,
-          scheduled: newSchedule
+          scheduled: newSchedule,
+          notes: newNotes,
+          address: newAddress,
+          volId: newVolId
         };
         // Track original hole for move history
         if (newHole !== oldVol.hole) {
@@ -4750,27 +4798,9 @@
           .map(c => c.volunteerId)
       );
 
-      // Auto-check in the captain on first load if not already checked in and no submission yet (only for non-admin captains)
       const lastSubmission = appData.submissions.find(s =>
         s.hole === activeHole && s.day === selectedDay && s.shift === selectedShift
       );
-      // Don't auto-check-in if shift is locked
-      const shiftIsLocked = !isAdminUser && isShiftLocked(selectedDay, selectedShift);
-      if (!shiftIsLocked && !isAdminUser && currentUserRecord && currentUserRecord.hole === activeHole && !checkedInIds.has(currentUserRecord.id) && !lastSubmission) {
-        // Auto-add captain check-in
-        appData.checkIns.push({
-          volunteerId: currentUserRecord.id,
-          volunteerName: currentUserRecord.name,
-          hole: activeHole,
-          day: selectedDay,
-          shift: selectedShift,
-          timestamp: new Date().toISOString(),
-          checkedInBy: captainAuth.name,
-          isAlternate: false
-        });
-        checkedInIds.add(currentUserRecord.id);
-        saveData();
-      }
 
       // Track what was submitted vs current state for dynamic button
       const submittedIds = lastSubmission ? new Set(lastSubmission.checkedInIds || []) : new Set();
@@ -4959,7 +4989,11 @@
               <button class="modal-btn confirm" onclick="saveCaptainVolunteerEdit()">Save Schedule</button>
             </div>
             <div style="margin-top:20px;padding-top:15px;border-top:1px solid #eee">
-              <label style="font-size:13px;font-weight:600;margin-bottom:8px;display:block">Notes</label>
+              <label style="font-size:13px;font-weight:600;margin-bottom:8px;display:block">Vol ID</label>
+              <input id="captainEditVolId" type="text" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:6px;font-size:13px;font-family:inherit" placeholder="Enter volunteer ID number..." value="${captainEditingVolunteer.volId || ''}" disabled>
+              <label style="font-size:13px;font-weight:600;margin-bottom:8px;margin-top:15px;display:block">Address</label>
+              <textarea id="captainEditAddress" rows="4" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:6px;font-size:13px;resize:vertical;font-family:inherit" placeholder="Volunteer address..." disabled>${captainEditingVolunteer.address || ''}</textarea>
+              <label style="font-size:13px;font-weight:600;margin-bottom:8px;margin-top:15px;display:block">Notes</label>
               <textarea id="captainEditNotes" rows="4" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:6px;font-size:13px;resize:vertical;font-family:inherit" placeholder="Add notes about this volunteer...">${captainEditingVolunteer.notes || ''}</textarea>
               <button type="button" onclick="saveCaptainVolunteerNotes()" class="modal-btn confirm" style="margin-top:10px;width:auto">Save Notes</button>
             </div>
@@ -5368,13 +5402,23 @@
       const data = archive.data;
       const rows = [];
 
+      // Build schedule column headers
+      const archSchedHeaders = [];
+      DAYS.forEach(day => SHIFTS.forEach(shift => archSchedHeaders.push(`Scheduled ${day} ${shift}`)));
+
       // CSV header
       rows.push([
         'Name',
         'Type',
         'Hole',
         'Phone',
+        'Email',
         'Years Worked',
+        'Hat',
+        'Hat Received',
+        'Notes',
+        'Assigned Holes',
+        ...archSchedHeaders,
         'Checked In',
         'Check-In Day',
         'Check-In Shift',
@@ -5395,29 +5439,31 @@
       (data.volunteers || []).forEach(vol => {
         const checkIns = checkInMap[vol.id] || [];
 
+        // Build common volunteer fields
+        const schedVals = [];
+        DAYS.forEach(day => SHIFTS.forEach(shift => {
+          schedVals.push(vol.scheduled && vol.scheduled[`${day} ${shift}`] ? '1' : '0');
+        }));
+        const volFields = [
+          escapeCSV(vol.name),
+          escapeCSV(vol.type),
+          vol.hole,
+          escapeCSV(vol.phone || ''),
+          escapeCSV(vol.email || ''),
+          vol.yearsWorked || 0,
+          escapeCSV(vol.hat || ''),
+          vol.hatReceived ? 'Yes' : 'No',
+          escapeCSV(vol.notes || ''),
+          vol.assignedHoles ? vol.assignedHoles.join(';') : '',
+          ...schedVals
+        ];
+
         if (checkIns.length === 0) {
-          // Volunteer with no check-ins
-          rows.push([
-            escapeCSV(vol.name),
-            escapeCSV(vol.type),
-            vol.hole,
-            escapeCSV(vol.phone || ''),
-            vol.yearsWorked || 0,
-            'No',
-            '',
-            '',
-            '',
-            ''
-          ].join(','));
+          rows.push([...volFields, 'No', '', '', '', ''].join(','));
         } else {
-          // One row per check-in
           checkIns.forEach(ci => {
             rows.push([
-              escapeCSV(vol.name),
-              escapeCSV(vol.type),
-              vol.hole,
-              escapeCSV(vol.phone || ''),
-              vol.yearsWorked || 0,
+              ...volFields,
               'Yes',
               escapeCSV(ci.day || ''),
               escapeCSV(ci.shift || ''),
@@ -5683,10 +5729,16 @@
     function saveVolunteerNotes() {
       if (!editingVolunteer) return;
       const notes = document.getElementById('editNotes').value;
+      const address = document.getElementById('editAddress').value;
+      const volId = document.getElementById('editVolId').value;
       const idx = appData.volunteers.findIndex(v => v.id === editingVolunteer.id);
       if (idx === -1) { alert('Volunteer not found'); return; }
       appData.volunteers[idx].notes = notes;
+      appData.volunteers[idx].address = address;
+      appData.volunteers[idx].volId = volId;
       editingVolunteer.notes = notes;
+      editingVolunteer.address = address;
+      editingVolunteer.volId = volId;
       saveData();
       logActivity('edit-notes', appData.volunteers[idx].name, 'Updated volunteer notes');
       alert('Notes saved!');
@@ -5805,7 +5857,13 @@
           const idCol = headers.findIndex(h => h.includes('Vol ID') || h === 'ID');
           const yearsCol = headers.findIndex(h => h.includes('Years Worked') || h === 'Years' || h.includes('Years_Worked'));
           const hatCol = headers.findIndex(h => h.toLowerCase() === 'hat' || h.toLowerCase().includes('hat'));
-          
+          const emailCol = headers.findIndex(h => h.toLowerCase() === 'email' || h.toLowerCase().includes('email'));
+          const notesCol = headers.findIndex(h => h.toLowerCase() === 'notes');
+          const addressCol = headers.findIndex(h => h.toLowerCase() === 'address');
+          const volIdCol = headers.findIndex(h => h.toLowerCase() === 'vol id' || h.toLowerCase() === 'volid');
+          const hatReceivedCol = headers.findIndex(h => h.toLowerCase() === 'hat received' || h.toLowerCase() === 'hatreceived');
+          const assignedHolesCol = headers.findIndex(h => h.toLowerCase() === 'assigned holes' || h.toLowerCase() === 'assignedholes');
+
           const volunteers = rows.slice(1).filter(r => r.length > 1 && r[nameCol]).map((row, idx) => {
             const scheduled = {};
             DAYS.forEach(day => {
@@ -5817,17 +5875,26 @@
                 }
               });
             });
-            
-            return {
+
+            const vol = {
               id: idCol >= 0 && row[idCol] ? row[idCol] : String(idx + 1),
               name: row[nameCol] || '',
               type: typeCol >= 0 ? row[typeCol] : 'Volunteer',
               hole: holeCol >= 0 ? parseInt(row[holeCol]) || 0 : 0,
               phone: phoneCol >= 0 ? row[phoneCol] : '',
+              email: emailCol >= 0 ? row[emailCol] || '' : '',
               yearsWorked: yearsCol >= 0 ? parseInt(row[yearsCol]) || 0 : 0,
               hat: hatCol >= 0 ? row[hatCol] : '',
               scheduled
             };
+            if (notesCol >= 0 && row[notesCol]) vol.notes = row[notesCol];
+            if (addressCol >= 0 && row[addressCol]) vol.address = row[addressCol];
+            if (volIdCol >= 0 && row[volIdCol]) vol.volId = row[volIdCol];
+            if (hatReceivedCol >= 0 && row[hatReceivedCol] && (row[hatReceivedCol] === '1' || row[hatReceivedCol].toLowerCase() === 'yes' || row[hatReceivedCol].toLowerCase() === 'true')) vol.hatReceived = true;
+            if (assignedHolesCol >= 0 && row[assignedHolesCol]) {
+              vol.assignedHoles = row[assignedHolesCol].split(';').map(h => parseInt(h.trim())).filter(h => !isNaN(h));
+            }
+            return vol;
           });
           
           appData.volunteers = volunteers;
@@ -5882,9 +5949,14 @@
             { field: 'email', match: h => h.toLowerCase() === 'email' || h.toLowerCase().includes('email'), type: 'string' },
             { field: 'phone', match: h => h.toLowerCase() === 'phone' || h.toLowerCase().includes('phone'), type: 'string' },
             { field: 'type', match: h => h.toLowerCase() === 'type' || h.toLowerCase() === 'volunteer type', type: 'string' },
-            { field: 'hole', match: h => h.toLowerCase() === 'hole' || h.toLowerCase().includes('hole'), type: 'int' },
+            { field: 'hole', match: h => h.toLowerCase() === 'hole' || h.toLowerCase().includes('assigned location'), type: 'int' },
             { field: 'yearsWorked', match: h => h.includes('Years Worked') || h === 'Years' || h.includes('Years_Worked') || h.toLowerCase() === 'years', type: 'int' },
-            { field: 'hat', match: h => h.toLowerCase() === 'hat' || h.toLowerCase().includes('hat'), type: 'string' }
+            { field: 'hat', match: h => h.toLowerCase() === 'hat', type: 'string' },
+            { field: 'hatReceived', match: h => h.toLowerCase() === 'hat received' || h.toLowerCase() === 'hatreceived', type: 'bool' },
+            { field: 'notes', match: h => h.toLowerCase() === 'notes', type: 'string' },
+            { field: 'address', match: h => h.toLowerCase() === 'address', type: 'string' },
+            { field: 'volId', match: h => h.toLowerCase() === 'vol id' || h.toLowerCase() === 'volid', type: 'string' },
+            { field: 'assignedHoles', match: h => h.toLowerCase() === 'assigned holes' || h.toLowerCase() === 'assignedholes', type: 'holesArray' }
           ];
 
           // Find which columns exist in the CSV
@@ -5896,8 +5968,20 @@
             }
           });
 
-          if (columnsToUpdate.length === 0) {
-            alert('CSV must have at least one field to update (Email, Phone, Type, Hole, Years Worked, or Hat)');
+          // Also check for scheduled shift columns
+          const scheduleColumns = [];
+          DAYS.forEach(day => {
+            SHIFTS.forEach(shift => {
+              const colName = `Scheduled ${day} ${shift}`;
+              const colIdx = headers.findIndex(h => h === colName);
+              if (colIdx >= 0) {
+                scheduleColumns.push({ day, shift, colIdx });
+              }
+            });
+          });
+
+          if (columnsToUpdate.length === 0 && scheduleColumns.length === 0) {
+            alert('CSV must have at least one field to update (Email, Phone, Type, Hole, Years Worked, Hat, Hat Received, Notes, Assigned Holes, or Scheduled shifts)');
             return;
           }
 
@@ -5921,6 +6005,11 @@
                 if (value !== undefined && value.toString().trim() !== '') {
                   if (col.type === 'int') {
                     appData.volunteers[volIdx][col.field] = parseInt(value) || 0;
+                  } else if (col.type === 'bool') {
+                    const v = value.trim().toLowerCase();
+                    appData.volunteers[volIdx][col.field] = (v === '1' || v === 'yes' || v === 'true');
+                  } else if (col.type === 'holesArray') {
+                    appData.volunteers[volIdx][col.field] = value.split(';').map(h => parseInt(h.trim())).filter(h => !isNaN(h));
                   } else {
                     appData.volunteers[volIdx][col.field] = value.trim();
                   }
@@ -5928,6 +6017,21 @@
                   wasUpdated = true;
                 }
               });
+              // Update scheduled shifts if present
+              if (scheduleColumns.length > 0) {
+                if (!appData.volunteers[volIdx].scheduled) appData.volunteers[volIdx].scheduled = {};
+                scheduleColumns.forEach(sc => {
+                  const val = row[sc.colIdx];
+                  const key = `${sc.day} ${sc.shift}`;
+                  if (val === '1' || (val && val.toLowerCase() === 'yes') || (val && val.toLowerCase() === 'true')) {
+                    appData.volunteers[volIdx].scheduled[key] = true;
+                    wasUpdated = true;
+                  } else if (val === '0' || (val && val.toLowerCase() === 'no') || (val && val.toLowerCase() === 'false')) {
+                    delete appData.volunteers[volIdx].scheduled[key];
+                    wasUpdated = true;
+                  }
+                });
+              }
               if (wasUpdated) updated++;
             } else if (name) {
               notFound.push(name);
@@ -5937,7 +6041,10 @@
           saveData();
 
           let msg = `Updated ${updated} volunteer(s).`;
-          const fieldLabels = { email: 'emails', phone: 'phones', type: 'types', hole: 'holes', yearsWorked: 'years', hat: 'hats' };
+          const fieldLabels = { email: 'emails', phone: 'phones', type: 'types', hole: 'holes', yearsWorked: 'years', hat: 'hats', hatReceived: 'hat received flags', notes: 'notes', assignedHoles: 'assigned holes' };
+          if (scheduleColumns.length > 0) {
+            msg += `\n• Schedule shifts updated`;
+          }
           columnsToUpdate.forEach(col => {
             if (fieldCounts[col.field] > 0) {
               msg += `\n• ${fieldCounts[col.field]} ${fieldLabels[col.field] || col.field} updated`;
@@ -5975,6 +6082,41 @@
       a.href = url;
       a.download = `volunteer_checkins_${new Date().toISOString().split('T')[0]}.csv`;
       a.click();
+    }
+
+    function exportVolunteersCSV() {
+      const schedHeaders = [];
+      DAYS.forEach(day => SHIFTS.forEach(shift => schedHeaders.push(`Scheduled ${day} ${shift}`)));
+      const headers = ['Name', 'Type', 'Hole', 'Phone', 'Email', 'Years Worked', 'Hat', 'Hat Received', 'Notes', 'Address', 'Vol ID', 'Assigned Holes', ...schedHeaders];
+      const rows = getFilteredVolunteers().map(v => {
+        const schedVals = [];
+        DAYS.forEach(day => SHIFTS.forEach(shift => {
+          schedVals.push(v.scheduled && v.scheduled[`${day} ${shift}`] ? '1' : '0');
+        }));
+        return [
+          v.name,
+          v.type,
+          v.hole,
+          v.phone || '',
+          v.email || '',
+          v.yearsWorked || 0,
+          v.hat || '',
+          v.hatReceived ? 'Yes' : 'No',
+          v.notes || '',
+          v.address || '',
+          v.volId || '',
+          v.assignedHoles ? v.assignedHoles.join(';') : '',
+          ...schedVals
+        ];
+      });
+      const csv = [headers, ...rows].map(r => r.map(c => `"${String(c).replace(/"/g, '""')}"`).join(',')).join('\n');
+      const blob = new Blob([csv], { type: 'text/csv' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `volunteers_${new Date().toISOString().split('T')[0]}.csv`;
+      a.click();
+      URL.revokeObjectURL(url);
     }
 
     // Modal functions

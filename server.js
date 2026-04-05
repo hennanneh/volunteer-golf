@@ -158,15 +158,52 @@ app.post('/api/demo-exit', (req, res) => {
   res.json({ success: true });
 });
 
+// Superadmin account - always guaranteed access even if not in volunteer list
+const SUPERADMIN = {
+  email: 'annehowrey@yahoo.com',
+  name: 'Howrey, Anne',
+  type: 'Admin',
+  phone: '',
+  hole: '',
+  yearsWorked: '',
+  scheduled: {}
+};
+
 app.get('/api/data', (req, res) => {
   const data = loadData(req.demoMode);
+
+  // Ensure superadmin is always present in volunteers
+  const hasSuperadmin = data.volunteers && data.volunteers.some(v =>
+    v.email && v.email.toLowerCase() === SUPERADMIN.email
+  );
+  if (!hasSuperadmin) {
+    if (!data.volunteers) data.volunteers = [];
+    data.volunteers.push({
+      id: 'superadmin',
+      ...SUPERADMIN
+    });
+  }
+
   res.json({ success: true, data: data, demoMode: req.demoMode });
 });
 
 app.post('/api/data', (req, res) => {
   const data = req.body;
   const socketId = req.headers['x-socket-id'];
-  
+
+  // Ensure superadmin is never removed from volunteer list
+  if (data.volunteers) {
+    const hasSuperadmin = data.volunteers.some(v =>
+      v.email && v.email.toLowerCase() === SUPERADMIN.email
+    );
+    if (!hasSuperadmin) {
+      data.volunteers.push({
+        id: 'superadmin',
+        ...SUPERADMIN
+      });
+    }
+  }
+
   if (saveData(data, req.demoMode)) {
     // Broadcast to OTHER clients only
     broadcastUpdate(req.demoMode, 'fullUpdate', data, socketId);
