@@ -2152,6 +2152,42 @@
       ]
     },
     {
+      "id": "new_1775404134803",
+      "name": "Howrey, Pat",
+      "type": "Admin",
+      "hole": 99,
+      "phone": "6824297313",
+      "email": "p.howrey@att.net",
+      "yearsWorked": 0,
+      "hat": "",
+      "hatReceived": false,
+      "scheduled": {
+        "Monday AM": true,
+        "Monday PM": true,
+        "Tuesday AM": true,
+        "Tuesday PM": true,
+        "Wednesday AM": true,
+        "Wednesday PM": true,
+        "Thursday AM": true,
+        "Thursday PM": true,
+        "Friday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true,
+        "Sunday PM": true
+      },
+      "assignedHoles": [
+        99
+      ],
+      "adminPassword": "admin2025",
+      "adminPasswordSetAt": "2026-04-05T16:25:21.515Z",
+      "notes": "",
+      "address": "2424 River Rock Circle\nArlington, TX 76006",
+      "volId": "",
+      "volunteerPassword": "admin2025"
+    },
+    {
       "id": "9874",
       "name": "Hughes, Allen",
       "type": "Volunteer",
@@ -5417,42 +5453,6 @@
       },
       "volId": "9427",
       "address": "1610 Hoveden Drive Katy, TX 77450"
-    },
-    {
-      "id": "new_1775404134803",
-      "name": "Howrey, Pat",
-      "type": "Admin",
-      "hole": 99,
-      "phone": "6824297313",
-      "email": "p.howrey@att.net",
-      "yearsWorked": 0,
-      "hat": "",
-      "hatReceived": false,
-      "scheduled": {
-        "Monday AM": true,
-        "Monday PM": true,
-        "Tuesday AM": true,
-        "Tuesday PM": true,
-        "Wednesday AM": true,
-        "Wednesday PM": true,
-        "Thursday AM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
-        "Friday PM": true,
-        "Saturday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true,
-        "Sunday PM": true
-      },
-      "assignedHoles": [
-        99
-      ],
-      "adminPassword": "admin2025",
-      "adminPasswordSetAt": "2026-04-05T16:25:21.515Z",
-      "notes": "",
-      "address": "2424 River Rock Circle\nArlington, TX 76006",
-      "volId": "",
-      "volunteerPassword": "admin2025"
     }
   ],
   "checkIns": [],
@@ -5470,6 +5470,24 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1775453092729",
+      "timestamp": "2026-04-06T05:24:52.729Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1775451900266",
+      "timestamp": "2026-04-06T05:05:00.266Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
     {
       "id": "1775413121771",
       "timestamp": "2026-04-05T18:18:41.771Z",
