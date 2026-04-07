@@ -1134,7 +1134,7 @@
       "id": "329",
       "name": "Crowder, Travis",
       "type": "Captain",
-      "hole": 19,
+      "hole": 4,
       "phone": "(301) 412-2386",
       "email": "tcrow0324@gmail.com",
       "yearsWorked": 0,
@@ -1155,7 +1155,9 @@
         "Sunday AM": true,
         "Sunday PM": true
       },
-      "address": "2363 San Augustine Lane Grand Prairie, TX 75052"
+      "address": "2363 San Augustine Lane Grand Prairie, TX 75052",
+      "hatReceived": false,
+      "originalHole": 19
     },
     {
       "id": "8194",
@@ -1237,7 +1239,7 @@
     {
       "id": "636",
       "name": "Deering, Brad",
-      "type": "",
+      "type": "Chairman",
       "hole": 99,
       "phone": "(817) 929-5892",
       "email": "brad@dcincorporated.net",
@@ -1245,7 +1247,13 @@
       "hat": "",
       "scheduled": {},
       "volId": "636",
-      "address": "3621 Country Club Circle Fort Worth, TX 76109"
+      "address": "3621 Country Club Circle Fort Worth, TX 76109",
+      "hatReceived": false,
+      "assignedHoles": [
+        99
+      ],
+      "adminPassword": "admin2025",
+      "adminPasswordSetAt": null
     },
     {
       "id": "8179",
@@ -1666,7 +1674,7 @@
     {
       "id": "8009",
       "name": "Fescenmeyer, Brent",
-      "type": "",
+      "type": "Chairman",
       "hole": 99,
       "phone": "(817) 223-8110",
       "email": "brent.fescenmeyer@umb.com",
@@ -1674,7 +1682,13 @@
       "hat": "",
       "scheduled": {},
       "volId": "8009",
-      "address": "4721 Springwillow Road Fort Worth, TX 76109"
+      "address": "4721 Springwillow Road Fort Worth, TX 76109",
+      "hatReceived": false,
+      "assignedHoles": [
+        99
+      ],
+      "adminPassword": "admin2025",
+      "adminPasswordSetAt": null
     },
     {
       "id": "7052",
@@ -2084,7 +2098,7 @@
       "id": "8359",
       "name": "Gray, Leandro",
       "type": "Volunteer",
-      "hole": 19,
+      "hole": 4,
       "phone": "(806) 438-6876",
       "email": "yguerrero44@hotmail.com",
       "yearsWorked": 6,
@@ -2097,7 +2111,9 @@
         "Sunday AM": true
       },
       "volId": "8359",
-      "address": "PO Box 344 Gail, TX 79738"
+      "address": "PO Box 344 Gail, TX 79738",
+      "hatReceived": false,
+      "originalHole": 19
     },
     {
       "id": "9195",
@@ -2648,27 +2664,10 @@
       "email": "annehowrey@yahoo.com",
       "name": "Howrey, Anne",
       "type": "Admin",
-      "phone": "2148868611",
-      "hole": 99,
-      "yearsWorked": 0,
-      "scheduled": {},
-      "hat": "",
-      "hatReceived": false,
-      "notes": "",
-      "address": "",
-      "volId": "",
-      "originalHole": "",
-      "assignedHoles": [
-        99,
-        1,
-        2,
-        3,
-        4,
-        5
-      ],
-      "adminPassword": "admin2025",
-      "adminPasswordSetAt": "2026-04-06T19:28:15.844Z",
-      "volunteerPassword": "admin2025"
+      "phone": "",
+      "hole": "",
+      "yearsWorked": "",
+      "scheduled": {}
     },
     {
       "id": "9874",
@@ -3033,7 +3032,7 @@
       "id": "330",
       "name": "Jones, Ricky",
       "type": "Captain",
-      "hole": 19,
+      "hole": 4,
       "phone": "(817) 992-9477",
       "email": "rickynj15@gmail.com",
       "yearsWorked": 0,
@@ -3054,7 +3053,9 @@
         "Sunday AM": true,
         "Sunday PM": true
       },
-      "address": "257 PR 1112 Decatur, TX 76234"
+      "address": "257 PR 1112 Decatur, TX 76234",
+      "hatReceived": false,
+      "originalHole": 19
     },
     {
       "id": "7922",
@@ -3605,7 +3606,7 @@
       "id": "4800",
       "name": "Livingston, Jennifier",
       "type": "Volunteer",
-      "hole": 19,
+      "hole": 4,
       "phone": "(817) 944-1290",
       "email": "fier222@att.net",
       "yearsWorked": 14,
@@ -3618,7 +3619,9 @@
         "Sunday PM": true
       },
       "volId": "4800",
-      "address": "3201 Medina Ave Fort Worth, TX 76133"
+      "address": "3201 Medina Ave Fort Worth, TX 76133",
+      "hatReceived": false,
+      "originalHole": 19
     },
     {
       "id": "2919",
@@ -6833,297 +6836,142 @@
   "submissions": [],
   "settings": {
     "tournamentName": "Golf Tournament 2026",
-    "tournamentStartDate": "2026-05-25",
-    "tournamentEndDate": "2026-05-31",
+    "tournamentStartDate": "2026-04-06",
+    "tournamentEndDate": "2026-04-12",
     "helpPhone": "",
     "helpEmail": "mike@hulenbend.net",
-    "amShiftCutoff": "23:00",
-    "pmShiftCutoff": "23:00",
-    "numberOfHoles": 20,
-    "showPoweredBy": false,
+    "amShiftCutoff": "13:00",
+    "pmShiftCutoff": "19:00",
+    "numberOfHoles": 18,
     "helpName": "Mike Hill",
-    "showOutingPreferences": false,
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
     {
-      "id": "1775504258333",
-      "timestamp": "2026-04-06T19:37:38.333Z",
-      "user": "Howrey, Anne",
-      "userType": "Admin",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Admin portal"
-    },
-    {
-      "id": "1775504242394",
-      "timestamp": "2026-04-06T19:37:22.394Z",
-      "user": "Howrey, Anne",
-      "userType": "Admin",
-      "action": "settings-change",
-      "target": "pairingsUrl",
-      "details": "Updated setting: pairingsUrl"
-    },
-    {
-      "id": "1775504113035",
-      "timestamp": "2026-04-06T19:35:13.035Z",
-      "user": "Howrey, Anne",
-      "userType": "Admin",
-      "action": "settings-change",
-      "target": "helpEmail",
-      "details": "Updated setting: helpEmail"
-    },
-    {
-      "id": "1775504085946",
-      "timestamp": "2026-04-06T19:34:45.946Z",
-      "user": "Howrey, Anne",
-      "userType": "Admin",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Admin portal"
-    },
-    {
-      "id": "1775503961034",
-      "timestamp": "2026-04-06T19:32:41.034Z",
-      "user": "Howrey, Anne",
-      "userType": "Captain",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Captain portal"
-    },
-    {
-      "id": "1775503858398",
-      "timestamp": "2026-04-06T19:30:58.398Z",
-      "user": "Howrey, Anne",
-      "userType": "Captain",
-      "action": "password-change",
-      "target": "",
-      "details": "Changed captain password"
-    },
-    {
-      "id": "1775503843416",
-      "timestamp": "2026-04-06T19:30:43.416Z",
-      "user": "Howrey, Anne",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1775503834817",
-      "timestamp": "2026-04-06T19:30:34.817Z",
-      "user": "Howrey, Anne",
-      "userType": "Admin",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Admin portal"
-    },
-    {
-      "id": "1775503831224",
-      "timestamp": "2026-04-06T19:30:31.224Z",
-      "user": "Howrey, Anne",
-      "userType": "Admin",
-      "action": "edit-volunteer",
-      "target": "Howrey, Anne",
-      "details": "Edited volunteer (Type: Admin, Hole: 99)"
-    },
-    {
-      "id": "1775503823301",
-      "timestamp": "2026-04-06T19:30:23.301Z",
-      "user": "Howrey, Anne",
-      "userType": "Admin",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Admin portal"
-    },
-    {
-      "id": "1775503815172",
-      "timestamp": "2026-04-06T19:30:15.173Z",
-      "user": "Howrey, Anne",
-      "userType": "Volunteer",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Volunteer portal"
-    },
-    {
-      "id": "1775503803721",
-      "timestamp": "2026-04-06T19:30:03.721Z",
-      "user": "Howrey, Anne",
-      "userType": "Volunteer",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Volunteer portal"
-    },
-    {
-      "id": "1775503729564",
-      "timestamp": "2026-04-06T19:28:49.564Z",
-      "user": "Howrey, Anne",
-      "userType": "Admin",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Admin portal"
-    },
-    {
-      "id": "1775503724179",
-      "timestamp": "2026-04-06T19:28:44.179Z",
-      "user": "Howrey, Anne",
-      "userType": "Admin",
-      "action": "edit-volunteer",
-      "target": "Howrey, Anne",
-      "details": "Edited volunteer (Type: Admin, Hole: 99)"
-    },
-    {
-      "id": "1775503695844",
-      "timestamp": "2026-04-06T19:28:15.844Z",
-      "user": "Howrey, Anne",
-      "userType": "Admin",
-      "action": "password-change",
-      "target": "",
-      "details": "Changed admin password"
-    },
-    {
-      "id": "1775503680406",
-      "timestamp": "2026-04-06T19:28:00.406Z",
-      "user": "Howrey, Anne",
-      "userType": "Admin",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Admin portal"
-    },
-    {
-      "id": "1775503619543",
-      "timestamp": "2026-04-06T19:26:59.543Z",
-      "user": "Howrey, Anne",
-      "userType": "Admin",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Admin portal"
-    },
-    {
-      "id": "1775503614716",
-      "timestamp": "2026-04-06T19:26:54.716Z",
-      "user": "Howrey, Anne",
-      "userType": "Admin",
-      "action": "edit-volunteer",
-      "target": "Howrey, Anne",
-      "details": "Edited volunteer (Type: Admin, Hole: 99)"
-    },
-    {
-      "id": "1775503597872",
-      "timestamp": "2026-04-06T19:26:37.872Z",
-      "user": "Howrey, Anne",
-      "userType": "Admin",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Admin portal"
-    },
-    {
-      "id": "1775503540792",
-      "timestamp": "2026-04-06T19:25:40.792Z",
-      "user": "Howrey, Anne",
-      "userType": "Admin",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Admin portal"
-    },
-    {
-      "id": "1775502780394",
-      "timestamp": "2026-04-06T19:13:00.394Z",
-      "user": "Howrey, Anne",
+      "id": "1775568123229",
+      "timestamp": "2026-04-07T13:22:03.229Z",
+      "user": "Hill, Michael",
       "userType": "Admin",
       "action": "settings-change",
       "target": "pmShiftCutoff",
       "details": "Updated setting: pmShiftCutoff"
     },
     {
-      "id": "1775502774942",
-      "timestamp": "2026-04-06T19:12:54.942Z",
-      "user": "Howrey, Anne",
+      "id": "1775568117284",
+      "timestamp": "2026-04-07T13:21:57.284Z",
+      "user": "Hill, Michael",
       "userType": "Admin",
       "action": "settings-change",
       "target": "amShiftCutoff",
       "details": "Updated setting: amShiftCutoff"
     },
     {
-      "id": "1775502702520",
-      "timestamp": "2026-04-06T19:11:42.520Z",
-      "user": "Howrey, Anne",
-      "userType": "Admin",
-      "action": "settings-change",
-      "target": "showOutingPreferences",
-      "details": "Updated setting: showOutingPreferences"
-    },
-    {
-      "id": "1775502694218",
-      "timestamp": "2026-04-06T19:11:34.218Z",
-      "user": "Howrey, Anne",
-      "userType": "Admin",
-      "action": "settings-change",
-      "target": "tournamentName",
-      "details": "Updated setting: tournamentName"
-    },
-    {
-      "id": "1775502689188",
-      "timestamp": "2026-04-06T19:11:29.188Z",
-      "user": "Howrey, Anne",
+      "id": "1775568101409",
+      "timestamp": "2026-04-07T13:21:41.409Z",
+      "user": "Hill, Michael",
       "userType": "Admin",
       "action": "settings-change",
       "target": "tournamentEndDate",
       "details": "Updated setting: tournamentEndDate"
     },
     {
-      "id": "1775502682587",
-      "timestamp": "2026-04-06T19:11:22.587Z",
-      "user": "Howrey, Anne",
+      "id": "1775568089941",
+      "timestamp": "2026-04-07T13:21:29.941Z",
+      "user": "Hill, Michael",
       "userType": "Admin",
       "action": "settings-change",
       "target": "tournamentStartDate",
       "details": "Updated setting: tournamentStartDate"
     },
     {
-      "id": "1775502674233",
-      "timestamp": "2026-04-06T19:11:14.233Z",
-      "user": "Howrey, Anne",
+      "id": "1775568080788",
+      "timestamp": "2026-04-07T13:21:20.788Z",
+      "user": "Hill, Michael",
       "userType": "Admin",
       "action": "settings-change",
-      "target": "numberOfHoles",
-      "details": "Updated setting: numberOfHoles"
+      "target": "pairingsUrl",
+      "details": "Updated setting: pairingsUrl"
     },
     {
-      "id": "1775502674023",
-      "timestamp": "2026-04-06T19:11:14.023Z",
-      "user": "Howrey, Anne",
+      "id": "1775568080787",
+      "timestamp": "2026-04-07T13:21:20.787Z",
+      "user": "Hill, Michael",
       "userType": "Admin",
       "action": "settings-change",
-      "target": "numberOfHoles",
-      "details": "Updated setting: numberOfHoles"
+      "target": "helpEmail",
+      "details": "Updated setting: helpEmail"
     },
     {
-      "id": "1775502656765",
-      "timestamp": "2026-04-06T19:10:56.765Z",
-      "user": "Howrey, Anne",
+      "id": "1775568080782",
+      "timestamp": "2026-04-07T13:21:20.782Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "settings-change",
+      "target": "tournamentName",
+      "details": "Updated setting: tournamentName"
+    },
+    {
+      "id": "1775568080780",
+      "timestamp": "2026-04-07T13:21:20.780Z",
+      "user": "Hill, Michael",
       "userType": "Admin",
       "action": "settings-change",
       "target": "helpName",
       "details": "Updated setting: helpName"
     },
     {
-      "id": "1775502645936",
-      "timestamp": "2026-04-06T19:10:45.936Z",
-      "user": "Howrey, Anne",
+      "id": "1775567570905",
+      "timestamp": "2026-04-07T13:12:50.905Z",
+      "user": "Hill, Michael",
       "userType": "Admin",
-      "action": "settings-change",
-      "target": "showPoweredBy",
-      "details": "Updated setting: showPoweredBy"
+      "action": "edit-volunteer",
+      "target": "Jones, Ricky",
+      "details": "Edited volunteer (Type: Captain, Hole: 4)"
     },
     {
-      "id": "1775502617868",
-      "timestamp": "2026-04-06T19:10:17.868Z",
-      "user": "Howrey, Anne",
+      "id": "1775567528301",
+      "timestamp": "2026-04-07T13:12:08.301Z",
+      "user": "Hill, Michael",
       "userType": "Admin",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Admin portal"
+      "action": "edit-volunteer",
+      "target": "Gray, Leandro",
+      "details": "Edited volunteer (Type: Volunteer, Hole: 4)"
+    },
+    {
+      "id": "1775567496802",
+      "timestamp": "2026-04-07T13:11:36.802Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Livingston, Jennifier",
+      "details": "Edited volunteer (Type: Volunteer, Hole: 4)"
+    },
+    {
+      "id": "1775567459895",
+      "timestamp": "2026-04-07T13:10:59.895Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Crowder, Travis",
+      "details": "Edited volunteer (Type: Captain, Hole: 4)"
+    },
+    {
+      "id": "1775567361499",
+      "timestamp": "2026-04-07T13:09:21.499Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Fescenmeyer, Brent",
+      "details": "Edited volunteer (Type: Chairman, Hole: 99)"
+    },
+    {
+      "id": "1775567339897",
+      "timestamp": "2026-04-07T13:08:59.897Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Deering, Brad",
+      "details": "Edited volunteer (Type: Chairman, Hole: 99)"
     },
     {
       "id": "1775485228110",
