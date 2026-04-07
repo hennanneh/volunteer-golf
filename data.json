@@ -1599,7 +1599,7 @@
       "id": "8359",
       "name": "Gray, Leandro",
       "type": "Volunteer",
-      "hole": 19,
+      "hole": 4,
       "phone": "(806) 438-6876",
       "email": "yguerrero44@hotmail.com",
       "yearsWorked": 6,
@@ -1612,7 +1612,10 @@
         "Sunday AM": true
       },
       "volId": "8359",
-      "address": "PO Box 344 Gail, TX 79738"
+      "address": "PO Box 344 Gail, TX 79738",
+      "hatReceived": false,
+      "notes": "",
+      "originalHole": 19
     },
     {
       "id": "9195",
@@ -2837,7 +2840,7 @@
       "id": "4800",
       "name": "Livingston, Jennifier",
       "type": "Volunteer",
-      "hole": 19,
+      "hole": 4,
       "phone": "(817) 944-1290",
       "email": "fier222@att.net",
       "yearsWorked": 14,
@@ -2850,7 +2853,10 @@
         "Sunday PM": true
       },
       "volId": "4800",
-      "address": "3201 Medina Ave Fort Worth, TX 76133"
+      "address": "3201 Medina Ave Fort Worth, TX 76133",
+      "hatReceived": false,
+      "notes": "",
+      "originalHole": 19
     },
     {
       "id": "2919",
@@ -7086,16 +7092,117 @@
   "checkIns": [],
   "submissions": [],
   "settings": {
-    "tournamentName": "Golf Tournament 2025",
-    "tournamentStartDate": "",
-    "tournamentEndDate": "",
-    "helpPhone": "",
-    "helpEmail": "",
-    "amShiftCutoff": "12:00",
-    "pmShiftCutoff": "18:00",
-    "numberOfHoles": 18
+    "tournamentName": "Golf Tournament 2026",
+    "tournamentStartDate": "2026-04-06",
+    "tournamentEndDate": "2026-04-12",
+    "helpPhone": "8176894697",
+    "helpEmail": "mike@hulenbend.net",
+    "amShiftCutoff": "13:00",
+    "pmShiftCutoff": "19:00",
+    "numberOfHoles": 18,
+    "helpName": "Mike Hill",
+    "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1775594734787",
+      "timestamp": "2026-04-07T20:45:34.787Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "settings-change",
+      "target": "pmShiftCutoff",
+      "details": "Updated setting: pmShiftCutoff"
+    },
+    {
+      "id": "1775594727618",
+      "timestamp": "2026-04-07T20:45:27.618Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "settings-change",
+      "target": "amShiftCutoff",
+      "details": "Updated setting: amShiftCutoff"
+    },
+    {
+      "id": "1775594720509",
+      "timestamp": "2026-04-07T20:45:20.509Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "settings-change",
+      "target": "helpPhone",
+      "details": "Updated setting: helpPhone"
+    },
+    {
+      "id": "1775594712957",
+      "timestamp": "2026-04-07T20:45:12.957Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "settings-change",
+      "target": "tournamentEndDate",
+      "details": "Updated setting: tournamentEndDate"
+    },
+    {
+      "id": "1775594706971",
+      "timestamp": "2026-04-07T20:45:06.971Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "settings-change",
+      "target": "tournamentStartDate",
+      "details": "Updated setting: tournamentStartDate"
+    },
+    {
+      "id": "1775594698499",
+      "timestamp": "2026-04-07T20:44:58.499Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "settings-change",
+      "target": "pairingsUrl",
+      "details": "Updated setting: pairingsUrl"
+    },
+    {
+      "id": "1775594698494",
+      "timestamp": "2026-04-07T20:44:58.494Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "settings-change",
+      "target": "helpEmail",
+      "details": "Updated setting: helpEmail"
+    },
+    {
+      "id": "1775594698488",
+      "timestamp": "2026-04-07T20:44:58.488Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "settings-change",
+      "target": "helpName",
+      "details": "Updated setting: helpName"
+    },
+    {
+      "id": "1775594698486",
+      "timestamp": "2026-04-07T20:44:58.486Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "settings-change",
+      "target": "tournamentName",
+      "details": "Updated setting: tournamentName"
+    },
+    {
+      "id": "1775593829775",
+      "timestamp": "2026-04-07T20:30:29.775Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Livingston, Jennifier",
+      "details": "Edited volunteer (Type: Volunteer, Hole: 4)"
+    },
+    {
+      "id": "1775593730675",
+      "timestamp": "2026-04-07T20:28:50.675Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Gray, Leandro",
+      "details": "Edited volunteer (Type: Volunteer, Hole: 4)"
+    },
     {
       "id": "1775591249064",
       "timestamp": "2026-04-07T19:47:29.064Z",
