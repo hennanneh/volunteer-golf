@@ -7166,6 +7166,24 @@
   },
   "activityLog": [
     {
+      "id": "1775659119829",
+      "timestamp": "2026-04-08T14:38:39.829Z",
+      "user": "Howrey, Patrick",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1775658462520",
+      "timestamp": "2026-04-08T14:27:42.520Z",
+      "user": "Mckenzie, Roy",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1775654407691",
       "timestamp": "2026-04-08T13:20:07.691Z",
       "user": "Howrey, Patrick",
