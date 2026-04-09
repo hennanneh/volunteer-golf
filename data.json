@@ -7166,6 +7166,15 @@
   },
   "activityLog": [
     {
+      "id": "1775749870621",
+      "timestamp": "2026-04-09T15:51:10.621Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
       "id": "1775659119829",
       "timestamp": "2026-04-08T14:38:39.829Z",
       "user": "Howrey, Patrick",
