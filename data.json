@@ -7168,6 +7168,132 @@
   },
   "activityLog": [
     {
+      "id": "1775758809360",
+      "timestamp": "2026-04-09T18:20:09.360Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Edwards, Bill",
+      "details": "Checked out for Thursday PM on Hole 9"
+    },
+    {
+      "id": "1775758808369",
+      "timestamp": "2026-04-09T18:20:08.369Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Edwards, Bill",
+      "details": "Checked in for Thursday PM on Hole 9"
+    },
+    {
+      "id": "1775758806051",
+      "timestamp": "2026-04-09T18:20:06.051Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Edwards, Bill",
+      "details": "Checked out for Thursday PM on Hole 9"
+    },
+    {
+      "id": "1775758774749",
+      "timestamp": "2026-04-09T18:19:34.749Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1775758764198",
+      "timestamp": "2026-04-09T18:19:24.198Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1775758228496",
+      "timestamp": "2026-04-09T18:10:28.496Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1775758190182",
+      "timestamp": "2026-04-09T18:09:50.182Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1775758180883",
+      "timestamp": "2026-04-09T18:09:40.883Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1775758034166",
+      "timestamp": "2026-04-09T18:07:14.166Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1775758020900",
+      "timestamp": "2026-04-09T18:07:00.900Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1775757918888",
+      "timestamp": "2026-04-09T18:05:18.888Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1775757883508",
+      "timestamp": "2026-04-09T18:04:43.508Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1775757873521",
+      "timestamp": "2026-04-09T18:04:33.521Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1775757714628",
+      "timestamp": "2026-04-09T18:01:54.628Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Edwards, Bill",
+      "details": "Edited volunteer (Type: Captain, Hole: 9)"
+    },
+    {
       "id": "1775757552001",
       "timestamp": "2026-04-09T17:59:12.001Z",
       "user": "Hill, Michael",
