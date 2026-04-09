@@ -1476,7 +1476,9 @@
         "Sunday PM": true
       },
       "address": "228 E Lynn Creek Dr Arlington, TX 76002",
-      "volId": "2055"
+      "volId": "2055",
+      "hatReceived": false,
+      "notes": ""
     },
     {
       "id": "6962",
@@ -7166,54 +7168,18 @@
   },
   "activityLog": [
     {
-      "id": "1775749870621",
-      "timestamp": "2026-04-09T15:51:10.621Z",
-      "user": "Howrey, Anne",
+      "id": "1775757552001",
+      "timestamp": "2026-04-09T17:59:12.001Z",
+      "user": "Hill, Michael",
       "userType": "Admin",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Admin portal"
+      "action": "edit-volunteer",
+      "target": "Edwards, Bill",
+      "details": "Edited volunteer (Type: Captain, Hole: 9)"
     },
     {
-      "id": "1775659119829",
-      "timestamp": "2026-04-08T14:38:39.829Z",
-      "user": "Howrey, Patrick",
-      "userType": "Captain",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Captain portal"
-    },
-    {
-      "id": "1775658462520",
-      "timestamp": "2026-04-08T14:27:42.520Z",
-      "user": "Mckenzie, Roy",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1775654407691",
-      "timestamp": "2026-04-08T13:20:07.691Z",
-      "user": "Howrey, Patrick",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1775654368250",
-      "timestamp": "2026-04-08T13:19:28.250Z",
-      "user": "Howrey, Patrick",
-      "userType": "Admin",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Admin portal"
-    },
-    {
-      "id": "1775654260230",
-      "timestamp": "2026-04-08T13:17:40.230Z",
-      "user": "Howrey, Patrick",
+      "id": "1775757490513",
+      "timestamp": "2026-04-09T17:58:10.513Z",
+      "user": "Hill, Michael",
       "userType": "Admin",
       "action": "login",
       "target": "",
