@@ -534,6 +534,103 @@ app.get('/api/whoami', (req, res) => {
   });
 });
 
+// POST /api/set-password — set, change, or clear a stored password.
+//
+// Body: { volunteerId, field, currentPassword?, newPassword }
+//   field         — 'admin' or 'volunteer' (maps to adminPassword/volunteerPassword)
+//   newPassword   — non-empty string to set (will be bcrypt-hashed); empty
+//                   string or null to CLEAR (so login falls back to default)
+//   currentPassword — required when changing your OWN password; ignored when
+//                   an admin is changing/clearing someone else's
+//
+// Authorization:
+//   - Self change: any logged-in user can change their own password,
+//     provided currentPassword validates against the stored value.
+//   - Other-user change: only role=admin (full Admin) can do this. Used for
+//     the SPA's "reset to default" and the new-admin auto-init flows.
+app.post('/api/set-password', requireAuth(null), (req, res) => {
+  const { volunteerId, field, currentPassword, newPassword } = req.body || {};
+  const ip = clientIpFromReq(req);
+
+  if (!volunteerId || !field) {
+    return res.status(400).json({ success: false, error: 'volunteerId and field are required' });
+  }
+  if (field !== 'admin' && field !== 'volunteer') {
+    return res.status(400).json({ success: false, error: "field must be 'admin' or 'volunteer'" });
+  }
+  const fieldName = field === 'admin' ? 'adminPassword' : 'volunteerPassword';
+
+  // Optional length floor for non-empty passwords (clears are always OK)
+  if (newPassword && typeof newPassword === 'string' && newPassword.length > 0 && newPassword.length < 4) {
+    return res.status(400).json({ success: false, error: 'New password must be at least 4 characters' });
+  }
+
+  const session = req.user;
+  // STRICT_AUTH=false fallback users have no real session — refuse password
+  // changes for safety even in fallback mode.
+  if (session._fallback) {
+    return res.status(401).json({ success: false, error: 'Authentication required to change passwords' });
+  }
+  const isSelf = session.userId && String(session.userId) === String(volunteerId);
+  if (!isSelf && session.role !== 'admin') {
+    console.warn('[' + new Date().toISOString() + '] SET-PASSWORD FORBIDDEN  actor=' + session.name + '  target=' + volunteerId + '  ip=' + ip);
+    return res.status(403).json({ success: false, error: 'Only admins can change another user\'s password' });
+  }
+
+  withDataLock(req.demoMode, () => {
+    try {
+      const data = loadData(req.demoMode);
+      if (!data.volunteers) data.volunteers = [];
+      const v = data.volunteers.find(x => String(x.id) === String(volunteerId));
+      if (!v) {
+        return res.status(404).json({ success: false, error: 'Volunteer not found' });
+      }
+
+      // Self-change requires the current password to validate against what's
+      // on disk. If no stored value, validate against the legacy default.
+      if (isSelf) {
+        const stored = v[fieldName];
+        let okCurrent;
+        if (stored) {
+          okCurrent = comparePassword(currentPassword || '', stored);
+        } else {
+          // No stored value → fall back to the same defaults checkPassword uses.
+          if (fieldName === 'adminPassword') {
+            okCurrent = currentPassword === 'admin2025';
+          } else {
+            const phoneDigits = (v.phone || '').replace(/\D/g, '').slice(-10);
+            okCurrent = currentPassword === phoneDigits;
+          }
+        }
+        if (!okCurrent) {
+          console.warn('[' + new Date().toISOString() + '] SET-PASSWORD FAILED  user=' + session.name + '  reason=current-mismatch  ip=' + ip);
+          return res.status(401).json({ success: false, error: 'Current password is incorrect' });
+        }
+      }
+
+      // Apply the change.
+      if (!newPassword) {
+        // Clear → login falls back to default ('admin2025' or phone digits)
+        delete v[fieldName];
+        if (fieldName === 'adminPassword') delete v.adminPasswordSetAt;
+        console.log('[' + new Date().toISOString() + '] SET-PASSWORD CLEARED  actor=' + session.name + '  target=' + (v.name || volunteerId) + '  field=' + fieldName);
+      } else {
+        v[fieldName] = bcrypt.hashSync(newPassword, BCRYPT_ROUNDS);
+        if (fieldName === 'adminPassword') v.adminPasswordSetAt = new Date().toISOString();
+        console.log('[' + new Date().toISOString() + '] SET-PASSWORD SET  actor=' + session.name + '  target=' + (v.name || volunteerId) + '  field=' + fieldName);
+      }
+
+      if (saveData(data, req.demoMode)) {
+        return res.json({ success: true });
+      }
+      return res.status(500).json({ success: false, error: 'Failed to save data' });
+    } catch (e) {
+      console.warn('[' + new Date().toISOString() + '] SET-PASSWORD ERROR  ' + e.message);
+      return res.status(500).json({ success: false, error: 'Internal error' });
+    }
+  });
+});
+
 app.get('/api/data', (req, res) => {
   const data = loadData(req.demoMode);
 
@@ -603,13 +700,28 @@ app.post('/api/data', dataLimiter, requireAuth(['admin', 'chair', 'asstChair', '
       });
     }
 
+    // Phase 1.2 followup: passwords are server-owned. Strip any password
+    // fields the client sent (it shouldn't have them post-1.2, but defense
+    // in depth) and re-merge from disk by volunteer id. New volunteers (no
+    // matching id on disk) end up with no password — login falls back to
+    // the default 'admin2025' or phone-digits behavior in checkPassword.
+    // The /api/set-password endpoint is the ONLY way to set/clear passwords.
+    const existingById = new Map((existing.volunteers || []).map(v => [v.id, v]));
+    for (const v of data.volunteers) {
+      for (const f of VOLUNTEER_SECRET_FIELDS) delete v[f];
+      const onDisk = existingById.get(v.id);
+      if (onDisk) {
+        for (const f of VOLUNTEER_SECRET_FIELDS) {
+          if (onDisk[f] !== undefined) v[f] = onDisk[f];
+        }
+      }
+    }
+
     console.log('[' + new Date().toISOString() + '] POST /api/data  ip=' + clientIp + '  volunteers=' + incomingCount + '  checkIns=' + (data.checkIns ? data.checkIns.length : 0));
 
     if (saveData(data, req.demoMode)) {
-      // Broadcast to OTHER clients only.
-      // Phase 1.2: strip password fields from the broadcast payload — until
-      // the SPA stops sending passwords on save (see Phase 1.5 SPA work),
-      // `data` here may still contain them from the request body.
+      // Broadcast to OTHER clients only — passwords were already merged in
+      // and now need to be stripped back out so they don't reach browsers.
       broadcastUpdate(req.demoMode, 'fullUpdate', stripDataSecrets(data), socketId);
       res.json({ success: true, demoMode: req.demoMode });
     } else {
