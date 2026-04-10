@@ -279,4 +279,12 @@ If you are a Claude Code session working on this project, please read this whole
 | Date | Change | Commit |
 |---|---|---|
 | 2026-04-10 | Incident response: data restored, server-side mitigations applied (atomic writes, mutex, /api/checkin route, validation, shrink guard, IP block) | `a804488` |
-| 2026-04-10 | This SECURITY.md added | (this commit) |
+| 2026-04-10 | This SECURITY.md added | `8ab586a` |
+| 2026-04-10 | Phase 1.1: server-side session auth, /api/login, /api/logout, /api/whoami, requireAuth middleware on every write endpoint. STRICT_AUTH=false during rollout | `0f5f07b` |
+| 2026-04-10 | Phase 1.2: strip password fields from GET /api/data and socket broadcasts | `369f87f` |
+| 2026-04-10 | Phase 1.4: per-IP rate limiting via express-rate-limit (login 10/min, data 60/min, checkin 200/min, email 5/min) | `3dfdb09` |
+| 2026-04-10 | Phase 1.3: bcryptjs password hashing with transparent migration on first login | `8f88ed0` |
+| 2026-04-10 | Phase 1.2/1.3 followup: POST /api/data merges passwords from disk (server-owned), new POST /api/set-password endpoint | `c8f2e58` |
+| 2026-04-10 | Phase 1 SPA: 3 login forms → /api/login, 3 password-change modals → /api/set-password, /api/whoami on page load, /api/logout on logout, hasAdminPassword/hasVolunteerPassword flags, sw.js bumped to v3 | `dbc3072` |
+| 2026-04-10 | Phase 1.5: nginx UA-attack-string filter (select, union, &lt;script, @@ALg, drop table, information_schema). Backup at /root/volunteer-golf-backups/nginx-volunteer-golf.before-1.5.1775841897.conf | (nginx config, not in git) |
+| 2026-04-10 | "Software updated, tap to refresh" banner via service worker; sw.js bumped to v4 | `c0d7179` |
