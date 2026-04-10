@@ -4757,7 +4757,7 @@
       "address": "4710 Beaver Creek Dr Arlington, TX 76005",
       "volId": "8630",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false,
+      "hasVolunteerPassword": true,
       "volunteerPassword": "$2b$10$Tndu1Qgy..FFK0TRTSjXb..f3K3vpexGYlqjYrH7n3i.bSsv4lCtG"
     },
     {
@@ -8340,6 +8340,15 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1775859011328",
+      "timestamp": "2026-04-10T22:10:11.328Z",
+      "user": "Mckenzie, Roy",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1775852673475",
       "timestamp": "2026-04-10T20:24:33.475Z",
