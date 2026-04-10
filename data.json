@@ -1363,7 +1363,12 @@
         "Sunday PM": true
       },
       "address": "1027 Hunter Ridge Dr Arlington, TX 76013",
-      "volId": "394"
+      "volId": "394",
+      "pairingPreferences": [
+        null,
+        "421",
+        "438"
+      ]
     },
     {
       "id": "4531",
@@ -1391,7 +1396,8 @@
         "Sunday PM": true
       },
       "address": "2129 Shumard Ln Flower Mound, TX 75028",
-      "volId": "4531"
+      "volId": "4531",
+      "volunteerPassword": "5Goodbears"
     },
     {
       "id": "6594",
@@ -4703,7 +4709,8 @@
         "Sunday PM": true
       },
       "address": "2010 Cornell Drive Prosper, TX 75078",
-      "volId": "6217"
+      "volId": "6217",
+      "volunteerPassword": "Ratpack55!!"
     },
     {
       "id": "9393",
@@ -5639,7 +5646,8 @@
         "Sunday PM": true
       },
       "address": "2905 SOCRATES DR GRAND PRAIRIE, TX 75052",
-      "volId": "2745"
+      "volId": "2745",
+      "volunteerPassword": "1Underpar"
     },
     {
       "id": "6553",
@@ -6601,7 +6609,10 @@
         "Sunday PM": true
       },
       "address": "416 Meadowhill Dr. Benbrook, TX 76126-4017",
-      "volId": "271"
+      "volId": "271",
+      "volunteerPassword": "bertha",
+      "adminPassword": "fyhtyc-pygqe5-tuqTof",
+      "adminPasswordSetAt": "2026-04-10T00:58:34.252Z"
     },
     {
       "id": "8852",
@@ -7284,6 +7295,204 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1775782714252",
+      "timestamp": "2026-04-10T00:58:34.252Z",
+      "user": "Volkening, David",
+      "userType": "Admin",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed admin password"
+    },
+    {
+      "id": "1775782659886",
+      "timestamp": "2026-04-10T00:57:39.886Z",
+      "user": "Volkening, David",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1775781911601",
+      "timestamp": "2026-04-10T00:45:11.601Z",
+      "user": "Volkening, David",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1775781900731",
+      "timestamp": "2026-04-10T00:45:00.731Z",
+      "user": "Volkening, David",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1775781646638",
+      "timestamp": "2026-04-10T00:40:46.638Z",
+      "user": "Volkening, David",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1775781613141",
+      "timestamp": "2026-04-10T00:40:13.141Z",
+      "user": "Volkening, David",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1775781555857",
+      "timestamp": "2026-04-10T00:39:15.857Z",
+      "user": "Harrell, John",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1775781465754",
+      "timestamp": "2026-04-10T00:37:45.754Z",
+      "user": "Volkening, David",
+      "userType": "Captain",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed captain password"
+    },
+    {
+      "id": "1775781427781",
+      "timestamp": "2026-04-10T00:37:07.781Z",
+      "user": "Volkening, David",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1775781372560",
+      "timestamp": "2026-04-10T00:36:12.560Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed captain password"
+    },
+    {
+      "id": "1775781322663",
+      "timestamp": "2026-04-10T00:35:22.663Z",
+      "user": "Harrell, John",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1775781191351",
+      "timestamp": "2026-04-10T00:33:11.351Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1775781172484",
+      "timestamp": "2026-04-10T00:32:52.484Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1775781152508",
+      "timestamp": "2026-04-10T00:32:32.508Z",
+      "user": "Harrell, John",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1775781126584",
+      "timestamp": "2026-04-10T00:32:06.584Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed captain password"
+    },
+    {
+      "id": "1775781059145",
+      "timestamp": "2026-04-10T00:30:59.145Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1775781053743",
+      "timestamp": "2026-04-10T00:30:53.743Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1775780169809",
+      "timestamp": "2026-04-10T00:16:09.809Z",
+      "user": "Volkening, David",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1775780134416",
+      "timestamp": "2026-04-10T00:15:34.417Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1775779343579",
+      "timestamp": "2026-04-10T00:02:23.579Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1775779296439",
+      "timestamp": "2026-04-10T00:01:36.439Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1775779257616",
+      "timestamp": "2026-04-10T00:00:57.616Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed captain password"
+    },
     {
       "id": "1775778351661",
       "timestamp": "2026-04-09T23:45:51.661Z",
