@@ -5834,7 +5834,8 @@
         "Sunday PM": true
       },
       "address": "1407 Pecos  Dr Southlake, TX 76092",
-      "volId": "3974"
+      "volId": "3974",
+      "volunteerPassword": "Evie1407"
     },
     {
       "id": "10240",
@@ -7175,6 +7176,16 @@
       "timestamp": "2026-04-09T23:11:46.890Z",
       "checkedInBy": "Bishop, Woody",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "3974",
+      "volunteerName": "Schafer, John",
+      "hole": 4,
+      "day": "Friday",
+      "shift": "AM",
+      "timestamp": "2026-04-10T09:52:18.233Z",
+      "checkedInBy": "Schafer, John",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -7192,6 +7203,33 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1775814738233",
+      "timestamp": "2026-04-10T09:52:18.233Z",
+      "user": "Schafer, John",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Schafer, John",
+      "details": "Checked in for Friday AM on Hole 4"
+    },
+    {
+      "id": "1775814708693",
+      "timestamp": "2026-04-10T09:51:48.693Z",
+      "user": "Schafer, John",
+      "userType": "Captain",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed captain password"
+    },
+    {
+      "id": "1775814642040",
+      "timestamp": "2026-04-10T09:50:42.040Z",
+      "user": "Schafer, John",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1775792215239",
       "timestamp": "2026-04-10T03:36:55.239Z",
