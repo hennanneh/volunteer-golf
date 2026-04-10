@@ -2345,7 +2345,9 @@
         "Sunday PM": true
       },
       "address": "1112 Williamsburg Ln Keller, TX 76248",
-      "volId": "1521"
+      "volId": "1521",
+      "notAttendingOuting": false,
+      "noOutingPreference": false
     },
     {
       "id": "8127",
@@ -3118,8 +3120,6 @@
       "scheduled": {
         "Monday AM": true,
         "Monday PM": true,
-        "Tuesday AM": true,
-        "Tuesday PM": true,
         "Wednesday AM": true,
         "Wednesday PM": true,
         "Thursday AM": true,
@@ -4349,7 +4349,8 @@
         "Sunday PM": true
       },
       "address": "4710 Beaver Creek Dr Arlington, TX 76005",
-      "volId": "8630"
+      "volId": "8630",
+      "volunteerPassword": "Swtsu@1984"
     },
     {
       "id": "10319",
@@ -4576,7 +4577,8 @@
         "Sunday PM": true
       },
       "address": "291 Private Rd 2793 Alvord, TX 76225",
-      "volId": "1770"
+      "volId": "1770",
+      "volunteerPassword": "Apollo1023"
     },
     {
       "id": "4102",
@@ -5782,7 +5784,8 @@
         "Sunday PM": true
       },
       "address": "6510 New Authon Road Weatherford, TX 76088",
-      "volId": "7191"
+      "volId": "7191",
+      "volunteerPassword": "golf1234"
     },
     {
       "id": "8066",
@@ -7151,8 +7154,122 @@
       "volId": "292"
     }
   ],
-  "checkIns": [],
-  "submissions": [],
+  "checkIns": [
+    {
+      "volunteerId": "1770",
+      "volunteerName": "Mulvaney, Matt",
+      "hole": 16,
+      "day": "Thursday",
+      "shift": "PM",
+      "timestamp": "2026-04-09T23:10:03.236Z",
+      "checkedInBy": "Mulvaney, Matt",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9109",
+      "volunteerName": "Sippel, Mark",
+      "hole": 9,
+      "day": "Thursday",
+      "shift": "PM",
+      "timestamp": "2026-04-09T23:20:50.654Z",
+      "checkedInBy": "Edwards, Bill",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "8630",
+      "volunteerName": "Montalvo, Sammy",
+      "hole": 5,
+      "day": "Thursday",
+      "shift": "PM",
+      "timestamp": "2026-04-09T23:23:32.839Z",
+      "checkedInBy": "Montalvo, Sammy",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8630",
+      "volunteerName": "Montalvo, Sammy",
+      "hole": 5,
+      "day": "Friday",
+      "shift": "AM",
+      "timestamp": "2026-04-09T23:28:04.563Z",
+      "checkedInBy": "Montalvo, Sammy",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5391",
+      "volunteerName": "Gradt, Jason",
+      "hole": 18,
+      "day": "Thursday",
+      "shift": "PM",
+      "timestamp": "2026-04-09T23:28:31.355Z",
+      "checkedInBy": "Gradt, Jason",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4222",
+      "volunteerName": "Wehmeyer, Tom",
+      "hole": 18,
+      "day": "Thursday",
+      "shift": "PM",
+      "timestamp": "2026-04-09T23:28:32.292Z",
+      "checkedInBy": "Gradt, Jason",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10321",
+      "volunteerName": "Crawford, Billy",
+      "hole": 10,
+      "day": "Thursday",
+      "shift": "PM",
+      "timestamp": "2026-04-09T23:29:39.342Z",
+      "checkedInBy": "Trout, Wayne",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "145",
+      "volunteerName": "Gordon, Gary",
+      "hole": 2,
+      "day": "Thursday",
+      "shift": "PM",
+      "timestamp": "2026-04-09T23:29:46.241Z",
+      "checkedInBy": "Gordon, Gary",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8194",
+      "volunteerName": "Croxdale, Jack",
+      "hole": 10,
+      "day": "Thursday",
+      "shift": "PM",
+      "timestamp": "2026-04-09T23:30:09.697Z",
+      "checkedInBy": "Trout, Wayne",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "2507",
+      "volunteerName": "Holt, Sammy",
+      "hole": 8,
+      "day": "Thursday",
+      "shift": "PM",
+      "timestamp": "2026-04-09T23:45:19.523Z",
+      "checkedInBy": "Holt, Sammy",
+      "isAlternate": false
+    }
+  ],
+  "submissions": [
+    {
+      "hole": 18,
+      "day": "Thursday",
+      "shift": "PM",
+      "timestamp": "2026-04-09T23:30:26.963Z",
+      "captainName": "Gradt, Jason",
+      "notes": "",
+      "checkedInIds": [
+        "5391",
+        "4222"
+      ]
+    }
+  ],
   "settings": {
     "tournamentName": "Golf Tournament 2026",
     "tournamentStartDate": "2026-04-06",
@@ -7167,6 +7284,402 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1775778351661",
+      "timestamp": "2026-04-09T23:45:51.661Z",
+      "user": "Butler, Mark",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1775778319523",
+      "timestamp": "2026-04-09T23:45:19.523Z",
+      "user": "Holt, Sammy",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Holt, Sammy",
+      "details": "Checked in for Thursday PM on Hole 8"
+    },
+    {
+      "id": "1775778018446",
+      "timestamp": "2026-04-09T23:40:18.446Z",
+      "user": "Holt, Sammy",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "King, Jeff",
+      "details": "Checked out for Thursday PM on Hole 8"
+    },
+    {
+      "id": "1775778015544",
+      "timestamp": "2026-04-09T23:40:15.544Z",
+      "user": "Holt, Sammy",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Johnson, Claude",
+      "details": "Checked out for Thursday PM on Hole 8"
+    },
+    {
+      "id": "1775778013886",
+      "timestamp": "2026-04-09T23:40:13.886Z",
+      "user": "Holt, Sammy",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Johnson, Claude",
+      "details": "Checked in for Thursday PM on Hole 8"
+    },
+    {
+      "id": "1775778004808",
+      "timestamp": "2026-04-09T23:40:04.808Z",
+      "user": "Holt, Sammy",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "King, Jeff",
+      "details": "Checked in for Thursday PM on Hole 8"
+    },
+    {
+      "id": "1775777778052",
+      "timestamp": "2026-04-09T23:36:18.052Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1775777613145",
+      "timestamp": "2026-04-09T23:33:33.145Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1775777599295",
+      "timestamp": "2026-04-09T23:33:19.295Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed captain password"
+    },
+    {
+      "id": "1775777549226",
+      "timestamp": "2026-04-09T23:32:29.226Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1775777437043",
+      "timestamp": "2026-04-09T23:30:37.043Z",
+      "user": "Gordon, Gary",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "White, Drake",
+      "details": "Checked out for Thursday PM on Hole 2"
+    },
+    {
+      "id": "1775777426963",
+      "timestamp": "2026-04-09T23:30:26.963Z",
+      "user": "Gradt, Jason",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 18",
+      "details": "Submitted Thursday PM for Hole 18"
+    },
+    {
+      "id": "1775777409697",
+      "timestamp": "2026-04-09T23:30:09.697Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Croxdale, Jack",
+      "details": "Checked in for Thursday PM on Hole 10"
+    },
+    {
+      "id": "1775777397981",
+      "timestamp": "2026-04-09T23:29:57.981Z",
+      "user": "Gordon, Gary",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "White, Drake",
+      "details": "Checked in for Thursday PM on Hole 2"
+    },
+    {
+      "id": "1775777386243",
+      "timestamp": "2026-04-09T23:29:46.243Z",
+      "user": "Gordon, Gary",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Gordon, Gary",
+      "details": "Checked in for Thursday PM on Hole 2"
+    },
+    {
+      "id": "1775777379346",
+      "timestamp": "2026-04-09T23:29:39.346Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Crawford, Billy",
+      "details": "Checked in for Thursday PM on Hole 10"
+    },
+    {
+      "id": "1775777347351",
+      "timestamp": "2026-04-09T23:29:07.351Z",
+      "user": "Holt, Sammy",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1775777314475",
+      "timestamp": "2026-04-09T23:28:34.475Z",
+      "user": "Gradt, Jason",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 18",
+      "details": "Submitted Thursday PM for Hole 18"
+    },
+    {
+      "id": "1775777312292",
+      "timestamp": "2026-04-09T23:28:32.292Z",
+      "user": "Gradt, Jason",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Wehmeyer, Tom",
+      "details": "Checked in for Thursday PM on Hole 18"
+    },
+    {
+      "id": "1775777311355",
+      "timestamp": "2026-04-09T23:28:31.355Z",
+      "user": "Gradt, Jason",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Gradt, Jason",
+      "details": "Checked in for Thursday PM on Hole 18"
+    },
+    {
+      "id": "1775777307313",
+      "timestamp": "2026-04-09T23:28:27.313Z",
+      "user": "Gradt, Jason",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Gradt, Jason",
+      "details": "Checked out for Sunday PM on Hole 18"
+    },
+    {
+      "id": "1775777306764",
+      "timestamp": "2026-04-09T23:28:26.764Z",
+      "user": "Gradt, Jason",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Wehmeyer, Tom",
+      "details": "Checked out for Sunday PM on Hole 18"
+    },
+    {
+      "id": "1775777304726",
+      "timestamp": "2026-04-09T23:28:24.726Z",
+      "user": "Gradt, Jason",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Wehmeyer, Tom",
+      "details": "Checked in for Sunday PM on Hole 18"
+    },
+    {
+      "id": "1775777301567",
+      "timestamp": "2026-04-09T23:28:21.567Z",
+      "user": "Harrell, John",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1775777294276",
+      "timestamp": "2026-04-09T23:28:14.276Z",
+      "user": "Gradt, Jason",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Gradt, Jason",
+      "details": "Checked out for Thursday PM on Hole 18"
+    },
+    {
+      "id": "1775777284563",
+      "timestamp": "2026-04-09T23:28:04.563Z",
+      "user": "Montalvo, Sammy",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Montalvo, Sammy",
+      "details": "Checked in for Friday AM on Hole 5"
+    },
+    {
+      "id": "1775777265050",
+      "timestamp": "2026-04-09T23:27:45.050Z",
+      "user": "Gradt, Jason",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Gradt, Jason",
+      "details": "Checked in for Thursday PM on Hole 18"
+    },
+    {
+      "id": "1775777252854",
+      "timestamp": "2026-04-09T23:27:32.854Z",
+      "user": "Gradt, Jason",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Gradt, Jason",
+      "details": "Checked in for Sunday PM on Hole 18"
+    },
+    {
+      "id": "1775777140345",
+      "timestamp": "2026-04-09T23:25:40.346Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1775777082687",
+      "timestamp": "2026-04-09T23:24:42.687Z",
+      "user": "Gordon, Gary",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1775777023414",
+      "timestamp": "2026-04-09T23:23:43.414Z",
+      "user": "Gordon, Gary",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1775777012839",
+      "timestamp": "2026-04-09T23:23:32.839Z",
+      "user": "Montalvo, Sammy",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Montalvo, Sammy",
+      "details": "Checked in for Thursday PM on Hole 5"
+    },
+    {
+      "id": "1775776994445",
+      "timestamp": "2026-04-09T23:23:14.445Z",
+      "user": "Montalvo, Sammy",
+      "userType": "Captain",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed captain password"
+    },
+    {
+      "id": "1775776850654",
+      "timestamp": "2026-04-09T23:20:50.654Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Sippel, Mark",
+      "details": "Checked in for Thursday PM on Hole 9"
+    },
+    {
+      "id": "1775776793310",
+      "timestamp": "2026-04-09T23:19:53.310Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1775776646095",
+      "timestamp": "2026-04-09T23:17:26.095Z",
+      "user": "Quintana, Mike",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1775776418036",
+      "timestamp": "2026-04-09T23:13:38.037Z",
+      "user": "Gordon, Gary",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1775776396638",
+      "timestamp": "2026-04-09T23:13:16.638Z",
+      "user": "Bishop, Woody",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1775776379182",
+      "timestamp": "2026-04-09T23:12:59.182Z",
+      "user": "Zamzow, Steve",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1775776364389",
+      "timestamp": "2026-04-09T23:12:44.389Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1775776238813",
+      "timestamp": "2026-04-09T23:10:38.813Z",
+      "user": "Wilson, Todd",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1775776203236",
+      "timestamp": "2026-04-09T23:10:03.236Z",
+      "user": "Mulvaney, Matt",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Mulvaney, Matt",
+      "details": "Checked in for Thursday PM on Hole 16"
+    },
+    {
+      "id": "1775776189503",
+      "timestamp": "2026-04-09T23:09:49.503Z",
+      "user": "Mulvaney, Matt",
+      "userType": "Captain",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed captain password"
+    },
+    {
+      "id": "1775776162322",
+      "timestamp": "2026-04-09T23:09:22.323Z",
+      "user": "Nederostek, Brad",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
     {
       "id": "1775758809360",
       "timestamp": "2026-04-09T18:20:09.360Z",
