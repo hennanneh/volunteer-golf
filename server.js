@@ -6,6 +6,7 @@ const fs = require('fs');
 const crypto = require('crypto');
 const cookieParser = require('cookie-parser');
 const { rateLimit } = require('express-rate-limit');
+const bcrypt = require('bcryptjs');
 const { Resend } = require('resend');
 const { Server } = require('socket.io');
 
@@ -301,27 +302,92 @@ function roleForVolunteer(v) {
   return 'volunteer';
 }
 
+// Phase 1.3: bcrypt support with transparent migration.
+//
+// Stored passwords on disk are gradually upgraded from plaintext to bcrypt
+// hashes the first time each user logs in successfully. Until that happens,
+// the legacy plaintext path is still accepted. Hashes are recognizable by
+// their $2a$/$2b$/$2y$ prefix.
+const BCRYPT_ROUNDS = 10;
+
+function looksLikeBcryptHash(s) {
+  return typeof s === 'string' && /^\$2[aby]\$/.test(s);
+}
+
+// Compare a typed password against a stored value (plaintext OR bcrypt hash).
+function comparePassword(typed, stored) {
+  if (typeof typed !== 'string' || typeof stored !== 'string' || !stored) return false;
+  if (looksLikeBcryptHash(stored)) {
+    try { return bcrypt.compareSync(typed, stored); } catch (e) { return false; }
+  }
+  return typed === stored;
+}
+
+// Re-load the volunteer from disk under the lock, double-check the field
+// is still plaintext and still matches the typed value (defends against a
+// concurrent password change), then write back the bcrypt hash.
+// Best-effort: failures only log. Skips the synthetic superadmin record.
+function upgradePasswordToHash(volunteerId, fieldName, typed, isDemo) {
+  if (!volunteerId || volunteerId === 'superadmin') return;
+  withDataLock(isDemo, () => {
+    try {
+      const data = loadData(isDemo);
+      if (!data.volunteers) return;
+      const v = data.volunteers.find(x => x.id === volunteerId);
+      if (!v) return;
+      const current = v[fieldName];
+      if (!current || looksLikeBcryptHash(current)) return; // already upgraded
+      if (current !== typed) return; // changed under us — leave alone
+      v[fieldName] = bcrypt.hashSync(typed, BCRYPT_ROUNDS);
+      if (saveData(data, isDemo)) {
+        console.log('[' + new Date().toISOString() + '] BCRYPT UPGRADE  user=' + (v.name || volunteerId) + '  field=' + fieldName);
+      }
+    } catch (e) {
+      console.warn('[' + new Date().toISOString() + '] BCRYPT UPGRADE FAILED  user=' + volunteerId + '  err=' + e.message);
+    }
+  }).catch(() => { /* lock chain already logged */ });
+}
+
 // Validate the password for a volunteer in a given portal context.
-// Phase 1.3 will replace this with bcrypt comparison.
+// Returns { ok: boolean, upgradeField: string | null }. upgradeField is set
+// when the user authenticated against a still-plaintext stored password and
+// the caller should fire-and-forget upgradePasswordToHash() after responding.
 function checkPassword(volunteer, portal, password) {
-  if (!volunteer || !password) return false;
+  if (!volunteer || !password) return { ok: false, upgradeField: null };
   const phoneDigits = (volunteer.phone || '').replace(/\D/g, '').slice(-10);
 
   if (portal === 'admin') {
-    if (!['Admin', 'View Admin', 'Chairman', 'Asst. Chairman'].includes(volunteer.type)) return false;
-    const stored = volunteer.adminPassword || 'admin2025';
-    return password === stored;
+    if (!['Admin', 'View Admin', 'Chairman', 'Asst. Chairman'].includes(volunteer.type)) {
+      return { ok: false, upgradeField: null };
+    }
+    const stored = volunteer.adminPassword;
+    if (stored) {
+      const ok = comparePassword(password, stored);
+      return { ok, upgradeField: ok && !looksLikeBcryptHash(stored) ? 'adminPassword' : null };
+    }
+    // Fallback default — never gets bcrypt-upgraded because there's nothing on disk to upgrade.
+    return { ok: password === 'admin2025', upgradeField: null };
   }
   if (portal === 'captain') {
-    if (!['Captain', 'Chairman', 'Asst. Chairman', 'Admin'].includes(volunteer.type)) return false;
-    const stored = volunteer.volunteerPassword || phoneDigits;
-    return password === stored;
+    if (!['Captain', 'Chairman', 'Asst. Chairman', 'Admin'].includes(volunteer.type)) {
+      return { ok: false, upgradeField: null };
+    }
+    const stored = volunteer.volunteerPassword;
+    if (stored) {
+      const ok = comparePassword(password, stored);
+      return { ok, upgradeField: ok && !looksLikeBcryptHash(stored) ? 'volunteerPassword' : null };
+    }
+    return { ok: password === phoneDigits, upgradeField: null };
   }
   if (portal === 'volunteer') {
-    const stored = volunteer.volunteerPassword || phoneDigits;
-    return password === stored;
+    const stored = volunteer.volunteerPassword;
+    if (stored) {
+      const ok = comparePassword(password, stored);
+      return { ok, upgradeField: ok && !looksLikeBcryptHash(stored) ? 'volunteerPassword' : null };
+    }
+    return { ok: password === phoneDigits, upgradeField: null };
   }
-  return false;
+  return { ok: false, upgradeField: null };
 }
 
 // Express middleware factory. allowedRoles is an array of role strings.
@@ -389,7 +455,8 @@ app.post('/api/login', loginLimiter, (req, res) => {
   const emailLc = String(email).trim().toLowerCase();
   const volunteer = data.volunteers.find(v => v.email && v.email.toLowerCase() === emailLc);
 
-  if (!volunteer || !checkPassword(volunteer, portal, password)) {
+  const authResult = volunteer ? checkPassword(volunteer, portal, password) : { ok: false, upgradeField: null };
+  if (!authResult.ok) {
     console.warn('[' + new Date().toISOString() + '] LOGIN FAILED  email=' + emailLc + '  portal=' + portal + '  ip=' + ip);
     // Generic error to avoid leaking which emails exist
     return res.status(401).json({ success: false, error: 'Invalid email or password' });
@@ -425,6 +492,12 @@ app.post('/api/login', loginLimiter, (req, res) => {
       role: role
     }
   });
+
+  // Phase 1.3: fire-and-forget bcrypt upgrade for users still on plaintext.
+  // Runs after the response is sent so the user never waits on hashing.
+  if (authResult.upgradeField) {
+    upgradePasswordToHash(volunteer.id, authResult.upgradeField, password, req.demoMode);
+  }
 });
 
 // POST /api/logout — clear session
