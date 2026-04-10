@@ -5,6 +5,7 @@ const path = require('path');
 const fs = require('fs');
 const crypto = require('crypto');
 const cookieParser = require('cookie-parser');
+const { rateLimit } = require('express-rate-limit');
 const { Resend } = require('resend');
 const { Server } = require('socket.io');
 
@@ -223,6 +224,39 @@ function stripDataSecrets(data) {
 }
 
 // ============================================================================
+// Rate limiting (Phase 1.4, added 2026-04-10 — see SECURITY.md)
+//
+// Per-IP write-endpoint limits, applied BEFORE requireAuth so unauthenticated
+// flooders eat 429s without going through password/session work. The keys are
+// nginx-supplied X-Real-IP / X-Forwarded-For headers because the Express
+// `req.ip` would otherwise resolve to 127.0.0.1 (the upstream proxy).
+// ============================================================================
+
+function clientIpFromReq(req) {
+  return req.headers['x-real-ip'] || req.headers['x-forwarded-for'] || req.ip || 'unknown';
+}
+
+function makeLimiter(max, label) {
+  return rateLimit({
+    windowMs: 60 * 1000,
+    max: max,
+    standardHeaders: true,
+    legacyHeaders: false,
+    keyGenerator: (req) => clientIpFromReq(req),
+    handler: (req, res) => {
+      const ip = clientIpFromReq(req);
+      console.warn('[' + new Date().toISOString() + '] RATE LIMITED ' + label + ' ' + req.method + ' ' + req.path + '  ip=' + ip);
+      res.status(429).json({ success: false, error: 'Too many requests, please slow down and try again in a minute' });
+    }
+  });
+}
+
+const dataLimiter    = makeLimiter(60,  'data');     // POST /api/data        60/min
+const checkinLimiter = makeLimiter(200, 'checkin');  // POST /api/checkin    200/min (rush)
+const emailLimiter   = makeLimiter(5,   'email');    // POST /api/email        5/min
+const loginLimiter   = makeLimiter(10,  'login');    // POST /api/login       10/min (block guessing)
+
+// ============================================================================
 // Authentication (Phase 1.1, added 2026-04-10 — see SECURITY.md)
 //
 // Server-side session-based auth. Sessions are stored in memory (Map),
@@ -333,7 +367,7 @@ function requireAuth(allowedRoles) {
 }
 
 // POST /api/login — verify password, issue session
-app.post('/api/login', (req, res) => {
+app.post('/api/login', loginLimiter, (req, res) => {
   const { email, password, portal } = req.body || {};
   const ip = req.headers['x-real-ip'] || req.headers['x-forwarded-for'] || req.ip || 'unknown';
 
@@ -446,7 +480,7 @@ app.get('/api/data', (req, res) => {
   res.json({ success: true, data: stripDataSecrets(data), demoMode: req.demoMode });
 });
 
-app.post('/api/data', requireAuth(['admin', 'chair', 'asstChair', 'captain', 'volunteer']), (req, res) => {
+app.post('/api/data', dataLimiter, requireAuth(['admin', 'chair', 'asstChair', 'captain', 'volunteer']), (req, res) => {
   const data = req.body;
   const socketId = req.headers['x-socket-id'];
   const clientIp = req.headers['x-real-ip'] || req.headers['x-forwarded-for'] || req.ip || 'unknown';
@@ -511,7 +545,7 @@ app.post('/api/data', requireAuth(['admin', 'chair', 'asstChair', 'captain', 'vo
   });
 });
 
-app.post('/api/checkin', requireAuth(['admin', 'chair', 'asstChair', 'captain']), (req, res) => {
+app.post('/api/checkin', checkinLimiter, requireAuth(['admin', 'chair', 'asstChair', 'captain']), (req, res) => {
   const { volunteerId, volunteerName, hole, day, shift, checkedInBy, action, isAlternate } = req.body;
   const socketId = req.headers['x-socket-id'];
 
@@ -602,7 +636,7 @@ app.post('/api/archives', requireAuth(['admin']), (req, res) => {
   }
 });
 
-app.post('/api/email', requireAuth(['admin', 'chair', 'asstChair']), async (req, res) => {
+app.post('/api/email', emailLimiter, requireAuth(['admin', 'chair', 'asstChair']), async (req, res) => {
   if (req.demoMode) {
     return res.json({ success: true, demoMode: true, message: 'Emails disabled in demo mode' });
   }
