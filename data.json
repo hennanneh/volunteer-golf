@@ -8340,6 +8340,42 @@
   },
   "activityLog": [
     {
+      "id": "1775850179879",
+      "timestamp": "2026-04-10T19:42:59.879Z",
+      "user": "Steward, Denny",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1775849688392",
+      "timestamp": "2026-04-10T19:34:48.392Z",
+      "user": "Steward, Denny",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1775848365504",
+      "timestamp": "2026-04-10T19:12:45.504Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed captain password"
+    },
+    {
+      "id": "1775848343784",
+      "timestamp": "2026-04-10T19:12:23.784Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1775845225041",
       "timestamp": "2026-04-10T18:20:25.041Z",
       "user": "Pueblo, Vange",
