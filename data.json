@@ -2632,7 +2632,7 @@
       "type": "Captain",
       "hole": 8,
       "phone": "(806) 632-3771",
-      "email": "sammy_holt@sbcglobal.net",
+      "email": "holtsrumom@gmail.com",
       "yearsWorked": 19,
       "hat": "",
       "scheduled": {
@@ -2652,7 +2652,9 @@
         "Sunday PM": true
       },
       "address": "6602, Brentwood Ave Lubbock, TX 79424",
-      "volId": "2543"
+      "volId": "2543",
+      "hatReceived": false,
+      "notes": ""
     },
     {
       "id": "4014",
@@ -2685,7 +2687,7 @@
       "scheduled": {
         "Wednesday AM": true,
         "Thursday PM": true,
-        "Friday AM": true,
+        "Friday PM": true,
         "Saturday PM": true,
         "Sunday AM": true
       },
@@ -2749,85 +2751,6 @@
         "359"
       ],
       "noOutingPreference": false
-    },
-    {
-      "id": "359",
-      "name": "Howrey, Patrick",
-      "type": "Admin",
-      "hole": 99,
-      "phone": "(682) 429-7313",
-      "email": "p.howrey@att.net",
-      "yearsWorked": 24,
-      "hat": "",
-      "scheduled": {
-        "Monday AM": true,
-        "Monday PM": true,
-        "Tuesday AM": true,
-        "Tuesday PM": true,
-        "Wednesday AM": true,
-        "Wednesday PM": true,
-        "Thursday AM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
-        "Friday PM": true,
-        "Saturday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true,
-        "Sunday PM": true
-      },
-      "address": "2424 River Rock Circle Arlington, TX 76006",
-      "volId": "359",
-      "hatReceived": false,
-      "notes": "",
-      "assignedHoles": [
-        99,
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14,
-        15,
-        16,
-        17,
-        18
-      ]
-    },
-    {
-      "id": "359",
-      "name": "Howrey, Patrick",
-      "type": "Asst. Chairman",
-      "hole": 99,
-      "phone": "(682) 429-7313",
-      "email": "p.howrey@att.net",
-      "yearsWorked": 24,
-      "hat": "",
-      "scheduled": {
-        "Monday AM": true,
-        "Monday PM": true,
-        "Tuesday AM": true,
-        "Tuesday PM": true,
-        "Wednesday AM": true,
-        "Wednesday PM": true,
-        "Thursday AM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
-        "Friday PM": true,
-        "Saturday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true,
-        "Sunday PM": true
-      },
-      "address": "2424 River Rock Circle Arlington, TX 76006",
-      "volId": "359"
     },
     {
       "id": "9874",
@@ -3335,44 +3258,6 @@
       "address": "191 Tyler Road Anacoco, LA 71403"
     },
     {
-      "id": "8367",
-      "name": "King, Jeff",
-      "type": "Volunteer",
-      "hole": 8,
-      "phone": "(214) 676-5965",
-      "email": "jaking5251@yahoo.com",
-      "yearsWorked": 5,
-      "hat": "",
-      "scheduled": {
-        "Wednesday PM": true,
-        "Thursday AM": true,
-        "Friday PM": true,
-        "Saturday AM": true,
-        "Sunday PM": true
-      },
-      "volId": "8367",
-      "address": "2217 High Point Drive CARROLLTON, DENTON, TX, TX 75007"
-    },
-    {
-      "id": "8367",
-      "name": "King, Jeff",
-      "type": "Volunteer",
-      "hole": 8,
-      "phone": "(214) 676-5965",
-      "email": "jaking5251@yahoo.com",
-      "yearsWorked": 5,
-      "hat": "",
-      "scheduled": {
-        "Wednesday PM": true,
-        "Thursday AM": true,
-        "Friday PM": true,
-        "Saturday AM": true,
-        "Sunday PM": true
-      },
-      "address": "2217 High Point Drive CARROLLTON, DENTON, TX, TX 75007",
-      "volId": "8367"
-    },
-    {
       "id": "9082",
       "name": "King, Pat",
       "type": "Volunteer",
@@ -3561,69 +3446,6 @@
       },
       "volId": "9788",
       "address": "764 Parkview Drive Burleson, TX 76028"
-    },
-    {
-      "id": "8345",
-      "name": "Kuhnell, David",
-      "type": "Volunteer",
-      "hole": 20,
-      "phone": "(817) 229-3353",
-      "email": "wkuhnell@gmail.com",
-      "yearsWorked": 3,
-      "hat": "",
-      "scheduled": {
-        "Monday AM": true,
-        "Tuesday AM": true,
-        "Wednesday AM": true,
-        "Thursday AM": true,
-        "Friday PM": true,
-        "Saturday AM": true,
-        "Sunday PM": true
-      },
-      "volId": "8345",
-      "address": "P O Box 482 Ozona, TX 76943"
-    },
-    {
-      "id": "8345",
-      "name": "Kuhnell, David",
-      "type": "Volunteer",
-      "hole": 10,
-      "phone": "(817) 229-3353",
-      "email": "wkuhnell@gmail.com",
-      "yearsWorked": 3,
-      "hat": "",
-      "scheduled": {
-        "Monday AM": true,
-        "Tuesday AM": true,
-        "Wednesday AM": true,
-        "Thursday AM": true,
-        "Friday PM": true,
-        "Saturday AM": true,
-        "Sunday PM": true
-      },
-      "address": "P O Box 482 Ozona, TX 76943",
-      "volId": "8345"
-    },
-    {
-      "id": "4518",
-      "name": "Kutzler, Jack",
-      "type": "Volunteer",
-      "hole": 10,
-      "phone": "(469) 430-4453",
-      "email": "Jhk300@msn.com",
-      "yearsWorked": 8,
-      "hat": "",
-      "scheduled": {
-        "Monday AM": true,
-        "Tuesday AM": true,
-        "Wednesday AM": true,
-        "Thursday AM": true,
-        "Friday PM": true,
-        "Saturday AM": true,
-        "Sunday PM": true
-      },
-      "volId": "4518",
-      "address": "6428 Maple Drive The Colony, TX 75056"
     },
     {
       "id": "10339",
@@ -4576,8 +4398,7 @@
         "Sunday PM": true
       },
       "address": "291 Private Rd 2793 Alvord, TX 76225",
-      "volId": "1770",
-      "volunteerPassword": "Apollo1023"
+      "volId": "1770"
     },
     {
       "id": "4102",
@@ -4702,8 +4523,7 @@
         "Sunday PM": true
       },
       "address": "2010 Cornell Drive Prosper, TX 75078",
-      "volId": "6217",
-      "volunteerPassword": "Ratpack55!!"
+      "volId": "6217"
     },
     {
       "id": "9393",
@@ -4826,8 +4646,7 @@
         "Sunday PM": true
       },
       "address": "2201 Cains Lane Mansfield, TX 76063",
-      "volId": "214",
-      "volunteerPassword": "Colonial06"
+      "volId": "214"
     },
     {
       "id": "4096",
@@ -5453,62 +5272,6 @@
       "address": "325 Key West Rd Reno, TX 75462"
     },
     {
-      "id": "5521",
-      "name": "Rico, Andrew",
-      "type": "Colonial Member",
-      "hole": 99,
-      "phone": "(817) 313-7112",
-      "email": "Andrew.r.rico@gmail.com",
-      "yearsWorked": 2,
-      "hat": "",
-      "scheduled": {
-        "Monday AM": true,
-        "Monday PM": true,
-        "Tuesday AM": true,
-        "Tuesday PM": true,
-        "Wednesday AM": true,
-        "Wednesday PM": true,
-        "Thursday AM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
-        "Friday PM": true,
-        "Saturday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true,
-        "Sunday PM": true
-      },
-      "address": "3661 manderly pl fort worth, TX 76109",
-      "volId": "5521"
-    },
-    {
-      "id": "5521",
-      "name": "Rico, Andrew",
-      "type": "Colonial Member",
-      "hole": 99,
-      "phone": "(817) 313-7112",
-      "email": "Andrew.r.rico@gmail.com",
-      "yearsWorked": 2,
-      "hat": "",
-      "scheduled": {
-        "Monday AM": true,
-        "Monday PM": true,
-        "Tuesday AM": true,
-        "Tuesday PM": true,
-        "Wednesday AM": true,
-        "Wednesday PM": true,
-        "Thursday AM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
-        "Friday PM": true,
-        "Saturday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true,
-        "Sunday PM": true
-      },
-      "address": "3661 manderly pl fort worth, TX 76109",
-      "volId": "5521"
-    },
-    {
       "id": "9900",
       "name": "Riemitis, Andy",
       "type": "Volunteer",
@@ -5738,8 +5501,7 @@
         "Sunday PM": true
       },
       "address": "7636 Terry Dr. N. Richland Hills, TX 76180",
-      "volId": "243",
-      "volunteerPassword": "scubed124"
+      "volId": "243"
     },
     {
       "id": "9204",
@@ -5835,8 +5597,7 @@
         "Sunday PM": true
       },
       "address": "1407 Pecos  Dr Southlake, TX 76092",
-      "volId": "3974",
-      "volunteerPassword": "Evie1407"
+      "volId": "3974"
     },
     {
       "id": "10240",
@@ -6410,8 +6171,7 @@
         "Sunday PM": true
       },
       "address": "9302 King Air Dr Granbury, TX 76049",
-      "volId": "5235",
-      "volunteerPassword": "Chopper@1992"
+      "volId": "5235"
     },
     {
       "id": "1182",
@@ -6827,44 +6587,6 @@
       "address": "12620 Foster Circle Azle, TX 76020"
     },
     {
-      "id": "10437",
-      "name": "White, Drake",
-      "type": "Volunteer",
-      "hole": 2,
-      "phone": "(682) 760-6937",
-      "email": "drakehwhite@icloud.com",
-      "yearsWorked": 1,
-      "hat": "",
-      "scheduled": {
-        "Wednesday AM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true
-      },
-      "volId": "10437",
-      "address": "6828 Walter Street North Richland Hills, TX 76182"
-    },
-    {
-      "id": "10437",
-      "name": "White, Drake",
-      "type": "Volunteer",
-      "hole": 2,
-      "phone": "(682) 760-6937",
-      "email": "drakehwhite@icloud.com",
-      "yearsWorked": 1,
-      "hat": "",
-      "scheduled": {
-        "Wednesday AM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true
-      },
-      "address": "6828 Walter Street North Richland Hills, TX 76182",
-      "volId": "10437"
-    },
-    {
       "id": "8219",
       "name": "White, Gary",
       "type": "Volunteer",
@@ -7155,108 +6877,146 @@
       },
       "address": "2974 Old Mill Rd Greenville, TX 75402",
       "volId": "292"
+    },
+    {
+      "id": "8367",
+      "name": "King, Jeff",
+      "type": "Volunteer",
+      "hole": 8,
+      "phone": "(214) 676-5965",
+      "email": "jaking5251@yahoo.com",
+      "yearsWorked": 5,
+      "hat": "",
+      "scheduled": {
+        "Wednesday PM": true,
+        "Thursday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
+        "Sunday PM": true
+      },
+      "address": "2217 High Point Drive CARROLLTON, DENTON, TX, TX 75007",
+      "volId": "8367"
+    },
+    {
+      "id": "4518",
+      "name": "Kutzler, Jack",
+      "type": "Volunteer",
+      "hole": 10,
+      "phone": "(469) 430-4453",
+      "email": "Jhk300@msn.com",
+      "yearsWorked": 8,
+      "hat": "",
+      "scheduled": {
+        "Monday AM": true,
+        "Tuesday AM": true,
+        "Wednesday AM": true,
+        "Thursday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
+        "Sunday PM": true
+      },
+      "address": "6428 Maple Drive The Colony, TX 75056",
+      "volId": "4518"
+    },
+    {
+      "id": "359",
+      "name": "Howrey, Patrick",
+      "type": "Admin",
+      "hole": 99,
+      "phone": "(682) 429-7313",
+      "email": "p.howrey@att.net",
+      "yearsWorked": 24,
+      "hat": "",
+      "scheduled": {
+        "Monday AM": true,
+        "Monday PM": true,
+        "Tuesday AM": true,
+        "Tuesday PM": true,
+        "Wednesday AM": true,
+        "Wednesday PM": true,
+        "Thursday AM": true,
+        "Thursday PM": true,
+        "Friday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true,
+        "Sunday PM": true
+      },
+      "address": "2424 River Rock Circle Arlington, TX 76006",
+      "volId": "359"
+    },
+    {
+      "id": "5521",
+      "name": "Rico, Andrew",
+      "type": "Colonial Member",
+      "hole": 99,
+      "phone": "(817) 313-7112",
+      "email": "Andrew.r.rico@gmail.com",
+      "yearsWorked": 2,
+      "hat": "",
+      "scheduled": {
+        "Monday AM": true,
+        "Monday PM": true,
+        "Tuesday AM": true,
+        "Tuesday PM": true,
+        "Wednesday AM": true,
+        "Wednesday PM": true,
+        "Thursday AM": true,
+        "Thursday PM": true,
+        "Friday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true,
+        "Sunday PM": true
+      },
+      "address": "3661 manderly pl fort worth, TX 76109",
+      "volId": "5521"
+    },
+    {
+      "id": "8345",
+      "name": "Kuhnell, David",
+      "type": "Volunteer",
+      "hole": 10,
+      "phone": "(817) 229-3353",
+      "email": "wkuhnell@gmail.com",
+      "yearsWorked": 3,
+      "hat": "",
+      "scheduled": {
+        "Monday AM": true,
+        "Tuesday AM": true,
+        "Wednesday AM": true,
+        "Thursday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
+        "Sunday PM": true
+      },
+      "address": "P O Box 482 Ozona, TX 76943",
+      "volId": "8345"
+    },
+    {
+      "id": "10437",
+      "name": "White, Drake",
+      "type": "Volunteer",
+      "hole": 2,
+      "phone": "(682) 760-6937",
+      "email": "drakehwhite@icloud.com",
+      "yearsWorked": 1,
+      "hat": "",
+      "scheduled": {
+        "Wednesday AM": true,
+        "Thursday PM": true,
+        "Friday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true
+      },
+      "address": "6828 Walter Street North Richland Hills, TX 76182",
+      "volId": "10437"
     }
   ],
-  "checkIns": [
-    {
-      "volunteerId": "1770",
-      "volunteerName": "Mulvaney, Matt",
-      "hole": 16,
-      "day": "Thursday",
-      "shift": "PM",
-      "timestamp": "2026-04-09T23:10:03.236Z",
-      "checkedInBy": "Mulvaney, Matt",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "3138",
-      "volunteerName": "Bishop, Woody",
-      "hole": 17,
-      "day": "Thursday",
-      "shift": "PM",
-      "timestamp": "2026-04-09T23:11:46.890Z",
-      "checkedInBy": "Bishop, Woody",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "6217",
-      "volunteerName": "Nederostek, Brad",
-      "hole": 4,
-      "day": "Friday",
-      "shift": "AM",
-      "timestamp": "2026-04-10T12:06:37.644Z",
-      "checkedInBy": "Nederostek, Brad",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "7286",
-      "volunteerName": "Morris, John",
-      "hole": 4,
-      "day": "Friday",
-      "shift": "AM",
-      "timestamp": "2026-04-10T12:06:55.588Z",
-      "checkedInBy": "Nederostek, Brad",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "8571",
-      "volunteerName": "Mobley, Ken",
-      "hole": 4,
-      "day": "Friday",
-      "shift": "AM",
-      "timestamp": "2026-04-10T12:06:55.975Z",
-      "checkedInBy": "Nederostek, Brad",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "8935",
-      "volunteerName": "Knight, Ron",
-      "hole": 4,
-      "day": "Friday",
-      "shift": "AM",
-      "timestamp": "2026-04-10T12:06:57.378Z",
-      "checkedInBy": "Nederostek, Brad",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "182",
-      "volunteerName": "Killinger, George",
-      "hole": 4,
-      "day": "Friday",
-      "shift": "AM",
-      "timestamp": "2026-04-10T12:06:57.725Z",
-      "checkedInBy": "Nederostek, Brad",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "8359",
-      "volunteerName": "Gray, Leandro",
-      "hole": 4,
-      "day": "Friday",
-      "shift": "AM",
-      "timestamp": "2026-04-10T12:06:58.846Z",
-      "checkedInBy": "Nederostek, Brad",
-      "isAlternate": false
-    }
-  ],
-  "submissions": [
-    {
-      "hole": 4,
-      "day": "Friday",
-      "shift": "AM",
-      "timestamp": "2026-04-10T12:07:04.925Z",
-      "captainName": "Nederostek, Brad",
-      "notes": "",
-      "checkedInIds": [
-        "6217",
-        "7286",
-        "8571",
-        "8935",
-        "182",
-        "8359"
-      ]
-    }
-  ],
+  "checkIns": [],
+  "submissions": [],
   "settings": {
     "tournamentName": "Golf Tournament 2026",
     "tournamentStartDate": "2026-04-06",
@@ -7272,454 +7032,193 @@
   },
   "activityLog": [
     {
-      "id": "1775825936040",
-      "timestamp": "2026-04-10T12:58:56.040Z",
-      "user": "Sale, Lynn",
-      "userType": "Volunteer",
-      "action": "login",
+      "id": "1775829305512",
+      "timestamp": "2026-04-10T13:55:05.512Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "import",
       "target": "",
-      "details": "Logged into Volunteer portal"
+      "details": "Updated/added volunteers from CSV: 0 updated, 6 added"
     },
     {
-      "id": "1775825908013",
-      "timestamp": "2026-04-10T12:58:28.013Z",
-      "user": "Sale, Lynn",
+      "id": "1775829288213",
+      "timestamp": "2026-04-10T13:54:48.213Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "delete",
+      "target": "White, Drake",
+      "details": "Deleted volunteer"
+    },
+    {
+      "id": "1775829273027",
+      "timestamp": "2026-04-10T13:54:33.027Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "delete",
+      "target": "Kuhnell, David",
+      "details": "Deleted volunteer"
+    },
+    {
+      "id": "1775829260456",
+      "timestamp": "2026-04-10T13:54:20.456Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "delete",
+      "target": "Rico, Andrew",
+      "details": "Deleted volunteer"
+    },
+    {
+      "id": "1775829246348",
+      "timestamp": "2026-04-10T13:54:06.348Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "delete",
+      "target": "Howrey, Patrick",
+      "details": "Deleted volunteer"
+    },
+    {
+      "id": "1775829233474",
+      "timestamp": "2026-04-10T13:53:53.474Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "delete",
+      "target": "Kutzler, Jack",
+      "details": "Deleted volunteer"
+    },
+    {
+      "id": "1775829141323",
+      "timestamp": "2026-04-10T13:52:21.323Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "delete",
+      "target": "King, Jeff",
+      "details": "Deleted volunteer"
+    },
+    {
+      "id": "1775829112554",
+      "timestamp": "2026-04-10T13:51:52.554Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "import",
+      "target": "",
+      "details": "Updated/added volunteers from CSV: 4 updated, 2 added"
+    },
+    {
+      "id": "1775828208446",
+      "timestamp": "2026-04-10T13:36:48.446Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "delete",
+      "target": "Howrey, Patrick",
+      "details": "Deleted volunteer"
+    },
+    {
+      "id": "1775827964018",
+      "timestamp": "2026-04-10T13:32:44.018Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "delete",
+      "target": "Rico, Andrew",
+      "details": "Deleted volunteer"
+    },
+    {
+      "id": "1775827342895",
+      "timestamp": "2026-04-10T13:22:22.895Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1775827268517",
+      "timestamp": "2026-04-10T13:21:08.517Z",
+      "user": "Holt, Sharron",
       "userType": "Captain",
       "action": "logout",
       "target": "",
       "details": "Logged out of Captain portal"
     },
     {
-      "id": "1775824705390",
-      "timestamp": "2026-04-10T12:38:25.391Z",
-      "user": "Sale, Lynn",
-      "userType": "Captain",
-      "action": "check-out",
-      "target": "Turner, Charlie",
-      "details": "Checked out for Friday AM on Hole 2"
-    },
-    {
-      "id": "1775824698345",
-      "timestamp": "2026-04-10T12:38:18.345Z",
-      "user": "Sale, Lynn",
-      "userType": "Captain",
-      "action": "check-out",
-      "target": "Fee, John",
-      "details": "Checked out for Friday AM on Hole 2"
-    },
-    {
-      "id": "1775824697384",
-      "timestamp": "2026-04-10T12:38:17.384Z",
-      "user": "Sale, Lynn",
-      "userType": "Captain",
-      "action": "check-out",
-      "target": "Craft, John",
-      "details": "Checked out for Friday AM on Hole 2"
-    },
-    {
-      "id": "1775824460715",
-      "timestamp": "2026-04-10T12:34:20.715Z",
-      "user": "Sale, Lynn",
-      "userType": "Captain",
-      "action": "check-in",
-      "target": "Craft, John",
-      "details": "Checked in for Friday AM on Hole 2"
-    },
-    {
-      "id": "1775824459268",
-      "timestamp": "2026-04-10T12:34:19.268Z",
-      "user": "Sale, Lynn",
-      "userType": "Captain",
-      "action": "check-in",
-      "target": "Fee, John",
-      "details": "Checked in for Friday AM on Hole 2"
-    },
-    {
-      "id": "1775824450021",
-      "timestamp": "2026-04-10T12:34:10.021Z",
-      "user": "Sale, Lynn",
-      "userType": "Captain",
-      "action": "check-in",
-      "target": "Turner, Charlie",
-      "details": "Checked in for Friday AM on Hole 2"
-    },
-    {
-      "id": "1775824217685",
-      "timestamp": "2026-04-10T12:30:17.685Z",
-      "user": "Sale, Lynn",
-      "userType": "Captain",
-      "action": "password-change",
-      "target": "",
-      "details": "Changed captain password"
-    },
-    {
-      "id": "1775824138343",
-      "timestamp": "2026-04-10T12:28:58.343Z",
-      "user": "Sale, Lynn",
+      "id": "1775827253128",
+      "timestamp": "2026-04-10T13:20:53.128Z",
+      "user": "Holt, Sharron",
       "userType": "Captain",
       "action": "login",
       "target": "",
       "details": "Logged into Captain portal"
     },
     {
-      "id": "1775822936126",
-      "timestamp": "2026-04-10T12:08:56.126Z",
-      "user": "Nederostek, Brad",
-      "userType": "Captain",
+      "id": "1775827223198",
+      "timestamp": "2026-04-10T13:20:23.198Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
       "action": "logout",
       "target": "",
-      "details": "Logged out of Captain portal"
+      "details": "Logged out of Admin portal"
     },
     {
-      "id": "1775822923604",
-      "timestamp": "2026-04-10T12:08:43.604Z",
-      "user": "Nederostek, Brad",
-      "userType": "Captain",
-      "action": "check-out",
-      "target": "Schafer, John",
-      "details": "Checked out for Friday AM on Hole 4"
+      "id": "1775827214800",
+      "timestamp": "2026-04-10T13:20:14.800Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "import",
+      "target": "",
+      "details": "Updated/added volunteers from CSV: 1 updated, 0 added"
     },
     {
-      "id": "1775822922490",
-      "timestamp": "2026-04-10T12:08:42.490Z",
-      "user": "Nederostek, Brad",
-      "userType": "Captain",
-      "action": "check-in",
-      "target": "Schafer, John",
-      "details": "Checked in for Friday AM on Hole 4"
+      "id": "1775827135213",
+      "timestamp": "2026-04-10T13:18:55.213Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "import",
+      "target": "",
+      "details": "Updated/added volunteers from CSV: 1 updated, 0 added"
     },
     {
-      "id": "1775822918211",
-      "timestamp": "2026-04-10T12:08:38.211Z",
-      "user": "Nederostek, Brad",
-      "userType": "Captain",
+      "id": "1775827108826",
+      "timestamp": "2026-04-10T13:18:28.826Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
       "action": "login",
       "target": "",
-      "details": "Logged into Captain portal"
+      "details": "Logged into Admin portal"
     },
     {
-      "id": "1775822911588",
-      "timestamp": "2026-04-10T12:08:31.588Z",
-      "user": "Nederostek, Brad",
-      "userType": "Volunteer",
+      "id": "1775826757323",
+      "timestamp": "2026-04-10T13:12:37.323Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
       "action": "logout",
       "target": "",
-      "details": "Logged out of Volunteer portal"
+      "details": "Logged out of Admin portal"
     },
     {
-      "id": "1775822895663",
-      "timestamp": "2026-04-10T12:08:15.663Z",
-      "user": "Nederostek, Brad",
-      "userType": "Volunteer",
+      "id": "1775826599943",
+      "timestamp": "2026-04-10T13:09:59.943Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Holt, Sharron",
+      "details": "Edited volunteer (Type: Captain, Hole: 8)"
+    },
+    {
+      "id": "1775826443808",
+      "timestamp": "2026-04-10T13:07:23.808Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Holt, Sharron",
+      "details": "Edited volunteer (Type: Captain, Hole: 8)"
+    },
+    {
+      "id": "1775826384637",
+      "timestamp": "2026-04-10T13:06:24.637Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
       "action": "login",
       "target": "",
-      "details": "Logged into Volunteer portal"
-    },
-    {
-      "id": "1775822884979",
-      "timestamp": "2026-04-10T12:08:04.979Z",
-      "user": "Nederostek, Brad",
-      "userType": "Captain",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Captain portal"
-    },
-    {
-      "id": "1775822824925",
-      "timestamp": "2026-04-10T12:07:04.925Z",
-      "user": "Nederostek, Brad",
-      "userType": "Captain",
-      "action": "submission",
-      "target": "Hole 4",
-      "details": "Submitted Friday AM for Hole 4"
-    },
-    {
-      "id": "1775822818846",
-      "timestamp": "2026-04-10T12:06:58.846Z",
-      "user": "Nederostek, Brad",
-      "userType": "Captain",
-      "action": "check-in",
-      "target": "Gray, Leandro",
-      "details": "Checked in for Friday AM on Hole 4"
-    },
-    {
-      "id": "1775822817725",
-      "timestamp": "2026-04-10T12:06:57.725Z",
-      "user": "Nederostek, Brad",
-      "userType": "Captain",
-      "action": "check-in",
-      "target": "Killinger, George",
-      "details": "Checked in for Friday AM on Hole 4"
-    },
-    {
-      "id": "1775822817378",
-      "timestamp": "2026-04-10T12:06:57.378Z",
-      "user": "Nederostek, Brad",
-      "userType": "Captain",
-      "action": "check-in",
-      "target": "Knight, Ron",
-      "details": "Checked in for Friday AM on Hole 4"
-    },
-    {
-      "id": "1775822815975",
-      "timestamp": "2026-04-10T12:06:55.975Z",
-      "user": "Nederostek, Brad",
-      "userType": "Captain",
-      "action": "check-in",
-      "target": "Mobley, Ken",
-      "details": "Checked in for Friday AM on Hole 4"
-    },
-    {
-      "id": "1775822815588",
-      "timestamp": "2026-04-10T12:06:55.588Z",
-      "user": "Nederostek, Brad",
-      "userType": "Captain",
-      "action": "check-in",
-      "target": "Morris, John",
-      "details": "Checked in for Friday AM on Hole 4"
-    },
-    {
-      "id": "1775822797644",
-      "timestamp": "2026-04-10T12:06:37.644Z",
-      "user": "Nederostek, Brad",
-      "userType": "Captain",
-      "action": "check-in",
-      "target": "Nederostek, Brad",
-      "details": "Checked in for Friday AM on Hole 4"
-    },
-    {
-      "id": "1775822795948",
-      "timestamp": "2026-04-10T12:06:35.948Z",
-      "user": "Nederostek, Brad",
-      "userType": "Captain",
-      "action": "check-out",
-      "target": "Schafer, John",
-      "details": "Checked out for Friday AM on Hole 4"
-    },
-    {
-      "id": "1775822793699",
-      "timestamp": "2026-04-10T12:06:33.699Z",
-      "user": "Nederostek, Brad",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1775814738233",
-      "timestamp": "2026-04-10T09:52:18.233Z",
-      "user": "Schafer, John",
-      "userType": "Captain",
-      "action": "check-in",
-      "target": "Schafer, John",
-      "details": "Checked in for Friday AM on Hole 4"
-    },
-    {
-      "id": "1775814708693",
-      "timestamp": "2026-04-10T09:51:48.693Z",
-      "user": "Schafer, John",
-      "userType": "Captain",
-      "action": "password-change",
-      "target": "",
-      "details": "Changed captain password"
-    },
-    {
-      "id": "1775814642040",
-      "timestamp": "2026-04-10T09:50:42.040Z",
-      "user": "Schafer, John",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1775792215239",
-      "timestamp": "2026-04-10T03:36:55.239Z",
-      "user": "Osiek, Curt",
-      "userType": "Captain",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Captain portal"
-    },
-    {
-      "id": "1775792178737",
-      "timestamp": "2026-04-10T03:36:18.737Z",
-      "user": "Osiek, Curt",
-      "userType": "Captain",
-      "action": "password-change",
-      "target": "",
-      "details": "Changed captain password"
-    },
-    {
-      "id": "1775792124562",
-      "timestamp": "2026-04-10T03:35:24.562Z",
-      "user": "Osiek, Curt",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1775787523539",
-      "timestamp": "2026-04-10T02:18:43.539Z",
-      "user": "Nederostek, Brad",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1775787511799",
-      "timestamp": "2026-04-10T02:18:31.799Z",
-      "user": "Nederostek, Brad",
-      "userType": "Volunteer",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Volunteer portal"
-    },
-    {
-      "id": "1775787476589",
-      "timestamp": "2026-04-10T02:17:56.589Z",
-      "user": "Nederostek, Brad",
-      "userType": "Volunteer",
-      "action": "password-change",
-      "target": "",
-      "details": "Changed volunteer password"
-    },
-    {
-      "id": "1775787447385",
-      "timestamp": "2026-04-10T02:17:27.385Z",
-      "user": "Nederostek, Brad",
-      "userType": "Volunteer",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Volunteer portal"
-    },
-    {
-      "id": "1775787395097",
-      "timestamp": "2026-04-10T02:16:35.097Z",
-      "user": "Nederostek, Brad",
-      "userType": "Captain",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Captain portal"
-    },
-    {
-      "id": "1775786809160",
-      "timestamp": "2026-04-10T02:06:49.160Z",
-      "user": "Thomas, Stephen",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1775786247125",
-      "timestamp": "2026-04-10T01:57:27.125Z",
-      "user": "Thomas, Stephen",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1775786079746",
-      "timestamp": "2026-04-10T01:54:39.746Z",
-      "user": "Thomas, Stephen",
-      "userType": "Captain",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Captain portal"
-    },
-    {
-      "id": "1775786032192",
-      "timestamp": "2026-04-10T01:53:52.192Z",
-      "user": "Thomas, Stephen",
-      "userType": "Captain",
-      "action": "password-change",
-      "target": "",
-      "details": "Changed captain password"
-    },
-    {
-      "id": "1775776696152",
-      "timestamp": "2026-04-09T23:18:16.152Z",
-      "user": "Ruddell, Dick",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1775776655876",
-      "timestamp": "2026-04-09T23:17:35.876Z",
-      "user": "Jutras, Michael",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1775776306890",
-      "timestamp": "2026-04-09T23:11:46.890Z",
-      "user": "Bishop, Woody",
-      "userType": "Captain",
-      "action": "check-in",
-      "target": "Bishop, Woody",
-      "details": "Checked in for Thursday PM on Hole 17"
-    },
-    {
-      "id": "1775776285030",
-      "timestamp": "2026-04-09T23:11:25.031Z",
-      "user": "Gradt, Jason",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1775776255636",
-      "timestamp": "2026-04-09T23:10:55.636Z",
-      "user": "Bishop, Woody",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1775776238813",
-      "timestamp": "2026-04-09T23:10:38.813Z",
-      "user": "Wilson, Todd",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1775776203236",
-      "timestamp": "2026-04-09T23:10:03.236Z",
-      "user": "Mulvaney, Matt",
-      "userType": "Captain",
-      "action": "check-in",
-      "target": "Mulvaney, Matt",
-      "details": "Checked in for Thursday PM on Hole 16"
-    },
-    {
-      "id": "1775776189503",
-      "timestamp": "2026-04-09T23:09:49.503Z",
-      "user": "Mulvaney, Matt",
-      "userType": "Captain",
-      "action": "password-change",
-      "target": "",
-      "details": "Changed captain password"
-    },
-    {
-      "id": "1775776162322",
-      "timestamp": "2026-04-09T23:09:22.323Z",
-      "user": "Nederostek, Brad",
-      "userType": "Volunteer",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Volunteer portal"
+      "details": "Logged into Admin portal"
     },
     {
       "id": "1775758809360",
