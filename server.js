@@ -187,6 +187,42 @@ const SUPERADMIN = {
 };
 
 // ============================================================================
+// Secret stripping (Phase 1.2, added 2026-04-10 — see SECURITY.md)
+//
+// Volunteer records on disk carry password fields. The browser must never
+// see them — the server checks passwords locally in checkPassword(). Apply
+// stripVolunteerSecrets at every boundary where a volunteer record leaves
+// the server: GET /api/data, the fullUpdate socket broadcast, and the
+// hatDelivered broadcast.
+// ============================================================================
+
+const VOLUNTEER_SECRET_FIELDS = [
+  'adminPassword',
+  'volunteerPassword',
+  'adminPasswordSetAt',
+  'customPin'
+];
+
+function stripVolunteerSecrets(volunteer) {
+  if (!volunteer || typeof volunteer !== 'object') return volunteer;
+  const cleaned = { ...volunteer };
+  for (const field of VOLUNTEER_SECRET_FIELDS) delete cleaned[field];
+  return cleaned;
+}
+
+// Returns a shallow clone of `data` with each volunteer's secret fields
+// removed. Does NOT mutate the input. Cheap because we only clone the
+// volunteers array — checkIns/settings/activity log are passed by reference.
+function stripDataSecrets(data) {
+  if (!data || typeof data !== 'object') return data;
+  if (!Array.isArray(data.volunteers)) return data;
+  return {
+    ...data,
+    volunteers: data.volunteers.map(stripVolunteerSecrets)
+  };
+}
+
+// ============================================================================
 // Authentication (Phase 1.1, added 2026-04-10 — see SECURITY.md)
 //
 // Server-side session-based auth. Sessions are stored in memory (Map),
@@ -406,7 +442,8 @@ app.get('/api/data', (req, res) => {
     });
   }
 
-  res.json({ success: true, data: data, demoMode: req.demoMode });
+  // Phase 1.2: strip password fields before sending to the browser.
+  res.json({ success: true, data: stripDataSecrets(data), demoMode: req.demoMode });
 });
 
 app.post('/api/data', requireAuth(['admin', 'chair', 'asstChair', 'captain', 'volunteer']), (req, res) => {
@@ -462,8 +499,11 @@ app.post('/api/data', requireAuth(['admin', 'chair', 'asstChair', 'captain', 'vo
     console.log('[' + new Date().toISOString() + '] POST /api/data  ip=' + clientIp + '  volunteers=' + incomingCount + '  checkIns=' + (data.checkIns ? data.checkIns.length : 0));
 
     if (saveData(data, req.demoMode)) {
-      // Broadcast to OTHER clients only
-      broadcastUpdate(req.demoMode, 'fullUpdate', data, socketId);
+      // Broadcast to OTHER clients only.
+      // Phase 1.2: strip password fields from the broadcast payload — until
+      // the SPA stops sending passwords on save (see Phase 1.5 SPA work),
+      // `data` here may still contain them from the request body.
+      broadcastUpdate(req.demoMode, 'fullUpdate', stripDataSecrets(data), socketId);
       res.json({ success: true, demoMode: req.demoMode });
     } else {
       res.status(500).json({ success: false, error: 'Failed to save data' });
@@ -613,8 +653,11 @@ app.post('/api/hat-delivered', requireAuth(['admin', 'chair', 'asstChair', 'capt
     data.volunteers[volIdx].hatReceived = true;
 
     if (saveData(data, req.demoMode)) {
-      broadcastUpdate(req.demoMode, 'hatDelivered', { volunteerId, volunteer: data.volunteers[volIdx] });
-      res.json({ success: true, volunteer: data.volunteers[volIdx] });
+      // Phase 1.2: strip password fields from the volunteer record before
+      // broadcasting it and returning it to the caller.
+      const safeVolunteer = stripVolunteerSecrets(data.volunteers[volIdx]);
+      broadcastUpdate(req.demoMode, 'hatDelivered', { volunteerId, volunteer: safeVolunteer });
+      res.json({ success: true, volunteer: safeVolunteer });
     } else {
       res.status(500).json({ success: false, error: 'Failed to save' });
     }
