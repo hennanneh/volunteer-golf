@@ -1198,6 +1198,22 @@
       selectedShift = shift.shift;
       // Restore auth state from localStorage
       restoreAuthState();
+      // Phase 1.1: verify the server still has our session cookie. localStorage
+      // is just UI state — the server-side session is the real source of truth.
+      // If the cookie is missing or expired, drop back to landing so the user
+      // re-logs in via /api/login.
+      if (adminAuth || captainAuth || volunteerAuth) {
+        try {
+          const wResp = await fetch('/api/whoami');
+          const w = await wResp.json();
+          if (!w || !w.user) {
+            adminAuth = false; adminAuthUser = null;
+            captainAuth = null; volunteerAuth = null;
+            currentView = 'landing';
+            clearAuthState();
+          }
+        } catch (e) { /* network error — leave local state alone */ }
+      }
       render();
     }
 
@@ -1359,6 +1375,24 @@
           console.error('Failed to save data:', err);
         });
       }, 300);
+    }
+
+    // Phase 1.2/1.3: passwords are server-owned. Call /api/set-password
+    // for any password set / change / clear (newPassword: '' clears it).
+    // Self-changes require currentPassword; admin-on-other does not.
+    // Returns { success, error? }.
+    async function apiSetPassword(args) {
+      try {
+        const resp = await fetch('/api/set-password', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(args)
+        });
+        return await resp.json();
+      } catch (err) {
+        console.error('set-password network error:', err);
+        return { success: false, error: 'Network error' };
+      }
     }
 
     // Activity logging function
@@ -1684,8 +1718,8 @@
           ${showVolunteerPasswordChangeModal ? `
           <div class="modal-overlay" onclick="showVolunteerPasswordChangeModal=false;render()">
             <div class="modal" onclick="event.stopPropagation()" style="max-width:400px;text-align:left">
-              <h3 style="text-align:center;margin-bottom:15px">${vol.volunteerPassword ? 'Change Your Password' : 'Set Your Password'}</h3>
-              <p style="font-size:13px;color:#666;margin-bottom:20px;text-align:center">${vol.volunteerPassword ? 'Enter your current password and choose a new one.' : 'Welcome! Please create a new password for your account.'}</p>
+              <h3 style="text-align:center;margin-bottom:15px">${vol.hasVolunteerPassword ? 'Change Your Password' : 'Set Your Password'}</h3>
+              <p style="font-size:13px;color:#666;margin-bottom:20px;text-align:center">${vol.hasVolunteerPassword ? 'Enter your current password and choose a new one.' : 'Welcome! Please create a new password for your account.'}</p>
               <form id="volunteerPasswordChangeForm">
                 <div style="margin-bottom:15px">
                   <label style="font-size:12px;color:#666;display:block;margin-bottom:4px">Current Password</label>
@@ -1700,7 +1734,7 @@
                   <div style="position:relative"><input type="password" id="confirmVolPassword" style="width:100%;padding:12px;padding-right:50px;border:1px solid #ddd;border-radius:6px;font-size:14px" placeholder="Confirm new password" required><button type="button" onclick="togglePassword('confirmVolPassword')" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;font-size:16px;line-height:1;padding:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button></div>
                 </div>
                 <div class="modal-buttons">
-                  <button type="button" class="modal-btn cancel" onclick="showVolunteerPasswordChangeModal=false;render()">${vol.volunteerPassword ? 'Cancel' : 'Skip for Now'}</button>
+                  <button type="button" class="modal-btn cancel" onclick="showVolunteerPasswordChangeModal=false;render()">${vol.hasVolunteerPassword ? 'Cancel' : 'Skip for Now'}</button>
                   <button type="submit" class="modal-btn confirm">Set Password</button>
                 </div>
               </form>
@@ -1949,8 +1983,8 @@
           ${showAdminPasswordChangeModal && adminAuthUser ? `
           <div class="modal-overlay" onclick="showAdminPasswordChangeModal=false;render()">
             <div class="modal" onclick="event.stopPropagation()" style="max-width:400px;text-align:left">
-              <h3 style="text-align:center;margin-bottom:15px">${adminAuthUser.adminPasswordSetAt ? 'Change Your Password' : 'Set Your Password'}</h3>
-              <p style="font-size:13px;color:#666;margin-bottom:20px;text-align:center">${adminAuthUser.adminPasswordSetAt ? 'Enter your current password and choose a new one.' : 'Welcome! Please create a new password for your admin account.'}</p>
+              <h3 style="text-align:center;margin-bottom:15px">${adminAuthUser.hasAdminPassword ? 'Change Your Password' : 'Set Your Password'}</h3>
+              <p style="font-size:13px;color:#666;margin-bottom:20px;text-align:center">${adminAuthUser.hasAdminPassword ? 'Enter your current password and choose a new one.' : 'Welcome! Please create a new password for your admin account.'}</p>
               <form id="adminPasswordChangeForm">
                 <div style="margin-bottom:15px">
                   <label style="font-size:12px;color:#666;display:block;margin-bottom:4px">Current Password</label>
@@ -1965,7 +1999,7 @@
                   <div style="position:relative"><input type="password" id="confirmNewAdminPassword" style="width:100%;padding:12px;padding-right:50px;border:1px solid #ddd;border-radius:6px;font-size:14px" placeholder="Confirm new password" required><button type="button" onclick="togglePassword('confirmNewAdminPassword')" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;font-size:16px;line-height:1;padding:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button></div>
                 </div>
                 <div class="modal-buttons">
-                  <button type="button" class="modal-btn cancel" onclick="showAdminPasswordChangeModal=false;render()">${adminAuthUser.adminPasswordSetAt ? 'Cancel' : 'Skip for Now'}</button>
+                  <button type="button" class="modal-btn cancel" onclick="showAdminPasswordChangeModal=false;render()">${adminAuthUser.hasAdminPassword ? 'Cancel' : 'Skip for Now'}</button>
                   <button type="submit" class="modal-btn confirm">Change Password</button>
                 </div>
               </form>
@@ -2460,7 +2494,7 @@
               <label>Volunteer/Captain Password</label>
               <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
                 <span style="color:#666;font-size:12px;padding:8px 12px;background:#f5f5f5;border-radius:4px">
-                  ${editingVolunteer.volunteerPassword ? 'Custom password set' : 'Using default (phone number)'}
+                  ${editingVolunteer.hasVolunteerPassword ? 'Custom password set' : 'Using default (phone number)'}
                 </span>
                 ${!isReadOnly ? `<button type="button" onclick="resetVolunteerPassword('${editingVolunteer.id}')" style="padding:6px 12px;background:#ff9800;color:white;border:none;border-radius:4px;font-size:12px;cursor:pointer">Reset to Default</button>` : ''}
               </div>
@@ -2471,7 +2505,7 @@
               <label>Admin Password</label>
               <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
                 <span style="color:#666;font-size:12px;padding:8px 12px;background:#f5f5f5;border-radius:4px">
-                  ${editingVolunteer.adminPasswordSetAt ? 'Custom password set' : 'Using default password (admin2025)'}
+                  ${editingVolunteer.hasAdminPassword ? 'Custom password set' : 'Using default password (admin2025)'}
                 </span>
                 ${!isReadOnly ? `<button type="button" onclick="resetAdminPassword('${editingVolunteer.id}')" style="padding:6px 12px;background:#ff9800;color:white;border:none;border-radius:4px;font-size:12px;cursor:pointer">Reset to Default</button>` : ''}
               </div>
@@ -2710,25 +2744,32 @@
       }
     }
 
-    function resetVolunteerPassword(volunteerId) {
+    async function resetVolunteerPassword(volunteerId) {
       const volunteer = appData.volunteers.find(v => String(v.id) === String(volunteerId));
-      if (volunteer) {
-        delete volunteer.volunteerPassword;
-        saveData();
-        showToast('Password reset to default (phone number)');
-        render();
+      if (!volunteer) return;
+      // Phase 1.2/1.3: clearing on the server makes login fall back to the
+      // default (phone digits), exactly matching the previous behavior.
+      const result = await apiSetPassword({ volunteerId, field: 'volunteer', newPassword: '' });
+      if (!result.success) {
+        alert(result.error || 'Failed to reset password');
+        return;
       }
+      showToast('Password reset to default (phone number)');
+      render();
     }
 
-    function resetAdminPassword(volunteerId) {
+    async function resetAdminPassword(volunteerId) {
       const volunteer = appData.volunteers.find(v => String(v.id) === String(volunteerId));
-      if (volunteer) {
-        volunteer.adminPassword = 'admin2025';
-        volunteer.adminPasswordSetAt = null;
-        saveData();
-        showToast('Password reset to default (admin2025)');
-        render();
+      if (!volunteer) return;
+      // Clearing the stored admin password makes login fall back to 'admin2025'
+      // and the user will be prompted to change it on next login.
+      const result = await apiSetPassword({ volunteerId, field: 'admin', newPassword: '' });
+      if (!result.success) {
+        alert(result.error || 'Failed to reset password');
+        return;
       }
+      showToast('Password reset to default (admin2025)');
+      render();
     }
 
     let qrModalVolunteer = null;
@@ -2972,11 +3013,11 @@
         if (newAssignedHoles) {
           newVol.assignedHoles = newAssignedHoles;
         }
-        // Initialize admin password for new Admin/Chairman/Asst. Chairman users
-        if (newType === 'Admin' || newType === 'Chairman' || newType === 'Asst. Chairman') {
-          newVol.adminPassword = 'admin2025';
-          newVol.adminPasswordSetAt = null;
-        }
+        // Phase 1.2/1.3: passwords are server-owned. A new admin starts with
+        // no stored adminPassword on disk, which makes /api/login fall back
+        // to 'admin2025' and the login response sets usingDefaultPassword,
+        // which prompts the user to set a real password on first login.
+        // No local mutation needed.
         appData.volunteers.push(newVol);
 
         // Log the addition
@@ -3022,19 +3063,16 @@
         } else {
           delete updatedVol.assignedHoles;
         }
-        // Handle admin password when type changes
+        // Phase 1.2/1.3: passwords are server-owned. Type-change side effects
+        // are now handled with /api/set-password after the saveData() below.
+        // (We can't mutate updatedVol here — POST /api/data strips password
+        // fields and re-merges from disk.)
         const oldType = appData.volunteers[idx].type;
         const wasAdmin = oldType === 'Admin' || oldType === 'Chairman' || oldType === 'Asst. Chairman';
         const isAdmin = newType === 'Admin' || newType === 'Chairman' || newType === 'Asst. Chairman';
-        if (!wasAdmin && isAdmin) {
-          // Changed TO admin type - initialize password
-          updatedVol.adminPassword = 'admin2025';
-          updatedVol.adminPasswordSetAt = null;
-        } else if (wasAdmin && !isAdmin) {
-          // Changed FROM admin type - clear admin fields
-          delete updatedVol.adminPassword;
-          delete updatedVol.adminPasswordSetAt;
-        }
+        const passwordSideEffect = (!wasAdmin && isAdmin) || (wasAdmin && !isAdmin)
+          ? { volunteerId: editingVolunteer.id, field: 'admin', newPassword: '' }
+          : null;
         appData.volunteers[idx] = updatedVol;
 
         // Update any check-in records with new name
@@ -3049,6 +3087,14 @@
         logActivity('edit-volunteer', newName, 'Edited volunteer (Type: ' + newType + ', Hole: ' + newHole + ')');
 
         saveData();
+
+        // Phase 1.2/1.3: when type changed to/from admin, clear the stored
+        // adminPassword on the server. Promotion → login falls back to the
+        // 'admin2025' default and prompts the user to set a real password.
+        // Demotion → no admin login possible at all.
+        if (passwordSideEffect) {
+          apiSetPassword(passwordSideEffect).catch(() => {});
+        }
 
         // Check if we should send schedule email
         const sendEmailCheckbox = document.getElementById('adminSendScheduleEmail');
@@ -5537,6 +5583,10 @@
       const portal = adminAuth ? 'Admin' : (captainAuth ? 'Captain' : 'Volunteer');
       logActivity('logout', '', 'Logged out of ' + portal + ' portal');
 
+      // Phase 1.1: tell the server to drop the session. Fire-and-forget;
+      // even if it fails the local UI logout still happens.
+      fetch('/api/logout', { method: 'POST' }).catch(() => {});
+
       adminAuth = false;
       adminAuthUser = null;
       captainAuth = null;
@@ -6554,45 +6604,47 @@
     function attachEventListeners() {
       const adminForm = document.getElementById('adminLoginForm');
       if (adminForm) {
-        adminForm.onsubmit = function(e) {
+        adminForm.onsubmit = async function(e) {
           e.preventDefault();
           const email = document.getElementById('adminEmail').value.trim().toLowerCase();
           const password = document.getElementById('adminPassword').value;
+          // Phase 1.1: server-side auth. Cookie is set by the server on success.
+          let result;
+          try {
+            const resp = await fetch('/api/login', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ email, password, portal: 'admin' })
+            });
+            result = await resp.json();
+          } catch (netErr) {
+            console.error('Login network error:', netErr);
+            result = { success: false };
+          }
 
-          // Find volunteer with this email who is Admin, Chairman, or Asst. Chairman type
-          const adminVolunteer = appData.volunteers.find(v =>
-            (v.type === 'Admin' || v.type === 'Chairman' || v.type === 'Asst. Chairman') &&
-            v.email && v.email.toLowerCase() === email
-          );
-
-          if (adminVolunteer) {
-            // Check password (adminPassword field, or default "admin2025" if not set)
-            const storedPassword = adminVolunteer.adminPassword || 'admin2025';
-            if (password === storedPassword) {
+          if (result && result.success && result.user) {
+            // Look up the local volunteer record so the rest of the SPA's
+            // 7000 lines of code (which expect adminAuthUser to be a full
+            // volunteer object) keep working unchanged.
+            const adminVolunteer = appData.volunteers.find(v => String(v.id) === String(result.user.id));
+            if (adminVolunteer) {
               adminAuth = adminVolunteer.type === 'Admin' ? 'full' : 'viewOnly';
               adminAuthUser = adminVolunteer;
               if (adminVolunteer.type === 'Chairman' || adminVolunteer.type === 'Asst. Chairman') {
                 adminTab = 'overview';
               }
               currentView = 'admin';
-
-              // Log the login
               logActivity('login', '', 'Logged into Admin portal');
-
-              // Check if using default password - prompt to change
-              if (!adminVolunteer.adminPasswordSetAt) {
-                showAdminPasswordChangeModal = true;
-              }
-
+              if (result.usingDefaultPassword) showAdminPasswordChangeModal = true;
               saveAuthState();
               render();
               return;
             }
           }
 
-          // Show error
+          // Show error (covers wrong password, network error, or 401/429 from server)
           const err = document.getElementById('adminError');
-          err.textContent = 'Invalid email or password';
+          err.textContent = (result && result.error) ? result.error : 'Invalid email or password';
           err.classList.remove('hidden');
           document.getElementById('adminEmail').classList.add('error');
           document.getElementById('adminPassword').classList.add('error');
@@ -6603,7 +6655,7 @@
       // Admin password change form handler
       const adminPasswordChangeForm = document.getElementById('adminPasswordChangeForm');
       if (adminPasswordChangeForm) {
-        adminPasswordChangeForm.onsubmit = function(e) {
+        adminPasswordChangeForm.onsubmit = async function(e) {
           e.preventDefault();
           if (!adminAuthUser) return;
 
@@ -6611,59 +6663,49 @@
           const newPassword = document.getElementById('newAdminPassword').value;
           const confirmPassword = document.getElementById('confirmNewAdminPassword').value;
 
-          // Validate current password
-          const storedPassword = adminAuthUser.adminPassword || 'admin2025';
-          if (currentPassword !== storedPassword) {
-            alert('Current password is incorrect');
+          if (newPassword.length < 4) { alert('New password must be at least 4 characters'); return; }
+          if (newPassword !== confirmPassword) { alert('New passwords do not match'); return; }
+
+          // Phase 1.2/1.3: server validates currentPassword and bcrypt-hashes the new one
+          const result = await apiSetPassword({
+            volunteerId: adminAuthUser.id,
+            field: 'admin',
+            currentPassword: currentPassword,
+            newPassword: newPassword
+          });
+          if (!result.success) {
+            alert(result.error || 'Failed to change password');
             return;
           }
-
-          // Validate new password
-          if (newPassword.length < 4) {
-            alert('New password must be at least 4 characters');
-            return;
-          }
-
-          if (newPassword !== confirmPassword) {
-            alert('New passwords do not match');
-            return;
-          }
-
-          // Update password
-          const volunteer = appData.volunteers.find(v => v.id === adminAuthUser.id);
-          if (volunteer) {
-            volunteer.adminPassword = newPassword;
-            volunteer.adminPasswordSetAt = new Date().toISOString();
-            adminAuthUser = volunteer; // Update the reference
-            logActivity('password-change', '', 'Changed admin password');
-            saveData();
-            showAdminPasswordChangeModal = false;
-            showToast('Password changed successfully');
-            render();
-          }
+          logActivity('password-change', '', 'Changed admin password');
+          showAdminPasswordChangeModal = false;
+          showToast('Password changed successfully');
+          render();
         };
       }
 
       const captainForm = document.getElementById('captainLoginForm');
       if (captainForm) {
-        captainForm.onsubmit = function(e) {
+        captainForm.onsubmit = async function(e) {
           e.preventDefault();
           const email = document.getElementById('captainEmail').value.trim().toLowerCase();
           const password = document.getElementById('captainPassword').value;
+          let result;
+          try {
+            const resp = await fetch('/api/login', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ email, password, portal: 'captain' })
+            });
+            result = await resp.json();
+          } catch (netErr) {
+            console.error('Login network error:', netErr);
+            result = { success: false };
+          }
 
-          // Find captain by email
-          const captainTypes = ['Captain', 'Asst. Chairman', 'Chairman', 'Admin'];
-          const captain = appData.volunteers.find(v =>
-            captainTypes.includes(v.type) &&
-            v.email && v.email.toLowerCase() === email
-          );
-
-          if (captain) {
-            // Check password (volunteerPassword field, or default to phone digits)
-            const defaultPassword = getPhoneDigits(captain.phone);
-            const storedPassword = captain.volunteerPassword || defaultPassword;
-
-            if (password === storedPassword) {
+          if (result && result.success && result.user) {
+            const captain = appData.volunteers.find(v => String(v.id) === String(result.user.id));
+            if (captain) {
               const isChair = captain.type === 'Chairman' || captain.type === 'Asst. Chairman' || captain.type === 'Admin';
               captainAuth = {
                 id: captain.id,
@@ -6675,15 +6717,8 @@
                 odId: captain.id
               };
               currentView = 'captain';
-
-              // Log the login
               logActivity('login', '', 'Logged into Captain portal');
-
-              // If using default password, prompt to change
-              if (!captain.volunteerPassword) {
-                showPasswordChangeModal = true;
-              }
-
+              if (result.usingDefaultPassword) showPasswordChangeModal = true;
               saveAuthState();
               render();
               return;
@@ -6692,7 +6727,7 @@
 
           // Show error
           const err = document.getElementById('captainError');
-          err.textContent = 'Invalid email or password';
+          err.textContent = (result && result.error) ? result.error : 'Invalid email or password';
           err.classList.remove('hidden');
           document.getElementById('captainEmail').classList.add('error');
           document.getElementById('captainPassword').classList.add('error');
@@ -6703,33 +6738,30 @@
       // Handle volunteer login form
       const volunteerForm = document.getElementById('volunteerLoginForm');
       if (volunteerForm) {
-        volunteerForm.onsubmit = function(e) {
+        volunteerForm.onsubmit = async function(e) {
           e.preventDefault();
           const email = document.getElementById('volunteerEmail').value.trim().toLowerCase();
           const password = document.getElementById('volunteerPassword').value;
+          let result;
+          try {
+            const resp = await fetch('/api/login', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ email, password, portal: 'volunteer' })
+            });
+            result = await resp.json();
+          } catch (netErr) {
+            console.error('Login network error:', netErr);
+            result = { success: false };
+          }
 
-          // Find volunteer by email
-          const volunteer = appData.volunteers.find(v =>
-            v.email && v.email.toLowerCase() === email
-          );
-
-          if (volunteer) {
-            // Check password (volunteerPassword field, or default to phone digits)
-            const defaultPassword = getPhoneDigits(volunteer.phone);
-            const storedPassword = volunteer.volunteerPassword || defaultPassword;
-
-            if (password === storedPassword) {
+          if (result && result.success && result.user) {
+            const volunteer = appData.volunteers.find(v => String(v.id) === String(result.user.id));
+            if (volunteer) {
               volunteerAuth = volunteer;
               currentView = 'volunteer';
-
-              // Log the login
               logActivity('login', '', 'Logged into Volunteer portal');
-
-              // If using default password, prompt to change
-              if (!volunteer.volunteerPassword) {
-                showVolunteerPasswordChangeModal = true;
-              }
-
+              if (result.usingDefaultPassword) showVolunteerPasswordChangeModal = true;
               saveAuthState();
               render();
               return;
@@ -6738,7 +6770,7 @@
 
           // Show error
           const err = document.getElementById('volunteerError');
-          err.textContent = 'Invalid email or password';
+          err.textContent = (result && result.error) ? result.error : 'Invalid email or password';
           err.classList.remove('hidden');
           document.getElementById('volunteerEmail').classList.add('error');
           document.getElementById('volunteerPassword').classList.add('error');
@@ -6749,7 +6781,7 @@
       // Handle captain password change form
       const captainPasswordChangeForm = document.getElementById('captainPasswordChangeForm');
       if (captainPasswordChangeForm) {
-        captainPasswordChangeForm.onsubmit = function(e) {
+        captainPasswordChangeForm.onsubmit = async function(e) {
           e.preventDefault();
           if (!captainAuth) return;
 
@@ -6757,32 +6789,20 @@
           const newPassword = document.getElementById('newCaptainPassword').value;
           const confirmPassword = document.getElementById('confirmCaptainPassword').value;
 
-          const volunteer = appData.volunteers.find(v => v.id === captainAuth.id);
-          if (!volunteer) return;
+          if (newPassword.length < 4) { alert('New password must be at least 4 characters'); return; }
+          if (newPassword !== confirmPassword) { alert('New passwords do not match'); return; }
 
-          // Validate current password
-          const defaultPassword = getPhoneDigits(volunteer.phone);
-          const storedPassword = volunteer.volunteerPassword || defaultPassword;
-          if (currentPassword !== storedPassword) {
-            alert('Current password is incorrect');
+          const result = await apiSetPassword({
+            volunteerId: captainAuth.id,
+            field: 'volunteer',
+            currentPassword: currentPassword,
+            newPassword: newPassword
+          });
+          if (!result.success) {
+            alert(result.error || 'Failed to change password');
             return;
           }
-
-          // Validate new password
-          if (newPassword.length < 4) {
-            alert('New password must be at least 4 characters');
-            return;
-          }
-
-          if (newPassword !== confirmPassword) {
-            alert('New passwords do not match');
-            return;
-          }
-
-          // Update password
-          volunteer.volunteerPassword = newPassword;
           logActivity('password-change', '', 'Changed captain password');
-          saveData();
           showPasswordChangeModal = false;
           showToast('Password changed successfully');
           render();
@@ -6792,7 +6812,7 @@
       // Handle volunteer password change form
       const volunteerPasswordChangeForm = document.getElementById('volunteerPasswordChangeForm');
       if (volunteerPasswordChangeForm) {
-        volunteerPasswordChangeForm.onsubmit = function(e) {
+        volunteerPasswordChangeForm.onsubmit = async function(e) {
           e.preventDefault();
           if (!volunteerAuth) return;
 
@@ -6800,33 +6820,20 @@
           const newPassword = document.getElementById('newVolPassword').value;
           const confirmPassword = document.getElementById('confirmVolPassword').value;
 
-          const volunteer = appData.volunteers.find(v => v.id === volunteerAuth.id);
-          if (!volunteer) return;
+          if (newPassword.length < 4) { alert('New password must be at least 4 characters'); return; }
+          if (newPassword !== confirmPassword) { alert('New passwords do not match'); return; }
 
-          // Validate current password
-          const defaultPassword = getPhoneDigits(volunteer.phone);
-          const storedPassword = volunteer.volunteerPassword || defaultPassword;
-          if (currentPassword !== storedPassword) {
-            alert('Current password is incorrect');
+          const result = await apiSetPassword({
+            volunteerId: volunteerAuth.id,
+            field: 'volunteer',
+            currentPassword: currentPassword,
+            newPassword: newPassword
+          });
+          if (!result.success) {
+            alert(result.error || 'Failed to change password');
             return;
           }
-
-          // Validate new password
-          if (newPassword.length < 4) {
-            alert('New password must be at least 4 characters');
-            return;
-          }
-
-          if (newPassword !== confirmPassword) {
-            alert('New passwords do not match');
-            return;
-          }
-
-          // Update password
-          volunteer.volunteerPassword = newPassword;
-          volunteerAuth = volunteer; // Update the reference
           logActivity('password-change', '', 'Changed volunteer password');
-          saveData();
           showVolunteerPasswordChangeModal = false;
           showToast('Password changed successfully');
           render();

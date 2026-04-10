@@ -208,6 +208,12 @@ const VOLUNTEER_SECRET_FIELDS = [
 function stripVolunteerSecrets(volunteer) {
   if (!volunteer || typeof volunteer !== 'object') return volunteer;
   const cleaned = { ...volunteer };
+  // Surface metadata BEFORE deleting the source fields. The flags let the
+  // SPA render "custom password set" vs "using default" without ever seeing
+  // the password itself. Knowing whether a custom password exists is low-
+  // value info compared to leaking the password.
+  cleaned.hasAdminPassword = !!volunteer.adminPassword;
+  cleaned.hasVolunteerPassword = !!volunteer.volunteerPassword;
   for (const field of VOLUNTEER_SECRET_FIELDS) delete cleaned[field];
   return cleaned;
 }
@@ -349,45 +355,46 @@ function upgradePasswordToHash(volunteerId, fieldName, typed, isDemo) {
 }
 
 // Validate the password for a volunteer in a given portal context.
-// Returns { ok: boolean, upgradeField: string | null }. upgradeField is set
-// when the user authenticated against a still-plaintext stored password and
-// the caller should fire-and-forget upgradePasswordToHash() after responding.
+// Returns { ok, upgradeField, usingDefault } where:
+//   upgradeField — set when authentication used a still-plaintext stored
+//                  value; the caller should fire-and-forget the bcrypt upgrade
+//   usingDefault — true when there was no stored password and the user
+//                  authenticated against the legacy fallback ('admin2025'
+//                  or phone digits). The SPA uses this to prompt the user
+//                  to set a real password on first login.
 function checkPassword(volunteer, portal, password) {
-  if (!volunteer || !password) return { ok: false, upgradeField: null };
+  const fail = { ok: false, upgradeField: null, usingDefault: false };
+  if (!volunteer || !password) return fail;
   const phoneDigits = (volunteer.phone || '').replace(/\D/g, '').slice(-10);
 
   if (portal === 'admin') {
-    if (!['Admin', 'View Admin', 'Chairman', 'Asst. Chairman'].includes(volunteer.type)) {
-      return { ok: false, upgradeField: null };
-    }
+    if (!['Admin', 'View Admin', 'Chairman', 'Asst. Chairman'].includes(volunteer.type)) return fail;
     const stored = volunteer.adminPassword;
     if (stored) {
       const ok = comparePassword(password, stored);
-      return { ok, upgradeField: ok && !looksLikeBcryptHash(stored) ? 'adminPassword' : null };
+      return { ok, upgradeField: ok && !looksLikeBcryptHash(stored) ? 'adminPassword' : null, usingDefault: false };
     }
     // Fallback default — never gets bcrypt-upgraded because there's nothing on disk to upgrade.
-    return { ok: password === 'admin2025', upgradeField: null };
+    return { ok: password === 'admin2025', upgradeField: null, usingDefault: password === 'admin2025' };
   }
   if (portal === 'captain') {
-    if (!['Captain', 'Chairman', 'Asst. Chairman', 'Admin'].includes(volunteer.type)) {
-      return { ok: false, upgradeField: null };
-    }
+    if (!['Captain', 'Chairman', 'Asst. Chairman', 'Admin'].includes(volunteer.type)) return fail;
     const stored = volunteer.volunteerPassword;
     if (stored) {
       const ok = comparePassword(password, stored);
-      return { ok, upgradeField: ok && !looksLikeBcryptHash(stored) ? 'volunteerPassword' : null };
+      return { ok, upgradeField: ok && !looksLikeBcryptHash(stored) ? 'volunteerPassword' : null, usingDefault: false };
     }
-    return { ok: password === phoneDigits, upgradeField: null };
+    return { ok: password === phoneDigits, upgradeField: null, usingDefault: password === phoneDigits };
   }
   if (portal === 'volunteer') {
     const stored = volunteer.volunteerPassword;
     if (stored) {
       const ok = comparePassword(password, stored);
-      return { ok, upgradeField: ok && !looksLikeBcryptHash(stored) ? 'volunteerPassword' : null };
+      return { ok, upgradeField: ok && !looksLikeBcryptHash(stored) ? 'volunteerPassword' : null, usingDefault: false };
     }
-    return { ok: password === phoneDigits, upgradeField: null };
+    return { ok: password === phoneDigits, upgradeField: null, usingDefault: password === phoneDigits };
   }
-  return { ok: false, upgradeField: null };
+  return fail;
 }
 
 // Express middleware factory. allowedRoles is an array of role strings.
@@ -490,7 +497,9 @@ app.post('/api/login', loginLimiter, (req, res) => {
       name: volunteer.name,
       email: volunteer.email,
       role: role
-    }
+    },
+    // SPA prompts the user to set a real password when this is true.
+    usingDefaultPassword: !!authResult.usingDefault
   });
 
   // Phase 1.3: fire-and-forget bcrypt upgrade for users still on plaintext.
