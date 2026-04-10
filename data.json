@@ -7360,6 +7360,33 @@
   },
   "activityLog": [
     {
+      "id": "1775836627530",
+      "timestamp": "2026-04-10T15:57:07.530Z",
+      "user": "Bishop, Woody",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Hicks, Greg",
+      "details": "Checked out for Friday AM on Hole 17"
+    },
+    {
+      "id": "1775836626375",
+      "timestamp": "2026-04-10T15:57:06.375Z",
+      "user": "Bishop, Woody",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Hicks, Greg",
+      "details": "Checked in for Friday AM on Hole 17"
+    },
+    {
+      "id": "1775836515967",
+      "timestamp": "2026-04-10T15:55:15.967Z",
+      "user": "Bishop, Woody",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1775836378502",
       "timestamp": "2026-04-10T15:52:58.502Z",
       "user": "Holt, Sharron",
