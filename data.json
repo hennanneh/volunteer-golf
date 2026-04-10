@@ -4702,7 +4702,8 @@
         "Sunday PM": true
       },
       "address": "2010 Cornell Drive Prosper, TX 75078",
-      "volId": "6217"
+      "volId": "6217",
+      "volunteerPassword": "Ratpack55!!"
     },
     {
       "id": "9393",
@@ -7190,6 +7191,60 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1775787523539",
+      "timestamp": "2026-04-10T02:18:43.539Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1775787511799",
+      "timestamp": "2026-04-10T02:18:31.799Z",
+      "user": "Nederostek, Brad",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1775787476589",
+      "timestamp": "2026-04-10T02:17:56.589Z",
+      "user": "Nederostek, Brad",
+      "userType": "Volunteer",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed volunteer password"
+    },
+    {
+      "id": "1775787447385",
+      "timestamp": "2026-04-10T02:17:27.385Z",
+      "user": "Nederostek, Brad",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1775787395097",
+      "timestamp": "2026-04-10T02:16:35.097Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1775786809160",
+      "timestamp": "2026-04-10T02:06:49.160Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1775786247125",
       "timestamp": "2026-04-10T01:57:27.125Z",
