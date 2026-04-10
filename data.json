@@ -17,7 +17,9 @@
         "Sunday PM": true
       },
       "volId": "10239",
-      "address": "644 Tierra Vista Way Fort Worth, TX 76131"
+      "address": "644 Tierra Vista Way Fort Worth, TX 76131",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9015",
@@ -36,7 +38,9 @@
         "Sunday AM": true
       },
       "volId": "9015",
-      "address": "5312 Lake Mead Trail Ft Worth, TX 76137-5344"
+      "address": "5312 Lake Mead Trail Ft Worth, TX 76137-5344",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "8220",
@@ -55,7 +59,9 @@
         "Sunday PM": true
       },
       "volId": "8220",
-      "address": "1521 Bridge Water Ln Mansfield, TX 76063"
+      "address": "1521 Bridge Water Ln Mansfield, TX 76063",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "8522",
@@ -74,7 +80,9 @@
         "Sunday PM": true
       },
       "volId": "8522",
-      "address": "2210 Emerald Lake Dr Arlington, TX 76013"
+      "address": "2210 Emerald Lake Dr Arlington, TX 76013",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "2658",
@@ -93,7 +101,9 @@
         "Sunday PM": true
       },
       "volId": "2658",
-      "address": "8457 Marys Creek Dr Benbrook, TX 76116"
+      "address": "8457 Marys Creek Dr Benbrook, TX 76116",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "8802",
@@ -112,7 +122,9 @@
         "Sunday AM": true
       },
       "volId": "8802",
-      "address": "8517 Marys Creek Dr Benbrook, TX 76116"
+      "address": "8517 Marys Creek Dr Benbrook, TX 76116",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "5401",
@@ -131,7 +143,9 @@
         "Sunday AM": true
       },
       "volId": "5401",
-      "address": "1600 Tealcrest Ct Keller, TX 76248"
+      "address": "1600 Tealcrest Ct Keller, TX 76248",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "6349",
@@ -150,7 +164,9 @@
         "Sunday PM": true
       },
       "volId": "6349",
-      "address": "5308 Timberwilde Fort Worth, TX 76112"
+      "address": "5308 Timberwilde Fort Worth, TX 76112",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "6828",
@@ -178,7 +194,9 @@
         "Sunday PM": true
       },
       "address": "300 Hoover Rd Burleson, TX 76028",
-      "volId": "6828"
+      "volId": "6828",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9019",
@@ -197,7 +215,9 @@
         "Sunday PM": true
       },
       "volId": "9019",
-      "address": "673 Brookbend Ct Waxahachie, TX 75165"
+      "address": "673 Brookbend Ct Waxahachie, TX 75165",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9143",
@@ -217,7 +237,9 @@
         "Sunday PM": true
       },
       "volId": "9143",
-      "address": "8037 Malabar Trl. Fort Worth, TX 76123"
+      "address": "8037 Malabar Trl. Fort Worth, TX 76123",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "7794",
@@ -245,7 +267,9 @@
         "Sunday PM": true
       },
       "address": "2407 Pebble Drive Granbury, TX 76048",
-      "volId": "7794"
+      "volId": "7794",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "10207",
@@ -265,7 +289,9 @@
         "Sunday AM": true
       },
       "volId": "10207",
-      "address": "1020 Brook Arbor Drive MANSFIELD, TX 76063"
+      "address": "1020 Brook Arbor Drive MANSFIELD, TX 76063",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "7747",
@@ -285,7 +311,9 @@
         "Sunday AM": true
       },
       "volId": "7747",
-      "address": "216 s mesquite st Muenster, TX 76252"
+      "address": "216 s mesquite st Muenster, TX 76252",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "3937",
@@ -304,7 +332,9 @@
         "Sunday PM": true
       },
       "volId": "3937",
-      "address": "104 Arbor Park Drive Euless, TX 76039"
+      "address": "104 Arbor Park Drive Euless, TX 76039",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9295",
@@ -323,7 +353,9 @@
         "Sunday AM": true
       },
       "volId": "9295",
-      "address": "9716 Wild Prairie Way Crowley, TX 76036"
+      "address": "9716 Wild Prairie Way Crowley, TX 76036",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "3138",
@@ -353,7 +385,9 @@
       "address": "1220 Mexia Court Royse City, TX 75189",
       "volId": "3138",
       "hatReceived": false,
-      "notes": ""
+      "notes": "",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9465",
@@ -373,7 +407,9 @@
         "Sunday PM": true
       },
       "volId": "9465",
-      "address": "904 Chapel Drive Denton, TX 76205"
+      "address": "904 Chapel Drive Denton, TX 76205",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "10012",
@@ -392,7 +428,9 @@
         "Sunday AM": true
       },
       "volId": "10012",
-      "address": "3 Celeste Rancho Santa Margarita, CA 92688"
+      "address": "3 Celeste Rancho Santa Margarita, CA 92688",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "6672",
@@ -411,7 +449,9 @@
         "Sunday PM": true
       },
       "volId": "6672",
-      "address": "1661 S Forum Dr Apt 4402 Grand Prairie, TX 75052"
+      "address": "1661 S Forum Dr Apt 4402 Grand Prairie, TX 75052",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "3149",
@@ -430,7 +470,9 @@
         "Sunday PM": true
       },
       "volId": "3149",
-      "address": "6079, Wonder Dr Fort Worth, TX 76133"
+      "address": "6079, Wonder Dr Fort Worth, TX 76133",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "8511",
@@ -449,7 +491,9 @@
         "Sunday PM": true
       },
       "volId": "8511",
-      "address": "6043 Meadowcrest Drive Dallas, TX 75230"
+      "address": "6043 Meadowcrest Drive Dallas, TX 75230",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "6191",
@@ -477,7 +521,9 @@
         "Sunday PM": true
       },
       "address": "546 Queens Way GRAND PRAIRIE, TX 75052",
-      "volId": "6191"
+      "volId": "6191",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9610",
@@ -496,7 +542,9 @@
         "Sunday AM": true
       },
       "volId": "9610",
-      "address": "4101 King Air Ct Granbury, TX 76049"
+      "address": "4101 King Air Ct Granbury, TX 76049",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9807",
@@ -515,7 +563,9 @@
         "Sunday AM": true
       },
       "volId": "9807",
-      "address": "4101 King Air Ct Granbury, TX 76049"
+      "address": "4101 King Air Ct Granbury, TX 76049",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "7771",
@@ -534,7 +584,9 @@
         "Sunday PM": true
       },
       "volId": "7771",
-      "address": "16508 Greenfarm Rd Huntersville, NC 28078"
+      "address": "16508 Greenfarm Rd Huntersville, NC 28078",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "2393",
@@ -555,7 +607,9 @@
         "Sunday PM": true
       },
       "volId": "2393",
-      "address": "1109 Byron Lane Arlington, TX 76012-1829"
+      "address": "1109 Byron Lane Arlington, TX 76012-1829",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "3034",
@@ -583,7 +637,9 @@
         "Sunday PM": true
       },
       "address": "102 Pine Valley Portland, TX 78374",
-      "volId": "3034"
+      "volId": "3034",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "4657",
@@ -602,7 +658,9 @@
         "Sunday PM": true
       },
       "volId": "4657",
-      "address": "102 W Scenic Ct. Palmer, TX 75152"
+      "address": "102 W Scenic Ct. Palmer, TX 75152",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "4264",
@@ -621,7 +679,9 @@
         "Sunday PM": true
       },
       "volId": "4264",
-      "address": "102 W Scenic Ct. Palmer, TX 75152"
+      "address": "102 W Scenic Ct. Palmer, TX 75152",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "6201",
@@ -640,7 +700,9 @@
         "Sunday PM": true
       },
       "volId": "6201",
-      "address": "3033 N. Monet Ct Flower Mound, TX 75022"
+      "address": "3033 N. Monet Ct Flower Mound, TX 75022",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "7998",
@@ -659,7 +721,9 @@
         "Sunday AM": true
       },
       "volId": "7998",
-      "address": "512 N 4TH STREET Sanger, TX 76266"
+      "address": "512 N 4TH STREET Sanger, TX 76266",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "1720",
@@ -687,7 +751,9 @@
         "Sunday PM": true
       },
       "address": "7401 County Road 305 Grandview, TX 76050",
-      "volId": "1720"
+      "volId": "1720",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "10573",
@@ -715,7 +781,9 @@
         "Sunday PM": true
       },
       "volId": "10573",
-      "address": "9501 Limosine Dr. Crowley, TN 76036"
+      "address": "9501 Limosine Dr. Crowley, TN 76036",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "10338",
@@ -735,7 +803,9 @@
         "Sunday AM": true
       },
       "volId": "10338",
-      "address": "2513 Peninsula Drive, Flower Mound, TX, USA Flower Mound, TX 75022"
+      "address": "2513 Peninsula Drive, Flower Mound, TX, USA Flower Mound, TX 75022",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "419",
@@ -754,7 +824,9 @@
         "Sunday AM": true
       },
       "volId": "419",
-      "address": "322 Little School Rd Kennedale, TX 76060"
+      "address": "322 Little School Rd Kennedale, TX 76060",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "111",
@@ -773,7 +845,9 @@
         "Sunday AM": true
       },
       "volId": "111",
-      "address": "325 Cook Road Willow Park, TX 76087"
+      "address": "325 Cook Road Willow Park, TX 76087",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "7291",
@@ -792,7 +866,9 @@
         "Sunday AM": true
       },
       "volId": "7291",
-      "address": "1111 Statler DUNCANVILLE, TX 75116-2029"
+      "address": "1111 Statler DUNCANVILLE, TX 75116-2029",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "6239",
@@ -820,7 +896,9 @@
         "Sunday PM": true
       },
       "volId": "6239",
-      "address": "226 Wapiti Dr Azle, TX 76020"
+      "address": "226 Wapiti Dr Azle, TX 76020",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9400",
@@ -839,7 +917,9 @@
         "Sunday PM": true
       },
       "volId": "9400",
-      "address": "39 E Sunny Slope Cir The Woodlands, TX 77381"
+      "address": "39 E Sunny Slope Cir The Woodlands, TX 77381",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9018",
@@ -858,7 +938,9 @@
         "Sunday PM": true
       },
       "volId": "9018",
-      "address": "1318 Bora Bora Street Tool, TX 75143"
+      "address": "1318 Bora Bora Street Tool, TX 75143",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "5772",
@@ -877,7 +959,9 @@
         "Sunday AM": true
       },
       "volId": "5772",
-      "address": "307 Pennsylvania Ave Kennedale, TX 76060"
+      "address": "307 Pennsylvania Ave Kennedale, TX 76060",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "8152",
@@ -896,7 +980,9 @@
         "Sunday AM": true
       },
       "volId": "8152",
-      "address": "496 South Point Court Aledo, TX 76008"
+      "address": "496 South Point Court Aledo, TX 76008",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "1445",
@@ -915,7 +1001,9 @@
         "Sunday PM": true
       },
       "volId": "1445",
-      "address": "216 Aledo Creeks Rd Fort Worth, TX 76126"
+      "address": "216 Aledo Creeks Rd Fort Worth, TX 76126",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9134",
@@ -934,7 +1022,9 @@
         "Sunday AM": true
       },
       "volId": "9134",
-      "address": "9436 Shoveler Trail Fort Worth, TX 76118"
+      "address": "9436 Shoveler Trail Fort Worth, TX 76118",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "3986",
@@ -962,7 +1052,9 @@
         "Sunday PM": true
       },
       "address": "6700 Branch Creek Drive Fort Worth, TX 76132",
-      "volId": "3986"
+      "volId": "3986",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9853",
@@ -984,7 +1076,9 @@
         "Sunday PM": true
       },
       "volId": "9853",
-      "address": "196 Santa Lena Court Dectur, TX 76040"
+      "address": "196 Santa Lena Court Dectur, TX 76040",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "8788",
@@ -1012,7 +1106,9 @@
         "Sunday PM": true
       },
       "volId": "8788",
-      "address": "713 Whippoorwill Dr Midlothian, TX 76065"
+      "address": "713 Whippoorwill Dr Midlothian, TX 76065",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "7068",
@@ -1031,7 +1127,9 @@
         "Sunday PM": true
       },
       "volId": "7068",
-      "address": "1940 Pin Oak Drive, Flower Mound TX 75028-1290 Flower Mound, TX 75028"
+      "address": "1940 Pin Oak Drive, Flower Mound TX 75028-1290 Flower Mound, TX 75028",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "10229",
@@ -1050,7 +1148,9 @@
         "Sunday PM": true
       },
       "volId": "10229",
-      "address": "1260 Dogwood Ln. CAROL STREAM, IL 60188"
+      "address": "1260 Dogwood Ln. CAROL STREAM, IL 60188",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "1520",
@@ -1069,7 +1169,9 @@
         "Sunday AM": true
       },
       "volId": "1520",
-      "address": "12408 Eagle Narrows Dr. Fort Worth, TX 76179 Fort Worth, TX 76179"
+      "address": "12408 Eagle Narrows Dr. Fort Worth, TX 76179 Fort Worth, TX 76179",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "10321",
@@ -1088,7 +1190,9 @@
         "Sunday PM": true
       },
       "volId": "10321",
-      "address": "5605 Santa Elena Court Fort Worth, TX 76126"
+      "address": "5605 Santa Elena Court Fort Worth, TX 76126",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "10078",
@@ -1107,7 +1211,9 @@
         "Sunday PM": true
       },
       "volId": "10078",
-      "address": "106 Ridgeway Gap Ovilla, TX 75154"
+      "address": "106 Ridgeway Gap Ovilla, TX 75154",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9560",
@@ -1126,7 +1232,9 @@
         "Sunday AM": true
       },
       "volId": "9560",
-      "address": "1126 Shady Oak Trail Mansfield, TX 76063"
+      "address": "1126 Shady Oak Trail Mansfield, TX 76063",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "333",
@@ -1145,7 +1253,9 @@
         "Sunday PM": true
       },
       "volId": "333",
-      "address": "2814 Oak Trail Ct Arlington, TX 76016"
+      "address": "2814 Oak Trail Ct Arlington, TX 76016",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "1919",
@@ -1164,7 +1274,9 @@
         "Sunday AM": true
       },
       "volId": "1919",
-      "address": "2445 Medford Ct E Fort Worth, TX 76109"
+      "address": "2445 Medford Ct E Fort Worth, TX 76109",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "8194",
@@ -1184,7 +1296,9 @@
         "Sunday PM": true
       },
       "volId": "8194",
-      "address": "2628 MIMOSA PARK DR RICHLAND HILLS, TX 76118"
+      "address": "2628 MIMOSA PARK DR RICHLAND HILLS, TX 76118",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "8056",
@@ -1203,7 +1317,9 @@
         "Sunday AM": true
       },
       "volId": "8056",
-      "address": "17 Corona Cir Odessa, TX 79763-2216"
+      "address": "17 Corona Cir Odessa, TX 79763-2216",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "2135",
@@ -1222,7 +1338,9 @@
         "Sunday AM": true
       },
       "volId": "2135",
-      "address": "7208 Wayfarer Trail Fort Worth, TX 76137"
+      "address": "7208 Wayfarer Trail Fort Worth, TX 76137",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "7865",
@@ -1241,7 +1359,9 @@
         "Sunday AM": true
       },
       "volId": "7865",
-      "address": "3505 park hollow street fort worth, TX 76109"
+      "address": "3505 park hollow street fort worth, TX 76109",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "636",
@@ -1269,7 +1389,9 @@
         "Sunday PM": true
       },
       "address": "3621 Country Club Circle Fort Worth, TX 76109",
-      "volId": "636"
+      "volId": "636",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "8179",
@@ -1288,7 +1410,9 @@
         "Sunday AM": true
       },
       "volId": "8179",
-      "address": "361 Akin Rd Texarkana, TX 75503"
+      "address": "361 Akin Rd Texarkana, TX 75503",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "4669",
@@ -1307,7 +1431,9 @@
         "Sunday PM": true
       },
       "volId": "4669",
-      "address": "305 Calais Drive Keller, TX 76248"
+      "address": "305 Calais Drive Keller, TX 76248",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "6340",
@@ -1326,7 +1452,9 @@
         "Sunday AM": true
       },
       "volId": "6340",
-      "address": "130 Turner Warnell Rd MANSFIELD, TX 76063-6400"
+      "address": "130 Turner Warnell Rd MANSFIELD, TX 76063-6400",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9969",
@@ -1345,7 +1473,9 @@
         "Sunday AM": true
       },
       "volId": "9969",
-      "address": "5601 Ridgepass Ln McKinney, TX 75071"
+      "address": "5601 Ridgepass Ln McKinney, TX 75071",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9371",
@@ -1364,7 +1494,9 @@
         "Sunday PM": true
       },
       "volId": "9371",
-      "address": "1105 Brook Lane Cleburne, TX 76033"
+      "address": "1105 Brook Lane Cleburne, TX 76033",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "394",
@@ -1392,7 +1524,9 @@
         "Sunday PM": true
       },
       "address": "1027 Hunter Ridge Dr Arlington, TX 76013",
-      "volId": "394"
+      "volId": "394",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "4531",
@@ -1420,7 +1554,9 @@
         "Sunday PM": true
       },
       "address": "2129 Shumard Ln Flower Mound, TX 75028",
-      "volId": "4531"
+      "volId": "4531",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "6594",
@@ -1439,7 +1575,9 @@
         "Sunday PM": true
       },
       "volId": "6594",
-      "address": "11105 Christina Lane Haslet, TX 76052"
+      "address": "11105 Christina Lane Haslet, TX 76052",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "6281",
@@ -1458,7 +1596,9 @@
         "Sunday AM": true
       },
       "volId": "6281",
-      "address": "5905 Mira Lago Ln Arlington, TX 76017"
+      "address": "5905 Mira Lago Ln Arlington, TX 76017",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9051",
@@ -1477,7 +1617,9 @@
         "Sunday PM": true
       },
       "volId": "9051",
-      "address": "1311 EltonLane Austin, TX 78703"
+      "address": "1311 EltonLane Austin, TX 78703",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "2055",
@@ -1507,7 +1649,9 @@
       "address": "228 E Lynn Creek Dr Arlington, TX 76002",
       "volId": "2055",
       "hatReceived": false,
-      "notes": ""
+      "notes": "",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "6962",
@@ -1526,7 +1670,9 @@
         "Sunday AM": true
       },
       "volId": "6962",
-      "address": "2200 E State Hwy 121 apt 3059 Lewisville, TX 75056"
+      "address": "2200 E State Hwy 121 apt 3059 Lewisville, TX 75056",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "4433",
@@ -1554,7 +1700,9 @@
         "Sunday PM": true
       },
       "address": "2701 River Path Ct Burleson, TX 76028",
-      "volId": "4433"
+      "volId": "4433",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "10328",
@@ -1573,7 +1721,9 @@
         "Sunday PM": true
       },
       "volId": "10328",
-      "address": "110 Windmill Cove Georgetown, TX 78628"
+      "address": "110 Windmill Cove Georgetown, TX 78628",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "8306",
@@ -1593,7 +1743,9 @@
         "Sunday AM": true
       },
       "volId": "8306",
-      "address": "7230 W Peden Rd Azle, TX 76020"
+      "address": "7230 W Peden Rd Azle, TX 76020",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "6731",
@@ -1612,7 +1764,9 @@
         "Sunday AM": true
       },
       "volId": "6731",
-      "address": "4005 Glenwood Dr Joshua, TX 76058"
+      "address": "4005 Glenwood Dr Joshua, TX 76058",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9916",
@@ -1633,7 +1787,9 @@
         "Sunday PM": true
       },
       "volId": "9916",
-      "address": "13701 Marys Ridge Road Aledo, TX 76088"
+      "address": "13701 Marys Ridge Road Aledo, TX 76088",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "8178",
@@ -1652,7 +1808,9 @@
         "Sunday AM": true
       },
       "volId": "8178",
-      "address": "5303 Antony Ct Arlington, TX 76017"
+      "address": "5303 Antony Ct Arlington, TX 76017",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "7912",
@@ -1671,7 +1829,9 @@
         "Sunday AM": true
       },
       "volId": "7912",
-      "address": "9645 Sam Bass Trail Ft. Worth, TX 76244"
+      "address": "9645 Sam Bass Trail Ft. Worth, TX 76244",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "136",
@@ -1691,7 +1851,9 @@
         "Sunday AM": true
       },
       "volId": "136",
-      "address": "4512 Ridge North Rd Fort Worth, TX 76126"
+      "address": "4512 Ridge North Rd Fort Worth, TX 76126",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "8009",
@@ -1719,7 +1881,9 @@
         "Sunday PM": true
       },
       "address": "4721 Springwillow Road Fort Worth, TX 76109",
-      "volId": "8009"
+      "volId": "8009",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "7052",
@@ -1738,7 +1902,9 @@
         "Sunday PM": true
       },
       "volId": "7052",
-      "address": "3050 Panther Drive, Apt. 2824 Fort Worth, TX 76116"
+      "address": "3050 Panther Drive, Apt. 2824 Fort Worth, TX 76116",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9366",
@@ -1757,7 +1923,9 @@
         "Sunday AM": true
       },
       "volId": "9366",
-      "address": "6053 Bridgecreek Way Westworth Village, TX 76114-3538"
+      "address": "6053 Bridgecreek Way Westworth Village, TX 76114-3538",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "7317",
@@ -1785,7 +1953,9 @@
         "Sunday PM": true
       },
       "volId": "7317",
-      "address": "545 Abbey Court Grand Prairie, TX 75052"
+      "address": "545 Abbey Court Grand Prairie, TX 75052",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "2441",
@@ -1813,7 +1983,9 @@
         "Sunday PM": true
       },
       "address": "11601 Wind Creek Ct. Aledo, TX 76008 Aledo, TX 76008",
-      "volId": "2441"
+      "volId": "2441",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "7528",
@@ -1832,7 +2004,9 @@
         "Sunday PM": true
       },
       "volId": "7528",
-      "address": "6052 The Resort Boulevard Fort Worth, TX 76179"
+      "address": "6052 The Resort Boulevard Fort Worth, TX 76179",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "421",
@@ -1860,7 +2034,9 @@
         "Sunday PM": true
       },
       "address": "9012 N Longwood Dr Granbury, TX 76049-4709",
-      "volId": "421"
+      "volId": "421",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9595",
@@ -1879,7 +2055,9 @@
         "Sunday PM": true
       },
       "volId": "9595",
-      "address": "780 Mockingbird Ln/lot167 N Richland Hills, TX 76180"
+      "address": "780 Mockingbird Ln/lot167 N Richland Hills, TX 76180",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "7731",
@@ -1898,7 +2076,9 @@
         "Sunday AM": true
       },
       "volId": "7731",
-      "address": "5880 Red Bud Road Fort Worth, TX 76135"
+      "address": "5880 Red Bud Road Fort Worth, TX 76135",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "10075",
@@ -1917,7 +2097,9 @@
         "Sunday AM": true
       },
       "volId": "10075",
-      "address": "418 Plantain Terrace Peachtree City, GA 30269"
+      "address": "418 Plantain Terrace Peachtree City, GA 30269",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "7924",
@@ -1936,7 +2118,9 @@
         "Sunday AM": true
       },
       "volId": "7924",
-      "address": "145 Links Ln Aledo, TX 76008"
+      "address": "145 Links Ln Aledo, TX 76008",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "4128",
@@ -1956,7 +2140,9 @@
         "Sunday AM": true
       },
       "volId": "4128",
-      "address": "4910 Westbriar Dr. Fort Worth, TX 76109"
+      "address": "4910 Westbriar Dr. Fort Worth, TX 76109",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "2540",
@@ -1984,7 +2170,9 @@
         "Sunday PM": true
       },
       "address": "1600 Burmeister Rd Fort Worth, TX 76134",
-      "volId": "2540"
+      "volId": "2540",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "10087",
@@ -2003,7 +2191,9 @@
         "Sunday PM": true
       },
       "volId": "10087",
-      "address": "4110 Brownwood Lane Arlington, TX 76017"
+      "address": "4110 Brownwood Lane Arlington, TX 76017",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9461",
@@ -2024,7 +2214,9 @@
         "Sunday PM": true
       },
       "volId": "9461",
-      "address": "540 Kase Ct. Burlson, TX 76028"
+      "address": "540 Kase Ct. Burlson, TX 76028",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "145",
@@ -2052,7 +2244,9 @@
         "Sunday PM": true
       },
       "address": "6416 Devonshire Dr., N. Richland Hills, TX. USA North Richland Hills, TX 76180",
-      "volId": "145"
+      "volId": "145",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "5391",
@@ -2080,7 +2274,9 @@
         "Sunday PM": true
       },
       "address": "1119 Buckingham Dr Forney, TX 75126",
-      "volId": "5391"
+      "volId": "5391",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9988",
@@ -2099,7 +2295,9 @@
         "Sunday PM": true
       },
       "volId": "9988",
-      "address": "7017 Twin Hills Dr JOSHUA, TX 76058"
+      "address": "7017 Twin Hills Dr JOSHUA, TX 76058",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "7043",
@@ -2118,7 +2316,9 @@
         "Sunday PM": true
       },
       "volId": "7043",
-      "address": "541 Tuscanny St Brandon, FL 33511"
+      "address": "541 Tuscanny St Brandon, FL 33511",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "6335",
@@ -2137,7 +2337,9 @@
         "Sunday PM": true
       },
       "volId": "6335",
-      "address": "2433 Timber Ridge Ln Flower Mound, TX 75028"
+      "address": "2433 Timber Ridge Ln Flower Mound, TX 75028",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "8359",
@@ -2159,7 +2361,9 @@
       "address": "PO Box 344 Gail, TX 79738",
       "hatReceived": false,
       "notes": "",
-      "originalHole": 19
+      "originalHole": 19,
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9195",
@@ -2178,7 +2382,9 @@
         "Sunday AM": true
       },
       "volId": "9195",
-      "address": "13101 Larks View Pt. Ft. Worth, TX 76244"
+      "address": "13101 Larks View Pt. Ft. Worth, TX 76244",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9503",
@@ -2197,7 +2403,9 @@
         "Sunday PM": true
       },
       "volId": "9503",
-      "address": "1208 S R St Indianola, IA 50125"
+      "address": "1208 S R St Indianola, IA 50125",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "7430",
@@ -2216,7 +2424,9 @@
         "Sunday PM": true
       },
       "volId": "7430",
-      "address": "701 Prairie Ave CLEBURNE, TX 76033"
+      "address": "701 Prairie Ave CLEBURNE, TX 76033",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "5857",
@@ -2236,7 +2446,9 @@
         "Sunday AM": true
       },
       "volId": "5857",
-      "address": "1309 Snow Mountain cir Keller, TX 76248"
+      "address": "1309 Snow Mountain cir Keller, TX 76248",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "10349",
@@ -2255,7 +2467,9 @@
         "Sunday AM": true
       },
       "volId": "10349",
-      "address": "2904 Berrywood Ct Mesquite, TX 75181"
+      "address": "2904 Berrywood Ct Mesquite, TX 75181",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "5924",
@@ -2274,7 +2488,9 @@
         "Sunday PM": true
       },
       "volId": "5924",
-      "address": "117 Springwood Ranch Loop, Springtown, TX 76082"
+      "address": "117 Springwood Ranch Loop, Springtown, TX 76082",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9558",
@@ -2293,7 +2509,9 @@
         "Sunday AM": true
       },
       "volId": "9558",
-      "address": "309 Westpark Lane Granbury, TX 76049"
+      "address": "309 Westpark Lane Granbury, TX 76049",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9856",
@@ -2321,7 +2539,9 @@
         "Sunday PM": true
       },
       "volId": "9856",
-      "address": "2411 W. Tumbleweed Dr Phoenix, AZ 85085"
+      "address": "2411 W. Tumbleweed Dr Phoenix, AZ 85085",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "10248",
@@ -2342,7 +2562,9 @@
         "Sunday AM": true
       },
       "volId": "10248",
-      "address": "4404 Mallow Oak Dr FORT Worth, TX 76123"
+      "address": "4404 Mallow Oak Dr FORT Worth, TX 76123",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9069",
@@ -2361,7 +2583,9 @@
         "Sunday AM": true
       },
       "volId": "9069",
-      "address": "3602 Stanford Street Greenville, TX 75401"
+      "address": "3602 Stanford Street Greenville, TX 75401",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "1521",
@@ -2389,7 +2613,9 @@
         "Sunday PM": true
       },
       "address": "1112 Williamsburg Ln Keller, TX 76248",
-      "volId": "1521"
+      "volId": "1521",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "8127",
@@ -2408,7 +2634,9 @@
         "Sunday AM": true
       },
       "volId": "8127",
-      "address": "3813 Gladney Ln Fort Worth, TX 76244-7654"
+      "address": "3813 Gladney Ln Fort Worth, TX 76244-7654",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9850",
@@ -2429,7 +2657,9 @@
         "Sunday PM": true
       },
       "volId": "9850",
-      "address": "1681 Victoria Drive Fort Worth, TX 76131"
+      "address": "1681 Victoria Drive Fort Worth, TX 76131",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "155",
@@ -2448,7 +2678,9 @@
         "Sunday AM": true
       },
       "volId": "155",
-      "address": "215 SANTA FE TRL WAXAHACHIE, TX 75165"
+      "address": "215 SANTA FE TRL WAXAHACHIE, TX 75165",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "10348",
@@ -2467,7 +2699,9 @@
         "Sunday AM": true
       },
       "volId": "10348",
-      "address": "1523 Crescent View SAN ANTONIO, TX 78258"
+      "address": "1523 Crescent View SAN ANTONIO, TX 78258",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "6714",
@@ -2486,7 +2720,9 @@
         "Sunday PM": true
       },
       "volId": "6714",
-      "address": "644 Unbridled Lane Keller, TX 76248"
+      "address": "644 Unbridled Lane Keller, TX 76248",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "10499",
@@ -2507,7 +2743,9 @@
         "Sunday AM": true
       },
       "volId": "10499",
-      "address": "8941 Souththorn Dr. North Richland Hills, TX 76182"
+      "address": "8941 Souththorn Dr. North Richland Hills, TX 76182",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "3777",
@@ -2527,7 +2765,9 @@
         "Sunday AM": true
       },
       "volId": "3777",
-      "address": "3731 Tremont Lane Granbury, TX 76049"
+      "address": "3731 Tremont Lane Granbury, TX 76049",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "3778",
@@ -2546,7 +2786,9 @@
         "Sunday AM": true
       },
       "volId": "3778",
-      "address": "3731 Tremont Lane Granbury, TX 76049"
+      "address": "3731 Tremont Lane Granbury, TX 76049",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "4639",
@@ -2581,7 +2823,9 @@
       "assignedHoles": [
         99,
         11
-      ]
+      ],
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "6903",
@@ -2600,7 +2844,9 @@
         "Sunday PM": true
       },
       "volId": "6903",
-      "address": "1013 Timberline Dr Benbrook, TX 76126"
+      "address": "1013 Timberline Dr Benbrook, TX 76126",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "10274",
@@ -2621,7 +2867,9 @@
         "Sunday PM": true
       },
       "volId": "10274",
-      "address": "5402 S Holly St Greenwood Village, CO 80111"
+      "address": "5402 S Holly St Greenwood Village, CO 80111",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9564",
@@ -2649,7 +2897,9 @@
         "Sunday PM": true
       },
       "volId": "9564",
-      "address": "3713 Arborlawn Drive Fort Worth, TX 76109"
+      "address": "3713 Arborlawn Drive Fort Worth, TX 76109",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "2507",
@@ -2677,7 +2927,9 @@
         "Sunday PM": true
       },
       "address": "6602 Brentwood Ave, 6602 Brentwood Av Lubbock, TX 79424",
-      "volId": "2507"
+      "volId": "2507",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "2543",
@@ -2707,7 +2959,9 @@
       "address": "6602, Brentwood Ave Lubbock, TX 79424",
       "volId": "2543",
       "hatReceived": false,
-      "notes": ""
+      "notes": "",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "4014",
@@ -2726,7 +2980,9 @@
         "Sunday AM": true
       },
       "volId": "4014",
-      "address": "P.O. Box 1808 Keller, TX 76244"
+      "address": "P.O. Box 1808 Keller, TX 76244",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "167",
@@ -2745,7 +3001,9 @@
         "Sunday AM": true
       },
       "volId": "167",
-      "address": "2222 Fairmount Ave Fort Worth, TX 76110"
+      "address": "2222 Fairmount Ave Fort Worth, TX 76110",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "10249",
@@ -2801,6 +3059,8 @@
         "359"
       ],
       "noOutingPreference": false,
+      "hasAdminPassword": true,
+      "hasVolunteerPassword": true,
       "adminPassword": "$2b$10$9o9TZHkP9PvBAX70x4onSeBlNDsE8HbBYq1G/oSU69bA1u5b2/R2.",
       "volunteerPassword": "admin2025",
       "adminPasswordSetAt": "2026-04-07T22:22:50.875Z"
@@ -2831,7 +3091,9 @@
         "Sunday PM": true
       },
       "address": "2424 River Rock Circle Arlington, TX 76006",
-      "volId": "359"
+      "volId": "359",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9874",
@@ -2850,7 +3112,9 @@
         "Sunday AM": true
       },
       "volId": "9874",
-      "address": "1300 Senna Drive Burleson, TX 76028"
+      "address": "1300 Senna Drive Burleson, TX 76028",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "2442",
@@ -2878,7 +3142,9 @@
         "Sunday PM": true
       },
       "address": "1915 Spotted Fawn Dr Arlington, TX 76005-1405",
-      "volId": "2442"
+      "volId": "2442",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9662",
@@ -2897,7 +3163,9 @@
         "Sunday AM": true
       },
       "volId": "9662",
-      "address": "336 Vista Way Saginaw, TX 76179"
+      "address": "336 Vista Way Saginaw, TX 76179",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "10213",
@@ -2918,7 +3186,9 @@
         "Sunday PM": true
       },
       "volId": "10213",
-      "address": "3821 Bee Tree Lane Fort Worth, TX 76133"
+      "address": "3821 Bee Tree Lane Fort Worth, TX 76133",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "5192",
@@ -2946,7 +3216,9 @@
         "Sunday PM": true
       },
       "address": "5450 Doral Court Fort Worth, TX 76112",
-      "volId": "5192"
+      "volId": "5192",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "5656",
@@ -2965,7 +3237,9 @@
         "Sunday AM": true
       },
       "volId": "5656",
-      "address": "2780 Camp Crucis Ct Granbury, TX 76048"
+      "address": "2780 Camp Crucis Ct Granbury, TX 76048",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "10337",
@@ -2984,7 +3258,9 @@
         "Sunday AM": true
       },
       "volId": "10337",
-      "address": "6032 Carmona Trl Fort Worth, TX 76123"
+      "address": "6032 Carmona Trl Fort Worth, TX 76123",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "2657",
@@ -3012,7 +3288,9 @@
         "Sunday PM": true
       },
       "address": "194 Crown Pointe Blvd. #711 Willow Park, TX 76087",
-      "volId": "2657"
+      "volId": "2657",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "10178",
@@ -3031,7 +3309,9 @@
         "Sunday AM": true
       },
       "volId": "10178",
-      "address": "1855 Payne St #315 Dallas, TX 75201"
+      "address": "1855 Payne St #315 Dallas, TX 75201",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "8787",
@@ -3050,7 +3330,9 @@
         "Sunday PM": true
       },
       "volId": "8787",
-      "address": "7506 Long South Drive Corpus Christi, TX 78414"
+      "address": "7506 Long South Drive Corpus Christi, TX 78414",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "5695",
@@ -3069,7 +3351,9 @@
         "Sunday AM": true
       },
       "volId": "5695",
-      "address": "2329 Laurel Forest Drive Fort Worth, TX 76177"
+      "address": "2329 Laurel Forest Drive Fort Worth, TX 76177",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "3779",
@@ -3088,7 +3372,9 @@
         "Sunday PM": true
       },
       "volId": "3779",
-      "address": "8316 Trace Ridge Parkway Ft Worth, TX 76137"
+      "address": "8316 Trace Ridge Parkway Ft Worth, TX 76137",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "7927",
@@ -3108,7 +3394,9 @@
         "Sunday PM": true
       },
       "volId": "7927",
-      "address": "7329 Brightwater Road Fort Worth, TX 76132"
+      "address": "7329 Brightwater Road Fort Worth, TX 76132",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "380",
@@ -3136,7 +3424,9 @@
         "Sunday PM": true
       },
       "address": "415 SHENANDOAH DR BURLESON, TX 76028-4079",
-      "volId": "380"
+      "volId": "380",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "10342",
@@ -3155,7 +3445,9 @@
         "Sunday AM": true
       },
       "volId": "10342",
-      "address": "5317 Whiting Way Denton, TX 76208"
+      "address": "5317 Whiting Way Denton, TX 76208",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "7926",
@@ -3175,7 +3467,9 @@
         "Sunday PM": true
       },
       "volId": "7926",
-      "address": "7329 Brightwater Road Fort Worth, TX 76132"
+      "address": "7329 Brightwater Road Fort Worth, TX 76132",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "8850",
@@ -3203,7 +3497,9 @@
         "Sunday PM": true
       },
       "volId": "8850",
-      "address": "4544 Copper Point Dr. Crowley, TX 76036"
+      "address": "4544 Copper Point Dr. Crowley, TX 76036",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "7922",
@@ -3222,7 +3518,9 @@
         "Sunday AM": true
       },
       "volId": "7922",
-      "address": "913 Warbler Court Burleson, TX 76028"
+      "address": "913 Warbler Court Burleson, TX 76028",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9658",
@@ -3250,7 +3548,9 @@
         "Sunday PM": true
       },
       "address": "3100 ST. ALBANS CIRCLE Colleyville, TX 76034",
-      "volId": "9658"
+      "volId": "9658",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "8899",
@@ -3278,7 +3578,9 @@
         "Sunday PM": true
       },
       "volId": "8899",
-      "address": "400 Templeton Drive Ft Worth, TX 76107"
+      "address": "400 Templeton Drive Ft Worth, TX 76107",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "2552",
@@ -3297,7 +3599,9 @@
         "Sunday AM": true
       },
       "volId": "2552",
-      "address": "5433 Rye drive Fort Worth, TX 76179"
+      "address": "5433 Rye drive Fort Worth, TX 76179",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "8291",
@@ -3316,7 +3620,9 @@
         "Sunday AM": true
       },
       "volId": "8291",
-      "address": "226 County Road 183 Stephenville, TX 76401"
+      "address": "226 County Road 183 Stephenville, TX 76401",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "182",
@@ -3335,7 +3641,9 @@
         "Sunday AM": true
       },
       "volId": "182",
-      "address": "6533 S Dover Ter Fort Worth, TX 76132"
+      "address": "6533 S Dover Ter Fort Worth, TX 76132",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9244",
@@ -3354,7 +3662,9 @@
         "Sunday AM": true
       },
       "volId": "9244",
-      "address": "191 Tyler Road Anacoco, LA 71403"
+      "address": "191 Tyler Road Anacoco, LA 71403",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "8367",
@@ -3373,7 +3683,9 @@
         "Sunday PM": true
       },
       "address": "2217 High Point Drive CARROLLTON, DENTON, TX, TX 75007",
-      "volId": "8367"
+      "volId": "8367",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9082",
@@ -3392,7 +3704,9 @@
         "Sunday PM": true
       },
       "volId": "9082",
-      "address": "22434 Walnut Court South Bend, IN 46628"
+      "address": "22434 Walnut Court South Bend, IN 46628",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "6471",
@@ -3411,7 +3725,9 @@
         "Sunday PM": true
       },
       "volId": "6471",
-      "address": "6514 O'Malley Ct Garland, TX 75044"
+      "address": "6514 O'Malley Ct Garland, TX 75044",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "2884",
@@ -3430,7 +3746,9 @@
         "Sunday PM": true
       },
       "volId": "2884",
-      "address": "10432 Crowne Pointe Ln Fort Worth, TX 76244"
+      "address": "10432 Crowne Pointe Ln Fort Worth, TX 76244",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "8935",
@@ -3449,7 +3767,9 @@
         "Sunday AM": true
       },
       "volId": "8935",
-      "address": "6617 Waterwood Cir Benbrook, TX 76132"
+      "address": "6617 Waterwood Cir Benbrook, TX 76132",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9406",
@@ -3468,7 +3788,9 @@
         "Sunday AM": true
       },
       "volId": "9406",
-      "address": "2300 Ridgewood Dr Waco, TX 76710"
+      "address": "2300 Ridgewood Dr Waco, TX 76710",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "5454",
@@ -3487,7 +3809,9 @@
         "Sunday PM": true
       },
       "volId": "5454",
-      "address": "7616 Chapman Dr North Richland Hills, TX 76182"
+      "address": "7616 Chapman Dr North Richland Hills, TX 76182",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9831",
@@ -3506,7 +3830,9 @@
         "Sunday PM": true
       },
       "volId": "9831",
-      "address": "8012 Kathleen Ct Fort Worth, TX 76137"
+      "address": "8012 Kathleen Ct Fort Worth, TX 76137",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9830",
@@ -3525,7 +3851,9 @@
         "Sunday PM": true
       },
       "volId": "9830",
-      "address": "8012 Kathleen Ct Fort Worth, TX 76137"
+      "address": "8012 Kathleen Ct Fort Worth, TX 76137",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9568",
@@ -3544,7 +3872,9 @@
         "Sunday AM": true
       },
       "volId": "9568",
-      "address": "12424 Bella Amore Dr Fort Worth, TX 76126"
+      "address": "12424 Bella Amore Dr Fort Worth, TX 76126",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9788",
@@ -3563,7 +3893,9 @@
         "Sunday AM": true
       },
       "volId": "9788",
-      "address": "764 Parkview Drive Burleson, TX 76028"
+      "address": "764 Parkview Drive Burleson, TX 76028",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "8345",
@@ -3584,7 +3916,9 @@
         "Sunday PM": true
       },
       "address": "P O Box 482 Ozona, TX 76943",
-      "volId": "8345"
+      "volId": "8345",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "4518",
@@ -3605,7 +3939,9 @@
         "Sunday PM": true
       },
       "address": "6428 Maple Drive The Colony, TX 75056",
-      "volId": "4518"
+      "volId": "4518",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "10339",
@@ -3624,7 +3960,9 @@
         "Sunday AM": true
       },
       "volId": "10339",
-      "address": "620 Gin Lake Trl Fort Worth, TX 76120"
+      "address": "620 Gin Lake Trl Fort Worth, TX 76120",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9811",
@@ -3644,7 +3982,9 @@
         "Sunday AM": true
       },
       "volId": "9811",
-      "address": "5717 Millers Creek Argyle, TX 76226"
+      "address": "5717 Millers Creek Argyle, TX 76226",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "8184",
@@ -3663,7 +4003,9 @@
         "Sunday PM": true
       },
       "volId": "8184",
-      "address": "11102 Jereme Trail Frisco, TX 75035"
+      "address": "11102 Jereme Trail Frisco, TX 75035",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "10276",
@@ -3682,7 +4024,9 @@
         "Sunday AM": true
       },
       "volId": "10276",
-      "address": "8 Whitney Circle Texarkana, TX 75503"
+      "address": "8 Whitney Circle Texarkana, TX 75503",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "8894",
@@ -3701,7 +4045,9 @@
         "Sunday AM": true
       },
       "volId": "8894",
-      "address": "3704 Devonaire Dr Aledo, TX 76008"
+      "address": "3704 Devonaire Dr Aledo, TX 76008",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "6967",
@@ -3720,7 +4066,9 @@
         "Sunday AM": true
       },
       "volId": "6967",
-      "address": "6120 Fall Creek Lane Fort Worth, TX 76123"
+      "address": "6120 Fall Creek Lane Fort Worth, TX 76123",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "7692",
@@ -3739,7 +4087,9 @@
         "Sunday AM": true
       },
       "volId": "7692",
-      "address": "5791 Gleneagles Circle Fort Worth, TX 76137"
+      "address": "5791 Gleneagles Circle Fort Worth, TX 76137",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "6744",
@@ -3758,7 +4108,9 @@
         "Sunday AM": true
       },
       "volId": "6744",
-      "address": "5707 2ND PL LUBBOCK, TX 79416"
+      "address": "5707 2ND PL LUBBOCK, TX 79416",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "4800",
@@ -3780,7 +4132,9 @@
       "address": "3201 Medina Ave Fort Worth, TX 76133",
       "hatReceived": false,
       "notes": "",
-      "originalHole": 19
+      "originalHole": 19,
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "2919",
@@ -3799,7 +4153,9 @@
         "Sunday PM": true
       },
       "volId": "2919",
-      "address": "88 Lilly Ln Waxahachie, TX 75165"
+      "address": "88 Lilly Ln Waxahachie, TX 75165",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "10553",
@@ -3820,7 +4176,9 @@
         "Sunday PM": true
       },
       "address": "1024 Hatch Ct Southlake, TX 76092",
-      "volId": "10553"
+      "volId": "10553",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "8543",
@@ -3848,7 +4206,9 @@
         "Sunday PM": true
       },
       "volId": "8543",
-      "address": "4008 Steeplechase Dr Colleyville, TX 76034-3738"
+      "address": "4008 Steeplechase Dr Colleyville, TX 76034-3738",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9580",
@@ -3867,7 +4227,9 @@
         "Sunday AM": true
       },
       "volId": "9580",
-      "address": "3937 Weatherstone Drive Fort Worth, TX 76137"
+      "address": "3937 Weatherstone Drive Fort Worth, TX 76137",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9485",
@@ -3886,7 +4248,9 @@
         "Sunday AM": true
       },
       "volId": "9485",
-      "address": "139 Canyon Creek Ct Weatherford, TX 76087"
+      "address": "139 Canyon Creek Ct Weatherford, TX 76087",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "10061",
@@ -3905,7 +4269,9 @@
         "Sunday AM": true
       },
       "volId": "10061",
-      "address": "10825 Alta Sierra Drive Benbrook, TX 76126"
+      "address": "10825 Alta Sierra Drive Benbrook, TX 76126",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "4659",
@@ -3924,7 +4290,9 @@
         "Sunday PM": true
       },
       "volId": "4659",
-      "address": "950 Oakbluff Dr. Lancaster, TX 75146"
+      "address": "950 Oakbluff Dr. Lancaster, TX 75146",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "8646",
@@ -3943,7 +4311,9 @@
         "Sunday AM": true
       },
       "volId": "8646",
-      "address": "5109 Dewdrop Lane Fort Worth, TX 76123"
+      "address": "5109 Dewdrop Lane Fort Worth, TX 76123",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "5539",
@@ -3962,7 +4332,9 @@
         "Sunday AM": true
       },
       "volId": "5539",
-      "address": "109 Berry Dr Haslet, TX 76052"
+      "address": "109 Berry Dr Haslet, TX 76052",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "193",
@@ -3990,7 +4362,9 @@
         "Sunday PM": true
       },
       "address": "9775 Grove Cir N, Apt 339 Maple Grove, MN 55369",
-      "volId": "193"
+      "volId": "193",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "4988",
@@ -4009,7 +4383,9 @@
         "Sunday PM": true
       },
       "volId": "4988",
-      "address": "4735 Saddlebrook Drive Fort Worth, TX 7611681736"
+      "address": "4735 Saddlebrook Drive Fort Worth, TX 7611681736",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9510",
@@ -4028,7 +4404,9 @@
         "Sunday AM": true
       },
       "volId": "9510",
-      "address": "413 Templeton Drive Fort Worth, TX 76107"
+      "address": "413 Templeton Drive Fort Worth, TX 76107",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "5168",
@@ -4047,7 +4425,9 @@
         "Sunday PM": true
       },
       "volId": "5168",
-      "address": "101 Cinnamon Ct Weatherford, TX 76088-7235"
+      "address": "101 Cinnamon Ct Weatherford, TX 76088-7235",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "5764",
@@ -4066,7 +4446,9 @@
         "Sunday AM": true
       },
       "volId": "5764",
-      "address": "5101 Dewdrop Lane Fort Worth, TX 76123-1934"
+      "address": "5101 Dewdrop Lane Fort Worth, TX 76123-1934",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "3489",
@@ -4085,7 +4467,9 @@
         "Sunday PM": true
       },
       "volId": "3489",
-      "address": "5103 shadow glen dr grapevine, TX 76051"
+      "address": "5103 shadow glen dr grapevine, TX 76051",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "1464",
@@ -4113,7 +4497,9 @@
         "Sunday PM": true
       },
       "address": "156 E Bozeman Ln Fort Worth, TX 76108",
-      "volId": "1464"
+      "volId": "1464",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9868",
@@ -4132,7 +4518,9 @@
         "Sunday AM": true
       },
       "volId": "9868",
-      "address": "12824 Bella Colina Dr. Fort Worth, TX 76126"
+      "address": "12824 Bella Colina Dr. Fort Worth, TX 76126",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "10271",
@@ -4151,7 +4539,9 @@
         "Sunday PM": true
       },
       "volId": "10271",
-      "address": "2011 Choctaw Ridge Drive Lewisville, TX 75067-7434"
+      "address": "2011 Choctaw Ridge Drive Lewisville, TX 75067-7434",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "4807",
@@ -4170,7 +4560,9 @@
         "Sunday AM": true
       },
       "volId": "4807",
-      "address": "8616 Amhurst Ct North Richland Hills, TX 76182"
+      "address": "8616 Amhurst Ct North Richland Hills, TX 76182",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "342",
@@ -4198,7 +4590,9 @@
         "Sunday PM": true
       },
       "address": "1104 Oak Lane Dr Joshua, TX 76058",
-      "volId": "342"
+      "volId": "342",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "10329",
@@ -4217,7 +4611,9 @@
         "Sunday PM": true
       },
       "volId": "10329",
-      "address": "12373 Bella Colina Dr Fort Worth, TX 76126"
+      "address": "12373 Bella Colina Dr Fort Worth, TX 76126",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "8545",
@@ -4245,7 +4641,9 @@
         "Sunday PM": true
       },
       "volId": "8545",
-      "address": "901 Thomas Crossing Dr Burleson, TX 76028"
+      "address": "901 Thomas Crossing Dr Burleson, TX 76028",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "10451",
@@ -4264,7 +4662,9 @@
         "Sunday PM": true
       },
       "volId": "10451",
-      "address": "7249 S ABERDEEN DR CLEBURNE, TX 76033"
+      "address": "7249 S ABERDEEN DR CLEBURNE, TX 76033",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "8295",
@@ -4283,7 +4683,9 @@
         "Sunday AM": true
       },
       "volId": "8295",
-      "address": "2715 Elmwood Dr Burleson, TX 76028"
+      "address": "2715 Elmwood Dr Burleson, TX 76028",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "10362",
@@ -4302,7 +4704,9 @@
         "Sunday AM": true
       },
       "volId": "10362",
-      "address": "4107 Fairway Dr Granbury, TX 76049"
+      "address": "4107 Fairway Dr Granbury, TX 76049",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "8571",
@@ -4321,7 +4725,9 @@
         "Sunday AM": true
       },
       "volId": "8571",
-      "address": "2720 River Path Court Burleson, TX 76028"
+      "address": "2720 River Path Court Burleson, TX 76028",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "8630",
@@ -4349,7 +4755,9 @@
         "Sunday PM": true
       },
       "address": "4710 Beaver Creek Dr Arlington, TX 76005",
-      "volId": "8630"
+      "volId": "8630",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "10319",
@@ -4368,7 +4776,9 @@
         "Sunday AM": true
       },
       "volId": "10319",
-      "address": "7912 Parkwood Plaza Dr Fort Worth, TX 76137"
+      "address": "7912 Parkwood Plaza Dr Fort Worth, TX 76137",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "3558",
@@ -4387,7 +4797,9 @@
         "Sunday PM": true
       },
       "volId": "3558",
-      "address": "4012 Alderbrook Lane Roanoke, TX 76262"
+      "address": "4012 Alderbrook Lane Roanoke, TX 76262",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "2125",
@@ -4406,7 +4818,9 @@
         "Sunday PM": true
       },
       "volId": "2125",
-      "address": "2433 C. R. 602 Burleson, TX 76028"
+      "address": "2433 C. R. 602 Burleson, TX 76028",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "7286",
@@ -4425,7 +4839,9 @@
         "Sunday AM": true
       },
       "volId": "7286",
-      "address": "13115 E 500 Rd Claremore, OK 74019"
+      "address": "13115 E 500 Rd Claremore, OK 74019",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9138",
@@ -4444,7 +4860,9 @@
         "Sunday PM": true
       },
       "volId": "9138",
-      "address": "3624 Pleasant Run Rd Irving, TX 75062"
+      "address": "3624 Pleasant Run Rd Irving, TX 75062",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "7806",
@@ -4472,7 +4890,9 @@
         "Sunday PM": true
       },
       "address": "1423 Monarch Trl Northlake, TX 76226",
-      "volId": "7806"
+      "volId": "7806",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "7943",
@@ -4491,7 +4911,9 @@
         "Sunday PM": true
       },
       "volId": "7943",
-      "address": "113 Water Wood Dr Saginaw, TX 76179"
+      "address": "113 Water Wood Dr Saginaw, TX 76179",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "8791",
@@ -4510,7 +4932,9 @@
         "Sunday PM": true
       },
       "volId": "8791",
-      "address": "5912 Killmarnoch Ct Cleburne, TX 76033"
+      "address": "5912 Killmarnoch Ct Cleburne, TX 76033",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "8790",
@@ -4529,7 +4953,9 @@
         "Sunday PM": true
       },
       "volId": "8790",
-      "address": "5912 Killmarnoch Ct Cleburne, TX 76033"
+      "address": "5912 Killmarnoch Ct Cleburne, TX 76033",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "4434",
@@ -4548,7 +4974,9 @@
         "Sunday AM": true
       },
       "address": "11009 Whitestone Ranch Road Ft. Worth, TX 76126",
-      "volId": "4434"
+      "volId": "4434",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "1770",
@@ -4576,7 +5004,9 @@
         "Sunday PM": true
       },
       "address": "291 Private Rd 2793 Alvord, TX 76225",
-      "volId": "1770"
+      "volId": "1770",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "4102",
@@ -4595,7 +5025,9 @@
         "Sunday AM": true
       },
       "volId": "4102",
-      "address": "1249 Crown Valley Dr Weatherford, TX 76087"
+      "address": "1249 Crown Valley Dr Weatherford, TX 76087",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "8878",
@@ -4615,7 +5047,9 @@
         "Sunday AM": true
       },
       "volId": "8878",
-      "address": "3230 Robin Rd Paris, TX 75460"
+      "address": "3230 Robin Rd Paris, TX 75460",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9133",
@@ -4633,7 +5067,9 @@
         "Sunday PM": true
       },
       "volId": "9133",
-      "address": "1603 Cherokee Trl, Plano TX 75023 Plano, TX 75023"
+      "address": "1603 Cherokee Trl, Plano TX 75023 Plano, TX 75023",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9952",
@@ -4652,7 +5088,9 @@
         "Sunday PM": true
       },
       "volId": "9952",
-      "address": "2411 Forest Oaks Dr Beavercreek, OH 45431"
+      "address": "2411 Forest Oaks Dr Beavercreek, OH 45431",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "8013",
@@ -4673,7 +5111,9 @@
         "Sunday PM": true
       },
       "volId": "8013",
-      "address": "1912 N Aster Ave Broken Arrow, OK 74012-1305"
+      "address": "1912 N Aster Ave Broken Arrow, OK 74012-1305",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "6217",
@@ -4702,6 +5142,8 @@
       },
       "address": "2010 Cornell Drive Prosper, TX 75078",
       "volId": "6217",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": true,
       "volunteerPassword": "$2b$10$.9EerCPU6/FW5N1/QE/wqemf6qz7JqYqbzToD4h2Fkqxb5nYXSeiG"
     },
     {
@@ -4721,7 +5163,9 @@
         "Sunday PM": true
       },
       "volId": "9393",
-      "address": "1524 Eleanor Dr Haslet, TX 76052-1518"
+      "address": "1524 Eleanor Dr Haslet, TX 76052-1518",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9663",
@@ -4740,7 +5184,9 @@
         "Sunday AM": true
       },
       "volId": "9663",
-      "address": "4902 Melrose Park Dr Colleyville, TX 76034"
+      "address": "4902 Melrose Park Dr Colleyville, TX 76034",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "10260",
@@ -4759,7 +5205,9 @@
         "Sunday AM": true
       },
       "volId": "10260",
-      "address": "22818 Deforest Ridge Lane Katy, TX 77494"
+      "address": "22818 Deforest Ridge Lane Katy, TX 77494",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "6758",
@@ -4778,7 +5226,9 @@
         "Sunday AM": true
       },
       "volId": "6758",
-      "address": "6705 Lucas Ln North Richland Hills, TX 76182"
+      "address": "6705 Lucas Ln North Richland Hills, TX 76182",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "8183",
@@ -4797,7 +5247,9 @@
         "Sunday AM": true
       },
       "volId": "8183",
-      "address": "2600 Wills Way Dr Granbury, TX 76049"
+      "address": "2600 Wills Way Dr Granbury, TX 76049",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "214",
@@ -4825,7 +5277,9 @@
         "Sunday PM": true
       },
       "address": "2201 Cains Lane Mansfield, TX 76063",
-      "volId": "214"
+      "volId": "214",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "4096",
@@ -4844,7 +5298,9 @@
         "Sunday PM": true
       },
       "volId": "4096",
-      "address": "6700 Hayling Way Denton, TX 76210"
+      "address": "6700 Hayling Way Denton, TX 76210",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9590",
@@ -4864,7 +5320,9 @@
         "Sunday PM": true
       },
       "volId": "9590",
-      "address": "5821 Waltham Ave Fort Worth, TX 76133"
+      "address": "5821 Waltham Ave Fort Worth, TX 76133",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9574",
@@ -4892,7 +5350,9 @@
         "Sunday PM": true
       },
       "volId": "9574",
-      "address": "1089 Gonzollas Rd Springtown, TX 76082"
+      "address": "1089 Gonzollas Rd Springtown, TX 76082",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "10360",
@@ -4913,7 +5373,9 @@
         "Sunday PM": true
       },
       "volId": "10360",
-      "address": "10321 Colina Drive Fort Worth, TX 76126"
+      "address": "10321 Colina Drive Fort Worth, TX 76126",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "219",
@@ -4933,7 +5395,9 @@
         "Sunday PM": true
       },
       "volId": "219",
-      "address": "2121 Robinwood Dr. Fort Worth, TX 76111"
+      "address": "2121 Robinwood Dr. Fort Worth, TX 76111",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "4143",
@@ -4952,7 +5416,9 @@
         "Sunday AM": true
       },
       "volId": "4143",
-      "address": "7425 Ewing Ave Fort Worth, TX 76116"
+      "address": "7425 Ewing Ave Fort Worth, TX 76116",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "10150",
@@ -4971,7 +5437,9 @@
         "Sunday PM": true
       },
       "volId": "10150",
-      "address": "7501 Ranch Ct. Benbrook, TX 76126"
+      "address": "7501 Ranch Ct. Benbrook, TX 76126",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9575",
@@ -4990,7 +5458,9 @@
         "Sunday AM": true
       },
       "volId": "9575",
-      "address": "10409 Calaveras Dr Waco, TX 76708"
+      "address": "10409 Calaveras Dr Waco, TX 76708",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "8439",
@@ -5009,7 +5479,9 @@
         "Sunday AM": true
       },
       "volId": "8439",
-      "address": "317 W Adams Ave Kiefer, OK 74041"
+      "address": "317 W Adams Ave Kiefer, OK 74041",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9198",
@@ -5028,7 +5500,9 @@
         "Sunday AM": true
       },
       "volId": "9198",
-      "address": "352 Holly Ridge Lane Ft. Worth, TX 76108"
+      "address": "352 Holly Ridge Lane Ft. Worth, TX 76108",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9834",
@@ -5047,7 +5521,9 @@
         "Sunday AM": true
       },
       "volId": "9834",
-      "address": "1101 W 7th St. Fort Worth, TX 76102"
+      "address": "1101 W 7th St. Fort Worth, TX 76102",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9833",
@@ -5066,7 +5542,9 @@
         "Sunday AM": true
       },
       "volId": "9833",
-      "address": "1101 West 7th Street Fort Worth, TX 76102"
+      "address": "1101 West 7th Street Fort Worth, TX 76102",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "4745",
@@ -5085,7 +5563,9 @@
         "Sunday AM": true
       },
       "volId": "4745",
-      "address": "13537 Leather Strap Dr Haslet, TX 76052"
+      "address": "13537 Leather Strap Dr Haslet, TX 76052",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "10246",
@@ -5104,7 +5584,9 @@
         "Sunday PM": true
       },
       "volId": "10246",
-      "address": "477 Suffield Dr. #813 Buda, TX 78610"
+      "address": "477 Suffield Dr. #813 Buda, TX 78610",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "8448",
@@ -5123,7 +5605,9 @@
         "Sunday AM": true
       },
       "volId": "8448",
-      "address": "805 Whitetail Deer Ct Crowley, TX 76036"
+      "address": "805 Whitetail Deer Ct Crowley, TX 76036",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "4667",
@@ -5142,7 +5626,9 @@
         "Sunday AM": true
       },
       "volId": "4667",
-      "address": "1702 Meadow Crest Ln Mansfield, TX 76063"
+      "address": "1702 Meadow Crest Ln Mansfield, TX 76063",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "6398",
@@ -5161,7 +5647,9 @@
         "Sunday AM": true
       },
       "volId": "6398",
-      "address": "100 Sam Bass Rd Willow Park, TX 76087"
+      "address": "100 Sam Bass Rd Willow Park, TX 76087",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "8276",
@@ -5180,7 +5668,9 @@
         "Sunday AM": true
       },
       "volId": "8276",
-      "address": "100 Sam Bass Rd Willow Park, TX 76087"
+      "address": "100 Sam Bass Rd Willow Park, TX 76087",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "6338",
@@ -5199,7 +5689,9 @@
         "Sunday PM": true
       },
       "volId": "6338",
-      "address": "435 Panorama Circle Pottsboro, TX 75076"
+      "address": "435 Panorama Circle Pottsboro, TX 75076",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "7527",
@@ -5228,7 +5720,9 @@
       },
       "address": "516 Eudaly Drive Colleyville, TX 76034",
       "volId": "7527",
-      "volunteerPassword": "REDman2034$"
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": true,
+      "volunteerPassword": "$2b$10$Ds8/UBOhd1jrNVKY4I/mguxC4BMZkZlWvQG0AKLCXMDHAwfHUJYqa"
     },
     {
       "id": "9365",
@@ -5249,7 +5743,9 @@
         "Sunday PM": true
       },
       "volId": "9365",
-      "address": "4001 High Meadows Dr. Alvarado, TX 76009-6526"
+      "address": "4001 High Meadows Dr. Alvarado, TX 76009-6526",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "6949",
@@ -5268,7 +5764,9 @@
         "Sunday PM": true
       },
       "volId": "6949",
-      "address": "1200 Eastridge Dr Yukon, OK 73099"
+      "address": "1200 Eastridge Dr Yukon, OK 73099",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "5217",
@@ -5296,7 +5794,9 @@
         "Sunday PM": true
       },
       "address": "1325 Concho Drive Benbrook, TX 76126",
-      "volId": "5217"
+      "volId": "5217",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "450",
@@ -5324,7 +5824,9 @@
         "Sunday PM": true
       },
       "address": "111 Old Hickory Ln Joshua, TX 76058",
-      "volId": "450"
+      "volId": "450",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9621",
@@ -5343,7 +5845,9 @@
         "Sunday AM": true
       },
       "volId": "9621",
-      "address": "3300 W 7th Street, apt 204 Fort Worth, TX 76107"
+      "address": "3300 W 7th Street, apt 204 Fort Worth, TX 76107",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "8510",
@@ -5362,7 +5866,9 @@
         "Sunday PM": true
       },
       "volId": "8510",
-      "address": "1236 Stoneleigh Place Aubrey, TX 76227"
+      "address": "1236 Stoneleigh Place Aubrey, TX 76227",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "10483",
@@ -5381,7 +5887,9 @@
         "Sunday PM": true
       },
       "volId": "10483",
-      "address": "46 Frontier Street Rye, NH 03870"
+      "address": "46 Frontier Street Rye, NH 03870",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "2488",
@@ -5400,7 +5908,9 @@
         "Sunday AM": true
       },
       "volId": "2488",
-      "address": "1800 Woodview Dr Alvarado, TX 76009"
+      "address": "1800 Woodview Dr Alvarado, TX 76009",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9796",
@@ -5420,7 +5930,9 @@
         "Sunday AM": true
       },
       "volId": "9796",
-      "address": "1909 Chiford Lane Ft Worth, TX 76131"
+      "address": "1909 Chiford Lane Ft Worth, TX 76131",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "8644",
@@ -5439,7 +5951,9 @@
         "Sunday AM": true
       },
       "volId": "8644",
-      "address": "7533 Ashcroft Cir Fort Worth, TX 76120"
+      "address": "7533 Ashcroft Cir Fort Worth, TX 76120",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "10293",
@@ -5458,7 +5972,9 @@
         "Sunday AM": true
       },
       "volId": "10293",
-      "address": "325 Key West Rd Reno, TX 75462"
+      "address": "325 Key West Rd Reno, TX 75462",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "5521",
@@ -5486,7 +6002,9 @@
         "Sunday PM": true
       },
       "address": "3661 manderly pl fort worth, TX 76109",
-      "volId": "5521"
+      "volId": "5521",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9900",
@@ -5507,7 +6025,9 @@
         "Sunday AM": true
       },
       "volId": "9900",
-      "address": "6700 Lahontan Dr Fort Worth, TX 76132"
+      "address": "6700 Lahontan Dr Fort Worth, TX 76132",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "7363",
@@ -5526,7 +6046,9 @@
         "Sunday AM": true
       },
       "volId": "7363",
-      "address": "8857 Oakville St Fort Worth, TX 76244"
+      "address": "8857 Oakville St Fort Worth, TX 76244",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9818",
@@ -5544,7 +6066,9 @@
         "Sunday PM": true
       },
       "volId": "9818",
-      "address": "5543 Edwards Ranch Road, Unit 5218 Fort Worth, TX 76109"
+      "address": "5543 Edwards Ranch Road, Unit 5218 Fort Worth, TX 76109",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9928",
@@ -5564,7 +6088,9 @@
         "Sunday PM": true
       },
       "volId": "9928",
-      "address": "6 Toscany Court Mansfield, TX 76063"
+      "address": "6 Toscany Court Mansfield, TX 76063",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "5240",
@@ -5592,7 +6118,9 @@
         "Sunday PM": true
       },
       "address": "701 Shady Creek Drive Kennedale, TX 76060",
-      "volId": "5240"
+      "volId": "5240",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "2745",
@@ -5620,7 +6148,9 @@
         "Sunday PM": true
       },
       "address": "2905 SOCRATES DR GRAND PRAIRIE, TX 75052",
-      "volId": "2745"
+      "volId": "2745",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "6553",
@@ -5648,7 +6178,9 @@
         "Sunday PM": true
       },
       "address": "4640 Edenwood Drive Fort Worth, TX 76123-2908",
-      "volId": "6553"
+      "volId": "6553",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "7232",
@@ -5667,7 +6199,9 @@
         "Sunday AM": true
       },
       "volId": "7232",
-      "address": "500 Throckmorton Street apt 1407 Fort Worth, TX 76102"
+      "address": "500 Throckmorton Street apt 1407 Fort Worth, TX 76102",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "6829",
@@ -5690,7 +6224,9 @@
         "Sunday AM": true
       },
       "volId": "6829",
-      "address": "500 Throckmorton Street 1407 Fort Worth, TX 76102"
+      "address": "500 Throckmorton Street 1407 Fort Worth, TX 76102",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "243",
@@ -5718,7 +6254,9 @@
         "Sunday PM": true
       },
       "address": "7636 Terry Dr. N. Richland Hills, TX 76180",
-      "volId": "243"
+      "volId": "243",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9204",
@@ -5737,7 +6275,9 @@
         "Sunday AM": true
       },
       "volId": "9204",
-      "address": "5149 Escambia Ter Fort Worth, TX 76244"
+      "address": "5149 Escambia Ter Fort Worth, TX 76244",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "7191",
@@ -5765,7 +6305,9 @@
         "Sunday PM": true
       },
       "address": "6510 New Authon Road Weatherford, TX 76088",
-      "volId": "7191"
+      "volId": "7191",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "8066",
@@ -5793,7 +6335,9 @@
         "Sunday PM": true
       },
       "volId": "8066",
-      "address": "6524 Dover Terrance S Fort Worth, TX 76132"
+      "address": "6524 Dover Terrance S Fort Worth, TX 76132",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "3974",
@@ -5821,7 +6365,9 @@
         "Sunday PM": true
       },
       "address": "1407 Pecos  Dr Southlake, TX 76092",
-      "volId": "3974"
+      "volId": "3974",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "10240",
@@ -5841,7 +6387,9 @@
         "Sunday AM": true
       },
       "volId": "10240",
-      "address": "3516 Cockrill McKinney, TX 75072"
+      "address": "3516 Cockrill McKinney, TX 75072",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "8499",
@@ -5861,7 +6409,9 @@
         "Sunday AM": true
       },
       "volId": "8499",
-      "address": "4112 Ridglea County Club Dr #1614 Benbrook, TX 76126"
+      "address": "4112 Ridglea County Club Dr #1614 Benbrook, TX 76126",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9418",
@@ -5880,7 +6430,9 @@
         "Sunday PM": true
       },
       "volId": "9418",
-      "address": "1201 Hudson Dr. Mansfield, TX 76063"
+      "address": "1201 Hudson Dr. Mansfield, TX 76063",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "10550",
@@ -5899,7 +6451,9 @@
         "Sunday PM": true
       },
       "volId": "10550",
-      "address": "9204 King Air Drive Granbury, TX 76049"
+      "address": "9204 King Air Drive Granbury, TX 76049",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "10436",
@@ -5920,7 +6474,9 @@
         "Sunday PM": true
       },
       "volId": "10436",
-      "address": "1100 Foxtail Drive Mansfield, TX 76063"
+      "address": "1100 Foxtail Drive Mansfield, TX 76063",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9397",
@@ -5939,7 +6495,9 @@
         "Sunday PM": true
       },
       "volId": "9397",
-      "address": "633 Prairie Ave Aledo, TX 76008"
+      "address": "633 Prairie Ave Aledo, TX 76008",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "7326",
@@ -5967,7 +6525,9 @@
         "Sunday PM": true
       },
       "address": "5104 Pinellas Ave Fort Worth, TX 76244",
-      "volId": "7326"
+      "volId": "7326",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "10566",
@@ -5986,7 +6546,9 @@
         "Sunday PM": true
       },
       "volId": "10566",
-      "address": "2951 Picadilly Ln Apt 634 Denton, TX 76207"
+      "address": "2951 Picadilly Ln Apt 634 Denton, TX 76207",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "10151",
@@ -6007,7 +6569,9 @@
         "Sunday AM": true
       },
       "volId": "10151",
-      "address": "11869 Vienna Apple Rd Fort Worth, TX 76244"
+      "address": "11869 Vienna Apple Rd Fort Worth, TX 76244",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "8462",
@@ -6026,7 +6590,9 @@
         "Sunday AM": true
       },
       "volId": "8462",
-      "address": "327 Jack Nicklaus Dr Austin, TX 78738"
+      "address": "327 Jack Nicklaus Dr Austin, TX 78738",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "8463",
@@ -6045,7 +6611,9 @@
         "Sunday AM": true
       },
       "volId": "8463",
-      "address": "327 Jack Nicklaus Drive Austin, TX 78738"
+      "address": "327 Jack Nicklaus Drive Austin, TX 78738",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9109",
@@ -6064,7 +6632,9 @@
         "Sunday PM": true
       },
       "volId": "9109",
-      "address": "4650 Cougar Ridge Rd Fort Worth, TX 76126"
+      "address": "4650 Cougar Ridge Rd Fort Worth, TX 76126",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "8711",
@@ -6083,7 +6653,9 @@
         "Sunday AM": true
       },
       "volId": "8711",
-      "address": "481 Pecan Dr Burleson, TX 76028"
+      "address": "481 Pecan Dr Burleson, TX 76028",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "4204",
@@ -6102,7 +6674,9 @@
         "Sunday PM": true
       },
       "volId": "4204",
-      "address": "600 Marsh Cove Circle Summerville, SC 29486"
+      "address": "600 Marsh Cove Circle Summerville, SC 29486",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "2629",
@@ -6121,7 +6695,9 @@
         "Sunday PM": true
       },
       "volId": "2629",
-      "address": "409 Flagstone Drive Burleson, TX 76028"
+      "address": "409 Flagstone Drive Burleson, TX 76028",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "6692",
@@ -6140,7 +6716,9 @@
         "Sunday PM": true
       },
       "volId": "6692",
-      "address": "419 W VAUGHN RD Cleburne, TX 76033"
+      "address": "419 W VAUGHN RD Cleburne, TX 76033",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "8695",
@@ -6168,7 +6746,9 @@
         "Sunday PM": true
       },
       "volId": "8695",
-      "address": "14806 Ashland Pines Lane Humble, TX 77396"
+      "address": "14806 Ashland Pines Lane Humble, TX 77396",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "5029",
@@ -6187,7 +6767,9 @@
         "Sunday PM": true
       },
       "volId": "5029",
-      "address": "6925 Clayton Avenue Dallas, TX 75214"
+      "address": "6925 Clayton Avenue Dallas, TX 75214",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "438",
@@ -6215,7 +6797,9 @@
         "Sunday PM": true
       },
       "address": "6166 Park Rd #5 Fort Wotrh, TX 76135",
-      "volId": "438"
+      "volId": "438",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "10495",
@@ -6234,7 +6818,9 @@
         "Sunday PM": true
       },
       "volId": "10495",
-      "address": "4183 Old T Bone Rd. wichita falls, TX 76305"
+      "address": "4183 Old T Bone Rd. wichita falls, TX 76305",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9775",
@@ -6254,7 +6840,9 @@
         "Sunday AM": true
       },
       "volId": "9775",
-      "address": "7105 Canyon Ct Fort Worth, TX 76137-4462"
+      "address": "7105 Canyon Ct Fort Worth, TX 76137-4462",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9896",
@@ -6277,7 +6865,9 @@
         "Sunday AM": true
       },
       "volId": "9896",
-      "address": "1612 Greenhill Ct KELLER, TX 76248"
+      "address": "1612 Greenhill Ct KELLER, TX 76248",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "10237",
@@ -6296,7 +6886,9 @@
         "Sunday AM": true
       },
       "volId": "10237",
-      "address": "522 Granada Drive Garland, TX 75043"
+      "address": "522 Granada Drive Garland, TX 75043",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "10547",
@@ -6315,7 +6907,9 @@
         "Sunday AM": true
       },
       "volId": "10547",
-      "address": "2800 Highlawn Terrace Ft. Worth, TX 76133"
+      "address": "2800 Highlawn Terrace Ft. Worth, TX 76133",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "8608",
@@ -6336,7 +6930,9 @@
         "Sunday AM": true
       },
       "volId": "8608",
-      "address": "501 Sunset Dr Hurst, TX 76054"
+      "address": "501 Sunset Dr Hurst, TX 76054",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "5612",
@@ -6355,7 +6951,9 @@
         "Sunday AM": true
       },
       "volId": "5612",
-      "address": "2142 Rohne Dr Cedar Hill, TX 75104"
+      "address": "2142 Rohne Dr Cedar Hill, TX 75104",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "10364",
@@ -6376,7 +6974,9 @@
         "Sunday AM": true
       },
       "volId": "10364",
-      "address": "7104 Ledbetter Rd. Arlington, TX 76001"
+      "address": "7104 Ledbetter Rd. Arlington, TX 76001",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "5235",
@@ -6404,7 +7004,9 @@
         "Sunday PM": true
       },
       "address": "9302 King Air Dr Granbury, TX 76049",
-      "volId": "5235"
+      "volId": "5235",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "1182",
@@ -6432,7 +7034,9 @@
         "Sunday PM": true
       },
       "volId": "1182",
-      "address": "6905 Hazeltine Dr. FORT WORTH, TX 76132-4518"
+      "address": "6905 Hazeltine Dr. FORT WORTH, TX 76132-4518",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "4190",
@@ -6453,7 +7057,9 @@
         "Sunday PM": true
       },
       "volId": "4190",
-      "address": "1516 Sunny Glen St. Fort Worth, TX 76134"
+      "address": "1516 Sunny Glen St. Fort Worth, TX 76134",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "4536",
@@ -6481,7 +7087,9 @@
         "Sunday PM": true
       },
       "address": "142 LCR Redbud B Mexia, TX 76667",
-      "volId": "4536"
+      "volId": "4536",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "7120",
@@ -6500,7 +7108,9 @@
         "Sunday AM": true
       },
       "volId": "7120",
-      "address": "23531 Champion Dr Lindale, TX 75771"
+      "address": "23531 Champion Dr Lindale, TX 75771",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "1790",
@@ -6519,7 +7129,9 @@
         "Sunday AM": true
       },
       "volId": "1790",
-      "address": "8513 Woodslane Drive Fort Worth, TX 76179"
+      "address": "8513 Woodslane Drive Fort Worth, TX 76179",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "4225",
@@ -6538,7 +7150,9 @@
         "Sunday AM": true
       },
       "volId": "4225",
-      "address": "151560 US Highway 90 W Harwood, TX 78632"
+      "address": "151560 US Highway 90 W Harwood, TX 78632",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "7463",
@@ -6557,7 +7171,9 @@
         "Sunday AM": true
       },
       "volId": "7463",
-      "address": "15853 Coyote Hill Dr Fort Worth, TX 76177"
+      "address": "15853 Coyote Hill Dr Fort Worth, TX 76177",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "2439",
@@ -6576,7 +7192,9 @@
         "Sunday AM": true
       },
       "volId": "2439",
-      "address": "1105 Centennary Dr Allen, TX 75002"
+      "address": "1105 Centennary Dr Allen, TX 75002",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "271",
@@ -6605,6 +7223,8 @@
       },
       "address": "416 Meadowhill Dr. Benbrook, TX 76126-4017",
       "volId": "271",
+      "hasAdminPassword": true,
+      "hasVolunteerPassword": false,
       "adminPassword": "fewkyb-pargeP-vypro6",
       "adminPasswordSetAt": "2026-04-10T16:47:28.996Z"
     },
@@ -6625,7 +7245,9 @@
         "Sunday AM": true
       },
       "volId": "8852",
-      "address": "585 BAKER CUT OFF RD WEATHERFORD, TX 76087"
+      "address": "585 BAKER CUT OFF RD WEATHERFORD, TX 76087",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "274",
@@ -6653,7 +7275,9 @@
         "Sunday PM": true
       },
       "address": "4119 Cross Bend Dr Arlington, TX 76016",
-      "volId": "274"
+      "volId": "274",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "8182",
@@ -6672,7 +7296,9 @@
         "Sunday PM": true
       },
       "volId": "8182",
-      "address": "1110 Pawnee Dr Richardson, TX 75080"
+      "address": "1110 Pawnee Dr Richardson, TX 75080",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "8609",
@@ -6692,7 +7318,9 @@
         "Sunday AM": true
       },
       "volId": "8609",
-      "address": "3301 Cliff View Ct WEATHERFORD, TX 76087"
+      "address": "3301 Cliff View Ct WEATHERFORD, TX 76087",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9787",
@@ -6711,7 +7339,9 @@
         "Sunday AM": true
       },
       "volId": "9787",
-      "address": "3201 Sth 23rd st Apt 236 Abilene, TX 79605"
+      "address": "3201 Sth 23rd st Apt 236 Abilene, TX 79605",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "278",
@@ -6739,7 +7369,9 @@
         "Sunday PM": true
       },
       "address": "5202 Wedgefield Rd Granbury, TX 76049",
-      "volId": "278"
+      "volId": "278",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "7207",
@@ -6759,7 +7391,9 @@
         "Sunday AM": true
       },
       "volId": "7207",
-      "address": "3128 Woodridge Dr Hurst, TX 76054"
+      "address": "3128 Woodridge Dr Hurst, TX 76054",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "10222",
@@ -6778,7 +7412,9 @@
         "Sunday AM": true
       },
       "volId": "10222",
-      "address": "6254 Cricket Pass Columbia, MD 21044"
+      "address": "6254 Cricket Pass Columbia, MD 21044",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "4222",
@@ -6806,7 +7442,9 @@
         "Sunday PM": true
       },
       "address": "414 Edgewood Court Forney, TX 75126",
-      "volId": "4222"
+      "volId": "4222",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9398",
@@ -6826,7 +7464,9 @@
         "Sunday PM": true
       },
       "volId": "9398",
-      "address": "12620 Foster Circle Azle, TX 76020"
+      "address": "12620 Foster Circle Azle, TX 76020",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "10437",
@@ -6845,7 +7485,9 @@
         "Sunday AM": true
       },
       "address": "6828 Walter Street North Richland Hills, TX 76182",
-      "volId": "10437"
+      "volId": "10437",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "8219",
@@ -6864,7 +7506,9 @@
         "Sunday AM": true
       },
       "volId": "8219",
-      "address": "2422 Clayton Oaks Dr Grand Prairie, TX 75052"
+      "address": "2422 Clayton Oaks Dr Grand Prairie, TX 75052",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "7640",
@@ -6892,7 +7536,9 @@
         "Sunday PM": true
       },
       "volId": "7640",
-      "address": "1412 Eastside Mesquite, TX 75149"
+      "address": "1412 Eastside Mesquite, TX 75149",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9581",
@@ -6913,7 +7559,9 @@
         "Sunday PM": true
       },
       "volId": "9581",
-      "address": "8800 JASON CT N Richland Hills, TX 76182-3268"
+      "address": "8800 JASON CT N Richland Hills, TX 76182-3268",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9405",
@@ -6932,7 +7580,9 @@
         "Sunday AM": true
       },
       "volId": "9405",
-      "address": "309 CR 176 Cisco, TX 76437"
+      "address": "309 CR 176 Cisco, TX 76437",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "7250",
@@ -6953,7 +7603,9 @@
         "Sunday PM": true
       },
       "volId": "7250",
-      "address": "2228 Etta Ln BURLESON, TX 76028"
+      "address": "2228 Etta Ln BURLESON, TX 76028",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "8234",
@@ -6981,7 +7633,9 @@
         "Sunday PM": true
       },
       "address": "2302 Windsor Rd Abilene, TX 79605",
-      "volId": "8234"
+      "volId": "8234",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "5876",
@@ -7000,7 +7654,9 @@
         "Sunday AM": true
       },
       "volId": "5876",
-      "address": "11848 Hickory Cir Fort Worth, TX 76244-4582"
+      "address": "11848 Hickory Cir Fort Worth, TX 76244-4582",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9233",
@@ -7021,7 +7677,9 @@
         "Sunday AM": true
       },
       "volId": "9233",
-      "address": "130 Country Vista Circle Burleson, TX 76028"
+      "address": "130 Country Vista Circle Burleson, TX 76028",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "10279",
@@ -7040,7 +7698,9 @@
         "Sunday AM": true
       },
       "volId": "10279",
-      "address": "5313 Roberts Rd Colleyville, TX 76034"
+      "address": "5313 Roberts Rd Colleyville, TX 76034",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "4661",
@@ -7059,7 +7719,9 @@
         "Sunday AM": true
       },
       "volId": "4661",
-      "address": "5313 Roberts Rd Colleyville, TX 76034"
+      "address": "5313 Roberts Rd Colleyville, TX 76034",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "4634",
@@ -7078,7 +7740,9 @@
         "Sunday AM": true
       },
       "volId": "4634",
-      "address": "1839 Norfolk Ave Dallas, TX 75203"
+      "address": "1839 Norfolk Ave Dallas, TX 75203",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "8154",
@@ -7097,7 +7761,9 @@
         "Sunday PM": true
       },
       "volId": "8154",
-      "address": "9400 Bellechase Rd Granbury, TX 76049-4430"
+      "address": "9400 Bellechase Rd Granbury, TX 76049-4430",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9427",
@@ -7116,7 +7782,9 @@
         "Sunday AM": true
       },
       "volId": "9427",
-      "address": "1610 Hoveden Drive Katy, TX 77450"
+      "address": "1610 Hoveden Drive Katy, TX 77450",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "292",
@@ -7144,7 +7812,9 @@
         "Sunday PM": true
       },
       "address": "2974 Old Mill Rd Greenville, TX 75402",
-      "volId": "292"
+      "volId": "292",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     }
   ],
   "checkIns": [
@@ -7427,6 +8097,176 @@
       "timestamp": "2026-04-10T17:58:20.580Z",
       "checkedInBy": "Edwards, Bill",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "7527",
+      "volunteerName": "Pueblo, Vange",
+      "hole": 20,
+      "day": "Friday",
+      "shift": "PM",
+      "timestamp": "2026-04-10T18:10:41.172Z",
+      "checkedInBy": "Pueblo, Vange",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6828",
+      "volunteerName": "Barber, Michael",
+      "hole": 20,
+      "day": "Friday",
+      "shift": "PM",
+      "timestamp": "2026-04-10T18:10:41.936Z",
+      "checkedInBy": "Pueblo, Vange",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10573",
+      "volunteerName": "Byrom, Kirk",
+      "hole": 20,
+      "day": "Friday",
+      "shift": "PM",
+      "timestamp": "2026-04-10T18:10:43.685Z",
+      "checkedInBy": "Pueblo, Vange",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6239",
+      "volunteerName": "Chapman, John",
+      "hole": 20,
+      "day": "Friday",
+      "shift": "PM",
+      "timestamp": "2026-04-10T18:10:44.336Z",
+      "checkedInBy": "Pueblo, Vange",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8788",
+      "volunteerName": "Collins, Kevin",
+      "hole": 20,
+      "day": "Friday",
+      "shift": "PM",
+      "timestamp": "2026-04-10T18:10:45.003Z",
+      "checkedInBy": "Pueblo, Vange",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7317",
+      "volunteerName": "Gagel, Chester",
+      "hole": 20,
+      "day": "Friday",
+      "shift": "PM",
+      "timestamp": "2026-04-10T18:10:46.568Z",
+      "checkedInBy": "Pueblo, Vange",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9856",
+      "volunteerName": "Hamic, Craig",
+      "hole": 20,
+      "day": "Friday",
+      "shift": "PM",
+      "timestamp": "2026-04-10T18:10:47.268Z",
+      "checkedInBy": "Pueblo, Vange",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9564",
+      "volunteerName": "Hix, 'Winky",
+      "hole": 20,
+      "day": "Friday",
+      "shift": "PM",
+      "timestamp": "2026-04-10T18:10:49.885Z",
+      "checkedInBy": "Pueblo, Vange",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8850",
+      "volunteerName": "Jones, Dietrich",
+      "hole": 20,
+      "day": "Friday",
+      "shift": "PM",
+      "timestamp": "2026-04-10T18:10:50.585Z",
+      "checkedInBy": "Pueblo, Vange",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8899",
+      "volunteerName": "Kalbfleisch, Joe",
+      "hole": 20,
+      "day": "Friday",
+      "shift": "PM",
+      "timestamp": "2026-04-10T18:10:51.253Z",
+      "checkedInBy": "Pueblo, Vange",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8543",
+      "volunteerName": "Lucas, John H.",
+      "hole": 20,
+      "day": "Friday",
+      "shift": "PM",
+      "timestamp": "2026-04-10T18:10:51.903Z",
+      "checkedInBy": "Pueblo, Vange",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8545",
+      "volunteerName": "Mendoza, Ralph",
+      "hole": 20,
+      "day": "Friday",
+      "shift": "PM",
+      "timestamp": "2026-04-10T18:10:53.319Z",
+      "checkedInBy": "Pueblo, Vange",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9574",
+      "volunteerName": "Paine, Danny",
+      "hole": 20,
+      "day": "Friday",
+      "shift": "PM",
+      "timestamp": "2026-04-10T18:10:54.869Z",
+      "checkedInBy": "Pueblo, Vange",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8066",
+      "volunteerName": "Sassaman, David",
+      "hole": 20,
+      "day": "Friday",
+      "shift": "PM",
+      "timestamp": "2026-04-10T18:10:55.520Z",
+      "checkedInBy": "Pueblo, Vange",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8695",
+      "volunteerName": "Stephens, Rayford",
+      "hole": 20,
+      "day": "Friday",
+      "shift": "PM",
+      "timestamp": "2026-04-10T18:10:56.671Z",
+      "checkedInBy": "Pueblo, Vange",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "1182",
+      "volunteerName": "Tidwell, Jim",
+      "hole": 20,
+      "day": "Friday",
+      "shift": "PM",
+      "timestamp": "2026-04-10T18:10:58.171Z",
+      "checkedInBy": "Pueblo, Vange",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7640",
+      "volunteerName": "Williams, Amy",
+      "hole": 20,
+      "day": "Friday",
+      "shift": "PM",
+      "timestamp": "2026-04-10T18:10:58.921Z",
+      "checkedInBy": "Pueblo, Vange",
+      "isAlternate": false
     }
   ],
   "submissions": [
@@ -7435,6 +8275,33 @@
       "day": "Friday",
       "shift": "AM",
       "timestamp": "2026-04-10T15:34:22.531Z",
+      "captainName": "Pueblo, Vange",
+      "notes": "",
+      "checkedInIds": [
+        "7527",
+        "6828",
+        "10573",
+        "6239",
+        "8788",
+        "7317",
+        "9856",
+        "9564",
+        "8850",
+        "8899",
+        "8543",
+        "8545",
+        "9574",
+        "8066",
+        "8695",
+        "1182",
+        "7640"
+      ]
+    },
+    {
+      "hole": 20,
+      "day": "Friday",
+      "shift": "PM",
+      "timestamp": "2026-04-10T18:11:02.072Z",
       "captainName": "Pueblo, Vange",
       "notes": "",
       "checkedInIds": [
@@ -7472,6 +8339,69 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1775845225041",
+      "timestamp": "2026-04-10T18:20:25.041Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1775845150098",
+      "timestamp": "2026-04-10T18:19:10.098Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1775844711662",
+      "timestamp": "2026-04-10T18:11:51.662Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1775844670348",
+      "timestamp": "2026-04-10T18:11:10.348Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1775844662072",
+      "timestamp": "2026-04-10T18:11:02.072Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 20",
+      "details": "Submitted Friday PM for Hole 20"
+    },
+    {
+      "id": "1775844618114",
+      "timestamp": "2026-04-10T18:10:18.114Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1775844081230",
+      "timestamp": "2026-04-10T18:01:21.230Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
     {
       "id": "1775843900580",
       "timestamp": "2026-04-10T17:58:20.580Z",
