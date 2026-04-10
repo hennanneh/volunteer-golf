@@ -2774,9 +2774,6 @@
       },
       "address": "4130 Wycliff Ave, #108 Dallas, TX 75219",
       "volId": "10249",
-      "volunteerPassword": "admin2025",
-      "adminPassword": "admin2025",
-      "adminPasswordSetAt": "2026-04-07T22:22:50.875Z",
       "hatReceived": false,
       "notes": "",
       "assignedHoles": [
@@ -2803,7 +2800,10 @@
       "pairingPreferences": [
         "359"
       ],
-      "noOutingPreference": false
+      "noOutingPreference": false,
+      "adminPassword": "$2b$10$9o9TZHkP9PvBAX70x4onSeBlNDsE8HbBYq1G/oSU69bA1u5b2/R2.",
+      "volunteerPassword": "admin2025",
+      "adminPasswordSetAt": "2026-04-07T22:22:50.875Z"
     },
     {
       "id": "359",
@@ -4702,7 +4702,7 @@
       },
       "address": "2010 Cornell Drive Prosper, TX 75078",
       "volId": "6217",
-      "volunteerPassword": "Ratpack55!!"
+      "volunteerPassword": "$2b$10$.9EerCPU6/FW5N1/QE/wqemf6qz7JqYqbzToD4h2Fkqxb5nYXSeiG"
     },
     {
       "id": "9393",
@@ -7417,6 +7417,16 @@
       "checkedInBy": "Nederostek, Brad",
       "timestamp": "2026-04-10T16:56:18.047Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "111",
+      "volunteerName": "Cary, Ron",
+      "hole": 9,
+      "day": "Friday",
+      "shift": "AM",
+      "timestamp": "2026-04-10T17:58:20.580Z",
+      "checkedInBy": "Edwards, Bill",
+      "isAlternate": false
     }
   ],
   "submissions": [
@@ -7462,6 +7472,42 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1775843900580",
+      "timestamp": "2026-04-10T17:58:20.580Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Cary, Ron",
+      "details": "Checked in for Friday AM on Hole 9"
+    },
+    {
+      "id": "1775843895015",
+      "timestamp": "2026-04-10T17:58:15.015Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1775843882959",
+      "timestamp": "2026-04-10T17:58:02.959Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1775840827804",
+      "timestamp": "2026-04-10T17:07:07.804Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1775840367593",
       "timestamp": "2026-04-10T16:59:27.593Z",
