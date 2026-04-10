@@ -3,6 +3,7 @@ const express = require('express');
 const http = require('http');
 const path = require('path');
 const fs = require('fs');
+const crypto = require('crypto');
 const cookieParser = require('cookie-parser');
 const { Resend } = require('resend');
 const { Server } = require('socket.io');
@@ -185,6 +186,211 @@ const SUPERADMIN = {
   scheduled: {}
 };
 
+// ============================================================================
+// Authentication (Phase 1.1, added 2026-04-10 — see SECURITY.md)
+//
+// Server-side session-based auth. Sessions are stored in memory (Map),
+// keyed by random tokens, set as httpOnly cookies. Each write endpoint is
+// protected by requireAuth(allowedRoles).
+//
+// STRICT_AUTH controls rollout: while false, requests with no valid
+// session log a warning but are still allowed through. Switch to true once
+// all real users have logged in via the new flow at least once.
+// ============================================================================
+
+let STRICT_AUTH = false;  // Set to true after all users have logged in once
+
+const sessions = new Map();  // token -> { userId, email, name, role, portal, createdAt, lastUsed }
+const SESSION_IDLE_MS = 12 * 60 * 60 * 1000;       // 12 hours
+const SESSION_CLEANUP_INTERVAL_MS = 15 * 60 * 1000; // 15 minutes
+
+setInterval(() => {
+  const now = Date.now();
+  let cleaned = 0;
+  for (const [token, sess] of sessions) {
+    if (now - sess.lastUsed > SESSION_IDLE_MS) {
+      sessions.delete(token);
+      cleaned++;
+    }
+  }
+  if (cleaned) console.log('[' + new Date().toISOString() + '] Cleaned ' + cleaned + ' expired sessions');
+}, SESSION_CLEANUP_INTERVAL_MS);
+
+function generateToken() {
+  return crypto.randomBytes(32).toString('hex');
+}
+
+// Map a volunteer record's `type` field to a normalized role string
+function roleForVolunteer(v) {
+  if (!v) return null;
+  if (v.type === 'Admin') return 'admin';
+  if (v.type === 'View Admin') return 'viewAdmin';
+  if (v.type === 'Chairman') return 'chair';
+  if (v.type === 'Asst. Chairman') return 'asstChair';
+  if (v.type === 'Captain') return 'captain';
+  return 'volunteer';
+}
+
+// Validate the password for a volunteer in a given portal context.
+// Phase 1.3 will replace this with bcrypt comparison.
+function checkPassword(volunteer, portal, password) {
+  if (!volunteer || !password) return false;
+  const phoneDigits = (volunteer.phone || '').replace(/\D/g, '').slice(-10);
+
+  if (portal === 'admin') {
+    if (!['Admin', 'View Admin', 'Chairman', 'Asst. Chairman'].includes(volunteer.type)) return false;
+    const stored = volunteer.adminPassword || 'admin2025';
+    return password === stored;
+  }
+  if (portal === 'captain') {
+    if (!['Captain', 'Chairman', 'Asst. Chairman', 'Admin'].includes(volunteer.type)) return false;
+    const stored = volunteer.volunteerPassword || phoneDigits;
+    return password === stored;
+  }
+  if (portal === 'volunteer') {
+    const stored = volunteer.volunteerPassword || phoneDigits;
+    return password === stored;
+  }
+  return false;
+}
+
+// Express middleware factory. allowedRoles is an array of role strings.
+// Pass null to allow any authenticated user.
+function requireAuth(allowedRoles) {
+  return (req, res, next) => {
+    const token = req.cookies && req.cookies.session;
+    let session = null;
+    if (token) {
+      session = sessions.get(token);
+      if (session) {
+        if (Date.now() - session.lastUsed > SESSION_IDLE_MS) {
+          sessions.delete(token);
+          session = null;
+        } else {
+          session.lastUsed = Date.now();
+        }
+      }
+    }
+
+    if (session) {
+      req.user = session;
+      if (allowedRoles && !allowedRoles.includes(session.role)) {
+        const ip = req.headers['x-real-ip'] || req.headers['x-forwarded-for'] || req.ip || 'unknown';
+        console.warn('[' + new Date().toISOString() + '] AUTH FORBIDDEN ' + req.method + ' ' + req.path + '  user=' + session.name + '  role=' + session.role + '  needed=' + allowedRoles.join('|') + '  ip=' + ip);
+        return res.status(403).json({ success: false, error: 'Forbidden: this action requires role ' + allowedRoles.join(' or ') });
+      }
+      return next();
+    }
+
+    // No valid session
+    const ip = req.headers['x-real-ip'] || req.headers['x-forwarded-for'] || req.ip || 'unknown';
+    if (STRICT_AUTH) {
+      console.warn('[' + new Date().toISOString() + '] AUTH REJECTED ' + req.method + ' ' + req.path + '  ip=' + ip);
+      return res.status(401).json({ success: false, error: 'Authentication required - please log in' });
+    } else {
+      // Fallback mode: log warning but allow through
+      console.warn('[' + new Date().toISOString() + '] UNAUTH FALLBACK ALLOWED ' + req.method + ' ' + req.path + '  ip=' + ip + '  (would be rejected once STRICT_AUTH is enabled)');
+      req.user = { role: 'unauthenticated', _fallback: true, name: 'unauth-' + ip, userId: null };
+      return next();
+    }
+  };
+}
+
+// POST /api/login — verify password, issue session
+app.post('/api/login', (req, res) => {
+  const { email, password, portal } = req.body || {};
+  const ip = req.headers['x-real-ip'] || req.headers['x-forwarded-for'] || req.ip || 'unknown';
+
+  if (!email || !password || !portal) {
+    return res.status(400).json({ success: false, error: 'email, password, and portal required' });
+  }
+  if (!['admin', 'captain', 'volunteer'].includes(portal)) {
+    return res.status(400).json({ success: false, error: 'portal must be admin, captain, or volunteer' });
+  }
+
+  const data = loadData(req.demoMode);
+  if (!data.volunteers) data.volunteers = [];
+
+  // Ensure superadmin is always considered (even if not on disk)
+  if (!data.volunteers.some(v => v.email && v.email.toLowerCase() === SUPERADMIN.email)) {
+    data.volunteers.push({ id: 'superadmin', ...SUPERADMIN });
+  }
+
+  const emailLc = String(email).trim().toLowerCase();
+  const volunteer = data.volunteers.find(v => v.email && v.email.toLowerCase() === emailLc);
+
+  if (!volunteer || !checkPassword(volunteer, portal, password)) {
+    console.warn('[' + new Date().toISOString() + '] LOGIN FAILED  email=' + emailLc + '  portal=' + portal + '  ip=' + ip);
+    // Generic error to avoid leaking which emails exist
+    return res.status(401).json({ success: false, error: 'Invalid email or password' });
+  }
+
+  const role = roleForVolunteer(volunteer);
+  const token = generateToken();
+  sessions.set(token, {
+    userId: volunteer.id,
+    email: volunteer.email,
+    name: volunteer.name,
+    role: role,
+    portal: portal,
+    createdAt: Date.now(),
+    lastUsed: Date.now()
+  });
+
+  res.cookie('session', token, {
+    httpOnly: true,
+    secure: true,
+    sameSite: 'lax',
+    maxAge: SESSION_IDLE_MS,
+    path: '/'
+  });
+
+  console.log('[' + new Date().toISOString() + '] LOGIN OK  user=' + volunteer.name + '  role=' + role + '  portal=' + portal + '  ip=' + ip);
+  res.json({
+    success: true,
+    user: {
+      id: volunteer.id,
+      name: volunteer.name,
+      email: volunteer.email,
+      role: role
+    }
+  });
+});
+
+// POST /api/logout — clear session
+app.post('/api/logout', (req, res) => {
+  const token = req.cookies && req.cookies.session;
+  if (token) {
+    const sess = sessions.get(token);
+    if (sess) {
+      console.log('[' + new Date().toISOString() + '] LOGOUT  user=' + sess.name);
+    }
+    sessions.delete(token);
+  }
+  res.clearCookie('session');
+  res.json({ success: true });
+});
+
+// GET /api/whoami — return current session info or null
+app.get('/api/whoami', (req, res) => {
+  const token = req.cookies && req.cookies.session;
+  if (!token) return res.json({ user: null });
+  const session = sessions.get(token);
+  if (!session || Date.now() - session.lastUsed > SESSION_IDLE_MS) {
+    if (session) sessions.delete(token);
+    return res.json({ user: null });
+  }
+  session.lastUsed = Date.now();
+  res.json({
+    user: {
+      id: session.userId,
+      name: session.name,
+      email: session.email,
+      role: session.role
+    }
+  });
+});
+
 app.get('/api/data', (req, res) => {
   const data = loadData(req.demoMode);
 
@@ -203,7 +409,7 @@ app.get('/api/data', (req, res) => {
   res.json({ success: true, data: data, demoMode: req.demoMode });
 });
 
-app.post('/api/data', (req, res) => {
+app.post('/api/data', requireAuth(['admin', 'chair', 'asstChair', 'captain', 'volunteer']), (req, res) => {
   const data = req.body;
   const socketId = req.headers['x-socket-id'];
   const clientIp = req.headers['x-real-ip'] || req.headers['x-forwarded-for'] || req.ip || 'unknown';
@@ -265,7 +471,7 @@ app.post('/api/data', (req, res) => {
   });
 });
 
-app.post('/api/checkin', (req, res) => {
+app.post('/api/checkin', requireAuth(['admin', 'chair', 'asstChair', 'captain']), (req, res) => {
   const { volunteerId, volunteerName, hole, day, shift, checkedInBy, action, isAlternate } = req.body;
   const socketId = req.headers['x-socket-id'];
 
@@ -323,7 +529,7 @@ app.get('/api/archives', (req, res) => {
   res.json({ success: true, archives: archives });
 });
 
-app.post('/api/archives', (req, res) => {
+app.post('/api/archives', requireAuth(['admin']), (req, res) => {
   if (req.demoMode) {
     return res.json({ success: true, demoMode: true, message: 'Archives disabled in demo mode' });
   }
@@ -356,7 +562,7 @@ app.post('/api/archives', (req, res) => {
   }
 });
 
-app.post('/api/email', async (req, res) => {
+app.post('/api/email', requireAuth(['admin', 'chair', 'asstChair']), async (req, res) => {
   if (req.demoMode) {
     return res.json({ success: true, demoMode: true, message: 'Emails disabled in demo mode' });
   }
@@ -389,7 +595,7 @@ app.post('/api/email', async (req, res) => {
   }
 });
 
-app.post('/api/hat-delivered', (req, res) => {
+app.post('/api/hat-delivered', requireAuth(['admin', 'chair', 'asstChair', 'captain']), (req, res) => {
   const { volunteerId } = req.body;
 
   if (!volunteerId) {
