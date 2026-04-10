@@ -4826,7 +4826,8 @@
         "Sunday PM": true
       },
       "address": "2201 Cains Lane Mansfield, TX 76063",
-      "volId": "214"
+      "volId": "214",
+      "volunteerPassword": "Colonial06"
     },
     {
       "id": "4096",
@@ -7191,6 +7192,33 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1775792215239",
+      "timestamp": "2026-04-10T03:36:55.239Z",
+      "user": "Osiek, Curt",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1775792178737",
+      "timestamp": "2026-04-10T03:36:18.737Z",
+      "user": "Osiek, Curt",
+      "userType": "Captain",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed captain password"
+    },
+    {
+      "id": "1775792124562",
+      "timestamp": "2026-04-10T03:35:24.562Z",
+      "user": "Osiek, Curt",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1775787523539",
       "timestamp": "2026-04-10T02:18:43.539Z",
