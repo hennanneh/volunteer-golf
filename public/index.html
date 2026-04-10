@@ -1379,9 +1379,10 @@
       if (!appData.activityLog) appData.activityLog = [];
       appData.activityLog.unshift(entry);
 
-      // Keep last 1000 entries to prevent unbounded growth
-      if (appData.activityLog.length > 1000) {
-        appData.activityLog = appData.activityLog.slice(0, 1000);
+      // Keep last 200 entries to prevent unbounded growth and to keep the
+      // broadcast payload small (every save sends the entire dataset).
+      if (appData.activityLog.length > 200) {
+        appData.activityLog = appData.activityLog.slice(0, 200);
       }
 
       saveData();
@@ -1763,28 +1764,39 @@
       const otherVolunteers = appData.volunteers.filter(v => v.id !== vol.id).sort((a, b) => a.name.localeCompare(b.name));
 
       const noPreference = vol.noOutingPreference || false;
+      const notAttending = vol.notAttendingOuting || false;
 
       return `
         <div>
-          <label style="display:flex;align-items:center;gap:8px;margin-bottom:15px;cursor:pointer">
-            <input type="checkbox" ${noPreference ? 'checked' : ''} onchange="updateNoOutingPreference(this.checked)" style="width:18px;height:18px;cursor:pointer">
-            <span style="font-size:14px;color:#333">No preference - pair me with anyone</span>
+          <label style="display:flex;align-items:center;gap:8px;margin-bottom:12px;cursor:pointer">
+            <input type="checkbox" ${notAttending ? 'checked' : ''} onchange="updateNotAttendingOuting(this.checked)" style="width:18px;height:18px;cursor:pointer">
+            <span style="font-size:14px;color:#333">I will not be attending the outing</span>
           </label>
-          ${noPreference ? `
-            <p style="font-size:13px;color:#666;font-style:italic">You'll be paired with other volunteers who have no preference.</p>
+          ${notAttending ? `
+            <p style="font-size:13px;color:#666;font-style:italic">You're marked as not attending. Uncheck above if your plans change.</p>
           ` : `
-            ${[0, 1, 2].map(i => `
-              <div style="margin-bottom:10px">
-                <label style="font-size:12px;color:#666;display:block;margin-bottom:4px">Choice ${i + 1}</label>
-                <select onchange="updatePairingPreference(${i}, this.value)" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:6px;font-size:14px">
-                  <option value="">-- Select a person --</option>
-                  ${otherVolunteers.map(v => `
-                    <option value="${v.id}" ${pairings[i] === v.id ? 'selected' : ''}>${v.name}${v.hole ? ' (Hole #' + v.hole + ')' : ''}</option>
-                  `).join('')}
-                </select>
-              </div>
-            `).join('')}
-            <p style="font-size:11px;color:#999;margin-top:10px">Your preferences will be considered when forming groups for the volunteer outing.</p>
+            <label style="display:flex;align-items:center;gap:8px;margin-bottom:15px;cursor:pointer">
+              <input type="checkbox" ${noPreference ? 'checked' : ''} onchange="updateNoOutingPreference(this.checked)" style="width:18px;height:18px;cursor:pointer">
+              <span style="font-size:14px;color:#333">No preference - pair me with anyone</span>
+            </label>
+            ${noPreference ? `
+              <p style="font-size:13px;color:#666;font-style:italic">You'll be paired with other volunteers who have no preference.</p>
+            ` : `
+              ${[0, 1, 2].map(i => `
+                <div style="margin-bottom:10px">
+                  <label style="font-size:12px;color:#666;display:block;margin-bottom:4px">Choice ${i + 1}</label>
+                  <select onchange="updatePairingPreference(${i}, this.value)" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:6px;font-size:14px">
+                    <option value="">-- Select a person --</option>
+                    ${otherVolunteers.map(v => `
+                      <option value="${v.id}" ${pairings[i] === v.id ? 'selected' : ''}>${v.name}${v.hole ? ' (Hole #' + v.hole + ')' : ''}</option>
+                    `).join('')}
+                  </select>
+                </div>
+              `).join('')}
+            `}
+            <p style="font-size:11px;color:#999;margin-top:10px">Your preferences will be considered when forming groups for the volunteer outing.
+              You can update your selections anytime${appData.settings.tournamentEndDate ? ' through ' + new Date(appData.settings.tournamentEndDate + 'T00:00:00').toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' }) : ''}.
+            </p>
           `}
         </div>
       `;
@@ -1813,6 +1825,18 @@
         appData.volunteers[volIdx].pairingPreferences[index] = volunteerId || null;
         volunteerAuth.pairingPreferences = appData.volunteers[volIdx].pairingPreferences;
         await saveData();
+        showToast('Saved!');
+      }
+    }
+
+    async function updateNotAttendingOuting(checked) {
+      const volIdx = appData.volunteers.findIndex(v => v.id === volunteerAuth.id);
+      if (volIdx >= 0) {
+        appData.volunteers[volIdx].notAttendingOuting = checked;
+        volunteerAuth.notAttendingOuting = checked;
+        await saveData();
+        showToast('Saved!');
+        render();
       }
     }
 
@@ -1822,6 +1846,7 @@
         appData.volunteers[volIdx].noOutingPreference = checked;
         volunteerAuth.noOutingPreference = checked;
         await saveData();
+        showToast('Saved!');
         render();
       }
     }
@@ -2171,6 +2196,8 @@
       render();
     }
 
+    let pendingImportFile = null;
+
     function renderImport() {
       return `
         <div class="import-section">
@@ -2193,7 +2220,7 @@
               <li><strong>Scheduled Monday AM</strong>, etc. - 1 if scheduled</li>
             </ul>
             <label class="file-upload">
-              <input type="file" accept=".csv" id="fileInput" onchange="handleFileUpload(this)">
+              <input type="file" accept=".csv" id="fileInput" onchange="handleFileSelect(this)">
               <div class="file-upload-icon">📄</div>
               <div class="file-upload-text">Click to upload CSV file</div>
             </label>
@@ -2204,18 +2231,137 @@
               </div>
             ` : ''}
           </div>
+        </div>
+        ${pendingImportFile ? renderImportModeModal() : ''}
+      `;
+    }
 
-          <div class="import-card" style="margin-top:20px">
-            <h3 style="font-size:16px;color:#1a472a;margin-bottom:15px">Update Existing Volunteers</h3>
-            <p>Upload a CSV with <strong>Name</strong> column plus any fields to update: <em>Email, Phone, Type, Hole, Years Worked, Hat, Hat Received, Notes, Assigned Holes, Scheduled shifts</em>. Names must match exactly.</p>
-            <label class="file-upload" style="border-color:#ff9800;background:#fffbf5">
-              <input type="file" accept=".csv" id="updateFileInput" onchange="handleUpdateUpload(this)">
-              <div class="file-upload-icon">🔄</div>
-              <div class="file-upload-text">Click to upload update CSV</div>
-            </label>
+    function renderImportModeModal() {
+      return `
+        <div class="modal-overlay" onclick="cancelImport(event)">
+          <div class="modal" onclick="event.stopPropagation()" style="max-width:480px">
+            <h3 style="margin-bottom:16px">How should this file be imported?</h3>
+            <div style="display:flex;flex-direction:column;gap:12px">
+              <button onclick="executeImport('update')" style="padding:16px 20px;background:#1a472a;color:white;border:none;border-radius:8px;font-size:15px;cursor:pointer;text-align:left">
+                <strong>Update / Add</strong>
+                <div style="font-size:12px;margin-top:4px;opacity:0.85">Match existing volunteers by name and update their info. New names will be added.</div>
+              </button>
+              <button onclick="executeImport('replace')" style="padding:16px 20px;background:white;color:#c62828;border:2px solid #c62828;border-radius:8px;font-size:15px;cursor:pointer;text-align:left">
+                <strong>Replace All</strong>
+                <div style="font-size:12px;margin-top:4px;color:#666">Delete all existing volunteers, check-ins, and submissions, then load only what's in this file.</div>
+              </button>
+            </div>
+            <button onclick="cancelImport()" style="margin-top:16px;padding:10px;width:100%;background:#f5f5f5;border:1px solid #ddd;border-radius:6px;font-size:14px;cursor:pointer;color:#666">Cancel</button>
           </div>
         </div>
       `;
+    }
+
+    function handleFileSelect(input) {
+      const file = input.files[0];
+      if (!file) return;
+      pendingImportFile = file;
+      input.value = '';
+      render();
+    }
+
+    function cancelImport(e) {
+      if (e && e.target !== e.currentTarget) return;
+      pendingImportFile = null;
+      render();
+    }
+
+    function executeImport(mode) {
+      const file = pendingImportFile;
+      pendingImportFile = null;
+      if (!file) return;
+
+      if (mode === 'replace') {
+        if (!confirm('⚠️ WARNING: This will permanently delete ALL existing volunteers, check-ins, and shift submissions. This cannot be undone.\n\nAre you sure you want to replace everything?')) {
+          render();
+          return;
+        }
+      }
+
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        try {
+          const text = e.target.result;
+          const rows = parseCSV(text);
+          const headers = rows[0];
+
+          const nameCol = headers.findIndex(h => h.includes('NamePK') || h === 'Name' || h.includes('Name'));
+          if (nameCol < 0) {
+            alert('CSV must have a "Name" column');
+            return;
+          }
+
+          if (mode === 'replace') {
+            handleImportReplace(rows, headers, nameCol);
+          } else {
+            handleImportUpdate(rows, headers, nameCol);
+          }
+        } catch (err) {
+          alert('Error importing file: ' + err.message);
+        }
+      };
+      reader.readAsText(file);
+    }
+
+    function handleImportReplace(rows, headers, nameCol) {
+      const typeCol = headers.findIndex(h => h.includes('Volunteer Type') || h === 'Type');
+      const holeCol = headers.findIndex(h => h.includes('Assigned Location') || h === 'Hole');
+      const phoneCol = headers.findIndex(h => h.includes('Phone_Cell') || h.includes('Cell'));
+      const idCol = headers.findIndex(h => h.includes('Vol ID') || h === 'ID');
+      const yearsCol = headers.findIndex(h => h.includes('Years Worked') || h === 'Years' || h.includes('Years_Worked'));
+      const hatCol = headers.findIndex(h => h.toLowerCase() === 'hat' || h.toLowerCase().includes('hat'));
+      const emailCol = headers.findIndex(h => h.toLowerCase() === 'email' || h.toLowerCase().includes('email'));
+      const notesCol = headers.findIndex(h => h.toLowerCase() === 'notes');
+      const addressCol = headers.findIndex(h => h.toLowerCase() === 'address');
+      const volIdCol = headers.findIndex(h => h.toLowerCase() === 'vol id' || h.toLowerCase() === 'volid');
+      const hatReceivedCol = headers.findIndex(h => h.toLowerCase() === 'hat received' || h.toLowerCase() === 'hatreceived');
+      const assignedHolesCol = headers.findIndex(h => h.toLowerCase() === 'assigned holes' || h.toLowerCase() === 'assignedholes');
+
+      const volunteers = rows.slice(1).filter(r => r.length > 1 && r[nameCol]).map((row, idx) => {
+        const scheduled = {};
+        DAYS.forEach(day => {
+          SHIFTS.forEach(shift => {
+            const colName = `Scheduled ${day} ${shift}`;
+            const colIdx = headers.findIndex(h => h === colName);
+            if (colIdx >= 0 && row[colIdx] === '1') {
+              scheduled[`${day} ${shift}`] = true;
+            }
+          });
+        });
+
+        const vol = {
+          id: idCol >= 0 && row[idCol] ? row[idCol] : String(idx + 1),
+          name: row[nameCol] || '',
+          type: typeCol >= 0 ? row[typeCol] : 'Volunteer',
+          hole: holeCol >= 0 ? parseInt(row[holeCol]) || 0 : 0,
+          phone: phoneCol >= 0 ? row[phoneCol] : '',
+          email: emailCol >= 0 ? row[emailCol] || '' : '',
+          yearsWorked: yearsCol >= 0 ? parseInt(row[yearsCol]) || 0 : 0,
+          hat: hatCol >= 0 ? row[hatCol] : '',
+          scheduled
+        };
+        if (notesCol >= 0 && row[notesCol]) vol.notes = row[notesCol];
+        if (addressCol >= 0 && row[addressCol]) vol.address = row[addressCol];
+        if (volIdCol >= 0 && row[volIdCol]) vol.volId = row[volIdCol];
+        if (hatReceivedCol >= 0 && row[hatReceivedCol] && (row[hatReceivedCol] === '1' || row[hatReceivedCol].toLowerCase() === 'yes' || row[hatReceivedCol].toLowerCase() === 'true')) vol.hatReceived = true;
+        if (assignedHolesCol >= 0 && row[assignedHolesCol]) {
+          vol.assignedHoles = row[assignedHolesCol].split(';').map(h => parseInt(h.trim())).filter(h => !isNaN(h));
+        }
+        return vol;
+      });
+
+      appData.volunteers = volunteers;
+      appData.checkIns = [];
+      appData.submissions = [];
+      logActivity('import', '', 'Replaced all data - imported ' + volunteers.length + ' volunteers from CSV');
+      saveData();
+      alert('Successfully replaced all data with ' + volunteers.length + ' volunteers.');
+      render();
     }
     
     // Volunteer editing state
@@ -2939,6 +3085,7 @@
         { id: 'hat-qr-codes', name: 'Hat QR Codes', desc: 'Print all volunteer QR codes for hat pickup' },
         { id: 'vols-per-hole', name: 'Volunteers per Hole', desc: 'Captain and volunteer counts by hole' },
         { id: 'assists-per-hole', name: 'Assists per Hole', desc: 'Asst. Chairman assignments by hole' },
+        { id: 'outing-preferences', name: 'Outing Preferences', desc: 'Volunteer pairing preferences for the golf outing' },
         { id: 'custom', name: 'Custom Report', desc: 'Build your own report with custom columns and filters' }
       ];
 
@@ -3021,7 +3168,7 @@
     }
 
     function renderReportFilters(isCaptainView, captainHole) {
-      if (currentReport === 'hat-qr-codes' || currentReport === 'vols-per-hole' || currentReport === 'assists-per-hole') return ''; // No filters needed
+      if (currentReport === 'hat-qr-codes' || currentReport === 'vols-per-hole' || currentReport === 'assists-per-hole' || currentReport === 'outing-preferences') return ''; // No filters needed
       const showHoleFilter = !isCaptainView && ['volunteer-totals', 'hole-roster'].includes(currentReport);
       const showDayFilter = currentReport === 'hole-roster';
       const isHoleRoster = currentReport === 'hole-roster';
@@ -3088,6 +3235,8 @@
           return buildVolsPerHoleTable();
         case 'assists-per-hole':
           return buildAssistsPerHoleTable();
+        case 'outing-preferences':
+          return renderOutingPreferencesReport();
         case 'custom':
           return renderCustomReport();
         default:
@@ -3305,6 +3454,8 @@
                   ${days.map(d => `
                     <th style="text-align:center;padding:12px;border:1px solid #ccc" colspan="2">${d.slice(0, 3)}</th>
                   `).join('')}
+                  <th style="text-align:center;padding:12px;border:1px solid #ccc;color:#4caf50;font-weight:600;font-size:16px" title="Checked In">✓</th>
+                  <th style="text-align:center;padding:12px;border:1px solid #ccc;color:#1a472a;font-weight:600;font-size:16px" title="Total Scheduled">○</th>
                 </tr>
                 <tr style="background:#f8f9fa">
                   <th style="border:1px solid #ccc"></th>
@@ -3314,6 +3465,8 @@
                     <th style="text-align:center;padding:6px;border:1px solid #ccc;font-size:11px;font-weight:normal;color:#666">AM</th>
                     <th style="text-align:center;padding:6px;border:1px solid #ccc;font-size:11px;font-weight:normal;color:#666">PM</th>
                   `).join('')}
+                  <th style="border:1px solid #ccc"></th>
+                  <th style="border:1px solid #ccc"></th>
                 </tr>
               </thead>
               <tbody>
@@ -3325,6 +3478,8 @@
                       return `<td style="text-align:center;padding:10px 6px;border:1px solid #ccc;color:#1a472a">${shiftTotals[key]}</td>`;
                     }).join('')
                   ).join('')}
+                  <td style="border:1px solid #ccc"></td>
+                  <td style="border:1px solid #ccc"></td>
                 </tr>
                 ${allVolunteers.map(v => {
                   const isMovedAway = v.originalHole === holeNumber && v.hole !== holeNumber;
@@ -3360,6 +3515,25 @@
                         return `<td style="text-align:center;padding:10px 6px;border:1px solid #ccc;color:${color};font-weight:600">${icon}</td>`;
                       }).join('')
                     ).join('')}
+                    ${(() => {
+                      let checkedInCount = 0;
+                      let scheduledCount = 0;
+                      days.forEach(day => {
+                        SHIFTS.forEach(shift => {
+                          const key = day + ' ' + shift;
+                          if (v.scheduled && v.scheduled[key]) {
+                            scheduledCount++;
+                            if (appData.checkIns.some(c => c.volunteerId === v.id && c.day === day && c.shift === shift)) {
+                              checkedInCount++;
+                            }
+                          }
+                        });
+                      });
+                      const ciColor = isMovedAway ? '#ccc' : '#4caf50';
+                      const scColor = isMovedAway ? '#ccc' : '#1a472a';
+                      return `<td style="text-align:center;padding:10px 6px;border:1px solid #ccc;color:${ciColor};font-weight:600">${checkedInCount}</td>
+                              <td style="text-align:center;padding:10px 6px;border:1px solid #ccc;color:${scColor};font-weight:600">${scheduledCount}</td>`;
+                    })()}
                   </tr>
                 `}).join('')}
               </tbody>
@@ -3406,6 +3580,8 @@
     }
 
     let hatQRFilter = { hat: 'all', received: 'pending' };
+    let outingReportSort = 'name'; // 'name' or 'hole'
+    let outingReportStatus = 'all'; // 'all', 'has-preferences', 'no-preference', 'not-responded', 'not-attending'
 
     function renderHatQRCodesReport() {
       // Filter volunteers
@@ -3591,6 +3767,110 @@
         </html>
       `);
       printWindow.document.close();
+    }
+
+    function getOutingStatus(v) {
+      const hasPicks = v.pairingPreferences && v.pairingPreferences.some(p => p);
+      if (v.notAttendingOuting) return 'not-attending';
+      if (hasPicks) return 'has-preferences';
+      if (v.noOutingPreference) return 'no-preference';
+      return 'not-responded';
+    }
+
+    function renderOutingPreferencesReport() {
+      const allVolunteers = [...appData.volunteers];
+
+      const notAttending = allVolunteers.filter(v => getOutingStatus(v) === 'not-attending');
+      const withPreferences = allVolunteers.filter(v => getOutingStatus(v) === 'has-preferences');
+      const noPreference = allVolunteers.filter(v => getOutingStatus(v) === 'no-preference');
+      const notResponded = allVolunteers.filter(v => getOutingStatus(v) === 'not-responded');
+
+      // Filter by status
+      let volunteers = outingReportStatus === 'all' ? allVolunteers :
+        allVolunteers.filter(v => getOutingStatus(v) === outingReportStatus);
+
+      // Sort
+      if (outingReportSort === 'hole') {
+        volunteers.sort((a, b) => (a.hole || 999) - (b.hole || 999) || a.name.localeCompare(b.name));
+      } else {
+        volunteers.sort((a, b) => a.name.localeCompare(b.name));
+      }
+
+      const getVolName = (id) => {
+        const v = appData.volunteers.find(v => v.id === id);
+        return v ? v.name : '';
+      };
+
+      const sortArrow = (col) => outingReportSort === col ? ' ▼' : '';
+      const thSortStyle = 'cursor:pointer;user-select:none;';
+
+      return `
+        <div>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:20px">
+            <div onclick="outingReportStatus=outingReportStatus==='has-preferences'||outingReportStatus==='no-preference'?'all':'has-preferences';render()" style="background:${outingReportStatus === 'has-preferences' || outingReportStatus === 'no-preference' ? '#1a472a' : '#f0f7f0'};border-radius:8px;padding:12px 18px;text-align:center;cursor:pointer">
+              <div style="font-size:24px;font-weight:700;color:${outingReportStatus === 'has-preferences' || outingReportStatus === 'no-preference' ? 'white' : '#1a472a'}">${withPreferences.length + noPreference.length}</div>
+              <div style="font-size:12px;color:${outingReportStatus === 'has-preferences' || outingReportStatus === 'no-preference' ? '#ccc' : '#666'}">Responded</div>
+            </div>
+            <div onclick="outingReportStatus=outingReportStatus==='not-responded'?'all':'not-responded';render()" style="background:${outingReportStatus === 'not-responded' ? '#856404' : '#fff3cd'};border-radius:8px;padding:12px 18px;text-align:center;cursor:pointer">
+              <div style="font-size:24px;font-weight:700;color:${outingReportStatus === 'not-responded' ? 'white' : '#856404'}">${notResponded.length}</div>
+              <div style="font-size:12px;color:${outingReportStatus === 'not-responded' ? '#ccc' : '#666'}">Not Responded</div>
+            </div>
+            <div onclick="outingReportStatus=outingReportStatus==='not-attending'?'all':'not-attending';render()" style="background:${outingReportStatus === 'not-attending' ? '#721c24' : '#f8d7da'};border-radius:8px;padding:12px 18px;text-align:center;cursor:pointer">
+              <div style="font-size:24px;font-weight:700;color:${outingReportStatus === 'not-attending' ? 'white' : '#721c24'}">${notAttending.length}</div>
+              <div style="font-size:12px;color:${outingReportStatus === 'not-attending' ? '#ccc' : '#666'}">Not Attending</div>
+            </div>
+            <div onclick="outingReportStatus='all';render()" style="background:${outingReportStatus === 'all' ? '#333' : '#f8f9fa'};border-radius:8px;padding:12px 18px;text-align:center;cursor:pointer">
+              <div style="font-size:24px;font-weight:700;color:${outingReportStatus === 'all' ? 'white' : '#333'}">${allVolunteers.length}</div>
+              <div style="font-size:12px;color:${outingReportStatus === 'all' ? '#ccc' : '#666'}">Total</div>
+            </div>
+          </div>
+
+          <table style="width:100%;border-collapse:collapse;font-size:14px;border:1px solid #ccc">
+            <thead>
+              <tr style="background:#f8f9fa">
+                <th onclick="outingReportSort='name';render()" style="text-align:left;padding:12px;border:1px solid #ccc;${thSortStyle}">Volunteer${sortArrow('name')}</th>
+                <th onclick="outingReportSort='hole';render()" style="text-align:left;padding:12px;border:1px solid #ccc;${thSortStyle}">Hole${sortArrow('hole')}</th>
+                <th style="text-align:left;padding:12px;border:1px solid #ccc">Status</th>
+                <th style="text-align:left;padding:12px;border:1px solid #ccc">Choice 1</th>
+                <th style="text-align:left;padding:12px;border:1px solid #ccc">Choice 2</th>
+                <th style="text-align:left;padding:12px;border:1px solid #ccc">Choice 3</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${volunteers.map(v => {
+                const prefs = v.pairingPreferences || [];
+                const hasPicks = prefs.some(p => p);
+                const status = getOutingStatus(v);
+                let statusLabel = '';
+                let statusStyle = '';
+                if (status === 'not-attending') {
+                  statusLabel = 'Not Attending';
+                  statusStyle = 'color:#721c24;background:#f8d7da;';
+                } else if (status === 'has-preferences') {
+                  statusLabel = 'Has Preferences';
+                  statusStyle = 'color:#1a472a;background:#f0f7f0;';
+                } else if (status === 'no-preference') {
+                  statusLabel = 'No Preference';
+                  statusStyle = 'color:#0c5460;background:#d1ecf1;';
+                } else {
+                  statusLabel = 'Not Responded';
+                  statusStyle = 'color:#856404;background:#fff3cd;';
+                }
+                return `
+                  <tr>
+                    <td style="padding:10px 12px;border:1px solid #ccc">${v.name}</td>
+                    <td style="padding:10px 12px;border:1px solid #ccc;text-align:center">${v.hole || '-'}</td>
+                    <td style="padding:10px 12px;border:1px solid #ccc"><span style="padding:3px 8px;border-radius:4px;font-size:12px;font-weight:600;${statusStyle}">${statusLabel}</span></td>
+                    <td style="padding:10px 12px;border:1px solid #ccc;color:${hasPicks ? '#333' : '#ccc'}">${hasPicks && prefs[0] ? getVolName(prefs[0]) : '-'}</td>
+                    <td style="padding:10px 12px;border:1px solid #ccc;color:${hasPicks ? '#333' : '#ccc'}">${hasPicks && prefs[1] ? getVolName(prefs[1]) : '-'}</td>
+                    <td style="padding:10px 12px;border:1px solid #ccc;color:${hasPicks ? '#333' : '#ccc'}">${hasPicks && prefs[2] ? getVolName(prefs[2]) : '-'}</td>
+                  </tr>
+                `;
+              }).join('')}
+            </tbody>
+          </table>
+        </div>
+      `;
     }
 
     function renderCustomReport() {
@@ -4316,7 +4596,7 @@
 
       if (volsPerHoleOpen) {
         volsPerHole += '<div style="display:flex;justify-content:flex-end;margin-bottom:15px">' +
-          '<button onclick="reportFilters.report=\'hole-roster\';reportFilters.hole=\'all-export\';setAdminTab(\'reports\')" style="background:#1a472a;color:white;border:none;padding:10px 20px;border-radius:6px;cursor:pointer;font-size:13px;font-weight:500">View Full Roster</button>' +
+          '<button onclick="currentReport=\'hole-roster\';reportFilters.hole=\'all-export\';setAdminTab(\'reports\')" style="background:#1a472a;color:white;border:none;padding:10px 20px;border-radius:6px;cursor:pointer;font-size:13px;font-weight:500">View Full Roster</button>' +
           '</div>';
         volsPerHole += buildVolsPerHoleTable();
       }
@@ -5657,7 +5937,7 @@
     }
 
     function clearAllData() {
-      appData = { ...defaultData };
+      appData = JSON.parse(JSON.stringify(defaultData));
       saveData();
       render();
       alert('All tournament data has been cleared.');
@@ -5689,14 +5969,17 @@
 
       const volunteer = appData.volunteers.find(v => v.id === volunteerId);
       const volunteerName = volunteer ? volunteer.name : 'Unknown';
+      const isAlternate = !(volunteer && volunteer.scheduled && volunteer.scheduled[`${selectedDay} ${selectedShift}`]);
 
+      // Optimistic local update so the UI feels instant
+      let snapshot;
       if (existing) {
+        snapshot = appData.checkIns;
         appData.checkIns = appData.checkIns.filter(c =>
           !(c.volunteerId === volunteerId && c.day === selectedDay && c.shift === selectedShift && c.hole === activeHole)
         );
-        // Log check-out
-        logActivity('check-out', volunteerName, 'Checked out for ' + selectedDay + ' ' + selectedShift + ' on Hole ' + activeHole);
       } else {
+        snapshot = appData.checkIns.slice();
         appData.checkIns.push({
           volunteerId,
           volunteerName: volunteerName,
@@ -5705,14 +5988,40 @@
           shift: selectedShift,
           timestamp: new Date().toISOString(),
           checkedInBy: captainAuth.name,
-          isAlternate: !(volunteer && volunteer.scheduled && volunteer.scheduled[`${selectedDay} ${selectedShift}`])
+          isAlternate: isAlternate
         });
-        // Log check-in
-        logActivity('check-in', volunteerName, 'Checked in for ' + selectedDay + ' ' + selectedShift + ' on Hole ' + activeHole);
       }
-
-      saveData();
       render();
+
+      // Atomic single-checkin endpoint — server holds the mutex, broadcasts
+      // only the small checkIn/checkOut event, and never rewrites the full
+      // dataset. Avoids the lost-checkin race when many captains are checking
+      // people in simultaneously.
+      fetch('/api/checkin', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'X-Socket-ID': (socket && socket.id) || '' },
+        body: JSON.stringify({
+          action: existing ? 'remove' : 'add',
+          volunteerId,
+          volunteerName,
+          hole: activeHole,
+          day: selectedDay,
+          shift: selectedShift,
+          checkedInBy: captainAuth.name,
+          isAlternate: isAlternate
+        })
+      }).then(function(r) {
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        return r.json();
+      }).then(function(result) {
+        if (!result || !result.success) throw new Error(result && result.error || 'Save failed');
+      }).catch(function(err) {
+        console.error('Check-in save failed:', err);
+        // Roll back the optimistic update
+        appData.checkIns = snapshot;
+        render();
+        showToast('Check-in failed — please try again');
+      });
     }
 
     // Captain editing volunteer schedule functions
@@ -5909,223 +6218,163 @@
       }
     }
 
-    function handleFileUpload(input) {
-      const file = input.files[0];
-      if (!file) return;
-      
-      const reader = new FileReader();
-      reader.onload = function(e) {
-        try {
-          const text = e.target.result;
-          const rows = parseCSV(text);
+    function handleImportUpdate(rows, headers, nameCol) {
+      const typeCol = headers.findIndex(h => h.includes('Volunteer Type') || h === 'Type');
+      const holeCol = headers.findIndex(h => h.includes('Assigned Location') || h === 'Hole');
+      const phoneCol = headers.findIndex(h => h.includes('Phone_Cell') || h.includes('Cell'));
+      const idCol = headers.findIndex(h => h.includes('Vol ID') || h === 'ID');
 
-          const headers = rows[0];
-          const nameCol = headers.findIndex(h => h.includes('NamePK') || h === 'Name');
-          const typeCol = headers.findIndex(h => h.includes('Volunteer Type') || h === 'Type');
-          const holeCol = headers.findIndex(h => h.includes('Assigned Location') || h === 'Hole');
-          const phoneCol = headers.findIndex(h => h.includes('Phone_Cell') || h.includes('Cell'));
-          const idCol = headers.findIndex(h => h.includes('Vol ID') || h === 'ID');
-          const yearsCol = headers.findIndex(h => h.includes('Years Worked') || h === 'Years' || h.includes('Years_Worked'));
-          const hatCol = headers.findIndex(h => h.toLowerCase() === 'hat' || h.toLowerCase().includes('hat'));
-          const emailCol = headers.findIndex(h => h.toLowerCase() === 'email' || h.toLowerCase().includes('email'));
-          const notesCol = headers.findIndex(h => h.toLowerCase() === 'notes');
-          const addressCol = headers.findIndex(h => h.toLowerCase() === 'address');
-          const volIdCol = headers.findIndex(h => h.toLowerCase() === 'vol id' || h.toLowerCase() === 'volid');
-          const hatReceivedCol = headers.findIndex(h => h.toLowerCase() === 'hat received' || h.toLowerCase() === 'hatreceived');
-          const assignedHolesCol = headers.findIndex(h => h.toLowerCase() === 'assigned holes' || h.toLowerCase() === 'assignedholes');
+      // Map CSV headers to volunteer fields
+      const fieldMappings = [
+        { field: 'email', match: h => h.toLowerCase() === 'email' || h.toLowerCase().includes('email'), type: 'string' },
+        { field: 'phone', match: h => h.toLowerCase() === 'phone' || h.toLowerCase().includes('phone'), type: 'string' },
+        { field: 'type', match: h => h.toLowerCase() === 'type' || h.toLowerCase() === 'volunteer type', type: 'string' },
+        { field: 'hole', match: h => h.toLowerCase() === 'hole' || h.toLowerCase().includes('assigned location'), type: 'int' },
+        { field: 'yearsWorked', match: h => h.includes('Years Worked') || h === 'Years' || h.includes('Years_Worked') || h.toLowerCase() === 'years', type: 'int' },
+        { field: 'hat', match: h => h.toLowerCase() === 'hat', type: 'string' },
+        { field: 'hatReceived', match: h => h.toLowerCase() === 'hat received' || h.toLowerCase() === 'hatreceived', type: 'bool' },
+        { field: 'notes', match: h => h.toLowerCase() === 'notes', type: 'string' },
+        { field: 'address', match: h => h.toLowerCase() === 'address', type: 'string' },
+        { field: 'volId', match: h => h.toLowerCase() === 'vol id' || h.toLowerCase() === 'volid', type: 'string' },
+        { field: 'assignedHoles', match: h => h.toLowerCase() === 'assigned holes' || h.toLowerCase() === 'assignedholes', type: 'holesArray' }
+      ];
 
-          const volunteers = rows.slice(1).filter(r => r.length > 1 && r[nameCol]).map((row, idx) => {
-            const scheduled = {};
-            DAYS.forEach(day => {
-              SHIFTS.forEach(shift => {
-                const colName = `Scheduled ${day} ${shift}`;
-                const colIdx = headers.findIndex(h => h === colName);
-                if (colIdx >= 0 && row[colIdx] === '1') {
-                  scheduled[`${day} ${shift}`] = true;
-                }
-              });
-            });
-
-            const vol = {
-              id: idCol >= 0 && row[idCol] ? row[idCol] : String(idx + 1),
-              name: row[nameCol] || '',
-              type: typeCol >= 0 ? row[typeCol] : 'Volunteer',
-              hole: holeCol >= 0 ? parseInt(row[holeCol]) || 0 : 0,
-              phone: phoneCol >= 0 ? row[phoneCol] : '',
-              email: emailCol >= 0 ? row[emailCol] || '' : '',
-              yearsWorked: yearsCol >= 0 ? parseInt(row[yearsCol]) || 0 : 0,
-              hat: hatCol >= 0 ? row[hatCol] : '',
-              scheduled
-            };
-            if (notesCol >= 0 && row[notesCol]) vol.notes = row[notesCol];
-            if (addressCol >= 0 && row[addressCol]) vol.address = row[addressCol];
-            if (volIdCol >= 0 && row[volIdCol]) vol.volId = row[volIdCol];
-            if (hatReceivedCol >= 0 && row[hatReceivedCol] && (row[hatReceivedCol] === '1' || row[hatReceivedCol].toLowerCase() === 'yes' || row[hatReceivedCol].toLowerCase() === 'true')) vol.hatReceived = true;
-            if (assignedHolesCol >= 0 && row[assignedHolesCol]) {
-              vol.assignedHoles = row[assignedHolesCol].split(';').map(h => parseInt(h.trim())).filter(h => !isNaN(h));
-            }
-            return vol;
-          });
-          
-          appData.volunteers = volunteers;
-          logActivity('import', '', 'Imported ' + volunteers.length + ' volunteers from CSV');
-          saveData();
-          alert(`Successfully imported ${volunteers.length} volunteers!`);
-          render();
-        } catch (err) {
-          alert('Error importing file: ' + err.message);
+      // Find which columns exist in the CSV
+      const columnsToUpdate = [];
+      fieldMappings.forEach(mapping => {
+        const colIdx = headers.findIndex(mapping.match);
+        if (colIdx >= 0 && colIdx !== nameCol) {
+          columnsToUpdate.push({ ...mapping, colIdx });
         }
-      };
-      reader.readAsText(file);
-    }
+      });
 
-    function handleUpdateUpload(input) {
-      const file = input.files[0];
-      if (!file) return;
-
-      if (appData.volunteers.length === 0) {
-        alert('No volunteers loaded yet. Please import volunteers first.');
-        input.value = '';
-        return;
-      }
-
-      const reader = new FileReader();
-      reader.onload = function(e) {
-        try {
-          const text = e.target.result;
-          const rows = parseCSV(text);
-
-          const headers = rows[0];
-          const nameCol = headers.findIndex(h => h.includes('NamePK') || h === 'Name' || h.includes('Name'));
-
-          if (nameCol < 0) {
-            alert('CSV must have a "Name" column');
-            return;
+      // Also check for scheduled shift columns
+      const scheduleColumns = [];
+      DAYS.forEach(day => {
+        SHIFTS.forEach(shift => {
+          const colName = `Scheduled ${day} ${shift}`;
+          const colIdx = headers.findIndex(h => h === colName);
+          if (colIdx >= 0) {
+            scheduleColumns.push({ day, shift, colIdx });
           }
+        });
+      });
 
-          // Map CSV headers to volunteer fields
-          const fieldMappings = [
-            { field: 'email', match: h => h.toLowerCase() === 'email' || h.toLowerCase().includes('email'), type: 'string' },
-            { field: 'phone', match: h => h.toLowerCase() === 'phone' || h.toLowerCase().includes('phone'), type: 'string' },
-            { field: 'type', match: h => h.toLowerCase() === 'type' || h.toLowerCase() === 'volunteer type', type: 'string' },
-            { field: 'hole', match: h => h.toLowerCase() === 'hole' || h.toLowerCase().includes('assigned location'), type: 'int' },
-            { field: 'yearsWorked', match: h => h.includes('Years Worked') || h === 'Years' || h.includes('Years_Worked') || h.toLowerCase() === 'years', type: 'int' },
-            { field: 'hat', match: h => h.toLowerCase() === 'hat', type: 'string' },
-            { field: 'hatReceived', match: h => h.toLowerCase() === 'hat received' || h.toLowerCase() === 'hatreceived', type: 'bool' },
-            { field: 'notes', match: h => h.toLowerCase() === 'notes', type: 'string' },
-            { field: 'address', match: h => h.toLowerCase() === 'address', type: 'string' },
-            { field: 'volId', match: h => h.toLowerCase() === 'vol id' || h.toLowerCase() === 'volid', type: 'string' },
-            { field: 'assignedHoles', match: h => h.toLowerCase() === 'assigned holes' || h.toLowerCase() === 'assignedholes', type: 'holesArray' }
-          ];
+      let updated = 0;
+      let added = 0;
+      const fieldCounts = {};
+      columnsToUpdate.forEach(c => fieldCounts[c.field] = 0);
 
-          // Find which columns exist in the CSV
-          const columnsToUpdate = [];
-          fieldMappings.forEach(mapping => {
-            const colIdx = headers.findIndex(mapping.match);
-            if (colIdx >= 0 && colIdx !== nameCol) {
-              columnsToUpdate.push({ ...mapping, colIdx });
-            }
-          });
+      rows.slice(1).filter(r => r.length > 1 && r[nameCol]).forEach(row => {
+        const name = row[nameCol].trim();
+        if (!name) return;
 
-          // Also check for scheduled shift columns
-          const scheduleColumns = [];
-          DAYS.forEach(day => {
-            SHIFTS.forEach(shift => {
-              const colName = `Scheduled ${day} ${shift}`;
-              const colIdx = headers.findIndex(h => h === colName);
-              if (colIdx >= 0) {
-                scheduleColumns.push({ day, shift, colIdx });
-              }
-            });
-          });
+        // Find volunteer by name (case-insensitive, trimmed)
+        const volIdx = appData.volunteers.findIndex(v =>
+          v.name.trim().toLowerCase() === name.toLowerCase()
+        );
 
-          if (columnsToUpdate.length === 0 && scheduleColumns.length === 0) {
-            alert('CSV must have at least one field to update (Email, Phone, Type, Hole, Years Worked, Hat, Hat Received, Notes, Assigned Holes, or Scheduled shifts)');
-            return;
-          }
-
-          let updated = 0;
-          let notFound = [];
-          const fieldCounts = {};
-          columnsToUpdate.forEach(c => fieldCounts[c.field] = 0);
-
-          rows.slice(1).filter(r => r.length > 1 && r[nameCol]).forEach(row => {
-            const name = row[nameCol].trim();
-
-            // Find volunteer by name (case-insensitive, trimmed)
-            const volIdx = appData.volunteers.findIndex(v =>
-              v.name.trim().toLowerCase() === name.toLowerCase()
-            );
-
-            if (volIdx >= 0) {
-              let wasUpdated = false;
-              columnsToUpdate.forEach(col => {
-                const value = row[col.colIdx];
-                if (value !== undefined && value.toString().trim() !== '') {
-                  if (col.type === 'int') {
-                    appData.volunteers[volIdx][col.field] = parseInt(value) || 0;
-                  } else if (col.type === 'bool') {
-                    const v = value.trim().toLowerCase();
-                    appData.volunteers[volIdx][col.field] = (v === '1' || v === 'yes' || v === 'true');
-                  } else if (col.type === 'holesArray') {
-                    appData.volunteers[volIdx][col.field] = value.split(';').map(h => parseInt(h.trim())).filter(h => !isNaN(h));
-                  } else {
-                    appData.volunteers[volIdx][col.field] = value.trim();
-                  }
-                  fieldCounts[col.field]++;
-                  wasUpdated = true;
-                }
-              });
-              // Update scheduled shifts if present
-              if (scheduleColumns.length > 0) {
-                if (!appData.volunteers[volIdx].scheduled) appData.volunteers[volIdx].scheduled = {};
-                scheduleColumns.forEach(sc => {
-                  const val = row[sc.colIdx];
-                  const key = `${sc.day} ${sc.shift}`;
-                  if (val === '1' || (val && val.toLowerCase() === 'yes') || (val && val.toLowerCase() === 'true')) {
-                    appData.volunteers[volIdx].scheduled[key] = true;
-                    wasUpdated = true;
-                  } else if (val === '0' || (val && val.toLowerCase() === 'no') || (val && val.toLowerCase() === 'false')) {
-                    delete appData.volunteers[volIdx].scheduled[key];
-                    wasUpdated = true;
-                  }
-                });
-              }
-              if (wasUpdated) updated++;
-            } else if (name) {
-              notFound.push(name);
-            }
-          });
-
-          saveData();
-
-          let msg = `Updated ${updated} volunteer(s).`;
-          const fieldLabels = { email: 'emails', phone: 'phones', type: 'types', hole: 'holes', yearsWorked: 'years', hat: 'hats', hatReceived: 'hat received flags', notes: 'notes', assignedHoles: 'assigned holes' };
-          if (scheduleColumns.length > 0) {
-            msg += `\n• Schedule shifts updated`;
-          }
+        if (volIdx >= 0) {
+          let wasUpdated = false;
           columnsToUpdate.forEach(col => {
-            if (fieldCounts[col.field] > 0) {
-              msg += `\n• ${fieldCounts[col.field]} ${fieldLabels[col.field] || col.field} updated`;
+            const value = row[col.colIdx];
+            if (value !== undefined && value.toString().trim() !== '') {
+              if (col.type === 'int') {
+                appData.volunteers[volIdx][col.field] = parseInt(value) || 0;
+              } else if (col.type === 'bool') {
+                const v = value.trim().toLowerCase();
+                appData.volunteers[volIdx][col.field] = (v === '1' || v === 'yes' || v === 'true');
+              } else if (col.type === 'holesArray') {
+                appData.volunteers[volIdx][col.field] = value.split(';').map(h => parseInt(h.trim())).filter(h => !isNaN(h));
+              } else {
+                appData.volunteers[volIdx][col.field] = value.trim();
+              }
+              fieldCounts[col.field]++;
+              wasUpdated = true;
             }
           });
-          if (notFound.length > 0) {
-            msg += `\n\n${notFound.length} name(s) not found:\n${notFound.slice(0, 10).join('\n')}`;
-            if (notFound.length > 10) msg += `\n...and ${notFound.length - 10} more`;
+          // Update scheduled shifts if present
+          if (scheduleColumns.length > 0) {
+            if (!appData.volunteers[volIdx].scheduled) appData.volunteers[volIdx].scheduled = {};
+            scheduleColumns.forEach(sc => {
+              const val = row[sc.colIdx];
+              const key = `${sc.day} ${sc.shift}`;
+              if (val === '1' || (val && val.toLowerCase() === 'yes') || (val && val.toLowerCase() === 'true')) {
+                appData.volunteers[volIdx].scheduled[key] = true;
+                wasUpdated = true;
+              } else if (val === '0' || (val && val.toLowerCase() === 'no') || (val && val.toLowerCase() === 'false')) {
+                delete appData.volunteers[volIdx].scheduled[key];
+                wasUpdated = true;
+              }
+            });
           }
-          alert(msg);
-          render();
-        } catch (err) {
-          alert('Error processing file: ' + err.message);
+          if (wasUpdated) updated++;
+        } else {
+          // Add as new volunteer
+          const scheduled = {};
+          scheduleColumns.forEach(sc => {
+            const val = row[sc.colIdx];
+            const key = `${sc.day} ${sc.shift}`;
+            if (val === '1' || (val && val.toLowerCase() === 'yes') || (val && val.toLowerCase() === 'true')) {
+              scheduled[key] = true;
+            }
+          });
+
+          const newVol = {
+            id: idCol >= 0 && row[idCol] ? row[idCol] : String(Date.now() + Math.random()).replace('.', ''),
+            name: name,
+            type: typeCol >= 0 && row[typeCol] ? row[typeCol] : 'Volunteer',
+            hole: holeCol >= 0 ? parseInt(row[holeCol]) || 0 : 0,
+            phone: phoneCol >= 0 ? row[phoneCol] || '' : '',
+            email: '',
+            yearsWorked: 0,
+            hat: '',
+            scheduled
+          };
+          // Apply any mapped fields
+          columnsToUpdate.forEach(col => {
+            const value = row[col.colIdx];
+            if (value !== undefined && value.toString().trim() !== '') {
+              if (col.type === 'int') newVol[col.field] = parseInt(value) || 0;
+              else if (col.type === 'bool') { const v = value.trim().toLowerCase(); newVol[col.field] = (v === '1' || v === 'yes' || v === 'true'); }
+              else if (col.type === 'holesArray') newVol[col.field] = value.split(';').map(h => parseInt(h.trim())).filter(h => !isNaN(h));
+              else newVol[col.field] = value.trim();
+            }
+          });
+          appData.volunteers.push(newVol);
+          added++;
         }
-      };
-      reader.readAsText(file);
-      input.value = '';
+      });
+
+      saveData();
+
+      let msg = '';
+      if (updated > 0) msg += 'Updated ' + updated + ' volunteer(s).';
+      if (added > 0) msg += (msg ? '\n' : '') + 'Added ' + added + ' new volunteer(s).';
+      if (!msg) msg = 'No changes were made.';
+      const fieldLabels = { email: 'emails', phone: 'phones', type: 'types', hole: 'holes', yearsWorked: 'years', hat: 'hats', hatReceived: 'hat received flags', notes: 'notes', assignedHoles: 'assigned holes' };
+      if (scheduleColumns.length > 0 && updated > 0) {
+        msg += '\n• Schedule shifts updated';
+      }
+      columnsToUpdate.forEach(col => {
+        if (fieldCounts[col.field] > 0) {
+          msg += '\n• ' + fieldCounts[col.field] + ' ' + (fieldLabels[col.field] || col.field) + ' updated';
+        }
+      });
+      logActivity('import', '', 'Updated/added volunteers from CSV: ' + updated + ' updated, ' + added + ' added');
+      alert(msg);
+      render();
     }
 
     function exportCSV() {
       const headers = ['Name', 'Hole', 'Day', 'Shift', 'Check-In Time', 'Checked In By', 'Was Alternate'];
-      const rows = appData.checkIns.map(c => [
+      const filtered = appData.checkIns.filter(c => {
+        if (filterDay !== 'all' && c.day !== filterDay) return false;
+        if (filterShift !== 'all' && c.shift !== filterShift) return false;
+        if (filterHole !== null && c.hole !== filterHole) return false;
+        return true;
+      });
+      const rows = filtered.map(c => [
         c.volunteerName,
         c.hole,
         c.day,
@@ -6141,6 +6390,7 @@
       a.href = url;
       a.download = `volunteer_checkins_${new Date().toISOString().split('T')[0]}.csv`;
       a.click();
+      URL.revokeObjectURL(url);
     }
 
     function exportVolunteersCSV() {
@@ -6613,26 +6863,43 @@
       
       socket.on('dataUpdated', function(event) {
         console.log('Data updated:', event.type);
-        // Only show toasts if user is logged in (admin or captain view)
-        const isLoggedIn = currentView === 'admin' || currentView === 'captain';
+        // Skip re-rendering in two cases so background broadcasts don't wipe
+        // out work the user is currently doing:
+        //   1. The user is on a login/landing screen (no point re-rendering it
+        //      and it would destroy in-progress form input).
+        //   2. A text input/textarea/select currently has focus — the user is
+        //      mid-edit somewhere (volunteer form, settings, etc.) and an
+        //      innerHTML replacement would lose their typing and focus.
+        // appData is still updated either way; the next user action will
+        // pick up the fresh state.
+        function skipRender() {
+          if (currentView === 'landing' || currentView === 'adminLogin' || currentView === 'captainLogin' || currentView === 'volunteerLogin') return true;
+          var ae = document.activeElement;
+          if (ae && (ae.tagName === 'INPUT' || ae.tagName === 'TEXTAREA' || ae.tagName === 'SELECT')) return true;
+          return false;
+        }
+
         if (event.type === 'fullUpdate') {
           // Full data update - reload
           appData = event.data;
           if (!appData.submissions) appData.submissions = [];
           if (!appData.settings) appData.settings = defaultData.settings;
-          render();
+          if (!skipRender()) render();
         } else if (event.type === 'checkIn') {
-          // Single check-in added
-          if (!appData.checkIns.find(c => c.volunteerId === event.data.volunteerId && c.day === event.data.day && c.shift === event.data.shift)) {
-            appData.checkIns.push(event.data);
-            render();
+          // Single check-in added (match on hole too — same volunteer can be
+          // checked in on multiple holes for the same day/shift in edge cases)
+          var d = event.data;
+          if (!appData.checkIns.find(c => c.volunteerId === d.volunteerId && c.day === d.day && c.shift === d.shift && c.hole === d.hole)) {
+            appData.checkIns.push(d);
+            if (!skipRender()) render();
           }
         } else if (event.type === 'checkOut') {
-          // Check-in removed
+          // Check-in removed (match on hole too)
+          var rd = event.data;
           appData.checkIns = appData.checkIns.filter(c =>
-            !(c.volunteerId === event.data.volunteerId && c.day === event.data.day && c.shift === event.data.shift)
+            !(c.volunteerId === rd.volunteerId && c.day === rd.day && c.shift === rd.shift && (rd.hole === undefined || c.hole === rd.hole))
           );
-          render();
+          if (!skipRender()) render();
         }
       });
       

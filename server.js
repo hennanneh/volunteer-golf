@@ -62,18 +62,32 @@ function loadData(isDemo = false) {
   } catch (err) {
     console.error('Error loading data:', err.message);
   }
-  return defaultData;
+  return JSON.parse(JSON.stringify(defaultData));
 }
 
 function saveData(data, isDemo = false) {
   const dataFile = getDataFile(isDemo);
   try {
-    fs.writeFileSync(dataFile, JSON.stringify(data, null, 2));
+    // Atomic write: write to temp file then rename. POSIX rename is atomic,
+    // so a crash mid-write can never leave data.json half-written.
+    const tmpFile = dataFile + '.tmp';
+    fs.writeFileSync(tmpFile, JSON.stringify(data, null, 2));
+    fs.renameSync(tmpFile, dataFile);
     return true;
   } catch (err) {
     console.error('Error saving data:', err.message);
     return false;
   }
+}
+
+// Mutex for read-modify-write operations to prevent race conditions
+const dataLocks = { live: Promise.resolve(), demo: Promise.resolve() };
+function withDataLock(isDemo, fn) {
+  const key = isDemo ? 'demo' : 'live';
+  const prev = dataLocks[key];
+  let resolve;
+  dataLocks[key] = new Promise(r => { resolve = r; });
+  return prev.then(() => fn()).finally(resolve);
 }
 
 function loadArchives() {
@@ -90,7 +104,9 @@ function loadArchives() {
 
 function saveArchives(archives) {
   try {
-    fs.writeFileSync(ARCHIVES_FILE, JSON.stringify(archives, null, 2));
+    const tmpFile = ARCHIVES_FILE + '.tmp';
+    fs.writeFileSync(tmpFile, JSON.stringify(archives, null, 2));
+    fs.renameSync(tmpFile, ARCHIVES_FILE);
     return true;
   } catch (err) {
     console.error('Error saving archives:', err.message);
@@ -190,64 +206,113 @@ app.get('/api/data', (req, res) => {
 app.post('/api/data', (req, res) => {
   const data = req.body;
   const socketId = req.headers['x-socket-id'];
+  const clientIp = req.headers['x-real-ip'] || req.headers['x-forwarded-for'] || req.ip || 'unknown';
+
+  // --- Input validation (added 2026-04-10 after a vulnerability scanner
+  // wiped data.json by POSTing empty bodies to this unauthenticated endpoint).
+  // These checks reject obviously-malformed payloads. They are NOT a
+  // substitute for real authentication, which still needs to be added.
+  if (!data || typeof data !== 'object' || Array.isArray(data)) {
+    console.warn('[' + new Date().toISOString() + '] REJECTED /api/data: not an object  ip=' + clientIp);
+    return res.status(400).json({ success: false, error: 'Invalid payload' });
+  }
+  if (!Array.isArray(data.volunteers)) {
+    console.warn('[' + new Date().toISOString() + '] REJECTED /api/data: missing volunteers array  ip=' + clientIp);
+    return res.status(400).json({ success: false, error: 'Missing volunteers array' });
+  }
+  if (!data.settings || typeof data.settings !== 'object') {
+    console.warn('[' + new Date().toISOString() + '] REJECTED /api/data: missing settings object  ip=' + clientIp);
+    return res.status(400).json({ success: false, error: 'Missing settings object' });
+  }
 
   // Ensure superadmin is never removed from volunteer list
-  if (data.volunteers) {
-    const hasSuperadmin = data.volunteers.some(v =>
-      v.email && v.email.toLowerCase() === SUPERADMIN.email
-    );
-    if (!hasSuperadmin) {
-      data.volunteers.push({
-        id: 'superadmin',
-        ...SUPERADMIN
-      });
-    }
+  const hasSuperadmin = data.volunteers.some(v =>
+    v.email && v.email.toLowerCase() === SUPERADMIN.email
+  );
+  if (!hasSuperadmin) {
+    data.volunteers.push({
+      id: 'superadmin',
+      ...SUPERADMIN
+    });
   }
 
-  if (saveData(data, req.demoMode)) {
-    // Broadcast to OTHER clients only
-    broadcastUpdate(req.demoMode, 'fullUpdate', data, socketId);
-    res.json({ success: true, demoMode: req.demoMode });
-  } else {
-    res.status(500).json({ success: false, error: 'Failed to save data' });
-  }
+  // Serialize concurrent saves so two admins editing at once can't clobber
+  // each other mid-write. Same lock used by /api/checkin and /api/hat-delivered.
+  withDataLock(req.demoMode, () => {
+    // Catastrophic-shrink guard: reject if the incoming save would wipe out
+    // most volunteers compared to what's currently on disk. Override with
+    // ?force=true for intentional resets (e.g. starting a new tournament).
+    const existing = loadData(req.demoMode);
+    const existingCount = (existing.volunteers || []).length;
+    const incomingCount = data.volunteers.length;
+    if (req.query.force !== 'true' && existingCount >= 10 && incomingCount < existingCount / 2) {
+      console.warn('[' + new Date().toISOString() + '] REJECTED /api/data: volunteer count would drop ' + existingCount + ' -> ' + incomingCount + '  ip=' + clientIp);
+      return res.status(409).json({
+        success: false,
+        error: 'Refusing to save: volunteer count would drop from ' + existingCount + ' to ' + incomingCount + '. If this is intentional, add ?force=true to the request.'
+      });
+    }
+
+    console.log('[' + new Date().toISOString() + '] POST /api/data  ip=' + clientIp + '  volunteers=' + incomingCount + '  checkIns=' + (data.checkIns ? data.checkIns.length : 0));
+
+    if (saveData(data, req.demoMode)) {
+      // Broadcast to OTHER clients only
+      broadcastUpdate(req.demoMode, 'fullUpdate', data, socketId);
+      res.json({ success: true, demoMode: req.demoMode });
+    } else {
+      res.status(500).json({ success: false, error: 'Failed to save data' });
+    }
+  });
 });
 
 app.post('/api/checkin', (req, res) => {
-  const { volunteerId, volunteerName, hole, day, shift, checkedInBy, action } = req.body;
+  const { volunteerId, volunteerName, hole, day, shift, checkedInBy, action, isAlternate } = req.body;
   const socketId = req.headers['x-socket-id'];
-  const data = loadData(req.demoMode);
-  
-  if (action === 'add') {
-    const checkIn = {
-      volunteerId,
-      volunteerName,
-      hole,
-      day,
-      shift,
-      checkedInBy,
-      timestamp: new Date().toISOString()
-    };
-    data.checkIns.push(checkIn);
-    if (saveData(data, req.demoMode)) {
-      broadcastUpdate(req.demoMode, 'checkIn', checkIn, socketId);
-      res.json({ success: true, checkIn });
-    } else {
-      res.status(500).json({ success: false, error: 'Failed to save' });
-    }
-  } else if (action === 'remove') {
-    data.checkIns = data.checkIns.filter(c => 
-      !(c.volunteerId === volunteerId && c.day === day && c.shift === shift)
-    );
-    if (saveData(data, req.demoMode)) {
-      broadcastUpdate(req.demoMode, 'checkOut', { volunteerId, day, shift }, socketId);
-      res.json({ success: true });
-    } else {
-      res.status(500).json({ success: false, error: 'Failed to save' });
-    }
-  } else {
-    res.status(400).json({ success: false, error: 'Invalid action' });
+
+  if (action !== 'add' && action !== 'remove') {
+    return res.status(400).json({ success: false, error: 'Invalid action' });
   }
+
+  withDataLock(req.demoMode, () => {
+    const data = loadData(req.demoMode);
+    if (!data.checkIns) data.checkIns = [];
+
+    if (action === 'add') {
+      const checkIn = {
+        volunteerId,
+        volunteerName,
+        hole,
+        day,
+        shift,
+        checkedInBy,
+        timestamp: new Date().toISOString(),
+        isAlternate: !!isAlternate
+      };
+      // Idempotent: don't add duplicate (volunteerId, day, shift, hole) entries
+      const exists = data.checkIns.some(c =>
+        c.volunteerId === volunteerId && c.day === day && c.shift === shift && c.hole === hole
+      );
+      if (!exists) data.checkIns.push(checkIn);
+      if (saveData(data, req.demoMode)) {
+        broadcastUpdate(req.demoMode, 'checkIn', checkIn, socketId);
+        res.json({ success: true, checkIn });
+      } else {
+        res.status(500).json({ success: false, error: 'Failed to save' });
+      }
+    } else {
+      // Match on hole as well so a volunteer with check-ins on multiple holes
+      // for the same shift only loses the intended one.
+      data.checkIns = data.checkIns.filter(c =>
+        !(c.volunteerId === volunteerId && c.day === day && c.shift === shift && c.hole === hole)
+      );
+      if (saveData(data, req.demoMode)) {
+        broadcastUpdate(req.demoMode, 'checkOut', { volunteerId, day, shift, hole }, socketId);
+        res.json({ success: true });
+      } else {
+        res.status(500).json({ success: false, error: 'Failed to save' });
+      }
+    }
+  });
 });
 
 app.get('/api/archives', (req, res) => {
@@ -262,7 +327,28 @@ app.post('/api/archives', (req, res) => {
   if (req.demoMode) {
     return res.json({ success: true, demoMode: true, message: 'Archives disabled in demo mode' });
   }
-  const archives = req.body.archives || [];
+  const clientIp = req.headers['x-real-ip'] || req.headers['x-forwarded-for'] || req.ip || 'unknown';
+
+  // Validation: must explicitly send an archives array
+  if (!req.body || !Array.isArray(req.body.archives)) {
+    console.warn('[' + new Date().toISOString() + '] REJECTED /api/archives: missing archives array  ip=' + clientIp);
+    return res.status(400).json({ success: false, error: 'Missing archives array' });
+  }
+
+  const archives = req.body.archives;
+
+  // Don't let an empty payload wipe existing archives
+  const existing = loadArchives();
+  if (req.query.force !== 'true' && existing.length > 0 && archives.length < existing.length) {
+    console.warn('[' + new Date().toISOString() + '] REJECTED /api/archives: archive count would drop ' + existing.length + ' -> ' + archives.length + '  ip=' + clientIp);
+    return res.status(409).json({
+      success: false,
+      error: 'Refusing to save: archive count would drop from ' + existing.length + ' to ' + archives.length + '. If this is intentional, add ?force=true to the request.'
+    });
+  }
+
+  console.log('[' + new Date().toISOString() + '] POST /api/archives  ip=' + clientIp + '  archives=' + archives.length);
+
   if (saveArchives(archives)) {
     res.json({ success: true });
   } else {
@@ -310,21 +396,23 @@ app.post('/api/hat-delivered', (req, res) => {
     return res.status(400).json({ success: false, error: 'volunteerId required' });
   }
 
-  const data = loadData(req.demoMode);
-  const volIdx = data.volunteers.findIndex(v => v.id === volunteerId);
+  withDataLock(req.demoMode, () => {
+    const data = loadData(req.demoMode);
+    const volIdx = data.volunteers.findIndex(v => v.id === volunteerId);
 
-  if (volIdx === -1) {
-    return res.status(404).json({ success: false, error: 'Volunteer not found' });
-  }
+    if (volIdx === -1) {
+      return res.status(404).json({ success: false, error: 'Volunteer not found' });
+    }
 
-  data.volunteers[volIdx].hatReceived = true;
+    data.volunteers[volIdx].hatReceived = true;
 
-  if (saveData(data, req.demoMode)) {
-    broadcastUpdate(req.demoMode, 'hatDelivered', { volunteerId, volunteer: data.volunteers[volIdx] });
-    res.json({ success: true, volunteer: data.volunteers[volIdx] });
-  } else {
-    res.status(500).json({ success: false, error: 'Failed to save' });
-  }
+    if (saveData(data, req.demoMode)) {
+      broadcastUpdate(req.demoMode, 'hatDelivered', { volunteerId, volunteer: data.volunteers[volIdx] });
+      res.json({ success: true, volunteer: data.volunteers[volIdx] });
+    } else {
+      res.status(500).json({ success: false, error: 'Failed to save' });
+    }
+  });
 });
 
 app.get('/api/health', (req, res) => {
