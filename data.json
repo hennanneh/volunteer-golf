@@ -4757,7 +4757,8 @@
       "address": "4710 Beaver Creek Dr Arlington, TX 76005",
       "volId": "8630",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false
+      "hasVolunteerPassword": false,
+      "volunteerPassword": "$2b$10$Tndu1Qgy..FFK0TRTSjXb..f3K3vpexGYlqjYrH7n3i.bSsv4lCtG"
     },
     {
       "id": "10319",
@@ -8339,6 +8340,33 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1775852673475",
+      "timestamp": "2026-04-10T20:24:33.475Z",
+      "user": "Montalvo, Sammy",
+      "userType": "Captain",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed captain password"
+    },
+    {
+      "id": "1775852640298",
+      "timestamp": "2026-04-10T20:24:00.298Z",
+      "user": "Montalvo, Sammy",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1775852566226",
+      "timestamp": "2026-04-10T20:22:46.226Z",
+      "user": "Montalvo, Sammy",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
     {
       "id": "1775850179879",
       "timestamp": "2026-04-10T19:42:59.879Z",
