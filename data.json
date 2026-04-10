@@ -4701,7 +4701,8 @@
         "Sunday PM": true
       },
       "address": "2010 Cornell Drive Prosper, TX 75078",
-      "volId": "6217"
+      "volId": "6217",
+      "volunteerPassword": "Ratpack55!!"
     },
     {
       "id": "9393",
@@ -6603,7 +6604,9 @@
         "Sunday PM": true
       },
       "address": "416 Meadowhill Dr. Benbrook, TX 76126-4017",
-      "volId": "271"
+      "volId": "271",
+      "adminPassword": "fewkyb-pargeP-vypro6",
+      "adminPasswordSetAt": "2026-04-10T16:47:28.996Z"
     },
     {
       "id": "8852",
@@ -7314,6 +7317,106 @@
       "timestamp": "2026-04-10T15:34:18.877Z",
       "checkedInBy": "Pueblo, Vange",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "2543",
+      "volunteerName": "Holt, Sharron",
+      "hole": 8,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Holt, Sharron",
+      "timestamp": "2026-04-10T16:35:06.154Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2507",
+      "volunteerName": "Holt, Sammy",
+      "hole": 8,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Holt, Sharron",
+      "timestamp": "2026-04-10T16:35:06.738Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5240",
+      "volunteerName": "Rogenski, Chris P.",
+      "hole": 8,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Holt, Sharron",
+      "timestamp": "2026-04-10T16:35:06.930Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5401",
+      "volunteerName": "Badalamenti, Jim",
+      "hole": 8,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Holt, Sharron",
+      "timestamp": "2026-04-10T16:35:08.758Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2135",
+      "volunteerName": "Davidson, Glen",
+      "hole": 8,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Holt, Sharron",
+      "timestamp": "2026-04-10T16:35:09.078Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7865",
+      "volunteerName": "Davis, Sam",
+      "hole": 8,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Holt, Sharron",
+      "timestamp": "2026-04-10T16:35:09.415Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6340",
+      "volunteerName": "Diaz, Rickey",
+      "hole": 8,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Holt, Sharron",
+      "timestamp": "2026-04-10T16:35:11.161Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6967",
+      "volunteerName": "Leggett, Deborah",
+      "hole": 8,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Holt, Sharron",
+      "timestamp": "2026-04-10T16:35:11.539Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9896",
+      "volunteerName": "Sullivan, Patrick",
+      "hole": 8,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Holt, Sharron",
+      "timestamp": "2026-04-10T16:35:12.042Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6217",
+      "volunteerName": "Nederostek, Brad",
+      "hole": 4,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Nederostek, Brad",
+      "timestamp": "2026-04-10T16:56:18.047Z",
+      "isAlternate": false
     }
   ],
   "submissions": [
@@ -7359,6 +7462,87 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1775840367593",
+      "timestamp": "2026-04-10T16:59:27.593Z",
+      "user": "Nederostek, Brad",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1775840351859",
+      "timestamp": "2026-04-10T16:59:11.859Z",
+      "user": "Nederostek, Brad",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1775840341347",
+      "timestamp": "2026-04-10T16:59:01.347Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1775840125474",
+      "timestamp": "2026-04-10T16:55:25.474Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed captain password"
+    },
+    {
+      "id": "1775840111481",
+      "timestamp": "2026-04-10T16:55:11.481Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1775839841976",
+      "timestamp": "2026-04-10T16:50:41.976Z",
+      "user": "Volkening, David",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1775839692163",
+      "timestamp": "2026-04-10T16:48:12.163Z",
+      "user": "Volkening, David",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1775839648996",
+      "timestamp": "2026-04-10T16:47:28.996Z",
+      "user": "Volkening, David",
+      "userType": "Admin",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed admin password"
+    },
+    {
+      "id": "1775839604205",
+      "timestamp": "2026-04-10T16:46:44.205Z",
+      "user": "Volkening, David",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
     {
       "id": "1775836627530",
       "timestamp": "2026-04-10T15:57:07.530Z",
