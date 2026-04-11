@@ -1032,8 +1032,8 @@
       "name": "Clayton, Rodney",
       "type": "Captain",
       "hole": 13,
-      "phone": "(818) 253-0857",
-      "email": "rodandsue@sbcglobal.net",
+      "phone": "(817) 253-0857",
+      "email": "rodneyclayton@yahoo.com",
       "yearsWorked": 16,
       "hat": "",
       "scheduled": {
@@ -1055,7 +1055,9 @@
       "address": "6700 Branch Creek Drive Fort Worth, TX 76132",
       "volId": "3986",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false
+      "hasVolunteerPassword": false,
+      "hatReceived": false,
+      "notes": ""
     },
     {
       "id": "9853",
@@ -8721,6 +8723,46 @@
       "checkedInBy": "Holt, Sammy",
       "timestamp": "2026-04-11T19:53:06.102Z",
       "isAlternate": true
+    },
+    {
+      "volunteerId": "5235",
+      "volunteerName": "Thomas, Stephen",
+      "hole": 15,
+      "day": "Saturday",
+      "shift": "PM",
+      "timestamp": "2026-04-11T21:12:21.254Z",
+      "checkedInBy": "Beckley, Bob",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9610",
+      "volunteerName": "Bullard, Roy",
+      "hole": 15,
+      "day": "Saturday",
+      "shift": "PM",
+      "timestamp": "2026-04-11T21:12:23.519Z",
+      "checkedInBy": "Beckley, Bob",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9874",
+      "volunteerName": "Hughes, Allen",
+      "hole": 15,
+      "day": "Saturday",
+      "shift": "PM",
+      "timestamp": "2026-04-11T21:12:26.218Z",
+      "checkedInBy": "Beckley, Bob",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9244",
+      "volunteerName": "King, Chad",
+      "hole": 15,
+      "day": "Saturday",
+      "shift": "PM",
+      "timestamp": "2026-04-11T21:12:30.882Z",
+      "checkedInBy": "Beckley, Bob",
+      "isAlternate": false
     }
   ],
   "submissions": [
@@ -8804,6 +8846,20 @@
         "1182",
         "7640"
       ]
+    },
+    {
+      "hole": 15,
+      "day": "Saturday",
+      "shift": "PM",
+      "timestamp": "2026-04-11T21:12:51.603Z",
+      "captainName": "Beckley, Bob",
+      "notes": "",
+      "checkedInIds": [
+        "5235",
+        "9610",
+        "9874",
+        "9244"
+      ]
     }
   ],
   "settings": {
@@ -8820,6 +8876,141 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1775944103689",
+      "timestamp": "2026-04-11T21:48:23.689Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1775944027846",
+      "timestamp": "2026-04-11T21:47:07.846Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1775943773653",
+      "timestamp": "2026-04-11T21:42:53.653Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1775943750696",
+      "timestamp": "2026-04-11T21:42:30.696Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "import",
+      "target": "",
+      "details": "Updated/added volunteers from CSV: 1 updated, 0 added"
+    },
+    {
+      "id": "1775943729214",
+      "timestamp": "2026-04-11T21:42:09.214Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1775943372797",
+      "timestamp": "2026-04-11T21:36:12.797Z",
+      "user": "Clayton, Rodney",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1775943359118",
+      "timestamp": "2026-04-11T21:35:59.118Z",
+      "user": "Clayton, Rodney",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1775943317831",
+      "timestamp": "2026-04-11T21:35:17.831Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1775943258650",
+      "timestamp": "2026-04-11T21:34:18.650Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1775942079243",
+      "timestamp": "2026-04-11T21:14:39.243Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Clayton, Rodney",
+      "details": "Edited volunteer (Type: Captain, Hole: 13)"
+    },
+    {
+      "id": "1775941982434",
+      "timestamp": "2026-04-11T21:13:02.434Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1775941971603",
+      "timestamp": "2026-04-11T21:12:51.603Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 15",
+      "details": "Submitted Saturday PM for Hole 15"
+    },
+    {
+      "id": "1775941958381",
+      "timestamp": "2026-04-11T21:12:38.381Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1775941954865",
+      "timestamp": "2026-04-11T21:12:34.865Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 15",
+      "details": "Submitted Saturday PM for Hole 15"
+    },
+    {
+      "id": "1775941921087",
+      "timestamp": "2026-04-11T21:12:01.087Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1775932561250",
       "timestamp": "2026-04-11T18:36:01.250Z",
