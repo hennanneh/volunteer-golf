@@ -8342,6 +8342,15 @@
   },
   "activityLog": [
     {
+      "id": "1775908617865",
+      "timestamp": "2026-04-11T11:56:57.865Z",
+      "user": "Elkins, Paul",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1775869139926",
       "timestamp": "2026-04-11T00:58:59.926Z",
       "user": "Beckley, Bob",
