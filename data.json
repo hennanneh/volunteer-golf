@@ -1985,7 +1985,8 @@
       "address": "11601 Wind Creek Ct. Aledo, TX 76008 Aledo, TX 76008",
       "volId": "2441",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false
+      "hasVolunteerPassword": true,
+      "volunteerPassword": "$2b$10$TyHVVmVPiA4kVoEEChqqlOOMxxcy.tD4HUVKNomOZBlYFhmIphRc."
     },
     {
       "id": "7528",
@@ -8340,6 +8341,60 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1775869139926",
+      "timestamp": "2026-04-11T00:58:59.926Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1775869130821",
+      "timestamp": "2026-04-11T00:58:50.821Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1775868685575",
+      "timestamp": "2026-04-11T00:51:25.575Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1775867934405",
+      "timestamp": "2026-04-11T00:38:54.405Z",
+      "user": "Galvan, Bob",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1775867553877",
+      "timestamp": "2026-04-11T00:32:33.877Z",
+      "user": "Galvan, Bob",
+      "userType": "Captain",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed captain password"
+    },
+    {
+      "id": "1775867346649",
+      "timestamp": "2026-04-11T00:29:06.649Z",
+      "user": "Galvan, Bob",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1775859011328",
       "timestamp": "2026-04-10T22:10:11.328Z",
