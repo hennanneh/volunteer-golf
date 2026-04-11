@@ -269,7 +269,8 @@
       "address": "2407 Pebble Drive Granbury, TX 76048",
       "volId": "7794",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false
+      "hasVolunteerPassword": true,
+      "volunteerPassword": "$2b$10$FLJjCG.lWOsX9MCOmR5a6.M38iCcGDmMuShXSBET.NSoF.nfDtUQq"
     },
     {
       "id": "10207",
@@ -2247,7 +2248,7 @@
       "address": "6416 Devonshire Dr., N. Richland Hills, TX. USA North Richland Hills, TX 76180",
       "volId": "145",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false,
+      "hasVolunteerPassword": true,
       "volunteerPassword": "$2b$10$46qXcnIyep8wNFs/TsxaauP9MajsMWJbnFx7Slt3Z2SFFY4OBUuUG"
     },
     {
@@ -7228,7 +7229,7 @@
       "volId": "271",
       "hasAdminPassword": true,
       "hasVolunteerPassword": false,
-      "adminPassword": "fewkyb-pargeP-vypro6",
+      "adminPassword": "$2b$10$MZ.hOsZeCXzeeCvRmPVaoeI4lYqHJ1xwnZ4bf3GcUcv26rZ.tSQO.",
       "adminPasswordSetAt": "2026-04-10T16:47:28.996Z"
     },
     {
@@ -8669,6 +8670,33 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1775932561250",
+      "timestamp": "2026-04-11T18:36:01.250Z",
+      "user": "Volkening, David",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1775932310467",
+      "timestamp": "2026-04-11T18:31:50.467Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed captain password"
+    },
+    {
+      "id": "1775932283156",
+      "timestamp": "2026-04-11T18:31:23.156Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1775921672436",
       "timestamp": "2026-04-11T15:34:32.436Z",
