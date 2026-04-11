@@ -1055,9 +1055,10 @@
       "address": "6700 Branch Creek Drive Fort Worth, TX 76132",
       "volId": "3986",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false,
+      "hasVolunteerPassword": true,
       "hatReceived": false,
-      "notes": ""
+      "notes": "",
+      "volunteerPassword": "$2b$10$C5jb5oRBnwINjKXECai//e4PpalY3SNbrzd9HHhIcq6xofdzvmMTm"
     },
     {
       "id": "9853",
@@ -2966,7 +2967,8 @@
       "hatReceived": false,
       "notes": "",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false
+      "hasVolunteerPassword": false,
+      "volunteerPassword": "$2b$10$77jIj6851gGLXDRX4bD27.t6cqO3nbCoLTo3akfoGjQqChTaPpr0W"
     },
     {
       "id": "4014",
@@ -8763,6 +8765,36 @@
       "timestamp": "2026-04-11T21:12:30.882Z",
       "checkedInBy": "Beckley, Bob",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "2543",
+      "volunteerName": "Holt, Sharron",
+      "hole": 8,
+      "day": "Saturday",
+      "shift": "PM",
+      "checkedInBy": "Holt, Sharron",
+      "timestamp": "2026-04-11T22:44:23.637Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2507",
+      "volunteerName": "Holt, Sammy",
+      "hole": 8,
+      "day": "Saturday",
+      "shift": "PM",
+      "checkedInBy": "Holt, Sharron",
+      "timestamp": "2026-04-11T22:44:23.830Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5240",
+      "volunteerName": "Rogenski, Chris P.",
+      "hole": 8,
+      "day": "Saturday",
+      "shift": "PM",
+      "checkedInBy": "Holt, Sharron",
+      "timestamp": "2026-04-11T22:44:24.063Z",
+      "isAlternate": false
     }
   ],
   "submissions": [
@@ -8876,6 +8908,78 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1775947454055",
+      "timestamp": "2026-04-11T22:44:14.055Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed captain password"
+    },
+    {
+      "id": "1775947418470",
+      "timestamp": "2026-04-11T22:43:38.470Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1775947286329",
+      "timestamp": "2026-04-11T22:41:26.329Z",
+      "user": "Clayton, Rodney",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1775946073567",
+      "timestamp": "2026-04-11T22:21:13.567Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed captain password"
+    },
+    {
+      "id": "1775946044844",
+      "timestamp": "2026-04-11T22:20:44.844Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1775946018548",
+      "timestamp": "2026-04-11T22:20:18.549Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1775945868477",
+      "timestamp": "2026-04-11T22:17:48.477Z",
+      "user": "Clayton, Rodney",
+      "userType": "Captain",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed captain password"
+    },
+    {
+      "id": "1775945692366",
+      "timestamp": "2026-04-11T22:14:52.366Z",
+      "user": "Clayton, Rodney",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1775944103689",
       "timestamp": "2026-04-11T21:48:23.689Z",
