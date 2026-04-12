@@ -6461,7 +6461,14 @@
       "volId": "10550",
       "address": "9204 King Air Drive Granbury, TX 76049",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false
+      "hasVolunteerPassword": true,
+      "pairingPreferences": [
+        "5235",
+        "9610",
+        "9807"
+      ],
+      "noOutingPreference": false,
+      "volunteerPassword": "$2b$10$w1xd2loPnmEAFEv73loWHOgwqo9FCv/3MAC8k087QbxOAVXifBjKa"
     },
     {
       "id": "10436",
@@ -8802,8 +8809,8 @@
       "hole": 20,
       "day": "Sunday",
       "shift": "AM",
+      "timestamp": "2026-04-12T12:59:39.336Z",
       "checkedInBy": "Pueblo, Vange",
-      "timestamp": "2026-04-12T12:59:39.616Z",
       "isAlternate": false
     },
     {
@@ -8812,8 +8819,8 @@
       "hole": 20,
       "day": "Sunday",
       "shift": "AM",
+      "timestamp": "2026-04-12T12:59:40.186Z",
       "checkedInBy": "Pueblo, Vange",
-      "timestamp": "2026-04-12T12:59:40.273Z",
       "isAlternate": false
     },
     {
@@ -8822,8 +8829,8 @@
       "hole": 20,
       "day": "Sunday",
       "shift": "AM",
+      "timestamp": "2026-04-12T12:59:41.968Z",
       "checkedInBy": "Pueblo, Vange",
-      "timestamp": "2026-04-12T12:59:42.248Z",
       "isAlternate": false
     },
     {
@@ -8832,8 +8839,8 @@
       "hole": 20,
       "day": "Sunday",
       "shift": "AM",
+      "timestamp": "2026-04-12T12:59:43.568Z",
       "checkedInBy": "Pueblo, Vange",
-      "timestamp": "2026-04-12T12:59:43.848Z",
       "isAlternate": false
     },
     {
@@ -8842,8 +8849,8 @@
       "hole": 20,
       "day": "Sunday",
       "shift": "AM",
+      "timestamp": "2026-04-12T12:59:45.102Z",
       "checkedInBy": "Pueblo, Vange",
-      "timestamp": "2026-04-12T12:59:45.376Z",
       "isAlternate": false
     },
     {
@@ -8852,8 +8859,8 @@
       "hole": 20,
       "day": "Sunday",
       "shift": "AM",
+      "timestamp": "2026-04-12T12:59:45.885Z",
       "checkedInBy": "Pueblo, Vange",
-      "timestamp": "2026-04-12T12:59:45.962Z",
       "isAlternate": false
     },
     {
@@ -8862,8 +8869,8 @@
       "hole": 20,
       "day": "Sunday",
       "shift": "AM",
+      "timestamp": "2026-04-12T12:59:47.436Z",
       "checkedInBy": "Pueblo, Vange",
-      "timestamp": "2026-04-12T12:59:47.721Z",
       "isAlternate": false
     },
     {
@@ -8872,8 +8879,8 @@
       "hole": 20,
       "day": "Sunday",
       "shift": "AM",
+      "timestamp": "2026-04-12T12:59:49.001Z",
       "checkedInBy": "Pueblo, Vange",
-      "timestamp": "2026-04-12T12:59:49.275Z",
       "isAlternate": false
     },
     {
@@ -8882,8 +8889,8 @@
       "hole": 20,
       "day": "Sunday",
       "shift": "AM",
+      "timestamp": "2026-04-12T12:59:50.469Z",
       "checkedInBy": "Pueblo, Vange",
-      "timestamp": "2026-04-12T12:59:50.752Z",
       "isAlternate": false
     },
     {
@@ -8892,8 +8899,8 @@
       "hole": 20,
       "day": "Sunday",
       "shift": "AM",
+      "timestamp": "2026-04-12T12:59:51.219Z",
       "checkedInBy": "Pueblo, Vange",
-      "timestamp": "2026-04-12T12:59:51.332Z",
       "isAlternate": false
     },
     {
@@ -8902,8 +8909,8 @@
       "hole": 20,
       "day": "Sunday",
       "shift": "AM",
+      "timestamp": "2026-04-12T12:59:52.669Z",
       "checkedInBy": "Pueblo, Vange",
-      "timestamp": "2026-04-12T12:59:52.925Z",
       "isAlternate": false
     },
     {
@@ -8912,8 +8919,8 @@
       "hole": 20,
       "day": "Sunday",
       "shift": "AM",
+      "timestamp": "2026-04-12T12:59:54.072Z",
       "checkedInBy": "Pueblo, Vange",
-      "timestamp": "2026-04-12T12:59:54.337Z",
       "isAlternate": false
     },
     {
@@ -8922,8 +8929,8 @@
       "hole": 20,
       "day": "Sunday",
       "shift": "AM",
+      "timestamp": "2026-04-12T12:59:55.421Z",
       "checkedInBy": "Pueblo, Vange",
-      "timestamp": "2026-04-12T12:59:55.672Z",
       "isAlternate": false
     },
     {
@@ -8932,8 +8939,8 @@
       "hole": 20,
       "day": "Sunday",
       "shift": "AM",
+      "timestamp": "2026-04-12T12:59:56.871Z",
       "checkedInBy": "Pueblo, Vange",
-      "timestamp": "2026-04-12T12:59:57.136Z",
       "isAlternate": false
     },
     {
@@ -8942,8 +8949,8 @@
       "hole": 20,
       "day": "Sunday",
       "shift": "AM",
+      "timestamp": "2026-04-12T12:59:58.371Z",
       "checkedInBy": "Pueblo, Vange",
-      "timestamp": "2026-04-12T12:59:58.606Z",
       "isAlternate": false
     },
     {
@@ -8952,8 +8959,8 @@
       "hole": 20,
       "day": "Sunday",
       "shift": "AM",
+      "timestamp": "2026-04-12T12:59:59.888Z",
       "checkedInBy": "Pueblo, Vange",
-      "timestamp": "2026-04-12T13:00:00.141Z",
       "isAlternate": false
     },
     {
@@ -8962,8 +8969,8 @@
       "hole": 20,
       "day": "Sunday",
       "shift": "AM",
+      "timestamp": "2026-04-12T13:00:01.439Z",
       "checkedInBy": "Pueblo, Vange",
-      "timestamp": "2026-04-12T13:00:01.731Z",
       "isAlternate": false
     }
   ],
@@ -9062,6 +9069,33 @@
         "9874",
         "9244"
       ]
+    },
+    {
+      "hole": 20,
+      "day": "Sunday",
+      "shift": "AM",
+      "timestamp": "2026-04-12T13:00:05.107Z",
+      "captainName": "Pueblo, Vange",
+      "notes": "",
+      "checkedInIds": [
+        "7527",
+        "6828",
+        "10573",
+        "6239",
+        "8788",
+        "7317",
+        "9856",
+        "9564",
+        "8850",
+        "8899",
+        "8543",
+        "8545",
+        "9574",
+        "8066",
+        "8695",
+        "1182",
+        "7640"
+      ]
     }
   ],
   "settings": {
@@ -9078,6 +9112,69 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1776000348034",
+      "timestamp": "2026-04-12T13:25:48.034Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1776000339328",
+      "timestamp": "2026-04-12T13:25:39.328Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776000298776",
+      "timestamp": "2026-04-12T13:24:58.776Z",
+      "user": "Schultz, Joni",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1775999689788",
+      "timestamp": "2026-04-12T13:14:49.788Z",
+      "user": "Schultz, Joni",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1775999599982",
+      "timestamp": "2026-04-12T13:13:19.982Z",
+      "user": "Schultz, Joni",
+      "userType": "Volunteer",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed volunteer password"
+    },
+    {
+      "id": "1775999582466",
+      "timestamp": "2026-04-12T13:13:02.466Z",
+      "user": "Schultz, Joni",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1775998805107",
+      "timestamp": "2026-04-12T13:00:05.107Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 20",
+      "details": "Submitted Sunday AM for Hole 20"
+    },
     {
       "id": "1775998774424",
       "timestamp": "2026-04-12T12:59:34.424Z",
