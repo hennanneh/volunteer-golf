@@ -9113,6 +9113,15 @@
   },
   "activityLog": [
     {
+      "id": "1776016209161",
+      "timestamp": "2026-04-12T17:50:09.161Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1776000348034",
       "timestamp": "2026-04-12T13:25:48.034Z",
       "user": "Beckley, Bob",
