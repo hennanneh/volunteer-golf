@@ -2967,7 +2967,7 @@
       "hatReceived": false,
       "notes": "",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false,
+      "hasVolunteerPassword": true,
       "volunteerPassword": "$2b$10$77jIj6851gGLXDRX4bD27.t6cqO3nbCoLTo3akfoGjQqChTaPpr0W"
     },
     {
@@ -8908,6 +8908,15 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1775954625674",
+      "timestamp": "2026-04-12T00:43:45.674Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
     {
       "id": "1775947454055",
       "timestamp": "2026-04-11T22:44:14.055Z",
