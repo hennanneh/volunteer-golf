@@ -1530,7 +1530,9 @@
       "address": "1027 Hunter Ridge Dr Arlington, TX 76013",
       "volId": "394",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false
+      "hasVolunteerPassword": true,
+      "noOutingPreference": true,
+      "volunteerPassword": "$2b$10$XKYArJhN/tFiYOyEkKWTU.b9LRGh3k/Ii.fALuJuVf/AmIJUAhwsu"
     },
     {
       "id": "4531",
@@ -9112,6 +9114,42 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1776029885112",
+      "timestamp": "2026-04-12T21:38:05.112Z",
+      "user": "Holt, Sammy",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776028624195",
+      "timestamp": "2026-04-12T21:17:04.195Z",
+      "user": "Duke, Mitzie",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1776028579473",
+      "timestamp": "2026-04-12T21:16:19.473Z",
+      "user": "Duke, Mitzie",
+      "userType": "Volunteer",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed volunteer password"
+    },
+    {
+      "id": "1776028537811",
+      "timestamp": "2026-04-12T21:15:37.811Z",
+      "user": "Duke, Mitzie",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
     {
       "id": "1776026785157",
       "timestamp": "2026-04-12T20:46:25.157Z",
