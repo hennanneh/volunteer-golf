@@ -1025,7 +1025,9 @@
       "volId": "9134",
       "address": "9436 Shoveler Trail Fort Worth, TX 76118",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false
+      "hasVolunteerPassword": false,
+      "noOutingPreference": true,
+      "volunteerPassword": "$2b$10$s7/ZyRE/KoJp5zBlGTSRruLDwnckNN/pHSbqNDnJPUG5j.Lk0n1BC"
     },
     {
       "id": "3986",
@@ -9114,6 +9116,24 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1776093560006",
+      "timestamp": "2026-04-13T15:19:20.006Z",
+      "user": "Clark, Jason",
+      "userType": "Volunteer",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed volunteer password"
+    },
+    {
+      "id": "1776093529479",
+      "timestamp": "2026-04-13T15:18:49.479Z",
+      "user": "Clark, Jason",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
     {
       "id": "1776091820423",
       "timestamp": "2026-04-13T14:50:20.423Z",
