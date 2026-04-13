@@ -6268,7 +6268,7 @@
       "address": "7636 Terry Dr. N. Richland Hills, TX 76180",
       "volId": "243",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false,
+      "hasVolunteerPassword": true,
       "volunteerPassword": "$2b$10$6w4x046i4P2v4O0OAIgmduNW4z897kLiAC8U1yXiNAQHLOrSgfWlS"
     },
     {
@@ -7297,7 +7297,8 @@
       "address": "4119 Cross Bend Dr Arlington, TX 76016",
       "volId": "274",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false
+      "hasVolunteerPassword": true,
+      "volunteerPassword": "$2b$10$U5uVBvNFEigl6rCUOTfgY.AcIrM.K3eH8iVlsS9iux0Td3Yl3DXFy"
     },
     {
       "id": "8182",
@@ -9118,6 +9119,42 @@
   },
   "activityLog": [
     {
+      "id": "1776113543830",
+      "timestamp": "2026-04-13T20:52:23.830Z",
+      "user": "Waller, Gary",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1776112768001",
+      "timestamp": "2026-04-13T20:39:28.002Z",
+      "user": "Waller, Gary",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1776111477548",
+      "timestamp": "2026-04-13T20:17:57.548Z",
+      "user": "Waller, Gary",
+      "userType": "Captain",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed captain password"
+    },
+    {
+      "id": "1776111052444",
+      "timestamp": "2026-04-13T20:10:52.444Z",
+      "user": "Waller, Gary",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1776097408553",
       "timestamp": "2026-04-13T16:23:28.553Z",
       "user": "Sale, Lynn",
@@ -10880,24 +10917,6 @@
       "action": "edit-volunteer",
       "target": "Livingston, Jennifier",
       "details": "Edited volunteer (Type: Volunteer, Hole: 4)"
-    },
-    {
-      "id": "1775593730675",
-      "timestamp": "2026-04-07T20:28:50.675Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "edit-volunteer",
-      "target": "Gray, Leandro",
-      "details": "Edited volunteer (Type: Volunteer, Hole: 4)"
-    },
-    {
-      "id": "1775591249064",
-      "timestamp": "2026-04-07T19:47:29.064Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "import",
-      "target": "",
-      "details": "Imported 340 volunteers from CSV"
     }
   ]
 }
