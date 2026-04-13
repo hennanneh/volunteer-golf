@@ -9115,6 +9115,15 @@
   },
   "activityLog": [
     {
+      "id": "1776091820423",
+      "timestamp": "2026-04-13T14:50:20.423Z",
+      "user": "Gordon, Gary",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1776086170690",
       "timestamp": "2026-04-13T13:16:10.690Z",
       "user": "Hill, Michael",
