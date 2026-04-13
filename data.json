@@ -9115,6 +9115,24 @@
   },
   "activityLog": [
     {
+      "id": "1776086170690",
+      "timestamp": "2026-04-13T13:16:10.690Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1776086082988",
+      "timestamp": "2026-04-13T13:14:42.988Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
       "id": "1776084205628",
       "timestamp": "2026-04-13T12:43:25.628Z",
       "user": "Holt, Sharron",
