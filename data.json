@@ -1025,7 +1025,7 @@
       "volId": "9134",
       "address": "9436 Shoveler Trail Fort Worth, TX 76118",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false,
+      "hasVolunteerPassword": true,
       "noOutingPreference": true,
       "volunteerPassword": "$2b$10$s7/ZyRE/KoJp5zBlGTSRruLDwnckNN/pHSbqNDnJPUG5j.Lk0n1BC"
     },
@@ -6268,7 +6268,8 @@
       "address": "7636 Terry Dr. N. Richland Hills, TX 76180",
       "volId": "243",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false
+      "hasVolunteerPassword": false,
+      "volunteerPassword": "$2b$10$6w4x046i4P2v4O0OAIgmduNW4z897kLiAC8U1yXiNAQHLOrSgfWlS"
     },
     {
       "id": "9204",
@@ -9116,6 +9117,24 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1776097408553",
+      "timestamp": "2026-04-13T16:23:28.553Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed captain password"
+    },
+    {
+      "id": "1776097162728",
+      "timestamp": "2026-04-13T16:19:22.728Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1776093560006",
       "timestamp": "2026-04-13T15:19:20.006Z",
