@@ -9115,6 +9115,24 @@
   },
   "activityLog": [
     {
+      "id": "1776042992996",
+      "timestamp": "2026-04-13T01:16:32.996Z",
+      "user": "Montalvo, Sammy",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776042915986",
+      "timestamp": "2026-04-13T01:15:15.986Z",
+      "user": "Montalvo, Sammy",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
       "id": "1776029885112",
       "timestamp": "2026-04-12T21:38:05.112Z",
       "user": "Holt, Sammy",
