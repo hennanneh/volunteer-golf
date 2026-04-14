@@ -9121,6 +9121,24 @@
   },
   "activityLog": [
     {
+      "id": "1776186056065",
+      "timestamp": "2026-04-14T17:00:56.065Z",
+      "user": "Elkins, Paul",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1776185995298",
+      "timestamp": "2026-04-14T16:59:55.299Z",
+      "user": "Elkins, Paul",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1776176925530",
       "timestamp": "2026-04-14T14:28:45.530Z",
       "user": "Zamzow, Steve",
@@ -10901,24 +10919,6 @@
       "action": "login",
       "target": "",
       "details": "Logged into Admin portal"
-    },
-    {
-      "id": "1775595878174",
-      "timestamp": "2026-04-07T21:04:38.174Z",
-      "user": "Edwards, Bill",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1775595657505",
-      "timestamp": "2026-04-07T21:00:57.505Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Admin portal"
     }
   ]
 }
