@@ -4288,19 +4288,13 @@
       const hole = emailHoleNumber;
       if (!hole) return;
 
-      // Get all volunteers and captains on this hole
+      // Recipients are resolved server-side from the hole number; the client
+      // just builds the roster HTML and posts it along with the hole number.
       const holeVolunteers = appData.volunteers.filter(v => v.hole === hole);
       const volunteersWithEmail = holeVolunteers.filter(v => v.email);
 
       if (volunteersWithEmail.length === 0) {
         alert('No volunteers with email addresses found for this hole.');
-        return;
-      }
-
-      const emails = volunteersWithEmail.map(v => v.email).filter(e => e && e.trim());
-
-      if (emails.length === 0) {
-        alert('No valid email addresses found for volunteers on this hole.');
         return;
       }
 
@@ -4387,8 +4381,14 @@
           btn.textContent = 'Sending...';
         }
 
-        await sendEmail(emails, subject, message);
-        alert('Email sent successfully to ' + emails.length + ' volunteer(s)!');
+        const response = await fetch('/api/email/hole-roster', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'X-Socket-ID': (socket && socket.id) || '' },
+          body: JSON.stringify({ hole: hole, subject: subject, message: message })
+        });
+        const result = await response.json();
+        if (!result.success) throw new Error(result.error || 'Email failed');
+        alert('Email sent successfully to ' + (result.count || volunteersWithEmail.length) + ' volunteer(s)!');
         closeEmailHoleModal();
       } catch (err) {
         alert('Failed to send email: ' + err.message);
@@ -5368,6 +5368,12 @@
             <button onclick="closeCaptainEditModal()" style="position:sticky;top:0;float:right;background:#f5f5f5;border:1px solid #ddd;width:36px;height:36px;border-radius:50%;cursor:pointer;font-size:20px;color:#666;display:flex;align-items:center;justify-content:center;z-index:10;flex-shrink:0">&times;</button>
             <h3 style="text-align:center;margin-bottom:15px">Edit Schedule: ${captainEditingVolunteer.name}</h3>
             <p style="font-size:12px;color:#666;margin-bottom:15px;text-align:center">Modify this volunteer's schedule for your hole</p>
+            <div style="background:#f8f9fa;border:1px solid #e5e7eb;border-radius:6px;padding:10px 12px;margin-bottom:15px;font-size:12px;color:#333;line-height:1.6">
+              <div><strong>Years of Service:</strong> ${captainEditingVolunteer.yearsWorked || 0}</div>
+              <div><strong>Phone:</strong> ${captainEditingVolunteer.phone || '<span style="color:#999">—</span>'}</div>
+              <div><strong>Email:</strong> ${captainEditingVolunteer.email || '<span style="color:#999">—</span>'}</div>
+              <div><strong>Address:</strong> ${captainEditingVolunteer.address ? captainEditingVolunteer.address.replace(/\n/g, ', ') : '<span style="color:#999">—</span>'}</div>
+            </div>
             <div class="edit-modal-form">
               <label style="font-size:13px;font-weight:600;margin-bottom:8px;display:block">Schedule</label>
               <div class="schedule-grid" style="display:grid;grid-template-columns:repeat(2,1fr);gap:8px">
@@ -5414,6 +5420,7 @@
                 <button onclick="printReport()" style="padding:10px 12px;background:#fff;border:1px solid #ccc;border-radius:8px;cursor:pointer;font-size:14px;font-weight:500;text-align:center">Print</button>
                 <button onclick="exportReportCSV()" style="padding:10px 12px;background:#fff;border:1px solid #ccc;border-radius:8px;cursor:pointer;font-size:14px;font-weight:500;text-align:center">Export CSV</button>
               </div>
+              <button onclick="openEmailHoleModal(${activeHole})" style="margin-top:8px;padding:12px;background:#1a472a;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:14px;font-weight:600;max-width:360px;width:100%">Send Roster to All Volunteers on Hole #${activeHole}</button>
             </div>
             ${renderHoleRosterReport(activeHole, { hideViewAll: true, hideTitle: true })}
           </div>

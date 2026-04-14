@@ -863,6 +863,69 @@ app.post('/api/email', emailLimiter, requireAuth(['admin', 'chair', 'asstChair']
   }
 });
 
+// POST /api/email/hole-roster — send the roster for a specific hole to every
+// volunteer on that hole who has an email address. Captains may only email
+// their own hole; admin/chair/asstChair may email any hole.
+//
+// Body: { hole, subject, message }  (recipients are resolved server-side —
+// the client cannot specify arbitrary addresses)
+app.post('/api/email/hole-roster', emailLimiter, requireAuth(['admin', 'chair', 'asstChair', 'captain']), async (req, res) => {
+  if (req.demoMode) {
+    return res.json({ success: true, demoMode: true, message: 'Emails disabled in demo mode' });
+  }
+
+  const { hole, subject, message } = req.body || {};
+  const holeNum = parseInt(hole, 10);
+  if (!Number.isInteger(holeNum) || holeNum < 1 || holeNum > 18) {
+    return res.status(400).json({ success: false, error: 'hole must be an integer 1-18' });
+  }
+  if (!subject || !message) {
+    return res.status(400).json({ success: false, error: 'subject and message required' });
+  }
+
+  const data = loadData(req.demoMode);
+  const allVols = data.volunteers || [];
+
+  if (req.user && req.user.role === 'captain') {
+    const me = allVols.find(v => v.id === req.user.userId);
+    if (!me || me.hole !== holeNum) {
+      return res.status(403).json({ success: false, error: 'Captains can only email their assigned hole' });
+    }
+  }
+
+  const recipients = allVols
+    .filter(v => v.hole === holeNum)
+    .map(v => String(v.email || '').trim())
+    .filter(e => e.length > 0);
+
+  if (recipients.length === 0) {
+    return res.status(400).json({ success: false, error: 'No volunteers with email on hole ' + holeNum });
+  }
+
+  try {
+    const trimmed = String(message).trim();
+    const isHtml = trimmed.startsWith('<!DOCTYPE') || trimmed.startsWith('<html') || trimmed.startsWith('<div');
+    const htmlContent = isHtml ? message : message.replace(/\n/g, '<br>');
+    const textContent = isHtml ? message.replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim() : message;
+
+    const { error } = await resend.emails.send({
+      from: process.env.EMAIL_FROM || 'Volunteer Golf <hello@colonialvolunteers.golf>',
+      to: recipients,
+      subject: String(subject),
+      text: textContent,
+      html: htmlContent
+    });
+
+    if (error) {
+      return res.status(500).json({ success: false, error: error.message });
+    }
+    console.log('[' + new Date().toISOString() + '] HOLE ROSTER EMAIL  user=' + (req.user && req.user.name) + '  hole=' + holeNum + '  recipients=' + recipients.length);
+    res.json({ success: true, count: recipients.length });
+  } catch (err) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
 app.post('/api/hat-delivered', requireAuth(['admin', 'chair', 'asstChair', 'captain']), (req, res) => {
   const { volunteerId } = req.body;
 
