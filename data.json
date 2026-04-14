@@ -9119,6 +9119,15 @@
   },
   "activityLog": [
     {
+      "id": "1776122623778",
+      "timestamp": "2026-04-13T23:23:43.778Z",
+      "user": "Schultz, Joni",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
       "id": "1776113543830",
       "timestamp": "2026-04-13T20:52:23.830Z",
       "user": "Waller, Gary",
@@ -10908,15 +10917,6 @@
       "action": "settings-change",
       "target": "tournamentName",
       "details": "Updated setting: tournamentName"
-    },
-    {
-      "id": "1775593829775",
-      "timestamp": "2026-04-07T20:30:29.775Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "edit-volunteer",
-      "target": "Livingston, Jennifier",
-      "details": "Edited volunteer (Type: Volunteer, Hole: 4)"
     }
   ]
 }
