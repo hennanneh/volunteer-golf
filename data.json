@@ -1564,7 +1564,7 @@
       "address": "2129 Shumard Ln Flower Mound, TX 75028",
       "volId": "4531",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false,
+      "hasVolunteerPassword": true,
       "volunteerPassword": "$2b$10$WdEentjjEshwgLGj1XD.ru4hGYbON9HsU9lKBXbH1K9XlQjWXWLyi"
     },
     {
@@ -3075,7 +3075,7 @@
       "hasAdminPassword": true,
       "hasVolunteerPassword": true,
       "adminPassword": "$2b$10$9o9TZHkP9PvBAX70x4onSeBlNDsE8HbBYq1G/oSU69bA1u5b2/R2.",
-      "volunteerPassword": "admin2025",
+      "volunteerPassword": "$2b$10$IYY/6/P2DPge7Thv8aB1vewrpJj90ouq2y/Xih.IjmkNETFHu4aBW",
       "adminPasswordSetAt": "2026-04-07T22:22:50.875Z"
     },
     {
@@ -6134,7 +6134,7 @@
       "address": "701 Shady Creek Drive Kennedale, TX 76060",
       "volId": "5240",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false,
+      "hasVolunteerPassword": true,
       "volunteerPassword": "$2b$10$DKkDxxf8bOMizLhn87uLdOVDrzEDqIsLI.w5T15zABd1S7QCXtcGi"
     },
     {
@@ -9123,6 +9123,42 @@
   },
   "activityLog": [
     {
+      "id": "1776205310867",
+      "timestamp": "2026-04-14T22:21:50.867Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776204905574",
+      "timestamp": "2026-04-14T22:15:05.575Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed captain password"
+    },
+    {
+      "id": "1776204895840",
+      "timestamp": "2026-04-14T22:14:55.840Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776204885424",
+      "timestamp": "2026-04-14T22:14:45.424Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
       "id": "1776203262674",
       "timestamp": "2026-04-14T21:47:42.674Z",
       "user": "Zamzow, Steve",
@@ -10885,42 +10921,6 @@
       "action": "login",
       "target": "",
       "details": "Logged into Admin portal"
-    },
-    {
-      "id": "1775595878174",
-      "timestamp": "2026-04-07T21:04:38.174Z",
-      "user": "Edwards, Bill",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1775595657505",
-      "timestamp": "2026-04-07T21:00:57.505Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Admin portal"
-    },
-    {
-      "id": "1775594734787",
-      "timestamp": "2026-04-07T20:45:34.787Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "settings-change",
-      "target": "pmShiftCutoff",
-      "details": "Updated setting: pmShiftCutoff"
-    },
-    {
-      "id": "1775594727618",
-      "timestamp": "2026-04-07T20:45:27.618Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "settings-change",
-      "target": "amShiftCutoff",
-      "details": "Updated setting: amShiftCutoff"
     }
   ]
 }
