@@ -9121,6 +9121,24 @@
   },
   "activityLog": [
     {
+      "id": "1776195125336",
+      "timestamp": "2026-04-14T19:32:05.340Z",
+      "user": "Sale, Lynn",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1776195121750",
+      "timestamp": "2026-04-14T19:32:01.750Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1776186056065",
       "timestamp": "2026-04-14T17:00:56.065Z",
       "user": "Elkins, Paul",
@@ -10901,24 +10919,6 @@
       "action": "login",
       "target": "",
       "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1775596331801",
-      "timestamp": "2026-04-07T21:12:11.801Z",
-      "user": "Howrey, Anne",
-      "userType": "Admin",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Admin portal"
-    },
-    {
-      "id": "1775596273486",
-      "timestamp": "2026-04-07T21:11:13.486Z",
-      "user": "Howrey, Anne",
-      "userType": "Admin",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Admin portal"
     }
   ]
 }
