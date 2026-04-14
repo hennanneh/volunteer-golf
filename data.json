@@ -1659,7 +1659,8 @@
       "hatReceived": false,
       "notes": "",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false
+      "hasVolunteerPassword": true,
+      "volunteerPassword": "$2b$10$Mt4OQaN.9fUujlj4EB4TfeMq37zAc8Akq.yx2PuRc14HPr/YtF2NG"
     },
     {
       "id": "6962",
@@ -7835,7 +7836,7 @@
       "address": "2974 Old Mill Rd Greenville, TX 75402",
       "volId": "292",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false,
+      "hasVolunteerPassword": true,
       "volunteerPassword": "$2b$10$9H06MCPpLzQI65orJ1OtZuARWqRVdjz2/cvj7yZOmCIWXLEE187tq"
     }
   ],
@@ -9119,6 +9120,60 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1776176925530",
+      "timestamp": "2026-04-14T14:28:45.530Z",
+      "user": "Zamzow, Steve",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1776176914709",
+      "timestamp": "2026-04-14T14:28:34.709Z",
+      "user": "Zamzow, Steve",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776176891735",
+      "timestamp": "2026-04-14T14:28:11.735Z",
+      "user": "Zamzow, Steve",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1776176350093",
+      "timestamp": "2026-04-14T14:19:10.093Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed captain password"
+    },
+    {
+      "id": "1776176284837",
+      "timestamp": "2026-04-14T14:18:04.837Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776175332514",
+      "timestamp": "2026-04-14T14:02:12.514Z",
+      "user": "Zamzow, Steve",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1776174969994",
       "timestamp": "2026-04-14T13:56:09.994Z",
@@ -10864,60 +10919,6 @@
       "action": "logout",
       "target": "",
       "details": "Logged out of Admin portal"
-    },
-    {
-      "id": "1775594734787",
-      "timestamp": "2026-04-07T20:45:34.787Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "settings-change",
-      "target": "pmShiftCutoff",
-      "details": "Updated setting: pmShiftCutoff"
-    },
-    {
-      "id": "1775594727618",
-      "timestamp": "2026-04-07T20:45:27.618Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "settings-change",
-      "target": "amShiftCutoff",
-      "details": "Updated setting: amShiftCutoff"
-    },
-    {
-      "id": "1775594720509",
-      "timestamp": "2026-04-07T20:45:20.509Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "settings-change",
-      "target": "helpPhone",
-      "details": "Updated setting: helpPhone"
-    },
-    {
-      "id": "1775594712957",
-      "timestamp": "2026-04-07T20:45:12.957Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "settings-change",
-      "target": "tournamentEndDate",
-      "details": "Updated setting: tournamentEndDate"
-    },
-    {
-      "id": "1775594706971",
-      "timestamp": "2026-04-07T20:45:06.971Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "settings-change",
-      "target": "tournamentStartDate",
-      "details": "Updated setting: tournamentStartDate"
-    },
-    {
-      "id": "1775594698499",
-      "timestamp": "2026-04-07T20:44:58.499Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "settings-change",
-      "target": "pairingsUrl",
-      "details": "Updated setting: pairingsUrl"
     }
   ]
 }
