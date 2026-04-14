@@ -7835,7 +7835,8 @@
       "address": "2974 Old Mill Rd Greenville, TX 75402",
       "volId": "292",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false
+      "hasVolunteerPassword": false,
+      "volunteerPassword": "$2b$10$9H06MCPpLzQI65orJ1OtZuARWqRVdjz2/cvj7yZOmCIWXLEE187tq"
     }
   ],
   "checkIns": [
@@ -9118,6 +9119,33 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1776174969994",
+      "timestamp": "2026-04-14T13:56:09.994Z",
+      "user": "Zamzow, Steve",
+      "userType": "Captain",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed captain password"
+    },
+    {
+      "id": "1776174947910",
+      "timestamp": "2026-04-14T13:55:47.910Z",
+      "user": "Zamzow, Steve",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776174156847",
+      "timestamp": "2026-04-14T13:42:36.847Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1776122623778",
       "timestamp": "2026-04-13T23:23:43.778Z",
@@ -10890,33 +10918,6 @@
       "action": "settings-change",
       "target": "pairingsUrl",
       "details": "Updated setting: pairingsUrl"
-    },
-    {
-      "id": "1775594698494",
-      "timestamp": "2026-04-07T20:44:58.494Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "settings-change",
-      "target": "helpEmail",
-      "details": "Updated setting: helpEmail"
-    },
-    {
-      "id": "1775594698488",
-      "timestamp": "2026-04-07T20:44:58.488Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "settings-change",
-      "target": "helpName",
-      "details": "Updated setting: helpName"
-    },
-    {
-      "id": "1775594698486",
-      "timestamp": "2026-04-07T20:44:58.486Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "settings-change",
-      "target": "tournamentName",
-      "details": "Updated setting: tournamentName"
     }
   ]
 }
