@@ -1564,7 +1564,7 @@
       "address": "2129 Shumard Ln Flower Mound, TX 75028",
       "volId": "4531",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": true,
+      "hasVolunteerPassword": false,
       "volunteerPassword": "$2b$10$WdEentjjEshwgLGj1XD.ru4hGYbON9HsU9lKBXbH1K9XlQjWXWLyi"
     },
     {
@@ -6116,6 +6116,10 @@
       "yearsWorked": 13,
       "hat": "",
       "scheduled": {
+        "Monday AM": true,
+        "Monday PM": true,
+        "Tuesday AM": true,
+        "Tuesday PM": true,
         "Wednesday AM": true,
         "Wednesday PM": true,
         "Thursday AM": true,
@@ -6130,7 +6134,7 @@
       "address": "701 Shady Creek Drive Kennedale, TX 76060",
       "volId": "5240",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": true,
+      "hasVolunteerPassword": false,
       "volunteerPassword": "$2b$10$DKkDxxf8bOMizLhn87uLdOVDrzEDqIsLI.w5T15zABd1S7QCXtcGi"
     },
     {
@@ -9119,130 +9123,13 @@
   },
   "activityLog": [
     {
-      "id": "1776199993792",
-      "timestamp": "2026-04-14T20:53:13.792Z",
-      "user": "Holt, Sharron",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776199903524",
-      "timestamp": "2026-04-14T20:51:43.524Z",
-      "user": "Holt, Sharron",
-      "userType": "Captain",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Captain portal"
-    },
-    {
-      "id": "1776199676237",
-      "timestamp": "2026-04-14T20:47:56.237Z",
-      "user": "Rogenski, Chris P.",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776198940518",
-      "timestamp": "2026-04-14T20:35:40.518Z",
-      "user": "Rogenski, Chris P.",
-      "userType": "Captain",
-      "action": "password-change",
-      "target": "",
-      "details": "Changed captain password"
-    },
-    {
-      "id": "1776198898076",
-      "timestamp": "2026-04-14T20:34:58.076Z",
-      "user": "Rogenski, Chris P.",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776197330041",
-      "timestamp": "2026-04-14T20:08:50.041Z",
-      "user": "Duncan, Larry",
-      "userType": "Captain",
-      "action": "password-change",
-      "target": "",
-      "details": "Changed captain password"
-    },
-    {
-      "id": "1776197285098",
-      "timestamp": "2026-04-14T20:08:05.098Z",
-      "user": "Duncan, Larry",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776195125336",
-      "timestamp": "2026-04-14T19:32:05.340Z",
-      "user": "Sale, Lynn",
-      "userType": "Volunteer",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Volunteer portal"
-    },
-    {
-      "id": "1776195121750",
-      "timestamp": "2026-04-14T19:32:01.750Z",
-      "user": "Pueblo, Vange",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776186056065",
-      "timestamp": "2026-04-14T17:00:56.065Z",
-      "user": "Elkins, Paul",
-      "userType": "Captain",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Captain portal"
-    },
-    {
-      "id": "1776185995298",
-      "timestamp": "2026-04-14T16:59:55.299Z",
-      "user": "Elkins, Paul",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776176925530",
-      "timestamp": "2026-04-14T14:28:45.530Z",
-      "user": "Zamzow, Steve",
-      "userType": "Captain",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Captain portal"
-    },
-    {
-      "id": "1776176914709",
-      "timestamp": "2026-04-14T14:28:34.709Z",
+      "id": "1776203262674",
+      "timestamp": "2026-04-14T21:47:42.674Z",
       "user": "Zamzow, Steve",
       "userType": "Captain",
       "action": "login",
       "target": "",
       "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776176891735",
-      "timestamp": "2026-04-14T14:28:11.735Z",
-      "user": "Zamzow, Steve",
-      "userType": "Captain",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Captain portal"
     },
     {
       "id": "1776176350093",
@@ -10917,6 +10804,123 @@
       "action": "password-change",
       "target": "",
       "details": "Changed admin password"
+    },
+    {
+      "id": "1775600559905",
+      "timestamp": "2026-04-07T22:22:39.905Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1775600556432",
+      "timestamp": "2026-04-07T22:22:36.432Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1775596678319",
+      "timestamp": "2026-04-07T21:17:58.319Z",
+      "user": "Edwards, Bill",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1775596641441",
+      "timestamp": "2026-04-07T21:17:21.441Z",
+      "user": "Edwards, Bill",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1775596634277",
+      "timestamp": "2026-04-07T21:17:14.277Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1775596354680",
+      "timestamp": "2026-04-07T21:12:34.680Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed captain password"
+    },
+    {
+      "id": "1775596340735",
+      "timestamp": "2026-04-07T21:12:20.735Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1775596331801",
+      "timestamp": "2026-04-07T21:12:11.801Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1775596273486",
+      "timestamp": "2026-04-07T21:11:13.486Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1775595878174",
+      "timestamp": "2026-04-07T21:04:38.174Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1775595657505",
+      "timestamp": "2026-04-07T21:00:57.505Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1775594734787",
+      "timestamp": "2026-04-07T20:45:34.787Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "settings-change",
+      "target": "pmShiftCutoff",
+      "details": "Updated setting: pmShiftCutoff"
+    },
+    {
+      "id": "1775594727618",
+      "timestamp": "2026-04-07T20:45:27.618Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "settings-change",
+      "target": "amShiftCutoff",
+      "details": "Updated setting: amShiftCutoff"
     }
   ]
 }
