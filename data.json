@@ -1856,10 +1856,10 @@
       "scheduled": {
         "Monday AM": true,
         "Tuesday AM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true
+        "Thursday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
+        "Sunday PM": true
       },
       "volId": "136",
       "address": "4512 Ridge North Rd Fort Worth, TX 76126",
@@ -2242,10 +2242,7 @@
       "scheduled": {
         "Monday AM": true,
         "Monday PM": true,
-        "Tuesday AM": true,
-        "Tuesday PM": true,
         "Wednesday AM": true,
-        "Wednesday PM": true,
         "Thursday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
@@ -6258,11 +6255,8 @@
       "yearsWorked": 32,
       "hat": "",
       "scheduled": {
-        "Monday AM": true,
-        "Monday PM": true,
         "Tuesday AM": true,
         "Tuesday PM": true,
-        "Wednesday AM": true,
         "Wednesday PM": true,
         "Thursday AM": true,
         "Thursday PM": true,
@@ -6424,10 +6418,10 @@
       "scheduled": {
         "Monday PM": true,
         "Tuesday PM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true
+        "Thursday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
+        "Sunday PM": true
       },
       "volId": "8499",
       "address": "4112 Ridglea County Club Dr #1614 Benbrook, TX 76126",
@@ -7362,10 +7356,10 @@
       "hat": "",
       "scheduled": {
         "Wednesday AM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true
+        "Thursday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
+        "Sunday PM": true
       },
       "volId": "9787",
       "address": "3201 Sth 23rd st Apt 236 Abilene, TX 79605",
@@ -7677,10 +7671,10 @@
       "hat": "",
       "scheduled": {
         "Wednesday PM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true
+        "Thursday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
+        "Sunday PM": true
       },
       "volId": "5876",
       "address": "11848 Hickory Cir Fort Worth, TX 76244-4582",
@@ -9638,6 +9632,33 @@
   },
   "activityLog": [
     {
+      "id": "1776257634948",
+      "timestamp": "2026-04-15T12:53:54.948Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776257076924",
+      "timestamp": "2026-04-15T12:44:36.924Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1776256725881",
+      "timestamp": "2026-04-15T12:38:45.881Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1776253840916",
       "timestamp": "2026-04-15T11:50:40.916Z",
       "user": "Elkins, Paul",
@@ -11409,33 +11430,6 @@
       "action": "login",
       "target": "",
       "details": "Logged into Admin portal"
-    },
-    {
-      "id": "1775758809360",
-      "timestamp": "2026-04-09T18:20:09.360Z",
-      "user": "Edwards, Bill",
-      "userType": "Captain",
-      "action": "check-out",
-      "target": "Edwards, Bill",
-      "details": "Checked out for Thursday PM on Hole 9"
-    },
-    {
-      "id": "1775758808369",
-      "timestamp": "2026-04-09T18:20:08.369Z",
-      "user": "Edwards, Bill",
-      "userType": "Captain",
-      "action": "check-in",
-      "target": "Edwards, Bill",
-      "details": "Checked in for Thursday PM on Hole 9"
-    },
-    {
-      "id": "1775758806051",
-      "timestamp": "2026-04-09T18:20:06.051Z",
-      "user": "Edwards, Bill",
-      "userType": "Captain",
-      "action": "check-out",
-      "target": "Edwards, Bill",
-      "details": "Checked out for Thursday PM on Hole 9"
     }
   ]
 }
