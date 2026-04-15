@@ -388,7 +388,8 @@
       "hatReceived": false,
       "notes": "",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false
+      "hasVolunteerPassword": true,
+      "volunteerPassword": "$2b$10$jJePdSV6ekW.6OFF5ezZcu9Z0Hf2oorj/L917ABMUzAsc7WLDn8a2"
     },
     {
       "id": "9465",
@@ -3798,8 +3799,8 @@
       "hat": "",
       "scheduled": {
         "Wednesday AM": true,
+        "Thursday AM": true,
         "Thursday PM": true,
-        "Friday AM": true,
         "Saturday PM": true,
         "Sunday AM": true
       },
@@ -4436,7 +4437,7 @@
       "scheduled": {
         "Wednesday PM": true,
         "Thursday AM": true,
-        "Friday PM": true,
+        "Friday AM": true,
         "Saturday AM": true,
         "Sunday PM": true
       },
@@ -9106,6 +9107,306 @@
       "timestamp": "2026-04-15T01:43:18.833Z",
       "checkedInBy": "Thomas, Stephen",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "3777",
+      "volunteerName": "Hicks, Greg",
+      "hole": 17,
+      "day": "Thursday",
+      "shift": "PM",
+      "timestamp": "2026-04-15T11:09:58.514Z",
+      "checkedInBy": "Bishop, Woody",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9406",
+      "volunteerName": "Kocek, Greg",
+      "hole": 17,
+      "day": "Thursday",
+      "shift": "PM",
+      "timestamp": "2026-04-15T11:09:59.784Z",
+      "checkedInBy": "Bishop, Woody",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "3778",
+      "volunteerName": "Hicks, Jackie",
+      "hole": 17,
+      "day": "Thursday",
+      "shift": "PM",
+      "timestamp": "2026-04-15T11:10:00.466Z",
+      "checkedInBy": "Bishop, Woody",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10339",
+      "volunteerName": "Lancaster, Barry",
+      "hole": 17,
+      "day": "Thursday",
+      "shift": "PM",
+      "timestamp": "2026-04-15T11:10:01.936Z",
+      "checkedInBy": "Bishop, Woody",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4102",
+      "volunteerName": "Munnell, Steve",
+      "hole": 17,
+      "day": "Thursday",
+      "shift": "PM",
+      "timestamp": "2026-04-15T11:10:02.595Z",
+      "checkedInBy": "Bishop, Woody",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8644",
+      "volunteerName": "Richie, Antonio",
+      "hole": 17,
+      "day": "Thursday",
+      "shift": "PM",
+      "timestamp": "2026-04-15T11:10:03.879Z",
+      "checkedInBy": "Bishop, Woody",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10237",
+      "volunteerName": "Sumrall, Stuart",
+      "hole": 17,
+      "day": "Thursday",
+      "shift": "PM",
+      "timestamp": "2026-04-15T11:10:04.421Z",
+      "checkedInBy": "Bishop, Woody",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10279",
+      "volunteerName": "Wright, Nancy",
+      "hole": 17,
+      "day": "Thursday",
+      "shift": "PM",
+      "timestamp": "2026-04-15T11:10:07.524Z",
+      "checkedInBy": "Bishop, Woody",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4661",
+      "volunteerName": "Wright, Paul",
+      "hole": 17,
+      "day": "Thursday",
+      "shift": "PM",
+      "timestamp": "2026-04-15T11:10:08.036Z",
+      "checkedInBy": "Bishop, Woody",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9427",
+      "volunteerName": "Yost, Kc",
+      "hole": 17,
+      "day": "Thursday",
+      "shift": "PM",
+      "timestamp": "2026-04-15T11:10:09.897Z",
+      "checkedInBy": "Bishop, Woody",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2658",
+      "volunteerName": "Andrews, Joseph",
+      "hole": 6,
+      "day": "Sunday",
+      "shift": "AM",
+      "timestamp": "2026-04-15T11:48:57.392Z",
+      "checkedInBy": "Elkins, Paul",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "9461",
+      "volunteerName": "Goodenough, Timothy",
+      "hole": 6,
+      "day": "Sunday",
+      "shift": "AM",
+      "timestamp": "2026-04-15T11:48:57.972Z",
+      "checkedInBy": "Elkins, Paul",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "4190",
+      "volunteerName": "Towers, Douglas",
+      "hole": 6,
+      "day": "Sunday",
+      "shift": "AM",
+      "timestamp": "2026-04-15T11:49:03.527Z",
+      "checkedInBy": "Elkins, Paul",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "4634",
+      "volunteerName": "Wright, Tony",
+      "hole": 6,
+      "day": "Sunday",
+      "shift": "AM",
+      "timestamp": "2026-04-15T11:49:07.912Z",
+      "checkedInBy": "Elkins, Paul",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7463",
+      "volunteerName": "Uy, Antonio",
+      "hole": 6,
+      "day": "Sunday",
+      "shift": "AM",
+      "timestamp": "2026-04-15T11:49:08.447Z",
+      "checkedInBy": "Elkins, Paul",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9833",
+      "volunteerName": "Piper, Monte",
+      "hole": 6,
+      "day": "Sunday",
+      "shift": "AM",
+      "timestamp": "2026-04-15T11:49:09.780Z",
+      "checkedInBy": "Elkins, Paul",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9834",
+      "volunteerName": "Piper, Kathleen",
+      "hole": 6,
+      "day": "Sunday",
+      "shift": "AM",
+      "timestamp": "2026-04-15T11:49:10.114Z",
+      "checkedInBy": "Elkins, Paul",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8295",
+      "volunteerName": "Miller, Ken",
+      "hole": 6,
+      "day": "Sunday",
+      "shift": "AM",
+      "timestamp": "2026-04-15T11:49:10.449Z",
+      "checkedInBy": "Elkins, Paul",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7922",
+      "volunteerName": "Justice, Neal",
+      "hole": 6,
+      "day": "Sunday",
+      "shift": "AM",
+      "timestamp": "2026-04-15T11:49:11.832Z",
+      "checkedInBy": "Elkins, Paul",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9195",
+      "volunteerName": "Greener, Jim",
+      "hole": 6,
+      "day": "Sunday",
+      "shift": "AM",
+      "timestamp": "2026-04-15T11:49:12.129Z",
+      "checkedInBy": "Elkins, Paul",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "419",
+      "volunteerName": "Cantu, Doug",
+      "hole": 6,
+      "day": "Sunday",
+      "shift": "AM",
+      "timestamp": "2026-04-15T11:49:12.433Z",
+      "checkedInBy": "Elkins, Paul",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "1464",
+      "volunteerName": "Mcdaniel, Patrick",
+      "hole": 6,
+      "day": "Sunday",
+      "shift": "AM",
+      "timestamp": "2026-04-15T11:49:13.865Z",
+      "checkedInBy": "Elkins, Paul",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4433",
+      "volunteerName": "Elkins, Paul",
+      "hole": 6,
+      "day": "Sunday",
+      "shift": "AM",
+      "timestamp": "2026-04-15T11:49:14.149Z",
+      "checkedInBy": "Elkins, Paul",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4433",
+      "volunteerName": "Elkins, Paul",
+      "hole": 6,
+      "day": "Wednesday",
+      "shift": "AM",
+      "timestamp": "2026-04-15T11:49:33.799Z",
+      "checkedInBy": "Elkins, Paul",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "1464",
+      "volunteerName": "Mcdaniel, Patrick",
+      "hole": 6,
+      "day": "Wednesday",
+      "shift": "AM",
+      "timestamp": "2026-04-15T11:49:34.266Z",
+      "checkedInBy": "Elkins, Paul",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2658",
+      "volunteerName": "Andrews, Joseph",
+      "hole": 6,
+      "day": "Wednesday",
+      "shift": "AM",
+      "timestamp": "2026-04-15T11:49:35.949Z",
+      "checkedInBy": "Elkins, Paul",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "419",
+      "volunteerName": "Cantu, Doug",
+      "hole": 6,
+      "day": "Wednesday",
+      "shift": "AM",
+      "timestamp": "2026-04-15T11:49:36.234Z",
+      "checkedInBy": "Elkins, Paul",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7922",
+      "volunteerName": "Justice, Neal",
+      "hole": 6,
+      "day": "Wednesday",
+      "shift": "AM",
+      "timestamp": "2026-04-15T11:49:36.466Z",
+      "checkedInBy": "Elkins, Paul",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7463",
+      "volunteerName": "Uy, Antonio",
+      "hole": 6,
+      "day": "Wednesday",
+      "shift": "AM",
+      "timestamp": "2026-04-15T11:49:37.933Z",
+      "checkedInBy": "Elkins, Paul",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8295",
+      "volunteerName": "Miller, Ken",
+      "hole": 6,
+      "day": "Wednesday",
+      "shift": "AM",
+      "timestamp": "2026-04-15T11:49:38.918Z",
+      "checkedInBy": "Elkins, Paul",
+      "isAlternate": false
     }
   ],
   "submissions": [
@@ -9260,6 +9561,66 @@
         "9610",
         "9807"
       ]
+    },
+    {
+      "hole": 17,
+      "day": "Thursday",
+      "shift": "PM",
+      "timestamp": "2026-04-15T11:10:17.564Z",
+      "captainName": "Bishop, Woody",
+      "notes": "",
+      "checkedInIds": [
+        "3777",
+        "9406",
+        "3778",
+        "10339",
+        "4102",
+        "8644",
+        "10237",
+        "10279",
+        "4661",
+        "9427"
+      ]
+    },
+    {
+      "hole": 6,
+      "day": "Sunday",
+      "shift": "AM",
+      "timestamp": "2026-04-15T11:49:18.469Z",
+      "captainName": "Elkins, Paul",
+      "notes": "",
+      "checkedInIds": [
+        "2658",
+        "9461",
+        "4190",
+        "4634",
+        "7463",
+        "9833",
+        "9834",
+        "8295",
+        "7922",
+        "9195",
+        "419",
+        "1464",
+        "4433"
+      ]
+    },
+    {
+      "hole": 6,
+      "day": "Wednesday",
+      "shift": "AM",
+      "timestamp": "2026-04-15T11:50:40.916Z",
+      "captainName": "Elkins, Paul",
+      "notes": "",
+      "checkedInIds": [
+        "4433",
+        "1464",
+        "2658",
+        "419",
+        "7922",
+        "7463",
+        "8295"
+      ]
     }
   ],
   "settings": {
@@ -9276,6 +9637,69 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1776253840916",
+      "timestamp": "2026-04-15T11:50:40.916Z",
+      "user": "Elkins, Paul",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 6",
+      "details": "Submitted Wednesday AM for Hole 6"
+    },
+    {
+      "id": "1776253823428",
+      "timestamp": "2026-04-15T11:50:23.428Z",
+      "user": "Elkins, Paul",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 6",
+      "details": "Submitted Wednesday AM for Hole 6"
+    },
+    {
+      "id": "1776253758469",
+      "timestamp": "2026-04-15T11:49:18.469Z",
+      "user": "Elkins, Paul",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 6",
+      "details": "Submitted Sunday AM for Hole 6"
+    },
+    {
+      "id": "1776253676843",
+      "timestamp": "2026-04-15T11:47:56.843Z",
+      "user": "Elkins, Paul",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776251417564",
+      "timestamp": "2026-04-15T11:10:17.564Z",
+      "user": "Bishop, Woody",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 17",
+      "details": "Submitted Thursday PM for Hole 17"
+    },
+    {
+      "id": "1776251139272",
+      "timestamp": "2026-04-15T11:05:39.272Z",
+      "user": "Bishop, Woody",
+      "userType": "Captain",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed captain password"
+    },
+    {
+      "id": "1776251091160",
+      "timestamp": "2026-04-15T11:04:51.160Z",
+      "user": "Bishop, Woody",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1776229219075",
       "timestamp": "2026-04-15T05:00:19.075Z",
@@ -11012,69 +11436,6 @@
       "action": "check-out",
       "target": "Edwards, Bill",
       "details": "Checked out for Thursday PM on Hole 9"
-    },
-    {
-      "id": "1775758774749",
-      "timestamp": "2026-04-09T18:19:34.749Z",
-      "user": "Edwards, Bill",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1775758764198",
-      "timestamp": "2026-04-09T18:19:24.198Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Admin portal"
-    },
-    {
-      "id": "1775758228496",
-      "timestamp": "2026-04-09T18:10:28.496Z",
-      "user": "Edwards, Bill",
-      "userType": "Captain",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Captain portal"
-    },
-    {
-      "id": "1775758190182",
-      "timestamp": "2026-04-09T18:09:50.182Z",
-      "user": "Edwards, Bill",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1775758180883",
-      "timestamp": "2026-04-09T18:09:40.883Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Admin portal"
-    },
-    {
-      "id": "1775758034166",
-      "timestamp": "2026-04-09T18:07:14.166Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Admin portal"
-    },
-    {
-      "id": "1775758020900",
-      "timestamp": "2026-04-09T18:07:00.900Z",
-      "user": "Howrey, Anne",
-      "userType": "Admin",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Admin portal"
     }
   ]
 }
