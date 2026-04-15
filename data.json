@@ -9821,6 +9821,15 @@
   },
   "activityLog": [
     {
+      "id": "1776279497508",
+      "timestamp": "2026-04-15T18:58:17.508Z",
+      "user": "Clayton, Rodney",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1776271746453",
       "timestamp": "2026-04-15T16:49:06.453Z",
       "user": "Pueblo, Vange",
@@ -11610,15 +11619,6 @@
       "action": "login",
       "target": "",
       "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1775827223198",
-      "timestamp": "2026-04-10T13:20:23.198Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Admin portal"
     }
   ]
 }
