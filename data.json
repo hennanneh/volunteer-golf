@@ -9277,6 +9277,15 @@
   },
   "activityLog": [
     {
+      "id": "1776229219075",
+      "timestamp": "2026-04-15T05:00:19.075Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1776229163284",
       "timestamp": "2026-04-15T04:59:23.284Z",
       "user": "Watson, Stan",
@@ -11066,15 +11075,6 @@
       "action": "logout",
       "target": "",
       "details": "Logged out of Admin portal"
-    },
-    {
-      "id": "1775757918888",
-      "timestamp": "2026-04-09T18:05:18.888Z",
-      "user": "Howrey, Anne",
-      "userType": "Admin",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Admin portal"
     }
   ]
 }
