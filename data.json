@@ -1035,7 +1035,7 @@
       "type": "Captain",
       "hole": 13,
       "phone": "(817) 253-0857",
-      "email": "rodneyclayton@yahoo.com",
+      "email": "rodneyeclayton@yahoo.com",
       "yearsWorked": 16,
       "hat": "",
       "scheduled": {
@@ -1060,7 +1060,7 @@
       "hasVolunteerPassword": true,
       "hatReceived": false,
       "notes": "",
-      "volunteerPassword": "$2b$10$C5jb5oRBnwINjKXECai//e4PpalY3SNbrzd9HHhIcq6xofdzvmMTm"
+      "volunteerPassword": "$2b$10$/2Xk7U5cvuV7RCijWFb4iOrmLsYRUfmb5GIF.y7b0YfJ5fM7MwvqS"
     },
     {
       "id": "9853",
@@ -9006,6 +9006,106 @@
       "checkedInBy": "Mcdaniel, Patrick",
       "timestamp": "2026-04-14T23:48:27.294Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "5235",
+      "volunteerName": "Thomas, Stephen",
+      "hole": 15,
+      "day": "Wednesday",
+      "shift": "PM",
+      "timestamp": "2026-04-15T01:42:14.311Z",
+      "checkedInBy": "Thomas, Stephen",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7794",
+      "volunteerName": "Beckley, Bob",
+      "hole": 15,
+      "day": "Wednesday",
+      "shift": "PM",
+      "timestamp": "2026-04-15T01:42:15.474Z",
+      "checkedInBy": "Thomas, Stephen",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9134",
+      "volunteerName": "Clark, Jason",
+      "hole": 15,
+      "day": "Wednesday",
+      "shift": "PM",
+      "timestamp": "2026-04-15T01:42:21.781Z",
+      "checkedInBy": "Thomas, Stephen",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6594",
+      "volunteerName": "Dunn, Dean",
+      "hole": 15,
+      "day": "Wednesday",
+      "shift": "PM",
+      "timestamp": "2026-04-15T01:42:22.531Z",
+      "checkedInBy": "Thomas, Stephen",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5924",
+      "volunteerName": "Gustaf, David",
+      "hole": 15,
+      "day": "Wednesday",
+      "shift": "PM",
+      "timestamp": "2026-04-15T01:42:23.099Z",
+      "checkedInBy": "Thomas, Stephen",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9244",
+      "volunteerName": "King, Chad",
+      "hole": 15,
+      "day": "Wednesday",
+      "shift": "PM",
+      "timestamp": "2026-04-15T01:42:23.681Z",
+      "checkedInBy": "Thomas, Stephen",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5235",
+      "volunteerName": "Thomas, Stephen",
+      "hole": 15,
+      "day": "Wednesday",
+      "shift": "AM",
+      "timestamp": "2026-04-15T01:43:14.778Z",
+      "checkedInBy": "Thomas, Stephen",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7794",
+      "volunteerName": "Beckley, Bob",
+      "hole": 15,
+      "day": "Wednesday",
+      "shift": "AM",
+      "timestamp": "2026-04-15T01:43:16.278Z",
+      "checkedInBy": "Thomas, Stephen",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9610",
+      "volunteerName": "Bullard, Roy",
+      "hole": 15,
+      "day": "Wednesday",
+      "shift": "AM",
+      "timestamp": "2026-04-15T01:43:18.166Z",
+      "checkedInBy": "Thomas, Stephen",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9807",
+      "volunteerName": "Bullard, Tricia",
+      "hole": 15,
+      "day": "Wednesday",
+      "shift": "AM",
+      "timestamp": "2026-04-15T01:43:18.833Z",
+      "checkedInBy": "Thomas, Stephen",
+      "isAlternate": false
     }
   ],
   "submissions": [
@@ -9130,6 +9230,36 @@
         "1182",
         "7640"
       ]
+    },
+    {
+      "hole": 15,
+      "day": "Wednesday",
+      "shift": "PM",
+      "timestamp": "2026-04-15T01:42:28.615Z",
+      "captainName": "Thomas, Stephen",
+      "notes": "",
+      "checkedInIds": [
+        "5235",
+        "7794",
+        "9134",
+        "6594",
+        "5924",
+        "9244"
+      ]
+    },
+    {
+      "hole": 15,
+      "day": "Wednesday",
+      "shift": "AM",
+      "timestamp": "2026-04-15T01:43:22.616Z",
+      "captainName": "Thomas, Stephen",
+      "notes": "",
+      "checkedInIds": [
+        "5235",
+        "7794",
+        "9610",
+        "9807"
+      ]
     }
   ],
   "settings": {
@@ -9146,6 +9276,177 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1776218188612",
+      "timestamp": "2026-04-15T01:56:28.612Z",
+      "user": "Clayton, Rodney",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776217900457",
+      "timestamp": "2026-04-15T01:51:40.457Z",
+      "user": "Clayton, Rodney",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776217846090",
+      "timestamp": "2026-04-15T01:50:46.090Z",
+      "user": "Clayton, Rodney",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1776217402616",
+      "timestamp": "2026-04-15T01:43:22.616Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 15",
+      "details": "Submitted Wednesday AM for Hole 15"
+    },
+    {
+      "id": "1776217398833",
+      "timestamp": "2026-04-15T01:43:18.833Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Bullard, Tricia",
+      "details": "Checked in for Wednesday AM on Hole 15"
+    },
+    {
+      "id": "1776217398166",
+      "timestamp": "2026-04-15T01:43:18.166Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Bullard, Roy",
+      "details": "Checked in for Wednesday AM on Hole 15"
+    },
+    {
+      "id": "1776217396278",
+      "timestamp": "2026-04-15T01:43:16.278Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Beckley, Bob",
+      "details": "Checked in for Wednesday AM on Hole 15"
+    },
+    {
+      "id": "1776217394778",
+      "timestamp": "2026-04-15T01:43:14.778Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Thomas, Stephen",
+      "details": "Checked in for Wednesday AM on Hole 15"
+    },
+    {
+      "id": "1776217348615",
+      "timestamp": "2026-04-15T01:42:28.615Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 15",
+      "details": "Submitted Wednesday PM for Hole 15"
+    },
+    {
+      "id": "1776217343681",
+      "timestamp": "2026-04-15T01:42:23.681Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "King, Chad",
+      "details": "Checked in for Wednesday PM on Hole 15"
+    },
+    {
+      "id": "1776217343099",
+      "timestamp": "2026-04-15T01:42:23.099Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Gustaf, David",
+      "details": "Checked in for Wednesday PM on Hole 15"
+    },
+    {
+      "id": "1776217342531",
+      "timestamp": "2026-04-15T01:42:22.531Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Dunn, Dean",
+      "details": "Checked in for Wednesday PM on Hole 15"
+    },
+    {
+      "id": "1776217341781",
+      "timestamp": "2026-04-15T01:42:21.781Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Clark, Jason",
+      "details": "Checked in for Wednesday PM on Hole 15"
+    },
+    {
+      "id": "1776217335474",
+      "timestamp": "2026-04-15T01:42:15.474Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Beckley, Bob",
+      "details": "Checked in for Wednesday PM on Hole 15"
+    },
+    {
+      "id": "1776217334312",
+      "timestamp": "2026-04-15T01:42:14.312Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Thomas, Stephen",
+      "details": "Checked in for Wednesday PM on Hole 15"
+    },
+    {
+      "id": "1776217029381",
+      "timestamp": "2026-04-15T01:37:09.381Z",
+      "user": "Clayton, Rodney",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776216987153",
+      "timestamp": "2026-04-15T01:36:27.153Z",
+      "user": "Clayton, Rodney",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1776216962857",
+      "timestamp": "2026-04-15T01:36:02.857Z",
+      "user": "Clayton, Rodney",
+      "userType": "Volunteer",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed volunteer password"
+    },
+    {
+      "id": "1776216635709",
+      "timestamp": "2026-04-15T01:30:35.709Z",
+      "user": "Clayton, Rodney",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
     {
       "id": "1776210479759",
       "timestamp": "2026-04-14T23:47:59.759Z",
@@ -10774,177 +11075,6 @@
       "action": "logout",
       "target": "",
       "details": "Logged out of Admin portal"
-    },
-    {
-      "id": "1775602300457",
-      "timestamp": "2026-04-07T22:51:40.457Z",
-      "user": "Howrey, Anne",
-      "userType": "Admin",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Admin portal"
-    },
-    {
-      "id": "1775602292825",
-      "timestamp": "2026-04-07T22:51:32.825Z",
-      "user": "Howrey, Anne",
-      "userType": "Captain",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Captain portal"
-    },
-    {
-      "id": "1775602207804",
-      "timestamp": "2026-04-07T22:50:07.804Z",
-      "user": "Howrey, Anne",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1775602203474",
-      "timestamp": "2026-04-07T22:50:03.474Z",
-      "user": "Howrey, Anne",
-      "userType": "Volunteer",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Volunteer portal"
-    },
-    {
-      "id": "1775602013309",
-      "timestamp": "2026-04-07T22:46:53.309Z",
-      "user": "Howrey, Anne",
-      "userType": "Volunteer",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Volunteer portal"
-    },
-    {
-      "id": "1775602009862",
-      "timestamp": "2026-04-07T22:46:49.862Z",
-      "user": "Howrey, Anne",
-      "userType": "Admin",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Admin portal"
-    },
-    {
-      "id": "1775601464772",
-      "timestamp": "2026-04-07T22:37:44.772Z",
-      "user": "Howrey, Anne",
-      "userType": "Admin",
-      "action": "edit-volunteer",
-      "target": "Hill, Michael",
-      "details": "Edited volunteer (Type: Admin, Hole: 99)"
-    },
-    {
-      "id": "1775601345629",
-      "timestamp": "2026-04-07T22:35:45.629Z",
-      "user": "Howrey, Anne",
-      "userType": "Admin",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Admin portal"
-    },
-    {
-      "id": "1775601342366",
-      "timestamp": "2026-04-07T22:35:42.366Z",
-      "user": "Howrey, Anne",
-      "userType": "Volunteer",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Volunteer portal"
-    },
-    {
-      "id": "1775601340070",
-      "timestamp": "2026-04-07T22:35:40.070Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Admin portal"
-    },
-    {
-      "id": "1775601329777",
-      "timestamp": "2026-04-07T22:35:29.777Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Admin portal"
-    },
-    {
-      "id": "1775601253420",
-      "timestamp": "2026-04-07T22:34:13.420Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Admin portal"
-    },
-    {
-      "id": "1775601241702",
-      "timestamp": "2026-04-07T22:34:01.702Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Admin portal"
-    },
-    {
-      "id": "1775600859578",
-      "timestamp": "2026-04-07T22:27:39.578Z",
-      "user": "Howrey, Anne",
-      "userType": "Volunteer",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Volunteer portal"
-    },
-    {
-      "id": "1775600854761",
-      "timestamp": "2026-04-07T22:27:34.761Z",
-      "user": "Howrey, Anne",
-      "userType": "Admin",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Admin portal"
-    },
-    {
-      "id": "1775600845358",
-      "timestamp": "2026-04-07T22:27:25.358Z",
-      "user": "Howrey, Anne",
-      "userType": "Admin",
-      "action": "settings-change",
-      "target": "showPoweredBy",
-      "details": "Updated setting: showPoweredBy"
-    },
-    {
-      "id": "1775600840501",
-      "timestamp": "2026-04-07T22:27:20.501Z",
-      "user": "Howrey, Anne",
-      "userType": "Admin",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Admin portal"
-    },
-    {
-      "id": "1775600824811",
-      "timestamp": "2026-04-07T22:27:04.811Z",
-      "user": "Howrey, Anne",
-      "userType": "Captain",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Captain portal"
-    },
-    {
-      "id": "1775600793271",
-      "timestamp": "2026-04-07T22:26:33.271Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Admin portal"
     }
   ]
 }
