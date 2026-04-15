@@ -1661,7 +1661,7 @@
       "hatReceived": false,
       "notes": "",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false,
+      "hasVolunteerPassword": true,
       "volunteerPassword": "$2b$10$pciWl12HrO/RItMHahovzO2jlrwCzV/bt1htIdrohvFxaBsXXBaBK"
     },
     {
@@ -7031,7 +7031,8 @@
       "address": "9302 King Air Dr Granbury, TX 76049",
       "volId": "5235",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false
+      "hasVolunteerPassword": false,
+      "volunteerPassword": "$2b$10$RXJPlIQSFHwTB/MVQS19SOFwYNoHqvClP1paaKyUlgYIXfNGcd5cO"
     },
     {
       "id": "1182",
@@ -8746,46 +8747,6 @@
       "isAlternate": true
     },
     {
-      "volunteerId": "5235",
-      "volunteerName": "Thomas, Stephen",
-      "hole": 15,
-      "day": "Saturday",
-      "shift": "PM",
-      "timestamp": "2026-04-11T21:12:21.254Z",
-      "checkedInBy": "Beckley, Bob",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "9610",
-      "volunteerName": "Bullard, Roy",
-      "hole": 15,
-      "day": "Saturday",
-      "shift": "PM",
-      "timestamp": "2026-04-11T21:12:23.519Z",
-      "checkedInBy": "Beckley, Bob",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "9874",
-      "volunteerName": "Hughes, Allen",
-      "hole": 15,
-      "day": "Saturday",
-      "shift": "PM",
-      "timestamp": "2026-04-11T21:12:26.218Z",
-      "checkedInBy": "Beckley, Bob",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "9244",
-      "volunteerName": "King, Chad",
-      "hole": 15,
-      "day": "Saturday",
-      "shift": "PM",
-      "timestamp": "2026-04-11T21:12:30.882Z",
-      "checkedInBy": "Beckley, Bob",
-      "isAlternate": false
-    },
-    {
       "volunteerId": "2543",
       "volunteerName": "Holt, Sharron",
       "hole": 8,
@@ -9069,20 +9030,6 @@
       ]
     },
     {
-      "hole": 15,
-      "day": "Saturday",
-      "shift": "PM",
-      "timestamp": "2026-04-11T21:12:51.603Z",
-      "captainName": "Beckley, Bob",
-      "notes": "",
-      "checkedInIds": [
-        "5235",
-        "9610",
-        "9874",
-        "9244"
-      ]
-    },
-    {
       "hole": 20,
       "day": "Sunday",
       "shift": "AM",
@@ -9108,6 +9055,15 @@
         "1182",
         "7640"
       ]
+    },
+    {
+      "hole": 15,
+      "day": "Saturday",
+      "shift": "PM",
+      "timestamp": "2026-04-15T21:08:51.549Z",
+      "captainName": "Thomas, Stephen",
+      "notes": "",
+      "checkedInIds": []
     }
   ],
   "settings": {
@@ -9124,6 +9080,33 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1776287331549",
+      "timestamp": "2026-04-15T21:08:51.549Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 15",
+      "details": "Submitted Saturday PM for Hole 15"
+    },
+    {
+      "id": "1776286971250",
+      "timestamp": "2026-04-15T21:02:51.250Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed captain password"
+    },
+    {
+      "id": "1776286931297",
+      "timestamp": "2026-04-15T21:02:11.297Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1776284879225",
       "timestamp": "2026-04-15T20:27:59.225Z",
@@ -10896,33 +10879,6 @@
       "action": "logout",
       "target": "",
       "details": "Logged out of Admin portal"
-    },
-    {
-      "id": "1775602300457",
-      "timestamp": "2026-04-07T22:51:40.457Z",
-      "user": "Howrey, Anne",
-      "userType": "Admin",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Admin portal"
-    },
-    {
-      "id": "1775602292825",
-      "timestamp": "2026-04-07T22:51:32.825Z",
-      "user": "Howrey, Anne",
-      "userType": "Captain",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Captain portal"
-    },
-    {
-      "id": "1775602207804",
-      "timestamp": "2026-04-07T22:50:07.804Z",
-      "user": "Howrey, Anne",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
     }
   ]
 }
