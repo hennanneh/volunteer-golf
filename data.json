@@ -9277,6 +9277,60 @@
   },
   "activityLog": [
     {
+      "id": "1776229163284",
+      "timestamp": "2026-04-15T04:59:23.284Z",
+      "user": "Watson, Stan",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1776228952614",
+      "timestamp": "2026-04-15T04:55:52.614Z",
+      "user": "Watson, Stan",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1776228650597",
+      "timestamp": "2026-04-15T04:50:50.597Z",
+      "user": "Watson, Stan",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1776228618396",
+      "timestamp": "2026-04-15T04:50:18.396Z",
+      "user": "Watson, Stan",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1776228566393",
+      "timestamp": "2026-04-15T04:49:26.393Z",
+      "user": "Watson, Stan",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1776228285000",
+      "timestamp": "2026-04-15T04:44:45.000Z",
+      "user": "Watson, Stan",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
       "id": "1776223435138",
       "timestamp": "2026-04-15T03:23:55.138Z",
       "user": "Clayton, Rodney",
@@ -11021,60 +11075,6 @@
       "action": "login",
       "target": "",
       "details": "Logged into Admin portal"
-    },
-    {
-      "id": "1775757883508",
-      "timestamp": "2026-04-09T18:04:43.508Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Admin portal"
-    },
-    {
-      "id": "1775757873521",
-      "timestamp": "2026-04-09T18:04:33.521Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Admin portal"
-    },
-    {
-      "id": "1775757714628",
-      "timestamp": "2026-04-09T18:01:54.628Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "edit-volunteer",
-      "target": "Edwards, Bill",
-      "details": "Edited volunteer (Type: Captain, Hole: 9)"
-    },
-    {
-      "id": "1775757552001",
-      "timestamp": "2026-04-09T17:59:12.001Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "edit-volunteer",
-      "target": "Edwards, Bill",
-      "details": "Edited volunteer (Type: Captain, Hole: 9)"
-    },
-    {
-      "id": "1775757490513",
-      "timestamp": "2026-04-09T17:58:10.513Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Admin portal"
-    },
-    {
-      "id": "1775603488719",
-      "timestamp": "2026-04-07T23:11:28.719Z",
-      "user": "Howrey, Patrick",
-      "userType": "Captain",
-      "action": "check-out",
-      "target": "Myrick, Byron",
-      "details": "Checked out for Tuesday PM on Hole 12"
     }
   ]
 }
