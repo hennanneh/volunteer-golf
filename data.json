@@ -3112,7 +3112,7 @@
       "id": "9874",
       "name": "Hughes, Allen",
       "type": "Volunteer",
-      "hole": 15,
+      "hole": 8,
       "phone": "(469) 766-8149",
       "email": "tigeral@live.com",
       "yearsWorked": 2,
@@ -3127,7 +3127,10 @@
       "volId": "9874",
       "address": "1300 Senna Drive Burleson, TX 76028",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false
+      "hasVolunteerPassword": false,
+      "hatReceived": false,
+      "notes": "",
+      "originalHole": 15
     },
     {
       "id": "2442",
@@ -4512,7 +4515,8 @@
       "address": "156 E Bozeman Ln Fort Worth, TX 76108",
       "volId": "1464",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false
+      "hasVolunteerPassword": true,
+      "volunteerPassword": "$2b$10$GSpWJ3J6kbcZQl6zMQ6RMuubrGZGbQbKr/TvUudNdnw3ad/n0c09O"
     },
     {
       "id": "9868",
@@ -8982,6 +8986,26 @@
       "timestamp": "2026-04-12T13:00:01.439Z",
       "checkedInBy": "Pueblo, Vange",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "1464",
+      "volunteerName": "Mcdaniel, Patrick",
+      "hole": 6,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Mcdaniel, Patrick",
+      "timestamp": "2026-04-14T23:48:24.669Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4433",
+      "volunteerName": "Elkins, Paul",
+      "hole": 6,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Mcdaniel, Patrick",
+      "timestamp": "2026-04-14T23:48:27.294Z",
+      "isAlternate": false
     }
   ],
   "submissions": [
@@ -9110,8 +9134,8 @@
   ],
   "settings": {
     "tournamentName": "Golf Tournament 2026",
-    "tournamentStartDate": "2026-04-06",
-    "tournamentEndDate": "2026-04-12",
+    "tournamentStartDate": "2026-04-13",
+    "tournamentEndDate": "2026-04-19",
     "helpPhone": "8176894697",
     "helpEmail": "mike@hulenbend.net",
     "amShiftCutoff": "13:00",
@@ -9122,6 +9146,168 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1776210479759",
+      "timestamp": "2026-04-14T23:47:59.759Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776210428718",
+      "timestamp": "2026-04-14T23:47:08.718Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1776209898858",
+      "timestamp": "2026-04-14T23:38:18.858Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "settings-change",
+      "target": "tournamentEndDate",
+      "details": "Updated setting: tournamentEndDate"
+    },
+    {
+      "id": "1776209891740",
+      "timestamp": "2026-04-14T23:38:11.740Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "settings-change",
+      "target": "tournamentStartDate",
+      "details": "Updated setting: tournamentStartDate"
+    },
+    {
+      "id": "1776209688818",
+      "timestamp": "2026-04-14T23:34:48.818Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Hughes, Allen",
+      "details": "Edited volunteer (Type: Volunteer, Hole: 8)"
+    },
+    {
+      "id": "1776209457938",
+      "timestamp": "2026-04-14T23:30:57.938Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1776209445085",
+      "timestamp": "2026-04-14T23:30:45.085Z",
+      "user": "Zamzow, Steve",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776209427361",
+      "timestamp": "2026-04-14T23:30:27.361Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1776209239326",
+      "timestamp": "2026-04-14T23:27:19.326Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776209158243",
+      "timestamp": "2026-04-14T23:25:58.243Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776209151698",
+      "timestamp": "2026-04-14T23:25:51.698Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1776208773415",
+      "timestamp": "2026-04-14T23:19:33.415Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776208768679",
+      "timestamp": "2026-04-14T23:19:28.679Z",
+      "user": "Holt, Sharron",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1776208755682",
+      "timestamp": "2026-04-14T23:19:15.682Z",
+      "user": "Holt, Sharron",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1776208751054",
+      "timestamp": "2026-04-14T23:19:11.054Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1776208720619",
+      "timestamp": "2026-04-14T23:18:40.619Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1776208339462",
+      "timestamp": "2026-04-14T23:12:19.462Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776208186263",
+      "timestamp": "2026-04-14T23:09:46.265Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1776205310867",
       "timestamp": "2026-04-14T22:21:50.867Z",
@@ -10755,168 +10941,6 @@
       "id": "1775600793271",
       "timestamp": "2026-04-07T22:26:33.271Z",
       "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Admin portal"
-    },
-    {
-      "id": "1775600651597",
-      "timestamp": "2026-04-07T22:24:11.597Z",
-      "user": "Howrey, Anne",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1775600646729",
-      "timestamp": "2026-04-07T22:24:06.729Z",
-      "user": "Howrey, Anne",
-      "userType": "Admin",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Admin portal"
-    },
-    {
-      "id": "1775600644108",
-      "timestamp": "2026-04-07T22:24:04.108Z",
-      "user": "Howrey, Anne",
-      "userType": "Admin",
-      "action": "settings-change",
-      "target": "numberOfHoles",
-      "details": "Updated setting: numberOfHoles"
-    },
-    {
-      "id": "1775600642188",
-      "timestamp": "2026-04-07T22:24:02.188Z",
-      "user": "Howrey, Anne",
-      "userType": "Admin",
-      "action": "settings-change",
-      "target": "numberOfHoles",
-      "details": "Updated setting: numberOfHoles"
-    },
-    {
-      "id": "1775600642006",
-      "timestamp": "2026-04-07T22:24:02.006Z",
-      "user": "Howrey, Anne",
-      "userType": "Admin",
-      "action": "settings-change",
-      "target": "numberOfHoles",
-      "details": "Updated setting: numberOfHoles"
-    },
-    {
-      "id": "1775600641257",
-      "timestamp": "2026-04-07T22:24:01.257Z",
-      "user": "Howrey, Anne",
-      "userType": "Admin",
-      "action": "settings-change",
-      "target": "numberOfHoles",
-      "details": "Updated setting: numberOfHoles"
-    },
-    {
-      "id": "1775600637378",
-      "timestamp": "2026-04-07T22:23:57.378Z",
-      "user": "Howrey, Anne",
-      "userType": "Admin",
-      "action": "edit-volunteer",
-      "target": "Howrey, Anne",
-      "details": "Edited volunteer (Type: Admin, Hole: 99)"
-    },
-    {
-      "id": "1775600598748",
-      "timestamp": "2026-04-07T22:23:18.748Z",
-      "user": "Howrey, Anne",
-      "userType": "Admin",
-      "action": "edit-volunteer",
-      "target": "Howrey, Patrick",
-      "details": "Edited volunteer (Type: Admin, Hole: 99)"
-    },
-    {
-      "id": "1775600570875",
-      "timestamp": "2026-04-07T22:22:50.875Z",
-      "user": "Howrey, Anne",
-      "userType": "Admin",
-      "action": "password-change",
-      "target": "",
-      "details": "Changed admin password"
-    },
-    {
-      "id": "1775600559905",
-      "timestamp": "2026-04-07T22:22:39.905Z",
-      "user": "Howrey, Anne",
-      "userType": "Admin",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Admin portal"
-    },
-    {
-      "id": "1775600556432",
-      "timestamp": "2026-04-07T22:22:36.432Z",
-      "user": "Howrey, Anne",
-      "userType": "Captain",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Captain portal"
-    },
-    {
-      "id": "1775596678319",
-      "timestamp": "2026-04-07T21:17:58.319Z",
-      "user": "Edwards, Bill",
-      "userType": "Volunteer",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Volunteer portal"
-    },
-    {
-      "id": "1775596641441",
-      "timestamp": "2026-04-07T21:17:21.441Z",
-      "user": "Edwards, Bill",
-      "userType": "Volunteer",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Volunteer portal"
-    },
-    {
-      "id": "1775596634277",
-      "timestamp": "2026-04-07T21:17:14.277Z",
-      "user": "Edwards, Bill",
-      "userType": "Captain",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Captain portal"
-    },
-    {
-      "id": "1775596354680",
-      "timestamp": "2026-04-07T21:12:34.680Z",
-      "user": "Howrey, Anne",
-      "userType": "Captain",
-      "action": "password-change",
-      "target": "",
-      "details": "Changed captain password"
-    },
-    {
-      "id": "1775596340735",
-      "timestamp": "2026-04-07T21:12:20.735Z",
-      "user": "Howrey, Anne",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1775596331801",
-      "timestamp": "2026-04-07T21:12:11.801Z",
-      "user": "Howrey, Anne",
-      "userType": "Admin",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Admin portal"
-    },
-    {
-      "id": "1775596273486",
-      "timestamp": "2026-04-07T21:11:13.486Z",
-      "user": "Howrey, Anne",
       "userType": "Admin",
       "action": "login",
       "target": "",
