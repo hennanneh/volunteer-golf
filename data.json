@@ -9277,6 +9277,24 @@
   },
   "activityLog": [
     {
+      "id": "1776223435138",
+      "timestamp": "2026-04-15T03:23:55.138Z",
+      "user": "Clayton, Rodney",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776223435004",
+      "timestamp": "2026-04-15T03:23:55.004Z",
+      "user": "Clayton, Rodney",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1776219607959",
       "timestamp": "2026-04-15T02:20:07.959Z",
       "user": "Hill, Michael",
@@ -11057,24 +11075,6 @@
       "action": "check-out",
       "target": "Myrick, Byron",
       "details": "Checked out for Tuesday PM on Hole 12"
-    },
-    {
-      "id": "1775603484244",
-      "timestamp": "2026-04-07T23:11:24.244Z",
-      "user": "Howrey, Patrick",
-      "userType": "Captain",
-      "action": "check-in",
-      "target": "Myrick, Byron",
-      "details": "Checked in for Tuesday PM on Hole 12"
-    },
-    {
-      "id": "1775603319872",
-      "timestamp": "2026-04-07T23:08:39.872Z",
-      "user": "Howrey, Patrick",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
     }
   ]
 }
