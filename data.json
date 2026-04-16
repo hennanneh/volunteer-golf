@@ -525,7 +525,8 @@
       "address": "546 Queens Way GRAND PRAIRIE, TX 75052",
       "volId": "6191",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false
+      "hasVolunteerPassword": true,
+      "volunteerPassword": "$2b$10$zpJvsK4h4QjzgMwq7tC0YewORfD69BtiY2hG.Q3ZULiLDF4mCySV6"
     },
     {
       "id": "9610",
@@ -1521,13 +1522,10 @@
         "Tuesday PM": true,
         "Wednesday AM": true,
         "Wednesday PM": true,
-        "Thursday AM": true,
         "Thursday PM": true,
-        "Friday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
         "Saturday PM": true,
-        "Sunday AM": true,
         "Sunday PM": true
       },
       "address": "1027 Hunter Ridge Dr Arlington, TX 76013",
@@ -1535,6 +1533,7 @@
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
       "noOutingPreference": true,
+      "notes": "This is a test of the new check in app",
       "volunteerPassword": "$2b$10$XKYArJhN/tFiYOyEkKWTU.b9LRGh3k/Ii.fALuJuVf/AmIJUAhwsu"
     },
     {
@@ -9038,6 +9037,16 @@
       "checkedInBy": "Mcdaniel, Patrick",
       "timestamp": "2026-04-14T23:48:27.294Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "394",
+      "volunteerName": "Duke, Mitzie",
+      "hole": 99,
+      "day": "Thursday",
+      "shift": "PM",
+      "timestamp": "2026-04-16T21:28:55.179Z",
+      "checkedInBy": "Duke, Mitzie",
+      "isAlternate": false
     }
   ],
   "submissions": [
@@ -9178,6 +9187,159 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1776375955227",
+      "timestamp": "2026-04-16T21:45:55.227Z",
+      "user": "Clayton, Rodney",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776375900484",
+      "timestamp": "2026-04-16T21:45:00.484Z",
+      "user": "Clayton, Rodney",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1776375691093",
+      "timestamp": "2026-04-16T21:41:31.093Z",
+      "user": "Duke, Mitzie",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1776375563514",
+      "timestamp": "2026-04-16T21:39:23.514Z",
+      "user": "Duke, Mitzie",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776375544024",
+      "timestamp": "2026-04-16T21:39:04.024Z",
+      "user": "Duke, Mitzie",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1776375485143",
+      "timestamp": "2026-04-16T21:38:05.143Z",
+      "user": "Duke, Mitzie",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1776375335653",
+      "timestamp": "2026-04-16T21:35:35.653Z",
+      "user": "Duke, Mitzie",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1776375324172",
+      "timestamp": "2026-04-16T21:35:24.172Z",
+      "user": "Duke, Mitzie",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776375303233",
+      "timestamp": "2026-04-16T21:35:03.233Z",
+      "user": "Duke, Mitzie",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1776375286997",
+      "timestamp": "2026-04-16T21:34:46.997Z",
+      "user": "Duke, Mitzie",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1776375256847",
+      "timestamp": "2026-04-16T21:34:16.847Z",
+      "user": "Duke, Mitzie",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1776374992339",
+      "timestamp": "2026-04-16T21:29:52.339Z",
+      "user": "Duke, Mitzie",
+      "userType": "Captain",
+      "action": "edit-notes",
+      "target": "Duke, Mitzie",
+      "details": "Updated volunteer notes"
+    },
+    {
+      "id": "1776374932961",
+      "timestamp": "2026-04-16T21:28:52.961Z",
+      "user": "Browning, Wayne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776374818560",
+      "timestamp": "2026-04-16T21:26:58.560Z",
+      "user": "Duke, Mitzie",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1776374706090",
+      "timestamp": "2026-04-16T21:25:06.090Z",
+      "user": "Duke, Mitzie",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1776374446699",
+      "timestamp": "2026-04-16T21:20:46.699Z",
+      "user": "Browning, Wayne",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1776374258712",
+      "timestamp": "2026-04-16T21:17:38.712Z",
+      "user": "Browning, Wayne",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
     {
       "id": "1776372076068",
       "timestamp": "2026-04-16T20:41:16.068Z",
@@ -10824,159 +10986,6 @@
       "action": "logout",
       "target": "",
       "details": "Logged out of Admin portal"
-    },
-    {
-      "id": "1775758034166",
-      "timestamp": "2026-04-09T18:07:14.166Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Admin portal"
-    },
-    {
-      "id": "1775758020900",
-      "timestamp": "2026-04-09T18:07:00.900Z",
-      "user": "Howrey, Anne",
-      "userType": "Admin",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Admin portal"
-    },
-    {
-      "id": "1775757918888",
-      "timestamp": "2026-04-09T18:05:18.888Z",
-      "user": "Howrey, Anne",
-      "userType": "Admin",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Admin portal"
-    },
-    {
-      "id": "1775757883508",
-      "timestamp": "2026-04-09T18:04:43.508Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Admin portal"
-    },
-    {
-      "id": "1775757873521",
-      "timestamp": "2026-04-09T18:04:33.521Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Admin portal"
-    },
-    {
-      "id": "1775757714628",
-      "timestamp": "2026-04-09T18:01:54.628Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "edit-volunteer",
-      "target": "Edwards, Bill",
-      "details": "Edited volunteer (Type: Captain, Hole: 9)"
-    },
-    {
-      "id": "1775757552001",
-      "timestamp": "2026-04-09T17:59:12.001Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "edit-volunteer",
-      "target": "Edwards, Bill",
-      "details": "Edited volunteer (Type: Captain, Hole: 9)"
-    },
-    {
-      "id": "1775757490513",
-      "timestamp": "2026-04-09T17:58:10.513Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Admin portal"
-    },
-    {
-      "id": "1775603488719",
-      "timestamp": "2026-04-07T23:11:28.719Z",
-      "user": "Howrey, Patrick",
-      "userType": "Captain",
-      "action": "check-out",
-      "target": "Myrick, Byron",
-      "details": "Checked out for Tuesday PM on Hole 12"
-    },
-    {
-      "id": "1775603484244",
-      "timestamp": "2026-04-07T23:11:24.244Z",
-      "user": "Howrey, Patrick",
-      "userType": "Captain",
-      "action": "check-in",
-      "target": "Myrick, Byron",
-      "details": "Checked in for Tuesday PM on Hole 12"
-    },
-    {
-      "id": "1775603319872",
-      "timestamp": "2026-04-07T23:08:39.872Z",
-      "user": "Howrey, Patrick",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1775603265296",
-      "timestamp": "2026-04-07T23:07:45.296Z",
-      "user": "Howrey, Patrick",
-      "userType": "Admin",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Admin portal"
-    },
-    {
-      "id": "1775602400659",
-      "timestamp": "2026-04-07T22:53:20.659Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Admin portal"
-    },
-    {
-      "id": "1775602300457",
-      "timestamp": "2026-04-07T22:51:40.457Z",
-      "user": "Howrey, Anne",
-      "userType": "Admin",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Admin portal"
-    },
-    {
-      "id": "1775602292825",
-      "timestamp": "2026-04-07T22:51:32.825Z",
-      "user": "Howrey, Anne",
-      "userType": "Captain",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Captain portal"
-    },
-    {
-      "id": "1775602207804",
-      "timestamp": "2026-04-07T22:50:07.804Z",
-      "user": "Howrey, Anne",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1775602203474",
-      "timestamp": "2026-04-07T22:50:03.474Z",
-      "user": "Howrey, Anne",
-      "userType": "Volunteer",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Volunteer portal"
     }
   ]
 }
