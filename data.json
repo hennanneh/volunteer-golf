@@ -9325,6 +9325,66 @@
       "checkedInBy": "Mcdaniel, Patrick",
       "timestamp": "2026-04-15T22:54:08.733Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "9658",
+      "volunteerName": "Jutras, Michael",
+      "hole": 9,
+      "day": "Wednesday",
+      "shift": "PM",
+      "timestamp": "2026-04-16T00:31:50.718Z",
+      "checkedInBy": "Jutras, Michael",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "3034",
+      "volunteerName": "Burnett, Eric",
+      "hole": 9,
+      "day": "Wednesday",
+      "shift": "PM",
+      "timestamp": "2026-04-16T00:31:51.347Z",
+      "checkedInBy": "Jutras, Michael",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2055",
+      "volunteerName": "Edwards, Bill",
+      "hole": 9,
+      "day": "Wednesday",
+      "shift": "PM",
+      "timestamp": "2026-04-16T00:31:51.929Z",
+      "checkedInBy": "Jutras, Michael",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "3149",
+      "volunteerName": "Broom, Douglas",
+      "hole": 9,
+      "day": "Wednesday",
+      "shift": "PM",
+      "timestamp": "2026-04-16T00:33:07.702Z",
+      "checkedInBy": "Jutras, Michael",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "111",
+      "volunteerName": "Cary, Ron",
+      "hole": 9,
+      "day": "Wednesday",
+      "shift": "PM",
+      "timestamp": "2026-04-16T00:33:10.498Z",
+      "checkedInBy": "Jutras, Michael",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "9811",
+      "volunteerName": "Land, Angela",
+      "hole": 9,
+      "day": "Wednesday",
+      "shift": "PM",
+      "timestamp": "2026-04-16T00:33:18.420Z",
+      "checkedInBy": "Jutras, Michael",
+      "isAlternate": true
     }
   ],
   "submissions": [
@@ -9498,6 +9558,22 @@
         "6828",
         "7527"
       ]
+    },
+    {
+      "hole": 9,
+      "day": "Wednesday",
+      "shift": "PM",
+      "timestamp": "2026-04-16T00:34:02.375Z",
+      "captainName": "Jutras, Michael",
+      "notes": "",
+      "checkedInIds": [
+        "9658",
+        "3034",
+        "2055",
+        "3149",
+        "111",
+        "9811"
+      ]
     }
   ],
   "settings": {
@@ -9514,6 +9590,24 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1776299642376",
+      "timestamp": "2026-04-16T00:34:02.376Z",
+      "user": "Jutras, Michael",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 9",
+      "details": "Submitted Wednesday PM for Hole 9"
+    },
+    {
+      "id": "1776299495671",
+      "timestamp": "2026-04-16T00:31:35.671Z",
+      "user": "Jutras, Michael",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1776293627338",
       "timestamp": "2026-04-15T22:53:47.338Z",
@@ -11295,24 +11389,6 @@
       "action": "edit-volunteer",
       "target": "Edwards, Bill",
       "details": "Edited volunteer (Type: Captain, Hole: 9)"
-    },
-    {
-      "id": "1775757490513",
-      "timestamp": "2026-04-09T17:58:10.513Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Admin portal"
-    },
-    {
-      "id": "1775603488719",
-      "timestamp": "2026-04-07T23:11:28.719Z",
-      "user": "Howrey, Patrick",
-      "userType": "Captain",
-      "action": "check-out",
-      "target": "Myrick, Byron",
-      "details": "Checked out for Tuesday PM on Hole 12"
     }
   ]
 }
