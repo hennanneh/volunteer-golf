@@ -7873,7 +7873,9 @@
         "Sunday PM": true
       },
       "address": "Fort Worth, TX",
-      "volId": "9999"
+      "volId": "9999",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     }
   ],
   "checkIns": [
@@ -9176,6 +9178,33 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1776358577597",
+      "timestamp": "2026-04-16T16:56:17.597Z",
+      "user": "Clayton, Rodney",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776358548379",
+      "timestamp": "2026-04-16T16:55:48.379Z",
+      "user": "Clayton, Rodney",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1776358479285",
+      "timestamp": "2026-04-16T16:54:39.285Z",
+      "user": "Clayton, Rodney",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1776352014441",
       "timestamp": "2026-04-16T15:06:54.441Z",
@@ -10948,33 +10977,6 @@
       "action": "login",
       "target": "",
       "details": "Logged into Admin portal"
-    },
-    {
-      "id": "1775601329777",
-      "timestamp": "2026-04-07T22:35:29.777Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Admin portal"
-    },
-    {
-      "id": "1775601253420",
-      "timestamp": "2026-04-07T22:34:13.420Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Admin portal"
-    },
-    {
-      "id": "1775601241702",
-      "timestamp": "2026-04-07T22:34:01.702Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Admin portal"
     }
   ]
 }
