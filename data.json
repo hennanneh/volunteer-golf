@@ -7846,6 +7846,34 @@
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
       "volunteerPassword": "$2b$10$9H06MCPpLzQI65orJ1OtZuARWqRVdjz2/cvj7yZOmCIWXLEE187tq"
+    },
+    {
+      "id": "9999",
+      "name": "Lackey, Lyn",
+      "type": "Colonial Member",
+      "hole": 99,
+      "phone": "(817) 223-4301",
+      "email": "llackey@colonialfw.com",
+      "yearsWorked": 10,
+      "hat": "",
+      "scheduled": {
+        "Monday AM": true,
+        "Monday PM": true,
+        "Tuesday AM": true,
+        "Tuesday PM": true,
+        "Wednesday AM": true,
+        "Wednesday PM": true,
+        "Thursday AM": true,
+        "Thursday PM": true,
+        "Friday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true,
+        "Sunday PM": true
+      },
+      "address": "Fort Worth, TX",
+      "volId": "9999"
     }
   ],
   "checkIns": [
@@ -9008,176 +9036,6 @@
       "checkedInBy": "Mcdaniel, Patrick",
       "timestamp": "2026-04-14T23:48:27.294Z",
       "isAlternate": false
-    },
-    {
-      "volunteerId": "7527",
-      "volunteerName": "Pueblo, Vange",
-      "hole": 20,
-      "day": "Thursday",
-      "shift": "AM",
-      "timestamp": "2026-04-16T14:30:27.625Z",
-      "checkedInBy": "Pueblo, Vange",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "6828",
-      "volunteerName": "Barber, Michael",
-      "hole": 20,
-      "day": "Thursday",
-      "shift": "AM",
-      "timestamp": "2026-04-16T14:30:28.325Z",
-      "checkedInBy": "Pueblo, Vange",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "10573",
-      "volunteerName": "Byrom, Kirk",
-      "hole": 20,
-      "day": "Thursday",
-      "shift": "AM",
-      "timestamp": "2026-04-16T14:30:30.396Z",
-      "checkedInBy": "Pueblo, Vange",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "6239",
-      "volunteerName": "Chapman, John",
-      "hole": 20,
-      "day": "Thursday",
-      "shift": "AM",
-      "timestamp": "2026-04-16T14:30:31.080Z",
-      "checkedInBy": "Pueblo, Vange",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "8788",
-      "volunteerName": "Collins, Kevin",
-      "hole": 20,
-      "day": "Thursday",
-      "shift": "AM",
-      "timestamp": "2026-04-16T14:30:31.664Z",
-      "checkedInBy": "Pueblo, Vange",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "7317",
-      "volunteerName": "Gagel, Chester",
-      "hole": 20,
-      "day": "Thursday",
-      "shift": "AM",
-      "timestamp": "2026-04-16T14:30:32.883Z",
-      "checkedInBy": "Pueblo, Vange",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "9856",
-      "volunteerName": "Hamic, Craig",
-      "hole": 20,
-      "day": "Thursday",
-      "shift": "AM",
-      "timestamp": "2026-04-16T14:30:34.451Z",
-      "checkedInBy": "Pueblo, Vange",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "9564",
-      "volunteerName": "Hix, 'Winky",
-      "hole": 20,
-      "day": "Thursday",
-      "shift": "AM",
-      "timestamp": "2026-04-16T14:30:35.020Z",
-      "checkedInBy": "Pueblo, Vange",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "8850",
-      "volunteerName": "Jones, Dietrich",
-      "hole": 20,
-      "day": "Thursday",
-      "shift": "AM",
-      "timestamp": "2026-04-16T14:30:35.470Z",
-      "checkedInBy": "Pueblo, Vange",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "8899",
-      "volunteerName": "Kalbfleisch, Joe",
-      "hole": 20,
-      "day": "Thursday",
-      "shift": "AM",
-      "timestamp": "2026-04-16T14:30:35.919Z",
-      "checkedInBy": "Pueblo, Vange",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "8543",
-      "volunteerName": "Lucas, John H.",
-      "hole": 20,
-      "day": "Thursday",
-      "shift": "AM",
-      "timestamp": "2026-04-16T14:30:37.557Z",
-      "checkedInBy": "Pueblo, Vange",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "8545",
-      "volunteerName": "Mendoza, Ralph",
-      "hole": 20,
-      "day": "Thursday",
-      "shift": "AM",
-      "timestamp": "2026-04-16T14:30:38.174Z",
-      "checkedInBy": "Pueblo, Vange",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "9574",
-      "volunteerName": "Paine, Danny",
-      "hole": 20,
-      "day": "Thursday",
-      "shift": "AM",
-      "timestamp": "2026-04-16T14:30:39.476Z",
-      "checkedInBy": "Pueblo, Vange",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "8066",
-      "volunteerName": "Sassaman, David",
-      "hole": 20,
-      "day": "Thursday",
-      "shift": "AM",
-      "timestamp": "2026-04-16T14:30:41.379Z",
-      "checkedInBy": "Pueblo, Vange",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "8695",
-      "volunteerName": "Stephens, Rayford",
-      "hole": 20,
-      "day": "Thursday",
-      "shift": "AM",
-      "timestamp": "2026-04-16T14:30:41.980Z",
-      "checkedInBy": "Pueblo, Vange",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "1182",
-      "volunteerName": "Tidwell, Jim",
-      "hole": 20,
-      "day": "Thursday",
-      "shift": "AM",
-      "timestamp": "2026-04-16T14:30:43.198Z",
-      "checkedInBy": "Pueblo, Vange",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "7640",
-      "volunteerName": "Williams, Amy",
-      "hole": 20,
-      "day": "Thursday",
-      "shift": "AM",
-      "timestamp": "2026-04-16T14:30:45.634Z",
-      "checkedInBy": "Pueblo, Vange",
-      "isAlternate": false
     }
   ],
   "submissions": [
@@ -9302,33 +9160,6 @@
         "1182",
         "7640"
       ]
-    },
-    {
-      "hole": 20,
-      "day": "Thursday",
-      "shift": "AM",
-      "timestamp": "2026-04-16T14:30:48.971Z",
-      "captainName": "Pueblo, Vange",
-      "notes": "",
-      "checkedInIds": [
-        "7527",
-        "6828",
-        "10573",
-        "6239",
-        "8788",
-        "7317",
-        "9856",
-        "9564",
-        "8850",
-        "8899",
-        "8543",
-        "8545",
-        "9574",
-        "8066",
-        "8695",
-        "1182",
-        "7640"
-      ]
     }
   ],
   "settings": {
@@ -9346,31 +9177,22 @@
   },
   "activityLog": [
     {
-      "id": "1776349898261",
-      "timestamp": "2026-04-16T14:31:38.261Z",
-      "user": "Pueblo, Vange",
-      "userType": "Captain",
+      "id": "1776352014441",
+      "timestamp": "2026-04-16T15:06:54.441Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
       "action": "logout",
       "target": "",
-      "details": "Logged out of Captain portal"
+      "details": "Logged out of Admin portal"
     },
     {
-      "id": "1776349848971",
-      "timestamp": "2026-04-16T14:30:48.971Z",
-      "user": "Pueblo, Vange",
-      "userType": "Captain",
-      "action": "submission",
-      "target": "Hole 20",
-      "details": "Submitted Thursday AM for Hole 20"
-    },
-    {
-      "id": "1776349818679",
-      "timestamp": "2026-04-16T14:30:18.680Z",
-      "user": "Pueblo, Vange",
-      "userType": "Captain",
-      "action": "login",
+      "id": "1776351940105",
+      "timestamp": "2026-04-16T15:05:40.105Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "import",
       "target": "",
-      "details": "Logged into Captain portal"
+      "details": "Updated/added volunteers from CSV: 0 updated, 1 added"
     },
     {
       "id": "1776349178947",
@@ -11144,6 +10966,15 @@
       "action": "login",
       "target": "",
       "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1775601241702",
+      "timestamp": "2026-04-07T22:34:01.702Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
     }
   ]
 }
