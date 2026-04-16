@@ -9179,6 +9179,15 @@
   },
   "activityLog": [
     {
+      "id": "1776359807896",
+      "timestamp": "2026-04-16T17:16:47.896Z",
+      "user": "Clayton, Rodney",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1776358577597",
       "timestamp": "2026-04-16T16:56:17.597Z",
       "user": "Clayton, Rodney",
@@ -10968,15 +10977,6 @@
       "action": "logout",
       "target": "",
       "details": "Logged out of Volunteer portal"
-    },
-    {
-      "id": "1775601340070",
-      "timestamp": "2026-04-07T22:35:40.070Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Admin portal"
     }
   ]
 }
