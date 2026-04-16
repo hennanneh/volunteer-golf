@@ -9188,6 +9188,33 @@
   },
   "activityLog": [
     {
+      "id": "1776380359797",
+      "timestamp": "2026-04-16T22:59:19.797Z",
+      "user": "Montalvo, Sammy",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776377866937",
+      "timestamp": "2026-04-16T22:17:46.937Z",
+      "user": "Browning, Wayne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776377848507",
+      "timestamp": "2026-04-16T22:17:28.507Z",
+      "user": "Browning, Wayne",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
       "id": "1776375955227",
       "timestamp": "2026-04-16T21:45:55.227Z",
       "user": "Clayton, Rodney",
@@ -10954,33 +10981,6 @@
     {
       "id": "1775758764198",
       "timestamp": "2026-04-09T18:19:24.198Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Admin portal"
-    },
-    {
-      "id": "1775758228496",
-      "timestamp": "2026-04-09T18:10:28.496Z",
-      "user": "Edwards, Bill",
-      "userType": "Captain",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Captain portal"
-    },
-    {
-      "id": "1775758190182",
-      "timestamp": "2026-04-09T18:09:50.182Z",
-      "user": "Edwards, Bill",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1775758180883",
-      "timestamp": "2026-04-09T18:09:40.883Z",
       "user": "Hill, Michael",
       "userType": "Admin",
       "action": "logout",
