@@ -1036,7 +1036,7 @@
       "type": "Captain",
       "hole": 13,
       "phone": "(817) 253-0857",
-      "email": "rodneyclayton@yahoo.com",
+      "email": "rodneyeclayton@yahoo.com",
       "yearsWorked": 16,
       "hat": "",
       "scheduled": {
@@ -9591,6 +9591,33 @@
   },
   "activityLog": [
     {
+      "id": "1776305546292",
+      "timestamp": "2026-04-16T02:12:26.292Z",
+      "user": "Clayton, Rodney",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776305495201",
+      "timestamp": "2026-04-16T02:11:35.201Z",
+      "user": "Clayton, Rodney",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776305400922",
+      "timestamp": "2026-04-16T02:10:00.923Z",
+      "user": "Clayton, Rodney",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
       "id": "1776299642376",
       "timestamp": "2026-04-16T00:34:02.376Z",
       "user": "Jutras, Michael",
@@ -11362,33 +11389,6 @@
       "action": "login",
       "target": "",
       "details": "Logged into Admin portal"
-    },
-    {
-      "id": "1775757873521",
-      "timestamp": "2026-04-09T18:04:33.521Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Admin portal"
-    },
-    {
-      "id": "1775757714628",
-      "timestamp": "2026-04-09T18:01:54.628Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "edit-volunteer",
-      "target": "Edwards, Bill",
-      "details": "Edited volunteer (Type: Captain, Hole: 9)"
-    },
-    {
-      "id": "1775757552001",
-      "timestamp": "2026-04-09T17:59:12.001Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "edit-volunteer",
-      "target": "Edwards, Bill",
-      "details": "Edited volunteer (Type: Captain, Hole: 9)"
     }
   ]
 }
