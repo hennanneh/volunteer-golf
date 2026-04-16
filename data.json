@@ -9179,6 +9179,42 @@
   },
   "activityLog": [
     {
+      "id": "1776364043103",
+      "timestamp": "2026-04-16T18:27:23.103Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776362987081",
+      "timestamp": "2026-04-16T18:09:47.081Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1776362957791",
+      "timestamp": "2026-04-16T18:09:17.791Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776362931649",
+      "timestamp": "2026-04-16T18:08:51.649Z",
+      "user": "Quintana, Mike",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1776359807896",
       "timestamp": "2026-04-16T17:16:47.896Z",
       "user": "Clayton, Rodney",
@@ -10941,42 +10977,6 @@
       "action": "login",
       "target": "",
       "details": "Logged into Volunteer portal"
-    },
-    {
-      "id": "1775602009862",
-      "timestamp": "2026-04-07T22:46:49.862Z",
-      "user": "Howrey, Anne",
-      "userType": "Admin",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Admin portal"
-    },
-    {
-      "id": "1775601464772",
-      "timestamp": "2026-04-07T22:37:44.772Z",
-      "user": "Howrey, Anne",
-      "userType": "Admin",
-      "action": "edit-volunteer",
-      "target": "Hill, Michael",
-      "details": "Edited volunteer (Type: Admin, Hole: 99)"
-    },
-    {
-      "id": "1775601345629",
-      "timestamp": "2026-04-07T22:35:45.629Z",
-      "user": "Howrey, Anne",
-      "userType": "Admin",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Admin portal"
-    },
-    {
-      "id": "1775601342366",
-      "timestamp": "2026-04-07T22:35:42.366Z",
-      "user": "Howrey, Anne",
-      "userType": "Volunteer",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Volunteer portal"
     }
   ]
 }
