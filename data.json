@@ -1036,7 +1036,7 @@
       "type": "Captain",
       "hole": 13,
       "phone": "(817) 253-0857",
-      "email": "rodneyclayton@yahoo.com",
+      "email": "rodandsue@sbcglobal.net",
       "yearsWorked": 16,
       "hat": "",
       "scheduled": {
@@ -1061,7 +1061,7 @@
       "hasVolunteerPassword": true,
       "hatReceived": false,
       "notes": "",
-      "volunteerPassword": "$2b$10$/2Xk7U5cvuV7RCijWFb4iOrmLsYRUfmb5GIF.y7b0YfJ5fM7MwvqS"
+      "volunteerPassword": "$2b$10$6nueEFrGJlBHDa3ngexcbuMCScvHKpff3yfD9ScPj0Xz042l3Q19G"
     },
     {
       "id": "9853",
@@ -9179,76 +9179,67 @@
   },
   "activityLog": [
     {
-      "id": "1776364043103",
-      "timestamp": "2026-04-16T18:27:23.103Z",
-      "user": "Duncan, Larry",
+      "id": "1776368007377",
+      "timestamp": "2026-04-16T19:33:27.377Z",
+      "user": "Montalvo, Sammy",
       "userType": "Captain",
       "action": "login",
       "target": "",
       "details": "Logged into Captain portal"
     },
     {
-      "id": "1776362987081",
-      "timestamp": "2026-04-16T18:09:47.081Z",
-      "user": "Duncan, Larry",
+      "id": "1776366569005",
+      "timestamp": "2026-04-16T19:09:29.005Z",
+      "user": "Clayton, Rodney",
       "userType": "Captain",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed captain password"
+    },
+    {
+      "id": "1776366396554",
+      "timestamp": "2026-04-16T19:06:36.554Z",
+      "user": "Clayton, Rodney",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776366337289",
+      "timestamp": "2026-04-16T19:05:37.289Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
       "action": "logout",
       "target": "",
-      "details": "Logged out of Captain portal"
+      "details": "Logged out of Admin portal"
     },
     {
-      "id": "1776362957791",
-      "timestamp": "2026-04-16T18:09:17.791Z",
-      "user": "Duncan, Larry",
-      "userType": "Captain",
+      "id": "1776366333996",
+      "timestamp": "2026-04-16T19:05:33.996Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Clayton, Rodney",
+      "details": "Edited volunteer (Type: Captain, Hole: 13)"
+    },
+    {
+      "id": "1776366307153",
+      "timestamp": "2026-04-16T19:05:07.153Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Clayton, Rodney",
+      "details": "Edited volunteer (Type: Captain, Hole: 13)"
+    },
+    {
+      "id": "1776366114249",
+      "timestamp": "2026-04-16T19:01:54.249Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
       "action": "login",
       "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776362931649",
-      "timestamp": "2026-04-16T18:08:51.649Z",
-      "user": "Quintana, Mike",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776359807896",
-      "timestamp": "2026-04-16T17:16:47.896Z",
-      "user": "Clayton, Rodney",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776358577597",
-      "timestamp": "2026-04-16T16:56:17.597Z",
-      "user": "Clayton, Rodney",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776358548379",
-      "timestamp": "2026-04-16T16:55:48.379Z",
-      "user": "Clayton, Rodney",
-      "userType": "Captain",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Captain portal"
-    },
-    {
-      "id": "1776358479285",
-      "timestamp": "2026-04-16T16:54:39.285Z",
-      "user": "Clayton, Rodney",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
+      "details": "Logged into Admin portal"
     },
     {
       "id": "1776352014441",
@@ -10977,6 +10968,15 @@
       "action": "login",
       "target": "",
       "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1775602009862",
+      "timestamp": "2026-04-07T22:46:49.862Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
     }
   ]
 }
