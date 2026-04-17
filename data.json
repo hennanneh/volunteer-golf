@@ -1065,7 +1065,6 @@
       "hasVolunteerPassword": true,
       "hatReceived": false,
       "notes": "",
-      "notAttendingOuting": true,
       "volunteerPassword": "$2b$10$6nueEFrGJlBHDa3ngexcbuMCScvHKpff3yfD9ScPj0Xz042l3Q19G"
     },
     {
@@ -3964,6 +3963,36 @@
       "hasVolunteerPassword": false
     },
     {
+      "id": "9999",
+      "name": "Lackey, Lyn",
+      "type": "Colonial Member",
+      "hole": 99,
+      "phone": "(817) 223-4301",
+      "email": "llackey@colonialfw.com",
+      "yearsWorked": 10,
+      "hat": "",
+      "scheduled": {
+        "Monday AM": true,
+        "Monday PM": true,
+        "Tuesday AM": true,
+        "Tuesday PM": true,
+        "Wednesday AM": true,
+        "Wednesday PM": true,
+        "Thursday AM": true,
+        "Thursday PM": true,
+        "Friday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true,
+        "Sunday PM": true
+      },
+      "address": "Fort Worth, TX",
+      "volId": "9999",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
+    },
+    {
       "id": "10339",
       "name": "Lancaster, Barry",
       "type": "Volunteer",
@@ -4195,7 +4224,7 @@
         "Saturday AM": true,
         "Sunday PM": true
       },
-      "address": "1024 Hatch Ct Southlake, TX 76092",
+      "address": "1024 Hatch Ct\r\nSouthlake, TX 76092",
       "volId": "10553",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false
@@ -4995,7 +5024,7 @@
         "Saturday PM": true,
         "Sunday AM": true
       },
-      "address": "11009 Whitestone Ranch Road Ft. Worth, TX 76126",
+      "address": "11009 Whitestone Ranch Road\r\nFt. Worth, TX 76126",
       "volId": "4434",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false
@@ -7852,34 +7881,311 @@
       "volunteerPassword": "$2b$10$9H06MCPpLzQI65orJ1OtZuARWqRVdjz2/cvj7yZOmCIWXLEE187tq"
     },
     {
-      "id": "9999",
-      "name": "Lackey, Lyn",
-      "type": "Colonial Member",
-      "hole": 99,
-      "phone": "(817) 223-4301",
-      "email": "llackey@colonialfw.com",
-      "yearsWorked": 10,
+      "id": "8946",
+      "name": "Gregston, Parker",
+      "type": "Volunteer",
+      "hole": 2,
+      "phone": "(303) 993-9538",
+      "email": "parkergregston@yahoo.com",
+      "yearsWorked": 4,
+      "hat": "",
+      "scheduled": {
+        "Wednesday PM": true,
+        "Thursday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
+        "Sunday PM": true
+      },
+      "address": "600 Emmons Creek Street\r\nFort Worth, TX 76247",
+      "volId": "8946"
+    },
+    {
+      "id": "10634",
+      "name": "Jones, David",
+      "type": "Volunteer",
+      "hole": 3,
+      "phone": "(682) 313-6838",
+      "email": "davidajones1265@gmail.com",
+      "yearsWorked": 1,
+      "hat": "",
+      "scheduled": {
+        "Monday PM": true,
+        "Tuesday PM": true,
+        "Wednesday PM": true,
+        "Thursday PM": true,
+        "Friday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true
+      },
+      "address": "5000 Portview Dr\r\nFort Worth, TX 76135",
+      "volId": "10634"
+    },
+    {
+      "id": "10629",
+      "name": "Millard, Tyrone",
+      "type": "Volunteer",
+      "hole": 5,
+      "phone": "(817) 808-0043",
+      "email": "tyrone.d.millard@gmail.com",
+      "yearsWorked": 1,
+      "hat": "",
+      "scheduled": {
+        "Tuesday PM": true,
+        "Thursday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
+        "Sunday PM": true
+      },
+      "address": "138 Kortney Dr\r\nHudson Oaks, TX 76087",
+      "volId": "10629"
+    },
+    {
+      "id": "7070",
+      "name": "Reding, Gary",
+      "type": "Volunteer",
+      "hole": 5,
+      "phone": "(817) 832-4972",
+      "email": "gsreding@yahoo.com",
+      "yearsWorked": 3,
+      "hat": "",
+      "scheduled": {
+        "Tuesday AM": true,
+        "Thursday PM": true,
+        "Friday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true
+      },
+      "address": "4456 Fairway View Dr.\r\nAledo, TX 76008",
+      "volId": "7070"
+    },
+    {
+      "id": "3428",
+      "name": "Saunders, Martin",
+      "type": "Volunteer",
+      "hole": 5,
+      "phone": "(817) 308-0508",
+      "email": "msaunders47@sbcglobal.net",
+      "yearsWorked": 11,
+      "hat": "",
+      "scheduled": {
+        "Tuesday PM": true,
+        "Thursday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
+        "Sunday PM": true
+      },
+      "address": "108 Martinek Ln\r\nPalmer, TX 75152",
+      "volId": "3428"
+    },
+    {
+      "id": "10619",
+      "name": "Simmons, Rick",
+      "type": "Volunteer",
+      "hole": 5,
+      "phone": "(817) 312-9588",
+      "email": "ACFT1@att.net",
+      "yearsWorked": 1,
+      "hat": "",
+      "scheduled": {
+        "Tuesday PM": true,
+        "Thursday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
+        "Sunday PM": true
+      },
+      "address": "3901 Weatherstone Dr\r\nFort Worth, TX 76137-7068",
+      "volId": "10619"
+    },
+    {
+      "id": "5441",
+      "name": "Lee, Rodney",
+      "type": "Volunteer",
+      "hole": 6,
+      "phone": "(817) 896-2030",
+      "email": "rodneyleeforjop@gmail.com",
+      "yearsWorked": 13,
+      "hat": "",
+      "scheduled": {
+        "Wednesday PM": true,
+        "Thursday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
+        "Sunday PM": true
+      },
+      "address": "945 Churchhill Dr.\r\nSaginaw, TX 76131",
+      "volId": "5441"
+    },
+    {
+      "id": "5307",
+      "name": "Anderson, Rob",
+      "type": "Volunteer",
+      "hole": 8,
+      "phone": "(817) 657-3743",
+      "email": "mrkiptain@yahoo.com",
+      "yearsWorked": 13,
+      "hat": "",
+      "scheduled": {
+        "Wednesday AM": true,
+        "Thursday PM": true,
+        "Friday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true
+      },
+      "address": "3216 Sawmill Way\r\nMansfield, TX 76063",
+      "volId": "5307"
+    },
+    {
+      "id": "10667",
+      "name": "Gilchrist, William (Bill)",
+      "type": "Volunteer",
+      "hole": 8,
+      "phone": "(904) 806-8610",
+      "email": "bgilchrist56@gmail.com",
+      "yearsWorked": 1,
       "hat": "",
       "scheduled": {
         "Monday AM": true,
-        "Monday PM": true,
         "Tuesday AM": true,
-        "Tuesday PM": true,
-        "Wednesday AM": true,
-        "Wednesday PM": true,
-        "Thursday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true
+      },
+      "address": "214 W Greenbriar Ln\r\nColleyville, TX 76034",
+      "volId": "10667"
+    },
+    {
+      "id": "10664",
+      "name": "Reiter, Mackenzie",
+      "type": "Volunteer",
+      "hole": 8,
+      "phone": "(817) 773-6893",
+      "email": "mackenziereiter@gmail.com",
+      "yearsWorked": 1,
+      "hat": "",
+      "scheduled": {
+        "Tuesday AM": true,
+        "Thursday PM": true,
+        "Friday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true
+      },
+      "address": "82 County Road 3632\r\nGainesville, TX 76240",
+      "volId": "10664"
+    },
+    {
+      "id": "10675",
+      "name": "Capps, Macy",
+      "type": "Volunteer",
+      "hole": 9,
+      "phone": "(405) 826-3877",
+      "email": "macywalkergolf@gmail.com",
+      "yearsWorked": 1,
+      "hat": "",
+      "scheduled": {
+        "Monday AM": true,
+        "Thursday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true,
         "Sunday PM": true
       },
-      "address": "Fort Worth, TX",
-      "volId": "9999",
-      "hasAdminPassword": false,
-      "hasVolunteerPassword": false
+      "address": "8501 Coffee Springs Drive\r\nFort Worth, TX 76131",
+      "volId": "10675"
+    },
+    {
+      "id": "9083",
+      "name": "Lyons, Dak",
+      "type": "Volunteer",
+      "hole": 13,
+      "phone": "(817) 715-7468",
+      "email": "daklyons@hotmail.com",
+      "yearsWorked": 4,
+      "hat": "",
+      "scheduled": {
+        "Wednesday AM": true,
+        "Thursday PM": true,
+        "Friday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true
+      },
+      "address": "7324 Londonderry Dr\r\nNorth Richland Hills, TX 76182",
+      "volId": "9083"
+    },
+    {
+      "id": "5952",
+      "name": "Pate, Teresa",
+      "type": "Volunteer",
+      "hole": 16,
+      "phone": "(817) 729-6823",
+      "email": "teresapate@att.net",
+      "yearsWorked": 12,
+      "hat": "",
+      "scheduled": {
+        "Tuesday PM": true,
+        "Thursday PM": true,
+        "Friday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true
+      },
+      "address": "5903 Derek Street\r\nArlington, TX 76016",
+      "volId": "5952"
+    },
+    {
+      "id": "7723",
+      "name": "Penneman, Douglas",
+      "type": "Volunteer",
+      "hole": 16,
+      "phone": "(817) 475-6152",
+      "email": "doug@penneman.com",
+      "yearsWorked": 4,
+      "hat": "",
+      "scheduled": {
+        "Monday AM": true,
+        "Thursday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
+        "Sunday PM": true
+      },
+      "address": "5200 Oak Mill Dr.\r\nFort Worth, TX 76135",
+      "volId": "7723"
+    },
+    {
+      "id": "10610",
+      "name": "Simon, Russ",
+      "type": "Volunteer",
+      "hole": 18,
+      "phone": "(214) 478-8334",
+      "email": "russ@texassimons.com",
+      "yearsWorked": 1,
+      "hat": "",
+      "scheduled": {
+        "Tuesday PM": true,
+        "Thursday PM": true,
+        "Friday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true
+      },
+      "address": "21767 Lakewood Lane\r\nChandler, TX 75758",
+      "volId": "10610"
+    },
+    {
+      "id": "10582",
+      "name": "Corrales, Jack",
+      "type": "Volunteer",
+      "hole": 14,
+      "phone": "(214) 325-5147",
+      "email": "broadwayjack7@gmail.com",
+      "yearsWorked": 1,
+      "hat": "",
+      "scheduled": {
+        "Monday PM": true,
+        "Thursday PM": true,
+        "Friday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true
+      },
+      "address": "3817 Princess Lane\r\nDallas, TX 75229",
+      "volId": "10582"
     }
   ],
   "checkIns": [
@@ -9052,16 +9358,6 @@
       "timestamp": "2026-04-16T21:28:55.179Z",
       "checkedInBy": "Duke, Mitzie",
       "isAlternate": false
-    },
-    {
-      "volunteerId": "9019",
-      "volunteerName": "Barron, Jamey",
-      "hole": 13,
-      "day": "Friday",
-      "shift": "AM",
-      "checkedInBy": "Clayton, Rodney",
-      "timestamp": "2026-04-17T17:14:21.369Z",
-      "isAlternate": true
     }
   ],
   "submissions": [
@@ -9203,40 +9499,13 @@
   },
   "activityLog": [
     {
-      "id": "1776448595484",
-      "timestamp": "2026-04-17T17:56:35.484Z",
-      "user": "Clayton, Rodney",
-      "userType": "Captain",
-      "action": "login",
+      "id": "1776451172948",
+      "timestamp": "2026-04-17T18:39:32.948Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "import",
       "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776444253271",
-      "timestamp": "2026-04-17T16:44:13.271Z",
-      "user": "Clayton, Rodney",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776443558676",
-      "timestamp": "2026-04-17T16:32:38.676Z",
-      "user": "Clayton, Rodney",
-      "userType": "Volunteer",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Volunteer portal"
-    },
-    {
-      "id": "1776442123412",
-      "timestamp": "2026-04-17T16:08:43.412Z",
-      "user": "Sale, Lynn",
-      "userType": "Volunteer",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Volunteer portal"
+      "details": "Updated/added volunteers from CSV: 2 updated, 16 added"
     },
     {
       "id": "1776435586017",
@@ -11001,6 +11270,33 @@
       "action": "edit-volunteer",
       "target": "Holt, Sharron",
       "details": "Edited volunteer (Type: Captain, Hole: 8)"
+    },
+    {
+      "id": "1775826384637",
+      "timestamp": "2026-04-10T13:06:24.637Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1775758809360",
+      "timestamp": "2026-04-09T18:20:09.360Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Edwards, Bill",
+      "details": "Checked out for Thursday PM on Hole 9"
+    },
+    {
+      "id": "1775758808369",
+      "timestamp": "2026-04-09T18:20:08.369Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Edwards, Bill",
+      "details": "Checked in for Thursday PM on Hole 9"
     }
   ]
 }
