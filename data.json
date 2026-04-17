@@ -9531,6 +9531,15 @@
   },
   "activityLog": [
     {
+      "id": "1776458453999",
+      "timestamp": "2026-04-17T20:40:53.999Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1776454467706",
       "timestamp": "2026-04-17T19:34:27.706Z",
       "user": "Montalvo, Sammy",
@@ -11320,15 +11329,6 @@
       "action": "login",
       "target": "",
       "details": "Logged into Admin portal"
-    },
-    {
-      "id": "1775758809360",
-      "timestamp": "2026-04-09T18:20:09.360Z",
-      "user": "Edwards, Bill",
-      "userType": "Captain",
-      "action": "check-out",
-      "target": "Edwards, Bill",
-      "details": "Checked out for Thursday PM on Hole 9"
     }
   ]
 }
