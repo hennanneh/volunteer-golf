@@ -438,7 +438,7 @@
       "id": "6672",
       "name": "Bravo, Albert",
       "type": "Volunteer",
-      "hole": 13,
+      "hole": 14,
       "phone": "(817) 614-1357",
       "email": "albertrob32@yahoo.com",
       "yearsWorked": 12,
@@ -453,7 +453,10 @@
       "volId": "6672",
       "address": "1661 S Forum Dr Apt 4402 Grand Prairie, TX 75052",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false
+      "hasVolunteerPassword": false,
+      "hatReceived": false,
+      "notes": "",
+      "originalHole": 13
     },
     {
       "id": "3149",
@@ -9189,6 +9192,24 @@
   },
   "activityLog": [
     {
+      "id": "1776431648266",
+      "timestamp": "2026-04-17T13:14:08.266Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Bravo, Albert",
+      "details": "Edited volunteer (Type: Volunteer, Hole: 14)"
+    },
+    {
+      "id": "1776431629288",
+      "timestamp": "2026-04-17T13:13:49.288Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
       "id": "1776430505707",
       "timestamp": "2026-04-17T12:55:05.707Z",
       "user": "Hill, Michael",
@@ -10969,24 +10990,6 @@
       "action": "logout",
       "target": "",
       "details": "Logged out of Admin portal"
-    },
-    {
-      "id": "1775758228496",
-      "timestamp": "2026-04-09T18:10:28.496Z",
-      "user": "Edwards, Bill",
-      "userType": "Captain",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Captain portal"
-    },
-    {
-      "id": "1775758190182",
-      "timestamp": "2026-04-09T18:09:50.182Z",
-      "user": "Edwards, Bill",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
     }
   ]
 }
