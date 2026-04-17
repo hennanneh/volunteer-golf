@@ -6390,7 +6390,7 @@
       "address": "1407 Pecos  Dr Southlake, TX 76092",
       "volId": "3974",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false,
+      "hasVolunteerPassword": true,
       "volunteerPassword": "$2b$10$OLpLZvvqXK5swuDpMbj85O0cpMpNAr3iQM8V9/snSzaz/M4PjEdHq"
     },
     {
@@ -9192,6 +9192,24 @@
   },
   "activityLog": [
     {
+      "id": "1776435586017",
+      "timestamp": "2026-04-17T14:19:46.019Z",
+      "user": "Sale, Lynn",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1776434824341",
+      "timestamp": "2026-04-17T14:07:04.341Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1776431648266",
       "timestamp": "2026-04-17T13:14:08.266Z",
       "user": "Hill, Michael",
@@ -10972,24 +10990,6 @@
       "action": "check-out",
       "target": "Edwards, Bill",
       "details": "Checked out for Thursday PM on Hole 9"
-    },
-    {
-      "id": "1775758774749",
-      "timestamp": "2026-04-09T18:19:34.749Z",
-      "user": "Edwards, Bill",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1775758764198",
-      "timestamp": "2026-04-09T18:19:24.198Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Admin portal"
     }
   ]
 }
