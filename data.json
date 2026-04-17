@@ -8153,16 +8153,6 @@
       "isAlternate": false
     },
     {
-      "volunteerId": "111",
-      "volunteerName": "Cary, Ron",
-      "hole": 9,
-      "day": "Friday",
-      "shift": "AM",
-      "timestamp": "2026-04-10T17:58:20.580Z",
-      "checkedInBy": "Edwards, Bill",
-      "isAlternate": false
-    },
-    {
       "volunteerId": "7527",
       "volunteerName": "Pueblo, Vange",
       "hole": 20,
@@ -9181,6 +9171,15 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1776422538635",
+      "timestamp": "2026-04-17T10:42:18.635Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1776398604584",
       "timestamp": "2026-04-17T04:03:24.584Z",
@@ -10966,15 +10965,6 @@
     {
       "id": "1775827214800",
       "timestamp": "2026-04-10T13:20:14.800Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "import",
-      "target": "",
-      "details": "Updated/added volunteers from CSV: 1 updated, 0 added"
-    },
-    {
-      "id": "1775827135213",
-      "timestamp": "2026-04-10T13:18:55.213Z",
       "user": "Hill, Michael",
       "userType": "Admin",
       "action": "import",
