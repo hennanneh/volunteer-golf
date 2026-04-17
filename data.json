@@ -9052,6 +9052,16 @@
       "timestamp": "2026-04-16T21:28:55.179Z",
       "checkedInBy": "Duke, Mitzie",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "9019",
+      "volunteerName": "Barron, Jamey",
+      "hole": 13,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Clayton, Rodney",
+      "timestamp": "2026-04-17T17:14:21.369Z",
+      "isAlternate": true
     }
   ],
   "submissions": [
@@ -9192,6 +9202,15 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1776448595484",
+      "timestamp": "2026-04-17T17:56:35.484Z",
+      "user": "Clayton, Rodney",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1776444253271",
       "timestamp": "2026-04-17T16:44:13.271Z",
@@ -10982,15 +11001,6 @@
       "action": "edit-volunteer",
       "target": "Holt, Sharron",
       "details": "Edited volunteer (Type: Captain, Hole: 8)"
-    },
-    {
-      "id": "1775826384637",
-      "timestamp": "2026-04-10T13:06:24.637Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Admin portal"
     }
   ]
 }
