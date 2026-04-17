@@ -1522,10 +1522,13 @@
         "Tuesday PM": true,
         "Wednesday AM": true,
         "Wednesday PM": true,
+        "Thursday AM": true,
         "Thursday PM": true,
+        "Friday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
         "Saturday PM": true,
+        "Sunday AM": true,
         "Sunday PM": true
       },
       "address": "1027 Hunter Ridge Dr Arlington, TX 76013",
@@ -9037,16 +9040,6 @@
       "checkedInBy": "Mcdaniel, Patrick",
       "timestamp": "2026-04-14T23:48:27.294Z",
       "isAlternate": false
-    },
-    {
-      "volunteerId": "394",
-      "volunteerName": "Duke, Mitzie",
-      "hole": 99,
-      "day": "Thursday",
-      "shift": "PM",
-      "timestamp": "2026-04-16T21:28:55.179Z",
-      "checkedInBy": "Duke, Mitzie",
-      "isAlternate": false
     }
   ],
   "submissions": [
@@ -9187,6 +9180,42 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1776382167877",
+      "timestamp": "2026-04-16T23:29:27.877Z",
+      "user": "Duke, Mitzie",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776382091359",
+      "timestamp": "2026-04-16T23:28:11.359Z",
+      "user": "Duke, Mitzie",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1776382071180",
+      "timestamp": "2026-04-16T23:27:51.180Z",
+      "user": "Duke, Mitzie",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1776380608387",
+      "timestamp": "2026-04-16T23:03:28.387Z",
+      "user": "Gordon, Gary",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
     {
       "id": "1776380359797",
       "timestamp": "2026-04-16T22:59:19.797Z",
@@ -10950,42 +10979,6 @@
       "action": "check-out",
       "target": "Edwards, Bill",
       "details": "Checked out for Thursday PM on Hole 9"
-    },
-    {
-      "id": "1775758808369",
-      "timestamp": "2026-04-09T18:20:08.369Z",
-      "user": "Edwards, Bill",
-      "userType": "Captain",
-      "action": "check-in",
-      "target": "Edwards, Bill",
-      "details": "Checked in for Thursday PM on Hole 9"
-    },
-    {
-      "id": "1775758806051",
-      "timestamp": "2026-04-09T18:20:06.051Z",
-      "user": "Edwards, Bill",
-      "userType": "Captain",
-      "action": "check-out",
-      "target": "Edwards, Bill",
-      "details": "Checked out for Thursday PM on Hole 9"
-    },
-    {
-      "id": "1775758774749",
-      "timestamp": "2026-04-09T18:19:34.749Z",
-      "user": "Edwards, Bill",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1775758764198",
-      "timestamp": "2026-04-09T18:19:24.198Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Admin portal"
     }
   ]
 }
