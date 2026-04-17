@@ -1062,7 +1062,6 @@
       "hasVolunteerPassword": true,
       "hatReceived": false,
       "notes": "",
-      "notAttendingOuting": true,
       "volunteerPassword": "$2b$10$6nueEFrGJlBHDa3ngexcbuMCScvHKpff3yfD9ScPj0Xz042l3Q19G"
     },
     {
@@ -1523,13 +1522,10 @@
         "Tuesday PM": true,
         "Wednesday AM": true,
         "Wednesday PM": true,
-        "Thursday AM": true,
         "Thursday PM": true,
-        "Friday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
         "Saturday PM": true,
-        "Sunday AM": true,
         "Sunday PM": true
       },
       "address": "1027 Hunter Ridge Dr Arlington, TX 76013",
@@ -6391,7 +6387,8 @@
       "address": "1407 Pecos  Dr Southlake, TX 76092",
       "volId": "3974",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false
+      "hasVolunteerPassword": false,
+      "volunteerPassword": "$2b$10$OLpLZvvqXK5swuDpMbj85O0cpMpNAr3iQM8V9/snSzaz/M4PjEdHq"
     },
     {
       "id": "10240",
@@ -8153,6 +8150,16 @@
       "isAlternate": false
     },
     {
+      "volunteerId": "111",
+      "volunteerName": "Cary, Ron",
+      "hole": 9,
+      "day": "Friday",
+      "shift": "AM",
+      "timestamp": "2026-04-10T17:58:20.580Z",
+      "checkedInBy": "Edwards, Bill",
+      "isAlternate": false
+    },
+    {
       "volunteerId": "7527",
       "volunteerName": "Pueblo, Vange",
       "hole": 20,
@@ -9031,6 +9038,16 @@
       "checkedInBy": "Mcdaniel, Patrick",
       "timestamp": "2026-04-14T23:48:27.294Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "394",
+      "volunteerName": "Duke, Mitzie",
+      "hole": 99,
+      "day": "Thursday",
+      "shift": "PM",
+      "timestamp": "2026-04-16T21:28:55.179Z",
+      "checkedInBy": "Duke, Mitzie",
+      "isAlternate": false
     }
   ],
   "submissions": [
@@ -9172,157 +9189,40 @@
   },
   "activityLog": [
     {
-      "id": "1776422538635",
-      "timestamp": "2026-04-17T10:42:18.635Z",
-      "user": "Edwards, Bill",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776398604584",
-      "timestamp": "2026-04-17T04:03:24.584Z",
-      "user": "Clayton, Rodney",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776395381363",
-      "timestamp": "2026-04-17T03:09:41.363Z",
-      "user": "Clayton, Rodney",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776395039494",
-      "timestamp": "2026-04-17T03:03:59.495Z",
-      "user": "Clayton, Rodney",
-      "userType": "Volunteer",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Volunteer portal"
-    },
-    {
-      "id": "1776388697893",
-      "timestamp": "2026-04-17T01:18:17.893Z",
-      "user": "Sale, Lynn",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776385667692",
-      "timestamp": "2026-04-17T00:27:47.692Z",
-      "user": "Galvan, Bob",
+      "id": "1776430505707",
+      "timestamp": "2026-04-17T12:55:05.707Z",
+      "user": "Hill, Michael",
       "userType": "Captain",
       "action": "logout",
       "target": "",
       "details": "Logged out of Captain portal"
     },
     {
-      "id": "1776385382715",
-      "timestamp": "2026-04-17T00:23:02.715Z",
-      "user": "Galvan, Bob",
+      "id": "1776430445110",
+      "timestamp": "2026-04-17T12:54:05.110Z",
+      "user": "Hill, Michael",
       "userType": "Captain",
       "action": "login",
       "target": "",
       "details": "Logged into Captain portal"
     },
     {
-      "id": "1776382167877",
-      "timestamp": "2026-04-16T23:29:27.877Z",
-      "user": "Duke, Mitzie",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776382091359",
-      "timestamp": "2026-04-16T23:28:11.359Z",
-      "user": "Duke, Mitzie",
-      "userType": "Volunteer",
+      "id": "1776430418675",
+      "timestamp": "2026-04-17T12:53:38.675Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
       "action": "logout",
       "target": "",
-      "details": "Logged out of Volunteer portal"
+      "details": "Logged out of Admin portal"
     },
     {
-      "id": "1776382071180",
-      "timestamp": "2026-04-16T23:27:51.180Z",
-      "user": "Duke, Mitzie",
-      "userType": "Volunteer",
+      "id": "1776430342813",
+      "timestamp": "2026-04-17T12:52:22.813Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
       "action": "login",
       "target": "",
-      "details": "Logged into Volunteer portal"
-    },
-    {
-      "id": "1776380608387",
-      "timestamp": "2026-04-16T23:03:28.387Z",
-      "user": "Gordon, Gary",
-      "userType": "Volunteer",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Volunteer portal"
-    },
-    {
-      "id": "1776380359797",
-      "timestamp": "2026-04-16T22:59:19.797Z",
-      "user": "Montalvo, Sammy",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776377866937",
-      "timestamp": "2026-04-16T22:17:46.937Z",
-      "user": "Browning, Wayne",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776377848507",
-      "timestamp": "2026-04-16T22:17:28.507Z",
-      "user": "Browning, Wayne",
-      "userType": "Volunteer",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Volunteer portal"
-    },
-    {
-      "id": "1776375955227",
-      "timestamp": "2026-04-16T21:45:55.227Z",
-      "user": "Clayton, Rodney",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776375900484",
-      "timestamp": "2026-04-16T21:45:00.484Z",
-      "user": "Clayton, Rodney",
-      "userType": "Volunteer",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Volunteer portal"
-    },
-    {
-      "id": "1776375691093",
-      "timestamp": "2026-04-16T21:41:31.093Z",
-      "user": "Duke, Mitzie",
-      "userType": "Captain",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Captain portal"
+      "details": "Logged into Admin portal"
     },
     {
       "id": "1776375563514",
@@ -10970,6 +10870,123 @@
       "action": "import",
       "target": "",
       "details": "Updated/added volunteers from CSV: 1 updated, 0 added"
+    },
+    {
+      "id": "1775827135213",
+      "timestamp": "2026-04-10T13:18:55.213Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "import",
+      "target": "",
+      "details": "Updated/added volunteers from CSV: 1 updated, 0 added"
+    },
+    {
+      "id": "1775827108826",
+      "timestamp": "2026-04-10T13:18:28.826Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1775826757323",
+      "timestamp": "2026-04-10T13:12:37.323Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1775826599943",
+      "timestamp": "2026-04-10T13:09:59.943Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Holt, Sharron",
+      "details": "Edited volunteer (Type: Captain, Hole: 8)"
+    },
+    {
+      "id": "1775826443808",
+      "timestamp": "2026-04-10T13:07:23.808Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Holt, Sharron",
+      "details": "Edited volunteer (Type: Captain, Hole: 8)"
+    },
+    {
+      "id": "1775826384637",
+      "timestamp": "2026-04-10T13:06:24.637Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1775758809360",
+      "timestamp": "2026-04-09T18:20:09.360Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Edwards, Bill",
+      "details": "Checked out for Thursday PM on Hole 9"
+    },
+    {
+      "id": "1775758808369",
+      "timestamp": "2026-04-09T18:20:08.369Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Edwards, Bill",
+      "details": "Checked in for Thursday PM on Hole 9"
+    },
+    {
+      "id": "1775758806051",
+      "timestamp": "2026-04-09T18:20:06.051Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Edwards, Bill",
+      "details": "Checked out for Thursday PM on Hole 9"
+    },
+    {
+      "id": "1775758774749",
+      "timestamp": "2026-04-09T18:19:34.749Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1775758764198",
+      "timestamp": "2026-04-09T18:19:24.198Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1775758228496",
+      "timestamp": "2026-04-09T18:10:28.496Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1775758190182",
+      "timestamp": "2026-04-09T18:09:50.182Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
     }
   ]
 }
