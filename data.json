@@ -9181,6 +9181,15 @@
   },
   "activityLog": [
     {
+      "id": "1776388697893",
+      "timestamp": "2026-04-17T01:18:17.893Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1776385667692",
       "timestamp": "2026-04-17T00:27:47.692Z",
       "user": "Galvan, Bob",
@@ -10965,15 +10974,6 @@
     {
       "id": "1775826599943",
       "timestamp": "2026-04-10T13:09:59.943Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "edit-volunteer",
-      "target": "Holt, Sharron",
-      "details": "Edited volunteer (Type: Captain, Hole: 8)"
-    },
-    {
-      "id": "1775826443808",
-      "timestamp": "2026-04-10T13:07:23.808Z",
       "user": "Hill, Michael",
       "userType": "Admin",
       "action": "edit-volunteer",
