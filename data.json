@@ -9181,6 +9181,24 @@
   },
   "activityLog": [
     {
+      "id": "1776385667692",
+      "timestamp": "2026-04-17T00:27:47.692Z",
+      "user": "Galvan, Bob",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1776385382715",
+      "timestamp": "2026-04-17T00:23:02.715Z",
+      "user": "Galvan, Bob",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1776382167877",
       "timestamp": "2026-04-16T23:29:27.877Z",
       "user": "Duke, Mitzie",
@@ -10961,24 +10979,6 @@
       "action": "edit-volunteer",
       "target": "Holt, Sharron",
       "details": "Edited volunteer (Type: Captain, Hole: 8)"
-    },
-    {
-      "id": "1775826384637",
-      "timestamp": "2026-04-10T13:06:24.637Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Admin portal"
-    },
-    {
-      "id": "1775758809360",
-      "timestamp": "2026-04-09T18:20:09.360Z",
-      "user": "Edwards, Bill",
-      "userType": "Captain",
-      "action": "check-out",
-      "target": "Edwards, Bill",
-      "details": "Checked out for Thursday PM on Hole 9"
     }
   ]
 }
