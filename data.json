@@ -7897,7 +7897,9 @@
         "Sunday PM": true
       },
       "address": "600 Emmons Creek Street\r\nFort Worth, TX 76247",
-      "volId": "8946"
+      "volId": "8946",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "10634",
@@ -7918,7 +7920,9 @@
         "Sunday AM": true
       },
       "address": "5000 Portview Dr\r\nFort Worth, TX 76135",
-      "volId": "10634"
+      "volId": "10634",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "10629",
@@ -7937,7 +7941,9 @@
         "Sunday PM": true
       },
       "address": "138 Kortney Dr\r\nHudson Oaks, TX 76087",
-      "volId": "10629"
+      "volId": "10629",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "7070",
@@ -7956,7 +7962,9 @@
         "Sunday AM": true
       },
       "address": "4456 Fairway View Dr.\r\nAledo, TX 76008",
-      "volId": "7070"
+      "volId": "7070",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "3428",
@@ -7975,7 +7983,9 @@
         "Sunday PM": true
       },
       "address": "108 Martinek Ln\r\nPalmer, TX 75152",
-      "volId": "3428"
+      "volId": "3428",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "10619",
@@ -7994,7 +8004,9 @@
         "Sunday PM": true
       },
       "address": "3901 Weatherstone Dr\r\nFort Worth, TX 76137-7068",
-      "volId": "10619"
+      "volId": "10619",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "5441",
@@ -8013,7 +8025,9 @@
         "Sunday PM": true
       },
       "address": "945 Churchhill Dr.\r\nSaginaw, TX 76131",
-      "volId": "5441"
+      "volId": "5441",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "5307",
@@ -8032,7 +8046,9 @@
         "Sunday AM": true
       },
       "address": "3216 Sawmill Way\r\nMansfield, TX 76063",
-      "volId": "5307"
+      "volId": "5307",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "10667",
@@ -8052,7 +8068,9 @@
         "Sunday AM": true
       },
       "address": "214 W Greenbriar Ln\r\nColleyville, TX 76034",
-      "volId": "10667"
+      "volId": "10667",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "10664",
@@ -8071,7 +8089,9 @@
         "Sunday AM": true
       },
       "address": "82 County Road 3632\r\nGainesville, TX 76240",
-      "volId": "10664"
+      "volId": "10664",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "10675",
@@ -8090,7 +8110,9 @@
         "Sunday PM": true
       },
       "address": "8501 Coffee Springs Drive\r\nFort Worth, TX 76131",
-      "volId": "10675"
+      "volId": "10675",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9083",
@@ -8109,7 +8131,9 @@
         "Sunday AM": true
       },
       "address": "7324 Londonderry Dr\r\nNorth Richland Hills, TX 76182",
-      "volId": "9083"
+      "volId": "9083",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "5952",
@@ -8128,7 +8152,9 @@
         "Sunday AM": true
       },
       "address": "5903 Derek Street\r\nArlington, TX 76016",
-      "volId": "5952"
+      "volId": "5952",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "7723",
@@ -8147,7 +8173,9 @@
         "Sunday PM": true
       },
       "address": "5200 Oak Mill Dr.\r\nFort Worth, TX 76135",
-      "volId": "7723"
+      "volId": "7723",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "10610",
@@ -8166,7 +8194,9 @@
         "Sunday AM": true
       },
       "address": "21767 Lakewood Lane\r\nChandler, TX 75758",
-      "volId": "10610"
+      "volId": "10610",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "10582",
@@ -8185,7 +8215,9 @@
         "Sunday AM": true
       },
       "address": "3817 Princess Lane\r\nDallas, TX 75229",
-      "volId": "10582"
+      "volId": "10582",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     }
   ],
   "checkIns": [
@@ -9498,6 +9530,15 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1776454467706",
+      "timestamp": "2026-04-17T19:34:27.706Z",
+      "user": "Montalvo, Sammy",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1776451172948",
       "timestamp": "2026-04-17T18:39:32.948Z",
@@ -11288,15 +11329,6 @@
       "action": "check-out",
       "target": "Edwards, Bill",
       "details": "Checked out for Thursday PM on Hole 9"
-    },
-    {
-      "id": "1775758808369",
-      "timestamp": "2026-04-09T18:20:08.369Z",
-      "user": "Edwards, Bill",
-      "userType": "Captain",
-      "action": "check-in",
-      "target": "Edwards, Bill",
-      "details": "Checked in for Thursday PM on Hole 9"
     }
   ]
 }
