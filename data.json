@@ -85,6 +85,27 @@
       "hasVolunteerPassword": false
     },
     {
+      "id": "5307",
+      "name": "Anderson, Rob",
+      "type": "Volunteer",
+      "hole": 8,
+      "phone": "(817) 657-3743",
+      "email": "mrkiptain@yahoo.com",
+      "yearsWorked": 13,
+      "hat": "",
+      "scheduled": {
+        "Wednesday AM": true,
+        "Thursday PM": true,
+        "Friday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true
+      },
+      "address": "3216 Sawmill Way\r\nMansfield, TX 76063",
+      "volId": "5307",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
+    },
+    {
       "id": "2658",
       "name": "Andrews, Joseph",
       "type": "Volunteer",
@@ -438,7 +459,7 @@
       "id": "6672",
       "name": "Bravo, Albert",
       "type": "Volunteer",
-      "hole": 13,
+      "hole": 14,
       "phone": "(817) 614-1357",
       "email": "albertrob32@yahoo.com",
       "yearsWorked": 12,
@@ -453,7 +474,10 @@
       "volId": "6672",
       "address": "1661 S Forum Dr Apt 4402 Grand Prairie, TX 75052",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false
+      "hasVolunteerPassword": false,
+      "hatReceived": false,
+      "notes": "",
+      "originalHole": 13
     },
     {
       "id": "3149",
@@ -832,6 +856,27 @@
       "hasVolunteerPassword": false
     },
     {
+      "id": "10675",
+      "name": "Capps, Macy",
+      "type": "Volunteer",
+      "hole": 9,
+      "phone": "(405) 826-3877",
+      "email": "macywalkergolf@gmail.com",
+      "yearsWorked": 1,
+      "hat": "",
+      "scheduled": {
+        "Monday AM": true,
+        "Thursday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
+        "Sunday PM": true
+      },
+      "address": "8501 Coffee Springs Drive\r\nFort Worth, TX 76131",
+      "volId": "10675",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
+    },
+    {
       "id": "111",
       "name": "Cary, Ron",
       "type": "Volunteer",
@@ -1062,7 +1107,6 @@
       "hasVolunteerPassword": true,
       "hatReceived": false,
       "notes": "",
-      "notAttendingOuting": true,
       "volunteerPassword": "$2b$10$6nueEFrGJlBHDa3ngexcbuMCScvHKpff3yfD9ScPj0Xz042l3Q19G"
     },
     {
@@ -1137,6 +1181,27 @@
       },
       "volId": "7068",
       "address": "1940 Pin Oak Drive, Flower Mound TX 75028-1290 Flower Mound, TX 75028",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
+    },
+    {
+      "id": "10582",
+      "name": "Corrales, Jack",
+      "type": "Volunteer",
+      "hole": 14,
+      "phone": "(214) 325-5147",
+      "email": "broadwayjack7@gmail.com",
+      "yearsWorked": 1,
+      "hat": "",
+      "scheduled": {
+        "Monday PM": true,
+        "Thursday PM": true,
+        "Friday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true
+      },
+      "address": "3817 Princess Lane\r\nDallas, TX 75229",
+      "volId": "10582",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false
     },
@@ -1523,22 +1588,21 @@
         "Tuesday PM": true,
         "Wednesday AM": true,
         "Wednesday PM": true,
-        "Thursday AM": true,
         "Thursday PM": true,
-        "Friday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
         "Saturday PM": true,
-        "Sunday AM": true,
         "Sunday PM": true
       },
       "address": "1027 Hunter Ridge Dr Arlington, TX 76013",
       "volId": "394",
-      "hasAdminPassword": false,
+      "hasAdminPassword": true,
       "hasVolunteerPassword": true,
       "noOutingPreference": true,
       "notes": "This is a test of the new check in app",
-      "volunteerPassword": "$2b$10$XKYArJhN/tFiYOyEkKWTU.b9LRGh3k/Ii.fALuJuVf/AmIJUAhwsu"
+      "adminPassword": "$2b$10$hidxC6w4LAk4ymmhQmAEAu.zvErvwMtsQnae3LsJU/fFMek89bW3e",
+      "volunteerPassword": "$2b$10$XKYArJhN/tFiYOyEkKWTU.b9LRGh3k/Ii.fALuJuVf/AmIJUAhwsu",
+      "adminPasswordSetAt": "2026-04-18T12:36:16.222Z"
     },
     {
       "id": "4531",
@@ -2138,6 +2202,28 @@
       "hasVolunteerPassword": false
     },
     {
+      "id": "10667",
+      "name": "Gilchrist, William (Bill)",
+      "type": "Volunteer",
+      "hole": 8,
+      "phone": "(904) 806-8610",
+      "email": "bgilchrist56@gmail.com",
+      "yearsWorked": 1,
+      "hat": "",
+      "scheduled": {
+        "Monday AM": true,
+        "Tuesday AM": true,
+        "Thursday PM": true,
+        "Friday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true
+      },
+      "address": "214 W Greenbriar Ln\r\nColleyville, TX 76034",
+      "volId": "10667",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
+    },
+    {
       "id": "4128",
       "name": "Gilley, Roger",
       "type": "Volunteer",
@@ -2420,6 +2506,27 @@
       },
       "volId": "9503",
       "address": "1208 S R St Indianola, IA 50125",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
+    },
+    {
+      "id": "8946",
+      "name": "Gregston, Parker",
+      "type": "Volunteer",
+      "hole": 2,
+      "phone": "(303) 993-9538",
+      "email": "parkergregston@yahoo.com",
+      "yearsWorked": 4,
+      "hat": "",
+      "scheduled": {
+        "Wednesday PM": true,
+        "Thursday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
+        "Sunday PM": true
+      },
+      "address": "600 Emmons Creek Street\r\nFort Worth, TX 76247",
+      "volId": "8946",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false
     },
@@ -3492,6 +3599,29 @@
       "hasVolunteerPassword": false
     },
     {
+      "id": "10634",
+      "name": "Jones, David",
+      "type": "Volunteer",
+      "hole": 3,
+      "phone": "(682) 313-6838",
+      "email": "davidajones1265@gmail.com",
+      "yearsWorked": 1,
+      "hat": "",
+      "scheduled": {
+        "Monday PM": true,
+        "Tuesday PM": true,
+        "Wednesday PM": true,
+        "Thursday PM": true,
+        "Friday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true
+      },
+      "address": "5000 Portview Dr\r\nFort Worth, TX 76135",
+      "volId": "10634",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
+    },
+    {
       "id": "8850",
       "name": "Jones, Dietrich",
       "type": "Volunteer",
@@ -3964,6 +4094,36 @@
       "hasVolunteerPassword": false
     },
     {
+      "id": "9999",
+      "name": "Lackey, Lyn",
+      "type": "Colonial Member",
+      "hole": 99,
+      "phone": "(817) 223-4301",
+      "email": "llackey@colonialfw.com",
+      "yearsWorked": 10,
+      "hat": "",
+      "scheduled": {
+        "Monday AM": true,
+        "Monday PM": true,
+        "Tuesday AM": true,
+        "Tuesday PM": true,
+        "Wednesday AM": true,
+        "Wednesday PM": true,
+        "Thursday AM": true,
+        "Thursday PM": true,
+        "Friday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true,
+        "Sunday PM": true
+      },
+      "address": "Fort Worth, TX",
+      "volId": "9999",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
+    },
+    {
       "id": "10339",
       "name": "Lancaster, Barry",
       "type": "Volunteer",
@@ -4066,6 +4226,27 @@
       },
       "volId": "8894",
       "address": "3704 Devonaire Dr Aledo, TX 76008",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
+    },
+    {
+      "id": "5441",
+      "name": "Lee, Rodney",
+      "type": "Volunteer",
+      "hole": 6,
+      "phone": "(817) 896-2030",
+      "email": "rodneyleeforjop@gmail.com",
+      "yearsWorked": 13,
+      "hat": "",
+      "scheduled": {
+        "Wednesday PM": true,
+        "Thursday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
+        "Sunday PM": true
+      },
+      "address": "945 Churchhill Dr.\r\nSaginaw, TX 76131",
+      "volId": "5441",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false
     },
@@ -4195,7 +4376,7 @@
         "Saturday AM": true,
         "Sunday PM": true
       },
-      "address": "1024 Hatch Ct Southlake, TX 76092",
+      "address": "1024 Hatch Ct\r\nSouthlake, TX 76092",
       "volId": "10553",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false
@@ -4311,6 +4492,27 @@
       },
       "volId": "4659",
       "address": "950 Oakbluff Dr. Lancaster, TX 75146",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
+    },
+    {
+      "id": "9083",
+      "name": "Lyons, Dak",
+      "type": "Volunteer",
+      "hole": 13,
+      "phone": "(817) 715-7468",
+      "email": "daklyons@hotmail.com",
+      "yearsWorked": 4,
+      "hat": "",
+      "scheduled": {
+        "Wednesday AM": true,
+        "Thursday PM": true,
+        "Friday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true
+      },
+      "address": "7324 Londonderry Dr\r\nNorth Richland Hills, TX 76182",
+      "volId": "9083",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false
     },
@@ -4667,6 +4869,27 @@
       "hasVolunteerPassword": false
     },
     {
+      "id": "10629",
+      "name": "Millard, Tyrone",
+      "type": "Volunteer",
+      "hole": 5,
+      "phone": "(817) 808-0043",
+      "email": "tyrone.d.millard@gmail.com",
+      "yearsWorked": 1,
+      "hat": "",
+      "scheduled": {
+        "Tuesday PM": true,
+        "Thursday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
+        "Sunday PM": true
+      },
+      "address": "138 Kortney Dr\r\nHudson Oaks, TX 76087",
+      "volId": "10629",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
+    },
+    {
       "id": "10451",
       "name": "Miller, David",
       "type": "Volunteer",
@@ -4995,7 +5218,7 @@
         "Saturday PM": true,
         "Sunday AM": true
       },
-      "address": "11009 Whitestone Ranch Road Ft. Worth, TX 76126",
+      "address": "11009 Whitestone Ranch Road\r\nFt. Worth, TX 76126",
       "volId": "4434",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false
@@ -5418,6 +5641,48 @@
       },
       "volId": "219",
       "address": "2121 Robinwood Dr. Fort Worth, TX 76111",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
+    },
+    {
+      "id": "5952",
+      "name": "Pate, Teresa",
+      "type": "Volunteer",
+      "hole": 16,
+      "phone": "(817) 729-6823",
+      "email": "teresapate@att.net",
+      "yearsWorked": 12,
+      "hat": "",
+      "scheduled": {
+        "Tuesday PM": true,
+        "Thursday PM": true,
+        "Friday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true
+      },
+      "address": "5903 Derek Street\r\nArlington, TX 76016",
+      "volId": "5952",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
+    },
+    {
+      "id": "7723",
+      "name": "Penneman, Douglas",
+      "type": "Volunteer",
+      "hole": 16,
+      "phone": "(817) 475-6152",
+      "email": "doug@penneman.com",
+      "yearsWorked": 4,
+      "hat": "",
+      "scheduled": {
+        "Monday AM": true,
+        "Thursday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
+        "Sunday PM": true
+      },
+      "address": "5200 Oak Mill Dr.\r\nFort Worth, TX 76135",
+      "volId": "7723",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false
     },
@@ -5914,6 +6179,27 @@
       "hasVolunteerPassword": false
     },
     {
+      "id": "7070",
+      "name": "Reding, Gary",
+      "type": "Volunteer",
+      "hole": 5,
+      "phone": "(817) 832-4972",
+      "email": "gsreding@yahoo.com",
+      "yearsWorked": 3,
+      "hat": "",
+      "scheduled": {
+        "Tuesday AM": true,
+        "Thursday PM": true,
+        "Friday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true
+      },
+      "address": "4456 Fairway View Dr.\r\nAledo, TX 76008",
+      "volId": "7070",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
+    },
+    {
       "id": "2488",
       "name": "Reinfelds, David",
       "type": "Volunteer",
@@ -5931,6 +6217,27 @@
       },
       "volId": "2488",
       "address": "1800 Woodview Dr Alvarado, TX 76009",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
+    },
+    {
+      "id": "10664",
+      "name": "Reiter, Mackenzie",
+      "type": "Volunteer",
+      "hole": 8,
+      "phone": "(817) 773-6893",
+      "email": "mackenziereiter@gmail.com",
+      "yearsWorked": 1,
+      "hat": "",
+      "scheduled": {
+        "Tuesday AM": true,
+        "Thursday PM": true,
+        "Friday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true
+      },
+      "address": "82 County Road 3632\r\nGainesville, TX 76240",
+      "volId": "10664",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false
     },
@@ -6364,6 +6671,27 @@
       "hasVolunteerPassword": false
     },
     {
+      "id": "3428",
+      "name": "Saunders, Martin",
+      "type": "Volunteer",
+      "hole": 5,
+      "phone": "(817) 308-0508",
+      "email": "msaunders47@sbcglobal.net",
+      "yearsWorked": 11,
+      "hat": "",
+      "scheduled": {
+        "Tuesday PM": true,
+        "Thursday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
+        "Sunday PM": true
+      },
+      "address": "108 Martinek Ln\r\nPalmer, TX 75152",
+      "volId": "3428",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
+    },
+    {
       "id": "3974",
       "name": "Schafer, John",
       "type": "Captain",
@@ -6391,7 +6719,7 @@
       "address": "1407 Pecos  Dr Southlake, TX 76092",
       "volId": "3974",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false,
+      "hasVolunteerPassword": true,
       "volunteerPassword": "$2b$10$OLpLZvvqXK5swuDpMbj85O0cpMpNAr3iQM8V9/snSzaz/M4PjEdHq"
     },
     {
@@ -6627,6 +6955,27 @@
       "hasVolunteerPassword": false
     },
     {
+      "id": "10619",
+      "name": "Simmons, Rick",
+      "type": "Volunteer",
+      "hole": 5,
+      "phone": "(817) 312-9588",
+      "email": "ACFT1@att.net",
+      "yearsWorked": 1,
+      "hat": "",
+      "scheduled": {
+        "Tuesday PM": true,
+        "Thursday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
+        "Sunday PM": true
+      },
+      "address": "3901 Weatherstone Dr\r\nFort Worth, TX 76137-7068",
+      "volId": "10619",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
+    },
+    {
       "id": "8463",
       "name": "Simmons, Vance",
       "type": "Volunteer",
@@ -6644,6 +6993,27 @@
       },
       "volId": "8463",
       "address": "327 Jack Nicklaus Drive Austin, TX 78738",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
+    },
+    {
+      "id": "10610",
+      "name": "Simon, Russ",
+      "type": "Volunteer",
+      "hole": 18,
+      "phone": "(214) 478-8334",
+      "email": "russ@texassimons.com",
+      "yearsWorked": 1,
+      "hat": "",
+      "scheduled": {
+        "Tuesday PM": true,
+        "Thursday PM": true,
+        "Friday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true
+      },
+      "address": "21767 Lakewood Lane\r\nChandler, TX 75758",
+      "volId": "10610",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false
     },
@@ -7850,36 +8220,6 @@
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
       "volunteerPassword": "$2b$10$9H06MCPpLzQI65orJ1OtZuARWqRVdjz2/cvj7yZOmCIWXLEE187tq"
-    },
-    {
-      "id": "9999",
-      "name": "Lackey, Lyn",
-      "type": "Colonial Member",
-      "hole": 99,
-      "phone": "(817) 223-4301",
-      "email": "llackey@colonialfw.com",
-      "yearsWorked": 10,
-      "hat": "",
-      "scheduled": {
-        "Monday AM": true,
-        "Monday PM": true,
-        "Tuesday AM": true,
-        "Tuesday PM": true,
-        "Wednesday AM": true,
-        "Wednesday PM": true,
-        "Thursday AM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
-        "Friday PM": true,
-        "Saturday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true,
-        "Sunday PM": true
-      },
-      "address": "Fort Worth, TX",
-      "volId": "9999",
-      "hasAdminPassword": false,
-      "hasVolunteerPassword": false
     }
   ],
   "checkIns": [
@@ -9042,6 +9382,16 @@
       "checkedInBy": "Mcdaniel, Patrick",
       "timestamp": "2026-04-14T23:48:27.294Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "394",
+      "volunteerName": "Duke, Mitzie",
+      "hole": 99,
+      "day": "Thursday",
+      "shift": "PM",
+      "timestamp": "2026-04-16T21:28:55.179Z",
+      "checkedInBy": "Duke, Mitzie",
+      "isAlternate": false
     }
   ],
   "submissions": [
@@ -9183,107 +9533,44 @@
   },
   "activityLog": [
     {
-      "id": "1776510290929",
-      "timestamp": "2026-04-18T11:04:50.929Z",
-      "user": "Edwards, Bill",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776398604584",
-      "timestamp": "2026-04-17T04:03:24.584Z",
-      "user": "Clayton, Rodney",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776395381363",
-      "timestamp": "2026-04-17T03:09:41.363Z",
-      "user": "Clayton, Rodney",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776395039494",
-      "timestamp": "2026-04-17T03:03:59.495Z",
-      "user": "Clayton, Rodney",
-      "userType": "Volunteer",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Volunteer portal"
-    },
-    {
-      "id": "1776388697893",
-      "timestamp": "2026-04-17T01:18:17.893Z",
-      "user": "Sale, Lynn",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776385667692",
-      "timestamp": "2026-04-17T00:27:47.692Z",
-      "user": "Galvan, Bob",
-      "userType": "Captain",
+      "id": "1776516219959",
+      "timestamp": "2026-04-18T12:43:39.959Z",
+      "user": "Duke, Mitzie",
+      "userType": "Admin",
       "action": "logout",
       "target": "",
-      "details": "Logged out of Captain portal"
+      "details": "Logged out of Admin portal"
     },
     {
-      "id": "1776385382715",
-      "timestamp": "2026-04-17T00:23:02.715Z",
-      "user": "Galvan, Bob",
+      "id": "1776515776269",
+      "timestamp": "2026-04-18T12:36:16.269Z",
+      "user": "Duke, Mitzie",
+      "userType": "Admin",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed admin password"
+    },
+    {
+      "id": "1776515742469",
+      "timestamp": "2026-04-18T12:35:42.469Z",
+      "user": "Duke, Mitzie",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1776458453999",
+      "timestamp": "2026-04-17T20:40:53.999Z",
+      "user": "Holt, Sharron",
       "userType": "Captain",
       "action": "login",
       "target": "",
       "details": "Logged into Captain portal"
     },
     {
-      "id": "1776382167877",
-      "timestamp": "2026-04-16T23:29:27.877Z",
-      "user": "Duke, Mitzie",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776382091359",
-      "timestamp": "2026-04-16T23:28:11.359Z",
-      "user": "Duke, Mitzie",
-      "userType": "Volunteer",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Volunteer portal"
-    },
-    {
-      "id": "1776382071180",
-      "timestamp": "2026-04-16T23:27:51.180Z",
-      "user": "Duke, Mitzie",
-      "userType": "Volunteer",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Volunteer portal"
-    },
-    {
-      "id": "1776380608387",
-      "timestamp": "2026-04-16T23:03:28.387Z",
-      "user": "Gordon, Gary",
-      "userType": "Volunteer",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Volunteer portal"
-    },
-    {
-      "id": "1776380359797",
-      "timestamp": "2026-04-16T22:59:19.797Z",
+      "id": "1776454467706",
+      "timestamp": "2026-04-17T19:34:27.706Z",
       "user": "Montalvo, Sammy",
       "userType": "Captain",
       "action": "login",
@@ -9291,49 +9578,85 @@
       "details": "Logged into Captain portal"
     },
     {
-      "id": "1776377866937",
-      "timestamp": "2026-04-16T22:17:46.937Z",
-      "user": "Browning, Wayne",
+      "id": "1776451172948",
+      "timestamp": "2026-04-17T18:39:32.948Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "import",
+      "target": "",
+      "details": "Updated/added volunteers from CSV: 2 updated, 16 added"
+    },
+    {
+      "id": "1776435586017",
+      "timestamp": "2026-04-17T14:19:46.019Z",
+      "user": "Sale, Lynn",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1776434824341",
+      "timestamp": "2026-04-17T14:07:04.341Z",
+      "user": "Pueblo, Vange",
       "userType": "Captain",
       "action": "login",
       "target": "",
       "details": "Logged into Captain portal"
     },
     {
-      "id": "1776377848507",
-      "timestamp": "2026-04-16T22:17:28.507Z",
-      "user": "Browning, Wayne",
-      "userType": "Volunteer",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Volunteer portal"
+      "id": "1776431648266",
+      "timestamp": "2026-04-17T13:14:08.266Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Bravo, Albert",
+      "details": "Edited volunteer (Type: Volunteer, Hole: 14)"
     },
     {
-      "id": "1776375955227",
-      "timestamp": "2026-04-16T21:45:55.227Z",
-      "user": "Clayton, Rodney",
-      "userType": "Captain",
+      "id": "1776431629288",
+      "timestamp": "2026-04-17T13:13:49.288Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
       "action": "login",
       "target": "",
-      "details": "Logged into Captain portal"
+      "details": "Logged into Admin portal"
     },
     {
-      "id": "1776375900484",
-      "timestamp": "2026-04-16T21:45:00.484Z",
-      "user": "Clayton, Rodney",
-      "userType": "Volunteer",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Volunteer portal"
-    },
-    {
-      "id": "1776375691093",
-      "timestamp": "2026-04-16T21:41:31.093Z",
-      "user": "Duke, Mitzie",
+      "id": "1776430505707",
+      "timestamp": "2026-04-17T12:55:05.707Z",
+      "user": "Hill, Michael",
       "userType": "Captain",
       "action": "logout",
       "target": "",
       "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1776430445110",
+      "timestamp": "2026-04-17T12:54:05.110Z",
+      "user": "Hill, Michael",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776430418675",
+      "timestamp": "2026-04-17T12:53:38.675Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1776430342813",
+      "timestamp": "2026-04-17T12:52:22.813Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
     },
     {
       "id": "1776375563514",
@@ -10981,6 +11304,33 @@
       "action": "import",
       "target": "",
       "details": "Updated/added volunteers from CSV: 1 updated, 0 added"
+    },
+    {
+      "id": "1775827135213",
+      "timestamp": "2026-04-10T13:18:55.213Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "import",
+      "target": "",
+      "details": "Updated/added volunteers from CSV: 1 updated, 0 added"
+    },
+    {
+      "id": "1775827108826",
+      "timestamp": "2026-04-10T13:18:28.826Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1775826757323",
+      "timestamp": "2026-04-10T13:12:37.323Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
     }
   ]
 }
