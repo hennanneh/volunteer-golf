@@ -1533,7 +1533,7 @@
       },
       "address": "1027 Hunter Ridge Dr Arlington, TX 76013",
       "volId": "394",
-      "hasAdminPassword": false,
+      "hasAdminPassword": true,
       "hasVolunteerPassword": true,
       "noOutingPreference": true,
       "notes": "This is a test of the new check in app",
@@ -8238,7 +8238,9 @@
         "Sunday AM": true
       },
       "address": "9805 Brazoria Trail Fort Worth, Tx 76126",
-      "volId": "1523"
+      "volId": "1523",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     }
   ],
   "checkIns": [
@@ -9551,6 +9553,15 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1776530835971",
+      "timestamp": "2026-04-18T16:47:15.971Z",
+      "user": "Zamzow, Steve",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1776521511418",
       "timestamp": "2026-04-18T14:11:51.418Z",
@@ -11341,15 +11352,6 @@
       "action": "edit-volunteer",
       "target": "Holt, Sharron",
       "details": "Edited volunteer (Type: Captain, Hole: 8)"
-    },
-    {
-      "id": "1775826384637",
-      "timestamp": "2026-04-10T13:06:24.637Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Admin portal"
     }
   ]
 }
