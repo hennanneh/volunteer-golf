@@ -1596,7 +1596,7 @@
       },
       "address": "1027 Hunter Ridge Dr Arlington, TX 76013",
       "volId": "394",
-      "hasAdminPassword": true,
+      "hasAdminPassword": false,
       "hasVolunteerPassword": true,
       "noOutingPreference": true,
       "notes": "This is a test of the new check in app",
@@ -9533,8 +9533,17 @@
   },
   "activityLog": [
     {
-      "id": "1776516219959",
-      "timestamp": "2026-04-18T12:43:39.959Z",
+      "id": "1776520262858",
+      "timestamp": "2026-04-18T13:51:02.858Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776469253217",
+      "timestamp": "2026-04-17T23:40:53.217Z",
       "user": "Duke, Mitzie",
       "userType": "Admin",
       "action": "logout",
@@ -9542,18 +9551,45 @@
       "details": "Logged out of Admin portal"
     },
     {
-      "id": "1776515776269",
-      "timestamp": "2026-04-18T12:36:16.269Z",
+      "id": "1776469226739",
+      "timestamp": "2026-04-17T23:40:26.739Z",
       "user": "Duke, Mitzie",
       "userType": "Admin",
-      "action": "password-change",
+      "action": "login",
       "target": "",
-      "details": "Changed admin password"
+      "details": "Logged into Admin portal"
     },
     {
-      "id": "1776515742469",
-      "timestamp": "2026-04-18T12:35:42.469Z",
-      "user": "Duke, Mitzie",
+      "id": "1776469177044",
+      "timestamp": "2026-04-17T23:39:37.044Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1776469113659",
+      "timestamp": "2026-04-17T23:38:33.659Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1776468987976",
+      "timestamp": "2026-04-17T23:36:27.976Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1776468882065",
+      "timestamp": "2026-04-17T23:34:42.065Z",
+      "user": "Hill, Michael",
       "userType": "Admin",
       "action": "login",
       "target": "",
@@ -11290,42 +11326,6 @@
     {
       "id": "1775827223198",
       "timestamp": "2026-04-10T13:20:23.198Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Admin portal"
-    },
-    {
-      "id": "1775827214800",
-      "timestamp": "2026-04-10T13:20:14.800Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "import",
-      "target": "",
-      "details": "Updated/added volunteers from CSV: 1 updated, 0 added"
-    },
-    {
-      "id": "1775827135213",
-      "timestamp": "2026-04-10T13:18:55.213Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "import",
-      "target": "",
-      "details": "Updated/added volunteers from CSV: 1 updated, 0 added"
-    },
-    {
-      "id": "1775827108826",
-      "timestamp": "2026-04-10T13:18:28.826Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Admin portal"
-    },
-    {
-      "id": "1775826757323",
-      "timestamp": "2026-04-10T13:12:37.323Z",
       "user": "Hill, Michael",
       "userType": "Admin",
       "action": "logout",
