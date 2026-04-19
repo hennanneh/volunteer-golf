@@ -4644,7 +4644,8 @@
       "address": "1104 Oak Lane Dr Joshua, TX 76058",
       "volId": "342",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false
+      "hasVolunteerPassword": true,
+      "volunteerPassword": "$2b$10$Nwjkzj6HFvTtMNEQKQV4M.cUqH9qJaNE91dHszeJD0p.Ct6.hOrWW"
     },
     {
       "id": "10329",
@@ -9554,6 +9555,33 @@
   },
   "activityLog": [
     {
+      "id": "1776555291613",
+      "timestamp": "2026-04-18T23:34:51.613Z",
+      "user": "Mckenzie, Roy",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1776555051871",
+      "timestamp": "2026-04-18T23:30:51.871Z",
+      "user": "Mckenzie, Roy",
+      "userType": "Captain",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed captain password"
+    },
+    {
+      "id": "1776554853180",
+      "timestamp": "2026-04-18T23:27:33.180Z",
+      "user": "Mckenzie, Roy",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1776539338815",
       "timestamp": "2026-04-18T19:08:58.815Z",
       "user": "Clayton, Rodney",
@@ -11325,33 +11353,6 @@
       "action": "import",
       "target": "",
       "details": "Updated/added volunteers from CSV: 1 updated, 0 added"
-    },
-    {
-      "id": "1775827108826",
-      "timestamp": "2026-04-10T13:18:28.826Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Admin portal"
-    },
-    {
-      "id": "1775826757323",
-      "timestamp": "2026-04-10T13:12:37.323Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Admin portal"
-    },
-    {
-      "id": "1775826599943",
-      "timestamp": "2026-04-10T13:09:59.943Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "edit-volunteer",
-      "target": "Holt, Sharron",
-      "details": "Edited volunteer (Type: Captain, Hole: 8)"
     }
   ]
 }
