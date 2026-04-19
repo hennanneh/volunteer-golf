@@ -9197,6 +9197,15 @@
   },
   "activityLog": [
     {
+      "id": "1776629710720",
+      "timestamp": "2026-04-19T20:15:10.720Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1776624402827",
       "timestamp": "2026-04-19T18:46:42.827Z",
       "user": "Trout, Wayne",
@@ -10986,15 +10995,6 @@
       "action": "import",
       "target": "",
       "details": "Updated/added volunteers from CSV: 1 updated, 0 added"
-    },
-    {
-      "id": "1775827108826",
-      "timestamp": "2026-04-10T13:18:28.826Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Admin portal"
     }
   ]
 }
