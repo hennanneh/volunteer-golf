@@ -9556,6 +9556,15 @@
   },
   "activityLog": [
     {
+      "id": "1776602953433",
+      "timestamp": "2026-04-19T12:49:13.433Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1776573996409",
       "timestamp": "2026-04-19T04:46:36.409Z",
       "user": "Clayton, Rodney",
@@ -11344,15 +11353,6 @@
       "userType": "Admin",
       "action": "delete",
       "target": "White, Drake",
-      "details": "Deleted volunteer"
-    },
-    {
-      "id": "1775829273027",
-      "timestamp": "2026-04-10T13:54:33.027Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "delete",
-      "target": "Kuhnell, David",
       "details": "Deleted volunteer"
     }
   ]
