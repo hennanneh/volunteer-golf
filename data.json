@@ -9197,6 +9197,33 @@
   },
   "activityLog": [
     {
+      "id": "1776624402827",
+      "timestamp": "2026-04-19T18:46:42.827Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1776624048128",
+      "timestamp": "2026-04-19T18:40:48.128Z",
+      "user": "Clayton, Rodney",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776623859505",
+      "timestamp": "2026-04-19T18:37:39.505Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1776620409786",
       "timestamp": "2026-04-19T17:40:09.786Z",
       "user": "Edwards, Bill",
@@ -10968,33 +10995,6 @@
       "action": "login",
       "target": "",
       "details": "Logged into Admin portal"
-    },
-    {
-      "id": "1775826757323",
-      "timestamp": "2026-04-10T13:12:37.323Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Admin portal"
-    },
-    {
-      "id": "1775826599943",
-      "timestamp": "2026-04-10T13:09:59.943Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "edit-volunteer",
-      "target": "Holt, Sharron",
-      "details": "Edited volunteer (Type: Captain, Hole: 8)"
-    },
-    {
-      "id": "1775826443808",
-      "timestamp": "2026-04-10T13:07:23.808Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "edit-volunteer",
-      "target": "Holt, Sharron",
-      "details": "Edited volunteer (Type: Captain, Hole: 8)"
     }
   ]
 }
