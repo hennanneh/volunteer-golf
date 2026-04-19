@@ -9556,6 +9556,69 @@
   },
   "activityLog": [
     {
+      "id": "1776562044104",
+      "timestamp": "2026-04-19T01:27:24.104Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776561371646",
+      "timestamp": "2026-04-19T01:16:11.646Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1776561326485",
+      "timestamp": "2026-04-19T01:15:26.486Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776560948819",
+      "timestamp": "2026-04-19T01:09:08.819Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1776560929070",
+      "timestamp": "2026-04-19T01:08:49.070Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776560828524",
+      "timestamp": "2026-04-19T01:07:08.524Z",
+      "user": "Sanders, Steve",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1776560804656",
+      "timestamp": "2026-04-19T01:06:44.656Z",
+      "user": "Sanders, Steve",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
       "id": "1776559963154",
       "timestamp": "2026-04-19T00:52:43.154Z",
       "user": "Sanders, Steve",
@@ -11291,69 +11354,6 @@
       "action": "delete",
       "target": "Rico, Andrew",
       "details": "Deleted volunteer"
-    },
-    {
-      "id": "1775829246348",
-      "timestamp": "2026-04-10T13:54:06.348Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "delete",
-      "target": "Howrey, Patrick",
-      "details": "Deleted volunteer"
-    },
-    {
-      "id": "1775829233474",
-      "timestamp": "2026-04-10T13:53:53.474Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "delete",
-      "target": "Kutzler, Jack",
-      "details": "Deleted volunteer"
-    },
-    {
-      "id": "1775829141323",
-      "timestamp": "2026-04-10T13:52:21.323Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "delete",
-      "target": "King, Jeff",
-      "details": "Deleted volunteer"
-    },
-    {
-      "id": "1775829112554",
-      "timestamp": "2026-04-10T13:51:52.554Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "import",
-      "target": "",
-      "details": "Updated/added volunteers from CSV: 4 updated, 2 added"
-    },
-    {
-      "id": "1775828208446",
-      "timestamp": "2026-04-10T13:36:48.446Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "delete",
-      "target": "Howrey, Patrick",
-      "details": "Deleted volunteer"
-    },
-    {
-      "id": "1775827964018",
-      "timestamp": "2026-04-10T13:32:44.018Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "delete",
-      "target": "Rico, Andrew",
-      "details": "Deleted volunteer"
-    },
-    {
-      "id": "1775827342895",
-      "timestamp": "2026-04-10T13:22:22.895Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Admin portal"
     }
   ]
 }
