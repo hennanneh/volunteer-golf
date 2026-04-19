@@ -1596,7 +1596,7 @@
       },
       "address": "1027 Hunter Ridge Dr Arlington, TX 76013",
       "volId": "394",
-      "hasAdminPassword": false,
+      "hasAdminPassword": true,
       "hasVolunteerPassword": true,
       "noOutingPreference": true,
       "notes": "This is a test of the new check in app",
@@ -4815,7 +4815,7 @@
       "address": "1104 Oak Lane Dr Joshua, TX 76058",
       "volId": "342",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false,
+      "hasVolunteerPassword": true,
       "volunteerPassword": "$2b$10$Nwjkzj6HFvTtMNEQKQV4M.cUqH9qJaNE91dHszeJD0p.Ct6.hOrWW"
     },
     {
@@ -6639,7 +6639,7 @@
       "address": "6510 New Authon Road Weatherford, TX 76088",
       "volId": "7191",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false,
+      "hasVolunteerPassword": true,
       "volunteerPassword": "$2b$10$EY2fhEwzBHTYBoAaeGP1Qu7SuzkrWcABgr8L2..VBCTGyjopFVEDu"
     },
     {
@@ -9535,6 +9535,24 @@
   },
   "activityLog": [
     {
+      "id": "1776608669666",
+      "timestamp": "2026-04-19T14:24:29.666Z",
+      "user": "Schafer, John",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776608638160",
+      "timestamp": "2026-04-19T14:23:58.160Z",
+      "user": "Sale, Lynn",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
       "id": "1776606650168",
       "timestamp": "2026-04-19T13:50:50.168Z",
       "user": "Duncan, Larry",
@@ -11315,24 +11333,6 @@
       "action": "logout",
       "target": "",
       "details": "Logged out of Captain portal"
-    },
-    {
-      "id": "1775827253128",
-      "timestamp": "2026-04-10T13:20:53.128Z",
-      "user": "Holt, Sharron",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1775827223198",
-      "timestamp": "2026-04-10T13:20:23.198Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Admin portal"
     }
   ]
 }
