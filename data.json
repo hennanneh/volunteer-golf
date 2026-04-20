@@ -3241,7 +3241,8 @@
       "address": "5450 Doral Court Fort Worth, TX 76112",
       "volId": "5192",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false
+      "hasVolunteerPassword": true,
+      "volunteerPassword": "$2b$10$0zYYM7XhyCZz9g/ylG8vZu1f3vIxfSeOxFH/1ub4jD1dSqcWkZoZe"
     },
     {
       "id": "5656",
@@ -9199,6 +9200,33 @@
   },
   "activityLog": [
     {
+      "id": "1776701416459",
+      "timestamp": "2026-04-20T16:10:16.459Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776700966923",
+      "timestamp": "2026-04-20T16:02:46.923Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed captain password"
+    },
+    {
+      "id": "1776700924002",
+      "timestamp": "2026-04-20T16:02:04.002Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1776700135533",
       "timestamp": "2026-04-20T15:48:55.533Z",
       "user": "Trout, Wayne",
@@ -10970,33 +10998,6 @@
       "action": "login",
       "target": "",
       "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1775834818447",
-      "timestamp": "2026-04-10T15:26:58.447Z",
-      "user": "Howrey, Anne",
-      "userType": "Admin",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Admin portal"
-    },
-    {
-      "id": "1775829305512",
-      "timestamp": "2026-04-10T13:55:05.512Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "import",
-      "target": "",
-      "details": "Updated/added volunteers from CSV: 0 updated, 6 added"
-    },
-    {
-      "id": "1775829288213",
-      "timestamp": "2026-04-10T13:54:48.213Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "delete",
-      "target": "White, Drake",
-      "details": "Deleted volunteer"
     }
   ]
 }
