@@ -7837,11 +7837,9 @@
       "scheduled": {
         "Monday AM": true,
         "Monday PM": true,
-        "Tuesday AM": true,
         "Tuesday PM": true,
         "Wednesday AM": true,
         "Wednesday PM": true,
-        "Thursday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
         "Friday PM": true,
@@ -7853,7 +7851,8 @@
       "address": "414 Edgewood Court Forney, TX 75126",
       "volId": "4222",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false
+      "hasVolunteerPassword": true,
+      "volunteerPassword": "$2b$10$12WKVb/DY2b.UOMGjARjYO3QlPIkkYCjV0yuLzYlVv6h81gG6kLHW"
     },
     {
       "id": "9398",
@@ -9537,6 +9536,33 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1776711141477",
+      "timestamp": "2026-04-20T18:52:21.477Z",
+      "user": "Wehmeyer, Tom",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776711035593",
+      "timestamp": "2026-04-20T18:50:35.593Z",
+      "user": "Wehmeyer, Tom",
+      "userType": "Volunteer",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed volunteer password"
+    },
+    {
+      "id": "1776710994748",
+      "timestamp": "2026-04-20T18:49:54.748Z",
+      "user": "Wehmeyer, Tom",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
     {
       "id": "1776710503672",
       "timestamp": "2026-04-20T18:41:43.672Z",
@@ -11309,33 +11335,6 @@
       "action": "import",
       "target": "",
       "details": "Updated/added volunteers from CSV: 0 updated, 6 added"
-    },
-    {
-      "id": "1775829288213",
-      "timestamp": "2026-04-10T13:54:48.213Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "delete",
-      "target": "White, Drake",
-      "details": "Deleted volunteer"
-    },
-    {
-      "id": "1775829273027",
-      "timestamp": "2026-04-10T13:54:33.027Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "delete",
-      "target": "Kuhnell, David",
-      "details": "Deleted volunteer"
-    },
-    {
-      "id": "1775829260456",
-      "timestamp": "2026-04-10T13:54:20.456Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "delete",
-      "target": "Rico, Andrew",
-      "details": "Deleted volunteer"
     }
   ]
 }
