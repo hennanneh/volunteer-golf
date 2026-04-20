@@ -645,7 +645,8 @@
       "address": "102 Pine Valley Portland, TX 78374",
       "volId": "3034",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false
+      "hasVolunteerPassword": true,
+      "volunteerPassword": "$2b$10$1zhbY.4VAV.jjozNAlck7OgmjrUpra.g.KMGIPTzDxvBSkhPf6Nvu"
     },
     {
       "id": "4657",
@@ -9197,6 +9198,51 @@
   },
   "activityLog": [
     {
+      "id": "1776649020798",
+      "timestamp": "2026-04-20T01:37:00.798Z",
+      "user": "Burnett, Eric",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1776648985324",
+      "timestamp": "2026-04-20T01:36:25.324Z",
+      "user": "Burnett, Eric",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776648941816",
+      "timestamp": "2026-04-20T01:35:41.816Z",
+      "user": "Burnett, Eric",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1776648791272",
+      "timestamp": "2026-04-20T01:33:11.272Z",
+      "user": "Burnett, Eric",
+      "userType": "Captain",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed captain password"
+    },
+    {
+      "id": "1776648735270",
+      "timestamp": "2026-04-20T01:32:15.270Z",
+      "user": "Burnett, Eric",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1776645889106",
       "timestamp": "2026-04-20T00:44:49.106Z",
       "user": "Nederostek, Brad",
@@ -10950,51 +10996,6 @@
       "action": "delete",
       "target": "Rico, Andrew",
       "details": "Deleted volunteer"
-    },
-    {
-      "id": "1775827342895",
-      "timestamp": "2026-04-10T13:22:22.895Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Admin portal"
-    },
-    {
-      "id": "1775827268517",
-      "timestamp": "2026-04-10T13:21:08.517Z",
-      "user": "Holt, Sharron",
-      "userType": "Captain",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Captain portal"
-    },
-    {
-      "id": "1775827253128",
-      "timestamp": "2026-04-10T13:20:53.128Z",
-      "user": "Holt, Sharron",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1775827223198",
-      "timestamp": "2026-04-10T13:20:23.198Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Admin portal"
-    },
-    {
-      "id": "1775827214800",
-      "timestamp": "2026-04-10T13:20:14.800Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "import",
-      "target": "",
-      "details": "Updated/added volunteers from CSV: 1 updated, 0 added"
     }
   ]
 }
