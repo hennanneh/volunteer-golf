@@ -1636,6 +1636,7 @@
               <div style="position:relative;margin-bottom:15px"><input type="password" id="adminPassword" class="input-field" placeholder="Password" autocomplete="current-password" style="padding-right:50px;margin-bottom:0"><button type="button" onclick="togglePassword('adminPassword')" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;font-size:16px;line-height:1;padding:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button></div>
               <div id="adminError" class="error-msg hidden"></div>
               <button type="submit" class="submit-btn">Login</button>
+              <p style="text-align:center;margin-top:15px"><a href="#" onclick="event.preventDefault();openForgotPassword('admin')" style="color:#1a472a;font-size:13px">Forgot password?</a></p>
             </form>
           </div>
         </div>
@@ -1669,6 +1670,7 @@
               <div style="position:relative;margin-bottom:15px"><input type="password" id="captainPassword" class="input-field" placeholder="Password" autocomplete="current-password" style="padding-right:50px;margin-bottom:0"><button type="button" onclick="togglePassword('captainPassword')" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;font-size:16px;line-height:1;padding:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button></div>
               <div id="captainError" class="error-msg hidden"></div>
               <button type="submit" id="captainSubmit" class="submit-btn">Sign In</button>
+              <p style="text-align:center;margin-top:15px"><a href="#" onclick="event.preventDefault();openForgotPassword('captain')" style="color:#1a472a;font-size:13px">Forgot password?</a></p>
             </form>
             <p style="color:#999;font-size:11px;text-align:center;margin-top:15px">Initial password is your phone number (10 digits)</p>
             ${captains.length === 0 ? '<p style="color:#999;font-size:13px;text-align:center;margin-top:20px">No captains loaded yet. Ask admin to import data.</p>' : ''}
@@ -1695,6 +1697,7 @@
               <div style="position:relative;margin-bottom:15px"><input type="password" id="volunteerPassword" class="input-field" placeholder="Password" autocomplete="current-password" style="padding-right:50px;margin-bottom:0"><button type="button" onclick="togglePassword('volunteerPassword')" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;font-size:16px;line-height:1;padding:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button></div>
               <div id="volunteerError" class="error-msg hidden"></div>
               <button type="submit" id="volunteerSubmit" class="submit-btn">Sign In</button>
+              <p style="text-align:center;margin-top:15px"><a href="#" onclick="event.preventDefault();openForgotPassword('volunteer')" style="color:#1a472a;font-size:13px">Forgot password?</a></p>
             </form>
             <p style="color:#999;font-size:11px;text-align:center;margin-top:15px">Initial password is your phone number (10 digits)</p>
             ${volunteersWithEmail.length === 0 ? '<p style="color:#999;font-size:13px;text-align:center;margin-top:20px">No volunteers with email addresses loaded yet.</p>' : ''}
@@ -6971,6 +6974,94 @@
       }
     }
     
+    // Forgot-password: ask for email, POST /api/request-password-reset, show confirmation.
+    function openForgotPassword(portal) {
+      var portalLabel = portal === 'admin' ? 'Admin' : portal === 'captain' ? 'Captain' : 'Volunteer';
+      var prefillId = portal === 'admin' ? 'adminEmail' : portal === 'captain' ? 'captainEmail' : 'volunteerEmail';
+      var prefill = '';
+      var el = document.getElementById(prefillId);
+      if (el && el.value) prefill = el.value.trim();
+      var overlay = document.createElement('div');
+      overlay.className = 'modal-overlay';
+      overlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:10000;display:flex;align-items:center;justify-content:center;padding:20px';
+      overlay.innerHTML = '<div style="background:#fff;border-radius:12px;max-width:400px;width:100%;padding:24px"><h3 style="margin:0 0 8px 0;color:#1a472a">Reset ' + portalLabel + ' Password</h3><p style="margin:0 0 16px 0;color:#555;font-size:14px">Enter your email address. If we have an account on file, we\'ll send a link to reset your password.</p><input type="email" id="forgotEmail" class="input-field" placeholder="Email" value="' + prefill.replace(/"/g, '&quot;') + '" style="margin-bottom:12px"><div id="forgotMsg" style="font-size:13px;margin-bottom:12px;min-height:18px"></div><div style="display:flex;gap:8px;justify-content:flex-end"><button type="button" id="forgotCancel" class="submit-btn" style="background:#ccc;color:#333">Cancel</button><button type="button" id="forgotSend" class="submit-btn">Send Reset Link</button></div></div>';
+      document.body.appendChild(overlay);
+      var close = function() { overlay.remove(); };
+      overlay.querySelector('#forgotCancel').onclick = close;
+      overlay.onclick = function(e) { if (e.target === overlay) close(); };
+      overlay.querySelector('#forgotSend').onclick = async function() {
+        var email = overlay.querySelector('#forgotEmail').value.trim().toLowerCase();
+        var msg = overlay.querySelector('#forgotMsg');
+        if (!email) { msg.style.color = '#c00'; msg.textContent = 'Email required'; return; }
+        msg.style.color = '#555'; msg.textContent = 'Sending...';
+        try {
+          var resp = await fetch('/api/request-password-reset', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email: email, portal: portal })
+          });
+          var result = await resp.json();
+          if (resp.status === 429) {
+            msg.style.color = '#c00'; msg.textContent = (result && result.error) || 'Too many requests, try again later';
+            return;
+          }
+          msg.style.color = '#1a472a';
+          msg.innerHTML = 'If an account exists for that email, a reset link has been sent. Check your inbox (and spam folder). The link expires in 30 minutes.';
+          overlay.querySelector('#forgotSend').style.display = 'none';
+          overlay.querySelector('#forgotCancel').textContent = 'Close';
+        } catch (e) {
+          msg.style.color = '#c00'; msg.textContent = 'Network error — please try again';
+        }
+      };
+      setTimeout(function() { overlay.querySelector('#forgotEmail').focus(); }, 50);
+    }
+
+    // If the URL contains ?reset=TOKEN, show the reset form.
+    function maybeShowResetForm() {
+      var params = new URLSearchParams(window.location.search);
+      var token = params.get('reset');
+      if (!token) return;
+      var overlay = document.createElement('div');
+      overlay.className = 'modal-overlay';
+      overlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:10000;display:flex;align-items:center;justify-content:center;padding:20px';
+      overlay.innerHTML = '<div style="background:#fff;border-radius:12px;max-width:400px;width:100%;padding:24px"><h3 style="margin:0 0 8px 0;color:#1a472a">Set a New Password</h3><p style="margin:0 0 16px 0;color:#555;font-size:14px">Enter a new password for your account.</p><input type="password" id="resetNew" class="input-field" placeholder="New password" autocomplete="new-password" style="margin-bottom:10px"><input type="password" id="resetConfirm" class="input-field" placeholder="Confirm new password" autocomplete="new-password" style="margin-bottom:12px"><div id="resetMsg" style="font-size:13px;margin-bottom:12px;min-height:18px"></div><button type="button" id="resetSubmit" class="submit-btn" style="width:100%">Set Password</button></div>';
+      document.body.appendChild(overlay);
+      var clearUrl = function() {
+        var url = new URL(window.location.href);
+        url.searchParams.delete('reset');
+        window.history.replaceState({}, '', url.toString());
+      };
+      overlay.querySelector('#resetSubmit').onclick = async function() {
+        var pw = overlay.querySelector('#resetNew').value;
+        var cpw = overlay.querySelector('#resetConfirm').value;
+        var msg = overlay.querySelector('#resetMsg');
+        if (pw.length < 4) { msg.style.color = '#c00'; msg.textContent = 'Password must be at least 4 characters'; return; }
+        if (pw !== cpw) { msg.style.color = '#c00'; msg.textContent = 'Passwords do not match'; return; }
+        msg.style.color = '#555'; msg.textContent = 'Saving...';
+        try {
+          var resp = await fetch('/api/reset-password', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ token: token, newPassword: pw })
+          });
+          var result = await resp.json();
+          if (result && result.success) {
+            msg.style.color = '#1a472a';
+            msg.textContent = 'Password updated. You can now log in.';
+            clearUrl();
+            setTimeout(function() { overlay.remove(); }, 1500);
+          } else {
+            msg.style.color = '#c00';
+            msg.textContent = (result && result.error) || 'Failed to reset password';
+          }
+        } catch (e) {
+          msg.style.color = '#c00'; msg.textContent = 'Network error — please try again';
+        }
+      };
+      setTimeout(function() { overlay.querySelector('#resetNew').focus(); }, 50);
+    }
+    window.addEventListener('DOMContentLoaded', maybeShowResetForm);
+
     function togglePassword(inputId) {
       var input = document.getElementById(inputId);
       var btn = input.nextElementSibling;

@@ -262,6 +262,8 @@ const dataLimiter    = makeLimiter(60,  'data');     // POST /api/data        60
 const checkinLimiter = makeLimiter(200, 'checkin');  // POST /api/checkin    200/min (rush)
 const emailLimiter   = makeLimiter(5,   'email');    // POST /api/email        5/min
 const loginLimiter   = makeLimiter(10,  'login');    // POST /api/login       10/min (block guessing)
+const resetReqLimiter    = makeLimiter(5,  'reset-request'); // POST /api/request-password-reset
+const resetSubmitLimiter = makeLimiter(10, 'reset-submit');  // POST /api/reset-password
 
 // ============================================================================
 // Authentication (Phase 1.1, added 2026-04-10 — see SECURITY.md)
@@ -362,6 +364,15 @@ function upgradePasswordToHash(volunteerId, fieldName, typed, isDemo) {
 //                  authenticated against the legacy fallback ('admin2025'
 //                  or phone digits). The SPA uses this to prompt the user
 //                  to set a real password on first login.
+// Users frequently paste their phone with formatting like "(817) 733-3743".
+// For the phone-default fallback only, strip non-digits from the typed value
+// before comparing. (Custom passwords are still compared byte-for-byte.)
+function typedMatchesPhoneDefault(typed, phoneDigits) {
+  if (!phoneDigits || phoneDigits.length < 10) return false;
+  const typedDigits = String(typed || '').replace(/\D/g, '').slice(-10);
+  return typedDigits.length === 10 && typedDigits === phoneDigits;
+}
+
 function checkPassword(volunteer, portal, password) {
   const fail = { ok: false, upgradeField: null, usingDefault: false };
   if (!volunteer || !password) return fail;
@@ -384,7 +395,8 @@ function checkPassword(volunteer, portal, password) {
       const ok = comparePassword(password, stored);
       return { ok, upgradeField: ok && !looksLikeBcryptHash(stored) ? 'volunteerPassword' : null, usingDefault: false };
     }
-    return { ok: password === phoneDigits, upgradeField: null, usingDefault: password === phoneDigits };
+    const okPhone = typedMatchesPhoneDefault(password, phoneDigits);
+    return { ok: okPhone, upgradeField: null, usingDefault: okPhone };
   }
   if (portal === 'volunteer') {
     const stored = volunteer.volunteerPassword;
@@ -392,7 +404,8 @@ function checkPassword(volunteer, portal, password) {
       const ok = comparePassword(password, stored);
       return { ok, upgradeField: ok && !looksLikeBcryptHash(stored) ? 'volunteerPassword' : null, usingDefault: false };
     }
-    return { ok: password === phoneDigits, upgradeField: null, usingDefault: password === phoneDigits };
+    const okPhone = typedMatchesPhoneDefault(password, phoneDigits);
+    return { ok: okPhone, upgradeField: null, usingDefault: okPhone };
   }
   return fail;
 }
@@ -608,7 +621,7 @@ app.post('/api/set-password', requireAuth(null), (req, res) => {
             okCurrent = currentPassword === 'admin2025';
           } else {
             const phoneDigits = (v.phone || '').replace(/\D/g, '').slice(-10);
-            okCurrent = currentPassword === phoneDigits;
+            okCurrent = typedMatchesPhoneDefault(currentPassword, phoneDigits);
           }
         }
         if (!okCurrent) {
@@ -635,6 +648,126 @@ app.post('/api/set-password', requireAuth(null), (req, res) => {
       return res.status(500).json({ success: false, error: 'Failed to save data' });
     } catch (e) {
       console.warn('[' + new Date().toISOString() + '] SET-PASSWORD ERROR  ' + e.message);
+      return res.status(500).json({ success: false, error: 'Internal error' });
+    }
+  });
+});
+
+// ============================================================================
+// Password reset via email (forgot-password flow)
+//
+// In-memory, single-use tokens with a 30-minute TTL. Sessions are already
+// in-memory (see Phase 1.1); doing the same here keeps the model consistent.
+// A PM2 restart invalidates any outstanding reset emails — acceptable given
+// the short TTL.
+// ============================================================================
+
+const RESET_TOKEN_TTL_MS = 30 * 60 * 1000;
+const passwordResetTokens = new Map(); // token -> { volunteerId, fieldName, expiresAt, used }
+
+setInterval(() => {
+  const now = Date.now();
+  for (const [token, rec] of passwordResetTokens) {
+    if (rec.used || now > rec.expiresAt) passwordResetTokens.delete(token);
+  }
+}, 5 * 60 * 1000);
+
+function portalToResetField(portal) {
+  if (portal === 'admin') return 'adminPassword';
+  if (portal === 'captain' || portal === 'volunteer') return 'volunteerPassword';
+  return null;
+}
+
+app.post('/api/request-password-reset', resetReqLimiter, async (req, res) => {
+  const { email, portal } = req.body || {};
+  const ip = clientIpFromReq(req);
+
+  // Always respond success to avoid leaking which emails/portals exist.
+  const ack = () => res.json({ success: true });
+
+  if (!email || !portal) return ack();
+  const fieldName = portalToResetField(portal);
+  if (!fieldName) return ack();
+
+  const data = loadData(req.demoMode);
+  const emailLc = String(email).trim().toLowerCase();
+  const volunteer = (data.volunteers || []).find(v => v.email && v.email.toLowerCase() === emailLc);
+  if (!volunteer || !volunteer.email) return ack();
+
+  // Admin portal is only available to admin-typed records
+  if (portal === 'admin' && !['Admin', 'View Admin', 'Chairman', 'Asst. Chairman'].includes(volunteer.type)) {
+    return ack();
+  }
+
+  const token = generateToken();
+  passwordResetTokens.set(token, {
+    volunteerId: volunteer.id,
+    fieldName: fieldName,
+    expiresAt: Date.now() + RESET_TOKEN_TTL_MS,
+    used: false
+  });
+
+  const host = req.headers['x-forwarded-host'] || req.headers.host;
+  const proto = req.headers['x-forwarded-proto'] || 'https';
+  const resetUrl = proto + '://' + host + '/?reset=' + token;
+
+  console.log('[' + new Date().toISOString() + '] RESET REQUESTED  user=' + volunteer.name + '  portal=' + portal + '  ip=' + ip);
+
+  if (req.demoMode) return ack(); // don't send real email in demo
+
+  try {
+    const { error } = await resend.emails.send({
+      from: process.env.EMAIL_FROM || 'Volunteer Golf <hello@colonialvolunteers.golf>',
+      to: [volunteer.email],
+      subject: 'Reset your Volunteer Golf password',
+      text: 'Hi ' + (volunteer.name || '') + ',\n\nClick the link below to reset your password. This link expires in 30 minutes and can only be used once.\n\n' + resetUrl + '\n\nIf you didn\'t request this, you can safely ignore this email.',
+      html: '<p>Hi ' + (volunteer.name || '') + ',</p><p>Click the link below to reset your password. This link expires in 30 minutes and can only be used once.</p><p><a href="' + resetUrl + '">' + resetUrl + '</a></p><p style="color:#666;font-size:12px">If you didn\'t request this, you can safely ignore this email.</p>'
+    });
+    if (error) {
+      console.warn('[' + new Date().toISOString() + '] RESET EMAIL FAILED  user=' + volunteer.name + '  err=' + error.message);
+    }
+  } catch (e) {
+    console.warn('[' + new Date().toISOString() + '] RESET EMAIL ERROR  ' + e.message);
+  }
+  return ack();
+});
+
+app.post('/api/reset-password', resetSubmitLimiter, (req, res) => {
+  const { token, newPassword } = req.body || {};
+  const ip = clientIpFromReq(req);
+
+  if (!token || !newPassword) {
+    return res.status(400).json({ success: false, error: 'token and newPassword required' });
+  }
+  if (typeof newPassword !== 'string' || newPassword.length < 4) {
+    return res.status(400).json({ success: false, error: 'New password must be at least 4 characters' });
+  }
+
+  const rec = passwordResetTokens.get(token);
+  if (!rec || rec.used || Date.now() > rec.expiresAt) {
+    return res.status(400).json({ success: false, error: 'This reset link is invalid or has expired. Request a new one.' });
+  }
+
+  withDataLock(false, () => {
+    try {
+      const data = loadData(false);
+      const v = (data.volunteers || []).find(x => String(x.id) === String(rec.volunteerId));
+      if (!v) {
+        passwordResetTokens.delete(token);
+        return res.status(404).json({ success: false, error: 'Account not found' });
+      }
+      v[rec.fieldName] = bcrypt.hashSync(newPassword, BCRYPT_ROUNDS);
+      if (rec.fieldName === 'adminPassword') v.adminPasswordSetAt = new Date().toISOString();
+
+      if (!saveData(data, false)) {
+        return res.status(500).json({ success: false, error: 'Failed to save data' });
+      }
+      rec.used = true;
+      passwordResetTokens.delete(token);
+      console.log('[' + new Date().toISOString() + '] RESET COMPLETED  user=' + (v.name || v.id) + '  field=' + rec.fieldName + '  ip=' + ip);
+      return res.json({ success: true, name: v.name });
+    } catch (e) {
+      console.warn('[' + new Date().toISOString() + '] RESET ERROR  ' + e.message);
       return res.status(500).json({ success: false, error: 'Internal error' });
     }
   });
@@ -830,11 +963,11 @@ app.post('/api/archives', requireAuth(['admin']), (req, res) => {
   }
 });
 
-app.post('/api/email', emailLimiter, requireAuth(['admin', 'chair', 'asstChair']), async (req, res) => {
+app.post('/api/email', emailLimiter, requireAuth(['admin', 'chair', 'asstChair', 'captain']), async (req, res) => {
   if (req.demoMode) {
     return res.json({ success: true, demoMode: true, message: 'Emails disabled in demo mode' });
   }
-  
+
   const { to, subject, message } = req.body;
   if (!to || !subject || !message) {
     return res.status(400).json({ success: false, error: 'To, subject, and message required' });
@@ -842,11 +975,23 @@ app.post('/api/email', emailLimiter, requireAuth(['admin', 'chair', 'asstChair']
 
   try {
     const recipients = Array.isArray(to) ? to : [to];
-    const isHtml = message.trim().startsWith('<!DOCTYPE') || message.trim().startsWith('<html');
+
+    // Captains may only send to their own email address
+    if (req.user && req.user.role === 'captain') {
+      const data = loadData(req.demoMode);
+      const me = (data.volunteers || []).find(v => v.id === req.user.userId);
+      const myEmail = me && me.email ? String(me.email).trim().toLowerCase() : '';
+      const allOwnEmail = recipients.every(r => String(r).trim().toLowerCase() === myEmail);
+      if (!myEmail || !allOwnEmail) {
+        return res.status(403).json({ success: false, error: 'Captains can only email themselves' });
+      }
+    }
+    const trimmed = String(message).trim();
+    const isHtml = trimmed.startsWith('<!DOCTYPE') || trimmed.startsWith('<html') || trimmed.startsWith('<div');
     const htmlContent = isHtml ? message : message.replace(/\n/g, '<br>');
     const textContent = isHtml ? message.replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim() : message;
 
-    const { data, error } = await resend.emails.send({
+    const { data: emailData, error } = await resend.emails.send({
       from: process.env.EMAIL_FROM || 'Volunteer Golf <hello@colonialvolunteers.golf>',
       to: recipients,
       subject: subject,

@@ -3187,7 +3187,7 @@
       "hasAdminPassword": true,
       "hasVolunteerPassword": true,
       "adminPassword": "$2b$10$9o9TZHkP9PvBAX70x4onSeBlNDsE8HbBYq1G/oSU69bA1u5b2/R2.",
-      "volunteerPassword": "$2b$10$rpCAc6r29KFlhRRQi347KODQEKXGpfGfMUYvdDt1rmz.Mq6O8RmBm",
+      "volunteerPassword": "$2b$10$uet4GIQhVyk/TN4DC7D6nOYYD.8vuMYs66CkQgNqccv3TPV.Jovk2",
       "adminPasswordSetAt": "2026-04-07T22:22:50.875Z"
     },
     {
@@ -9538,6 +9538,87 @@
   },
   "activityLog": [
     {
+      "id": "1776710503672",
+      "timestamp": "2026-04-20T18:41:43.672Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1776710490935",
+      "timestamp": "2026-04-20T18:41:30.935Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776710476565",
+      "timestamp": "2026-04-20T18:41:16.565Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1776710284875",
+      "timestamp": "2026-04-20T18:38:04.875Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed captain password"
+    },
+    {
+      "id": "1776710267042",
+      "timestamp": "2026-04-20T18:37:47.042Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776710094541",
+      "timestamp": "2026-04-20T18:34:54.541Z",
+      "user": "Galvan, Bob",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1776710059273",
+      "timestamp": "2026-04-20T18:34:19.274Z",
+      "user": "Galvan, Bob",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1776708803571",
+      "timestamp": "2026-04-20T18:13:23.571Z",
+      "user": "Montalvo, Sammy",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776708554211",
+      "timestamp": "2026-04-20T18:09:14.211Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1776706650537",
       "timestamp": "2026-04-20T17:37:30.537Z",
       "user": "Elkins, Paul",
@@ -11255,87 +11336,6 @@
       "action": "delete",
       "target": "Rico, Andrew",
       "details": "Deleted volunteer"
-    },
-    {
-      "id": "1775829246348",
-      "timestamp": "2026-04-10T13:54:06.348Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "delete",
-      "target": "Howrey, Patrick",
-      "details": "Deleted volunteer"
-    },
-    {
-      "id": "1775829233474",
-      "timestamp": "2026-04-10T13:53:53.474Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "delete",
-      "target": "Kutzler, Jack",
-      "details": "Deleted volunteer"
-    },
-    {
-      "id": "1775829141323",
-      "timestamp": "2026-04-10T13:52:21.323Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "delete",
-      "target": "King, Jeff",
-      "details": "Deleted volunteer"
-    },
-    {
-      "id": "1775829112554",
-      "timestamp": "2026-04-10T13:51:52.554Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "import",
-      "target": "",
-      "details": "Updated/added volunteers from CSV: 4 updated, 2 added"
-    },
-    {
-      "id": "1775828208446",
-      "timestamp": "2026-04-10T13:36:48.446Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "delete",
-      "target": "Howrey, Patrick",
-      "details": "Deleted volunteer"
-    },
-    {
-      "id": "1775827964018",
-      "timestamp": "2026-04-10T13:32:44.018Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "delete",
-      "target": "Rico, Andrew",
-      "details": "Deleted volunteer"
-    },
-    {
-      "id": "1775827342895",
-      "timestamp": "2026-04-10T13:22:22.895Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Admin portal"
-    },
-    {
-      "id": "1775827268517",
-      "timestamp": "2026-04-10T13:21:08.517Z",
-      "user": "Holt, Sharron",
-      "userType": "Captain",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Captain portal"
-    },
-    {
-      "id": "1775827253128",
-      "timestamp": "2026-04-10T13:20:53.128Z",
-      "user": "Holt, Sharron",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
     }
   ]
 }
