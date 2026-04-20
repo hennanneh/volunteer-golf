@@ -7127,7 +7127,8 @@
       "address": "142 LCR Redbud B Mexia, TX 76667",
       "volId": "4536",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false
+      "hasVolunteerPassword": true,
+      "volunteerPassword": "$2b$10$BD/pQxWu4Ch4zorL/zGh3eMfispBAQ3R6viKNk0CXcADZL54R5x.W"
     },
     {
       "id": "7120",
@@ -9198,6 +9199,51 @@
   },
   "activityLog": [
     {
+      "id": "1776700135533",
+      "timestamp": "2026-04-20T15:48:55.533Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1776699892617",
+      "timestamp": "2026-04-20T15:44:52.617Z",
+      "user": "Clayton, Rodney",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776699740854",
+      "timestamp": "2026-04-20T15:42:20.854Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed captain password"
+    },
+    {
+      "id": "1776699698643",
+      "timestamp": "2026-04-20T15:41:38.643Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776698888491",
+      "timestamp": "2026-04-20T15:28:08.491Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1776693676726",
       "timestamp": "2026-04-20T14:01:16.727Z",
       "user": "Sale, Lynn",
@@ -10950,51 +10996,6 @@
       "userType": "Admin",
       "action": "delete",
       "target": "White, Drake",
-      "details": "Deleted volunteer"
-    },
-    {
-      "id": "1775829273027",
-      "timestamp": "2026-04-10T13:54:33.027Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "delete",
-      "target": "Kuhnell, David",
-      "details": "Deleted volunteer"
-    },
-    {
-      "id": "1775829260456",
-      "timestamp": "2026-04-10T13:54:20.456Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "delete",
-      "target": "Rico, Andrew",
-      "details": "Deleted volunteer"
-    },
-    {
-      "id": "1775829246348",
-      "timestamp": "2026-04-10T13:54:06.348Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "delete",
-      "target": "Howrey, Patrick",
-      "details": "Deleted volunteer"
-    },
-    {
-      "id": "1775829233474",
-      "timestamp": "2026-04-10T13:53:53.474Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "delete",
-      "target": "Kutzler, Jack",
-      "details": "Deleted volunteer"
-    },
-    {
-      "id": "1775829141323",
-      "timestamp": "2026-04-10T13:52:21.323Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "delete",
-      "target": "King, Jeff",
       "details": "Deleted volunteer"
     }
   ]
