@@ -6284,7 +6284,7 @@
       "volId": "243",
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
-      "volunteerPassword": "$2b$10$6w4x046i4P2v4O0OAIgmduNW4z897kLiAC8U1yXiNAQHLOrSgfWlS"
+      "volunteerPassword": "$2b$10$UNZRW/HaqorxnoARrwx4u.8FoLEr77NcBQUvF..9MS.hCnLQaMGU6"
     },
     {
       "id": "9204",
@@ -9198,6 +9198,15 @@
   },
   "activityLog": [
     {
+      "id": "1776693676726",
+      "timestamp": "2026-04-20T14:01:16.727Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1776687985408",
       "timestamp": "2026-04-20T12:26:25.408Z",
       "user": "Mcdaniel, Patrick",
@@ -10987,15 +10996,6 @@
       "action": "delete",
       "target": "King, Jeff",
       "details": "Deleted volunteer"
-    },
-    {
-      "id": "1775829112554",
-      "timestamp": "2026-04-10T13:51:52.554Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "import",
-      "target": "",
-      "details": "Updated/added volunteers from CSV: 4 updated, 2 added"
     }
   ]
 }
