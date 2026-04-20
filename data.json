@@ -9197,6 +9197,15 @@
   },
   "activityLog": [
     {
+      "id": "1776645889106",
+      "timestamp": "2026-04-20T00:44:49.106Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1776629710720",
       "timestamp": "2026-04-19T20:15:10.720Z",
       "user": "Mcdaniel, Patrick",
@@ -10981,15 +10990,6 @@
     {
       "id": "1775827214800",
       "timestamp": "2026-04-10T13:20:14.800Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "import",
-      "target": "",
-      "details": "Updated/added volunteers from CSV: 1 updated, 0 added"
-    },
-    {
-      "id": "1775827135213",
-      "timestamp": "2026-04-10T13:18:55.213Z",
       "user": "Hill, Michael",
       "userType": "Admin",
       "action": "import",
