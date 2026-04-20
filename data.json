@@ -9537,6 +9537,51 @@
   },
   "activityLog": [
     {
+      "id": "1776714781005",
+      "timestamp": "2026-04-20T19:53:01.005Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776714753425",
+      "timestamp": "2026-04-20T19:52:33.425Z",
+      "user": "Montalvo, Sammy",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776713767795",
+      "timestamp": "2026-04-20T19:36:07.795Z",
+      "user": "Browning, Wayne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776713501186",
+      "timestamp": "2026-04-20T19:31:41.186Z",
+      "user": "Wehmeyer, Tom",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1776713452876",
+      "timestamp": "2026-04-20T19:30:52.876Z",
+      "user": "Wehmeyer, Tom",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
       "id": "1776711141477",
       "timestamp": "2026-04-20T18:52:21.477Z",
       "user": "Wehmeyer, Tom",
@@ -11290,51 +11335,6 @@
       "action": "login",
       "target": "",
       "details": "Logged into Admin portal"
-    },
-    {
-      "id": "1775835262532",
-      "timestamp": "2026-04-10T15:34:22.532Z",
-      "user": "Pueblo, Vange",
-      "userType": "Captain",
-      "action": "submission",
-      "target": "Hole 20",
-      "details": "Submitted Friday AM for Hole 20"
-    },
-    {
-      "id": "1775835034931",
-      "timestamp": "2026-04-10T15:30:34.931Z",
-      "user": "Pueblo, Vange",
-      "userType": "Captain",
-      "action": "password-change",
-      "target": "",
-      "details": "Changed captain password"
-    },
-    {
-      "id": "1775834994957",
-      "timestamp": "2026-04-10T15:29:54.957Z",
-      "user": "Pueblo, Vange",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1775834818447",
-      "timestamp": "2026-04-10T15:26:58.447Z",
-      "user": "Howrey, Anne",
-      "userType": "Admin",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Admin portal"
-    },
-    {
-      "id": "1775829305512",
-      "timestamp": "2026-04-10T13:55:05.512Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "import",
-      "target": "",
-      "details": "Updated/added volunteers from CSV: 0 updated, 6 added"
     }
   ]
 }
