@@ -378,6 +378,11 @@
       "address": "9716 Wild Prairie Way Crowley, TX 76036",
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
+      "pairingPreferences": [
+        "8184",
+        "4222",
+        "2125"
+      ],
       "volunteerPassword": "$2b$10$wq0uX0L9d0zbH/1BFvTscu3Xm5j2XEFa2uaC3RQGJ.T2kok6288Xm"
     },
     {
@@ -8090,7 +8095,7 @@
       "address": "2302 Windsor Rd Abilene, TX 79605",
       "volId": "8234",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false,
+      "hasVolunteerPassword": true,
       "volunteerPassword": "$2b$10$0dfrj/zMV2m5YJ8hDoVIvuv6oCRgJ6g.5TfL89.d9gXWWfkyFftVG"
     },
     {
@@ -9712,6 +9717,42 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1776794102725",
+      "timestamp": "2026-04-21T17:55:02.725Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1776794042646",
+      "timestamp": "2026-04-21T17:54:02.646Z",
+      "user": "Bird, Bob",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1776793882842",
+      "timestamp": "2026-04-21T17:51:22.842Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1776793700707",
+      "timestamp": "2026-04-21T17:48:20.707Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
     {
       "id": "1776789812898",
       "timestamp": "2026-04-21T16:43:32.898Z",
@@ -11475,42 +11516,6 @@
       "action": "submission",
       "target": "Hole 20",
       "details": "Submitted Sunday AM for Hole 20"
-    },
-    {
-      "id": "1775998774424",
-      "timestamp": "2026-04-12T12:59:34.424Z",
-      "user": "Pueblo, Vange",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1775993371227",
-      "timestamp": "2026-04-12T11:29:31.227Z",
-      "user": "Holt, Sharron",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1775954625674",
-      "timestamp": "2026-04-12T00:43:45.674Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Admin portal"
-    },
-    {
-      "id": "1775947454055",
-      "timestamp": "2026-04-11T22:44:14.055Z",
-      "user": "Holt, Sharron",
-      "userType": "Captain",
-      "action": "password-change",
-      "target": "",
-      "details": "Changed captain password"
     }
   ]
 }
