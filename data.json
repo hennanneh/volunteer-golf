@@ -1095,8 +1095,6 @@
       "yearsWorked": 16,
       "hat": "",
       "scheduled": {
-        "Monday AM": true,
-        "Monday PM": true,
         "Tuesday AM": true,
         "Tuesday PM": true,
         "Wednesday AM": true,
@@ -1628,8 +1626,6 @@
       "scheduled": {
         "Monday AM": true,
         "Monday PM": true,
-        "Tuesday AM": true,
-        "Tuesday PM": true,
         "Wednesday AM": true,
         "Wednesday PM": true,
         "Thursday AM": true,
@@ -9721,6 +9717,15 @@
   },
   "activityLog": [
     {
+      "id": "1776811597890",
+      "timestamp": "2026-04-21T22:46:37.890Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
       "id": "1776809003671",
       "timestamp": "2026-04-21T22:03:23.671Z",
       "user": "Howrey, Anne",
@@ -11506,15 +11511,6 @@
       "id": "1776021476386",
       "timestamp": "2026-04-12T19:17:56.386Z",
       "user": "Montalvo, Sammy",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776016209161",
-      "timestamp": "2026-04-12T17:50:09.161Z",
-      "user": "Nederostek, Brad",
       "userType": "Captain",
       "action": "login",
       "target": "",
