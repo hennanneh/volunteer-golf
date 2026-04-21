@@ -137,6 +137,7 @@
       "hat": "",
       "scheduled": {
         "Tuesday AM": true,
+        "Thursday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
         "Saturday PM": true,
@@ -378,11 +379,6 @@
       "address": "9716 Wild Prairie Way Crowley, TX 76036",
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
-      "pairingPreferences": [
-        "8184",
-        "4222",
-        "2125"
-      ],
       "volunteerPassword": "$2b$10$wq0uX0L9d0zbH/1BFvTscu3Xm5j2XEFa2uaC3RQGJ.T2kok6288Xm"
     },
     {
@@ -790,10 +786,6 @@
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
       "noOutingPreference": false,
-      "notAttendingOuting": false,
-      "pairingPreferences": [
-        "342"
-      ],
       "volunteerPassword": "$2b$10$emURW0.XkBhWl94pFMp9Oun1BgF5RNujywKgEaJtVHz5tejWZaQL6"
     },
     {
@@ -3404,6 +3396,7 @@
       "hat": "",
       "scheduled": {
         "Tuesday AM": true,
+        "Thursday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
         "Saturday PM": true,
@@ -3591,9 +3584,9 @@
       "yearsWorked": 1,
       "hat": "",
       "scheduled": {
-        "Wednesday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
+        "Friday PM": true,
         "Saturday PM": true,
         "Sunday AM": true
       },
@@ -4496,6 +4489,7 @@
       "hat": "",
       "scheduled": {
         "Tuesday AM": true,
+        "Thursday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
         "Saturday PM": true,
@@ -5258,10 +5252,14 @@
       "hat": "",
       "scheduled": {
         "Tuesday AM": true,
+        "Thursday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
         "Saturday PM": true,
-        "Sunday AM": true
+        "Sunday AM": true,
+        "Sunday PM": true
       },
       "address": "11009 Whitestone Ranch Road\r\nFt. Worth, TX 76126",
       "volId": "4434",
@@ -9722,85 +9720,40 @@
   },
   "activityLog": [
     {
-      "id": "1776801238427",
-      "timestamp": "2026-04-21T19:53:58.427Z",
-      "user": "Butler, Mark",
-      "userType": "Volunteer",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Volunteer portal"
-    },
-    {
-      "id": "1776801230189",
-      "timestamp": "2026-04-21T19:53:50.189Z",
-      "user": "Butler, Mark",
-      "userType": "Captain",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Captain portal"
-    },
-    {
-      "id": "1776801219736",
-      "timestamp": "2026-04-21T19:53:39.736Z",
-      "user": "Butler, Mark",
+      "id": "1776791848875",
+      "timestamp": "2026-04-21T17:17:28.875Z",
+      "user": "Duncan, Larry",
       "userType": "Captain",
       "action": "login",
       "target": "",
       "details": "Logged into Captain portal"
     },
     {
-      "id": "1776799758493",
-      "timestamp": "2026-04-21T19:29:18.493Z",
-      "user": "Anderson, Rob",
-      "userType": "Volunteer",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Volunteer portal"
-    },
-    {
-      "id": "1776799154207",
-      "timestamp": "2026-04-21T19:19:14.207Z",
-      "user": "Trout, Wayne",
+      "id": "1776791502276",
+      "timestamp": "2026-04-21T17:11:42.276Z",
+      "user": "Sale, Lynn",
       "userType": "Captain",
       "action": "login",
       "target": "",
       "details": "Logged into Captain portal"
     },
     {
-      "id": "1776794102725",
-      "timestamp": "2026-04-21T17:55:02.725Z",
-      "user": "Trout, Wayne",
-      "userType": "Captain",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Captain portal"
-    },
-    {
-      "id": "1776794042646",
-      "timestamp": "2026-04-21T17:54:02.646Z",
-      "user": "Bird, Bob",
+      "id": "1776791478968",
+      "timestamp": "2026-04-21T17:11:18.968Z",
+      "user": "Sale, Lynn",
       "userType": "Volunteer",
       "action": "logout",
       "target": "",
       "details": "Logged out of Volunteer portal"
     },
     {
-      "id": "1776793882842",
-      "timestamp": "2026-04-21T17:51:22.842Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
+      "id": "1776791435994",
+      "timestamp": "2026-04-21T17:10:35.994Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
       "action": "login",
       "target": "",
-      "details": "Logged into Admin portal"
-    },
-    {
-      "id": "1776793700707",
-      "timestamp": "2026-04-21T17:48:20.707Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Admin portal"
+      "details": "Logged into Captain portal"
     },
     {
       "id": "1776789812898",
@@ -11520,6 +11473,51 @@
       "action": "login",
       "target": "",
       "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776000298776",
+      "timestamp": "2026-04-12T13:24:58.776Z",
+      "user": "Schultz, Joni",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1775999689788",
+      "timestamp": "2026-04-12T13:14:49.788Z",
+      "user": "Schultz, Joni",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1775999599982",
+      "timestamp": "2026-04-12T13:13:19.982Z",
+      "user": "Schultz, Joni",
+      "userType": "Volunteer",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed volunteer password"
+    },
+    {
+      "id": "1775999582466",
+      "timestamp": "2026-04-12T13:13:02.466Z",
+      "user": "Schultz, Joni",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1775998805107",
+      "timestamp": "2026-04-12T13:00:05.107Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 20",
+      "details": "Submitted Sunday AM for Hole 20"
     }
   ]
 }
