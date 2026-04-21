@@ -783,7 +783,9 @@
       "address": "7401 County Road 305 Grandview, TX 76050",
       "volId": "1720",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false
+      "hasVolunteerPassword": true,
+      "noOutingPreference": false,
+      "volunteerPassword": "$2b$10$emURW0.XkBhWl94pFMp9Oun1BgF5RNujywKgEaJtVHz5tejWZaQL6"
     },
     {
       "id": "10573",
@@ -4579,6 +4581,9 @@
       "address": "109 Berry Dr Haslet, TX 76052",
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
+      "pairingPreferences": [
+        "2629"
+      ],
       "volunteerPassword": "$2b$10$1PjxSum5zBzzCClif1DF1uUvXsmowsgOr4AbuoyUr2wig8ncpzLE."
     },
     {
@@ -7957,7 +7962,8 @@
       "volId": "8219",
       "address": "2422 Clayton Oaks Dr Grand Prairie, TX 75052",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false
+      "hasVolunteerPassword": true,
+      "volunteerPassword": "$2b$10$S2Do4PBp6rG2QWrdQE6Sb.DDfK63XQ9uhgQilC7CPfLFOvmMKNm9u"
     },
     {
       "id": "7640",
@@ -9577,6 +9583,141 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1776736744244",
+      "timestamp": "2026-04-21T01:59:04.244Z",
+      "user": "Butler, Mark",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776736685080",
+      "timestamp": "2026-04-21T01:58:05.080Z",
+      "user": "Butler, Mark",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1776736517604",
+      "timestamp": "2026-04-21T01:55:17.604Z",
+      "user": "Butler, Mark",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776736365050",
+      "timestamp": "2026-04-21T01:52:45.050Z",
+      "user": "Butler, Mark",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1776736314002",
+      "timestamp": "2026-04-21T01:51:54.002Z",
+      "user": "Butler, Mark",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1776736301294",
+      "timestamp": "2026-04-21T01:51:41.294Z",
+      "user": "Butler, Mark",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1776735956574",
+      "timestamp": "2026-04-21T01:45:56.574Z",
+      "user": "Butler, Mark",
+      "userType": "Volunteer",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed volunteer password"
+    },
+    {
+      "id": "1776735907182",
+      "timestamp": "2026-04-21T01:45:07.182Z",
+      "user": "Butler, Mark",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1776735653244",
+      "timestamp": "2026-04-21T01:40:53.244Z",
+      "user": "White, Gary",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1776735338225",
+      "timestamp": "2026-04-21T01:35:38.225Z",
+      "user": "White, Gary",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1776735035250",
+      "timestamp": "2026-04-21T01:30:35.250Z",
+      "user": "Mansir, Greg",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1776733675748",
+      "timestamp": "2026-04-21T01:07:55.748Z",
+      "user": "White, Gary",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1776733527236",
+      "timestamp": "2026-04-21T01:05:27.236Z",
+      "user": "White, Gary",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1776733332081",
+      "timestamp": "2026-04-21T01:02:12.081Z",
+      "user": "White, Gary",
+      "userType": "Volunteer",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed volunteer password"
+    },
+    {
+      "id": "1776733273600",
+      "timestamp": "2026-04-21T01:01:13.600Z",
+      "user": "White, Gary",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
     {
       "id": "1776733169560",
       "timestamp": "2026-04-21T00:59:29.560Z",
@@ -11237,141 +11378,6 @@
       "id": "1775914516264",
       "timestamp": "2026-04-11T13:35:16.264Z",
       "user": "Pueblo, Vange",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1775908617865",
-      "timestamp": "2026-04-11T11:56:57.865Z",
-      "user": "Elkins, Paul",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1775869139926",
-      "timestamp": "2026-04-11T00:58:59.926Z",
-      "user": "Beckley, Bob",
-      "userType": "Captain",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Captain portal"
-    },
-    {
-      "id": "1775869130821",
-      "timestamp": "2026-04-11T00:58:50.821Z",
-      "user": "Beckley, Bob",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1775868685575",
-      "timestamp": "2026-04-11T00:51:25.575Z",
-      "user": "Nederostek, Brad",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1775867934405",
-      "timestamp": "2026-04-11T00:38:54.405Z",
-      "user": "Galvan, Bob",
-      "userType": "Captain",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Captain portal"
-    },
-    {
-      "id": "1775867553877",
-      "timestamp": "2026-04-11T00:32:33.877Z",
-      "user": "Galvan, Bob",
-      "userType": "Captain",
-      "action": "password-change",
-      "target": "",
-      "details": "Changed captain password"
-    },
-    {
-      "id": "1775867346649",
-      "timestamp": "2026-04-11T00:29:06.649Z",
-      "user": "Galvan, Bob",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1775859011328",
-      "timestamp": "2026-04-10T22:10:11.328Z",
-      "user": "Mckenzie, Roy",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1775852673475",
-      "timestamp": "2026-04-10T20:24:33.475Z",
-      "user": "Montalvo, Sammy",
-      "userType": "Captain",
-      "action": "password-change",
-      "target": "",
-      "details": "Changed captain password"
-    },
-    {
-      "id": "1775852640298",
-      "timestamp": "2026-04-10T20:24:00.298Z",
-      "user": "Montalvo, Sammy",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1775852566226",
-      "timestamp": "2026-04-10T20:22:46.226Z",
-      "user": "Montalvo, Sammy",
-      "userType": "Captain",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Captain portal"
-    },
-    {
-      "id": "1775850179879",
-      "timestamp": "2026-04-10T19:42:59.879Z",
-      "user": "Steward, Denny",
-      "userType": "Admin",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Admin portal"
-    },
-    {
-      "id": "1775849688392",
-      "timestamp": "2026-04-10T19:34:48.392Z",
-      "user": "Steward, Denny",
-      "userType": "Admin",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Admin portal"
-    },
-    {
-      "id": "1775848365504",
-      "timestamp": "2026-04-10T19:12:45.504Z",
-      "user": "Beckley, Bob",
-      "userType": "Captain",
-      "action": "password-change",
-      "target": "",
-      "details": "Changed captain password"
-    },
-    {
-      "id": "1775848343784",
-      "timestamp": "2026-04-10T19:12:23.784Z",
-      "user": "Beckley, Bob",
       "userType": "Captain",
       "action": "login",
       "target": "",
