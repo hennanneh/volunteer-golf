@@ -9584,6 +9584,33 @@
   },
   "activityLog": [
     {
+      "id": "1776779886145",
+      "timestamp": "2026-04-21T13:58:06.145Z",
+      "user": "Volkening, David",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1776779308223",
+      "timestamp": "2026-04-21T13:48:28.223Z",
+      "user": "Zamzow, Steve",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776778054909",
+      "timestamp": "2026-04-21T13:27:34.915Z",
+      "user": "Sale, Lynn",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
       "id": "1776775903980",
       "timestamp": "2026-04-21T12:51:43.980Z",
       "user": "Hill, Michael",
@@ -11355,33 +11382,6 @@
       "action": "login",
       "target": "",
       "details": "Logged into Admin portal"
-    },
-    {
-      "id": "1775942079243",
-      "timestamp": "2026-04-11T21:14:39.243Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "edit-volunteer",
-      "target": "Clayton, Rodney",
-      "details": "Edited volunteer (Type: Captain, Hole: 13)"
-    },
-    {
-      "id": "1775941982434",
-      "timestamp": "2026-04-11T21:13:02.434Z",
-      "user": "Beckley, Bob",
-      "userType": "Captain",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Captain portal"
-    },
-    {
-      "id": "1775941971603",
-      "timestamp": "2026-04-11T21:12:51.603Z",
-      "user": "Beckley, Bob",
-      "userType": "Captain",
-      "action": "submission",
-      "target": "Hole 15",
-      "details": "Submitted Saturday PM for Hole 15"
     }
   ]
 }
