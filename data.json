@@ -9721,6 +9721,15 @@
   },
   "activityLog": [
     {
+      "id": "1776809003671",
+      "timestamp": "2026-04-21T22:03:23.671Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1776808559307",
       "timestamp": "2026-04-21T21:55:59.307Z",
       "user": "Craft, John",
@@ -11510,15 +11519,6 @@
       "action": "login",
       "target": "",
       "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776000348034",
-      "timestamp": "2026-04-12T13:25:48.034Z",
-      "user": "Beckley, Bob",
-      "userType": "Captain",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Captain portal"
     }
   ]
 }
