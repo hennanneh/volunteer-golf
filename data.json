@@ -9584,6 +9584,24 @@
   },
   "activityLog": [
     {
+      "id": "1776781441173",
+      "timestamp": "2026-04-21T14:24:01.173Z",
+      "user": "Sale, Lynn",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1776780337814",
+      "timestamp": "2026-04-21T14:05:37.814Z",
+      "user": "Volkening, David",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
       "id": "1776779886145",
       "timestamp": "2026-04-21T13:58:06.145Z",
       "user": "Volkening, David",
@@ -11364,24 +11382,6 @@
       "action": "login",
       "target": "",
       "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1775943317831",
-      "timestamp": "2026-04-11T21:35:17.831Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Admin portal"
-    },
-    {
-      "id": "1775943258650",
-      "timestamp": "2026-04-11T21:34:18.650Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Admin portal"
     }
   ]
 }
