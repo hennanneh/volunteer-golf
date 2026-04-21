@@ -3567,7 +3567,8 @@
       "address": "415 SHENANDOAH DR BURLESON, TX 76028-4079",
       "volId": "380",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false
+      "hasVolunteerPassword": true,
+      "volunteerPassword": "$2b$10$KSyIYY72.w8snAZJwbLv7eeYHjMwfdGMBejS3Ie5JKNNPTW2XErhG"
     },
     {
       "id": "10342",
@@ -4765,7 +4766,9 @@
       "volId": "9868",
       "address": "12824 Bella Colina Dr. Fort Worth, TX 76126",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false
+      "hasVolunteerPassword": true,
+      "notAttendingOuting": true,
+      "volunteerPassword": "$2b$10$9VZ4xuVco8d0Jxt3bhSuIuk01RUhpbU48YHWgZ/rGjg4kOAdDIDcy"
     },
     {
       "id": "10271",
@@ -6877,6 +6880,7 @@
       "pairingPreferences": [
         "9928"
       ],
+      "notAttendingOuting": false,
       "volunteerPassword": "$2b$10$G.8xb3c2tuwsF59Cvi8P..fV0eNAa1eeIxJUgZ6oSa3gtDdT/y4Xy"
     },
     {
@@ -9574,6 +9578,60 @@
   },
   "activityLog": [
     {
+      "id": "1776733169560",
+      "timestamp": "2026-04-21T00:59:29.560Z",
+      "user": "Watson, Stan",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1776732805469",
+      "timestamp": "2026-04-21T00:53:25.469Z",
+      "user": "Harrell, John",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1776731041511",
+      "timestamp": "2026-04-21T00:24:01.511Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776730484121",
+      "timestamp": "2026-04-21T00:14:44.121Z",
+      "user": "Mcgowen, Mark",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1776730385461",
+      "timestamp": "2026-04-21T00:13:05.461Z",
+      "user": "Mcgowen, Mark",
+      "userType": "Volunteer",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed volunteer password"
+    },
+    {
+      "id": "1776730324286",
+      "timestamp": "2026-04-21T00:12:04.286Z",
+      "user": "Mcgowen, Mark",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
       "id": "1776729471292",
       "timestamp": "2026-04-20T23:57:51.292Z",
       "user": "Rodrigues, Donald",
@@ -11314,60 +11372,6 @@
       "id": "1775848343784",
       "timestamp": "2026-04-10T19:12:23.784Z",
       "user": "Beckley, Bob",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1775845225041",
-      "timestamp": "2026-04-10T18:20:25.041Z",
-      "user": "Pueblo, Vange",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1775845150098",
-      "timestamp": "2026-04-10T18:19:10.098Z",
-      "user": "Pueblo, Vange",
-      "userType": "Captain",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Captain portal"
-    },
-    {
-      "id": "1775844711662",
-      "timestamp": "2026-04-10T18:11:51.662Z",
-      "user": "Pueblo, Vange",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1775844670348",
-      "timestamp": "2026-04-10T18:11:10.348Z",
-      "user": "Pueblo, Vange",
-      "userType": "Captain",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Captain portal"
-    },
-    {
-      "id": "1775844662072",
-      "timestamp": "2026-04-10T18:11:02.072Z",
-      "user": "Pueblo, Vange",
-      "userType": "Captain",
-      "action": "submission",
-      "target": "Hole 20",
-      "details": "Submitted Friday PM for Hole 20"
-    },
-    {
-      "id": "1775844618114",
-      "timestamp": "2026-04-10T18:10:18.114Z",
-      "user": "Pueblo, Vange",
       "userType": "Captain",
       "action": "login",
       "target": "",
