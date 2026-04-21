@@ -9584,6 +9584,87 @@
   },
   "activityLog": [
     {
+      "id": "1776775903980",
+      "timestamp": "2026-04-21T12:51:43.980Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1776775897311",
+      "timestamp": "2026-04-21T12:51:37.311Z",
+      "user": "Hill, Michael",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1776775530465",
+      "timestamp": "2026-04-21T12:45:30.465Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776775447015",
+      "timestamp": "2026-04-21T12:44:07.015Z",
+      "user": "Hill, Michael",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776775434998",
+      "timestamp": "2026-04-21T12:43:54.998Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1776775378513",
+      "timestamp": "2026-04-21T12:42:58.513Z",
+      "user": "Clayton, Rodney",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776774247383",
+      "timestamp": "2026-04-21T12:24:07.383Z",
+      "user": "Hill, Michael",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776773092258",
+      "timestamp": "2026-04-21T12:04:52.258Z",
+      "user": "Burnett, Eric",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776772947017",
+      "timestamp": "2026-04-21T12:02:27.017Z",
+      "user": "Burnett, Eric",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1776767091226",
       "timestamp": "2026-04-21T10:24:51.226Z",
       "user": "Edwards, Bill",
@@ -11301,87 +11382,6 @@
       "action": "submission",
       "target": "Hole 15",
       "details": "Submitted Saturday PM for Hole 15"
-    },
-    {
-      "id": "1775941958381",
-      "timestamp": "2026-04-11T21:12:38.381Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Admin portal"
-    },
-    {
-      "id": "1775941954865",
-      "timestamp": "2026-04-11T21:12:34.865Z",
-      "user": "Beckley, Bob",
-      "userType": "Captain",
-      "action": "submission",
-      "target": "Hole 15",
-      "details": "Submitted Saturday PM for Hole 15"
-    },
-    {
-      "id": "1775941921087",
-      "timestamp": "2026-04-11T21:12:01.087Z",
-      "user": "Beckley, Bob",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1775932561250",
-      "timestamp": "2026-04-11T18:36:01.250Z",
-      "user": "Volkening, David",
-      "userType": "Admin",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Admin portal"
-    },
-    {
-      "id": "1775932310467",
-      "timestamp": "2026-04-11T18:31:50.467Z",
-      "user": "Beckley, Bob",
-      "userType": "Captain",
-      "action": "password-change",
-      "target": "",
-      "details": "Changed captain password"
-    },
-    {
-      "id": "1775932283156",
-      "timestamp": "2026-04-11T18:31:23.156Z",
-      "user": "Beckley, Bob",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1775921672436",
-      "timestamp": "2026-04-11T15:34:32.436Z",
-      "user": "Gordon, Gary",
-      "userType": "Captain",
-      "action": "password-change",
-      "target": "",
-      "details": "Changed captain password"
-    },
-    {
-      "id": "1775921623942",
-      "timestamp": "2026-04-11T15:33:43.942Z",
-      "user": "Gordon, Gary",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1775920584914",
-      "timestamp": "2026-04-11T15:16:24.914Z",
-      "user": "Montalvo, Sammy",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
     }
   ]
 }
