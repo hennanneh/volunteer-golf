@@ -790,6 +790,10 @@
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
       "noOutingPreference": false,
+      "notAttendingOuting": false,
+      "pairingPreferences": [
+        "342"
+      ],
       "volunteerPassword": "$2b$10$emURW0.XkBhWl94pFMp9Oun1BgF5RNujywKgEaJtVHz5tejWZaQL6"
     },
     {
@@ -9718,8 +9722,26 @@
   },
   "activityLog": [
     {
-      "id": "1776796154703",
-      "timestamp": "2026-04-21T18:29:14.703Z",
+      "id": "1776801238427",
+      "timestamp": "2026-04-21T19:53:58.427Z",
+      "user": "Butler, Mark",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1776801230189",
+      "timestamp": "2026-04-21T19:53:50.189Z",
+      "user": "Butler, Mark",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1776801219736",
+      "timestamp": "2026-04-21T19:53:39.736Z",
       "user": "Butler, Mark",
       "userType": "Captain",
       "action": "login",
@@ -9727,22 +9749,22 @@
       "details": "Logged into Captain portal"
     },
     {
-      "id": "1776796145071",
-      "timestamp": "2026-04-21T18:29:05.071Z",
-      "user": "Butler, Mark",
-      "userType": "Volunteer",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Volunteer portal"
-    },
-    {
-      "id": "1776796127168",
-      "timestamp": "2026-04-21T18:28:47.168Z",
-      "user": "Butler, Mark",
+      "id": "1776799758493",
+      "timestamp": "2026-04-21T19:29:18.493Z",
+      "user": "Anderson, Rob",
       "userType": "Volunteer",
       "action": "login",
       "target": "",
       "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1776799154207",
+      "timestamp": "2026-04-21T19:19:14.207Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
     },
     {
       "id": "1776794102725",
@@ -11498,24 +11520,6 @@
       "action": "login",
       "target": "",
       "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776000298776",
-      "timestamp": "2026-04-12T13:24:58.776Z",
-      "user": "Schultz, Joni",
-      "userType": "Volunteer",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Volunteer portal"
-    },
-    {
-      "id": "1775999689788",
-      "timestamp": "2026-04-12T13:14:49.788Z",
-      "user": "Schultz, Joni",
-      "userType": "Volunteer",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Volunteer portal"
     }
   ]
 }
