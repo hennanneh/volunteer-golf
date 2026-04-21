@@ -8090,7 +8090,8 @@
       "address": "2302 Windsor Rd Abilene, TX 79605",
       "volId": "8234",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false
+      "hasVolunteerPassword": false,
+      "volunteerPassword": "$2b$10$0dfrj/zMV2m5YJ8hDoVIvuv6oCRgJ6g.5TfL89.d9gXWWfkyFftVG"
     },
     {
       "id": "5876",
@@ -8354,7 +8355,9 @@
       "address": "1520 Yorkshire Dr.\r\nRichardson, TX 75082",
       "volId": "2133",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false
+      "hasVolunteerPassword": true,
+      "noOutingPreference": true,
+      "volunteerPassword": "$2b$10$sfJI6ak8eUM4eQOw.ohBsundswmPhVaK8OtQMZBWpZa6h2ZGoQK8K"
     },
     {
       "id": "10707",
@@ -9709,6 +9712,60 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1776789812898",
+      "timestamp": "2026-04-21T16:43:32.898Z",
+      "user": "Wilson, Todd",
+      "userType": "Captain",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed captain password"
+    },
+    {
+      "id": "1776789757648",
+      "timestamp": "2026-04-21T16:42:37.648Z",
+      "user": "Wilson, Todd",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776789208830",
+      "timestamp": "2026-04-21T16:33:28.830Z",
+      "user": "Larrabee, Robert",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1776789170717",
+      "timestamp": "2026-04-21T16:32:50.717Z",
+      "user": "Larrabee, Robert",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1776788904314",
+      "timestamp": "2026-04-21T16:28:24.314Z",
+      "user": "Larrabee, Robert",
+      "userType": "Volunteer",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed volunteer password"
+    },
+    {
+      "id": "1776788820456",
+      "timestamp": "2026-04-21T16:27:00.456Z",
+      "user": "Larrabee, Robert",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
     {
       "id": "1776787164978",
       "timestamp": "2026-04-21T15:59:24.978Z",
@@ -11450,60 +11507,6 @@
       "id": "1775947454055",
       "timestamp": "2026-04-11T22:44:14.055Z",
       "user": "Holt, Sharron",
-      "userType": "Captain",
-      "action": "password-change",
-      "target": "",
-      "details": "Changed captain password"
-    },
-    {
-      "id": "1775947418470",
-      "timestamp": "2026-04-11T22:43:38.470Z",
-      "user": "Holt, Sharron",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1775947286329",
-      "timestamp": "2026-04-11T22:41:26.329Z",
-      "user": "Clayton, Rodney",
-      "userType": "Captain",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Captain portal"
-    },
-    {
-      "id": "1775946073567",
-      "timestamp": "2026-04-11T22:21:13.567Z",
-      "user": "Howrey, Anne",
-      "userType": "Captain",
-      "action": "password-change",
-      "target": "",
-      "details": "Changed captain password"
-    },
-    {
-      "id": "1775946044844",
-      "timestamp": "2026-04-11T22:20:44.844Z",
-      "user": "Howrey, Anne",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1775946018548",
-      "timestamp": "2026-04-11T22:20:18.549Z",
-      "user": "Howrey, Anne",
-      "userType": "Admin",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Admin portal"
-    },
-    {
-      "id": "1775945868477",
-      "timestamp": "2026-04-11T22:17:48.477Z",
-      "user": "Clayton, Rodney",
       "userType": "Captain",
       "action": "password-change",
       "target": "",
