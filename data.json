@@ -9584,6 +9584,15 @@
   },
   "activityLog": [
     {
+      "id": "1776740882240",
+      "timestamp": "2026-04-21T03:08:02.240Z",
+      "user": "Butler, Mark",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
       "id": "1776739454128",
       "timestamp": "2026-04-21T02:44:14.128Z",
       "user": "Butler, Mark",
@@ -11373,15 +11382,6 @@
       "action": "login",
       "target": "",
       "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1775932561250",
-      "timestamp": "2026-04-11T18:36:01.250Z",
-      "user": "Volkening, David",
-      "userType": "Admin",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Admin portal"
     }
   ]
 }
