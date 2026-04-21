@@ -862,7 +862,7 @@
       "id": "10675",
       "name": "Capps, Macy",
       "type": "Volunteer",
-      "hole": 9,
+      "hole": 14,
       "phone": "(405) 826-3877",
       "email": "macywalkergolf@gmail.com",
       "yearsWorked": 1,
@@ -874,10 +874,13 @@
         "Saturday AM": true,
         "Sunday PM": true
       },
-      "address": "8501 Coffee Springs Drive\r\nFort Worth, TX 76131",
+      "address": "8501 Coffee Springs Drive\nFort Worth, TX 76131",
       "volId": "10675",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false
+      "hasVolunteerPassword": false,
+      "hatReceived": false,
+      "notes": "",
+      "originalHole": 9
     },
     {
       "id": "111",
@@ -1532,7 +1535,8 @@
       "volId": "6340",
       "address": "130 Turner Warnell Rd MANSFIELD, TX 76063-6400",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false
+      "hasVolunteerPassword": true,
+      "volunteerPassword": "$2b$10$fBsNnfW5vNs49gNnqE/p3OrnQYoult.Cg4lKSb2AUtxSxSnHBznPi"
     },
     {
       "id": "9969",
@@ -3246,10 +3250,11 @@
       "volId": "9874",
       "address": "1300 Senna Drive Burleson, TX 76028",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false,
+      "hasVolunteerPassword": true,
       "hatReceived": false,
       "notes": "",
-      "originalHole": 15
+      "originalHole": 15,
+      "volunteerPassword": "$2b$10$7hFc02V3OgOCGOd34DiV5.98vBY9s9Ywpd.G5Ai4K9QeeAxy5QBPC"
     },
     {
       "id": "2442",
@@ -5087,7 +5092,8 @@
       "volId": "2125",
       "address": "2433 C. R. 602 Burleson, TX 76028",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false
+      "hasVolunteerPassword": true,
+      "volunteerPassword": "$2b$10$Phrg5xmJLYtU7hU9loHqY.2teWdVBj4i.Y9unYpDy1rJMNlNyp0IK"
     },
     {
       "id": "7286",
@@ -6446,7 +6452,10 @@
       "volId": "9928",
       "address": "6 Toscany Court Mansfield, TX 76063",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false
+      "hasVolunteerPassword": false,
+      "pairingPreferences": [
+        "10436"
+      ]
     },
     {
       "id": "5240",
@@ -6864,7 +6873,11 @@
       "volId": "10436",
       "address": "1100 Foxtail Drive Mansfield, TX 76063",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false
+      "hasVolunteerPassword": true,
+      "pairingPreferences": [
+        "9928"
+      ],
+      "volunteerPassword": "$2b$10$G.8xb3c2tuwsF59Cvi8P..fV0eNAa1eeIxJUgZ6oSa3gtDdT/y4Xy"
     },
     {
       "id": "9397",
@@ -9561,40 +9574,76 @@
   },
   "activityLog": [
     {
-      "id": "1776725832157",
-      "timestamp": "2026-04-20T22:57:12.157Z",
-      "user": "Reddington, Joseph",
+      "id": "1776729471292",
+      "timestamp": "2026-04-20T23:57:51.292Z",
+      "user": "Rodrigues, Donald",
       "userType": "Volunteer",
       "action": "login",
       "target": "",
       "details": "Logged into Volunteer portal"
     },
     {
-      "id": "1776725812903",
-      "timestamp": "2026-04-20T22:56:52.903Z",
-      "user": "Mcgowen, Mark",
+      "id": "1776727986551",
+      "timestamp": "2026-04-20T23:33:06.551Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1776727980387",
+      "timestamp": "2026-04-20T23:33:00.387Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1776727614958",
+      "timestamp": "2026-04-20T23:26:54.958Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776726474392",
+      "timestamp": "2026-04-20T23:07:54.392Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1776726160810",
+      "timestamp": "2026-04-20T23:02:40.810Z",
+      "user": "Diaz, Rickey",
       "userType": "Volunteer",
       "action": "login",
       "target": "",
       "details": "Logged into Volunteer portal"
     },
     {
-      "id": "1776725809492",
-      "timestamp": "2026-04-20T22:56:49.492Z",
-      "user": "Reddington, Joseph",
+      "id": "1776726112065",
+      "timestamp": "2026-04-20T23:01:52.065Z",
+      "user": "Hughes, Allen",
       "userType": "Volunteer",
-      "action": "logout",
+      "action": "login",
       "target": "",
-      "details": "Logged out of Volunteer portal"
+      "details": "Logged into Volunteer portal"
     },
     {
-      "id": "1776725792099",
-      "timestamp": "2026-04-20T22:56:32.099Z",
-      "user": "Moore, Barry",
-      "userType": "Volunteer",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Volunteer portal"
+      "id": "1776726106538",
+      "timestamp": "2026-04-20T23:01:46.538Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Capps, Macy",
+      "details": "Edited volunteer (Type: Volunteer, Hole: 14)"
     },
     {
       "id": "1776725742278",
@@ -11323,42 +11372,6 @@
       "action": "login",
       "target": "",
       "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1775844081230",
-      "timestamp": "2026-04-10T18:01:21.230Z",
-      "user": "Edwards, Bill",
-      "userType": "Captain",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Captain portal"
-    },
-    {
-      "id": "1775843900580",
-      "timestamp": "2026-04-10T17:58:20.580Z",
-      "user": "Edwards, Bill",
-      "userType": "Captain",
-      "action": "check-in",
-      "target": "Cary, Ron",
-      "details": "Checked in for Friday AM on Hole 9"
-    },
-    {
-      "id": "1775843895015",
-      "timestamp": "2026-04-10T17:58:15.015Z",
-      "user": "Edwards, Bill",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1775843882959",
-      "timestamp": "2026-04-10T17:58:02.959Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Admin portal"
     }
   ]
 }
