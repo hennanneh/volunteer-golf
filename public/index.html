@@ -3536,7 +3536,7 @@
               <thead>
                 <tr style="background:#f8f9fa">
                   <th style="text-align:left;padding:12px;border:1px solid #ccc">Volunteer</th>
-                  <th style="text-align:left;padding:12px;border:1px solid #ccc">Type</th>
+                  <th style="text-align:center;padding:12px;border:1px solid #ccc">Years</th>
                   ${showMoveColumn ? `<th style="text-align:center;padding:12px;border:1px solid #ccc">Move</th>` : ''}
                   ${days.map(d => `
                     <th style="text-align:center;padding:12px;border:1px solid #ccc" colspan="2">${d.slice(0, 3)}</th>
@@ -3573,14 +3573,15 @@
                   const isNewHere = v.originalHole !== undefined && v.originalHole !== holeNumber && v.hole === holeNumber;
                   const rowStyle = isMovedAway ? 'opacity:0.5;background:#f5f5f5;' : '';
 
+                  const isCaptainRole = ['Captain', 'Asst. Chairman', 'Chairman'].includes(v.type);
                   return `
                   <tr style="${rowStyle}">
                     <td style="padding:10px 12px;border:1px solid #ccc">
                       ${isNewHere && showHoleHistory ? '<span style="background:#4caf50;color:white;padding:2px 6px;border-radius:4px;font-size:10px;margin-right:6px">NEW</span>' : ''}
-                      ${v.name}
+                      ${v.name}${isCaptainRole ? '<span title="' + v.type + '" style="color:#1a472a;font-weight:700;margin-left:4px">*</span>' : ''}
                       ${isMovedAway ? '<span style="color:#999;font-size:11px;margin-left:6px">(moved)</span>' : ''}
                     </td>
-                    <td style="padding:10px 12px;border:1px solid #ccc;font-size:12px;color:#666">${v.type || '-'}</td>
+                    <td style="padding:10px 12px;border:1px solid #ccc;text-align:center;font-size:13px;color:#333">${v.yearsWorked != null ? v.yearsWorked : '-'}</td>
                     ${showMoveColumn ? `
                       <td style="padding:6px;border:1px solid #ccc;text-align:center">
                         <select onchange="moveVolunteerToHole('${v.id}', parseInt(this.value))" style="padding:4px 8px;border:1px solid #ddd;border-radius:4px;font-size:12px;cursor:pointer;${isMovedAway ? 'background:#fff3cd;' : ''}">
@@ -3645,6 +3646,7 @@
             </div>
             ${allHoles.map(h => renderSingleHoleRoster(h)).join('')}
             <div style="margin-top:15px;font-size:12px;color:#666">
+              <span style="color:#1a472a;font-weight:700">*</span> = Captain / Chairman &nbsp;&nbsp;
               <span style="color:#4caf50;font-weight:600">✓</span> = Checked in &nbsp;&nbsp;
               <span style="color:#1a472a;font-weight:600">○</span> = Scheduled
               ${historyLegend}
@@ -3658,6 +3660,7 @@
           ${renderSingleHoleRoster(hole)}
 
           <div style="font-size:12px;color:#666">
+            <span style="color:#1a472a;font-weight:700">*</span> = Captain / Chairman &nbsp;&nbsp;
             <span style="color:#4caf50;font-weight:600">✓</span> = Checked in &nbsp;&nbsp;
             <span style="color:#1a472a;font-weight:600">○</span> = Scheduled
             ${historyLegend}
@@ -4228,44 +4231,65 @@
       const table = content.querySelector('table');
       if (!table) return;
 
-      const printWindow = window.open('', '_blank');
-      printWindow.document.write(`
-        <!DOCTYPE html>
-        <html>
-        <head>
-          <title>Hole #${hole} Roster - ${appData.settings.tournamentName || 'Volunteer Golf'}</title>
-          <style>
-            @page {
-              size: 8.5in 11in portrait;
-              margin: 0.4in;
-            }
-            * { box-sizing: border-box; }
-            body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; padding: 0; margin: 0; }
-            h1 { font-size: 14px; color: #1a472a; margin: 0 0 3px 0; }
-            h2 { font-size: 11px; color: #666; font-weight: normal; margin: 0 0 10px 0; }
-            table { width: 100%; border-collapse: collapse; font-size: 9px; border: 1px solid #ccc; }
-            th, td { padding: 3px 4px; text-align: left; border: 1px solid #ccc; }
-            th { background: #f5f5f5; font-weight: 600; }
-            .legend { font-size: 10px; color: #666; margin-top: 8px; }
-          </style>
-        </head>
-        <body>
-          <h1>${appData.settings.tournamentName || 'Volunteer Golf'}</h1>
-          <h2>Hole #${hole} Roster - Generated ${new Date().toLocaleDateString()}</h2>
-          ${table.outerHTML}
-          <div class="legend">
-            <span style="color:#4caf50;font-weight:600">✓</span> = Checked in &nbsp;&nbsp;
-            <span style="color:#1a472a;font-weight:600">○</span> = Scheduled
-          </div>
-          <script>
-            window.onload = function() {
-              window.print();
-            }
-          <\/script>
-        </body>
-        </html>
-      `);
-      printWindow.document.close();
+      // Print the main window with a print-only stylesheet. Avoids the iOS
+      // Safari quirk where iframe.contentWindow.print() prints a blank page,
+      // and avoids the PWA "stuck on new window" issue with window.open.
+      //
+      // The style + container are created once and left in the DOM. Cleaning
+      // up on `afterprint` causes a blank/wrong preview on iOS Safari, which
+      // fires afterprint before it finishes rendering the preview — removing
+      // our content mid-render, so iOS screenshots the underlying page. The
+      // container is hidden on screen via @media screen rules; persisting it
+      // is harmless.
+      let style = document.getElementById('print-pdf-style');
+      if (!style) {
+        style = document.createElement('style');
+        style.id = 'print-pdf-style';
+        style.textContent = `
+          @media screen { #print-pdf-container { display: none !important; } }
+          @media print {
+            @page { size: 8.5in 11in portrait; margin: 0.4in; }
+            html, body { background: #fff !important; margin: 0 !important; padding: 0 !important; }
+            body > * { display: none !important; }
+            body > #print-pdf-container { display: block !important; }
+            #print-pdf-container, #print-pdf-container * { visibility: visible; box-sizing: border-box; color: #000; }
+            #print-pdf-container h1 { font-size: 14px; color: #1a472a; margin: 0 0 3px 0; }
+            #print-pdf-container h2 { font-size: 11px; color: #666; font-weight: normal; margin: 0 0 10px 0; }
+            #print-pdf-container table { width: 100%; border-collapse: collapse; font-size: 9px; border: 1px solid #ccc; }
+            #print-pdf-container th, #print-pdf-container td { padding: 3px 4px; text-align: left; border: 1px solid #ccc; }
+            #print-pdf-container th { background: #f5f5f5 !important; font-weight: 600; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            #print-pdf-container .legend { font-size: 10px; color: #666; margin-top: 8px; }
+          }
+        `;
+        document.head.appendChild(style);
+      }
+
+      let container = document.getElementById('print-pdf-container');
+      if (!container) {
+        container = document.createElement('div');
+        container.id = 'print-pdf-container';
+        document.body.appendChild(container);
+      }
+      container.innerHTML = `
+        <h1>${appData.settings.tournamentName || 'Volunteer Golf'}</h1>
+        <h2>Hole #${hole} Roster - Generated ${new Date().toLocaleDateString()}</h2>
+        ${table.outerHTML}
+        <div class="legend">
+          <span style="color:#4caf50;font-weight:600">&#10003;</span> = Checked in &nbsp;&nbsp;
+          <span style="color:#1a472a;font-weight:600">&#9675;</span> = Scheduled
+        </div>
+      `;
+
+      document.title = `Hole #${hole} Roster`;
+
+      // Defer print() a tick so the injected DOM/CSS is fully applied.
+      setTimeout(() => {
+        try {
+          window.print();
+        } catch (e) {
+          alert('Unable to open print dialog: ' + e.message);
+        }
+      }, 50);
     }
 
     // Email to entire hole modal state
@@ -4278,6 +4302,19 @@
       emailHoleMessage = '';
       showEmailHoleModal = true;
       render();
+    }
+
+    function emailAllHole(hole) {
+      const emails = appData.volunteers
+        .filter(v => v.hole === hole && v.email)
+        .map(v => v.email.trim())
+        .filter(e => e);
+      const unique = [...new Set(emails)];
+      if (unique.length === 0) {
+        alert('No email addresses on file for Hole #' + hole + '.');
+        return;
+      }
+      window.location.href = 'mailto:' + encodeURIComponent(unique.join(','));
     }
 
     function closeEmailHoleModal() {
@@ -4305,10 +4342,19 @@
       const dayFilter = reportFilters.day;
       const days = dayFilter === 'all' ? DAYS : [dayFilter];
 
+      // Sort: captains first, then alphabetically
+      const sortedHoleVolunteers = [...holeVolunteers].sort((a, b) => {
+        const aIsCaptain = ['Captain', 'Asst. Chairman', 'Chairman'].includes(a.type);
+        const bIsCaptain = ['Captain', 'Asst. Chairman', 'Chairman'].includes(b.type);
+        if (aIsCaptain && !bIsCaptain) return -1;
+        if (!aIsCaptain && bIsCaptain) return 1;
+        return a.name.localeCompare(b.name);
+      });
+
       let rosterHtml = '<table style="width:100%;border-collapse:collapse;font-size:14px;margin-top:20px">';
       rosterHtml += '<thead><tr style="background:#f8f9fa">';
       rosterHtml += '<th style="text-align:left;padding:10px;border:1px solid #ddd">Volunteer</th>';
-      rosterHtml += '<th style="text-align:left;padding:10px;border:1px solid #ddd">Type</th>';
+      rosterHtml += '<th style="text-align:center;padding:10px;border:1px solid #ddd">Years</th>';
       days.forEach(d => {
         rosterHtml += '<th style="text-align:center;padding:10px;border:1px solid #ddd" colspan="2">' + d.slice(0, 3) + '</th>';
       });
@@ -4341,10 +4387,11 @@
       rosterHtml += '</tr>';
 
       // Add volunteers
-      holeVolunteers.forEach(v => {
+      sortedHoleVolunteers.forEach(v => {
+        const isCaptainRole = ['Captain', 'Asst. Chairman', 'Chairman'].includes(v.type);
         rosterHtml += '<tr>';
-        rosterHtml += '<td style="padding:10px;border:1px solid #ddd">' + v.name + '</td>';
-        rosterHtml += '<td style="padding:10px;border:1px solid #ddd;font-size:12px;color:#666">' + (v.type || '-') + '</td>';
+        rosterHtml += '<td style="padding:10px;border:1px solid #ddd">' + v.name + (isCaptainRole ? '<span style="color:#1a472a;font-weight:700;margin-left:4px">*</span>' : '') + '</td>';
+        rosterHtml += '<td style="padding:10px;border:1px solid #ddd;text-align:center;font-size:13px;color:#333">' + (v.yearsWorked != null ? v.yearsWorked : '-') + '</td>';
         days.forEach(day => {
           SHIFTS.forEach(shift => {
             const key = day + ' ' + shift;
@@ -4374,7 +4421,7 @@
       }
 
       message += rosterHtml;
-      message += '<p style="color:#666;font-size:12px;margin-top:20px">● = Scheduled</p>';
+      message += '<p style="color:#666;font-size:12px;margin-top:20px"><strong>*</strong> = Captain / Chairman &nbsp;&nbsp; ● = Scheduled</p>';
       message += '</div>';
 
       try {
@@ -4434,7 +4481,7 @@
       let rosterHtml = '<table style="width:100%;border-collapse:collapse;font-size:14px;margin-top:20px">';
       rosterHtml += '<thead><tr style="background:#f8f9fa">';
       rosterHtml += '<th style="text-align:left;padding:10px;border:1px solid #ddd">Volunteer</th>';
-      rosterHtml += '<th style="text-align:left;padding:10px;border:1px solid #ddd">Type</th>';
+      rosterHtml += '<th style="text-align:center;padding:10px;border:1px solid #ddd">Years</th>';
       days.forEach(d => {
         rosterHtml += '<th style="text-align:center;padding:10px;border:1px solid #ddd" colspan="2">' + d.slice(0, 3) + '</th>';
       });
@@ -4468,9 +4515,10 @@
 
       // Add volunteers
       holeVolunteers.forEach(v => {
+        const isCaptainRole = ['Captain', 'Asst. Chairman', 'Chairman'].includes(v.type);
         rosterHtml += '<tr>';
-        rosterHtml += '<td style="padding:10px;border:1px solid #ddd">' + v.name + '</td>';
-        rosterHtml += '<td style="padding:10px;border:1px solid #ddd;font-size:12px;color:#666">' + (v.type || '-') + '</td>';
+        rosterHtml += '<td style="padding:10px;border:1px solid #ddd">' + v.name + (isCaptainRole ? '<span style="color:#1a472a;font-weight:700;margin-left:4px">*</span>' : '') + '</td>';
+        rosterHtml += '<td style="padding:10px;border:1px solid #ddd;text-align:center;font-size:13px;color:#333">' + (v.yearsWorked != null ? v.yearsWorked : '-') + '</td>';
         days.forEach(day => {
           SHIFTS.forEach(shift => {
             const key = day + ' ' + shift;
@@ -4490,7 +4538,7 @@
       message += '<h2 style="color:#1a472a;margin-bottom:10px">Hole #' + hole + ' Roster</h2>';
       message += '<p style="color:#666;margin-bottom:20px">' + (appData.settings.tournamentName || 'Volunteer Golf') + '</p>';
       message += rosterHtml;
-      message += '<p style="color:#666;font-size:12px;margin-top:20px">● = Scheduled</p>';
+      message += '<p style="color:#666;font-size:12px;margin-top:20px"><strong>*</strong> = Captain / Chairman &nbsp;&nbsp; ● = Scheduled</p>';
       message += '</div>';
 
       try {
@@ -5420,7 +5468,7 @@
               <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:8px;max-width:360px">
                 <button onclick="downloadPDF(${activeHole})" style="padding:10px 12px;background:#fff;border:1px solid #ccc;border-radius:8px;cursor:pointer;font-size:14px;font-weight:500;text-align:center">Download PDF</button>
                 <button onclick="sendEmailToSelf(${activeHole})" style="padding:10px 12px;background:#1a472a;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:14px;font-weight:500;text-align:center">Email to Self</button>
-                <button onclick="printReport()" style="padding:10px 12px;background:#fff;border:1px solid #ccc;border-radius:8px;cursor:pointer;font-size:14px;font-weight:500;text-align:center">Print</button>
+                <button onclick="emailAllHole(${activeHole})" style="padding:10px 12px;background:#1a472a;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:14px;font-weight:500;text-align:center">Email All</button>
                 <button onclick="exportReportCSV()" style="padding:10px 12px;background:#fff;border:1px solid #ccc;border-radius:8px;cursor:pointer;font-size:14px;font-weight:500;text-align:center">Export CSV</button>
               </div>
               <button onclick="openEmailHoleModal(${activeHole})" style="margin-top:8px;padding:12px;background:#1a472a;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:14px;font-weight:600;max-width:360px;width:100%">Send Roster to All Volunteers on Hole #${activeHole}</button>
