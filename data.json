@@ -9717,6 +9717,15 @@
   },
   "activityLog": [
     {
+      "id": "1776815696369",
+      "timestamp": "2026-04-21T23:54:56.369Z",
+      "user": "Clayton, Rodney",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1776811597890",
       "timestamp": "2026-04-21T22:46:37.890Z",
       "user": "Howrey, Anne",
@@ -11502,15 +11511,6 @@
       "id": "1776026785157",
       "timestamp": "2026-04-12T20:46:25.157Z",
       "user": "Holt, Sharron",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776021476386",
-      "timestamp": "2026-04-12T19:17:56.386Z",
-      "user": "Montalvo, Sammy",
       "userType": "Captain",
       "action": "login",
       "target": "",
