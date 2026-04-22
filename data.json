@@ -9719,6 +9719,15 @@
   },
   "activityLog": [
     {
+      "id": "1776830518931",
+      "timestamp": "2026-04-22T04:01:58.931Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1776825663599",
       "timestamp": "2026-04-22T02:41:03.599Z",
       "user": "Montalvo, Sammy",
@@ -11508,15 +11517,6 @@
       "action": "login",
       "target": "",
       "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776042915986",
-      "timestamp": "2026-04-13T01:15:15.986Z",
-      "user": "Montalvo, Sammy",
-      "userType": "Captain",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Captain portal"
     }
   ]
 }
