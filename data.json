@@ -1931,10 +1931,10 @@
       "scheduled": {
         "Monday AM": true,
         "Tuesday AM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true
+        "Thursday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
+        "Sunday PM": true
       },
       "volId": "136",
       "address": "4512 Ridge North Rd Fort Worth, TX 76126",
@@ -6220,7 +6220,11 @@
       "volId": "10483",
       "address": "46 Frontier Street Rye, NH 03870",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false
+      "hasVolunteerPassword": false,
+      "pairingPreferences": [
+        "8510",
+        "8184"
+      ]
     },
     {
       "id": "7070",
@@ -6801,10 +6805,10 @@
       "scheduled": {
         "Monday PM": true,
         "Tuesday PM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true
+        "Thursday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
+        "Sunday PM": true
       },
       "volId": "8499",
       "address": "4112 Ridglea County Club Dr #1614 Benbrook, TX 76126",
@@ -7788,10 +7792,10 @@
       "hat": "",
       "scheduled": {
         "Wednesday AM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true
+        "Thursday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
+        "Sunday PM": true
       },
       "volId": "9787",
       "address": "3201 Sth 23rd st Apt 236 Abilene, TX 79605",
@@ -8104,8 +8108,8 @@
       "hat": "",
       "scheduled": {
         "Wednesday PM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
+        "Thursday AM": true,
+        "Friday PM": true,
         "Saturday PM": true,
         "Sunday AM": true
       },
@@ -9712,6 +9716,51 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1776876039583",
+      "timestamp": "2026-04-22T16:40:39.583Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776875566883",
+      "timestamp": "2026-04-22T16:32:46.883Z",
+      "user": "Reddington, Michael",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1776875538028",
+      "timestamp": "2026-04-22T16:32:18.028Z",
+      "user": "Reddington, Michael",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1776875201990",
+      "timestamp": "2026-04-22T16:26:41.990Z",
+      "user": "Reddington, Michael",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1776874652025",
+      "timestamp": "2026-04-22T16:17:32.025Z",
+      "user": "Wehmeyer, Tom",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1776868904531",
       "timestamp": "2026-04-22T14:41:44.531Z",
@@ -11466,51 +11515,6 @@
       "action": "login",
       "target": "",
       "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776042992996",
-      "timestamp": "2026-04-13T01:16:32.996Z",
-      "user": "Montalvo, Sammy",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776042915986",
-      "timestamp": "2026-04-13T01:15:15.986Z",
-      "user": "Montalvo, Sammy",
-      "userType": "Captain",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Captain portal"
-    },
-    {
-      "id": "1776029885112",
-      "timestamp": "2026-04-12T21:38:05.112Z",
-      "user": "Holt, Sammy",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776028624195",
-      "timestamp": "2026-04-12T21:17:04.195Z",
-      "user": "Duke, Mitzie",
-      "userType": "Volunteer",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Volunteer portal"
-    },
-    {
-      "id": "1776028579473",
-      "timestamp": "2026-04-12T21:16:19.473Z",
-      "user": "Duke, Mitzie",
-      "userType": "Volunteer",
-      "action": "password-change",
-      "target": "",
-      "details": "Changed volunteer password"
     }
   ]
 }
