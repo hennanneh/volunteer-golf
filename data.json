@@ -2514,7 +2514,11 @@
       "volId": "9503",
       "address": "1208 S R St Indianola, IA 50125",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false
+      "hasVolunteerPassword": true,
+      "pairingPreferences": [
+        "8946"
+      ],
+      "volunteerPassword": "$2b$10$jtJNUeOZ8SLneeJUcWEjc./ZJjQ7EOfHEnkDUFcnPEcIIslZWgokG"
     },
     {
       "id": "8946",
@@ -9715,6 +9719,33 @@
   },
   "activityLog": [
     {
+      "id": "1776825663599",
+      "timestamp": "2026-04-22T02:41:03.599Z",
+      "user": "Montalvo, Sammy",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776824740704",
+      "timestamp": "2026-04-22T02:25:40.704Z",
+      "user": "Gregston, Bryan",
+      "userType": "Volunteer",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed volunteer password"
+    },
+    {
+      "id": "1776824715950",
+      "timestamp": "2026-04-22T02:25:15.950Z",
+      "user": "Gregston, Bryan",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
       "id": "1776819931081",
       "timestamp": "2026-04-22T01:05:31.081Z",
       "user": "Burnett, Eric",
@@ -11486,33 +11517,6 @@
       "action": "logout",
       "target": "",
       "details": "Logged out of Captain portal"
-    },
-    {
-      "id": "1776029885112",
-      "timestamp": "2026-04-12T21:38:05.112Z",
-      "user": "Holt, Sammy",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776028624195",
-      "timestamp": "2026-04-12T21:17:04.195Z",
-      "user": "Duke, Mitzie",
-      "userType": "Volunteer",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Volunteer portal"
-    },
-    {
-      "id": "1776028579473",
-      "timestamp": "2026-04-12T21:16:19.473Z",
-      "user": "Duke, Mitzie",
-      "userType": "Volunteer",
-      "action": "password-change",
-      "target": "",
-      "details": "Changed volunteer password"
     }
   ]
 }
