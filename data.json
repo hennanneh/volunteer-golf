@@ -1118,7 +1118,6 @@
       "scheduled": {
         "Tuesday AM": true,
         "Tuesday PM": true,
-        "Wednesday AM": true,
         "Wednesday PM": true,
         "Thursday AM": true,
         "Thursday PM": true,
@@ -1669,7 +1668,6 @@
         "Monday AM": true,
         "Monday PM": true,
         "Wednesday AM": true,
-        "Wednesday PM": true,
         "Thursday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
@@ -9717,6 +9715,24 @@
   },
   "activityLog": [
     {
+      "id": "1776889076814",
+      "timestamp": "2026-04-22T20:17:56.814Z",
+      "user": "Harrell, Michael",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1776888668808",
+      "timestamp": "2026-04-22T20:11:08.808Z",
+      "user": "Clayton, Rodney",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1776886733704",
       "timestamp": "2026-04-22T19:38:53.704Z",
       "user": "Duke, Mitzie",
@@ -11497,24 +11513,6 @@
       "action": "login",
       "target": "",
       "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776122623778",
-      "timestamp": "2026-04-13T23:23:43.778Z",
-      "user": "Schultz, Joni",
-      "userType": "Volunteer",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Volunteer portal"
-    },
-    {
-      "id": "1776113543830",
-      "timestamp": "2026-04-13T20:52:23.830Z",
-      "user": "Waller, Gary",
-      "userType": "Captain",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Captain portal"
     }
   ]
 }
