@@ -1097,7 +1097,6 @@
       "scheduled": {
         "Tuesday AM": true,
         "Tuesday PM": true,
-        "Wednesday AM": true,
         "Wednesday PM": true,
         "Thursday AM": true,
         "Thursday PM": true,
@@ -1627,7 +1626,6 @@
         "Monday AM": true,
         "Monday PM": true,
         "Wednesday AM": true,
-        "Wednesday PM": true,
         "Thursday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
@@ -9717,6 +9715,15 @@
   },
   "activityLog": [
     {
+      "id": "1776819931081",
+      "timestamp": "2026-04-22T01:05:31.081Z",
+      "user": "Burnett, Eric",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1776817391794",
       "timestamp": "2026-04-22T00:23:11.794Z",
       "user": "White, Gary",
@@ -11506,15 +11513,6 @@
       "action": "password-change",
       "target": "",
       "details": "Changed volunteer password"
-    },
-    {
-      "id": "1776028537811",
-      "timestamp": "2026-04-12T21:15:37.811Z",
-      "user": "Duke, Mitzie",
-      "userType": "Volunteer",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Volunteer portal"
     }
   ]
 }
