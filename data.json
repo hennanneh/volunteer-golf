@@ -9717,6 +9717,15 @@
   },
   "activityLog": [
     {
+      "id": "1776817391794",
+      "timestamp": "2026-04-22T00:23:11.794Z",
+      "user": "White, Gary",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
       "id": "1776815696369",
       "timestamp": "2026-04-21T23:54:56.369Z",
       "user": "Clayton, Rodney",
@@ -11506,15 +11515,6 @@
       "action": "login",
       "target": "",
       "details": "Logged into Volunteer portal"
-    },
-    {
-      "id": "1776026785157",
-      "timestamp": "2026-04-12T20:46:25.157Z",
-      "user": "Holt, Sharron",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
     }
   ]
 }
