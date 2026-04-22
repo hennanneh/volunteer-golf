@@ -9719,6 +9719,15 @@
   },
   "activityLog": [
     {
+      "id": "1776861031866",
+      "timestamp": "2026-04-22T12:30:31.866Z",
+      "user": "Craft, John",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
       "id": "1776830518931",
       "timestamp": "2026-04-22T04:01:58.931Z",
       "user": "Mcdaniel, Patrick",
@@ -11504,15 +11513,6 @@
       "id": "1776084205628",
       "timestamp": "2026-04-13T12:43:25.628Z",
       "user": "Holt, Sharron",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776042992996",
-      "timestamp": "2026-04-13T01:16:32.996Z",
-      "user": "Montalvo, Sammy",
       "userType": "Captain",
       "action": "login",
       "target": "",
