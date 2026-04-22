@@ -9717,6 +9717,24 @@
   },
   "activityLog": [
     {
+      "id": "1776879621665",
+      "timestamp": "2026-04-22T17:40:21.665Z",
+      "user": "White, Gary",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1776878189382",
+      "timestamp": "2026-04-22T17:16:29.382Z",
+      "user": "Reddington, Joseph",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
       "id": "1776876039583",
       "timestamp": "2026-04-22T16:40:39.583Z",
       "user": "Sale, Lynn",
@@ -11497,24 +11515,6 @@
       "action": "logout",
       "target": "",
       "details": "Logged out of Admin portal"
-    },
-    {
-      "id": "1776086082988",
-      "timestamp": "2026-04-13T13:14:42.988Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Admin portal"
-    },
-    {
-      "id": "1776084205628",
-      "timestamp": "2026-04-13T12:43:25.628Z",
-      "user": "Holt, Sharron",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
     }
   ]
 }
