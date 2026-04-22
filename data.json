@@ -841,6 +841,27 @@
       "hasVolunteerPassword": false
     },
     {
+      "id": "10717",
+      "name": "Cantu, Brady",
+      "type": "Volunteer",
+      "hole": 6,
+      "phone": "(682) 330-3386",
+      "email": "bradycantu@icloud.com",
+      "yearsWorked": 1,
+      "hat": "",
+      "scheduled": {
+        "Wednesday AM": true,
+        "Thursday PM": true,
+        "Friday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true
+      },
+      "address": "322 Little School Rd\r\nKennedale, TX 76060",
+      "volId": "10717",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
+    },
+    {
       "id": "419",
       "name": "Cantu, Doug",
       "type": "Volunteer",
@@ -1115,6 +1136,27 @@
       "hatReceived": false,
       "notes": "",
       "volunteerPassword": "$2b$10$6nueEFrGJlBHDa3ngexcbuMCScvHKpff3yfD9ScPj0Xz042l3Q19G"
+    },
+    {
+      "id": "897",
+      "name": "Colborg, Jerry",
+      "type": "Volunteer",
+      "hole": 15,
+      "phone": "(817) 578-5010",
+      "email": "j.colborg@sbcglobal.net",
+      "yearsWorked": 22,
+      "hat": "",
+      "scheduled": {
+        "Wednesday AM": true,
+        "Thursday PM": true,
+        "Friday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true
+      },
+      "address": "2414 Cedar Crest Dr.\r\nGranbury, TX 76048",
+      "volId": "897",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "9853",
@@ -4208,6 +4250,29 @@
       "volunteerPassword": "$2b$10$VqqP7bJ5Z3xQw8UPxsbki.hhMDlBk7k95gOYCnyICv/e4wdieki2O"
     },
     {
+      "id": "2133",
+      "name": "Larrabee, Robert",
+      "type": "Volunteer",
+      "hole": 18,
+      "phone": "(972) 345-5857",
+      "email": "tx_duke@hotmail.com",
+      "yearsWorked": 16,
+      "hat": "",
+      "scheduled": {
+        "Wednesday AM": true,
+        "Thursday PM": true,
+        "Friday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true
+      },
+      "address": "1520 Yorkshire Dr.\r\nRichardson, TX 75082",
+      "volId": "2133",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": true,
+      "noOutingPreference": true,
+      "volunteerPassword": "$2b$10$sfJI6ak8eUM4eQOw.ohBsundswmPhVaK8OtQMZBWpZa6h2ZGoQK8K"
+    },
+    {
       "id": "10276",
       "name": "Lawson, Arnie",
       "type": "Volunteer",
@@ -4696,6 +4761,27 @@
       },
       "volId": "5764",
       "address": "5101 Dewdrop Lane Fort Worth, TX 76123-1934",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
+    },
+    {
+      "id": "10683",
+      "name": "Maxwell, James",
+      "type": "Volunteer",
+      "hole": 15,
+      "phone": "(318) 447-3106",
+      "email": "jamesdmaxwell@yahoo.com",
+      "yearsWorked": 1,
+      "hat": "",
+      "scheduled": {
+        "Wednesday PM": true,
+        "Thursday PM": true,
+        "Friday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true
+      },
+      "address": "9805 Brazoria Trail\r\nFort Worth, TX 76126",
+      "volId": "10683",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false
     },
@@ -5259,6 +5345,27 @@
       },
       "address": "11009 Whitestone Ranch Road\r\nFt. Worth, TX 76126",
       "volId": "4434",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
+    },
+    {
+      "id": "10707",
+      "name": "Mulliken, Reed",
+      "type": "Volunteer",
+      "hole": 7,
+      "phone": "(806) 292-8308",
+      "email": "reed@vistagrandedairy.com",
+      "yearsWorked": 1,
+      "hat": "",
+      "scheduled": {
+        "Monday PM": true,
+        "Thursday PM": true,
+        "Friday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true
+      },
+      "address": "5200 Kensington Ct\r\nFlower Mound, TX 75022",
+      "volId": "10707",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false
     },
@@ -7519,6 +7626,27 @@
       "hasVolunteerPassword": false
     },
     {
+      "id": "1518",
+      "name": "Trias, Dan",
+      "type": "Volunteer",
+      "hole": 9,
+      "phone": "(972) 824-3646",
+      "email": "dbtrias@sbcglobal.net",
+      "yearsWorked": 21,
+      "hat": "",
+      "scheduled": {
+        "Wednesday PM": true,
+        "Thursday PM": true,
+        "Friday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true
+      },
+      "address": "3005 Oaklawn Ct\r\nArlington, TX 76001",
+      "volId": "1518",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
+    },
+    {
       "id": "4536",
       "name": "Trout, Wayne",
       "type": "Captain",
@@ -8276,134 +8404,6 @@
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
       "volunteerPassword": "$2b$10$9H06MCPpLzQI65orJ1OtZuARWqRVdjz2/cvj7yZOmCIWXLEE187tq"
-    },
-    {
-      "id": "897",
-      "name": "Colborg, Jerry",
-      "type": "Volunteer",
-      "hole": 15,
-      "phone": "(817) 578-5010",
-      "email": "j.colborg@sbcglobal.net",
-      "yearsWorked": 22,
-      "hat": "",
-      "scheduled": {
-        "Wednesday AM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true
-      },
-      "address": "2414 Cedar Crest Dr.\r\nGranbury, TX 76048",
-      "volId": "897",
-      "hasAdminPassword": false,
-      "hasVolunteerPassword": false
-    },
-    {
-      "id": "10683",
-      "name": "Maxwell, James",
-      "type": "Volunteer",
-      "hole": 15,
-      "phone": "(318) 447-3106",
-      "email": "jamesdmaxwell@yahoo.com",
-      "yearsWorked": 1,
-      "hat": "",
-      "scheduled": {
-        "Wednesday PM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true
-      },
-      "address": "9805 Brazoria Trail\r\nFort Worth, TX 76126",
-      "volId": "10683",
-      "hasAdminPassword": false,
-      "hasVolunteerPassword": false
-    },
-    {
-      "id": "10717",
-      "name": "Cantu, Brady",
-      "type": "Volunteer",
-      "hole": 6,
-      "phone": "(682) 330-3386",
-      "email": "bradycantu@icloud.com",
-      "yearsWorked": 1,
-      "hat": "",
-      "scheduled": {
-        "Wednesday AM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true
-      },
-      "address": "322 Little School Rd\r\nKennedale, TX 76060",
-      "volId": "10717",
-      "hasAdminPassword": false,
-      "hasVolunteerPassword": false
-    },
-    {
-      "id": "2133",
-      "name": "Larrabee, Robert",
-      "type": "Volunteer",
-      "hole": 18,
-      "phone": "(972) 345-5857",
-      "email": "tx_duke@hotmail.com",
-      "yearsWorked": 16,
-      "hat": "",
-      "scheduled": {
-        "Wednesday AM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true
-      },
-      "address": "1520 Yorkshire Dr.\r\nRichardson, TX 75082",
-      "volId": "2133",
-      "hasAdminPassword": false,
-      "hasVolunteerPassword": true,
-      "noOutingPreference": true,
-      "volunteerPassword": "$2b$10$sfJI6ak8eUM4eQOw.ohBsundswmPhVaK8OtQMZBWpZa6h2ZGoQK8K"
-    },
-    {
-      "id": "10707",
-      "name": "Mulliken, Reed",
-      "type": "Volunteer",
-      "hole": 7,
-      "phone": "(806) 292-8308",
-      "email": "reed@vistagrandedairy.com",
-      "yearsWorked": 1,
-      "hat": "",
-      "scheduled": {
-        "Monday PM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true
-      },
-      "address": "5200 Kensington Ct\r\nFlower Mound, TX 75022",
-      "volId": "10707",
-      "hasAdminPassword": false,
-      "hasVolunteerPassword": false
-    },
-    {
-      "id": "1518",
-      "name": "Trias, Dan",
-      "type": "Volunteer",
-      "hole": 9,
-      "phone": "(972) 824-3646",
-      "email": "dbtrias@sbcglobal.net",
-      "yearsWorked": 21,
-      "hat": "",
-      "scheduled": {
-        "Wednesday PM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true
-      },
-      "address": "3005 Oaklawn Ct\r\nArlington, TX 76001",
-      "volId": "1518",
-      "hasAdminPassword": false,
-      "hasVolunteerPassword": false
     }
   ],
   "checkIns": [
@@ -9716,6 +9716,87 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1776886733704",
+      "timestamp": "2026-04-22T19:38:53.704Z",
+      "user": "Duke, Mitzie",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1776886672878",
+      "timestamp": "2026-04-22T19:37:52.878Z",
+      "user": "Duke, Mitzie",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1776886189677",
+      "timestamp": "2026-04-22T19:29:49.677Z",
+      "user": "Duke, Mitzie",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1776886154237",
+      "timestamp": "2026-04-22T19:29:14.237Z",
+      "user": "Duke, Mitzie",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1776886135724",
+      "timestamp": "2026-04-22T19:28:55.724Z",
+      "user": "Duke, Mitzie",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1776886121880",
+      "timestamp": "2026-04-22T19:28:41.880Z",
+      "user": "Duke, Mitzie",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776886105722",
+      "timestamp": "2026-04-22T19:28:25.722Z",
+      "user": "Duke, Mitzie",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1776886081537",
+      "timestamp": "2026-04-22T19:28:01.537Z",
+      "user": "Duke, Mitzie",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1776884818683",
+      "timestamp": "2026-04-22T19:06:58.683Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1776879621665",
       "timestamp": "2026-04-22T17:40:21.665Z",
@@ -11434,87 +11515,6 @@
       "action": "logout",
       "target": "",
       "details": "Logged out of Captain portal"
-    },
-    {
-      "id": "1776112768001",
-      "timestamp": "2026-04-13T20:39:28.002Z",
-      "user": "Waller, Gary",
-      "userType": "Captain",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Captain portal"
-    },
-    {
-      "id": "1776111477548",
-      "timestamp": "2026-04-13T20:17:57.548Z",
-      "user": "Waller, Gary",
-      "userType": "Captain",
-      "action": "password-change",
-      "target": "",
-      "details": "Changed captain password"
-    },
-    {
-      "id": "1776111052444",
-      "timestamp": "2026-04-13T20:10:52.444Z",
-      "user": "Waller, Gary",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776097408553",
-      "timestamp": "2026-04-13T16:23:28.553Z",
-      "user": "Sale, Lynn",
-      "userType": "Captain",
-      "action": "password-change",
-      "target": "",
-      "details": "Changed captain password"
-    },
-    {
-      "id": "1776097162728",
-      "timestamp": "2026-04-13T16:19:22.728Z",
-      "user": "Sale, Lynn",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776093560006",
-      "timestamp": "2026-04-13T15:19:20.006Z",
-      "user": "Clark, Jason",
-      "userType": "Volunteer",
-      "action": "password-change",
-      "target": "",
-      "details": "Changed volunteer password"
-    },
-    {
-      "id": "1776093529479",
-      "timestamp": "2026-04-13T15:18:49.479Z",
-      "user": "Clark, Jason",
-      "userType": "Volunteer",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Volunteer portal"
-    },
-    {
-      "id": "1776091820423",
-      "timestamp": "2026-04-13T14:50:20.423Z",
-      "user": "Gordon, Gary",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776086170690",
-      "timestamp": "2026-04-13T13:16:10.690Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Admin portal"
     }
   ]
 }
