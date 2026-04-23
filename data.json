@@ -9714,44 +9714,17 @@
   },
   "activityLog": [
     {
-      "id": "1776951770269",
-      "timestamp": "2026-04-23T13:42:50.269Z",
-      "user": "Clayton, Rodney",
-      "userType": "Captain",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Captain portal"
-    },
-    {
-      "id": "1776951749350",
-      "timestamp": "2026-04-23T13:42:29.350Z",
-      "user": "Clayton, Rodney",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776910373992",
-      "timestamp": "2026-04-23T02:12:53.992Z",
-      "user": "Waller, Gary",
+      "id": "1776957450913",
+      "timestamp": "2026-04-23T15:17:30.913Z",
+      "user": "Craft, John",
       "userType": "Volunteer",
       "action": "login",
       "target": "",
       "details": "Logged into Volunteer portal"
     },
     {
-      "id": "1776908966753",
-      "timestamp": "2026-04-23T01:49:26.753Z",
-      "user": "Waller, Gary",
-      "userType": "Volunteer",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Volunteer portal"
-    },
-    {
-      "id": "1776907178996",
-      "timestamp": "2026-04-23T01:19:38.996Z",
+      "id": "1776957024437",
+      "timestamp": "2026-04-23T15:10:24.437Z",
       "user": "Edwards, Bill",
       "userType": "Captain",
       "action": "login",
@@ -11512,6 +11485,33 @@
       "action": "logout",
       "target": "",
       "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1776086082988",
+      "timestamp": "2026-04-13T13:14:42.988Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1776084205628",
+      "timestamp": "2026-04-13T12:43:25.628Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776042992996",
+      "timestamp": "2026-04-13T01:16:32.996Z",
+      "user": "Montalvo, Sammy",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
     }
   ]
 }
