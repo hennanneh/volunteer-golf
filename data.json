@@ -9715,6 +9715,15 @@
   },
   "activityLog": [
     {
+      "id": "1776981613556",
+      "timestamp": "2026-04-23T22:00:13.556Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1776981165271",
       "timestamp": "2026-04-23T21:52:45.271Z",
       "user": "Wilson, Todd",
@@ -11504,15 +11513,6 @@
       "action": "login",
       "target": "",
       "details": "Logged into Volunteer portal"
-    },
-    {
-      "id": "1776091820423",
-      "timestamp": "2026-04-13T14:50:20.423Z",
-      "user": "Gordon, Gary",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
     }
   ]
 }
