@@ -9714,6 +9714,24 @@
   },
   "activityLog": [
     {
+      "id": "1776908966753",
+      "timestamp": "2026-04-23T01:49:26.753Z",
+      "user": "Waller, Gary",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1776907178996",
+      "timestamp": "2026-04-23T01:19:38.996Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1776875201990",
       "timestamp": "2026-04-22T16:26:41.990Z",
       "user": "Reddington, Michael",
@@ -11490,24 +11508,6 @@
       "id": "1776042992996",
       "timestamp": "2026-04-13T01:16:32.996Z",
       "user": "Montalvo, Sammy",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776042915986",
-      "timestamp": "2026-04-13T01:15:15.986Z",
-      "user": "Montalvo, Sammy",
-      "userType": "Captain",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Captain portal"
-    },
-    {
-      "id": "1776029885112",
-      "timestamp": "2026-04-12T21:38:05.112Z",
-      "user": "Holt, Sammy",
       "userType": "Captain",
       "action": "login",
       "target": "",
