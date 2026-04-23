@@ -5191,7 +5191,9 @@
       "volId": "7943",
       "address": "113 Water Wood Dr Saginaw, TX 76179",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false
+      "hasVolunteerPassword": true,
+      "noOutingPreference": true,
+      "volunteerPassword": "$2b$10$88X5w7aYNWxC/l/ouNOjhOFg35Nt8CsFXrGi0orBCuY14Kt5UKApu"
     },
     {
       "id": "8791",
@@ -9714,6 +9716,51 @@
   },
   "activityLog": [
     {
+      "id": "1776963520169",
+      "timestamp": "2026-04-23T16:58:40.169Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1776961647793",
+      "timestamp": "2026-04-23T16:27:27.793Z",
+      "user": "Moss, Jeff",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1776961145660",
+      "timestamp": "2026-04-23T16:19:05.660Z",
+      "user": "Moss, Jeff",
+      "userType": "Volunteer",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed volunteer password"
+    },
+    {
+      "id": "1776961114635",
+      "timestamp": "2026-04-23T16:18:34.635Z",
+      "user": "Moss, Jeff",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1776960210618",
+      "timestamp": "2026-04-23T16:03:30.619Z",
+      "user": "Wehmeyer, Tom",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1776957450913",
       "timestamp": "2026-04-23T15:17:30.913Z",
       "user": "Craft, John",
@@ -11467,51 +11514,6 @@
       "action": "login",
       "target": "",
       "details": "Logged into Volunteer portal"
-    },
-    {
-      "id": "1776091820423",
-      "timestamp": "2026-04-13T14:50:20.423Z",
-      "user": "Gordon, Gary",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776086170690",
-      "timestamp": "2026-04-13T13:16:10.690Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Admin portal"
-    },
-    {
-      "id": "1776086082988",
-      "timestamp": "2026-04-13T13:14:42.988Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Admin portal"
-    },
-    {
-      "id": "1776084205628",
-      "timestamp": "2026-04-13T12:43:25.628Z",
-      "user": "Holt, Sharron",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776042992996",
-      "timestamp": "2026-04-13T01:16:32.996Z",
-      "user": "Montalvo, Sammy",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
     }
   ]
 }
