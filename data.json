@@ -9715,6 +9715,33 @@
   },
   "activityLog": [
     {
+      "id": "1777042738157",
+      "timestamp": "2026-04-24T14:58:58.157Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1777040340820",
+      "timestamp": "2026-04-24T14:19:00.820Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1777039354171",
+      "timestamp": "2026-04-24T14:02:34.171Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1777036911153",
       "timestamp": "2026-04-24T13:21:51.154Z",
       "user": "Clayton, Rodney",
@@ -11486,33 +11513,6 @@
       "action": "logout",
       "target": "",
       "details": "Logged out of Captain portal"
-    },
-    {
-      "id": "1776111477548",
-      "timestamp": "2026-04-13T20:17:57.548Z",
-      "user": "Waller, Gary",
-      "userType": "Captain",
-      "action": "password-change",
-      "target": "",
-      "details": "Changed captain password"
-    },
-    {
-      "id": "1776111052444",
-      "timestamp": "2026-04-13T20:10:52.444Z",
-      "user": "Waller, Gary",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776097408553",
-      "timestamp": "2026-04-13T16:23:28.553Z",
-      "user": "Sale, Lynn",
-      "userType": "Captain",
-      "action": "password-change",
-      "target": "",
-      "details": "Changed captain password"
     }
   ]
 }
