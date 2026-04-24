@@ -9715,6 +9715,15 @@
   },
   "activityLog": [
     {
+      "id": "1777053556841",
+      "timestamp": "2026-04-24T17:59:16.841Z",
+      "user": "Wilson, Todd",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1777047463637",
       "timestamp": "2026-04-24T16:17:43.637Z",
       "user": "Mcdaniel, Patrick",
@@ -11504,15 +11513,6 @@
       "action": "login",
       "target": "",
       "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776122623778",
-      "timestamp": "2026-04-13T23:23:43.778Z",
-      "user": "Schultz, Joni",
-      "userType": "Volunteer",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Volunteer portal"
     }
   ]
 }
