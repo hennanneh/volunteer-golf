@@ -9715,6 +9715,15 @@
   },
   "activityLog": [
     {
+      "id": "1776990477620",
+      "timestamp": "2026-04-24T00:27:57.620Z",
+      "user": "Clayton, Rodney",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1776981613556",
       "timestamp": "2026-04-23T22:00:13.556Z",
       "user": "Thomas, Stephen",
@@ -11504,15 +11513,6 @@
       "action": "password-change",
       "target": "",
       "details": "Changed volunteer password"
-    },
-    {
-      "id": "1776093529479",
-      "timestamp": "2026-04-13T15:18:49.479Z",
-      "user": "Clark, Jason",
-      "userType": "Volunteer",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Volunteer portal"
     }
   ]
 }
