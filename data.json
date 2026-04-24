@@ -9715,6 +9715,24 @@
   },
   "activityLog": [
     {
+      "id": "1777047463637",
+      "timestamp": "2026-04-24T16:17:43.637Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1777046488881",
+      "timestamp": "2026-04-24T16:01:28.881Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1777042738157",
       "timestamp": "2026-04-24T14:58:58.157Z",
       "user": "Rogenski, Chris P.",
@@ -11495,24 +11513,6 @@
       "action": "login",
       "target": "",
       "details": "Logged into Volunteer portal"
-    },
-    {
-      "id": "1776113543830",
-      "timestamp": "2026-04-13T20:52:23.830Z",
-      "user": "Waller, Gary",
-      "userType": "Captain",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Captain portal"
-    },
-    {
-      "id": "1776112768001",
-      "timestamp": "2026-04-13T20:39:28.002Z",
-      "user": "Waller, Gary",
-      "userType": "Captain",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Captain portal"
     }
   ]
 }
