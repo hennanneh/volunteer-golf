@@ -9715,6 +9715,33 @@
   },
   "activityLog": [
     {
+      "id": "1777134943966",
+      "timestamp": "2026-04-25T16:35:43.966Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1777134730876",
+      "timestamp": "2026-04-25T16:32:10.876Z",
+      "user": "Duke, Mitzie",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1777134474892",
+      "timestamp": "2026-04-25T16:27:54.892Z",
+      "user": "Duke, Mitzie",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
       "id": "1777121615246",
       "timestamp": "2026-04-25T12:53:35.246Z",
       "user": "Wilson, Todd",
@@ -11486,33 +11513,6 @@
       "action": "logout",
       "target": "",
       "details": "Logged out of Admin portal"
-    },
-    {
-      "id": "1776203262674",
-      "timestamp": "2026-04-14T21:47:42.674Z",
-      "user": "Zamzow, Steve",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776176350093",
-      "timestamp": "2026-04-14T14:19:10.093Z",
-      "user": "Edwards, Bill",
-      "userType": "Captain",
-      "action": "password-change",
-      "target": "",
-      "details": "Changed captain password"
-    },
-    {
-      "id": "1776176284837",
-      "timestamp": "2026-04-14T14:18:04.837Z",
-      "user": "Edwards, Bill",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
     }
   ]
 }
