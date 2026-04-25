@@ -9715,13 +9715,13 @@
   },
   "activityLog": [
     {
-      "id": "1777150236023",
-      "timestamp": "2026-04-25T20:50:36.023Z",
-      "user": "Burnett, Eric",
-      "userType": "Captain",
+      "id": "1777151497044",
+      "timestamp": "2026-04-25T21:11:37.044Z",
+      "user": "Schumann, Rick",
+      "userType": "Volunteer",
       "action": "login",
       "target": "",
-      "details": "Logged into Captain portal"
+      "details": "Logged into Volunteer portal"
     },
     {
       "id": "1777134943966",
