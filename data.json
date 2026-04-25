@@ -9715,6 +9715,15 @@
   },
   "activityLog": [
     {
+      "id": "1777150236023",
+      "timestamp": "2026-04-25T20:50:36.023Z",
+      "user": "Burnett, Eric",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1777134943966",
       "timestamp": "2026-04-25T16:35:43.966Z",
       "user": "Edwards, Bill",
@@ -11504,15 +11513,6 @@
       "action": "login",
       "target": "",
       "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776204885424",
-      "timestamp": "2026-04-14T22:14:45.424Z",
-      "user": "Howrey, Anne",
-      "userType": "Admin",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Admin portal"
     }
   ]
 }
