@@ -8393,10 +8393,10 @@
       "hat": "",
       "scheduled": {
         "Wednesday PM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true
+        "Thursday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
+        "Sunday PM": true
       },
       "address": "3005 Oaklawn Ct\r\nArlington, TX 76001",
       "volId": "1518",
