@@ -9715,6 +9715,15 @@
   },
   "activityLog": [
     {
+      "id": "1777121615246",
+      "timestamp": "2026-04-25T12:53:35.246Z",
+      "user": "Wilson, Todd",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1777091030436",
       "timestamp": "2026-04-25T04:23:50.436Z",
       "user": "Wehmeyer, Tom",
@@ -11500,15 +11509,6 @@
       "id": "1776176284837",
       "timestamp": "2026-04-14T14:18:04.837Z",
       "user": "Edwards, Bill",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776175332514",
-      "timestamp": "2026-04-14T14:02:12.514Z",
-      "user": "Zamzow, Steve",
       "userType": "Captain",
       "action": "login",
       "target": "",
