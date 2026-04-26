@@ -3107,10 +3107,10 @@
       "hat": "",
       "scheduled": {
         "Wednesday PM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true
+        "Thursday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
+        "Sunday PM": true
       },
       "volId": "4014",
       "address": "P.O. Box 1808 Keller, TX 76244",
@@ -9715,6 +9715,15 @@
   },
   "activityLog": [
     {
+      "id": "1777217317470",
+      "timestamp": "2026-04-26T15:28:37.472Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1777214317228",
       "timestamp": "2026-04-26T14:38:37.228Z",
       "user": "Harrell, Michael",
@@ -11499,15 +11508,6 @@
     {
       "id": "1776208339462",
       "timestamp": "2026-04-14T23:12:19.462Z",
-      "user": "Holt, Sharron",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776208186263",
-      "timestamp": "2026-04-14T23:09:46.265Z",
       "user": "Holt, Sharron",
       "userType": "Captain",
       "action": "login",
