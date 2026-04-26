@@ -9715,6 +9715,24 @@
   },
   "activityLog": [
     {
+      "id": "1777214317228",
+      "timestamp": "2026-04-26T14:38:37.228Z",
+      "user": "Harrell, Michael",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1777212850110",
+      "timestamp": "2026-04-26T14:14:10.110Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1777170084347",
       "timestamp": "2026-04-26T02:21:24.347Z",
       "user": "Sanders, Steve",
@@ -11495,24 +11513,6 @@
       "action": "login",
       "target": "",
       "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776205310867",
-      "timestamp": "2026-04-14T22:21:50.867Z",
-      "user": "Howrey, Anne",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776204905574",
-      "timestamp": "2026-04-14T22:15:05.575Z",
-      "user": "Howrey, Anne",
-      "userType": "Captain",
-      "action": "password-change",
-      "target": "",
-      "details": "Changed captain password"
     }
   ]
 }
