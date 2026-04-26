@@ -9715,6 +9715,15 @@
   },
   "activityLog": [
     {
+      "id": "1777170084347",
+      "timestamp": "2026-04-26T02:21:24.347Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1777151497044",
       "timestamp": "2026-04-25T21:11:37.044Z",
       "user": "Schumann, Rick",
@@ -11504,15 +11513,6 @@
       "action": "password-change",
       "target": "",
       "details": "Changed captain password"
-    },
-    {
-      "id": "1776204895840",
-      "timestamp": "2026-04-14T22:14:55.840Z",
-      "user": "Howrey, Anne",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
     }
   ]
 }
