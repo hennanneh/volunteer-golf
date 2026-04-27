@@ -9715,6 +9715,42 @@
   },
   "activityLog": [
     {
+      "id": "1777297896743",
+      "timestamp": "2026-04-27T13:51:36.743Z",
+      "user": "Schultz, Joni",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1777296996812",
+      "timestamp": "2026-04-27T13:36:36.812Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1777296636298",
+      "timestamp": "2026-04-27T13:30:36.298Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1777296366216",
+      "timestamp": "2026-04-27T13:26:06.216Z",
+      "user": "Wehmeyer, Tom",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1777284084660",
       "timestamp": "2026-04-27T10:01:24.660Z",
       "user": "Edwards, Bill",
@@ -11477,42 +11513,6 @@
       "action": "login",
       "target": "",
       "details": "Logged into Admin portal"
-    },
-    {
-      "id": "1776209445085",
-      "timestamp": "2026-04-14T23:30:45.085Z",
-      "user": "Zamzow, Steve",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776209427361",
-      "timestamp": "2026-04-14T23:30:27.361Z",
-      "user": "Sanders, Steve",
-      "userType": "Captain",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Captain portal"
-    },
-    {
-      "id": "1776209239326",
-      "timestamp": "2026-04-14T23:27:19.326Z",
-      "user": "Mcdaniel, Patrick",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776209158243",
-      "timestamp": "2026-04-14T23:25:58.243Z",
-      "user": "Holt, Sharron",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
     }
   ]
 }
