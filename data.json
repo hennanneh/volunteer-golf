@@ -9907,6 +9907,15 @@
   },
   "activityLog": [
     {
+      "id": "1777322239594",
+      "timestamp": "2026-04-27T20:37:19.594Z",
+      "user": "Browning, Wayne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1777318314138",
       "timestamp": "2026-04-27T19:31:54.138Z",
       "user": "Rogenski, Chris P.",
@@ -11696,15 +11705,6 @@
       "action": "logout",
       "target": "",
       "details": "Logged out of Volunteer portal"
-    },
-    {
-      "id": "1776374706090",
-      "timestamp": "2026-04-16T21:25:06.090Z",
-      "user": "Duke, Mitzie",
-      "userType": "Volunteer",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Volunteer portal"
     }
   ]
 }
