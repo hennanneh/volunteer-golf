@@ -9715,6 +9715,15 @@
   },
   "activityLog": [
     {
+      "id": "1777257026805",
+      "timestamp": "2026-04-27T02:30:26.805Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1777250395980",
       "timestamp": "2026-04-27T00:39:55.980Z",
       "user": "Butler, Mark",
@@ -11504,15 +11513,6 @@
       "action": "logout",
       "target": "",
       "details": "Logged out of Captain portal"
-    },
-    {
-      "id": "1776208773415",
-      "timestamp": "2026-04-14T23:19:33.415Z",
-      "user": "Holt, Sharron",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
     }
   ]
 }
