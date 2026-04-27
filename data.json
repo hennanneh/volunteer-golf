@@ -2270,7 +2270,8 @@
       "address": "214 W Greenbriar Ln\r\nColleyville, TX 76034",
       "volId": "10667",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false
+      "hasVolunteerPassword": true,
+      "volunteerPassword": "$2b$10$Q7gn2JAW8F8A7ssr3PbWdurqcQSk8PB71qiVrlbi2iMp4gFDhTu.e"
     },
     {
       "id": "4128",
@@ -8096,7 +8097,7 @@
       "address": "2422 Clayton Oaks Dr Grand Prairie, TX 75052",
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
-      "volunteerPassword": "$2b$10$S2Do4PBp6rG2QWrdQE6Sb.DDfK63XQ9uhgQilC7CPfLFOvmMKNm9u"
+      "volunteerPassword": "$2b$10$yfSx5W3n0gc88d.CWGaKP.OOYwPWea1tiFX/Ee4vi.MzgAUyQRGvW"
     },
     {
       "id": "7640",
@@ -8245,7 +8246,8 @@
       "volId": "5876",
       "address": "11848 Hickory Cir Fort Worth, TX 76244-4582",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false
+      "hasVolunteerPassword": false,
+      "volunteerPassword": "$2b$10$9zH1FpdZBPqGujwXHeXVnObigPaRYPSAUzkOzAbXUQCfK2u21lgP2"
     },
     {
       "id": "9233",
@@ -9906,6 +9908,105 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1777327103616",
+      "timestamp": "2026-04-27T21:58:23.616Z",
+      "user": "Womack, Tim",
+      "userType": "Volunteer",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed volunteer password"
+    },
+    {
+      "id": "1777327072698",
+      "timestamp": "2026-04-27T21:57:52.698Z",
+      "user": "Gilchrist, William (Bill)",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1777327050105",
+      "timestamp": "2026-04-27T21:57:30.105Z",
+      "user": "Womack, Tim",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1777327050400",
+      "timestamp": "2026-04-27T21:57:30.400Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1777327044592",
+      "timestamp": "2026-04-27T21:57:24.592Z",
+      "user": "Holt, Sharron",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1777326964502",
+      "timestamp": "2026-04-27T21:56:04.502Z",
+      "user": "Holt, Sharron",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1777326956843",
+      "timestamp": "2026-04-27T21:55:56.843Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1777326655243",
+      "timestamp": "2026-04-27T21:50:55.243Z",
+      "user": "Volkening, David",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1777326282753",
+      "timestamp": "2026-04-27T21:44:42.753Z",
+      "user": "Watson, Stan",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1777326125076",
+      "timestamp": "2026-04-27T21:42:05.076Z",
+      "user": "Watson, Stan",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1777324929990",
+      "timestamp": "2026-04-27T21:22:09.990Z",
+      "user": "White, Gary",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
     {
       "id": "1777322239594",
       "timestamp": "2026-04-27T20:37:19.594Z",
@@ -11606,105 +11707,6 @@
       "action": "login",
       "target": "",
       "details": "Logged into Admin portal"
-    },
-    {
-      "id": "1776375563514",
-      "timestamp": "2026-04-16T21:39:23.514Z",
-      "user": "Duke, Mitzie",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776375544024",
-      "timestamp": "2026-04-16T21:39:04.024Z",
-      "user": "Duke, Mitzie",
-      "userType": "Volunteer",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Volunteer portal"
-    },
-    {
-      "id": "1776375485143",
-      "timestamp": "2026-04-16T21:38:05.143Z",
-      "user": "Duke, Mitzie",
-      "userType": "Volunteer",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Volunteer portal"
-    },
-    {
-      "id": "1776375335653",
-      "timestamp": "2026-04-16T21:35:35.653Z",
-      "user": "Duke, Mitzie",
-      "userType": "Captain",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Captain portal"
-    },
-    {
-      "id": "1776375324172",
-      "timestamp": "2026-04-16T21:35:24.172Z",
-      "user": "Duke, Mitzie",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776375303233",
-      "timestamp": "2026-04-16T21:35:03.233Z",
-      "user": "Duke, Mitzie",
-      "userType": "Volunteer",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Volunteer portal"
-    },
-    {
-      "id": "1776375286997",
-      "timestamp": "2026-04-16T21:34:46.997Z",
-      "user": "Duke, Mitzie",
-      "userType": "Volunteer",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Volunteer portal"
-    },
-    {
-      "id": "1776375256847",
-      "timestamp": "2026-04-16T21:34:16.847Z",
-      "user": "Duke, Mitzie",
-      "userType": "Captain",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Captain portal"
-    },
-    {
-      "id": "1776374992339",
-      "timestamp": "2026-04-16T21:29:52.339Z",
-      "user": "Duke, Mitzie",
-      "userType": "Captain",
-      "action": "edit-notes",
-      "target": "Duke, Mitzie",
-      "details": "Updated volunteer notes"
-    },
-    {
-      "id": "1776374932961",
-      "timestamp": "2026-04-16T21:28:52.961Z",
-      "user": "Browning, Wayne",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776374818560",
-      "timestamp": "2026-04-16T21:26:58.560Z",
-      "user": "Duke, Mitzie",
-      "userType": "Volunteer",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Volunteer portal"
     }
   ]
 }
