@@ -9715,6 +9715,33 @@
   },
   "activityLog": [
     {
+      "id": "1777301067755",
+      "timestamp": "2026-04-27T14:44:27.755Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1777298865140",
+      "timestamp": "2026-04-27T14:07:45.140Z",
+      "user": "Clayton, Rodney",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1777298407027",
+      "timestamp": "2026-04-27T14:00:07.027Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1777297896743",
       "timestamp": "2026-04-27T13:51:36.743Z",
       "user": "Schultz, Joni",
@@ -11486,33 +11513,6 @@
       "action": "settings-change",
       "target": "tournamentEndDate",
       "details": "Updated setting: tournamentEndDate"
-    },
-    {
-      "id": "1776209891740",
-      "timestamp": "2026-04-14T23:38:11.740Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "settings-change",
-      "target": "tournamentStartDate",
-      "details": "Updated setting: tournamentStartDate"
-    },
-    {
-      "id": "1776209688818",
-      "timestamp": "2026-04-14T23:34:48.818Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "edit-volunteer",
-      "target": "Hughes, Allen",
-      "details": "Edited volunteer (Type: Volunteer, Hole: 8)"
-    },
-    {
-      "id": "1776209457938",
-      "timestamp": "2026-04-14T23:30:57.938Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Admin portal"
     }
   ]
 }
