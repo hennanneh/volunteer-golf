@@ -9927,6 +9927,15 @@
   },
   "activityLog": [
     {
+      "id": "1777413639409",
+      "timestamp": "2026-04-28T22:00:39.409Z",
+      "user": "Bird, Bob",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
       "id": "1777413576413",
       "timestamp": "2026-04-28T21:59:36.413Z",
       "user": "Bird, Bob",
@@ -11716,15 +11725,6 @@
       "action": "login",
       "target": "",
       "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776725613549",
-      "timestamp": "2026-04-20T22:53:33.549Z",
-      "user": "Reddington, Joseph",
-      "userType": "Volunteer",
-      "action": "password-change",
-      "target": "",
-      "details": "Changed volunteer password"
     }
   ]
 }
