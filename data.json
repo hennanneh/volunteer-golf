@@ -7787,6 +7787,11 @@
       "address": "1105 Centennary Dr Allen, TX 75002",
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
+      "pairingPreferences": [
+        "5391",
+        "4222",
+        "2125"
+      ],
       "volunteerPassword": "$2b$10$CDNIkTKVFO4yGVFJAgF2eOkeU3U4Dkka.kH.cPcWZfqEv97RVD7.a"
     },
     {
@@ -9914,6 +9919,33 @@
   },
   "activityLog": [
     {
+      "id": "1777344814648",
+      "timestamp": "2026-04-28T02:53:34.648Z",
+      "user": "Vela, Humberto",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1777344804320",
+      "timestamp": "2026-04-28T02:53:24.320Z",
+      "user": "Vela, Humberto",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1777344751851",
+      "timestamp": "2026-04-28T02:52:31.851Z",
+      "user": "Vela, Humberto",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
       "id": "1777339423212",
       "timestamp": "2026-04-28T01:23:43.212Z",
       "user": "Simon, Russ",
@@ -11685,33 +11717,6 @@
       "action": "login",
       "target": "",
       "details": "Logged into Admin portal"
-    },
-    {
-      "id": "1776430505707",
-      "timestamp": "2026-04-17T12:55:05.707Z",
-      "user": "Hill, Michael",
-      "userType": "Captain",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Captain portal"
-    },
-    {
-      "id": "1776430445110",
-      "timestamp": "2026-04-17T12:54:05.110Z",
-      "user": "Hill, Michael",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776430418675",
-      "timestamp": "2026-04-17T12:53:38.675Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Admin portal"
     }
   ]
 }
