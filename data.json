@@ -9919,6 +9919,15 @@
   },
   "activityLog": [
     {
+      "id": "1777402003634",
+      "timestamp": "2026-04-28T18:46:43.634Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1777395132554",
       "timestamp": "2026-04-28T16:52:12.554Z",
       "user": "Harrell, Michael",
@@ -11708,15 +11717,6 @@
       "action": "login",
       "target": "",
       "details": "Logged into Admin portal"
-    },
-    {
-      "id": "1776708803571",
-      "timestamp": "2026-04-20T18:13:23.571Z",
-      "user": "Montalvo, Sammy",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
     }
   ]
 }
