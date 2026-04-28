@@ -191,6 +191,27 @@
       "hasVolunteerPassword": false
     },
     {
+      "id": "10737",
+      "name": "Baird, Christina",
+      "type": "Volunteer",
+      "hole": 10,
+      "phone": "(214) 394-9236",
+      "email": "crbaird71.cb@gmail.com",
+      "yearsWorked": 1,
+      "hat": "",
+      "scheduled": {
+        "Tuesday AM": true,
+        "Thursday PM": true,
+        "Friday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true
+      },
+      "address": "901 Grange Hall Drive #3107\r\nEuless, TX 76039",
+      "volId": "10737",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
+    },
+    {
       "id": "6828",
       "name": "Barber, Michael",
       "type": "Captain",
@@ -1341,6 +1362,27 @@
       "hasVolunteerPassword": false
     },
     {
+      "id": "9257",
+      "name": "Cristiano, John",
+      "type": "Volunteer",
+      "hole": 18,
+      "phone": "(734) 516-1415",
+      "email": "cristiano@umich.edu",
+      "yearsWorked": 3,
+      "hat": "",
+      "scheduled": {
+        "Tuesday AM": true,
+        "Thursday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
+        "Sunday PM": true
+      },
+      "address": "1005 Markbarry Dr.\r\nAnn Arbor, MI 48105",
+      "volId": "9257",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
+    },
+    {
       "id": "9560",
       "name": "Cross, Britt",
       "type": "Volunteer",
@@ -1358,6 +1400,27 @@
       },
       "volId": "9560",
       "address": "1126 Shady Oak Trail Mansfield, TX 76063",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
+    },
+    {
+      "id": "10728",
+      "name": "Crouse, Matthew",
+      "type": "Volunteer",
+      "hole": 11,
+      "phone": "(704) 575-0029",
+      "email": "mattcrouse0509@gmail.com",
+      "yearsWorked": 1,
+      "hat": "",
+      "scheduled": {
+        "Tuesday PM": true,
+        "Thursday PM": true,
+        "Friday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true
+      },
+      "address": "6924 Basket Flower Road\r\nArgyle, TX 76226",
+      "volId": "10728",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false
     },
@@ -1727,6 +1790,27 @@
       "hasVolunteerPassword": false
     },
     {
+      "id": "10730",
+      "name": "Duran, Michael",
+      "type": "Volunteer",
+      "hole": 9,
+      "phone": "(817) 475-3168",
+      "email": "soccdoc@duranclan.net",
+      "yearsWorked": 1,
+      "hat": "",
+      "scheduled": {
+        "Wednesday AM": true,
+        "Thursday PM": true,
+        "Friday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true
+      },
+      "address": "2516 Pointe Court\r\nColleyville, TX 76034",
+      "volId": "10730",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
+    },
+    {
       "id": "9051",
       "name": "Edmiston, Charles",
       "type": "Volunteer",
@@ -2086,6 +2170,28 @@
       "hasVolunteerPassword": false
     },
     {
+      "id": "10731",
+      "name": "Gaines, Lisa",
+      "type": "Volunteer",
+      "hole": 2,
+      "phone": "(817) 714-8321",
+      "email": "lisa.gaines.fwisd@gmail.com",
+      "yearsWorked": 1,
+      "hat": "",
+      "scheduled": {
+        "Monday AM": true,
+        "Monday PM": true,
+        "Thursday PM": true,
+        "Friday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true
+      },
+      "address": "3529 Lakeway Drive\r\nWeatherford, TX 76087",
+      "volId": "10731",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
+    },
+    {
       "id": "2441",
       "name": "Galvan, Bob",
       "type": "Asst. Chairman",
@@ -2115,6 +2221,27 @@
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
       "volunteerPassword": "$2b$10$TyHVVmVPiA4kVoEEChqqlOOMxxcy.tD4HUVKNomOZBlYFhmIphRc."
+    },
+    {
+      "id": "10735",
+      "name": "Gaona, Carlos",
+      "type": "Volunteer",
+      "hole": 9,
+      "phone": "(214) 868-3128",
+      "email": "postman15@sbcglobal.net",
+      "yearsWorked": 1,
+      "hat": "",
+      "scheduled": {
+        "Wednesday PM": true,
+        "Thursday PM": true,
+        "Friday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true
+      },
+      "address": "1743 Ridgemar DR\r\nGrand Prairie, TX 75051",
+      "volId": "10735",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
     },
     {
       "id": "7528",
@@ -5834,6 +5961,27 @@
       "hasVolunteerPassword": false
     },
     {
+      "id": "10130",
+      "name": "Penneman, Roger",
+      "type": "Volunteer",
+      "hole": 16,
+      "phone": "(817) 734-7761",
+      "email": "rpenneman@sbcglobal.net",
+      "yearsWorked": 2,
+      "hat": "",
+      "scheduled": {
+        "Monday AM": true,
+        "Thursday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
+        "Sunday PM": true
+      },
+      "address": "5036 GIVERNY LN\r\nFort Worth, TX 76116",
+      "volId": "10130",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
+    },
+    {
       "id": "4143",
       "name": "Perez, Emerico",
       "type": "Volunteer",
@@ -6263,6 +6411,27 @@
       "hasVolunteerPassword": false
     },
     {
+      "id": "10743",
+      "name": "Rasmussen, Galen",
+      "type": "Volunteer",
+      "hole": 18,
+      "phone": "(310) 948-5630",
+      "email": "cestbon24@gmail.com",
+      "yearsWorked": 1,
+      "hat": "",
+      "scheduled": {
+        "Wednesday PM": true,
+        "Thursday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
+        "Sunday PM": true
+      },
+      "address": "6252 North 73rd Street\r\nScottsdale, AZ 85250",
+      "volId": "10743",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
+    },
+    {
       "id": "9621",
       "name": "Ready, Charles",
       "type": "Volunteer",
@@ -6638,7 +6807,8 @@
       "address": "2905 SOCRATES DR GRAND PRAIRIE, TX 75052",
       "volId": "2745",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false
+      "hasVolunteerPassword": false,
+      "volunteerPassword": "$2b$10$sDZM5Bu7XCLHz/vBCTPsl.3dh9AmYccDQTIvrCgUg9y9m4VI2/8RG"
     },
     {
       "id": "6553",
@@ -8108,6 +8278,27 @@
       "volunteerPassword": "$2b$10$yfSx5W3n0gc88d.CWGaKP.OOYwPWea1tiFX/Ee4vi.MzgAUyQRGvW"
     },
     {
+      "id": "10733",
+      "name": "Wilkinson, Rick",
+      "type": "Volunteer",
+      "hole": 9,
+      "phone": "(817) 994-6021",
+      "email": "rickdwilkinson55@gmail.com",
+      "yearsWorked": 1,
+      "hat": "",
+      "scheduled": {
+        "Wednesday AM": true,
+        "Thursday PM": true,
+        "Friday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true
+      },
+      "address": "5501 Hunterwood Ln\r\nArlington, TX 76017",
+      "volId": "10733",
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": false
+    },
+    {
       "id": "7640",
       "name": "Williams, Amy",
       "type": "Volunteer",
@@ -8416,196 +8607,6 @@
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
       "volunteerPassword": "$2b$10$9H06MCPpLzQI65orJ1OtZuARWqRVdjz2/cvj7yZOmCIWXLEE187tq"
-    },
-    {
-      "id": "10737",
-      "name": "Baird, Christina",
-      "type": "Volunteer",
-      "hole": 10,
-      "phone": "(214) 394-9236",
-      "email": "crbaird71.cb@gmail.com",
-      "yearsWorked": 1,
-      "hat": "",
-      "scheduled": {
-        "Tuesday AM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true
-      },
-      "address": "901 Grange Hall Drive #3107\r\nEuless, TX 76039",
-      "volId": "10737",
-      "hasAdminPassword": false,
-      "hasVolunteerPassword": false
-    },
-    {
-      "id": "9257",
-      "name": "Cristiano, John",
-      "type": "Volunteer",
-      "hole": 18,
-      "phone": "(734) 516-1415",
-      "email": "cristiano@umich.edu",
-      "yearsWorked": 3,
-      "hat": "",
-      "scheduled": {
-        "Tuesday AM": true,
-        "Thursday AM": true,
-        "Friday PM": true,
-        "Saturday AM": true,
-        "Sunday PM": true
-      },
-      "address": "1005 Markbarry Dr.\r\nAnn Arbor, MI 48105",
-      "volId": "9257",
-      "hasAdminPassword": false,
-      "hasVolunteerPassword": false
-    },
-    {
-      "id": "10728",
-      "name": "Crouse, Matthew",
-      "type": "Volunteer",
-      "hole": 11,
-      "phone": "(704) 575-0029",
-      "email": "mattcrouse0509@gmail.com",
-      "yearsWorked": 1,
-      "hat": "",
-      "scheduled": {
-        "Tuesday PM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true
-      },
-      "address": "6924 Basket Flower Road\r\nArgyle, TX 76226",
-      "volId": "10728",
-      "hasAdminPassword": false,
-      "hasVolunteerPassword": false
-    },
-    {
-      "id": "10730",
-      "name": "Duran, Michael",
-      "type": "Volunteer",
-      "hole": 9,
-      "phone": "(817) 475-3168",
-      "email": "soccdoc@duranclan.net",
-      "yearsWorked": 1,
-      "hat": "",
-      "scheduled": {
-        "Wednesday AM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true
-      },
-      "address": "2516 Pointe Court\r\nColleyville, TX 76034",
-      "volId": "10730",
-      "hasAdminPassword": false,
-      "hasVolunteerPassword": false
-    },
-    {
-      "id": "10731",
-      "name": "Gaines, Lisa",
-      "type": "Volunteer",
-      "hole": 2,
-      "phone": "(817) 714-8321",
-      "email": "lisa.gaines.fwisd@gmail.com",
-      "yearsWorked": 1,
-      "hat": "",
-      "scheduled": {
-        "Monday AM": true,
-        "Monday PM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true
-      },
-      "address": "3529 Lakeway Drive\r\nWeatherford, TX 76087",
-      "volId": "10731",
-      "hasAdminPassword": false,
-      "hasVolunteerPassword": false
-    },
-    {
-      "id": "10735",
-      "name": "Gaona, Carlos",
-      "type": "Volunteer",
-      "hole": 9,
-      "phone": "(214) 868-3128",
-      "email": "postman15@sbcglobal.net",
-      "yearsWorked": 1,
-      "hat": "",
-      "scheduled": {
-        "Wednesday PM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true
-      },
-      "address": "1743 Ridgemar DR\r\nGrand Prairie, TX 75051",
-      "volId": "10735",
-      "hasAdminPassword": false,
-      "hasVolunteerPassword": false
-    },
-    {
-      "id": "10130",
-      "name": "Penneman, Roger",
-      "type": "Volunteer",
-      "hole": 16,
-      "phone": "(817) 734-7761",
-      "email": "rpenneman@sbcglobal.net",
-      "yearsWorked": 2,
-      "hat": "",
-      "scheduled": {
-        "Monday AM": true,
-        "Thursday AM": true,
-        "Friday PM": true,
-        "Saturday AM": true,
-        "Sunday PM": true
-      },
-      "address": "5036 GIVERNY LN\r\nFort Worth, TX 76116",
-      "volId": "10130",
-      "hasAdminPassword": false,
-      "hasVolunteerPassword": false
-    },
-    {
-      "id": "10743",
-      "name": "Rasmussen, Galen",
-      "type": "Volunteer",
-      "hole": 18,
-      "phone": "(310) 948-5630",
-      "email": "cestbon24@gmail.com",
-      "yearsWorked": 1,
-      "hat": "",
-      "scheduled": {
-        "Wednesday PM": true,
-        "Thursday AM": true,
-        "Friday PM": true,
-        "Saturday AM": true,
-        "Sunday PM": true
-      },
-      "address": "6252 North 73rd Street\r\nScottsdale, AZ 85250",
-      "volId": "10743",
-      "hasAdminPassword": false,
-      "hasVolunteerPassword": false
-    },
-    {
-      "id": "10733",
-      "name": "Wilkinson, Rick",
-      "type": "Volunteer",
-      "hole": 9,
-      "phone": "(817) 994-6021",
-      "email": "rickdwilkinson55@gmail.com",
-      "yearsWorked": 1,
-      "hat": "",
-      "scheduled": {
-        "Wednesday AM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true
-      },
-      "address": "5501 Hunterwood Ln\r\nArlington, TX 76017",
-      "volId": "10733",
-      "hasAdminPassword": false,
-      "hasVolunteerPassword": false
     }
   ],
   "checkIns": [
@@ -9918,6 +9919,105 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1777406351006",
+      "timestamp": "2026-04-28T19:59:11.006Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1777406228301",
+      "timestamp": "2026-04-28T19:57:08.301Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1777406224520",
+      "timestamp": "2026-04-28T19:57:04.520Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1777405920995",
+      "timestamp": "2026-04-28T19:52:00.995Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1777405913897",
+      "timestamp": "2026-04-28T19:51:53.897Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1777405855537",
+      "timestamp": "2026-04-28T19:50:55.537Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1777405851107",
+      "timestamp": "2026-04-28T19:50:51.107Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1777405730867",
+      "timestamp": "2026-04-28T19:48:50.867Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1777405718182",
+      "timestamp": "2026-04-28T19:48:38.182Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1777405621382",
+      "timestamp": "2026-04-28T19:47:01.382Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1777405135688",
+      "timestamp": "2026-04-28T19:38:55.688Z",
+      "user": "Quintana, Mike",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1777402003634",
       "timestamp": "2026-04-28T18:46:43.634Z",
@@ -11618,105 +11718,6 @@
       "action": "login",
       "target": "",
       "details": "Logged into Volunteer portal"
-    },
-    {
-      "id": "1776713452876",
-      "timestamp": "2026-04-20T19:30:52.876Z",
-      "user": "Wehmeyer, Tom",
-      "userType": "Captain",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Captain portal"
-    },
-    {
-      "id": "1776711141477",
-      "timestamp": "2026-04-20T18:52:21.477Z",
-      "user": "Wehmeyer, Tom",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776711035593",
-      "timestamp": "2026-04-20T18:50:35.593Z",
-      "user": "Wehmeyer, Tom",
-      "userType": "Volunteer",
-      "action": "password-change",
-      "target": "",
-      "details": "Changed volunteer password"
-    },
-    {
-      "id": "1776710994748",
-      "timestamp": "2026-04-20T18:49:54.748Z",
-      "user": "Wehmeyer, Tom",
-      "userType": "Volunteer",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Volunteer portal"
-    },
-    {
-      "id": "1776710503672",
-      "timestamp": "2026-04-20T18:41:43.672Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Admin portal"
-    },
-    {
-      "id": "1776710490935",
-      "timestamp": "2026-04-20T18:41:30.935Z",
-      "user": "Trout, Wayne",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776710476565",
-      "timestamp": "2026-04-20T18:41:16.565Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Admin portal"
-    },
-    {
-      "id": "1776710284875",
-      "timestamp": "2026-04-20T18:38:04.875Z",
-      "user": "Howrey, Anne",
-      "userType": "Captain",
-      "action": "password-change",
-      "target": "",
-      "details": "Changed captain password"
-    },
-    {
-      "id": "1776710267042",
-      "timestamp": "2026-04-20T18:37:47.042Z",
-      "user": "Howrey, Anne",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776710094541",
-      "timestamp": "2026-04-20T18:34:54.541Z",
-      "user": "Galvan, Bob",
-      "userType": "Admin",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Admin portal"
-    },
-    {
-      "id": "1776710059273",
-      "timestamp": "2026-04-20T18:34:19.274Z",
-      "user": "Galvan, Bob",
-      "userType": "Admin",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Admin portal"
     }
   ]
 }
