@@ -6807,7 +6807,7 @@
       "address": "2905 SOCRATES DR GRAND PRAIRIE, TX 75052",
       "volId": "2745",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false,
+      "hasVolunteerPassword": true,
       "volunteerPassword": "$2b$10$sDZM5Bu7XCLHz/vBCTPsl.3dh9AmYccDQTIvrCgUg9y9m4VI2/8RG"
     },
     {
@@ -7126,7 +7126,7 @@
       "hat": "",
       "scheduled": {
         "Monday PM": true,
-        "Thursday AM": true,
+        "Wednesday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
         "Sunday PM": true
@@ -9920,6 +9920,33 @@
   },
   "activityLog": [
     {
+      "id": "1777407964061",
+      "timestamp": "2026-04-28T20:26:04.061Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1777407909474",
+      "timestamp": "2026-04-28T20:25:09.474Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1777407851181",
+      "timestamp": "2026-04-28T20:24:11.181Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1777406351006",
       "timestamp": "2026-04-28T19:59:11.006Z",
       "user": "Roy, Mike",
@@ -11691,33 +11718,6 @@
       "action": "login",
       "target": "",
       "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776714753425",
-      "timestamp": "2026-04-20T19:52:33.425Z",
-      "user": "Montalvo, Sammy",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776713767795",
-      "timestamp": "2026-04-20T19:36:07.795Z",
-      "user": "Browning, Wayne",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776713501186",
-      "timestamp": "2026-04-20T19:31:41.186Z",
-      "user": "Wehmeyer, Tom",
-      "userType": "Volunteer",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Volunteer portal"
     }
   ]
 }
