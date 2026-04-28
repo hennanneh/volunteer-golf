@@ -4613,9 +4613,6 @@
       "yearsWorked": 3,
       "hat": "",
       "scheduled": {
-        "Wednesday PM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
         "Saturday PM": true,
         "Sunday AM": true
       },
@@ -5342,11 +5339,8 @@
         "Thursday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
-        "Friday PM": true,
-        "Saturday AM": true,
         "Saturday PM": true,
-        "Sunday AM": true,
-        "Sunday PM": true
+        "Sunday AM": true
       },
       "address": "11009 Whitestone Ranch Road\r\nFt. Worth, TX 76126",
       "volId": "4434",
@@ -8247,7 +8241,8 @@
       "yearsWorked": 12,
       "hat": "",
       "scheduled": {
-        "Wednesday PM": true,
+        "Monday AM": true,
+        "Monday PM": true,
         "Thursday PM": true,
         "Friday AM": true,
         "Saturday PM": true,
@@ -9918,6 +9913,51 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1777384036588",
+      "timestamp": "2026-04-28T13:47:16.588Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1777381714640",
+      "timestamp": "2026-04-28T13:08:34.640Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1777381390760",
+      "timestamp": "2026-04-28T13:03:10.760Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1777381372648",
+      "timestamp": "2026-04-28T13:02:52.648Z",
+      "user": "Sale, Lynn",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1777381306465",
+      "timestamp": "2026-04-28T13:01:46.469Z",
+      "user": "Sale, Lynn",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
     {
       "id": "1777376626206",
       "timestamp": "2026-04-28T11:43:46.206Z",
@@ -11672,51 +11712,6 @@
       "action": "login",
       "target": "",
       "details": "Logged into Admin portal"
-    },
-    {
-      "id": "1776458453999",
-      "timestamp": "2026-04-17T20:40:53.999Z",
-      "user": "Holt, Sharron",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776454467706",
-      "timestamp": "2026-04-17T19:34:27.706Z",
-      "user": "Montalvo, Sammy",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776451172948",
-      "timestamp": "2026-04-17T18:39:32.948Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "import",
-      "target": "",
-      "details": "Updated/added volunteers from CSV: 2 updated, 16 added"
-    },
-    {
-      "id": "1776435586017",
-      "timestamp": "2026-04-17T14:19:46.019Z",
-      "user": "Sale, Lynn",
-      "userType": "Volunteer",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Volunteer portal"
-    },
-    {
-      "id": "1776434824341",
-      "timestamp": "2026-04-17T14:07:04.341Z",
-      "user": "Pueblo, Vange",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
     }
   ]
 }
