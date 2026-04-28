@@ -9919,6 +9919,24 @@
   },
   "activityLog": [
     {
+      "id": "1777376626206",
+      "timestamp": "2026-04-28T11:43:46.206Z",
+      "user": "Davis, Sam",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1777374630922",
+      "timestamp": "2026-04-28T11:10:30.922Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1777344814648",
       "timestamp": "2026-04-28T02:53:34.648Z",
       "user": "Vela, Humberto",
@@ -11699,24 +11717,6 @@
       "action": "login",
       "target": "",
       "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776431648266",
-      "timestamp": "2026-04-17T13:14:08.266Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "edit-volunteer",
-      "target": "Bravo, Albert",
-      "details": "Edited volunteer (Type: Volunteer, Hole: 14)"
-    },
-    {
-      "id": "1776431629288",
-      "timestamp": "2026-04-17T13:13:49.288Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Admin portal"
     }
   ]
 }
