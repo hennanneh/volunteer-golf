@@ -5462,8 +5462,8 @@
             <p style="font-size:12px;color:#666;margin-bottom:15px;text-align:center">Modify this volunteer's schedule for your hole</p>
             <div style="background:#f8f9fa;border:1px solid #e5e7eb;border-radius:6px;padding:10px 12px;margin-bottom:15px;font-size:12px;color:#333;line-height:1.6">
               <div><strong>Years of Service:</strong> ${captainEditingVolunteer.yearsWorked || 0}</div>
-              <div><strong>Phone:</strong> ${captainEditingVolunteer.phone || '<span style="color:#999">—</span>'}</div>
-              <div><strong>Email:</strong> ${captainEditingVolunteer.email || '<span style="color:#999">—</span>'}</div>
+              <div><strong>Phone:</strong> ${captainEditingVolunteer.phone ? '<a href="tel:' + captainEditingVolunteer.phone.replace(/[^0-9+]/g, '') + '" style="color:#1a472a;text-decoration:underline">' + captainEditingVolunteer.phone + '</a>' : '<span style="color:#999">—</span>'}</div>
+              <div><strong>Email:</strong> ${captainEditingVolunteer.email ? '<a href="mailto:' + captainEditingVolunteer.email + '" style="color:#1a472a;text-decoration:underline">' + captainEditingVolunteer.email + '</a>' : '<span style="color:#999">—</span>'}</div>
               <div><strong>Address:</strong> ${captainEditingVolunteer.address ? captainEditingVolunteer.address.replace(/\n/g, ', ') : '<span style="color:#999">—</span>'}</div>
             </div>
             <div class="edit-modal-form">
