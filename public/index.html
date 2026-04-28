@@ -2484,10 +2484,16 @@
               ` : ''}
 
               <label>Phone</label>
-              <input type="tel" id="editPhone" value="${editingVolunteer.phone || ''}" placeholder="(555) 123-4567" ${disabledAttr}>
+              <div style="display:flex;gap:6px;align-items:stretch">
+                <input type="tel" id="editPhone" value="${editingVolunteer.phone || ''}" placeholder="(555) 123-4567" ${disabledAttr} style="flex:1;min-width:0">
+                <a href="#" onclick="event.preventDefault();const p=(document.getElementById('editPhone').value||'').trim();if(p)window.location.href='tel:'+p.replace(/[^0-9+]/g,'')" title="Call" aria-label="Call" style="display:flex;align-items:center;justify-content:center;padding:0 14px;background:#1a472a;color:#fff;text-decoration:none;border-radius:6px;line-height:1;flex-shrink:0"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
+              </div>
 
               <label>Email</label>
-              <input type="email" id="editEmail" value="${editingVolunteer.email || ''}" placeholder="volunteer@example.com" ${disabledAttr}>
+              <div style="display:flex;gap:6px;align-items:stretch">
+                <input type="email" id="editEmail" value="${editingVolunteer.email || ''}" placeholder="volunteer@example.com" ${disabledAttr} style="flex:1;min-width:0">
+                <a href="#" onclick="event.preventDefault();const e=(document.getElementById('editEmail').value||'').trim();if(e)window.location.href='mailto:'+e" title="Email" aria-label="Email" style="display:flex;align-items:center;justify-content:center;padding:0 14px;background:#1a472a;color:#fff;text-decoration:none;border-radius:6px;line-height:1;flex-shrink:0"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+              </div>
 
               ${!isNewVolunteer ? `
               <label>Address</label>
@@ -3574,8 +3580,10 @@
                   const rowStyle = isMovedAway ? 'opacity:0.5;background:#f5f5f5;' : '';
 
                   const isCaptainRole = ['Captain', 'Asst. Chairman', 'Chairman'].includes(v.type);
+                  const emailAttr = (v.email || '').replace(/"/g, '&quot;');
+                  const phoneAttr = (v.phone || '').replace(/"/g, '&quot;');
                   return `
-                  <tr style="${rowStyle}">
+                  <tr style="${rowStyle}" data-vol-email="${emailAttr}" data-vol-phone="${phoneAttr}">
                     <td style="padding:10px 12px;border:1px solid #ccc">
                       ${isNewHere && showHoleHistory ? '<span style="background:#4caf50;color:white;padding:2px 6px;border-radius:4px;font-size:10px;margin-right:6px">NEW</span>' : ''}
                       ${v.name}${isCaptainRole ? '<span title="' + v.type + '" style="color:#1a472a;font-weight:700;margin-left:4px">*</span>' : ''}
@@ -4195,25 +4203,58 @@
       const content = document.getElementById('report-content');
       if (!content) return;
 
-      const table = content.querySelector('table');
-      if (!table) {
+      const tables = content.querySelectorAll('table');
+      if (!tables.length) {
         alert('No table data to export');
         return;
       }
 
+      const isHoleRoster = currentReport === 'hole-roster';
+      const quote = (s) => '"' + String(s).replace(/"/g, '""') + '"';
+      // Replace status glyphs with plain text so the CSV reads cleanly in
+      // Excel/Sheets regardless of the user's default encoding.
+      const cleanCell = (text, isHeader) => {
+        const t = text.trim();
+        if (t === '✓') return isHeader ? 'Checked In' : 'Yes';
+        if (t === '○') return isHeader ? 'Scheduled' : 'Sched';
+        return text;
+      };
+
       let csv = [];
-      const rows = table.querySelectorAll('tr');
-      rows.forEach(row => {
-        const cols = row.querySelectorAll('th, td');
-        const rowData = [];
-        cols.forEach(col => {
-          let text = col.innerText.replace(/"/g, '""');
-          rowData.push('"' + text + '"');
+      tables.forEach((table, tableIdx) => {
+        const rows = table.querySelectorAll('tr');
+        rows.forEach((row, rowIdx) => {
+          const isHeader = row.parentElement && row.parentElement.tagName === 'THEAD';
+          const cols = row.querySelectorAll('th, td');
+          const rowData = [];
+          cols.forEach(col => {
+            rowData.push(quote(cleanCell(col.innerText, isHeader)));
+          });
+
+          if (isHoleRoster && rowData.length > 0) {
+            // Insert Email + Phone as columns 2 and 3.
+            // Header row 1 (first row of each table) gets labels; everything
+            // else gets the volunteer's email/phone if the row is tagged,
+            // otherwise empty cells (header row 2, totals row).
+            let email = '';
+            let phone = '';
+            if (rowIdx === 0) {
+              email = 'Email';
+              phone = 'Phone';
+            } else if (row.dataset.volEmail !== undefined || row.dataset.volPhone !== undefined) {
+              email = row.dataset.volEmail || '';
+              phone = row.dataset.volPhone || '';
+            }
+            rowData.splice(1, 0, quote(email), quote(phone));
+          }
+
+          csv.push(rowData.join(','));
         });
-        csv.push(rowData.join(','));
+        if (isHoleRoster && tableIdx < tables.length - 1) csv.push('');
       });
 
-      const blob = new Blob([csv.join('\n')], { type: 'text/csv' });
+      // Prepend UTF-8 BOM so Excel detects the encoding correctly.
+      const blob = new Blob(['\uFEFF' + csv.join('\n')], { type: 'text/csv;charset=utf-8' });
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
@@ -5458,22 +5499,26 @@
         </div>
       ` : '';
 
-      // Roster modal for captain view
+      // Roster - full page view for captain
       const reportsModalHtml = showReportsModal ? `
-        <div class="modal-overlay" onclick="showReportsModal=false;render()">
-          <div class="modal" onclick="event.stopPropagation()" style="max-width:900px;width:95%;max-height:90vh;overflow-y:auto;text-align:left;position:relative;padding-top:20px">
-            <button onclick="showReportsModal=false;render()" style="position:sticky;top:0;float:right;background:#f5f5f5;border:1px solid #ddd;width:36px;height:36px;border-radius:50%;cursor:pointer;font-size:20px;color:#666;display:flex;align-items:center;justify-content:center;z-index:10;flex-shrink:0">&times;</button>
-            <div style="margin-bottom:15px">
-              <h3 style="margin:0 0 12px 0">Roster - Hole #${activeHole}</h3>
-              <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:8px;max-width:360px">
-                <button onclick="downloadPDF(${activeHole})" style="padding:10px 12px;background:#fff;border:1px solid #ccc;border-radius:8px;cursor:pointer;font-size:14px;font-weight:500;text-align:center">Download PDF</button>
-                <button onclick="sendEmailToSelf(${activeHole})" style="padding:10px 12px;background:#1a472a;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:14px;font-weight:500;text-align:center">Email to Self</button>
-                <button onclick="emailAllHole(${activeHole})" style="padding:10px 12px;background:#1a472a;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:14px;font-weight:500;text-align:center">Email All</button>
-                <button onclick="exportReportCSV()" style="padding:10px 12px;background:#fff;border:1px solid #ccc;border-radius:8px;cursor:pointer;font-size:14px;font-weight:500;text-align:center">Export CSV</button>
-              </div>
-              <button onclick="openEmailHoleModal(${activeHole})" style="margin-top:8px;padding:12px;background:#1a472a;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:14px;font-weight:600;max-width:360px;width:100%">Send Roster to All Volunteers on Hole #${activeHole}</button>
+        <div style="position:fixed;inset:0;background:#f5f5f5;z-index:1000;overflow-y:auto;-webkit-overflow-scrolling:touch">
+          <div style="position:sticky;top:0;background:#1a472a;color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px;box-shadow:0 2px 6px rgba(0,0,0,0.15);z-index:10">
+            <button onclick="showReportsModal=false;render()" aria-label="Back" style="background:rgba(255,255,255,0.2);border:none;color:#fff;padding:8px 14px;border-radius:6px;font-size:15px;font-weight:600;cursor:pointer;display:inline-flex;align-items:center;gap:6px;min-height:40px">
+              <span style="font-size:18px;line-height:1">&larr;</span> Back
+            </button>
+            <h3 style="margin:0;font-size:18px;font-weight:600;flex:1">Hole #${activeHole} Roster</h3>
+          </div>
+          <div style="max-width:1100px;margin:0 auto;padding:16px">
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px;margin-bottom:10px">
+              <button onclick="downloadPDF(${activeHole})" style="padding:12px;background:#fff;border:1px solid #ccc;border-radius:8px;cursor:pointer;font-size:14px;font-weight:500;min-height:44px">Download PDF</button>
+              <button onclick="sendEmailToSelf(${activeHole})" style="padding:12px;background:#1a472a;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:14px;font-weight:500;min-height:44px">Email to Self</button>
+              <button onclick="emailAllHole(${activeHole})" style="padding:12px;background:#1a472a;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:14px;font-weight:500;min-height:44px">Email All</button>
+              <button onclick="exportReportCSV()" style="padding:12px;background:#fff;border:1px solid #ccc;border-radius:8px;cursor:pointer;font-size:14px;font-weight:500;min-height:44px">Export CSV</button>
             </div>
-            ${renderHoleRosterReport(activeHole, { hideViewAll: true, hideTitle: true })}
+            <button onclick="openEmailHoleModal(${activeHole})" style="width:100%;padding:14px;background:#1a472a;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:15px;font-weight:600;margin-bottom:18px;min-height:48px">Send Roster to All Volunteers on Hole #${activeHole}</button>
+            <div style="background:#fff;border-radius:8px;padding:14px;box-shadow:0 1px 3px rgba(0,0,0,0.06)">
+              ${renderHoleRosterReport(activeHole, { hideViewAll: true, hideTitle: true })}
+            </div>
           </div>
         </div>
       ` : '';
