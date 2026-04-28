@@ -1286,6 +1286,7 @@
       "hat": "",
       "scheduled": {
         "Monday AM": true,
+        "Monday PM": true,
         "Thursday PM": true,
         "Friday AM": true,
         "Saturday PM": true,
@@ -3151,10 +3152,10 @@
       "hat": "",
       "scheduled": {
         "Wednesday PM": true,
-        "Thursday AM": true,
-        "Friday PM": true,
-        "Saturday AM": true,
-        "Sunday PM": true
+        "Thursday PM": true,
+        "Friday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true
       },
       "volId": "4014",
       "address": "P.O. Box 1808 Keller, TX 76244",
@@ -6908,7 +6909,9 @@
       "yearsWorked": 5,
       "hat": "",
       "scheduled": {
+        "Monday AM": true,
         "Monday PM": true,
+        "Tuesday AM": true,
         "Tuesday PM": true,
         "Thursday AM": true,
         "Friday PM": true,
@@ -8243,10 +8246,10 @@
       "scheduled": {
         "Monday AM": true,
         "Monday PM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true
+        "Thursday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
+        "Sunday PM": true
       },
       "volId": "5876",
       "address": "11848 Hickory Cir Fort Worth, TX 76244-4582",
@@ -8507,6 +8510,7 @@
       "yearsWorked": 1,
       "hat": "",
       "scheduled": {
+        "Monday AM": true,
         "Monday PM": true,
         "Thursday PM": true,
         "Friday AM": true,
@@ -9913,6 +9917,15 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1777389166922",
+      "timestamp": "2026-04-28T15:12:46.922Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1777385996038",
       "timestamp": "2026-04-28T14:19:56.038Z",
@@ -11703,15 +11716,6 @@
       "action": "login",
       "target": "",
       "details": "Logged into Admin portal"
-    },
-    {
-      "id": "1776469177044",
-      "timestamp": "2026-04-17T23:39:37.044Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Admin portal"
     }
   ]
 }
