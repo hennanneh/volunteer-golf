@@ -2811,6 +2811,7 @@
       "address": "3813 Gladney Ln Fort Worth, TX 76244-7654",
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
+      "noOutingPreference": true,
       "volunteerPassword": "$2b$10$RdCCnunXCCXS4WT5UjENeuk0.WfU1uBZr8tHhCi0fxgfRXtoK7Vzy"
     },
     {
@@ -9918,6 +9919,51 @@
   },
   "activityLog": [
     {
+      "id": "1777395132554",
+      "timestamp": "2026-04-28T16:52:12.554Z",
+      "user": "Harrell, Michael",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1777395103632",
+      "timestamp": "2026-04-28T16:51:43.632Z",
+      "user": "Harrell, Michael",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1777394646250",
+      "timestamp": "2026-04-28T16:44:06.250Z",
+      "user": "Clayton, Rodney",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1777394506993",
+      "timestamp": "2026-04-28T16:41:46.993Z",
+      "user": "Womack, Tim",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1777392263642",
+      "timestamp": "2026-04-28T16:04:23.642Z",
+      "user": "Mills, Brad",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
       "id": "1777389166922",
       "timestamp": "2026-04-28T15:12:46.922Z",
       "user": "Holt, Sharron",
@@ -11671,51 +11717,6 @@
       "action": "login",
       "target": "",
       "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776708554211",
-      "timestamp": "2026-04-20T18:09:14.211Z",
-      "user": "Edwards, Bill",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776706650537",
-      "timestamp": "2026-04-20T17:37:30.537Z",
-      "user": "Elkins, Paul",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776706087568",
-      "timestamp": "2026-04-20T17:28:07.568Z",
-      "user": "Duncan, Larry",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776469253217",
-      "timestamp": "2026-04-17T23:40:53.217Z",
-      "user": "Duke, Mitzie",
-      "userType": "Admin",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Admin portal"
-    },
-    {
-      "id": "1776469226739",
-      "timestamp": "2026-04-17T23:40:26.739Z",
-      "user": "Duke, Mitzie",
-      "userType": "Admin",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Admin portal"
     }
   ]
 }
