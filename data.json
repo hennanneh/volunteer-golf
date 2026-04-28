@@ -7180,7 +7180,8 @@
       "address": "21767 Lakewood Lane\r\nChandler, TX 75758",
       "volId": "10610",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false
+      "hasVolunteerPassword": false,
+      "noOutingPreference": true
     },
     {
       "id": "9109",
@@ -9913,6 +9914,15 @@
   },
   "activityLog": [
     {
+      "id": "1777339423212",
+      "timestamp": "2026-04-28T01:23:43.212Z",
+      "user": "Simon, Russ",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
       "id": "1777335845244",
       "timestamp": "2026-04-28T00:24:05.244Z",
       "user": "Gilchrist, William (Bill)",
@@ -11702,15 +11712,6 @@
       "action": "logout",
       "target": "",
       "details": "Logged out of Admin portal"
-    },
-    {
-      "id": "1776430342813",
-      "timestamp": "2026-04-17T12:52:22.813Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Admin portal"
     }
   ]
 }
