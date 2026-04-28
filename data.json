@@ -2996,8 +2996,11 @@
       "hat": "",
       "scheduled": {
         "Wednesday AM": true,
+        "Thursday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
         "Saturday PM": true,
         "Sunday AM": true
       },
@@ -7904,10 +7907,14 @@
       "hat": "",
       "scheduled": {
         "Wednesday PM": true,
+        "Thursday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
         "Saturday PM": true,
-        "Sunday AM": true
+        "Sunday AM": true,
+        "Sunday PM": true
       },
       "volId": "4225",
       "address": "151560 US Highway 90 W Harwood, TX 78632",
@@ -9920,6 +9927,78 @@
   },
   "activityLog": [
     {
+      "id": "1777413576413",
+      "timestamp": "2026-04-28T21:59:36.413Z",
+      "user": "Bird, Bob",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1777412801658",
+      "timestamp": "2026-04-28T21:46:41.658Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1777412330033",
+      "timestamp": "2026-04-28T21:38:50.033Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1777412301558",
+      "timestamp": "2026-04-28T21:38:21.558Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1777411188763",
+      "timestamp": "2026-04-28T21:19:48.763Z",
+      "user": "Zamzow, Steve",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1777410484855",
+      "timestamp": "2026-04-28T21:08:04.855Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1777410480029",
+      "timestamp": "2026-04-28T21:08:00.029Z",
+      "user": "Hill, Michael",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1777410424360",
+      "timestamp": "2026-04-28T21:07:04.360Z",
+      "user": "Hill, Michael",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1777407964061",
       "timestamp": "2026-04-28T20:26:04.061Z",
       "user": "Roy, Mike",
@@ -11646,78 +11725,6 @@
       "action": "password-change",
       "target": "",
       "details": "Changed volunteer password"
-    },
-    {
-      "id": "1776725588910",
-      "timestamp": "2026-04-20T22:53:08.910Z",
-      "user": "Moore, Barry",
-      "userType": "Volunteer",
-      "action": "password-change",
-      "target": "",
-      "details": "Changed volunteer password"
-    },
-    {
-      "id": "1776725583517",
-      "timestamp": "2026-04-20T22:53:03.517Z",
-      "user": "Bird, Bob",
-      "userType": "Volunteer",
-      "action": "password-change",
-      "target": "",
-      "details": "Changed volunteer password"
-    },
-    {
-      "id": "1776725556393",
-      "timestamp": "2026-04-20T22:52:36.393Z",
-      "user": "Reddington, Joseph",
-      "userType": "Volunteer",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Volunteer portal"
-    },
-    {
-      "id": "1776725551388",
-      "timestamp": "2026-04-20T22:52:31.388Z",
-      "user": "Langford, Alan",
-      "userType": "Volunteer",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Volunteer portal"
-    },
-    {
-      "id": "1776725534291",
-      "timestamp": "2026-04-20T22:52:14.291Z",
-      "user": "Moore, Barry",
-      "userType": "Volunteer",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Volunteer portal"
-    },
-    {
-      "id": "1776725530486",
-      "timestamp": "2026-04-20T22:52:10.486Z",
-      "user": "Bird, Bob",
-      "userType": "Volunteer",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Volunteer portal"
-    },
-    {
-      "id": "1776725474654",
-      "timestamp": "2026-04-20T22:51:14.654Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Admin portal"
-    },
-    {
-      "id": "1776714781005",
-      "timestamp": "2026-04-20T19:53:01.005Z",
-      "user": "Thomas, Stephen",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
     }
   ]
 }
