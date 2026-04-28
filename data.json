@@ -9925,6 +9925,42 @@
   },
   "activityLog": [
     {
+      "id": "1777334110967",
+      "timestamp": "2026-04-27T23:55:10.967Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1777333354068",
+      "timestamp": "2026-04-27T23:42:34.068Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1777332502539",
+      "timestamp": "2026-04-27T23:28:22.539Z",
+      "user": "Simon, Russ",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1777331118467",
+      "timestamp": "2026-04-27T23:05:18.467Z",
+      "user": "Butler, Mark",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1777330628154",
       "timestamp": "2026-04-27T22:57:08.155Z",
       "user": "Thomas, Stephen",
@@ -11687,42 +11723,6 @@
       "action": "login",
       "target": "",
       "details": "Logged into Volunteer portal"
-    },
-    {
-      "id": "1776710503672",
-      "timestamp": "2026-04-20T18:41:43.672Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Admin portal"
-    },
-    {
-      "id": "1776710490935",
-      "timestamp": "2026-04-20T18:41:30.935Z",
-      "user": "Trout, Wayne",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776710476565",
-      "timestamp": "2026-04-20T18:41:16.565Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Admin portal"
-    },
-    {
-      "id": "1776710284875",
-      "timestamp": "2026-04-20T18:38:04.875Z",
-      "user": "Howrey, Anne",
-      "userType": "Captain",
-      "action": "password-change",
-      "target": "",
-      "details": "Changed captain password"
     }
   ]
 }
