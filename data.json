@@ -9929,6 +9929,15 @@
   },
   "activityLog": [
     {
+      "id": "1777451096548",
+      "timestamp": "2026-04-29T08:24:56.548Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1777429593859",
       "timestamp": "2026-04-29T02:26:33.859Z",
       "user": "Rogenski, Chris P.",
@@ -11714,15 +11723,6 @@
       "id": "1776725742278",
       "timestamp": "2026-04-20T22:55:42.278Z",
       "user": "Hoover, Thomas",
-      "userType": "Volunteer",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Volunteer portal"
-    },
-    {
-      "id": "1776725721151",
-      "timestamp": "2026-04-20T22:55:21.151Z",
-      "user": "Moore, Barry",
       "userType": "Volunteer",
       "action": "login",
       "target": "",
