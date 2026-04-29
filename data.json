@@ -9929,6 +9929,24 @@
   },
   "activityLog": [
     {
+      "id": "1777475789602",
+      "timestamp": "2026-04-29T15:16:29.602Z",
+      "user": "Duke, Mitzie",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1777475678549",
+      "timestamp": "2026-04-29T15:14:38.549Z",
+      "user": "Duke, Mitzie",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
       "id": "1777451096548",
       "timestamp": "2026-04-29T08:24:56.548Z",
       "user": "Edwards, Bill",
@@ -11705,24 +11723,6 @@
       "id": "1776726112065",
       "timestamp": "2026-04-20T23:01:52.065Z",
       "user": "Hughes, Allen",
-      "userType": "Volunteer",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Volunteer portal"
-    },
-    {
-      "id": "1776726106538",
-      "timestamp": "2026-04-20T23:01:46.538Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "edit-volunteer",
-      "target": "Capps, Macy",
-      "details": "Edited volunteer (Type: Volunteer, Hole: 14)"
-    },
-    {
-      "id": "1776725742278",
-      "timestamp": "2026-04-20T22:55:42.278Z",
-      "user": "Hoover, Thomas",
       "userType": "Volunteer",
       "action": "login",
       "target": "",
