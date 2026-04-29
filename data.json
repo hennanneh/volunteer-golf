@@ -9929,6 +9929,24 @@
   },
   "activityLog": [
     {
+      "id": "1777482339858",
+      "timestamp": "2026-04-29T17:05:39.858Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1777482254447",
+      "timestamp": "2026-04-29T17:04:14.447Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1777475789602",
       "timestamp": "2026-04-29T15:16:29.602Z",
       "user": "Duke, Mitzie",
@@ -11709,24 +11727,6 @@
       "action": "logout",
       "target": "",
       "details": "Logged out of Captain portal"
-    },
-    {
-      "id": "1776726160810",
-      "timestamp": "2026-04-20T23:02:40.810Z",
-      "user": "Diaz, Rickey",
-      "userType": "Volunteer",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Volunteer portal"
-    },
-    {
-      "id": "1776726112065",
-      "timestamp": "2026-04-20T23:01:52.065Z",
-      "user": "Hughes, Allen",
-      "userType": "Volunteer",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Volunteer portal"
     }
   ]
 }
