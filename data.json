@@ -2291,8 +2291,10 @@
       },
       "address": "9012 N Longwood Dr Granbury, TX 76049-4709",
       "volId": "421",
-      "hasAdminPassword": false,
-      "hasVolunteerPassword": false
+      "hasAdminPassword": true,
+      "hasVolunteerPassword": false,
+      "adminPassword": "$2b$10$52VdRTtOJc7.riA5b93ScuAbew2kz1a3IPmSWZEOk47q3Z4yp117a",
+      "adminPasswordSetAt": "2026-04-29T19:41:25.640Z"
     },
     {
       "id": "9595",
@@ -9936,6 +9938,42 @@
   },
   "activityLog": [
     {
+      "id": "1777492667430",
+      "timestamp": "2026-04-29T19:57:47.430Z",
+      "user": "Gastinel, Buck",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1777492211690",
+      "timestamp": "2026-04-29T19:50:11.690Z",
+      "user": "Quintana, Mike",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1777491686422",
+      "timestamp": "2026-04-29T19:41:26.422Z",
+      "user": "Gastinel, Buck",
+      "userType": "Admin",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed admin password"
+    },
+    {
+      "id": "1777491604033",
+      "timestamp": "2026-04-29T19:40:04.033Z",
+      "user": "Gastinel, Buck",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
       "id": "1777482339858",
       "timestamp": "2026-04-29T17:05:39.858Z",
       "user": "Roy, Mike",
@@ -11698,42 +11736,6 @@
       "action": "login",
       "target": "",
       "details": "Logged into Volunteer portal"
-    },
-    {
-      "id": "1776727986551",
-      "timestamp": "2026-04-20T23:33:06.551Z",
-      "user": "Howrey, Anne",
-      "userType": "Admin",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Admin portal"
-    },
-    {
-      "id": "1776727980387",
-      "timestamp": "2026-04-20T23:33:00.387Z",
-      "user": "Howrey, Anne",
-      "userType": "Captain",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Captain portal"
-    },
-    {
-      "id": "1776727614958",
-      "timestamp": "2026-04-20T23:26:54.958Z",
-      "user": "Trout, Wayne",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776726474392",
-      "timestamp": "2026-04-20T23:07:54.392Z",
-      "user": "Trout, Wayne",
-      "userType": "Captain",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Captain portal"
     }
   ]
 }
