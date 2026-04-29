@@ -2291,7 +2291,7 @@
       },
       "address": "9012 N Longwood Dr Granbury, TX 76049-4709",
       "volId": "421",
-      "hasAdminPassword": false,
+      "hasAdminPassword": true,
       "hasVolunteerPassword": false,
       "adminPassword": "$2b$10$52VdRTtOJc7.riA5b93ScuAbew2kz1a3IPmSWZEOk47q3Z4yp117a",
       "adminPasswordSetAt": "2026-04-29T19:41:25.640Z"
@@ -4275,8 +4275,12 @@
         "Tuesday AM": true,
         "Wednesday AM": true,
         "Thursday AM": true,
+        "Thursday PM": true,
+        "Friday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true,
         "Sunday PM": true
       },
       "address": "6428 Maple Drive The Colony, TX 75056",
@@ -9931,6 +9935,33 @@
   },
   "activityLog": [
     {
+      "id": "1777499404726",
+      "timestamp": "2026-04-29T21:50:04.730Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1777497163278",
+      "timestamp": "2026-04-29T21:12:43.278Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1777496832252",
+      "timestamp": "2026-04-29T21:07:12.252Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1777496115479",
       "timestamp": "2026-04-29T20:55:15.479Z",
       "user": "Edwards, Bill",
@@ -11698,33 +11729,6 @@
       "id": "1776726160810",
       "timestamp": "2026-04-20T23:02:40.810Z",
       "user": "Diaz, Rickey",
-      "userType": "Volunteer",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Volunteer portal"
-    },
-    {
-      "id": "1776726112065",
-      "timestamp": "2026-04-20T23:01:52.065Z",
-      "user": "Hughes, Allen",
-      "userType": "Volunteer",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Volunteer portal"
-    },
-    {
-      "id": "1776726106538",
-      "timestamp": "2026-04-20T23:01:46.538Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "edit-volunteer",
-      "target": "Capps, Macy",
-      "details": "Edited volunteer (Type: Volunteer, Hole: 14)"
-    },
-    {
-      "id": "1776725742278",
-      "timestamp": "2026-04-20T22:55:42.278Z",
-      "user": "Hoover, Thomas",
       "userType": "Volunteer",
       "action": "login",
       "target": "",
