@@ -8020,7 +8020,9 @@
       "volId": "8852",
       "address": "585 BAKER CUT OFF RD WEATHERFORD, TX 76087",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false
+      "hasVolunteerPassword": false,
+      "noOutingPreference": true,
+      "volunteerPassword": "$2b$10$zqBpG8S2k38DF.TgRypK0eO0h.wiTfRtndfMpeZUQcdoUKmA2W2tW"
     },
     {
       "id": "274",
@@ -9927,6 +9929,24 @@
   },
   "activityLog": [
     {
+      "id": "1777424605983",
+      "timestamp": "2026-04-29T01:03:25.983Z",
+      "user": "Vollintine, Derek",
+      "userType": "Volunteer",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed volunteer password"
+    },
+    {
+      "id": "1777424485144",
+      "timestamp": "2026-04-29T01:01:25.145Z",
+      "user": "Vollintine, Derek",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
       "id": "1777413639409",
       "timestamp": "2026-04-28T22:00:39.409Z",
       "user": "Bird, Bob",
@@ -11707,24 +11727,6 @@
       "action": "login",
       "target": "",
       "details": "Logged into Volunteer portal"
-    },
-    {
-      "id": "1776725670076",
-      "timestamp": "2026-04-20T22:54:30.076Z",
-      "user": "Reddington, Joseph",
-      "userType": "Volunteer",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Volunteer portal"
-    },
-    {
-      "id": "1776725649591",
-      "timestamp": "2026-04-20T22:54:09.591Z",
-      "user": "Rogenski, Chris P.",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
     }
   ]
 }
