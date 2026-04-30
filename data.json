@@ -9932,6 +9932,33 @@
   },
   "activityLog": [
     {
+      "id": "1777556887747",
+      "timestamp": "2026-04-30T13:48:07.747Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1777556334346",
+      "timestamp": "2026-04-30T13:38:54.346Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1777556324330",
+      "timestamp": "2026-04-30T13:38:44.330Z",
+      "user": "Clayton, Rodney",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1777545933179",
       "timestamp": "2026-04-30T10:45:33.179Z",
       "user": "Mills, Brad",
@@ -11703,33 +11730,6 @@
       "action": "login",
       "target": "",
       "details": "Logged into Volunteer portal"
-    },
-    {
-      "id": "1776729471292",
-      "timestamp": "2026-04-20T23:57:51.292Z",
-      "user": "Rodrigues, Donald",
-      "userType": "Volunteer",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Volunteer portal"
-    },
-    {
-      "id": "1776727986551",
-      "timestamp": "2026-04-20T23:33:06.551Z",
-      "user": "Howrey, Anne",
-      "userType": "Admin",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Admin portal"
-    },
-    {
-      "id": "1776727980387",
-      "timestamp": "2026-04-20T23:33:00.387Z",
-      "user": "Howrey, Anne",
-      "userType": "Captain",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Captain portal"
     }
   ]
 }
