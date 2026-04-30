@@ -654,13 +654,13 @@
         "Wednesday PM": true,
         "Thursday AM": true,
         "Friday PM": true,
-        "Saturday AM": true
+        "Saturday AM": true,
+        "Sunday PM": true
       },
       "volId": "2393",
       "address": "1109 Byron Lane Arlington, TX 76012-1829",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false,
-      "notes": "May not be able to work Sunday.  Pastor.  We will adjust as needed.  TBD\n"
+      "hasVolunteerPassword": false
     },
     {
       "id": "3034",
@@ -1655,6 +1655,7 @@
       "yearsWorked": 2,
       "hat": "",
       "scheduled": {
+        "Monday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
         "Saturday PM": true,
@@ -4274,12 +4275,8 @@
         "Tuesday AM": true,
         "Wednesday AM": true,
         "Thursday AM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true,
         "Sunday PM": true
       },
       "address": "6428 Maple Drive The Colony, TX 75056",
@@ -4846,10 +4843,10 @@
       "hat": "",
       "scheduled": {
         "Wednesday AM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true
+        "Thursday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
+        "Sunday PM": true
       },
       "volId": "9510",
       "address": "413 Templeton Drive Fort Worth, TX 76107",
@@ -5204,7 +5201,6 @@
       "hatReceived": false,
       "notes": "",
       "originalHole": 11,
-      "noOutingPreference": true,
       "volunteerPassword": "$2b$10$6tpJfJpcEuE4cMJ4mDekk..9sEu4KcQmEXVRY3aiTS8CezqniNjci"
     },
     {
@@ -6370,6 +6366,8 @@
       "yearsWorked": 13,
       "hat": "",
       "scheduled": {
+        "Monday AM": true,
+        "Monday PM": true,
         "Tuesday AM": true,
         "Tuesday PM": true,
         "Wednesday AM": true,
@@ -7261,6 +7259,8 @@
       "yearsWorked": 2,
       "hat": "",
       "scheduled": {
+        "Monday PM": true,
+        "Tuesday PM": true,
         "Wednesday PM": true,
         "Thursday PM": true,
         "Friday AM": true,
@@ -7283,10 +7283,10 @@
       "hat": "",
       "scheduled": {
         "Wednesday AM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true
+        "Thursday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
+        "Sunday PM": true
       },
       "volId": "8462",
       "address": "327 Jack Nicklaus Dr Austin, TX 78738",
@@ -7325,10 +7325,10 @@
       "hat": "",
       "scheduled": {
         "Wednesday AM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true
+        "Thursday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
+        "Sunday PM": true
       },
       "volId": "8463",
       "address": "327 Jack Nicklaus Drive Austin, TX 78738",
@@ -8024,6 +8024,7 @@
       "address": "585 BAKER CUT OFF RD WEATHERFORD, TX 76087",
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
+      "noOutingPreference": true,
       "volunteerPassword": "$2b$10$zqBpG8S2k38DF.TgRypK0eO0h.wiTfRtndfMpeZUQcdoUKmA2W2tW"
     },
     {
@@ -8038,6 +8039,9 @@
       "scheduled": {
         "Monday AM": true,
         "Monday PM": true,
+        "Tuesday AM": true,
+        "Tuesday PM": true,
+        "Wednesday AM": true,
         "Wednesday PM": true,
         "Thursday AM": true,
         "Thursday PM": true,
@@ -9928,148 +9932,49 @@
   },
   "activityLog": [
     {
-      "id": "1777560879028",
-      "timestamp": "2026-04-30T14:54:39.028Z",
-      "user": "Trout, Wayne",
-      "userType": "Captain",
-      "action": "logout",
+      "id": "1777562360961",
+      "timestamp": "2026-04-30T15:19:20.961Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "login",
       "target": "",
-      "details": "Logged out of Captain portal"
+      "details": "Logged into Admin portal"
     },
     {
-      "id": "1777558231761",
-      "timestamp": "2026-04-30T14:10:31.761Z",
-      "user": "Quintana, Mike",
-      "userType": "Captain",
-      "action": "edit-notes",
-      "target": "Burkhead, Max",
-      "details": "Updated volunteer notes"
-    },
-    {
-      "id": "1777557788847",
-      "timestamp": "2026-04-30T14:03:08.847Z",
-      "user": "Quintana, Mike",
+      "id": "1777561721660",
+      "timestamp": "2026-04-30T15:08:41.660Z",
+      "user": "Edwards, Bill",
       "userType": "Captain",
       "action": "login",
       "target": "",
       "details": "Logged into Captain portal"
     },
     {
-      "id": "1777556887747",
-      "timestamp": "2026-04-30T13:48:07.747Z",
-      "user": "Trout, Wayne",
+      "id": "1777429593859",
+      "timestamp": "2026-04-29T02:26:33.859Z",
+      "user": "Rogenski, Chris P.",
       "userType": "Captain",
       "action": "login",
       "target": "",
       "details": "Logged into Captain portal"
     },
     {
-      "id": "1777556334346",
-      "timestamp": "2026-04-30T13:38:54.346Z",
-      "user": "Thomas, Stephen",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1777556324330",
-      "timestamp": "2026-04-30T13:38:44.330Z",
-      "user": "Clayton, Rodney",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1777545933179",
-      "timestamp": "2026-04-30T10:45:33.179Z",
-      "user": "Mills, Brad",
+      "id": "1777424605983",
+      "timestamp": "2026-04-29T01:03:25.983Z",
+      "user": "Vollintine, Derek",
       "userType": "Volunteer",
-      "action": "logout",
+      "action": "password-change",
       "target": "",
-      "details": "Logged out of Volunteer portal"
+      "details": "Changed volunteer password"
     },
     {
-      "id": "1777545694566",
-      "timestamp": "2026-04-30T10:41:34.566Z",
-      "user": "Mills, Brad",
+      "id": "1777424485144",
+      "timestamp": "2026-04-29T01:01:25.145Z",
+      "user": "Vollintine, Derek",
       "userType": "Volunteer",
       "action": "login",
       "target": "",
       "details": "Logged into Volunteer portal"
-    },
-    {
-      "id": "1777515696457",
-      "timestamp": "2026-04-30T02:21:36.457Z",
-      "user": "Mosler, Mitch",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1777510380556",
-      "timestamp": "2026-04-30T00:53:00.556Z",
-      "user": "Clayton, Rodney",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1777508602079",
-      "timestamp": "2026-04-30T00:23:22.079Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Admin portal"
-    },
-    {
-      "id": "1777507989045",
-      "timestamp": "2026-04-30T00:13:09.045Z",
-      "user": "Quintana, Mike",
-      "userType": "Captain",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Captain portal"
-    },
-    {
-      "id": "1777507953666",
-      "timestamp": "2026-04-30T00:12:33.666Z",
-      "user": "Quintana, Mike",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1777507924537",
-      "timestamp": "2026-04-30T00:12:04.537Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Admin portal"
-    },
-    {
-      "id": "1777507891629",
-      "timestamp": "2026-04-30T00:11:31.629Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Admin portal"
-    },
-    {
-      "id": "1777507881618",
-      "timestamp": "2026-04-30T00:11:21.618Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Admin portal"
     },
     {
       "id": "1777413639409",
@@ -11726,6 +11631,105 @@
       "action": "login",
       "target": "",
       "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776730484121",
+      "timestamp": "2026-04-21T00:14:44.121Z",
+      "user": "Mcgowen, Mark",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1776730385461",
+      "timestamp": "2026-04-21T00:13:05.461Z",
+      "user": "Mcgowen, Mark",
+      "userType": "Volunteer",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed volunteer password"
+    },
+    {
+      "id": "1776730324286",
+      "timestamp": "2026-04-21T00:12:04.286Z",
+      "user": "Mcgowen, Mark",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1776729471292",
+      "timestamp": "2026-04-20T23:57:51.292Z",
+      "user": "Rodrigues, Donald",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1776727986551",
+      "timestamp": "2026-04-20T23:33:06.551Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1776727980387",
+      "timestamp": "2026-04-20T23:33:00.387Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1776727614958",
+      "timestamp": "2026-04-20T23:26:54.958Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1776726474392",
+      "timestamp": "2026-04-20T23:07:54.392Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1776726160810",
+      "timestamp": "2026-04-20T23:02:40.810Z",
+      "user": "Diaz, Rickey",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1776726112065",
+      "timestamp": "2026-04-20T23:01:52.065Z",
+      "user": "Hughes, Allen",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1776726106538",
+      "timestamp": "2026-04-20T23:01:46.538Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Capps, Macy",
+      "details": "Edited volunteer (Type: Volunteer, Hole: 14)"
     }
   ]
 }
