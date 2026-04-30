@@ -5393,7 +5393,7 @@
       "address": "1423 Monarch Trl Northlake, TX 76226",
       "volId": "7806",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false,
+      "hasVolunteerPassword": true,
       "volunteerPassword": "$2b$10$yjP8aIKo1hU5IGPaEss/Fe6yoDtc4ZlCUQnwMxLMPutbGyx6hq9Ua"
     },
     {
@@ -9931,6 +9931,15 @@
   },
   "activityLog": [
     {
+      "id": "1777568881795",
+      "timestamp": "2026-04-30T17:08:01.796Z",
+      "user": "Craft, John",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
       "id": "1777567866057",
       "timestamp": "2026-04-30T16:51:06.057Z",
       "user": "Hill, Michael",
@@ -11720,15 +11729,6 @@
       "action": "login",
       "target": "",
       "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776726474392",
-      "timestamp": "2026-04-20T23:07:54.392Z",
-      "user": "Trout, Wayne",
-      "userType": "Captain",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Captain portal"
     }
   ]
 }
