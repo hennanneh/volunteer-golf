@@ -654,13 +654,13 @@
         "Wednesday PM": true,
         "Thursday AM": true,
         "Friday PM": true,
-        "Saturday AM": true,
-        "Sunday PM": true
+        "Saturday AM": true
       },
       "volId": "2393",
       "address": "1109 Byron Lane Arlington, TX 76012-1829",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false
+      "hasVolunteerPassword": false,
+      "notes": "May not be able to work Sunday.  Pastor.  We will adjust as needed.  TBD\n"
     },
     {
       "id": "3034",
@@ -1655,7 +1655,6 @@
       "yearsWorked": 2,
       "hat": "",
       "scheduled": {
-        "Monday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
         "Saturday PM": true,
@@ -4275,8 +4274,12 @@
         "Tuesday AM": true,
         "Wednesday AM": true,
         "Thursday AM": true,
+        "Thursday PM": true,
+        "Friday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true,
         "Sunday PM": true
       },
       "address": "6428 Maple Drive The Colony, TX 75056",
@@ -6367,8 +6370,6 @@
       "yearsWorked": 13,
       "hat": "",
       "scheduled": {
-        "Monday AM": true,
-        "Monday PM": true,
         "Tuesday AM": true,
         "Tuesday PM": true,
         "Wednesday AM": true,
@@ -7260,8 +7261,6 @@
       "yearsWorked": 2,
       "hat": "",
       "scheduled": {
-        "Monday PM": true,
-        "Tuesday PM": true,
         "Wednesday PM": true,
         "Thursday PM": true,
         "Friday AM": true,
@@ -8039,9 +8038,6 @@
       "scheduled": {
         "Monday AM": true,
         "Monday PM": true,
-        "Tuesday AM": true,
-        "Tuesday PM": true,
-        "Wednesday AM": true,
         "Wednesday PM": true,
         "Thursday AM": true,
         "Thursday PM": true,
@@ -9932,6 +9928,33 @@
   },
   "activityLog": [
     {
+      "id": "1777560879028",
+      "timestamp": "2026-04-30T14:54:39.028Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1777558231761",
+      "timestamp": "2026-04-30T14:10:31.761Z",
+      "user": "Quintana, Mike",
+      "userType": "Captain",
+      "action": "edit-notes",
+      "target": "Burkhead, Max",
+      "details": "Updated volunteer notes"
+    },
+    {
+      "id": "1777557788847",
+      "timestamp": "2026-04-30T14:03:08.847Z",
+      "user": "Quintana, Mike",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1777556887747",
       "timestamp": "2026-04-30T13:48:07.747Z",
       "user": "Trout, Wayne",
@@ -11703,33 +11726,6 @@
       "action": "login",
       "target": "",
       "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776730484121",
-      "timestamp": "2026-04-21T00:14:44.121Z",
-      "user": "Mcgowen, Mark",
-      "userType": "Volunteer",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Volunteer portal"
-    },
-    {
-      "id": "1776730385461",
-      "timestamp": "2026-04-21T00:13:05.461Z",
-      "user": "Mcgowen, Mark",
-      "userType": "Volunteer",
-      "action": "password-change",
-      "target": "",
-      "details": "Changed volunteer password"
-    },
-    {
-      "id": "1776730324286",
-      "timestamp": "2026-04-21T00:12:04.286Z",
-      "user": "Mcgowen, Mark",
-      "userType": "Volunteer",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Volunteer portal"
     }
   ]
 }
