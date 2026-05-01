@@ -7052,6 +7052,7 @@
       "volId": "3974",
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
+      "noOutingPreference": true,
       "volunteerPassword": "$2b$10$OLpLZvvqXK5swuDpMbj85O0cpMpNAr3iQM8V9/snSzaz/M4PjEdHq"
     },
     {
@@ -9931,6 +9932,15 @@
   },
   "activityLog": [
     {
+      "id": "1777631815512",
+      "timestamp": "2026-05-01T10:36:55.512Z",
+      "user": "Schafer, John",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
       "id": "1777617226558",
       "timestamp": "2026-05-01T06:33:46.558Z",
       "user": "Butler, Mark",
@@ -11716,15 +11726,6 @@
       "id": "1776730324286",
       "timestamp": "2026-04-21T00:12:04.286Z",
       "user": "Mcgowen, Mark",
-      "userType": "Volunteer",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Volunteer portal"
-    },
-    {
-      "id": "1776729471292",
-      "timestamp": "2026-04-20T23:57:51.292Z",
-      "user": "Rodrigues, Donald",
       "userType": "Volunteer",
       "action": "login",
       "target": "",
