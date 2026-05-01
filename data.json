@@ -9933,6 +9933,15 @@
   },
   "activityLog": [
     {
+      "id": "1777667990412",
+      "timestamp": "2026-05-01T20:39:50.412Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1777665209287",
       "timestamp": "2026-05-01T19:53:29.287Z",
       "user": "Trout, Wayne",
@@ -11722,15 +11731,6 @@
       "action": "logout",
       "target": "",
       "details": "Logged out of Volunteer portal"
-    },
-    {
-      "id": "1776736314002",
-      "timestamp": "2026-04-21T01:51:54.002Z",
-      "user": "Butler, Mark",
-      "userType": "Volunteer",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Volunteer portal"
     }
   ]
 }
