@@ -9932,6 +9932,15 @@
   },
   "activityLog": [
     {
+      "id": "1777633513138",
+      "timestamp": "2026-05-01T11:05:13.138Z",
+      "user": "Schafer, John",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1777631815512",
       "timestamp": "2026-05-01T10:36:55.512Z",
       "user": "Schafer, John",
@@ -11721,15 +11730,6 @@
       "action": "password-change",
       "target": "",
       "details": "Changed volunteer password"
-    },
-    {
-      "id": "1776730324286",
-      "timestamp": "2026-04-21T00:12:04.286Z",
-      "user": "Mcgowen, Mark",
-      "userType": "Volunteer",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Volunteer portal"
     }
   ]
 }
