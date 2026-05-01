@@ -9933,6 +9933,42 @@
   },
   "activityLog": [
     {
+      "id": "1777661437014",
+      "timestamp": "2026-05-01T18:50:37.015Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1777659816231",
+      "timestamp": "2026-05-01T18:23:36.231Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1777659754322",
+      "timestamp": "2026-05-01T18:22:34.322Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1777659236967",
+      "timestamp": "2026-05-01T18:13:56.967Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
       "id": "1777653931319",
       "timestamp": "2026-05-01T16:45:31.319Z",
       "user": "Montalvo, Sammy",
@@ -11691,42 +11727,6 @@
       "id": "1776736301294",
       "timestamp": "2026-04-21T01:51:41.294Z",
       "user": "Butler, Mark",
-      "userType": "Volunteer",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Volunteer portal"
-    },
-    {
-      "id": "1776735956574",
-      "timestamp": "2026-04-21T01:45:56.574Z",
-      "user": "Butler, Mark",
-      "userType": "Volunteer",
-      "action": "password-change",
-      "target": "",
-      "details": "Changed volunteer password"
-    },
-    {
-      "id": "1776735907182",
-      "timestamp": "2026-04-21T01:45:07.182Z",
-      "user": "Butler, Mark",
-      "userType": "Volunteer",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Volunteer portal"
-    },
-    {
-      "id": "1776735653244",
-      "timestamp": "2026-04-21T01:40:53.244Z",
-      "user": "White, Gary",
-      "userType": "Volunteer",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Volunteer portal"
-    },
-    {
-      "id": "1776735338225",
-      "timestamp": "2026-04-21T01:35:38.225Z",
-      "user": "White, Gary",
       "userType": "Volunteer",
       "action": "logout",
       "target": "",
