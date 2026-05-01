@@ -9931,6 +9931,15 @@
   },
   "activityLog": [
     {
+      "id": "1777617226558",
+      "timestamp": "2026-05-01T06:33:46.558Z",
+      "user": "Butler, Mark",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1777593294939",
       "timestamp": "2026-04-30T23:54:54.939Z",
       "user": "Clayton, Rodney",
@@ -11720,15 +11729,6 @@
       "action": "login",
       "target": "",
       "details": "Logged into Volunteer portal"
-    },
-    {
-      "id": "1776727986551",
-      "timestamp": "2026-04-20T23:33:06.551Z",
-      "user": "Howrey, Anne",
-      "userType": "Admin",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Admin portal"
     }
   ]
 }
