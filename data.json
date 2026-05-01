@@ -8120,7 +8120,8 @@
       "volId": "9787",
       "address": "3201 Sth 23rd st Apt 236 Abilene, TX 79605",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false
+      "hasVolunteerPassword": false,
+      "volunteerPassword": "$2b$10$an5eBwDXH4vvzmqttrv/GufoCUapstGRvazrXdQcqagJDFgGKUIii"
     },
     {
       "id": "278",
@@ -9932,6 +9933,33 @@
   },
   "activityLog": [
     {
+      "id": "1777650355750",
+      "timestamp": "2026-05-01T15:45:55.750Z",
+      "user": "Waruta, James",
+      "userType": "Volunteer",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed volunteer password"
+    },
+    {
+      "id": "1777650209302",
+      "timestamp": "2026-05-01T15:43:29.302Z",
+      "user": "Waruta, James",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1777649854881",
+      "timestamp": "2026-05-01T15:37:34.882Z",
+      "user": "Montalvo, Sammy",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1777647327097",
       "timestamp": "2026-05-01T14:55:27.097Z",
       "user": "Nederostek, Brad",
@@ -11698,33 +11726,6 @@
     {
       "id": "1776733675748",
       "timestamp": "2026-04-21T01:07:55.748Z",
-      "user": "White, Gary",
-      "userType": "Volunteer",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Volunteer portal"
-    },
-    {
-      "id": "1776733527236",
-      "timestamp": "2026-04-21T01:05:27.236Z",
-      "user": "White, Gary",
-      "userType": "Volunteer",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Volunteer portal"
-    },
-    {
-      "id": "1776733332081",
-      "timestamp": "2026-04-21T01:02:12.081Z",
-      "user": "White, Gary",
-      "userType": "Volunteer",
-      "action": "password-change",
-      "target": "",
-      "details": "Changed volunteer password"
-    },
-    {
-      "id": "1776733273600",
-      "timestamp": "2026-04-21T01:01:13.600Z",
       "user": "White, Gary",
       "userType": "Volunteer",
       "action": "login",
