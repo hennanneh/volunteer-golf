@@ -9932,6 +9932,15 @@
   },
   "activityLog": [
     {
+      "id": "1777642753933",
+      "timestamp": "2026-05-01T13:39:13.933Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1777637461600",
       "timestamp": "2026-05-01T12:11:01.600Z",
       "user": "Trout, Wayne",
@@ -11721,15 +11730,6 @@
       "action": "login",
       "target": "",
       "details": "Logged into Admin portal"
-    },
-    {
-      "id": "1776731041511",
-      "timestamp": "2026-04-21T00:24:01.511Z",
-      "user": "Johnson, Kenny",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
     }
   ]
 }
