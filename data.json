@@ -9932,6 +9932,24 @@
   },
   "activityLog": [
     {
+      "id": "1777647327097",
+      "timestamp": "2026-05-01T14:55:27.097Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1777644426873",
+      "timestamp": "2026-05-01T14:07:06.873Z",
+      "user": "Craft, John",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
       "id": "1777642753933",
       "timestamp": "2026-05-01T13:39:13.933Z",
       "user": "Trout, Wayne",
@@ -11712,24 +11730,6 @@
       "action": "login",
       "target": "",
       "details": "Logged into Volunteer portal"
-    },
-    {
-      "id": "1776733169560",
-      "timestamp": "2026-04-21T00:59:29.560Z",
-      "user": "Watson, Stan",
-      "userType": "Volunteer",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Volunteer portal"
-    },
-    {
-      "id": "1776732805469",
-      "timestamp": "2026-04-21T00:53:25.469Z",
-      "user": "Harrell, John",
-      "userType": "Admin",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Admin portal"
     }
   ]
 }
