@@ -8120,7 +8120,7 @@
       "volId": "9787",
       "address": "3201 Sth 23rd st Apt 236 Abilene, TX 79605",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false,
+      "hasVolunteerPassword": true,
       "volunteerPassword": "$2b$10$an5eBwDXH4vvzmqttrv/GufoCUapstGRvazrXdQcqagJDFgGKUIii"
     },
     {
@@ -9933,6 +9933,24 @@
   },
   "activityLog": [
     {
+      "id": "1777653931319",
+      "timestamp": "2026-05-01T16:45:31.319Z",
+      "user": "Montalvo, Sammy",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1777651426836",
+      "timestamp": "2026-05-01T16:03:46.836Z",
+      "user": "Waruta, James",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
       "id": "1777650355750",
       "timestamp": "2026-05-01T15:45:55.750Z",
       "user": "Waruta, James",
@@ -11713,24 +11731,6 @@
       "action": "logout",
       "target": "",
       "details": "Logged out of Volunteer portal"
-    },
-    {
-      "id": "1776735035250",
-      "timestamp": "2026-04-21T01:30:35.250Z",
-      "user": "Mansir, Greg",
-      "userType": "Volunteer",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Volunteer portal"
-    },
-    {
-      "id": "1776733675748",
-      "timestamp": "2026-04-21T01:07:55.748Z",
-      "user": "White, Gary",
-      "userType": "Volunteer",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Volunteer portal"
     }
   ]
 }
