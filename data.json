@@ -2284,7 +2284,7 @@
       },
       "address": "9012 N Longwood Dr Granbury, TX 76049-4709",
       "volId": "421",
-      "hasAdminPassword": false,
+      "hasAdminPassword": true,
       "hasVolunteerPassword": false,
       "adminPassword": "$2b$10$52VdRTtOJc7.riA5b93ScuAbew2kz1a3IPmSWZEOk47q3Z4yp117a",
       "adminPasswordSetAt": "2026-04-29T19:41:25.640Z"
@@ -5385,7 +5385,7 @@
       "address": "1423 Monarch Trl Northlake, TX 76226",
       "volId": "7806",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false,
+      "hasVolunteerPassword": true,
       "volunteerPassword": "$2b$10$yjP8aIKo1hU5IGPaEss/Fe6yoDtc4ZlCUQnwMxLMPutbGyx6hq9Ua"
     },
     {
@@ -8112,7 +8112,7 @@
       "volId": "9787",
       "address": "3201 Sth 23rd st Apt 236 Abilene, TX 79605",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false,
+      "hasVolunteerPassword": true,
       "volunteerPassword": "$2b$10$an5eBwDXH4vvzmqttrv/GufoCUapstGRvazrXdQcqagJDFgGKUIii"
     },
     {
@@ -9925,6 +9925,33 @@
   },
   "activityLog": [
     {
+      "id": "1777749987062",
+      "timestamp": "2026-05-02T19:26:27.062Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1777749765596",
+      "timestamp": "2026-05-02T19:22:45.596Z",
+      "user": "Bird, Bob",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1777749365282",
+      "timestamp": "2026-05-02T19:16:05.282Z",
+      "user": "Reddington, Joseph",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
       "id": "1777740208922",
       "timestamp": "2026-05-02T16:43:28.922Z",
       "user": "Edwards, Bill",
@@ -11692,33 +11719,6 @@
       "id": "1776726160810",
       "timestamp": "2026-04-20T23:02:40.810Z",
       "user": "Diaz, Rickey",
-      "userType": "Volunteer",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Volunteer portal"
-    },
-    {
-      "id": "1776726112065",
-      "timestamp": "2026-04-20T23:01:52.065Z",
-      "user": "Hughes, Allen",
-      "userType": "Volunteer",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Volunteer portal"
-    },
-    {
-      "id": "1776726106538",
-      "timestamp": "2026-04-20T23:01:46.538Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "edit-volunteer",
-      "target": "Capps, Macy",
-      "details": "Edited volunteer (Type: Volunteer, Hole: 14)"
-    },
-    {
-      "id": "1776725742278",
-      "timestamp": "2026-04-20T22:55:42.278Z",
-      "user": "Hoover, Thomas",
       "userType": "Volunteer",
       "action": "login",
       "target": "",
