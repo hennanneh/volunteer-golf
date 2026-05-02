@@ -9933,6 +9933,24 @@
   },
   "activityLog": [
     {
+      "id": "1777733633047",
+      "timestamp": "2026-05-02T14:53:53.047Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1777733603156",
+      "timestamp": "2026-05-02T14:53:23.156Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1777724941909",
       "timestamp": "2026-05-02T12:29:01.909Z",
       "user": "Trout, Wayne",
@@ -11713,24 +11731,6 @@
       "action": "login",
       "target": "",
       "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776767091226",
-      "timestamp": "2026-04-21T10:24:51.226Z",
-      "user": "Edwards, Bill",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776738091900",
-      "timestamp": "2026-04-21T02:21:31.901Z",
-      "user": "Butler, Mark",
-      "userType": "Volunteer",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Volunteer portal"
     }
   ]
 }
