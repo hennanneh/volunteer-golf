@@ -9933,9 +9933,18 @@
   },
   "activityLog": [
     {
-      "id": "1777678414952",
-      "timestamp": "2026-05-01T23:33:34.952Z",
-      "user": "Clayton, Rodney",
+      "id": "1777686555550",
+      "timestamp": "2026-05-02T01:49:15.550Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1777686497627",
+      "timestamp": "2026-05-02T01:48:17.627Z",
+      "user": "Trout, Wayne",
       "userType": "Captain",
       "action": "login",
       "target": "",
@@ -11722,15 +11731,6 @@
       "action": "login",
       "target": "",
       "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776736685080",
-      "timestamp": "2026-04-21T01:58:05.080Z",
-      "user": "Butler, Mark",
-      "userType": "Captain",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Captain portal"
     }
   ]
 }
