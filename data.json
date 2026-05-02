@@ -7275,10 +7275,10 @@
       "hat": "",
       "scheduled": {
         "Wednesday AM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true
+        "Thursday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
+        "Sunday PM": true
       },
       "volId": "8462",
       "address": "327 Jack Nicklaus Dr Austin, TX 78738",
@@ -7317,10 +7317,10 @@
       "hat": "",
       "scheduled": {
         "Wednesday AM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true
+        "Thursday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
+        "Sunday PM": true
       },
       "volId": "8463",
       "address": "327 Jack Nicklaus Drive Austin, TX 78738",
