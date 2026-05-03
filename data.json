@@ -9933,6 +9933,15 @@
   },
   "activityLog": [
     {
+      "id": "1777823304034",
+      "timestamp": "2026-05-03T15:48:24.034Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1777818298500",
       "timestamp": "2026-05-03T14:24:58.501Z",
       "user": "Sale, Lynn",
@@ -11718,15 +11727,6 @@
       "id": "1776726160810",
       "timestamp": "2026-04-20T23:02:40.810Z",
       "user": "Diaz, Rickey",
-      "userType": "Volunteer",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Volunteer portal"
-    },
-    {
-      "id": "1776726112065",
-      "timestamp": "2026-04-20T23:01:52.065Z",
-      "user": "Hughes, Allen",
       "userType": "Volunteer",
       "action": "login",
       "target": "",
