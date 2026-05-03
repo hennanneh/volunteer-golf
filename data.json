@@ -1549,7 +1549,12 @@
       "volId": "7865",
       "address": "3505 park hollow street fort worth, TX 76109",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false
+      "hasVolunteerPassword": false,
+      "pairingPreferences": [
+        "5307",
+        "5240"
+      ],
+      "volunteerPassword": "$2b$10$fhZZejmkPKZZ/x4A1emOzu/3GCuOADDHO.4XzWW9U1zneC84l.Hme"
     },
     {
       "id": "636",
@@ -9933,6 +9938,42 @@
   },
   "activityLog": [
     {
+      "id": "1777829781771",
+      "timestamp": "2026-05-03T17:36:21.771Z",
+      "user": "Davis, Sam",
+      "userType": "Volunteer",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed volunteer password"
+    },
+    {
+      "id": "1777829747059",
+      "timestamp": "2026-05-03T17:35:47.059Z",
+      "user": "Davis, Sam",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1777828314101",
+      "timestamp": "2026-05-03T17:11:54.101Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1777828287344",
+      "timestamp": "2026-05-03T17:11:27.344Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1777823304034",
       "timestamp": "2026-05-03T15:48:24.034Z",
       "user": "Thomas, Stephen",
@@ -11695,42 +11736,6 @@
       "action": "login",
       "target": "",
       "details": "Logged into Admin portal"
-    },
-    {
-      "id": "1776727980387",
-      "timestamp": "2026-04-20T23:33:00.387Z",
-      "user": "Howrey, Anne",
-      "userType": "Captain",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Captain portal"
-    },
-    {
-      "id": "1776727614958",
-      "timestamp": "2026-04-20T23:26:54.958Z",
-      "user": "Trout, Wayne",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1776726474392",
-      "timestamp": "2026-04-20T23:07:54.392Z",
-      "user": "Trout, Wayne",
-      "userType": "Captain",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Captain portal"
-    },
-    {
-      "id": "1776726160810",
-      "timestamp": "2026-04-20T23:02:40.810Z",
-      "user": "Diaz, Rickey",
-      "userType": "Volunteer",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Volunteer portal"
     }
   ]
 }
