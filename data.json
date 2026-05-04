@@ -9934,6 +9934,15 @@
   },
   "activityLog": [
     {
+      "id": "1777865324251",
+      "timestamp": "2026-05-04T03:28:44.251Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1777852492178",
       "timestamp": "2026-05-03T23:54:52.178Z",
       "user": "Zamzow, Steve",
@@ -11723,15 +11732,6 @@
       "action": "password-change",
       "target": "",
       "details": "Changed volunteer password"
-    },
-    {
-      "id": "1776730324286",
-      "timestamp": "2026-04-21T00:12:04.286Z",
-      "user": "Mcgowen, Mark",
-      "userType": "Volunteer",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Volunteer portal"
     }
   ]
 }
