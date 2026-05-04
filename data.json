@@ -3177,8 +3177,6 @@
       "yearsWorked": 1,
       "hat": "",
       "scheduled": {
-        "Monday PM": true,
-        "Tuesday PM": true,
         "Wednesday PM": true,
         "Thursday AM": true,
         "Friday PM": true,
@@ -3217,7 +3215,7 @@
       "type": "Captain",
       "hole": 8,
       "phone": "(806) 549-0725",
-      "email": "holtsrumom@gmail.com",
+      "email": "sammy_holt@sbcglobal.net",
       "yearsWorked": 19,
       "hat": "",
       "scheduled": {
@@ -3239,7 +3237,9 @@
       "address": "6602 Brentwood Ave, 6602 Brentwood Av Lubbock, TX 79424",
       "volId": "2507",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false
+      "hasVolunteerPassword": false,
+      "hatReceived": false,
+      "notes": ""
     },
     {
       "id": "2543",
@@ -3247,7 +3247,7 @@
       "type": "Captain",
       "hole": 8,
       "phone": "(806) 632-3771",
-      "email": "sammy_holt@sbcglobal.net",
+      "email": "holtsrumom@gmail.com",
       "yearsWorked": 19,
       "hat": "",
       "scheduled": {
@@ -3270,6 +3270,8 @@
       "volId": "2543",
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
+      "hatReceived": false,
+      "notes": "",
       "volunteerPassword": "$2b$10$77jIj6851gGLXDRX4bD27.t6cqO3nbCoLTo3akfoGjQqChTaPpr0W"
     },
     {
@@ -7073,7 +7075,7 @@
       "yearsWorked": 3,
       "hat": "",
       "scheduled": {
-        "Tuesday AM": true,
+        "Wednesday AM": true,
         "Thursday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
@@ -8609,7 +8611,18 @@
       "volunteerPassword": "$2b$10$9H06MCPpLzQI65orJ1OtZuARWqRVdjz2/cvj7yZOmCIWXLEE187tq"
     }
   ],
-  "checkIns": [],
+  "checkIns": [
+    {
+      "volunteerId": "3034",
+      "volunteerName": "Burnett, Eric",
+      "hole": 9,
+      "day": "Monday",
+      "shift": "PM",
+      "checkedInBy": "Edwards, Bill",
+      "timestamp": "2026-05-04T22:18:53.311Z",
+      "isAlternate": false
+    }
+  ],
   "submissions": [],
   "settings": {
     "tournamentName": "Golf Tournament 2026",
@@ -8624,6 +8637,51 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1777933054440",
+      "timestamp": "2026-05-04T22:17:34.440Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1777932639837",
+      "timestamp": "2026-05-04T22:10:39.837Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1777932392777",
+      "timestamp": "2026-05-04T22:06:32.777Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1777932317617",
+      "timestamp": "2026-05-04T22:05:17.617Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Holt, Sammy",
+      "details": "Edited volunteer (Type: Captain, Hole: 8)"
+    },
+    {
+      "id": "1777932287640",
+      "timestamp": "2026-05-04T22:04:47.640Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Holt, Sharron",
+      "details": "Edited volunteer (Type: Captain, Hole: 8)"
+    },
     {
       "id": "1777931477101",
       "timestamp": "2026-05-04T21:51:17.101Z",
