@@ -8414,9 +8414,10 @@
       "yearsWorked": 12,
       "hat": "",
       "scheduled": {
-        "Wednesday PM": true,
-        "Thursday PM": true,
+        "Monday AM": true,
+        "Monday PM": true,
         "Friday AM": true,
+        "Friday PM": true,
         "Saturday PM": true,
         "Sunday AM": true
       },
@@ -8621,6 +8622,24 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1777926037522",
+      "timestamp": "2026-05-04T20:20:37.522Z",
+      "user": "Gastinel, Buck",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1777925427795",
+      "timestamp": "2026-05-04T20:10:27.795Z",
+      "user": "Gastinel, Buck",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
     {
       "id": "1777923889232",
       "timestamp": "2026-05-04T19:44:49.232Z",
