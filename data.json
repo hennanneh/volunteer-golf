@@ -8610,6 +8610,78 @@
   },
   "activityLog": [
     {
+      "id": "1777906716230",
+      "timestamp": "2026-05-04T14:58:36.230Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1777904921278",
+      "timestamp": "2026-05-04T14:28:41.278Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1777904428606",
+      "timestamp": "2026-05-04T14:20:28.606Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1777904269837",
+      "timestamp": "2026-05-04T14:17:49.837Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1777904266868",
+      "timestamp": "2026-05-04T14:17:46.868Z",
+      "user": "Wehmeyer, Tom",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1777904026314",
+      "timestamp": "2026-05-04T14:13:46.314Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1777903453054",
+      "timestamp": "2026-05-04T14:04:13.055Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1777903312668",
+      "timestamp": "2026-05-04T14:01:52.668Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1777902904089",
       "timestamp": "2026-05-04T13:55:04.089Z",
       "user": "Bishop, Woody",
