@@ -359,7 +359,7 @@
       "volId": "7794",
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
-      "volunteerPassword": "$2b$10$FLJjCG.lWOsX9MCOmR5a6.M38iCcGDmMuShXSBET.NSoF.nfDtUQq"
+      "volunteerPassword": "$2b$10$4nExSJKA7rhRXIhQy5tcO..fvC5MSGe1H6mq.lvYX.DVXpVgfnUYG"
     },
     {
       "id": "10207",
@@ -945,10 +945,11 @@
       "hat": "",
       "scheduled": {
         "Monday AM": true,
-        "Thursday AM": true,
+        "Tuesday AM": true,
+        "Friday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
-        "Sunday PM": true
+        "Saturday PM": true
       },
       "address": "8501 Coffee Springs Drive\r\nFort Worth, TX 76131",
       "volId": "10675",
@@ -8620,6 +8621,51 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1777923889232",
+      "timestamp": "2026-05-04T19:44:49.232Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1777923878222",
+      "timestamp": "2026-05-04T19:44:38.222Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1777921686121",
+      "timestamp": "2026-05-04T19:08:06.121Z",
+      "user": "Mills, Brad",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1777921577169",
+      "timestamp": "2026-05-04T19:06:17.169Z",
+      "user": "Bird, Bob",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1777921556544",
+      "timestamp": "2026-05-04T19:05:56.544Z",
+      "user": "Bird, Bob",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
     {
       "id": "1777920536567",
       "timestamp": "2026-05-04T18:48:56.567Z",
