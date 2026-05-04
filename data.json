@@ -31,11 +31,12 @@
       "yearsWorked": 4,
       "hat": "",
       "scheduled": {
-        "Wednesday AM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true
+        "Tuesday AM": true,
+        "Tuesday PM": true,
+        "Thursday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
+        "Sunday PM": true
       },
       "volId": "9015",
       "address": "5312 Lake Mead Trail Ft Worth, TX 76137-5344",
@@ -575,6 +576,7 @@
       "hat": "",
       "scheduled": {
         "Tuesday AM": true,
+        "Tuesday PM": true,
         "Thursday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
@@ -628,10 +630,10 @@
       "hat": "",
       "scheduled": {
         "Wednesday AM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true
+        "Thursday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
+        "Sunday PM": true
       },
       "volId": "9610",
       "address": "4101 King Air Ct Granbury, TX 76049",
@@ -649,10 +651,10 @@
       "hat": "",
       "scheduled": {
         "Wednesday AM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true
+        "Thursday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
+        "Sunday PM": true
       },
       "volId": "9807",
       "address": "4101 King Air Ct Granbury, TX 76049",
@@ -811,7 +813,8 @@
         "Thursday PM": true,
         "Friday AM": true,
         "Saturday PM": true,
-        "Sunday AM": true
+        "Sunday AM": true,
+        "Sunday PM": true
       },
       "volId": "7998",
       "address": "512 N 4TH STREET Sanger, TX 76266",
@@ -830,8 +833,6 @@
       "scheduled": {
         "Monday AM": true,
         "Monday PM": true,
-        "Tuesday AM": true,
-        "Tuesday PM": true,
         "Wednesday AM": true,
         "Wednesday PM": true,
         "Thursday AM": true,
@@ -1254,6 +1255,7 @@
       "hat": "",
       "scheduled": {
         "Tuesday AM": true,
+        "Tuesday PM": true,
         "Thursday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
@@ -1300,6 +1302,7 @@
         "Thursday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
+        "Sunday AM": true,
         "Sunday PM": true
       },
       "volId": "10229",
@@ -1318,6 +1321,7 @@
       "hat": "",
       "scheduled": {
         "Monday AM": true,
+        "Monday PM": true,
         "Thursday PM": true,
         "Friday AM": true,
         "Saturday PM": true,
@@ -2068,11 +2072,13 @@
       "hat": "",
       "scheduled": {
         "Monday AM": true,
+        "Monday PM": true,
         "Tuesday AM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true
+        "Tuesday PM": true,
+        "Thursday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
+        "Sunday PM": true
       },
       "volId": "136",
       "address": "4512 Ridge North Rd Fort Worth, TX 76126",
@@ -2183,6 +2189,7 @@
       "yearsWorked": 1,
       "hat": "",
       "scheduled": {
+        "Monday AM": true,
         "Monday PM": true,
         "Thursday PM": true,
         "Friday AM": true,
@@ -2403,7 +2410,8 @@
       "address": "214 W Greenbriar Ln\r\nColleyville, TX 76034",
       "volId": "10667",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false
+      "hasVolunteerPassword": true,
+      "volunteerPassword": "$2b$10$TQ6zPcLveZ7Zb.xJZ45.dOorSt0laE8aaN2lY0tScMKxu5li9tmxa"
     },
     {
       "id": "4128",
@@ -2467,7 +2475,6 @@
       "yearsWorked": 4,
       "hat": "",
       "scheduled": {
-        "Wednesday AM": true,
         "Wednesday PM": true,
         "Thursday PM": true,
         "Friday AM": true,
@@ -2535,10 +2542,7 @@
       "scheduled": {
         "Monday AM": true,
         "Monday PM": true,
-        "Tuesday AM": true,
-        "Tuesday PM": true,
         "Wednesday AM": true,
-        "Wednesday PM": true,
         "Thursday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
@@ -2947,6 +2951,7 @@
       "hat": "",
       "scheduled": {
         "Tuesday AM": true,
+        "Tuesday PM": true,
         "Thursday PM": true,
         "Friday AM": true,
         "Saturday PM": true,
@@ -3056,7 +3061,6 @@
       "scheduled": {
         "Monday AM": true,
         "Tuesday PM": true,
-        "Wednesday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
         "Saturday PM": true,
@@ -3436,10 +3440,11 @@
       "hat": "",
       "scheduled": {
         "Tuesday AM": true,
+        "Tuesday PM": true,
         "Thursday PM": true,
         "Friday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true
+        "Saturday AM": true,
+        "Saturday PM": true
       },
       "volId": "9662",
       "address": "336 Vista Way Saginaw, TX 76179",
@@ -3762,9 +3767,8 @@
       "yearsWorked": 1,
       "hat": "",
       "scheduled": {
-        "Monday PM": true,
+        "Monday AM": true,
         "Tuesday PM": true,
-        "Wednesday PM": true,
         "Thursday PM": true,
         "Friday AM": true,
         "Saturday PM": true,
@@ -4441,7 +4445,7 @@
       "scheduled": {
         "Wednesday AM": true,
         "Thursday PM": true,
-        "Friday AM": true,
+        "Friday PM": true,
         "Saturday PM": true,
         "Sunday AM": true
       },
@@ -4673,9 +4677,6 @@
       "yearsWorked": 3,
       "hat": "",
       "scheduled": {
-        "Wednesday PM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
         "Saturday PM": true,
         "Sunday AM": true
       },
@@ -5104,7 +5105,8 @@
       "yearsWorked": 1,
       "hat": "",
       "scheduled": {
-        "Tuesday PM": true,
+        "Tuesday AM": true,
+        "Wednesday PM": true,
         "Thursday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
@@ -5147,10 +5149,10 @@
       "hat": "",
       "scheduled": {
         "Wednesday AM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true
+        "Thursday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
+        "Sunday PM": true
       },
       "volId": "10362",
       "address": "4107 Fairway Dr Granbury, TX 76049",
@@ -5395,7 +5397,8 @@
       "yearsWorked": 4,
       "hat": "",
       "scheduled": {
-        "Tuesday PM": true,
+        "Tuesday AM": true,
+        "Wednesday PM": true,
         "Thursday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
@@ -5416,7 +5419,8 @@
       "yearsWorked": 4,
       "hat": "",
       "scheduled": {
-        "Tuesday PM": true,
+        "Tuesday AM": true,
+        "Wednesday PM": true,
         "Thursday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
@@ -6868,11 +6872,8 @@
       "yearsWorked": 32,
       "hat": "",
       "scheduled": {
-        "Monday AM": true,
-        "Monday PM": true,
         "Tuesday AM": true,
         "Tuesday PM": true,
-        "Wednesday AM": true,
         "Wednesday PM": true,
         "Thursday AM": true,
         "Thursday PM": true,
@@ -7048,12 +7049,14 @@
       "yearsWorked": 5,
       "hat": "",
       "scheduled": {
+        "Monday AM": true,
         "Monday PM": true,
+        "Tuesday AM": true,
         "Tuesday PM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true
+        "Thursday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
+        "Sunday PM": true
       },
       "volId": "8499",
       "address": "4112 Ridglea County Club Dr #1614 Benbrook, TX 76126",
@@ -7864,10 +7867,11 @@
       "hat": "",
       "scheduled": {
         "Tuesday AM": true,
+        "Tuesday PM": true,
         "Thursday PM": true,
         "Friday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true
+        "Sunday AM": true,
+        "Sunday PM": true
       },
       "volId": "1790",
       "address": "8513 Woodslane Drive Fort Worth, TX 76179",
@@ -8207,12 +8211,12 @@
       "yearsWorked": 3,
       "hat": "",
       "scheduled": {
-        "Tuesday AM": true,
-        "Wednesday PM": true,
-        "Thursday AM": true,
-        "Friday PM": true,
-        "Saturday AM": true,
-        "Sunday PM": true
+        "Monday PM": true,
+        "Wednesday AM": true,
+        "Thursday PM": true,
+        "Friday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true
       },
       "volId": "9398",
       "address": "12620 Foster Circle Azle, TX 76020",
@@ -8383,8 +8387,6 @@
       "yearsWorked": 6,
       "hat": "",
       "scheduled": {
-        "Monday AM": true,
-        "Monday PM": true,
         "Tuesday AM": true,
         "Tuesday PM": true,
         "Wednesday AM": true,
@@ -8418,8 +8420,8 @@
         "Monday PM": true,
         "Friday AM": true,
         "Friday PM": true,
-        "Saturday PM": true,
-        "Sunday AM": true
+        "Saturday AM": true,
+        "Sunday PM": true
       },
       "volId": "5876",
       "address": "11848 Hickory Cir Fort Worth, TX 76244-4582",
@@ -8622,6 +8624,69 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1777931477101",
+      "timestamp": "2026-05-04T21:51:17.101Z",
+      "user": "Wilson, Todd",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1777930450039",
+      "timestamp": "2026-05-04T21:34:10.039Z",
+      "user": "Montalvo, Sammy",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1777930422322",
+      "timestamp": "2026-05-04T21:33:42.322Z",
+      "user": "Montalvo, Sammy",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1777929879914",
+      "timestamp": "2026-05-04T21:24:39.914Z",
+      "user": "Gastinel, Buck",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1777929865932",
+      "timestamp": "2026-05-04T21:24:25.932Z",
+      "user": "Gastinel, Buck",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1777929472508",
+      "timestamp": "2026-05-04T21:17:52.508Z",
+      "user": "Gastinel, Buck",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1777929185368",
+      "timestamp": "2026-05-04T21:13:05.368Z",
+      "user": "Waller, Gary",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1777926037522",
       "timestamp": "2026-05-04T20:20:37.522Z",
