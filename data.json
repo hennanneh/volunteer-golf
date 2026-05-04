@@ -8079,6 +8079,10 @@
       "address": "3201 Sth 23rd st Apt 236 Abilene, TX 79605",
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
+      "pairingPreferences": [
+        "7692",
+        "10437"
+      ],
       "volunteerPassword": "$2b$10$an5eBwDXH4vvzmqttrv/GufoCUapstGRvazrXdQcqagJDFgGKUIii"
     },
     {
@@ -8609,6 +8613,114 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1777909792943",
+      "timestamp": "2026-05-04T15:49:52.943Z",
+      "user": "Waruta, James",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1777909205873",
+      "timestamp": "2026-05-04T15:40:05.873Z",
+      "user": "Butler, Mark",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1777909177977",
+      "timestamp": "2026-05-04T15:39:37.977Z",
+      "user": "Butler, Mark",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1777909156175",
+      "timestamp": "2026-05-04T15:39:16.175Z",
+      "user": "Womack, Tim",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1777909072763",
+      "timestamp": "2026-05-04T15:37:52.763Z",
+      "user": "Waruta, James",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1777908641671",
+      "timestamp": "2026-05-04T15:30:41.671Z",
+      "user": "Schafer, John",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1777908012100",
+      "timestamp": "2026-05-04T15:20:12.100Z",
+      "user": "Schafer, John",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1777907927151",
+      "timestamp": "2026-05-04T15:18:47.151Z",
+      "user": "Schafer, John",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1777907893065",
+      "timestamp": "2026-05-04T15:18:13.065Z",
+      "user": "Schafer, John",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1777907877212",
+      "timestamp": "2026-05-04T15:17:57.212Z",
+      "user": "Schafer, John",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1777907667318",
+      "timestamp": "2026-05-04T15:14:27.318Z",
+      "user": "Schafer, John",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1777907351384",
+      "timestamp": "2026-05-04T15:09:11.384Z",
+      "user": "Gordon, Gary",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1777906716230",
       "timestamp": "2026-05-04T14:58:36.230Z",
