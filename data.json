@@ -1549,11 +1549,7 @@
       "volId": "7865",
       "address": "3505 park hollow street fort worth, TX 76109",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false,
-      "pairingPreferences": [
-        "5307",
-        "5240"
-      ],
+      "hasVolunteerPassword": true,
       "volunteerPassword": "$2b$10$fhZZejmkPKZZ/x4A1emOzu/3GCuOADDHO.4XzWW9U1zneC84l.Hme"
     },
     {
@@ -9938,22 +9934,40 @@
   },
   "activityLog": [
     {
-      "id": "1777829781771",
-      "timestamp": "2026-05-03T17:36:21.771Z",
-      "user": "Davis, Sam",
-      "userType": "Volunteer",
-      "action": "password-change",
-      "target": "",
-      "details": "Changed volunteer password"
-    },
-    {
-      "id": "1777829747059",
-      "timestamp": "2026-05-03T17:35:47.059Z",
-      "user": "Davis, Sam",
-      "userType": "Volunteer",
+      "id": "1777852492178",
+      "timestamp": "2026-05-03T23:54:52.178Z",
+      "user": "Zamzow, Steve",
+      "userType": "Captain",
       "action": "login",
       "target": "",
-      "details": "Logged into Volunteer portal"
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1777852177208",
+      "timestamp": "2026-05-03T23:49:37.208Z",
+      "user": "Zamzow, Steve",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1777851041788",
+      "timestamp": "2026-05-03T23:30:41.788Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1777851001157",
+      "timestamp": "2026-05-03T23:30:01.157Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
     },
     {
       "id": "1777828314101",
@@ -11718,24 +11732,6 @@
       "action": "login",
       "target": "",
       "details": "Logged into Volunteer portal"
-    },
-    {
-      "id": "1776729471292",
-      "timestamp": "2026-04-20T23:57:51.292Z",
-      "user": "Rodrigues, Donald",
-      "userType": "Volunteer",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Volunteer portal"
-    },
-    {
-      "id": "1776727986551",
-      "timestamp": "2026-04-20T23:33:06.551Z",
-      "user": "Howrey, Anne",
-      "userType": "Admin",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Admin portal"
     }
   ]
 }
