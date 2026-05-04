@@ -829,7 +829,6 @@
       "scheduled": {
         "Monday AM": true,
         "Monday PM": true,
-        "Tuesday AM": true,
         "Tuesday PM": true,
         "Wednesday AM": true,
         "Wednesday PM": true,
@@ -8375,7 +8374,6 @@
       "yearsWorked": 6,
       "hat": "",
       "scheduled": {
-        "Monday AM": true,
         "Monday PM": true,
         "Tuesday AM": true,
         "Tuesday PM": true,
@@ -8613,6 +8611,51 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1777913370280",
+      "timestamp": "2026-05-04T16:49:30.280Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1777913061672",
+      "timestamp": "2026-05-04T16:44:21.672Z",
+      "user": "Wilson, Todd",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1777912235428",
+      "timestamp": "2026-05-04T16:30:35.428Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1777911434888",
+      "timestamp": "2026-05-04T16:17:14.888Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1777910506458",
+      "timestamp": "2026-05-04T16:01:46.458Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
     {
       "id": "1777909792943",
       "timestamp": "2026-05-04T15:49:52.943Z",
