@@ -31,12 +31,11 @@
       "yearsWorked": 4,
       "hat": "",
       "scheduled": {
-        "Tuesday AM": true,
-        "Tuesday PM": true,
-        "Thursday AM": true,
-        "Friday PM": true,
-        "Saturday AM": true,
-        "Sunday PM": true
+        "Wednesday AM": true,
+        "Thursday PM": true,
+        "Friday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true
       },
       "volId": "9015",
       "address": "5312 Lake Mead Trail Ft Worth, TX 76137-5344",
@@ -140,6 +139,7 @@
         "Monday PM": true,
         "Tuesday AM": true,
         "Wednesday AM": true,
+        "Wednesday PM": true,
         "Thursday PM": true,
         "Friday AM": true,
         "Saturday PM": true,
@@ -575,7 +575,6 @@
       "hat": "",
       "scheduled": {
         "Tuesday AM": true,
-        "Tuesday PM": true,
         "Thursday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
@@ -1254,7 +1253,6 @@
       "hat": "",
       "scheduled": {
         "Tuesday AM": true,
-        "Tuesday PM": true,
         "Thursday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
@@ -1319,7 +1317,6 @@
       "hat": "",
       "scheduled": {
         "Monday AM": true,
-        "Monday PM": true,
         "Thursday PM": true,
         "Friday AM": true,
         "Saturday PM": true,
@@ -2070,13 +2067,11 @@
       "hat": "",
       "scheduled": {
         "Monday AM": true,
-        "Monday PM": true,
         "Tuesday AM": true,
-        "Tuesday PM": true,
-        "Thursday AM": true,
-        "Friday PM": true,
-        "Saturday AM": true,
-        "Sunday PM": true
+        "Thursday PM": true,
+        "Friday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true
       },
       "volId": "136",
       "address": "4512 Ridge North Rd Fort Worth, TX 76126",
@@ -2187,7 +2182,6 @@
       "yearsWorked": 1,
       "hat": "",
       "scheduled": {
-        "Monday AM": true,
         "Monday PM": true,
         "Thursday PM": true,
         "Friday AM": true,
@@ -2472,8 +2466,11 @@
       "yearsWorked": 4,
       "hat": "",
       "scheduled": {
+        "Wednesday AM": true,
         "Wednesday PM": true,
+        "Thursday PM": true,
         "Friday AM": true,
+        "Saturday PM": true,
         "Sunday AM": true
       },
       "address": "2407 Lakepoint Drive\r\nKeller, TX 76248",
@@ -2537,7 +2534,10 @@
       "scheduled": {
         "Monday AM": true,
         "Monday PM": true,
+        "Tuesday AM": true,
+        "Tuesday PM": true,
         "Wednesday AM": true,
+        "Wednesday PM": true,
         "Thursday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
@@ -2946,7 +2946,6 @@
       "hat": "",
       "scheduled": {
         "Tuesday AM": true,
-        "Tuesday PM": true,
         "Thursday PM": true,
         "Friday AM": true,
         "Saturday PM": true,
@@ -3436,11 +3435,10 @@
       "hat": "",
       "scheduled": {
         "Tuesday AM": true,
-        "Tuesday PM": true,
         "Thursday PM": true,
         "Friday AM": true,
-        "Saturday AM": true,
-        "Saturday PM": true
+        "Saturday PM": true,
+        "Sunday AM": true
       },
       "volId": "9662",
       "address": "336 Vista Way Saginaw, TX 76179",
@@ -4221,12 +4219,8 @@
         "Tuesday AM": true,
         "Wednesday AM": true,
         "Thursday AM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true,
         "Sunday PM": true
       },
       "volId": "4518",
@@ -4678,6 +4672,9 @@
       "yearsWorked": 3,
       "hat": "",
       "scheduled": {
+        "Wednesday PM": true,
+        "Thursday PM": true,
+        "Friday AM": true,
         "Saturday PM": true,
         "Sunday AM": true
       },
@@ -6515,7 +6512,11 @@
       "address": "82 County Road 3632\r\nGainesville, TX 76240",
       "volId": "10664",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false
+      "hasVolunteerPassword": true,
+      "pairingPreferences": [
+        "2135"
+      ],
+      "volunteerPassword": "$2b$10$bZCIVF9ebmBZCyCRs1xT5uZO0AmBYx53IKVDZlH0dwrWC2zI93uDK"
     },
     {
       "id": "9796",
@@ -6866,8 +6867,11 @@
       "yearsWorked": 32,
       "hat": "",
       "scheduled": {
+        "Monday AM": true,
+        "Monday PM": true,
         "Tuesday AM": true,
         "Tuesday PM": true,
+        "Wednesday AM": true,
         "Wednesday PM": true,
         "Thursday AM": true,
         "Thursday PM": true,
@@ -7043,14 +7047,12 @@
       "yearsWorked": 5,
       "hat": "",
       "scheduled": {
-        "Monday AM": true,
         "Monday PM": true,
-        "Tuesday AM": true,
         "Tuesday PM": true,
-        "Thursday AM": true,
-        "Friday PM": true,
-        "Saturday AM": true,
-        "Sunday PM": true
+        "Thursday PM": true,
+        "Friday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true
       },
       "volId": "8499",
       "address": "4112 Ridglea County Club Dr #1614 Benbrook, TX 76126",
@@ -7645,6 +7647,7 @@
         "Monday AM": true,
         "Tuesday PM": true,
         "Wednesday AM": true,
+        "Wednesday PM": true,
         "Thursday PM": true,
         "Friday AM": true,
         "Saturday PM": true,
@@ -7860,11 +7863,10 @@
       "hat": "",
       "scheduled": {
         "Tuesday AM": true,
-        "Tuesday PM": true,
         "Thursday PM": true,
         "Friday AM": true,
-        "Sunday AM": true,
-        "Sunday PM": true
+        "Saturday PM": true,
+        "Sunday AM": true
       },
       "volId": "1790",
       "address": "8513 Woodslane Drive Fort Worth, TX 76179",
@@ -8083,6 +8085,10 @@
       "address": "3201 Sth 23rd st Apt 236 Abilene, TX 79605",
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
+      "pairingPreferences": [
+        "7692",
+        "10437"
+      ],
       "volunteerPassword": "$2b$10$an5eBwDXH4vvzmqttrv/GufoCUapstGRvazrXdQcqagJDFgGKUIii"
     },
     {
@@ -8127,6 +8133,7 @@
       "scheduled": {
         "Monday AM": true,
         "Wednesday AM": true,
+        "Wednesday PM": true,
         "Thursday PM": true,
         "Friday AM": true,
         "Saturday PM": true,
@@ -8406,12 +8413,11 @@
       "yearsWorked": 12,
       "hat": "",
       "scheduled": {
-        "Monday AM": true,
-        "Monday PM": true,
-        "Thursday AM": true,
-        "Friday PM": true,
-        "Saturday AM": true,
-        "Sunday PM": true
+        "Wednesday PM": true,
+        "Thursday PM": true,
+        "Friday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true
       },
       "volId": "5876",
       "address": "11848 Hickory Cir Fort Worth, TX 76244-4582",
@@ -8615,80 +8621,80 @@
   },
   "activityLog": [
     {
-      "id": "1777917330315",
-      "timestamp": "2026-05-04T17:55:30.315Z",
-      "user": "Trout, Wayne",
+      "id": "1777920536567",
+      "timestamp": "2026-05-04T18:48:56.567Z",
+      "user": "Reiter, Mackenzie",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1777920178875",
+      "timestamp": "2026-05-04T18:42:58.875Z",
+      "user": "Reiter, Mackenzie",
+      "userType": "Volunteer",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed volunteer password"
+    },
+    {
+      "id": "1777920156858",
+      "timestamp": "2026-05-04T18:42:36.858Z",
+      "user": "Reiter, Mackenzie",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1777919843863",
+      "timestamp": "2026-05-04T18:37:23.863Z",
+      "user": "Sanders, Steve",
       "userType": "Captain",
       "action": "login",
       "target": "",
       "details": "Logged into Captain portal"
     },
     {
-      "id": "1777917298556",
-      "timestamp": "2026-05-04T17:54:58.556Z",
-      "user": "Trout, Wayne",
+      "id": "1777919833546",
+      "timestamp": "2026-05-04T18:37:13.546Z",
+      "user": "Sanders, Steve",
       "userType": "Captain",
       "action": "logout",
       "target": "",
       "details": "Logged out of Captain portal"
     },
     {
-      "id": "1777916543416",
-      "timestamp": "2026-05-04T17:42:23.416Z",
-      "user": "Sale, Lynn",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1777915768245",
-      "timestamp": "2026-05-04T17:29:28.245Z",
-      "user": "Duke, Mitzie",
-      "userType": "Captain",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Captain portal"
-    },
-    {
-      "id": "1777915763905",
-      "timestamp": "2026-05-04T17:29:23.905Z",
-      "user": "Montalvo, Sammy",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1777915720926",
-      "timestamp": "2026-05-04T17:28:40.926Z",
-      "user": "Duke, Mitzie",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1777915695836",
-      "timestamp": "2026-05-04T17:28:15.836Z",
-      "user": "Duke, Mitzie",
-      "userType": "Admin",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Admin portal"
-    },
-    {
-      "id": "1777915659112",
-      "timestamp": "2026-05-04T17:27:39.112Z",
-      "user": "Duke, Mitzie",
+      "id": "1777919681518",
+      "timestamp": "2026-05-04T18:34:41.518Z",
+      "user": "Hill, Michael",
       "userType": "Admin",
       "action": "login",
       "target": "",
       "details": "Logged into Admin portal"
     },
     {
-      "id": "1777915493100",
-      "timestamp": "2026-05-04T17:24:53.101Z",
+      "id": "1777918053312",
+      "timestamp": "2026-05-04T18:07:33.312Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1777911434888",
+      "timestamp": "2026-05-04T16:17:14.888Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1777910506458",
+      "timestamp": "2026-05-04T16:01:46.458Z",
       "user": "Hill, Michael",
       "userType": "Admin",
       "action": "logout",
@@ -8696,9 +8702,126 @@
       "details": "Logged out of Admin portal"
     },
     {
-      "id": "1777914911394",
-      "timestamp": "2026-05-04T17:15:11.394Z",
-      "user": "Trout, Wayne",
+      "id": "1777909792943",
+      "timestamp": "2026-05-04T15:49:52.943Z",
+      "user": "Waruta, James",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1777909205873",
+      "timestamp": "2026-05-04T15:40:05.873Z",
+      "user": "Butler, Mark",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1777909177977",
+      "timestamp": "2026-05-04T15:39:37.977Z",
+      "user": "Butler, Mark",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1777909156175",
+      "timestamp": "2026-05-04T15:39:16.175Z",
+      "user": "Womack, Tim",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1777909072763",
+      "timestamp": "2026-05-04T15:37:52.763Z",
+      "user": "Waruta, James",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1777908641671",
+      "timestamp": "2026-05-04T15:30:41.671Z",
+      "user": "Schafer, John",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1777908012100",
+      "timestamp": "2026-05-04T15:20:12.100Z",
+      "user": "Schafer, John",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1777907927151",
+      "timestamp": "2026-05-04T15:18:47.151Z",
+      "user": "Schafer, John",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1777907893065",
+      "timestamp": "2026-05-04T15:18:13.065Z",
+      "user": "Schafer, John",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1777907877212",
+      "timestamp": "2026-05-04T15:17:57.212Z",
+      "user": "Schafer, John",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1777907667318",
+      "timestamp": "2026-05-04T15:14:27.318Z",
+      "user": "Schafer, John",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1777907351384",
+      "timestamp": "2026-05-04T15:09:11.384Z",
+      "user": "Gordon, Gary",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1777906716230",
+      "timestamp": "2026-05-04T14:58:36.230Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1777904921278",
+      "timestamp": "2026-05-04T14:28:41.278Z",
+      "user": "Roy, Mike",
       "userType": "Captain",
       "action": "login",
       "target": "",
