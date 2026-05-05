@@ -8632,6 +8632,15 @@
   },
   "activityLog": [
     {
+      "id": "1777998942955",
+      "timestamp": "2026-05-05T16:35:42.955Z",
+      "user": "Moore, Barry",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
       "id": "1777996136630",
       "timestamp": "2026-05-05T15:48:56.630Z",
       "user": "Thomas, Stephen",
