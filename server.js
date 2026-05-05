@@ -976,16 +976,6 @@ app.post('/api/email', emailLimiter, requireAuth(['admin', 'chair', 'asstChair',
   try {
     const recipients = Array.isArray(to) ? to : [to];
 
-    // Captains may only send to their own email address
-    if (req.user && req.user.role === 'captain') {
-      const data = loadData(req.demoMode);
-      const me = (data.volunteers || []).find(v => v.id === req.user.userId);
-      const myEmail = me && me.email ? String(me.email).trim().toLowerCase() : '';
-      const allOwnEmail = recipients.every(r => String(r).trim().toLowerCase() === myEmail);
-      if (!myEmail || !allOwnEmail) {
-        return res.status(403).json({ success: false, error: 'Captains can only email themselves' });
-      }
-    }
     const trimmed = String(message).trim();
     const isHtml = trimmed.startsWith('<!DOCTYPE') || trimmed.startsWith('<html') || trimmed.startsWith('<div');
     const htmlContent = isHtml ? message : message.replace(/\n/g, '<br>');
