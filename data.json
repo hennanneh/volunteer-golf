@@ -1159,6 +1159,7 @@
       "scheduled": {
         "Tuesday AM": true,
         "Tuesday PM": true,
+        "Wednesday AM": true,
         "Wednesday PM": true,
         "Thursday AM": true,
         "Thursday PM": true,
@@ -1745,6 +1746,7 @@
         "Monday AM": true,
         "Monday PM": true,
         "Wednesday AM": true,
+        "Wednesday PM": true,
         "Thursday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
@@ -3720,9 +3722,9 @@
       "yearsWorked": 1,
       "hat": "",
       "scheduled": {
+        "Wednesday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
-        "Friday PM": true,
         "Saturday PM": true,
         "Sunday AM": true
       },
@@ -7680,6 +7682,25 @@
       "hasVolunteerPassword": false
     },
     {
+      "id": "new_1778015539223",
+      "name": "Test, Mike",
+      "type": "Volunteer",
+      "hole": 99,
+      "phone": "8179999999",
+      "email": "hillmw6612@gmail.com",
+      "yearsWorked": 0,
+      "hat": "",
+      "hatReceived": false,
+      "scheduled": {},
+      "hasAdminPassword": false,
+      "hasVolunteerPassword": true,
+      "notes": "",
+      "address": "",
+      "volId": "",
+      "originalHole": 13,
+      "volunteerPassword": "$2b$10$QEoIDXS0BaCFRoSOqj23PuH6a9/0IAtOE4b8v9U6tqgvTFnlRYqzC"
+    },
+    {
       "id": "10364",
       "name": "Thomas, Harold",
       "type": "Volunteer",
@@ -8632,31 +8653,85 @@
   },
   "activityLog": [
     {
-      "id": "1778014227510",
-      "timestamp": "2026-05-05T20:50:27.510Z",
+      "id": "1778018009990",
+      "timestamp": "2026-05-05T21:53:29.991Z",
+      "user": "Zamzow, Steve",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1778016576763",
+      "timestamp": "2026-05-05T21:29:36.763Z",
+      "user": "Test, Mike",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1778016554505",
+      "timestamp": "2026-05-05T21:29:14.505Z",
       "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Test, Mike",
+      "details": "Edited volunteer (Type: Volunteer, Hole: 99)"
+    },
+    {
+      "id": "1778015968326",
+      "timestamp": "2026-05-05T21:19:28.326Z",
+      "user": "Gastinel, Buck",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1778015803722",
+      "timestamp": "2026-05-05T21:16:43.723Z",
+      "user": "Gastinel, Buck",
       "userType": "Admin",
       "action": "login",
       "target": "",
       "details": "Logged into Admin portal"
     },
     {
-      "id": "1778012428945",
-      "timestamp": "2026-05-05T20:20:28.945Z",
-      "user": "Watson, Stan",
+      "id": "1778015678959",
+      "timestamp": "2026-05-05T21:14:38.959Z",
+      "user": "Test, Mike",
+      "userType": "Captain",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed captain password"
+    },
+    {
+      "id": "1778015656253",
+      "timestamp": "2026-05-05T21:14:16.253Z",
+      "user": "Test, Mike",
       "userType": "Captain",
       "action": "login",
       "target": "",
       "details": "Logged into Captain portal"
     },
     {
-      "id": "1778010900571",
-      "timestamp": "2026-05-05T19:55:00.571Z",
-      "user": "Duncan, Larry",
-      "userType": "Captain",
-      "action": "login",
+      "id": "1778015625590",
+      "timestamp": "2026-05-05T21:13:45.590Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "logout",
       "target": "",
-      "details": "Logged into Captain portal"
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1778015611541",
+      "timestamp": "2026-05-05T21:13:31.541Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "add-volunteer",
+      "target": "Test, Mike",
+      "details": "Added new volunteer (Type: Captain, Hole: 13)"
     },
     {
       "id": "1777933054440",
