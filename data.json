@@ -8632,6 +8632,33 @@
   },
   "activityLog": [
     {
+      "id": "1777989268333",
+      "timestamp": "2026-05-05T13:54:28.333Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1777988998479",
+      "timestamp": "2026-05-05T13:49:58.479Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1777988324682",
+      "timestamp": "2026-05-05T13:38:44.682Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1777977152102",
       "timestamp": "2026-05-05T10:32:32.102Z",
       "user": "Bishop, Woody",
