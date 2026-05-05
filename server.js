@@ -976,6 +976,25 @@ app.post('/api/email', emailLimiter, requireAuth(['admin', 'chair', 'asstChair',
   try {
     const recipients = Array.isArray(to) ? to : [to];
 
+    // Captains may only send to addresses belonging to people on their hole
+    // (volunteers and any co-captains). This mirrors /api/email/hole-roster.
+    if (req.user && req.user.role === 'captain') {
+      const data = loadData(req.demoMode);
+      const me = (data.volunteers || []).find(v => v.id === req.user.userId);
+      if (!me || !Number.isInteger(me.hole)) {
+        return res.status(403).json({ success: false, error: 'Captain has no assigned hole' });
+      }
+      const allowed = new Set(
+        (data.volunteers || [])
+          .filter(v => v.hole === me.hole && v.email)
+          .map(v => String(v.email).trim().toLowerCase())
+      );
+      const allOnHole = recipients.every(r => allowed.has(String(r).trim().toLowerCase()));
+      if (!allOnHole) {
+        return res.status(403).json({ success: false, error: 'Captains can only email people on their assigned hole' });
+      }
+    }
+
     const trimmed = String(message).trim();
     const isHtml = trimmed.startsWith('<!DOCTYPE') || trimmed.startsWith('<html') || trimmed.startsWith('<div');
     const htmlContent = isHtml ? message : message.replace(/\n/g, '<br>');
