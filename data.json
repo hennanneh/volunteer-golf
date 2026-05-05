@@ -8632,6 +8632,24 @@
   },
   "activityLog": [
     {
+      "id": "1778014227510",
+      "timestamp": "2026-05-05T20:50:27.510Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1778012428945",
+      "timestamp": "2026-05-05T20:20:28.945Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1778010900571",
       "timestamp": "2026-05-05T19:55:00.571Z",
       "user": "Duncan, Larry",
