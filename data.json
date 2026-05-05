@@ -6431,6 +6431,10 @@
       "address": "1236 Stoneleigh Place Aubrey, TX 76227",
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
+      "pairingPreferences": [
+        "8184",
+        "4222"
+      ],
       "volunteerPassword": "$2b$10$7MRUsrJzrU/FRQxvTwmXqudBdLJs1BquvpF4BSXLhA4ofRv3RyE.m"
     },
     {
@@ -8652,6 +8656,15 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1778020946405",
+      "timestamp": "2026-05-05T22:42:26.405Z",
+      "user": "Reddington, Joseph",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
     {
       "id": "1778018009990",
       "timestamp": "2026-05-05T21:53:29.991Z",
