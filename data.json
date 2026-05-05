@@ -8632,6 +8632,24 @@
   },
   "activityLog": [
     {
+      "id": "1777945925282",
+      "timestamp": "2026-05-05T01:52:05.282Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1777945357498",
+      "timestamp": "2026-05-05T01:42:37.498Z",
+      "user": "Craft, John",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
       "id": "1777940466599",
       "timestamp": "2026-05-05T00:21:06.599Z",
       "user": "Montalvo, Sammy",
