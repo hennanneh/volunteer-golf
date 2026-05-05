@@ -8632,6 +8632,24 @@
   },
   "activityLog": [
     {
+      "id": "1778000936037",
+      "timestamp": "2026-05-05T17:08:56.037Z",
+      "user": "Butler, Mark",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1778000903258",
+      "timestamp": "2026-05-05T17:08:23.258Z",
+      "user": "Butler, Mark",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1777998942955",
       "timestamp": "2026-05-05T16:35:42.955Z",
       "user": "Moore, Barry",
