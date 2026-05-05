@@ -8632,6 +8632,15 @@
   },
   "activityLog": [
     {
+      "id": "1778007064114",
+      "timestamp": "2026-05-05T18:51:04.114Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1778000936037",
       "timestamp": "2026-05-05T17:08:56.037Z",
       "user": "Butler, Mark",
