@@ -8,7 +8,7 @@ A web-based volunteer check-in and management system for golf tournaments. Built
 - **Backend**: Node.js/Express (server.js)
 - **Data Storage**: JSON files (data.json, archives.json)
 - **Email**: Resend API (from: hello@colonialvolunteers.golf)
-- **Runtime**: Plain `node server.js` on port 3001 (no process manager — see DEVELOPMENT.md)
+- **Process Manager**: PM2 (app name: `volunteer-golf`, port 3001) — daemon at `/root/.pm2/`, CLI at `/usr/local/bin/pm2` (symlinked from npx-installed copy)
 
 ## Key Files (production paths on droplet)
 - `/root/volunteer-golf/server.js` - Express server, API endpoints, email sending
@@ -83,10 +83,13 @@ A web-based volunteer check-in and management system for golf tournaments. Built
 ssh golf "cd /root/volunteer-golf && ./deploy.sh"
 
 # View server logs:
-ssh golf "tail -f /var/log/volunteer-golf.log"
+ssh golf "pm2 logs volunteer-golf --lines 100"
 
-# Manually check the running node process:
-ssh golf "ps aux | grep 'node /root/volunteer-golf' | grep -v grep"
+# pm2 process status:
+ssh golf "pm2 list"
+
+# Manual restart (no code change):
+ssh golf "pm2 restart volunteer-golf"
 
 # Backup log (hourly data commits):
 ssh golf "tail /var/log/volunteer-golf-backup.log"

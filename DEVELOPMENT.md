@@ -10,7 +10,7 @@ The safe loop for editing volunteer-golf without breaking production.
 | Production | `golf:/root/volunteer-golf` (DO droplet `137.184.231.234`) |
 | GitHub | `github.com/hennanneh/volunteer-golf` (HTTPS via gh CLI) |
 | Domains | colonialvolunteers.golf, volunteers.golf, volunteer.golf |
-| Process | `node server.js` on port 3001, managed by `systemd` unit `volunteer-golf.service` |
+| Process | `node server.js` on port 3001, managed by **PM2** (app name `volunteer-golf`, daemon at `/root/.pm2/`). PM2 auto-restarts on crash and is itself started on boot via `pm2-root.service`. |
 | Hourly data backup | cron runs `backup.sh` :00, commits data files to `main` |
 
 ## The golden rule
@@ -67,23 +67,27 @@ After deploy, hit a domain with `?demo=true` to validate UX changes without touc
 ## Common operations
 
 ```bash
-# Tail live logs
-ssh golf "tail -f /var/log/volunteer-golf.log"
+# pm2 status (process state, restarts, mem, cpu)
+ssh golf "pm2 list"
+ssh golf "pm2 show volunteer-golf"
+
+# Tail live app logs (pm2 collects these)
+ssh golf "pm2 logs volunteer-golf --lines 100"
+# Or directly:
+ssh golf "tail -f /root/.pm2/logs/volunteer-golf-out.log /root/.pm2/logs/volunteer-golf-error.log"
 
 # Tail backup cron log
 ssh golf "tail /var/log/volunteer-golf-backup.log"
 
-# Service status
-ssh golf "systemctl status volunteer-golf --no-pager | head -15"
-
 # Manually restart (if you need to and don't want a full deploy)
-ssh golf "systemctl restart volunteer-golf"
+ssh golf "pm2 restart volunteer-golf"
 ```
 
 ## Known gotchas
 
 - **`data.json` is in git.** The hourly cron auto-commits and pushes it. If you edit `data.json` locally and commit, you'll fight with the cron. Don't commit local `data.json` changes — they're for testing only.
-- **`claude.md` history mentions pm2 and `/var/www/...`** — those are stale. The current setup is `node` at `/root/volunteer-golf` under systemd.
+- **PM2 is installed via npx**, not as a global package. The CLI binary lives at `/root/.npm/_npx/.../pm2/bin/pm2`; `/usr/local/bin/pm2` is a symlink. Don't `npm install -g pm2` on top of this — you'd end up with two pm2 binaries.
+- **`claude.md`'s old `/var/www/...` paths were stale** — actual paths are `/root/volunteer-golf`. The pm2 reference was correct.
 
 ## Rollback by hand
 
@@ -93,10 +97,10 @@ If you ever need to roll back outside of `deploy.sh`:
 ssh golf
 cd /root/volunteer-golf
 ls /root/volunteer-golf-backups/        # find a snapshot
-systemctl stop volunteer-golf
+pm2 stop volunteer-golf
 git log --oneline -10                   # pick a known-good commit
 git reset --hard <sha>
 cp /root/volunteer-golf-backups/<snapshot>/* .
-systemctl start volunteer-golf
+pm2 restart volunteer-golf --update-env
 sleep 3 && curl -fsS http://127.0.0.1:3001/api/health
 ```
