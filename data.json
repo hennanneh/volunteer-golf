@@ -8285,6 +8285,7 @@
       "address": "2422 Clayton Oaks Dr Grand Prairie, TX 75052",
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
+      "noOutingPreference": true,
       "volunteerPassword": "$2b$10$yfSx5W3n0gc88d.CWGaKP.OOYwPWea1tiFX/Ee4vi.MzgAUyQRGvW"
     },
     {
@@ -8656,6 +8657,42 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1778024319721",
+      "timestamp": "2026-05-05T23:38:39.721Z",
+      "user": "White, Gary",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1778024106659",
+      "timestamp": "2026-05-05T23:35:06.659Z",
+      "user": "White, Gary",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1778024045376",
+      "timestamp": "2026-05-05T23:34:05.376Z",
+      "user": "White, Gary",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1778023865888",
+      "timestamp": "2026-05-05T23:31:05.888Z",
+      "user": "White, Gary",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
     {
       "id": "1778020946405",
       "timestamp": "2026-05-05T22:42:26.405Z",
