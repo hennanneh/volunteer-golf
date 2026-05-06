@@ -1159,7 +1159,6 @@
       "scheduled": {
         "Tuesday AM": true,
         "Tuesday PM": true,
-        "Wednesday AM": true,
         "Wednesday PM": true,
         "Thursday AM": true,
         "Thursday PM": true,
@@ -1746,7 +1745,6 @@
         "Monday AM": true,
         "Monday PM": true,
         "Wednesday AM": true,
-        "Wednesday PM": true,
         "Thursday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
@@ -3722,9 +3720,9 @@
       "yearsWorked": 1,
       "hat": "",
       "scheduled": {
-        "Wednesday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
+        "Friday PM": true,
         "Saturday PM": true,
         "Sunday AM": true
       },
