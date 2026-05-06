@@ -8,13 +8,15 @@ A web-based volunteer check-in and management system for golf tournaments. Built
 - **Backend**: Node.js/Express (server.js)
 - **Data Storage**: JSON files (data.json, archives.json)
 - **Email**: Resend API (from: hello@colonialvolunteers.golf)
-- **Process Manager**: PM2 (name: volunteer-golf, port: 3001)
+- **Runtime**: Plain `node server.js` on port 3001 (no process manager — see DEVELOPMENT.md)
 
-## Key Files
-- `/var/www/volunteer-golf/server.js` - Express server, API endpoints, email sending
-- `/var/www/volunteer-golf/public/index.html` - Entire frontend SPA (~3700 lines)
-- `/var/www/volunteer-golf/data.json` - Live tournament data
-- `/var/www/volunteer-golf/archives.json` - Archived tournament data
+## Key Files (production paths on droplet)
+- `/root/volunteer-golf/server.js` - Express server, API endpoints, email sending
+- `/root/volunteer-golf/public/index.html` - Entire frontend SPA (~3700 lines)
+- `/root/volunteer-golf/data.json` - Live tournament data
+- `/root/volunteer-golf/archives.json` - Archived tournament data
+- `/root/volunteer-golf/demo-data.json` - Demo dataset (used when `?demo=true`)
+- `/root/volunteer-golf/backup.sh` - Hourly cron auto-commits data files to main
 
 ## Data Structure
 ```javascript
@@ -75,11 +77,22 @@ A web-based volunteer check-in and management system for golf tournaments. Built
 - Shifts: AM, PM
 - Holes: Configurable (default 18)
 
-## Common Commands
+## Common Commands (on droplet)
 ```bash
-pm2 restart volunteer-golf  # Restart after code changes
-pm2 logs volunteer-golf     # View server logs
+# Deploy code changes (preferred — does backup + restart + health-check + rollback):
+ssh golf "cd /root/volunteer-golf && ./deploy.sh"
+
+# View server logs:
+ssh golf "tail -f /var/log/volunteer-golf.log"
+
+# Manually check the running node process:
+ssh golf "ps aux | grep 'node /root/volunteer-golf' | grep -v grep"
+
+# Backup log (hourly data commits):
+ssh golf "tail /var/log/volunteer-golf-backup.log"
 ```
+
+See `DEVELOPMENT.md` for the safe edit workflow.
 
 ## API Endpoints
 - `GET /api/data` - Load all data
