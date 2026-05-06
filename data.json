@@ -3207,7 +3207,7 @@
       "id": "2507",
       "name": "Holt, Sammy",
       "type": "Captain",
-      "hole": 8,
+      "hole": 9,
       "phone": "(806) 549-0725",
       "email": "sammy_holt@sbcglobal.net",
       "yearsWorked": 19,
@@ -3239,7 +3239,7 @@
       "id": "2543",
       "name": "Holt, Sharron",
       "type": "Captain",
-      "hole": 8,
+      "hole": 9,
       "phone": "(806) 632-3771",
       "email": "holtsrumom@gmail.com",
       "yearsWorked": 19,
@@ -4187,7 +4187,7 @@
       "id": "8345",
       "name": "Kuhnell, David",
       "type": "Volunteer",
-      "hole": 10,
+      "hole": 20,
       "phone": "(817) 229-3353",
       "email": "wkuhnell@gmail.com",
       "yearsWorked": 3,
@@ -5274,21 +5274,6 @@
       "volunteerPassword": "$2b$10$Phrg5xmJLYtU7hU9loHqY.2teWdVBj4i.Y9unYpDy1rJMNlNyp0IK"
     },
     {
-      "id": "7286",
-      "name": "Morris, John",
-      "type": "Volunteer",
-      "hole": 0,
-      "phone": "",
-      "email": "",
-      "yearsWorked": 0,
-      "hat": "",
-      "scheduled": {},
-      "address": "13115 E 500 Rd Claremore, OK 74019",
-      "volId": "7286",
-      "hasAdminPassword": false,
-      "hasVolunteerPassword": false
-    },
-    {
       "id": "9138",
       "name": "Morrison, Hal",
       "type": "Volunteer",
@@ -5496,21 +5481,6 @@
       },
       "address": "291 Private Rd 2793 Alvord, TX 76225",
       "volId": "1770",
-      "hasAdminPassword": false,
-      "hasVolunteerPassword": false
-    },
-    {
-      "id": "4102",
-      "name": "Munnell, Steve",
-      "type": "Volunteer",
-      "hole": 0,
-      "phone": "",
-      "email": "",
-      "yearsWorked": 0,
-      "hat": "",
-      "scheduled": {},
-      "address": "1249 Crown Valley Dr Weatherford, TX 76087",
-      "volId": "4102",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false
     },
@@ -8550,26 +8520,6 @@
       "hasVolunteerPassword": false
     },
     {
-      "id": "999999",
-      "name": "xxxxxxx",
-      "type": "Volunteer",
-      "hole": 0,
-      "phone": "xxxxx",
-      "email": "xxxxx",
-      "yearsWorked": 0,
-      "hat": "",
-      "scheduled": {
-        "Wednesday AM": true,
-        "Friday AM": true,
-        "Saturday AM": true,
-        "Sunday AM": true
-      },
-      "address": "xxxx",
-      "volId": "999999",
-      "hasAdminPassword": false,
-      "hasVolunteerPassword": false
-    },
-    {
       "id": "9427",
       "name": "Yost, Kc",
       "type": "Volunteer",
@@ -8648,6 +8598,60 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1778075049913",
+      "timestamp": "2026-05-06T13:44:09.913Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1778074305732",
+      "timestamp": "2026-05-06T13:31:45.732Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "import",
+      "target": "",
+      "details": "Updated/added volunteers from CSV: 4 updated, 0 added"
+    },
+    {
+      "id": "1778073418538",
+      "timestamp": "2026-05-06T13:16:58.538Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "delete",
+      "target": "Morris, John",
+      "details": "Deleted volunteer"
+    },
+    {
+      "id": "1778073400659",
+      "timestamp": "2026-05-06T13:16:40.659Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "delete",
+      "target": "Munnell, Steve",
+      "details": "Deleted volunteer"
+    },
+    {
+      "id": "1778073185160",
+      "timestamp": "2026-05-06T13:13:05.160Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1778072685127",
+      "timestamp": "2026-05-06T13:04:45.127Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "delete",
+      "target": "xxxxxxx",
+      "details": "Deleted volunteer"
+    },
     {
       "id": "1778071931368",
       "timestamp": "2026-05-06T12:52:11.368Z",
