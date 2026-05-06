@@ -859,11 +859,20 @@
       "yearsWorked": 1,
       "hat": "",
       "scheduled": {
+        "Monday AM": true,
+        "Monday PM": true,
+        "Tuesday AM": true,
+        "Tuesday PM": true,
+        "Wednesday AM": true,
         "Wednesday PM": true,
+        "Thursday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
         "Saturday PM": true,
-        "Sunday AM": true
+        "Sunday AM": true,
+        "Sunday PM": true
       },
       "volId": "10573",
       "address": "9501 Limosine Dr. Crowley, TN 76036",
@@ -1008,10 +1017,19 @@
       "yearsWorked": 10,
       "hat": "",
       "scheduled": {
+        "Monday AM": true,
+        "Monday PM": true,
+        "Tuesday AM": true,
+        "Tuesday PM": true,
+        "Wednesday AM": true,
         "Wednesday PM": true,
         "Thursday AM": true,
+        "Thursday PM": true,
+        "Friday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true,
         "Sunday PM": true
       },
       "volId": "6239",
@@ -1231,11 +1249,20 @@
       "yearsWorked": 4,
       "hat": "",
       "scheduled": {
+        "Monday AM": true,
+        "Monday PM": true,
+        "Tuesday AM": true,
+        "Tuesday PM": true,
+        "Wednesday AM": true,
         "Wednesday PM": true,
+        "Thursday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
         "Saturday PM": true,
-        "Sunday AM": true
+        "Sunday AM": true,
+        "Sunday PM": true
       },
       "volId": "8788",
       "address": "713 Whippoorwill Dr Midlothian, TX 76065",
@@ -2162,11 +2189,20 @@
       "yearsWorked": 9,
       "hat": "",
       "scheduled": {
+        "Monday AM": true,
+        "Monday PM": true,
+        "Tuesday AM": true,
+        "Tuesday PM": true,
+        "Wednesday AM": true,
         "Wednesday PM": true,
+        "Thursday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
         "Saturday PM": true,
-        "Sunday AM": true
+        "Sunday AM": true,
+        "Sunday PM": true
       },
       "volId": "7317",
       "address": "545 Abbey Court Grand Prairie, TX 75052",
@@ -2843,12 +2879,18 @@
       "scheduled": {
         "Monday AM": true,
         "Monday PM": true,
+        "Tuesday AM": true,
         "Tuesday PM": true,
+        "Wednesday AM": true,
         "Wednesday PM": true,
+        "Thursday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
         "Saturday PM": true,
-        "Sunday AM": true
+        "Sunday AM": true,
+        "Sunday PM": true
       },
       "volId": "9856",
       "address": "2411 W. Tumbleweed Dr Phoenix, AZ 85085",
@@ -3187,11 +3229,20 @@
       "yearsWorked": 3,
       "hat": "",
       "scheduled": {
+        "Monday AM": true,
+        "Monday PM": true,
+        "Tuesday AM": true,
+        "Tuesday PM": true,
+        "Wednesday AM": true,
         "Wednesday PM": true,
+        "Thursday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
         "Saturday PM": true,
-        "Sunday AM": true
+        "Sunday AM": true,
+        "Sunday PM": true
       },
       "volId": "9564",
       "address": "3713 Arborlawn Drive Fort Worth, TX 76109",
@@ -3417,8 +3468,10 @@
       },
       "address": "1915 Spotted Fawn Dr Arlington, TX 76005-1405",
       "volId": "2442",
-      "hasAdminPassword": false,
-      "hasVolunteerPassword": false
+      "hasAdminPassword": true,
+      "hasVolunteerPassword": false,
+      "adminPassword": "$2b$10$pAM.v1/Sd.z60KQEvKnTt.rhUpL7bIM1/tYAYjkdOkd9Ua7pQP0Le",
+      "adminPasswordSetAt": "2026-05-06T15:13:08.031Z"
     },
     {
       "id": "9662",
@@ -3780,10 +3833,19 @@
       "yearsWorked": 4,
       "hat": "",
       "scheduled": {
+        "Monday AM": true,
+        "Monday PM": true,
+        "Tuesday AM": true,
+        "Tuesday PM": true,
         "Wednesday AM": true,
+        "Wednesday PM": true,
         "Thursday AM": true,
+        "Thursday PM": true,
+        "Friday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true,
         "Sunday PM": true
       },
       "volId": "8850",
@@ -3852,11 +3914,20 @@
       "yearsWorked": 4,
       "hat": "",
       "scheduled": {
+        "Monday AM": true,
+        "Monday PM": true,
+        "Tuesday AM": true,
+        "Tuesday PM": true,
+        "Wednesday AM": true,
         "Wednesday PM": true,
+        "Thursday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
         "Saturday PM": true,
-        "Sunday AM": true
+        "Sunday AM": true,
+        "Sunday PM": true
       },
       "volId": "8899",
       "address": "400 Templeton Drive Ft Worth, TX 76107",
@@ -4189,11 +4260,18 @@
       "hat": "",
       "scheduled": {
         "Monday AM": true,
+        "Monday PM": true,
         "Tuesday AM": true,
+        "Tuesday PM": true,
         "Wednesday AM": true,
+        "Wednesday PM": true,
         "Thursday AM": true,
+        "Thursday PM": true,
+        "Friday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true,
         "Sunday PM": true
       },
       "address": "P O Box 482 Ozona, TX 76943",
@@ -4227,7 +4305,7 @@
     {
       "id": "9999",
       "name": "Lackey, Lyn",
-      "type": "Colonial Member",
+      "type": "Asst. Chairman",
       "hole": 99,
       "phone": "(817) 223-4301",
       "email": "llackey@colonialfw.com",
@@ -4252,7 +4330,12 @@
       "address": "Fort Worth, TX",
       "volId": "9999",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false
+      "hasVolunteerPassword": false,
+      "hatReceived": false,
+      "notes": "",
+      "assignedHoles": [
+        99
+      ]
     },
     {
       "id": "10339",
@@ -4542,11 +4625,20 @@
       "yearsWorked": 5,
       "hat": "",
       "scheduled": {
+        "Monday AM": true,
+        "Monday PM": true,
+        "Tuesday AM": true,
+        "Tuesday PM": true,
+        "Wednesday AM": true,
         "Wednesday PM": true,
+        "Thursday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
         "Saturday PM": true,
-        "Sunday AM": true
+        "Sunday AM": true,
+        "Sunday PM": true
       },
       "volId": "8543",
       "address": "4008 Steeplechase Dr Colleyville, TX 76034-3738",
@@ -5054,11 +5146,20 @@
       "yearsWorked": 5,
       "hat": "",
       "scheduled": {
+        "Monday AM": true,
+        "Monday PM": true,
+        "Tuesday AM": true,
+        "Tuesday PM": true,
+        "Wednesday AM": true,
         "Wednesday PM": true,
+        "Thursday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
         "Saturday PM": true,
-        "Sunday AM": true
+        "Sunday AM": true,
+        "Sunday PM": true
       },
       "volId": "8545",
       "address": "901 Thomas Crossing Dr Burleson, TX 76028",
@@ -5438,11 +5539,11 @@
       "yearsWorked": 1,
       "hat": "",
       "scheduled": {
-        "Monday PM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true
+        "Wednesday AM": true,
+        "Thursday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
+        "Sunday PM": true
       },
       "address": "5200 Kensington Ct\r\nFlower Mound, TX 75022",
       "volId": "10707",
@@ -5784,11 +5885,20 @@
       "yearsWorked": 3,
       "hat": "",
       "scheduled": {
+        "Monday AM": true,
         "Monday PM": true,
+        "Tuesday AM": true,
+        "Tuesday PM": true,
+        "Wednesday AM": true,
+        "Wednesday PM": true,
+        "Thursday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
         "Saturday PM": true,
-        "Sunday AM": true
+        "Sunday AM": true,
+        "Sunday PM": true
       },
       "volId": "9574",
       "address": "1089 Gonzollas Rd Springtown, TX 76082",
@@ -6553,7 +6663,7 @@
     {
       "id": "5521",
       "name": "Rico, Andrew",
-      "type": "Colonial Member",
+      "type": "Asst. Chairman",
       "hole": 99,
       "phone": "(817) 313-7112",
       "email": "Andrew.r.rico@gmail.com",
@@ -6578,7 +6688,12 @@
       "address": "3661 manderly pl fort worth, TX 76109",
       "volId": "5521",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false
+      "hasVolunteerPassword": false,
+      "hatReceived": false,
+      "notes": "",
+      "assignedHoles": [
+        99
+      ]
     },
     {
       "id": "9900",
@@ -6916,11 +7031,18 @@
       "hat": "",
       "scheduled": {
         "Monday AM": true,
+        "Monday PM": true,
         "Tuesday AM": true,
+        "Tuesday PM": true,
         "Wednesday AM": true,
+        "Wednesday PM": true,
         "Thursday AM": true,
+        "Thursday PM": true,
+        "Friday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true,
         "Sunday PM": true
       },
       "volId": "8066",
@@ -7406,11 +7528,20 @@
       "yearsWorked": 5,
       "hat": "",
       "scheduled": {
+        "Monday AM": true,
+        "Monday PM": true,
+        "Tuesday AM": true,
+        "Tuesday PM": true,
+        "Wednesday AM": true,
         "Wednesday PM": true,
+        "Thursday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
         "Saturday PM": true,
-        "Sunday AM": true
+        "Sunday AM": true,
+        "Sunday PM": true
       },
       "volId": "8695",
       "address": "14806 Ashland Pines Lane Humble, TX 77396",
@@ -7727,13 +7858,20 @@
       "yearsWorked": 4,
       "hat": "",
       "scheduled": {
+        "Monday AM": true,
         "Monday PM": true,
+        "Tuesday AM": true,
         "Tuesday PM": true,
+        "Wednesday AM": true,
         "Wednesday PM": true,
+        "Thursday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
         "Saturday PM": true,
-        "Sunday AM": true
+        "Sunday AM": true,
+        "Sunday PM": true
       },
       "volId": "1182",
       "address": "6905 Hazeltine Dr. FORT WORTH, TX 76132-4518",
@@ -8275,13 +8413,20 @@
       "yearsWorked": 7,
       "hat": "",
       "scheduled": {
+        "Monday AM": true,
         "Monday PM": true,
+        "Tuesday AM": true,
         "Tuesday PM": true,
+        "Wednesday AM": true,
         "Wednesday PM": true,
+        "Thursday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
         "Saturday PM": true,
-        "Sunday AM": true
+        "Sunday AM": true,
+        "Sunday PM": true
       },
       "volId": "7640",
       "address": "1412 Eastside Mesquite, TX 75149",
@@ -8577,16 +8722,6 @@
       "checkedInBy": "Edwards, Bill",
       "timestamp": "2026-05-04T22:18:53.311Z",
       "isAlternate": false
-    },
-    {
-      "volunteerId": "10087",
-      "volunteerName": "Gooch, Greg",
-      "hole": 7,
-      "day": "Wednesday",
-      "shift": "AM",
-      "timestamp": "2026-05-06T14:57:58.023Z",
-      "checkedInBy": "Quintana, Mike",
-      "isAlternate": true
     }
   ],
   "submissions": [],
@@ -8598,11 +8733,128 @@
     "helpEmail": "mike@hulenbend.net",
     "amShiftCutoff": "13:00",
     "pmShiftCutoff": "19:00",
-    "numberOfHoles": 18,
+    "numberOfHoles": 20,
     "helpName": "Mike Hill",
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1778082356285",
+      "timestamp": "2026-05-06T15:45:56.285Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Rico, Andrew",
+      "details": "Edited volunteer (Type: Asst. Chairman, Hole: 99)"
+    },
+    {
+      "id": "1778082338852",
+      "timestamp": "2026-05-06T15:45:38.852Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Lackey, Lyn",
+      "details": "Edited volunteer (Type: Asst. Chairman, Hole: 99)"
+    },
+    {
+      "id": "1778081608934",
+      "timestamp": "2026-05-06T15:33:28.935Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1778080966359",
+      "timestamp": "2026-05-06T15:22:46.359Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "settings-change",
+      "target": "numberOfHoles",
+      "details": "Updated setting: numberOfHoles"
+    },
+    {
+      "id": "1778080964605",
+      "timestamp": "2026-05-06T15:22:44.605Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "settings-change",
+      "target": "numberOfHoles",
+      "details": "Updated setting: numberOfHoles"
+    },
+    {
+      "id": "1778080963017",
+      "timestamp": "2026-05-06T15:22:43.017Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "settings-change",
+      "target": "numberOfHoles",
+      "details": "Updated setting: numberOfHoles"
+    },
+    {
+      "id": "1778080962157",
+      "timestamp": "2026-05-06T15:22:42.157Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "settings-change",
+      "target": "numberOfHoles",
+      "details": "Updated setting: numberOfHoles"
+    },
+    {
+      "id": "1778080956795",
+      "timestamp": "2026-05-06T15:22:36.795Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1778080388134",
+      "timestamp": "2026-05-06T15:13:08.134Z",
+      "user": "Hunt, Scott",
+      "userType": "Admin",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed admin password"
+    },
+    {
+      "id": "1778080331688",
+      "timestamp": "2026-05-06T15:12:11.688Z",
+      "user": "Hunt, Scott",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1778080212706",
+      "timestamp": "2026-05-06T15:10:12.706Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1778079980411",
+      "timestamp": "2026-05-06T15:06:20.411Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1778079671622",
+      "timestamp": "2026-05-06T15:01:11.622Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1778079526298",
       "timestamp": "2026-05-06T14:58:46.298Z",
