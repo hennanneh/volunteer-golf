@@ -10,7 +10,7 @@ The safe loop for editing volunteer-golf without breaking production.
 | Production | `golf:/root/volunteer-golf` (DO droplet `137.184.231.234`) |
 | GitHub | `github.com/hennanneh/volunteer-golf` (HTTPS via gh CLI) |
 | Domains | colonialvolunteers.golf, volunteers.golf, volunteer.golf |
-| Process | plain `node server.js` on port 3001 — **no process supervisor** |
+| Process | `node server.js` on port 3001, managed by `systemd` unit `volunteer-golf.service` |
 | Hourly data backup | cron runs `backup.sh` :00, commits data files to `main` |
 
 ## The golden rule
@@ -73,18 +73,17 @@ ssh golf "tail -f /var/log/volunteer-golf.log"
 # Tail backup cron log
 ssh golf "tail /var/log/volunteer-golf-backup.log"
 
-# Check the running process
-ssh golf "ps aux | grep 'node /root/volunteer-golf' | grep -v grep"
+# Service status
+ssh golf "systemctl status volunteer-golf --no-pager | head -15"
 
-# Manually restart node (if you need to and don't want a full deploy)
-ssh golf "pkill -f 'node /root/volunteer-golf/server.js'; cd /root/volunteer-golf && nohup node server.js >> /var/log/volunteer-golf.log 2>&1 & disown"
+# Manually restart (if you need to and don't want a full deploy)
+ssh golf "systemctl restart volunteer-golf"
 ```
 
 ## Known gotchas
 
 - **`data.json` is in git.** The hourly cron auto-commits and pushes it. If you edit `data.json` locally and commit, you'll fight with the cron. Don't commit local `data.json` changes — they're for testing only.
-- **No process supervisor.** If node crashes, the site is down until someone restarts it. (Future work: fix the disabled `volunteer-golf.service` systemd unit.)
-- **`claude.md` history mentions pm2 and `/var/www/...`** — those are stale. The current setup is plain `node` at `/root/volunteer-golf`.
+- **`claude.md` history mentions pm2 and `/var/www/...`** — those are stale. The current setup is `node` at `/root/volunteer-golf` under systemd.
 
 ## Rollback by hand
 
@@ -94,10 +93,10 @@ If you ever need to roll back outside of `deploy.sh`:
 ssh golf
 cd /root/volunteer-golf
 ls /root/volunteer-golf-backups/        # find a snapshot
-pkill -f 'node /root/volunteer-golf/server.js'
+systemctl stop volunteer-golf
 git log --oneline -10                   # pick a known-good commit
 git reset --hard <sha>
 cp /root/volunteer-golf-backups/<snapshot>/* .
-nohup node server.js >> /var/log/volunteer-golf.log 2>&1 & disown
+systemctl start volunteer-golf
 sleep 3 && curl -fsS http://127.0.0.1:3001/api/health
 ```

@@ -1,0 +1,20 @@
+[Unit]
+Description=Volunteer Golf App
+After=network.target
+StartLimitBurst=10
+StartLimitIntervalSec=300
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/volunteer-golf
+ExecStart=/usr/bin/node server.js
+Restart=on-failure
+RestartSec=5
+Environment=NODE_ENV=production
+EnvironmentFile=-/root/volunteer-golf/.env
+StandardOutput=append:/var/log/volunteer-golf.log
+StandardError=append:/var/log/volunteer-golf.log
+
+[Install]
+WantedBy=multi-user.target

@@ -20,9 +20,16 @@ cd /root/volunteer-golf
 REPO_DIR="/root/volunteer-golf"
 LOG_FILE="/var/log/volunteer-golf.log"
 HEALTH_URL="http://127.0.0.1:3001/api/health"
+SERVICE_NAME="volunteer-golf"
 PROCESS_PATTERN="node /root/volunteer-golf/server.js"
 TIMESTAMP=$(date +%Y%m%d-%H%M%S)
 SNAPSHOT_DIR="/root/volunteer-golf-backups/pre-deploy-${TIMESTAMP}"
+
+# Process management: prefer systemd if the unit is enabled, fall back to nohup.
+USE_SYSTEMD=0
+if systemctl is-enabled "$SERVICE_NAME" >/dev/null 2>&1; then
+  USE_SYSTEMD=1
+fi
 
 log() { echo "[deploy $(date '+%H:%M:%S')] $*"; }
 fail() { log "ERROR: $*"; exit 1; }
@@ -41,23 +48,29 @@ done
 SAVE_SHA=$(git rev-parse HEAD)
 log "Current commit: ${SAVE_SHA:0:8}"
 
-# 2. Stop running node (graceful, then forceful)
-PIDS=$(pgrep -f "$PROCESS_PATTERN" || true)
-if [ -n "$PIDS" ]; then
-  log "Stopping node (pids: $PIDS)"
-  kill -TERM $PIDS 2>/dev/null || true
-  for i in 1 2 3 4 5; do
-    sleep 1
-    pgrep -f "$PROCESS_PATTERN" >/dev/null || break
-  done
-  if pgrep -f "$PROCESS_PATTERN" >/dev/null; then
-    log "graceful stop didn't work, forcing"
-    kill -KILL $(pgrep -f "$PROCESS_PATTERN") 2>/dev/null || true
-    sleep 1
+# 2. Stop running node
+stop_node() {
+  if [ "$USE_SYSTEMD" = "1" ]; then
+    log "systemctl stop $SERVICE_NAME"
+    systemctl stop "$SERVICE_NAME" 2>&1 || true
   fi
-else
-  log "no running node process found (nothing to stop)"
-fi
+  # Always also clean up any non-systemd node processes (defensive)
+  PIDS=$(pgrep -f "$PROCESS_PATTERN" || true)
+  if [ -n "$PIDS" ]; then
+    log "Stopping non-systemd node (pids: $PIDS)"
+    kill -TERM $PIDS 2>/dev/null || true
+    for i in 1 2 3 4 5; do
+      sleep 1
+      pgrep -f "$PROCESS_PATTERN" >/dev/null || break
+    done
+    if pgrep -f "$PROCESS_PATTERN" >/dev/null; then
+      log "graceful stop didn't work, forcing"
+      kill -KILL $(pgrep -f "$PROCESS_PATTERN") 2>/dev/null || true
+      sleep 1
+    fi
+  fi
+}
+stop_node
 
 # 3. Pull latest code
 # Live data files are usually dirty (running app writes them between hourly commits),
@@ -94,9 +107,14 @@ fi
 
 # 6. Start node
 start_node() {
-  log "Starting node (logs → $LOG_FILE)"
-  nohup node /root/volunteer-golf/server.js >> "$LOG_FILE" 2>&1 &
-  disown
+  if [ "$USE_SYSTEMD" = "1" ]; then
+    log "systemctl start $SERVICE_NAME"
+    systemctl start "$SERVICE_NAME"
+  else
+    log "Starting node via nohup (logs → $LOG_FILE)"
+    nohup node /root/volunteer-golf/server.js >> "$LOG_FILE" 2>&1 &
+    disown
+  fi
   sleep 3
 }
 start_node
@@ -120,12 +138,7 @@ fi
 # 8. Roll back
 log "FAIL — health check did not pass. Rolling back."
 
-# Stop the broken new node
-PIDS=$(pgrep -f "$PROCESS_PATTERN" || true)
-[ -n "$PIDS" ] && kill -TERM $PIDS 2>/dev/null
-sleep 2
-PIDS=$(pgrep -f "$PROCESS_PATTERN" || true)
-[ -n "$PIDS" ] && kill -KILL $PIDS 2>/dev/null
+stop_node
 
 git checkout -- data.json demo-data.json archives.json 2>/dev/null || true
 log "git reset --hard ${SAVE_SHA:0:8}"
