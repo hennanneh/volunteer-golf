@@ -397,9 +397,9 @@
         "Monday PM": true,
         "Wednesday PM": true,
         "Thursday PM": true,
-        "Friday AM": true,
+        "Friday PM": true,
         "Saturday PM": true,
-        "Sunday AM": true
+        "Sunday PM": true
       },
       "volId": "7747",
       "address": "216 s mesquite st Muenster, TX 76252",
@@ -8748,6 +8748,15 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1778096238604",
+      "timestamp": "2026-05-06T19:37:18.604Z",
+      "user": "Quintana, Mike",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1778093635518",
       "timestamp": "2026-05-06T18:53:55.518Z",
