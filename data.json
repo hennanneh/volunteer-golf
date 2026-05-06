@@ -2489,17 +2489,12 @@
       "email": "greggooch58@gmail.com",
       "yearsWorked": 2,
       "hat": "",
-      "scheduled": {
-        "Wednesday AM": true,
-        "Thursday AM": true,
-        "Friday PM": true,
-        "Saturday AM": true,
-        "Sunday PM": true
-      },
+      "scheduled": {},
       "volId": "10087",
       "address": "4110 Brownwood Lane Arlington, TX 76017",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false
+      "hasVolunteerPassword": false,
+      "notes": "Greg will NOT be working as an AMBASSADOR this year."
     },
     {
       "id": "9461",
@@ -7063,7 +7058,7 @@
       "hat": "",
       "scheduled": {
         "Monday PM": true,
-        "Thursday AM": true,
+        "Wednesday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
         "Sunday PM": true
@@ -8582,6 +8577,16 @@
       "checkedInBy": "Edwards, Bill",
       "timestamp": "2026-05-04T22:18:53.311Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "10087",
+      "volunteerName": "Gooch, Greg",
+      "hole": 7,
+      "day": "Wednesday",
+      "shift": "AM",
+      "timestamp": "2026-05-06T14:57:58.023Z",
+      "checkedInBy": "Quintana, Mike",
+      "isAlternate": true
     }
   ],
   "submissions": [],
@@ -8598,6 +8603,24 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1778079526298",
+      "timestamp": "2026-05-06T14:58:46.298Z",
+      "user": "Quintana, Mike",
+      "userType": "Captain",
+      "action": "edit-notes",
+      "target": "Gooch, Greg",
+      "details": "Updated volunteer notes"
+    },
+    {
+      "id": "1778079409524",
+      "timestamp": "2026-05-06T14:56:49.524Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1778075049913",
       "timestamp": "2026-05-06T13:44:09.913Z",
