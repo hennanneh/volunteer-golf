@@ -1153,7 +1153,7 @@
       "type": "Captain",
       "hole": 13,
       "phone": "(817) 253-0857",
-      "email": "rodneyclayton@yahoo.com",
+      "email": "rodandsue@sbcglobal.net",
       "yearsWorked": 16,
       "hat": "",
       "scheduled": {
@@ -1173,6 +1173,8 @@
       "volId": "3986",
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
+      "hatReceived": false,
+      "notes": "",
       "volunteerPassword": "$2b$10$6nueEFrGJlBHDa3ngexcbuMCScvHKpff3yfD9ScPj0Xz042l3Q19G"
     },
     {
@@ -8655,6 +8657,24 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1778030731667",
+      "timestamp": "2026-05-06T01:25:31.667Z",
+      "user": "Clayton, Rodney",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1778029509555",
+      "timestamp": "2026-05-06T01:05:09.555Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Clayton, Rodney",
+      "details": "Edited volunteer (Type: Captain, Hole: 13)"
+    },
     {
       "id": "1778024319721",
       "timestamp": "2026-05-05T23:38:39.721Z",
