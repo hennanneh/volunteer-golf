@@ -8722,6 +8722,16 @@
       "checkedInBy": "Edwards, Bill",
       "timestamp": "2026-05-04T22:18:53.311Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "2540",
+      "volunteerName": "Gillilan, Rusty",
+      "hole": 99,
+      "day": "Wednesday",
+      "shift": "AM",
+      "timestamp": "2026-05-06T16:14:18.791Z",
+      "checkedInBy": "Galvan, Bob",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -8738,6 +8748,69 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1778084822132",
+      "timestamp": "2026-05-06T16:27:02.132Z",
+      "user": "Hunt, Scott",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1778084489819",
+      "timestamp": "2026-05-06T16:21:29.819Z",
+      "user": "Duke, Mitzie",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1778084478331",
+      "timestamp": "2026-05-06T16:21:18.331Z",
+      "user": "Duke, Mitzie",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1778084459927",
+      "timestamp": "2026-05-06T16:20:59.927Z",
+      "user": "Duke, Mitzie",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1778084322722",
+      "timestamp": "2026-05-06T16:18:42.722Z",
+      "user": "Duke, Mitzie",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1778084075488",
+      "timestamp": "2026-05-06T16:14:35.488Z",
+      "user": "Galvan, Bob",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1778084020952",
+      "timestamp": "2026-05-06T16:13:40.952Z",
+      "user": "Galvan, Bob",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1778082356285",
       "timestamp": "2026-05-06T15:45:56.285Z",
