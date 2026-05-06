@@ -697,8 +697,7 @@
         "Wednesday PM": true,
         "Thursday AM": true,
         "Friday PM": true,
-        "Saturday AM": true,
-        "Sunday PM": true
+        "Saturday AM": true
       },
       "volId": "2393",
       "address": "1109 Byron Lane Arlington, TX 76012-1829",
@@ -1669,7 +1668,6 @@
       "yearsWorked": 2,
       "hat": "",
       "scheduled": {
-        "Monday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
         "Saturday PM": true,
@@ -6319,8 +6317,6 @@
       "yearsWorked": 13,
       "hat": "",
       "scheduled": {
-        "Monday AM": true,
-        "Monday PM": true,
         "Tuesday AM": true,
         "Tuesday PM": true,
         "Wednesday AM": true,
@@ -7234,8 +7230,6 @@
       "yearsWorked": 2,
       "hat": "",
       "scheduled": {
-        "Monday PM": true,
-        "Tuesday PM": true,
         "Wednesday PM": true,
         "Thursday PM": true,
         "Friday AM": true,
@@ -8029,9 +8023,6 @@
       "scheduled": {
         "Monday AM": true,
         "Monday PM": true,
-        "Tuesday AM": true,
-        "Tuesday PM": true,
-        "Wednesday AM": true,
         "Wednesday PM": true,
         "Thursday AM": true,
         "Thursday PM": true,
@@ -8657,6 +8648,24 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1778067989251",
+      "timestamp": "2026-05-06T11:46:29.251Z",
+      "user": "Montalvo, Sammy",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1778067313335",
+      "timestamp": "2026-05-06T11:35:13.335Z",
+      "user": "Quintana, Mike",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1778030731667",
       "timestamp": "2026-05-06T01:25:31.667Z",
