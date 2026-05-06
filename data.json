@@ -8649,6 +8649,24 @@
   },
   "activityLog": [
     {
+      "id": "1778071931368",
+      "timestamp": "2026-05-06T12:52:11.368Z",
+      "user": "Bishop, Woody",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1778070782632",
+      "timestamp": "2026-05-06T12:33:02.632Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
       "id": "1778067989251",
       "timestamp": "2026-05-06T11:46:29.251Z",
       "user": "Montalvo, Sammy",
