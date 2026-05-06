@@ -65,11 +65,14 @@ fi
 log "Cleaning working tree of data file dirtiness"
 git checkout -- data.json demo-data.json archives.json 2>/dev/null || true
 
-log "git pull --ff-only origin main"
-if ! git pull --ff-only origin main; then
+log "git pull --rebase origin main"
+# --rebase (not --ff-only) so this tolerates the cron's local data commits
+# accumulating on top of origin/main between deploys.
+if ! git pull --rebase origin main; then
+  git rebase --abort 2>/dev/null || true
   log "git pull failed — restoring live data from snapshot and aborting"
   cp -p "$SNAPSHOT_DIR"/* . 2>/dev/null || true
-  fail "could not fast-forward; pull manually and re-run"
+  fail "could not pull; resolve manually and re-run"
 fi
 
 NEW_SHA=$(git rev-parse HEAD)
