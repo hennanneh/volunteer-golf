@@ -8749,6 +8749,33 @@
   },
   "activityLog": [
     {
+      "id": "1778107402092",
+      "timestamp": "2026-05-06T22:43:22.092Z",
+      "user": "Bishop, Woody",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1778107105574",
+      "timestamp": "2026-05-06T22:38:25.575Z",
+      "user": "Elkins, Paul",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1778106522223",
+      "timestamp": "2026-05-06T22:28:42.223Z",
+      "user": "Langford, Alan",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
       "id": "1778096238604",
       "timestamp": "2026-05-06T19:37:18.604Z",
       "user": "Quintana, Mike",
