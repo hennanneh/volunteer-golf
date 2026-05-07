@@ -2506,9 +2506,7 @@
       "hat": "",
       "scheduled": {
         "Wednesday PM": true,
-        "Thursday PM": true,
         "Friday AM": true,
-        "Saturday PM": true,
         "Sunday AM": true
       },
       "address": "2407 Lakepoint Drive\r\nKeller, TX 76248",
@@ -4518,7 +4516,7 @@
       "hat": "",
       "scheduled": {
         "Wednesday AM": true,
-        "Thursday PM": true,
+        "Thursday AM": true,
         "Friday PM": true,
         "Saturday PM": true,
         "Sunday AM": true
@@ -8748,6 +8746,15 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1778156773775",
+      "timestamp": "2026-05-07T12:26:13.775Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1778155006913",
       "timestamp": "2026-05-07T11:56:46.913Z",
