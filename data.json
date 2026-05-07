@@ -8747,6 +8747,51 @@
   },
   "activityLog": [
     {
+      "id": "1778176667747",
+      "timestamp": "2026-05-07T17:57:47.747Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1778176655699",
+      "timestamp": "2026-05-07T17:57:35.699Z",
+      "user": "Beckley, Bob",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1778176626199",
+      "timestamp": "2026-05-07T17:57:06.199Z",
+      "user": "Beckley, Bob",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1778176611323",
+      "timestamp": "2026-05-07T17:56:51.323Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1778174704395",
+      "timestamp": "2026-05-07T17:25:04.395Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1778171650754",
       "timestamp": "2026-05-07T16:34:10.754Z",
       "user": "Gastinel, Buck",
