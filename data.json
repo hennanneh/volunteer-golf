@@ -8747,6 +8747,24 @@
   },
   "activityLog": [
     {
+      "id": "1778187096291",
+      "timestamp": "2026-05-07T20:51:36.291Z",
+      "user": "Bird, Bob",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1778185789638",
+      "timestamp": "2026-05-07T20:29:49.638Z",
+      "user": "Montalvo, Sammy",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1778182752360",
       "timestamp": "2026-05-07T19:39:12.360Z",
       "user": "Hill, Michael",
