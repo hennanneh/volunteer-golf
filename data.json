@@ -8728,6 +8728,15 @@
   },
   "activityLog": [
     {
+      "id": "1778191259255",
+      "timestamp": "2026-05-07T22:00:59.255Z",
+      "user": "Waller, Gary",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
       "id": "1778191028469",
       "timestamp": "2026-05-07T21:57:08.469Z",
       "user": "Hill, Michael",
