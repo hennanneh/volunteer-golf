@@ -8749,6 +8749,15 @@
   },
   "activityLog": [
     {
+      "id": "1778155006913",
+      "timestamp": "2026-05-07T11:56:46.913Z",
+      "user": "Quintana, Mike",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1778127816679",
       "timestamp": "2026-05-07T04:23:36.679Z",
       "user": "Clayton, Rodney",
