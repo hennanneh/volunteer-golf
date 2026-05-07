@@ -397,9 +397,9 @@
         "Monday PM": true,
         "Wednesday PM": true,
         "Thursday PM": true,
-        "Friday PM": true,
+        "Friday AM": true,
         "Saturday PM": true,
-        "Sunday PM": true
+        "Sunday AM": true
       },
       "volId": "7747",
       "address": "216 s mesquite st Muenster, TX 76252",
@@ -1589,7 +1589,7 @@
       "address": "3505 park hollow street fort worth, TX 76109",
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
-      "volunteerPassword": "$2b$10$fhZZejmkPKZZ/x4A1emOzu/3GCuOADDHO.4XzWW9U1zneC84l.Hme"
+      "volunteerPassword": "$2b$10$9FjIccqDbqxhsVPSrbVMxuKlpbdMMqmJQ/hSvcAjoDpCGg2ZoFGQW"
     },
     {
       "id": "636",
@@ -2506,7 +2506,9 @@
       "hat": "",
       "scheduled": {
         "Wednesday PM": true,
+        "Thursday PM": true,
         "Friday AM": true,
+        "Saturday PM": true,
         "Sunday AM": true
       },
       "address": "2407 Lakepoint Drive\r\nKeller, TX 76248",
@@ -4516,7 +4518,7 @@
       "hat": "",
       "scheduled": {
         "Wednesday AM": true,
-        "Thursday AM": true,
+        "Thursday PM": true,
         "Friday PM": true,
         "Saturday PM": true,
         "Sunday AM": true
@@ -6176,27 +6178,6 @@
       },
       "volId": "4745",
       "address": "13537 Leather Strap Dr Haslet, TX 76052",
-      "hasAdminPassword": false,
-      "hasVolunteerPassword": false
-    },
-    {
-      "id": "10246",
-      "name": "Power, Blake",
-      "type": "Volunteer",
-      "hole": 5,
-      "phone": "(936) 715-7978",
-      "email": "powerblake84@gmail.com",
-      "yearsWorked": 1,
-      "hat": "",
-      "scheduled": {
-        "Wednesday AM": true,
-        "Thursday AM": true,
-        "Friday PM": true,
-        "Saturday AM": true,
-        "Sunday PM": true
-      },
-      "volId": "10246",
-      "address": "477 Suffield Dr. #813 Buda, TX 78610",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false
     },
@@ -8747,148 +8728,13 @@
   },
   "activityLog": [
     {
-      "id": "1778187096291",
-      "timestamp": "2026-05-07T20:51:36.291Z",
-      "user": "Bird, Bob",
-      "userType": "Volunteer",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Volunteer portal"
-    },
-    {
-      "id": "1778185789638",
-      "timestamp": "2026-05-07T20:29:49.638Z",
-      "user": "Montalvo, Sammy",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1778182752360",
-      "timestamp": "2026-05-07T19:39:12.360Z",
+      "id": "1778191028469",
+      "timestamp": "2026-05-07T21:57:08.469Z",
       "user": "Hill, Michael",
       "userType": "Admin",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Admin portal"
-    },
-    {
-      "id": "1778176667747",
-      "timestamp": "2026-05-07T17:57:47.747Z",
-      "user": "Beckley, Bob",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1778176655699",
-      "timestamp": "2026-05-07T17:57:35.699Z",
-      "user": "Beckley, Bob",
-      "userType": "Volunteer",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Volunteer portal"
-    },
-    {
-      "id": "1778176626199",
-      "timestamp": "2026-05-07T17:57:06.199Z",
-      "user": "Beckley, Bob",
-      "userType": "Volunteer",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Volunteer portal"
-    },
-    {
-      "id": "1778176611323",
-      "timestamp": "2026-05-07T17:56:51.323Z",
-      "user": "Beckley, Bob",
-      "userType": "Captain",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Captain portal"
-    },
-    {
-      "id": "1778174704395",
-      "timestamp": "2026-05-07T17:25:04.395Z",
-      "user": "Beckley, Bob",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1778171650754",
-      "timestamp": "2026-05-07T16:34:10.754Z",
-      "user": "Gastinel, Buck",
-      "userType": "Admin",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Admin portal"
-    },
-    {
-      "id": "1778171142692",
-      "timestamp": "2026-05-07T16:25:42.692Z",
-      "user": "Gastinel, Buck",
-      "userType": "Admin",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Admin portal"
-    },
-    {
-      "id": "1778169648848",
-      "timestamp": "2026-05-07T16:00:48.848Z",
-      "user": "Gastinel, Buck",
-      "userType": "Admin",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Admin portal"
-    },
-    {
-      "id": "1778156773775",
-      "timestamp": "2026-05-07T12:26:13.775Z",
-      "user": "Sale, Lynn",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1778155006913",
-      "timestamp": "2026-05-07T11:56:46.913Z",
-      "user": "Quintana, Mike",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1778127816679",
-      "timestamp": "2026-05-07T04:23:36.679Z",
-      "user": "Clayton, Rodney",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1778096238604",
-      "timestamp": "2026-05-06T19:37:18.604Z",
-      "user": "Quintana, Mike",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1778093635518",
-      "timestamp": "2026-05-06T18:53:55.518Z",
-      "user": "Clayton, Rodney",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
+      "action": "delete",
+      "target": "Power, Blake",
+      "details": "Deleted volunteer"
     },
     {
       "id": "1778084822132",
