@@ -8747,6 +8747,15 @@
   },
   "activityLog": [
     {
+      "id": "1778182752360",
+      "timestamp": "2026-05-07T19:39:12.360Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
       "id": "1778176667747",
       "timestamp": "2026-05-07T17:57:47.747Z",
       "user": "Beckley, Bob",
