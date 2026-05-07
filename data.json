@@ -397,9 +397,9 @@
         "Monday PM": true,
         "Wednesday PM": true,
         "Thursday PM": true,
-        "Friday AM": true,
+        "Friday PM": true,
         "Saturday PM": true,
-        "Sunday AM": true
+        "Sunday PM": true
       },
       "volId": "7747",
       "address": "216 s mesquite st Muenster, TX 76252",
@@ -3468,7 +3468,7 @@
       },
       "address": "1915 Spotted Fawn Dr Arlington, TX 76005-1405",
       "volId": "2442",
-      "hasAdminPassword": false,
+      "hasAdminPassword": true,
       "hasVolunteerPassword": false,
       "adminPassword": "$2b$10$pAM.v1/Sd.z60KQEvKnTt.rhUpL7bIM1/tYAYjkdOkd9Ua7pQP0Le",
       "adminPasswordSetAt": "2026-05-06T15:13:08.031Z"
@@ -4305,7 +4305,7 @@
     {
       "id": "9999",
       "name": "Lackey, Lyn",
-      "type": "Colonial Member",
+      "type": "Asst. Chairman",
       "hole": 99,
       "phone": "(817) 223-4301",
       "email": "llackey@colonialfw.com",
@@ -4330,7 +4330,12 @@
       "address": "Fort Worth, TX",
       "volId": "9999",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false
+      "hasVolunteerPassword": false,
+      "hatReceived": false,
+      "notes": "",
+      "assignedHoles": [
+        99
+      ]
     },
     {
       "id": "10339",
@@ -4695,8 +4700,8 @@
         "Tuesday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
-        "Sunday AM": true,
-        "Sunday PM": true
+        "Saturday PM": true,
+        "Sunday AM": true
       },
       "volId": "10061",
       "address": "10825 Alta Sierra Drive Benbrook, TX 76126",
@@ -5534,11 +5539,11 @@
       "yearsWorked": 1,
       "hat": "",
       "scheduled": {
-        "Monday PM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true
+        "Wednesday AM": true,
+        "Thursday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
+        "Sunday PM": true
       },
       "address": "5200 Kensington Ct\r\nFlower Mound, TX 75022",
       "volId": "10707",
@@ -6658,7 +6663,7 @@
     {
       "id": "5521",
       "name": "Rico, Andrew",
-      "type": "Colonial Member",
+      "type": "Asst. Chairman",
       "hole": 99,
       "phone": "(817) 313-7112",
       "email": "Andrew.r.rico@gmail.com",
@@ -6683,7 +6688,12 @@
       "address": "3661 manderly pl fort worth, TX 76109",
       "volId": "5521",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false
+      "hasVolunteerPassword": false,
+      "hatReceived": false,
+      "notes": "",
+      "assignedHoles": [
+        99
+      ]
     },
     {
       "id": "9900",
@@ -7518,11 +7528,20 @@
       "yearsWorked": 5,
       "hat": "",
       "scheduled": {
+        "Monday AM": true,
+        "Monday PM": true,
+        "Tuesday AM": true,
+        "Tuesday PM": true,
+        "Wednesday AM": true,
         "Wednesday PM": true,
+        "Thursday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
         "Saturday PM": true,
-        "Sunday AM": true
+        "Sunday AM": true,
+        "Sunday PM": true
       },
       "volId": "8695",
       "address": "14806 Ashland Pines Lane Humble, TX 77396",
@@ -7839,13 +7858,20 @@
       "yearsWorked": 4,
       "hat": "",
       "scheduled": {
+        "Monday AM": true,
         "Monday PM": true,
+        "Tuesday AM": true,
         "Tuesday PM": true,
+        "Wednesday AM": true,
         "Wednesday PM": true,
+        "Thursday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
         "Saturday PM": true,
-        "Sunday AM": true
+        "Sunday AM": true,
+        "Sunday PM": true
       },
       "volId": "1182",
       "address": "6905 Hazeltine Dr. FORT WORTH, TX 76132-4518",
@@ -8387,13 +8413,20 @@
       "yearsWorked": 7,
       "hat": "",
       "scheduled": {
+        "Monday AM": true,
         "Monday PM": true,
+        "Tuesday AM": true,
         "Tuesday PM": true,
+        "Wednesday AM": true,
         "Wednesday PM": true,
+        "Thursday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
         "Saturday PM": true,
-        "Sunday AM": true
+        "Sunday AM": true,
+        "Sunday PM": true
       },
       "volId": "7640",
       "address": "1412 Eastside Mesquite, TX 75149",
@@ -8691,14 +8724,14 @@
       "isAlternate": false
     },
     {
-      "volunteerId": "10087",
-      "volunteerName": "Gooch, Greg",
-      "hole": 7,
+      "volunteerId": "2540",
+      "volunteerName": "Gillilan, Rusty",
+      "hole": 99,
       "day": "Wednesday",
       "shift": "AM",
-      "timestamp": "2026-05-06T14:57:58.023Z",
-      "checkedInBy": "Quintana, Mike",
-      "isAlternate": true
+      "timestamp": "2026-05-06T16:14:18.791Z",
+      "checkedInBy": "Galvan, Bob",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -8710,11 +8743,182 @@
     "helpEmail": "mike@hulenbend.net",
     "amShiftCutoff": "13:00",
     "pmShiftCutoff": "19:00",
-    "numberOfHoles": 18,
+    "numberOfHoles": 20,
     "helpName": "Mike Hill",
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1778096238604",
+      "timestamp": "2026-05-06T19:37:18.604Z",
+      "user": "Quintana, Mike",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1778093635518",
+      "timestamp": "2026-05-06T18:53:55.518Z",
+      "user": "Clayton, Rodney",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1778084822132",
+      "timestamp": "2026-05-06T16:27:02.132Z",
+      "user": "Hunt, Scott",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1778084489819",
+      "timestamp": "2026-05-06T16:21:29.819Z",
+      "user": "Duke, Mitzie",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1778084478331",
+      "timestamp": "2026-05-06T16:21:18.331Z",
+      "user": "Duke, Mitzie",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1778084459927",
+      "timestamp": "2026-05-06T16:20:59.927Z",
+      "user": "Duke, Mitzie",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1778084322722",
+      "timestamp": "2026-05-06T16:18:42.722Z",
+      "user": "Duke, Mitzie",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1778084075488",
+      "timestamp": "2026-05-06T16:14:35.488Z",
+      "user": "Galvan, Bob",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1778084020952",
+      "timestamp": "2026-05-06T16:13:40.952Z",
+      "user": "Galvan, Bob",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1778082356285",
+      "timestamp": "2026-05-06T15:45:56.285Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Rico, Andrew",
+      "details": "Edited volunteer (Type: Asst. Chairman, Hole: 99)"
+    },
+    {
+      "id": "1778082338852",
+      "timestamp": "2026-05-06T15:45:38.852Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Lackey, Lyn",
+      "details": "Edited volunteer (Type: Asst. Chairman, Hole: 99)"
+    },
+    {
+      "id": "1778081608934",
+      "timestamp": "2026-05-06T15:33:28.935Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1778080966359",
+      "timestamp": "2026-05-06T15:22:46.359Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "settings-change",
+      "target": "numberOfHoles",
+      "details": "Updated setting: numberOfHoles"
+    },
+    {
+      "id": "1778080964605",
+      "timestamp": "2026-05-06T15:22:44.605Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "settings-change",
+      "target": "numberOfHoles",
+      "details": "Updated setting: numberOfHoles"
+    },
+    {
+      "id": "1778080963017",
+      "timestamp": "2026-05-06T15:22:43.017Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "settings-change",
+      "target": "numberOfHoles",
+      "details": "Updated setting: numberOfHoles"
+    },
+    {
+      "id": "1778080962157",
+      "timestamp": "2026-05-06T15:22:42.157Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "settings-change",
+      "target": "numberOfHoles",
+      "details": "Updated setting: numberOfHoles"
+    },
+    {
+      "id": "1778080956795",
+      "timestamp": "2026-05-06T15:22:36.795Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1778080388134",
+      "timestamp": "2026-05-06T15:13:08.134Z",
+      "user": "Hunt, Scott",
+      "userType": "Admin",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed admin password"
+    },
+    {
+      "id": "1778080331688",
+      "timestamp": "2026-05-06T15:12:11.688Z",
+      "user": "Hunt, Scott",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
     {
       "id": "1778080212706",
       "timestamp": "2026-05-06T15:10:12.706Z",
