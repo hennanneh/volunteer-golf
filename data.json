@@ -2506,9 +2506,7 @@
       "hat": "",
       "scheduled": {
         "Wednesday PM": true,
-        "Thursday PM": true,
         "Friday AM": true,
-        "Saturday PM": true,
         "Sunday AM": true
       },
       "address": "2407 Lakepoint Drive\r\nKeller, TX 76248",
@@ -4518,7 +4516,7 @@
       "hat": "",
       "scheduled": {
         "Wednesday AM": true,
-        "Thursday PM": true,
+        "Thursday AM": true,
         "Friday PM": true,
         "Saturday PM": true,
         "Sunday AM": true
@@ -8727,6 +8725,42 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1778255779471",
+      "timestamp": "2026-05-08T15:56:19.471Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1778255438558",
+      "timestamp": "2026-05-08T15:50:38.558Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1778253535013",
+      "timestamp": "2026-05-08T15:18:55.013Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1778253195249",
+      "timestamp": "2026-05-08T15:13:15.249Z",
+      "user": "Clayton, Rodney",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1778207376211",
       "timestamp": "2026-05-08T02:29:36.211Z",
