@@ -2506,7 +2506,9 @@
       "hat": "",
       "scheduled": {
         "Wednesday PM": true,
+        "Thursday PM": true,
         "Friday AM": true,
+        "Saturday PM": true,
         "Sunday AM": true
       },
       "address": "2407 Lakepoint Drive\r\nKeller, TX 76248",
@@ -3147,7 +3149,7 @@
       "id": "4639",
       "name": "Hill, Michael",
       "type": "Admin",
-      "hole": 11,
+      "hole": 99,
       "phone": "(817) 689-4697",
       "email": "mike@hulenbend.net",
       "yearsWorked": 14,
@@ -3172,6 +3174,13 @@
       "volId": "4639",
       "hasAdminPassword": true,
       "hasVolunteerPassword": false,
+      "hatReceived": false,
+      "notes": "",
+      "originalHole": 11,
+      "assignedHoles": [
+        99,
+        11
+      ],
       "adminPassword": "$2b$10$h0CPonAkFNTz00hqbELOr.zvbfmQqWVYZkDenYxH1YQvjj64aEp8S",
       "adminPasswordSetAt": "2026-04-20T20:13:12.730Z"
     },
@@ -4516,7 +4525,7 @@
       "hat": "",
       "scheduled": {
         "Wednesday AM": true,
-        "Thursday AM": true,
+        "Thursday PM": true,
         "Friday PM": true,
         "Saturday PM": true,
         "Sunday AM": true
@@ -5576,7 +5585,7 @@
       "address": "291 Private Rd 2793 Alvord, TX 76225",
       "volId": "1770",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": true,
+      "hasVolunteerPassword": false,
       "volunteerPassword": "$2b$10$uHAUEaNjHXUe27hVg6fkn.tKnsOjQ65YLAJnlNwA3bITBqehqSD/W"
     },
     {
@@ -8727,112 +8736,13 @@
   },
   "activityLog": [
     {
-      "id": "1778262544115",
-      "timestamp": "2026-05-08T17:49:04.115Z",
-      "user": "Sale, Lynn",
-      "userType": "Volunteer",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Volunteer portal"
-    },
-    {
-      "id": "1778262517683",
-      "timestamp": "2026-05-08T17:48:37.683Z",
-      "user": "Sale, Lynn",
-      "userType": "Captain",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Captain portal"
-    },
-    {
-      "id": "1778260454676",
-      "timestamp": "2026-05-08T17:14:14.676Z",
-      "user": "Mulvaney, Matt",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1778259760973",
-      "timestamp": "2026-05-08T17:02:40.973Z",
-      "user": "Gastinel, Buck",
+      "id": "1778266807856",
+      "timestamp": "2026-05-08T19:00:07.856Z",
+      "user": "Hill, Michael",
       "userType": "Admin",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Admin portal"
-    },
-    {
-      "id": "1778259668600",
-      "timestamp": "2026-05-08T17:01:08.600Z",
-      "user": "Gastinel, Buck",
-      "userType": "Admin",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Admin portal"
-    },
-    {
-      "id": "1778259196985",
-      "timestamp": "2026-05-08T16:53:16.985Z",
-      "user": "Zamzow, Steve",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1778255779471",
-      "timestamp": "2026-05-08T15:56:19.471Z",
-      "user": "Sale, Lynn",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1778255438558",
-      "timestamp": "2026-05-08T15:50:38.558Z",
-      "user": "Trout, Wayne",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1778253535013",
-      "timestamp": "2026-05-08T15:18:55.013Z",
-      "user": "Sale, Lynn",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1778253195249",
-      "timestamp": "2026-05-08T15:13:15.249Z",
-      "user": "Clayton, Rodney",
-      "userType": "Captain",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Captain portal"
-    },
-    {
-      "id": "1778207376211",
-      "timestamp": "2026-05-08T02:29:36.211Z",
-      "user": "White, Gary",
-      "userType": "Volunteer",
-      "action": "login",
-      "target": "",
-      "details": "Logged into Volunteer portal"
-    },
-    {
-      "id": "1778205086217",
-      "timestamp": "2026-05-08T01:51:26.217Z",
-      "user": "Gastinel, Buck",
-      "userType": "Admin",
-      "action": "logout",
-      "target": "",
-      "details": "Logged out of Admin portal"
+      "action": "edit-volunteer",
+      "target": "Hill, Michael",
+      "details": "Edited volunteer (Type: Admin, Hole: 99)"
     },
     {
       "id": "1778191259255",
