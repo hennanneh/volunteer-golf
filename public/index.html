@@ -1125,7 +1125,8 @@
           } else if (authState.captainAuth) {
             const cap = appData.volunteers.find(v => v.id === authState.captainAuth.id);
             if (cap) {
-              captainAuth = { ...authState.captainAuth, name: cap.name };
+              const isReadOnly = cap.type === 'Chairman' || cap.type === 'Asst. Chairman';
+              captainAuth = { ...authState.captainAuth, name: cap.name, readOnly: isReadOnly };
               currentView = 'captain';
             }
           } else if (authState.adminAuth && authState.adminAuthUserId) {
@@ -5266,6 +5267,7 @@
       // For Admin users, use the selected hole instead of their assigned hole
       const isAdminUser = captainAuth.isAdmin;
       const isChairUser = captainAuth.isChair && captainAuth.assignedHoles && captainAuth.assignedHoles.length > 1;
+      const isReadOnlyUser = captainAuth.readOnly === true;
 
       // Initialize chairSelectedHole if not set (exclude hole 99)
       const chairHolesFiltered = isChairUser ? captainAuth.assignedHoles.filter(h => h !== 99) : [];
@@ -5312,7 +5314,8 @@
       const isSubmitted = !!lastSubmission;
 
       // Check if this shift is locked (past cutoff time) - admin users can always edit
-      const shiftLocked = !isAdminUser && isShiftLocked(selectedDay, selectedShift);
+      // Also check for read-only users (Chairman/Asst. Chairman in captain portal)
+      const shiftLocked = isReadOnlyUser || (!isAdminUser && isShiftLocked(selectedDay, selectedShift));
 
       // Get relative time info
       const timeInfo = getRelativeTimeLabel(selectedDay, selectedShift);
@@ -5566,7 +5569,7 @@
                       ${chairHolesFiltered.map(h => `<option value="${h}" ${h === chairSelectedHole ? 'selected' : ''}>Hole #${h}</option>`).join('')}
                     </select>
                   </h1>
-                  <p>Chair: ${captainAuth.name}</p>
+                  <p>Chair: ${captainAuth.name}${isReadOnlyUser ? ' <span style="opacity:0.8;font-size:13px">(View Only)</span>' : ''}</p>
                 ` : `
                   <h1>Hole #${activeHole}</h1>
                   <p>Captain: ${captainAuth.name}</p>
@@ -5627,8 +5630,13 @@
           <div class="volunteer-list" style="padding-bottom:180px">
             ${shiftLocked ? `
               <div style="background:#fff3e0;border:1px solid #ffcc80;border-radius:8px;padding:14px 16px;margin-bottom:15px">
-                <p style="color:#e65100;font-size:16px;font-weight:600;margin:0">This shift is closed</p>
-                <p style="color:#f57c00;font-size:15px;margin:5px 0 0 0">Check-ins can no longer be modified for this day/shift. Contact tournament staff if changes are needed.</p>
+                ${isReadOnlyUser ? `
+                  <p style="color:#e65100;font-size:16px;font-weight:600;margin:0">View Only Access</p>
+                  <p style="color:#f57c00;font-size:15px;margin:5px 0 0 0">You can view check-ins but cannot make changes. Contact tournament staff if edits are needed.</p>
+                ` : `
+                  <p style="color:#e65100;font-size:16px;font-weight:600;margin:0">This shift is closed</p>
+                  <p style="color:#f57c00;font-size:15px;margin:5px 0 0 0">Check-ins can no longer be modified for this day/shift. Contact tournament staff if changes are needed.</p>
+                `}
               </div>
             ` : `<p style="color:#666;font-size:15px;margin-bottom:12px;padding:0 5px">Tap names as volunteers arrive</p>`}
             ${displayVolunteers.length === 0 ? `
@@ -5659,7 +5667,7 @@
                     </div>
                   </div>
                   ${v.hole !== activeHole ? `<span class="volunteer-hole">From #${v.hole}</span>` : ''}
-                  ${v.hole === activeHole ? `<button onclick="event.stopPropagation();openCaptainEditVolunteer('${v.id}')" style="padding:8px 12px;background:#f0f0f0;border:1px solid #ddd;border-radius:6px;font-size:14px;color:#555;cursor:pointer;margin-left:8px;min-height:40px">Edit</button>` : ''}
+                  ${v.hole === activeHole && !isReadOnlyUser ? `<button onclick="event.stopPropagation();openCaptainEditVolunteer('${v.id}')" style="padding:8px 12px;background:#f0f0f0;border:1px solid #ddd;border-radius:6px;font-size:14px;color:#555;cursor:pointer;margin-left:8px;min-height:40px">Edit</button>` : ''}
                 </div>
               `;
             }).join('')}
@@ -5668,7 +5676,7 @@
           ${shiftLocked ? `
           <div class="floating-summary" style="padding-bottom:0">
             <div style="padding:15px 0;text-align:center">
-              <p style="color:#888;font-size:16px;margin:0">Viewing ${selectedDay} ${selectedShift} check-ins (read-only)</p>
+              <p style="color:#888;font-size:16px;margin:0">${isReadOnlyUser ? 'View Only Access' : `Viewing ${selectedDay} ${selectedShift} check-ins`} (read-only)</p>
               ${isSubmitted ? `
                 <p style="color:#666;font-size:15px;margin-top:8px">Submitted at ${new Date(lastSubmission.timestamp).toLocaleTimeString('en-US', {hour: 'numeric', minute: '2-digit'})}</p>
               ` : ''}
@@ -6150,6 +6158,11 @@
     }
 
     function toggleCheckIn(volunteerId) {
+      // Block readOnly users from making changes
+      if (captainAuth && captainAuth.readOnly) {
+        showToast('View only access - cannot modify check-ins');
+        return;
+      }
       // For admin users, use the selected hole; for chair users, use selected hole; for captains, use their assigned hole
       const isChairUser = captainAuth.isChair && captainAuth.assignedHoles && captainAuth.assignedHoles.length > 1;
       const activeHole = captainAuth.isAdmin ? adminSelectedHole : (isChairUser ? chairSelectedHole : captainAuth.hole);
@@ -6250,6 +6263,10 @@
 
     async function saveCaptainVolunteerEdit() {
       if (!captainEditingVolunteer) return;
+      if (captainAuth && captainAuth.readOnly) {
+        showToast('View only access - cannot edit volunteers');
+        return;
+      }
 
       // Get new schedule from form
       const newSchedule = {};
@@ -6297,6 +6314,10 @@
 
     function saveCaptainVolunteerNotes() {
       if (!captainEditingVolunteer) return;
+      if (captainAuth && captainAuth.readOnly) {
+        showToast('View only access - cannot save notes');
+        return;
+      }
       const notes = document.getElementById('captainEditNotes').value;
       const idx = appData.volunteers.findIndex(v => v.id === captainEditingVolunteer.id);
       if (idx === -1) { alert('Volunteer not found'); return; }
@@ -6630,6 +6651,10 @@
     // Submission functions
     function confirmSubmission() {
       if (!captainAuth) return;
+      if (captainAuth.readOnly) {
+        showToast('View only access - cannot submit check-ins');
+        return;
+      }
 
       // For admin users, use the selected hole; for chair users, use selected hole; for captains, use their assigned hole
       const isChairUser = captainAuth.isChair && captainAuth.assignedHoles && captainAuth.assignedHoles.length > 1;
@@ -6848,12 +6873,14 @@
             const captain = appData.volunteers.find(v => String(v.id) === String(result.user.id));
             if (captain) {
               const isChair = captain.type === 'Chairman' || captain.type === 'Asst. Chairman' || captain.type === 'Admin';
+              const isReadOnly = captain.type === 'Chairman' || captain.type === 'Asst. Chairman';
               captainAuth = {
                 id: captain.id,
                 name: captain.name,
                 hole: captain.hole,
                 isAdmin: captain.type === 'Admin',
                 isChair: isChair,
+                readOnly: isReadOnly,
                 assignedHoles: isChair && captain.assignedHoles ? captain.assignedHoles : [captain.hole],
                 odId: captain.id
               };
