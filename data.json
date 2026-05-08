@@ -3149,7 +3149,7 @@
       "id": "4639",
       "name": "Hill, Michael",
       "type": "Admin",
-      "hole": 99,
+      "hole": 11,
       "phone": "(817) 689-4697",
       "email": "mike@hulenbend.net",
       "yearsWorked": 14,
@@ -3174,13 +3174,6 @@
       "volId": "4639",
       "hasAdminPassword": true,
       "hasVolunteerPassword": false,
-      "hatReceived": false,
-      "notes": "",
-      "originalHole": 11,
-      "assignedHoles": [
-        99,
-        11
-      ],
       "adminPassword": "$2b$10$h0CPonAkFNTz00hqbELOr.zvbfmQqWVYZkDenYxH1YQvjj64aEp8S",
       "adminPasswordSetAt": "2026-04-20T20:13:12.730Z"
     },
@@ -8736,13 +8729,13 @@
   },
   "activityLog": [
     {
-      "id": "1778266807856",
-      "timestamp": "2026-05-08T19:00:07.856Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "edit-volunteer",
-      "target": "Hill, Michael",
-      "details": "Edited volunteer (Type: Admin, Hole: 99)"
+      "id": "1778272799272",
+      "timestamp": "2026-05-08T20:39:59.272Z",
+      "user": "Waller, Gary",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
     },
     {
       "id": "1778191259255",
