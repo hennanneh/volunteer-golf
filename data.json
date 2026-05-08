@@ -4527,7 +4527,12 @@
       "address": "5791 Gleneagles Circle Fort Worth, TX 76137",
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
-      "volunteerPassword": "$2b$10$qllh9j6vY/7r4TpXGbQSLucVLqVFMhg57HPWI6wOm6iwKJ5DpHg0a"
+      "pairingPreferences": [
+        "9015",
+        "8511",
+        "9787"
+      ],
+      "volunteerPassword": "$2b$10$YUXkDNi67slAvL5B/PCLfePRLup/1n2FOIP4C6W8oEFRCsubZ.vVC"
     },
     {
       "id": "6744",
@@ -5578,7 +5583,7 @@
       "address": "291 Private Rd 2793 Alvord, TX 76225",
       "volId": "1770",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false,
+      "hasVolunteerPassword": true,
       "volunteerPassword": "$2b$10$uHAUEaNjHXUe27hVg6fkn.tKnsOjQ65YLAJnlNwA3bITBqehqSD/W"
     },
     {
@@ -7159,7 +7164,7 @@
       "yearsWorked": 1,
       "hat": "",
       "scheduled": {
-        "Monday PM": true,
+        "Tuesday AM": true,
         "Wednesday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
@@ -8728,6 +8733,33 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1778277582403",
+      "timestamp": "2026-05-08T21:59:42.403Z",
+      "user": "Lemay, Mark",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1778277062363",
+      "timestamp": "2026-05-08T21:51:02.363Z",
+      "user": "Lemay, Mark",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1778274126574",
+      "timestamp": "2026-05-08T21:02:06.574Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1778272799272",
       "timestamp": "2026-05-08T20:39:59.272Z",
