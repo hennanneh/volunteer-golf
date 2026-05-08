@@ -8726,6 +8726,15 @@
   },
   "activityLog": [
     {
+      "id": "1778259196985",
+      "timestamp": "2026-05-08T16:53:16.985Z",
+      "user": "Zamzow, Steve",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1778255779471",
       "timestamp": "2026-05-08T15:56:19.471Z",
       "user": "Sale, Lynn",
