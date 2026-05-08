@@ -8728,6 +8728,15 @@
   },
   "activityLog": [
     {
+      "id": "1778207376211",
+      "timestamp": "2026-05-08T02:29:36.211Z",
+      "user": "White, Gary",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
       "id": "1778205086217",
       "timestamp": "2026-05-08T01:51:26.217Z",
       "user": "Gastinel, Buck",
