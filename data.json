@@ -5576,7 +5576,8 @@
       "address": "291 Private Rd 2793 Alvord, TX 76225",
       "volId": "1770",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false
+      "hasVolunteerPassword": true,
+      "volunteerPassword": "$2b$10$uHAUEaNjHXUe27hVg6fkn.tKnsOjQ65YLAJnlNwA3bITBqehqSD/W"
     },
     {
       "id": "8878",
@@ -8725,6 +8726,51 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1778262544115",
+      "timestamp": "2026-05-08T17:49:04.115Z",
+      "user": "Sale, Lynn",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1778262517683",
+      "timestamp": "2026-05-08T17:48:37.683Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1778260454676",
+      "timestamp": "2026-05-08T17:14:14.676Z",
+      "user": "Mulvaney, Matt",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1778259760973",
+      "timestamp": "2026-05-08T17:02:40.973Z",
+      "user": "Gastinel, Buck",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1778259668600",
+      "timestamp": "2026-05-08T17:01:08.600Z",
+      "user": "Gastinel, Buck",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
     {
       "id": "1778259196985",
       "timestamp": "2026-05-08T16:53:16.985Z",
