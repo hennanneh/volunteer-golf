@@ -4400,6 +4400,10 @@
       "address": "11102 Jereme Trail Frisco, TX 75035",
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
+      "pairingPreferences": [
+        "8510",
+        "10483"
+      ],
       "volunteerPassword": "$2b$10$VqqP7bJ5Z3xQw8UPxsbki.hhMDlBk7k95gOYCnyICv/e4wdieki2O"
     },
     {
@@ -8733,6 +8737,24 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1778346700226",
+      "timestamp": "2026-05-09T17:11:40.226Z",
+      "user": "Langford, Alan",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1778346560085",
+      "timestamp": "2026-05-09T17:09:20.086Z",
+      "user": "Langford, Alan",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
     {
       "id": "1778344813510",
       "timestamp": "2026-05-09T16:40:13.510Z",
