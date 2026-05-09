@@ -4518,10 +4518,15 @@
       "hat": "",
       "scheduled": {
         "Wednesday AM": true,
+        "Wednesday PM": true,
+        "Thursday AM": true,
         "Thursday PM": true,
+        "Friday AM": true,
         "Friday PM": true,
+        "Saturday AM": true,
         "Saturday PM": true,
-        "Sunday AM": true
+        "Sunday AM": true,
+        "Sunday PM": true
       },
       "volId": "7692",
       "address": "5791 Gleneagles Circle Fort Worth, TX 76137",
@@ -8728,6 +8733,42 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1778344813510",
+      "timestamp": "2026-05-09T16:40:13.510Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1778344777288",
+      "timestamp": "2026-05-09T16:39:37.288Z",
+      "user": "Sale, Lynn",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1778344720762",
+      "timestamp": "2026-05-09T16:38:40.762Z",
+      "user": "Sale, Lynn",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1778344626296",
+      "timestamp": "2026-05-09T16:37:06.296Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
     {
       "id": "1778341863816",
       "timestamp": "2026-05-09T15:51:03.816Z",
