@@ -4527,11 +4527,6 @@
       "address": "5791 Gleneagles Circle Fort Worth, TX 76137",
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
-      "pairingPreferences": [
-        "9015",
-        "8511",
-        "9787"
-      ],
       "volunteerPassword": "$2b$10$YUXkDNi67slAvL5B/PCLfePRLup/1n2FOIP4C6W8oEFRCsubZ.vVC"
     },
     {
@@ -8734,8 +8729,17 @@
   },
   "activityLog": [
     {
-      "id": "1778277582403",
-      "timestamp": "2026-05-08T21:59:42.403Z",
+      "id": "1778283791170",
+      "timestamp": "2026-05-08T23:43:11.170Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1778282261446",
+      "timestamp": "2026-05-08T23:17:41.446Z",
       "user": "Lemay, Mark",
       "userType": "Volunteer",
       "action": "logout",
@@ -8743,8 +8747,8 @@
       "details": "Logged out of Volunteer portal"
     },
     {
-      "id": "1778277062363",
-      "timestamp": "2026-05-08T21:51:02.363Z",
+      "id": "1778282218796",
+      "timestamp": "2026-05-08T23:16:58.796Z",
       "user": "Lemay, Mark",
       "userType": "Volunteer",
       "action": "login",
