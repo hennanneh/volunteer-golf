@@ -7075,7 +7075,7 @@
       "yearsWorked": 1,
       "hat": "",
       "scheduled": {
-        "Tuesday PM": true,
+        "Tuesday AM": true,
         "Wednesday PM": true,
         "Friday PM": true,
         "Saturday AM": true,
@@ -8608,6 +8608,15 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1778433568094",
+      "timestamp": "2026-05-10T17:19:28.095Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1778430100547",
       "timestamp": "2026-05-10T16:21:40.547Z",
