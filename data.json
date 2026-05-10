@@ -2488,7 +2488,9 @@
       "address": "2407 Lakepoint Drive\r\nKeller, TX 76248",
       "volId": "7768",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false
+      "hasVolunteerPassword": true,
+      "notAttendingOuting": true,
+      "volunteerPassword": "$2b$10$1uENu1LA9HQCcuR0rLSfx.r3yD3d0OiKc0N5AySM0NPNQSRbxgbeG"
     },
     {
       "id": "10087",
@@ -8614,6 +8616,51 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1778449195758",
+      "timestamp": "2026-05-10T21:39:55.758Z",
+      "user": "Gillitzer, Dean",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1778449159747",
+      "timestamp": "2026-05-10T21:39:19.747Z",
+      "user": "Gillitzer, Dean",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1778448657236",
+      "timestamp": "2026-05-10T21:30:57.236Z",
+      "user": "Gillitzer, Dean",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1778448549553",
+      "timestamp": "2026-05-10T21:29:09.553Z",
+      "user": "Gillitzer, Dean",
+      "userType": "Volunteer",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed volunteer password"
+    },
+    {
+      "id": "1778448500888",
+      "timestamp": "2026-05-10T21:28:20.888Z",
+      "user": "Gillitzer, Dean",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
     {
       "id": "1778445706937",
       "timestamp": "2026-05-10T20:41:46.937Z",
