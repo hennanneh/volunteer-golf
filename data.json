@@ -6121,13 +6121,7 @@
       "email": "powerblake84@gmail.com",
       "yearsWorked": 1,
       "hat": "",
-      "scheduled": {
-        "Wednesday AM": true,
-        "Thursday AM": true,
-        "Friday PM": true,
-        "Saturday AM": true,
-        "Sunday PM": true
-      },
+      "scheduled": {},
       "volId": "10246",
       "address": "477 Suffield Dr. #813 Buda, TX 78610",
       "hasAdminPassword": false,
@@ -6977,7 +6971,7 @@
       "yearsWorked": 11,
       "hat": "",
       "scheduled": {
-        "Tuesday PM": true,
+        "Wednesday PM": true,
         "Thursday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
@@ -7278,7 +7272,7 @@
       "yearsWorked": 1,
       "hat": "",
       "scheduled": {
-        "Tuesday PM": true,
+        "Wednesday PM": true,
         "Thursday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
@@ -8626,6 +8620,24 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1778382316458",
+      "timestamp": "2026-05-10T03:05:16.458Z",
+      "user": "Montalvo, Sammy",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1778382286125",
+      "timestamp": "2026-05-10T03:04:46.125Z",
+      "user": "Montalvo, Sammy",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
     {
       "id": "1778381281232",
       "timestamp": "2026-05-10T02:48:01.232Z",
