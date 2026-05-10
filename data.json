@@ -12,7 +12,7 @@
       "scheduled": {
         "Wednesday AM": true,
         "Thursday AM": true,
-        "Friday PM": true,
+        "Friday AM": true,
         "Saturday AM": true,
         "Sunday PM": true
       },
@@ -490,12 +490,11 @@
       "yearsWorked": 3,
       "hat": "",
       "scheduled": {
-        "Tuesday AM": true,
-        "Wednesday AM": true,
-        "Thursday AM": true,
-        "Friday PM": true,
-        "Saturday AM": true,
-        "Sunday PM": true
+        "Monday AM": true,
+        "Thursday PM": true,
+        "Friday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true
       },
       "volId": "9465",
       "address": "904 Chapel Drive Denton, TX 76205",
@@ -3157,10 +3156,10 @@
       "hat": "",
       "scheduled": {
         "Monday AM": true,
-        "Thursday AM": true,
-        "Friday PM": true,
-        "Saturday AM": true,
-        "Sunday PM": true
+        "Thursday PM": true,
+        "Friday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true
       },
       "volId": "6903",
       "address": "1013 Timberline Dr Benbrook, TX 76126",
@@ -3308,7 +3307,7 @@
       "hat": "",
       "scheduled": {
         "Wednesday AM": true,
-        "Thursday PM": true,
+        "Thursday AM": true,
         "Friday AM": true,
         "Saturday PM": true,
         "Sunday AM": true
@@ -3430,7 +3429,7 @@
       },
       "address": "1915 Spotted Fawn Dr Arlington, TX 76005-1405",
       "volId": "2442",
-      "hasAdminPassword": false,
+      "hasAdminPassword": true,
       "hasVolunteerPassword": false,
       "adminPassword": "$2b$10$pAM.v1/Sd.z60KQEvKnTt.rhUpL7bIM1/tYAYjkdOkd9Ua7pQP0Le",
       "adminPasswordSetAt": "2026-05-06T15:13:08.031Z"
@@ -3490,12 +3489,10 @@
       "yearsWorked": 13,
       "hat": "",
       "scheduled": {
-        "Monday AM": true,
         "Monday PM": true,
         "Tuesday AM": true,
         "Tuesday PM": true,
         "Wednesday AM": true,
-        "Wednesday PM": true,
         "Thursday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
@@ -4471,7 +4468,7 @@
       "yearsWorked": 10,
       "hat": "",
       "scheduled": {
-        "Tuesday PM": true,
+        "Wednesday PM": true,
         "Thursday PM": true,
         "Friday AM": true,
         "Saturday PM": true,
@@ -4955,10 +4952,10 @@
       "hat": "",
       "scheduled": {
         "Wednesday AM": true,
-        "Thursday AM": true,
-        "Friday PM": true,
-        "Saturday AM": true,
-        "Sunday PM": true
+        "Thursday PM": true,
+        "Friday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true
       },
       "volId": "10271",
       "address": "2011 Choctaw Ridge Drive Lewisville, TX 75067-7434",
@@ -5090,7 +5087,7 @@
       "yearsWorked": 1,
       "hat": "",
       "scheduled": {
-        "Tuesday PM": true,
+        "Wednesday PM": true,
         "Thursday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
@@ -5198,10 +5195,8 @@
       "hat": "",
       "scheduled": {
         "Monday AM": true,
-        "Monday PM": true,
         "Tuesday AM": true,
         "Tuesday PM": true,
-        "Wednesday AM": true,
         "Wednesday PM": true,
         "Thursday AM": true,
         "Thursday PM": true,
@@ -5507,7 +5502,7 @@
       "address": "291 Private Rd 2793 Alvord, TX 76225",
       "volId": "1770",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false,
+      "hasVolunteerPassword": true,
       "volunteerPassword": "$2b$10$uHAUEaNjHXUe27hVg6fkn.tKnsOjQ65YLAJnlNwA3bITBqehqSD/W"
     },
     {
@@ -6473,7 +6468,7 @@
       "yearsWorked": 3,
       "hat": "",
       "scheduled": {
-        "Tuesday AM": true,
+        "Monday PM": true,
         "Thursday PM": true,
         "Friday AM": true,
         "Saturday PM": true,
@@ -8631,6 +8626,15 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1778381281232",
+      "timestamp": "2026-05-10T02:48:01.232Z",
+      "user": "Montalvo, Sammy",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1778376530163",
       "timestamp": "2026-05-10T01:28:50.164Z",
