@@ -7581,7 +7581,8 @@
       "volId": "9896",
       "address": "1612 Greenhill Ct KELLER, TX 76248",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false
+      "hasVolunteerPassword": true,
+      "volunteerPassword": "$2b$10$e9ThU12OydZtoVld0YVbOezOsK9T4dxT856fZnWP2L4NRrKVqQhC."
     },
     {
       "id": "10237",
@@ -8613,6 +8614,42 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1778445706937",
+      "timestamp": "2026-05-10T20:41:46.937Z",
+      "user": "Butler, Mark",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1778445553037",
+      "timestamp": "2026-05-10T20:39:13.037Z",
+      "user": "Butler, Mark",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1778443838905",
+      "timestamp": "2026-05-10T20:10:38.906Z",
+      "user": "Sullivan, Patrick",
+      "userType": "Volunteer",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed volunteer password"
+    },
+    {
+      "id": "1778443808575",
+      "timestamp": "2026-05-10T20:10:08.575Z",
+      "user": "Sullivan, Patrick",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
     {
       "id": "1778438956786",
       "timestamp": "2026-05-10T18:49:16.786Z",
