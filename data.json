@@ -6113,21 +6113,6 @@
       "hasVolunteerPassword": false
     },
     {
-      "id": "10246",
-      "name": "Power, Blake",
-      "type": "Volunteer",
-      "hole": 5,
-      "phone": "(936) 715-7978",
-      "email": "powerblake84@gmail.com",
-      "yearsWorked": 1,
-      "hat": "",
-      "scheduled": {},
-      "volId": "10246",
-      "address": "477 Suffield Dr. #813 Buda, TX 78610",
-      "hasAdminPassword": false,
-      "hasVolunteerPassword": false
-    },
-    {
       "id": "8448",
       "name": "Prater, David",
       "type": "Volunteer",
@@ -8620,6 +8605,33 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1778419816513",
+      "timestamp": "2026-05-10T13:30:16.513Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1778419775695",
+      "timestamp": "2026-05-10T13:29:35.695Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "delete",
+      "target": "Power, Blake",
+      "details": "Deleted volunteer"
+    },
+    {
+      "id": "1778419740846",
+      "timestamp": "2026-05-10T13:29:00.846Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
     {
       "id": "1778382316458",
       "timestamp": "2026-05-10T03:05:16.458Z",
