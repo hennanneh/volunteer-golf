@@ -7075,8 +7075,8 @@
       "yearsWorked": 1,
       "hat": "",
       "scheduled": {
-        "Monday PM": true,
-        "Thursday AM": true,
+        "Tuesday PM": true,
+        "Wednesday PM": true,
         "Friday PM": true,
         "Saturday AM": true,
         "Sunday PM": true
@@ -7085,6 +7085,7 @@
       "address": "9204 King Air Drive Granbury, TX 76049",
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
+      "notes": "Cannot work Thursday.",
       "volunteerPassword": "$2b$10$w1xd2loPnmEAFEv73loWHOgwqo9FCv/3MAC8k087QbxOAVXifBjKa"
     },
     {
@@ -8607,6 +8608,24 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1778430100547",
+      "timestamp": "2026-05-10T16:21:40.547Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "edit-notes",
+      "target": "Schultz, Joni",
+      "details": "Updated volunteer notes"
+    },
+    {
+      "id": "1778429560951",
+      "timestamp": "2026-05-10T16:12:40.951Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1778425450462",
       "timestamp": "2026-05-10T15:04:10.462Z",
