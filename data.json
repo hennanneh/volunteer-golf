@@ -1134,11 +1134,16 @@
       "yearsWorked": 3,
       "hat": "",
       "scheduled": {
+        "Wednesday AM": true,
         "Wednesday PM": true,
+        "Thursday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
         "Saturday PM": true,
-        "Sunday AM": true
+        "Sunday AM": true,
+        "Sunday PM": true
       },
       "volId": "9134",
       "address": "9436 Shoveler Trail Fort Worth, TX 76118",
@@ -8608,6 +8613,24 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1778438956786",
+      "timestamp": "2026-05-10T18:49:16.786Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1778437474921",
+      "timestamp": "2026-05-10T18:24:34.921Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1778433568094",
       "timestamp": "2026-05-10T17:19:28.095Z",
