@@ -8617,6 +8617,42 @@
   },
   "activityLog": [
     {
+      "id": "1778452840890",
+      "timestamp": "2026-05-10T22:40:40.890Z",
+      "user": "Montalvo, Sammy",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1778452663368",
+      "timestamp": "2026-05-10T22:37:43.368Z",
+      "user": "Gastinel, Buck",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1778452222635",
+      "timestamp": "2026-05-10T22:30:22.635Z",
+      "user": "Gastinel, Buck",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1778451046274",
+      "timestamp": "2026-05-10T22:10:46.274Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1778449195758",
       "timestamp": "2026-05-10T21:39:55.758Z",
       "user": "Gillitzer, Dean",
