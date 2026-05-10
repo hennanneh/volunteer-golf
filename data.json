@@ -8345,12 +8345,14 @@
       "yearsWorked": 9,
       "hat": "",
       "scheduled": {
-        "Monday PM": true,
-        "Tuesday PM": true,
+        "Wednesday AM": true,
         "Wednesday PM": true,
         "Thursday AM": true,
+        "Thursday PM": true,
+        "Friday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
+        "Saturday PM": true,
         "Sunday PM": true
       },
       "volId": "7250",
@@ -8605,6 +8607,15 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1778425450462",
+      "timestamp": "2026-05-10T15:04:10.462Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1778419816513",
       "timestamp": "2026-05-10T13:30:16.513Z",
