@@ -8630,6 +8630,33 @@
   },
   "activityLog": [
     {
+      "id": "1778522683415",
+      "timestamp": "2026-05-11T18:04:43.415Z",
+      "user": "Duke, Mitzie",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1778522600499",
+      "timestamp": "2026-05-11T18:03:20.499Z",
+      "user": "Duke, Mitzie",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1778522598095",
+      "timestamp": "2026-05-11T18:03:18.095Z",
+      "user": "Duke, Mitzie",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
       "id": "1778520750551",
       "timestamp": "2026-05-11T17:32:30.551Z",
       "user": "Clayton, Rodney",
