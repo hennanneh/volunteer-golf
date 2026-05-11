@@ -2201,6 +2201,8 @@
       "scheduled": {
         "Monday AM": true,
         "Monday PM": true,
+        "Thursday PM": true,
+        "Friday AM": true,
         "Saturday PM": true,
         "Sunday AM": true
       },
@@ -8628,22 +8630,22 @@
   },
   "activityLog": [
     {
-      "id": "1778516481766",
-      "timestamp": "2026-05-11T16:21:21.766Z",
-      "user": "Sale, Lynn",
+      "id": "1778520750551",
+      "timestamp": "2026-05-11T17:32:30.551Z",
+      "user": "Clayton, Rodney",
       "userType": "Captain",
-      "action": "edit-schedule",
-      "target": "Gaines, Lisa",
-      "details": "Removed Friday AM"
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
     },
     {
-      "id": "1778516457433",
-      "timestamp": "2026-05-11T16:20:57.433Z",
-      "user": "Sale, Lynn",
+      "id": "1778520300787",
+      "timestamp": "2026-05-11T17:25:00.787Z",
+      "user": "Clayton, Rodney",
       "userType": "Captain",
-      "action": "edit-schedule",
-      "target": "Gaines, Lisa",
-      "details": "Removed Thursday PM"
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
     },
     {
       "id": "1778513114447",
