@@ -2201,8 +2201,6 @@
       "scheduled": {
         "Monday AM": true,
         "Monday PM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
         "Saturday PM": true,
         "Sunday AM": true
       },
@@ -8629,6 +8627,24 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1778516481766",
+      "timestamp": "2026-05-11T16:21:21.766Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Gaines, Lisa",
+      "details": "Removed Friday AM"
+    },
+    {
+      "id": "1778516457433",
+      "timestamp": "2026-05-11T16:20:57.433Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Gaines, Lisa",
+      "details": "Removed Thursday PM"
+    },
     {
       "id": "1778513114447",
       "timestamp": "2026-05-11T15:25:14.447Z",
