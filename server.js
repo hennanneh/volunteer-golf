@@ -280,7 +280,7 @@ const resetSubmitLimiter = makeLimiter(10, 'reset-submit');  // POST /api/reset-
 // all real users have logged in via the new flow at least once.
 // ============================================================================
 
-let STRICT_AUTH = true;  // Requires authentication for all API endpoints
+let STRICT_AUTH = false;  // Set to true after all users have logged in once
 
 const sessions = new Map();  // token -> { userId, email, name, role, portal, createdAt, lastUsed }
 const SESSION_IDLE_MS = 12 * 60 * 60 * 1000;       // 12 hours
@@ -776,7 +776,7 @@ app.post('/api/reset-password', resetSubmitLimiter, (req, res) => {
   });
 });
 
-app.get('/api/data', requireAuth(null), (req, res) => {
+app.get('/api/data', (req, res) => {
   const data = loadData(req.demoMode);
 
   // Ensure superadmin is always present in volunteers
