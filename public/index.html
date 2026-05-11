@@ -1507,7 +1507,7 @@
 
       // Keep last 200 entries to prevent unbounded growth and to keep the
       // broadcast payload small (every save sends the entire dataset).
-      if (appData.activityLog.length > 200) {
+      if (appData.activityLog.length > 500) {
         appData.activityLog = appData.activityLog.slice(0, 200);
       }
 
@@ -6340,6 +6340,10 @@
         return r.json();
       }).then(function(result) {
         if (!result || !result.success) throw new Error(result && result.error || 'Save failed');
+        // Log the check-in/check-out to activity log
+        const action = existing ? 'check-out' : 'check-in';
+        const details = `${selectedDay} ${selectedShift} - Hole #${activeHole}${isAlternate ? ' (alternate)' : ''}`;
+        logActivity(action, volunteerName, details);
       }).catch(function(err) {
         console.error('Check-in save failed:', err);
         // Roll back the optimistic update
