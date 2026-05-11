@@ -8623,6 +8623,24 @@
   },
   "activityLog": [
     {
+      "id": "1778471698990",
+      "timestamp": "2026-05-11T03:54:58.990Z",
+      "user": "Colon, Orlando",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1778471630685",
+      "timestamp": "2026-05-11T03:53:50.685Z",
+      "user": "Colon, Orlando",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
       "id": "1778461748629",
       "timestamp": "2026-05-11T01:09:08.629Z",
       "user": "Watson, Stan",
