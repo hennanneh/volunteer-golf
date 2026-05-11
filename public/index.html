@@ -1401,18 +1401,71 @@
 
     // Save data to server
     var saveTimeout = null;
+    // Debounce saves to avoid too many requests. Returns a Promise that
+    // resolves when the eventual POST succeeds and rejects when it fails,
+    // so callers that want to surface errors (e.g. "Schedule updated
+    // successfully!" should only show on actual success) can await it.
+    // Multiple callers within one 300ms window share one Promise and one POST.
+    var pendingSave = null;
+    var pendingSaveResolvers = null;
     function saveData() {
-      // Debounce saves to avoid too many requests
       if (saveTimeout) clearTimeout(saveTimeout);
+      if (!pendingSave) {
+        pendingSave = new Promise(function(resolve, reject) {
+          pendingSaveResolvers = { resolve: resolve, reject: reject };
+        });
+        // Default no-op handler so unawaited callers don't trigger an
+        // UnhandledPromiseRejection. Explicit awaiters still see the rejection.
+        pendingSave.catch(function() {});
+      }
+      var ourPromise = pendingSave;
       saveTimeout = setTimeout(function() {
+        var resolvers = pendingSaveResolvers;
+        pendingSave = null;
+        pendingSaveResolvers = null;
         fetch('/api/data', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', 'X-Socket-ID': (socket && socket.id) || '' },
           body: JSON.stringify(appData)
+        }).then(async function(resp) {
+          if (!resp.ok) {
+            var msg;
+            try { msg = (await resp.json()).error || ('HTTP ' + resp.status); }
+            catch (e) { msg = 'HTTP ' + resp.status; }
+            throw new Error(msg);
+          }
+          resolvers.resolve();
         }).catch(function(err) {
           console.error('Failed to save data:', err);
+          resolvers.reject(err);
         });
       }, 300);
+      return ourPromise;
+    }
+
+    // Snapshot helper used with persistOrRevert. JSON-clones the full appData
+    // so callers don't have to think about which fields they're touching.
+    function snapshotAppData() {
+      return JSON.parse(JSON.stringify(appData));
+    }
+
+    // Await saveData(); on failure restore the snapshot, re-render, and alert
+    // the user. Returns true on success, false on failure (after reverting).
+    // Callers should `if (!await persistOrRevert(snap)) return;` and only show
+    // success UX after this returns true.
+    async function persistOrRevert(snapshot) {
+      try {
+        await saveData();
+        return true;
+      } catch (err) {
+        if (snapshot !== undefined) {
+          appData = snapshot;
+          render();
+        }
+        const msg = err && err.message ? err.message : err;
+        alert('Failed to save: ' + msg + '\n\nNo changes were saved. Please try again.');
+        return false;
+      }
     }
 
     // Phase 1.2/1.3: passwords are server-owned. Call /api/set-password
@@ -1882,48 +1935,79 @@
       const newEmail = emailInput.value.trim();
 
       const volIdx = appData.volunteers.findIndex(v => v.id === volunteerAuth.id);
-      if (volIdx >= 0) {
-        appData.volunteers[volIdx].email = newEmail;
-        volunteerAuth.email = newEmail;
+      if (volIdx < 0) return;
+      const oldEmail = appData.volunteers[volIdx].email;
+      appData.volunteers[volIdx].email = newEmail;
+      volunteerAuth.email = newEmail;
+      try {
         await saveData();
-        alert('Email updated!');
+      } catch (err) {
+        appData.volunteers[volIdx].email = oldEmail;
+        volunteerAuth.email = oldEmail;
         render();
+        alert('Failed to save email: ' + (err && err.message ? err.message : err));
+        return;
       }
+      alert('Email updated!');
+      render();
     }
 
     async function updatePairingPreference(index, volunteerId) {
       const volIdx = appData.volunteers.findIndex(v => v.id === volunteerAuth.id);
-      if (volIdx >= 0) {
-        if (!appData.volunteers[volIdx].pairingPreferences) {
-          appData.volunteers[volIdx].pairingPreferences = [];
-        }
-        appData.volunteers[volIdx].pairingPreferences[index] = volunteerId || null;
-        volunteerAuth.pairingPreferences = appData.volunteers[volIdx].pairingPreferences;
+      if (volIdx < 0) return;
+      const vol = appData.volunteers[volIdx];
+      if (!vol.pairingPreferences) vol.pairingPreferences = [];
+      const oldPrefs = vol.pairingPreferences.slice();
+      vol.pairingPreferences[index] = volunteerId || null;
+      volunteerAuth.pairingPreferences = vol.pairingPreferences;
+      try {
         await saveData();
-        showToast('Saved!');
+      } catch (err) {
+        vol.pairingPreferences = oldPrefs;
+        volunteerAuth.pairingPreferences = oldPrefs;
+        render();
+        alert('Failed to save pairing preference: ' + (err && err.message ? err.message : err));
+        return;
       }
+      showToast('Saved!');
     }
 
     async function updateNotAttendingOuting(checked) {
       const volIdx = appData.volunteers.findIndex(v => v.id === volunteerAuth.id);
-      if (volIdx >= 0) {
-        appData.volunteers[volIdx].notAttendingOuting = checked;
-        volunteerAuth.notAttendingOuting = checked;
+      if (volIdx < 0) return;
+      const oldVal = appData.volunteers[volIdx].notAttendingOuting;
+      appData.volunteers[volIdx].notAttendingOuting = checked;
+      volunteerAuth.notAttendingOuting = checked;
+      try {
         await saveData();
-        showToast('Saved!');
+      } catch (err) {
+        appData.volunteers[volIdx].notAttendingOuting = oldVal;
+        volunteerAuth.notAttendingOuting = oldVal;
         render();
+        alert('Failed to save: ' + (err && err.message ? err.message : err));
+        return;
       }
+      showToast('Saved!');
+      render();
     }
 
     async function updateNoOutingPreference(checked) {
       const volIdx = appData.volunteers.findIndex(v => v.id === volunteerAuth.id);
-      if (volIdx >= 0) {
-        appData.volunteers[volIdx].noOutingPreference = checked;
-        volunteerAuth.noOutingPreference = checked;
+      if (volIdx < 0) return;
+      const oldVal = appData.volunteers[volIdx].noOutingPreference;
+      appData.volunteers[volIdx].noOutingPreference = checked;
+      volunteerAuth.noOutingPreference = checked;
+      try {
         await saveData();
-        showToast('Saved!');
+      } catch (err) {
+        appData.volunteers[volIdx].noOutingPreference = oldVal;
+        volunteerAuth.noOutingPreference = oldVal;
         render();
+        alert('Failed to save: ' + (err && err.message ? err.message : err));
+        return;
       }
+      showToast('Saved!');
+      render();
     }
 
     function renderAdminDashboard() {
@@ -2359,7 +2443,7 @@
       }
 
       const reader = new FileReader();
-      reader.onload = function(e) {
+      reader.onload = async function(e) {
         try {
           const text = e.target.result;
           const rows = parseCSV(text);
@@ -2372,9 +2456,9 @@
           }
 
           if (mode === 'replace') {
-            handleImportReplace(rows, headers, nameCol);
+            await handleImportReplace(rows, headers, nameCol);
           } else {
-            handleImportUpdate(rows, headers, nameCol);
+            await handleImportUpdate(rows, headers, nameCol);
           }
         } catch (err) {
           alert('Error importing file: ' + err.message);
@@ -2383,7 +2467,7 @@
       reader.readAsText(file);
     }
 
-    function handleImportReplace(rows, headers, nameCol) {
+    async function handleImportReplace(rows, headers, nameCol) {
       const typeCol = headers.findIndex(h => h.includes('Volunteer Type') || h === 'Type');
       const holeCol = headers.findIndex(h => h.includes('Assigned Location') || h === 'Hole');
       const phoneCol = headers.findIndex(h => h.includes('Phone_Cell') || h.includes('Cell'));
@@ -2430,11 +2514,12 @@
         return vol;
       });
 
+      const snap = snapshotAppData();
       appData.volunteers = volunteers;
       appData.checkIns = [];
       appData.submissions = [];
       logActivity('import', '', 'Replaced all data - imported ' + volunteers.length + ' volunteers from CSV');
-      saveData();
+      if (!await persistOrRevert(snap)) return;
       alert('Successfully replaced all data with ' + volunteers.length + ' volunteers.');
       render();
     }
@@ -2754,15 +2839,21 @@
       }
     }
 
-    function deleteVolunteer(id) {
+    async function deleteVolunteer(id) {
       const vol = appData.volunteers.find(v => String(v.id) === String(id));
       if (!vol) return;
       if (!confirm(`Delete "${vol.name}"? This will also remove their check-in records. This cannot be undone.`)) return;
+      const snap = snapshotAppData();
+      const wasEditing = editingVolunteer;
       appData.volunteers = appData.volunteers.filter(v => String(v.id) !== String(id));
       appData.checkIns = appData.checkIns.filter(c => String(c.volunteerId) !== String(id));
       logActivity('delete', vol.name, 'Deleted volunteer');
       editingVolunteer = null;
-      saveData();
+      if (!await persistOrRevert(snap)) {
+        editingVolunteer = wasEditing;
+        render();
+        return;
+      }
       render();
     }
 
@@ -2981,7 +3072,7 @@
       printWindow.print();
     }
 
-    function saveVolunteerEdit() {
+    async function saveVolunteerEdit() {
       if (!editingVolunteer) return;
 
       // Get values from form
@@ -3065,10 +3156,13 @@
         // to 'admin2025' and the login response sets usingDefaultPassword,
         // which prompts the user to set a real password on first login.
         // No local mutation needed.
+        const snap = snapshotAppData();
         appData.volunteers.push(newVol);
 
         // Log the addition
         logActivity('add-volunteer', newName, 'Added new volunteer (Type: ' + newType + ', Hole: ' + newHole + ')');
+
+        if (!await persistOrRevert(snap)) return;
 
         editingVolunteer = null;
         render();
@@ -3120,6 +3214,7 @@
         const passwordSideEffect = (!wasAdmin && isAdmin) || (wasAdmin && !isAdmin)
           ? { volunteerId: editingVolunteer.id, field: 'admin', newPassword: '' }
           : null;
+        const snap = snapshotAppData();
         appData.volunteers[idx] = updatedVol;
 
         // Update any check-in records with new name
@@ -3133,12 +3228,14 @@
         // Log the edit
         logActivity('edit-volunteer', newName, 'Edited volunteer (Type: ' + newType + ', Hole: ' + newHole + ')');
 
-        saveData();
+        if (!await persistOrRevert(snap)) return;
 
         // Phase 1.2/1.3: when type changed to/from admin, clear the stored
         // adminPassword on the server. Promotion → login falls back to the
         // 'admin2025' default and prompts the user to set a real password.
-        // Demotion → no admin login possible at all.
+        // Demotion → no admin login possible at all. Only fire after the
+        // data save succeeds so we don't clear a password for an edit that
+        // never landed.
         if (passwordSideEffect) {
           apiSetPassword(passwordSideEffect).catch(() => {});
         }
@@ -3252,12 +3349,12 @@
       render();
     }
 
-    function clearHoleHistory() {
-      if (confirm('Clear all move history?')) {
-        appData.volunteers.forEach(v => { delete v.originalHole; });
-        saveData();
-        render();
-      }
+    async function clearHoleHistory() {
+      if (!confirm('Clear all move history?')) return;
+      const snap = snapshotAppData();
+      appData.volunteers.forEach(v => { delete v.originalHole; });
+      if (!await persistOrRevert(snap)) return;
+      render();
     }
 
     function renderReportFilters(isCaptainView, captainHole) {
@@ -3474,23 +3571,33 @@
       `;
     }
 
-    function moveVolunteerToHole(volunteerId, newHole) {
+    async function moveVolunteerToHole(volunteerId, newHole) {
       const vol = appData.volunteers.find(v => v.id === volunteerId);
-      if (vol && newHole !== vol.hole) {
-        const oldHole = vol.hole;
-        // Track original hole if not already set
-        if (vol.originalHole === undefined) {
-          vol.originalHole = oldHole;
-        }
-        // If moving back to original hole, clear the tracking
-        if (newHole === vol.originalHole) {
-          delete vol.originalHole;
-        }
-        vol.hole = newHole;
-        saveData();
-        logActivity('edit', vol.name, `Moved from Hole #${oldHole} to Hole #${newHole}`);
-        render();
+      if (!vol || newHole === vol.hole) return;
+      const oldHole = vol.hole;
+      const hadOriginalHole = vol.originalHole !== undefined;
+      const oldOriginalHole = vol.originalHole;
+      // Track original hole if not already set
+      if (vol.originalHole === undefined) {
+        vol.originalHole = oldHole;
       }
+      // If moving back to original hole, clear the tracking
+      if (newHole === vol.originalHole) {
+        delete vol.originalHole;
+      }
+      vol.hole = newHole;
+      logActivity('edit', vol.name, `Moved from Hole #${oldHole} to Hole #${newHole}`);
+      try {
+        await saveData();
+      } catch (err) {
+        vol.hole = oldHole;
+        if (hadOriginalHole) vol.originalHole = oldOriginalHole;
+        else delete vol.originalHole;
+        render();
+        alert('Failed to save hole change: ' + (err && err.message ? err.message : err));
+        return;
+      }
+      render();
     }
 
     function renderHoleRosterReport(holeNum, options = {}) {
@@ -4817,13 +4924,13 @@
       render();
     }
 
-    function clearActivityLog() {
-      if (confirm('Are you sure you want to clear the entire activity log? This cannot be undone.')) {
-        appData.activityLog = [];
-        saveData();
-        render();
-        showToast('Activity log cleared');
-      }
+    async function clearActivityLog() {
+      if (!confirm('Are you sure you want to clear the entire activity log? This cannot be undone.')) return;
+      const snap = snapshotAppData();
+      appData.activityLog = [];
+      if (!await persistOrRevert(snap)) return;
+      render();
+      showToast('Activity log cleared');
     }
 
     function exportActivityLog() {
@@ -5795,10 +5902,18 @@
       render();
     }
 
-    function updateSetting(key, value) {
+    async function updateSetting(key, value) {
+      const oldValue = appData.settings[key];
       appData.settings[key] = value;
       logActivity('settings-change', key, 'Updated setting: ' + key);
-      saveData();
+      try {
+        await saveData();
+      } catch (err) {
+        appData.settings[key] = oldValue;
+        render();
+        alert('Failed to save setting: ' + (err && err.message ? err.message : err));
+        return;
+      }
       showSaveConfirmation();
     }
 
@@ -5837,7 +5952,7 @@
       render();
     }
 
-    function restoreArchive(index) {
+    async function restoreArchive(index) {
       const archive = serverArchives[index];
 
       if (!archive) {
@@ -5855,19 +5970,22 @@
         '1'
       );
 
+      if (mode !== '1' && mode !== '2' && mode !== '3') return;
+
+      const snap = snapshotAppData();
+      let successMsg;
+
       if (mode === '1') {
         appData = JSON.parse(JSON.stringify(archive.data));
-        saveData();
-        alert(`✓ Fully restored "${archive.name}"`);
+        successMsg = `✓ Fully restored "${archive.name}"`;
       } else if (mode === '2') {
         const currentCheckIns = appData.checkIns;
         const currentSubmissions = appData.submissions;
         appData.volunteers = JSON.parse(JSON.stringify(archive.data.volunteers));
         appData.checkIns = currentCheckIns;
         appData.submissions = currentSubmissions;
-        saveData();
-        alert(`✓ Restored volunteers from "${archive.name}" (kept current check-ins)`);
-      } else if (mode === '3') {
+        successMsg = `✓ Restored volunteers from "${archive.name}" (kept current check-ins)`;
+      } else {
         // Merge: update yearsWorked for matching volunteers
         let updated = 0;
         archive.data.volunteers.forEach(archivedVol => {
@@ -5879,12 +5997,12 @@
             updated++;
           }
         });
-        saveData();
-        alert(`✓ Merged ${updated} volunteer(s) from "${archive.name}"`);
-      } else {
-        return;
+        successMsg = `✓ Merged ${updated} volunteer(s) from "${archive.name}"`;
       }
 
+      if (!await persistOrRevert(snap)) return;
+
+      alert(successMsg);
       render();
     }
 
@@ -6068,7 +6186,7 @@
       if (!file) return;
 
       const reader = new FileReader();
-      reader.onload = function(e) {
+      reader.onload = async function(e) {
         try {
           const importData = JSON.parse(e.target.result);
 
@@ -6092,8 +6210,9 @@
           );
 
           if (mode === '1') {
+            const snap = snapshotAppData();
             appData = JSON.parse(JSON.stringify(importData.currentData));
-            saveData();
+            if (!await persistOrRevert(snap)) return;
             serverArchives = importData.archives || [];
             saveArchivesToServer();
             alert('Full backup restored!');
@@ -6114,9 +6233,10 @@
       input.value = '';
     }
 
-    function clearCheckIns() {
+    async function clearCheckIns() {
+      const snap = snapshotAppData();
       appData.checkIns = [];
-      saveData();
+      if (!await persistOrRevert(snap)) return;
       render();
       alert('All check-in records have been cleared.');
     }
@@ -6127,9 +6247,10 @@
       }
     }
 
-    function clearAllData() {
+    async function clearAllData() {
+      const snap = snapshotAppData();
       appData = JSON.parse(JSON.stringify(defaultData));
-      saveData();
+      if (!await persistOrRevert(snap)) return;
       render();
       alert('All tournament data has been cleared.');
     }
@@ -6140,13 +6261,13 @@
       }
     }
 
-    function confirmClearSubmissions() {
-      if (confirm('Clear All Submissions?\n\nThis will permanently delete all captain submission records. Volunteer information will remain.\n\nThis cannot be undone.')) {
-        appData.submissions = [];
-        saveData();
-        render();
-        alert('All submission records have been cleared.');
-      }
+    async function confirmClearSubmissions() {
+      if (!confirm('Clear All Submissions?\n\nThis will permanently delete all captain submission records. Volunteer information will remain.\n\nThis cannot be undone.')) return;
+      const snap = snapshotAppData();
+      appData.submissions = [];
+      if (!await persistOrRevert(snap)) return;
+      render();
+      alert('All submission records have been cleared.');
     }
 
     function toggleCheckIn(volunteerId) {
@@ -6269,14 +6390,46 @@
         return;
       }
 
-      const oldSchedule = appData.volunteers[idx].scheduled || {};
-      appData.volunteers[idx].scheduled = newSchedule;
-      saveData();
+      const vol = appData.volunteers[idx];
+      const oldSchedule = vol.scheduled ? { ...vol.scheduled } : {};
+
+      // Compute diff for activity log
+      const added = [];
+      const removed = [];
+      DAYS.forEach(day => {
+        SHIFTS.forEach(shift => {
+          const key = day + ' ' + shift;
+          const wasOn = !!oldSchedule[key];
+          const isOn = !!newSchedule[key];
+          if (isOn && !wasOn) added.push(key);
+          if (!isOn && wasOn) removed.push(key);
+        });
+      });
+
+      // Optimistically update appData, then save. If save fails, revert and
+      // tell the user — previously the "success" alert fired before the
+      // debounced POST even started, so users couldn't tell a save had failed.
+      vol.scheduled = newSchedule;
+      try {
+        await saveData();
+      } catch (err) {
+        vol.scheduled = oldSchedule;
+        render();
+        alert('Failed to save schedule: ' + (err && err.message ? err.message : err) + '\n\nNo changes were saved. Please try again.');
+        return;
+      }
+
+      // Log the schedule change so it shows up in the activity log.
+      if (added.length || removed.length) {
+        const parts = [];
+        if (added.length) parts.push('Added ' + added.join(', '));
+        if (removed.length) parts.push('Removed ' + removed.join(', '));
+        logActivity('edit-schedule', vol.name, parts.join('; '));
+      }
 
       // Check if we should send email
       const sendEmail = document.getElementById('sendScheduleEmail');
       if (sendEmail && sendEmail.checked) {
-        const vol = appData.volunteers[idx];
         if (vol.email) {
           try {
             await sendScheduleEmail(vol, newSchedule);
@@ -6295,33 +6448,57 @@
       render();
     }
 
-    function saveCaptainVolunteerNotes() {
+    async function saveCaptainVolunteerNotes() {
       if (!captainEditingVolunteer) return;
       const notes = document.getElementById('captainEditNotes').value;
       const idx = appData.volunteers.findIndex(v => v.id === captainEditingVolunteer.id);
       if (idx === -1) { alert('Volunteer not found'); return; }
-      appData.volunteers[idx].notes = notes;
+      const vol = appData.volunteers[idx];
+      const oldNotes = vol.notes;
+      vol.notes = notes;
       captainEditingVolunteer.notes = notes;
-      saveData();
-      logActivity('edit-notes', appData.volunteers[idx].name, 'Updated volunteer notes');
+      try {
+        await saveData();
+      } catch (err) {
+        vol.notes = oldNotes;
+        captainEditingVolunteer.notes = oldNotes;
+        alert('Failed to save notes: ' + (err && err.message ? err.message : err) + '\n\nNo changes were saved.');
+        return;
+      }
+      logActivity('edit-notes', vol.name, 'Updated volunteer notes');
       alert('Notes saved!');
     }
 
-    function saveVolunteerNotes() {
+    async function saveVolunteerNotes() {
       if (!editingVolunteer) return;
       const notes = document.getElementById('editNotes').value;
       const address = document.getElementById('editAddress').value;
       const volId = document.getElementById('editVolId').value;
       const idx = appData.volunteers.findIndex(v => v.id === editingVolunteer.id);
       if (idx === -1) { alert('Volunteer not found'); return; }
-      appData.volunteers[idx].notes = notes;
-      appData.volunteers[idx].address = address;
-      appData.volunteers[idx].volId = volId;
+      const vol = appData.volunteers[idx];
+      const oldNotes = vol.notes;
+      const oldAddress = vol.address;
+      const oldVolId = vol.volId;
+      vol.notes = notes;
+      vol.address = address;
+      vol.volId = volId;
       editingVolunteer.notes = notes;
       editingVolunteer.address = address;
       editingVolunteer.volId = volId;
-      saveData();
-      logActivity('edit-notes', appData.volunteers[idx].name, 'Updated volunteer notes');
+      logActivity('edit-notes', vol.name, 'Updated volunteer notes');
+      try {
+        await saveData();
+      } catch (err) {
+        vol.notes = oldNotes;
+        vol.address = oldAddress;
+        vol.volId = oldVolId;
+        editingVolunteer.notes = oldNotes;
+        editingVolunteer.address = oldAddress;
+        editingVolunteer.volId = oldVolId;
+        alert('Failed to save notes: ' + (err && err.message ? err.message : err));
+        return;
+      }
       alert('Notes saved!');
     }
 
@@ -6409,7 +6586,7 @@
       }
     }
 
-    function handleImportUpdate(rows, headers, nameCol) {
+    async function handleImportUpdate(rows, headers, nameCol) {
       const typeCol = headers.findIndex(h => h.includes('Volunteer Type') || h === 'Type');
       const holeCol = headers.findIndex(h => h.includes('Assigned Location') || h === 'Hole');
       const phoneCol = headers.findIndex(h => h.includes('Phone_Cell') || h.includes('Cell'));
@@ -6455,6 +6632,8 @@
       let added = 0;
       const fieldCounts = {};
       columnsToUpdate.forEach(c => fieldCounts[c.field] = 0);
+
+      const snap = snapshotAppData();
 
       rows.slice(1).filter(r => r.length > 1 && r[nameCol]).forEach(row => {
         const name = row[nameCol].trim();
@@ -6537,7 +6716,9 @@
         }
       });
 
-      saveData();
+      logActivity('import', '', 'Updated/added volunteers from CSV: ' + updated + ' updated, ' + added + ' added');
+
+      if (!await persistOrRevert(snap)) return;
 
       let msg = '';
       if (updated > 0) msg += 'Updated ' + updated + ' volunteer(s).';
@@ -6552,7 +6733,6 @@
           msg += '\n• ' + fieldCounts[col.field] + ' ' + (fieldLabels[col.field] || col.field) + ' updated';
         }
       });
-      logActivity('import', '', 'Updated/added volunteers from CSV: ' + updated + ' updated, ' + added + ' added');
       alert(msg);
       render();
     }
@@ -6628,7 +6808,7 @@
     }
 
     // Submission functions
-    function confirmSubmission() {
+    async function confirmSubmission() {
       if (!captainAuth) return;
 
       // For admin users, use the selected hole; for chair users, use selected hole; for captains, use their assigned hole
@@ -6639,6 +6819,8 @@
       const checkedInIds = appData.checkIns
         .filter(c => c.day === selectedDay && c.shift === selectedShift && c.hole === activeHole)
         .map(c => c.volunteerId);
+
+      const snap = snapshotAppData();
 
       // Remove existing submission for this hole/day/shift
       appData.submissions = appData.submissions.filter(s =>
@@ -6659,7 +6841,8 @@
       // Log the submission
       logActivity('submission', 'Hole ' + activeHole, 'Submitted ' + selectedDay + ' ' + selectedShift + ' for Hole ' + activeHole);
 
-      saveData();
+      if (!await persistOrRevert(snap)) return;
+
       showModal = null;
 
       // Show success modal with random message
