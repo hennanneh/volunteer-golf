@@ -96,6 +96,117 @@ function withDataLock(isDemo, fn) {
   return prev.then(() => fn()).finally(resolve);
 }
 
+// ============================================================================
+// Concurrent-save merge (added 2026-05-11 after captains reported schedule
+// edits silently overwriting each other and a deleted volunteer reappearing).
+//
+// The SPA POSTs the entire appData on every save. With multiple captains
+// editing at once, a stale client's blob silently overwrote fresh writes
+// from other clients (last-write-wins). Same mechanism resurrected deleted
+// volunteers when a stale client's blob still contained them.
+//
+// New behavior when the client sends `dataReadAt` (epoch ms of last GET or
+// broadcastUpdate): we merge per-volunteer-id instead of replacing the array.
+// - Each volunteer carries server-managed `lastModified` (epoch ms).
+// - If existing.lastModified > dataReadAt, the client's view of that record
+//   is stale; we keep existing.
+// - Otherwise we accept the client's version and stamp lastModified=now.
+// - Explicit deletes ride in `deletedIds`; we record tombstones in
+//   data.deletedVolunteerIds so stale clients can't resurrect deleted ids.
+// - checkIns and submissions are owned by their dedicated endpoints and are
+//   preserved from disk to prevent bulk-save clobber.
+// - activityLog is merged by entry id (dedupe), sorted desc, trimmed to 200.
+//
+// Legacy clients (no dataReadAt) still fall through to a full-replace path,
+// but tombstone-aware: any incoming volunteer matching a recent tombstone
+// is dropped. This protects deletes during the rollout window before all
+// browsers have refreshed the SPA (sw.js CACHE_NAME bump).
+// ============================================================================
+const TOMBSTONE_TTL_MS = 30 * 24 * 60 * 60 * 1000;  // 30 days
+
+function pruneTombstones(tombstones, now) {
+  const cutoff = now - TOMBSTONE_TTL_MS;
+  return (tombstones || []).filter(t => t && t.deletedAt > cutoff);
+}
+
+function mergeVolunteerSave(existing, incoming, deletedIds, dataReadAt) {
+  const now = Date.now();
+  const tombList = pruneTombstones(existing.deletedVolunteerIds, now);
+  const tombMap = new Map(tombList.map(t => [String(t.id), t.deletedAt]));
+
+  for (const rawId of (deletedIds || [])) {
+    tombMap.set(String(rawId), now);
+  }
+
+  const existingById = new Map((existing.volunteers || []).map(v => [String(v.id), v]));
+  const incomingById = new Map((incoming.volunteers || []).map(v => [String(v.id), v]));
+
+  const merged = [];
+  const handled = new Set();
+
+  for (const [id, existV] of existingById) {
+    if (tombMap.has(id)) continue;  // explicitly deleted
+    handled.add(id);
+    const incV = incomingById.get(id);
+    if (!incV) {
+      // Client didn't send this id (stale view or filtered) — keep existing.
+      merged.push(existV);
+      continue;
+    }
+    const exMod = Number(existV.lastModified) || 0;
+    if (exMod > dataReadAt) {
+      // Someone else edited this record after the client's last read.
+      // Reject the client's stale version of this record.
+      merged.push(existV);
+    } else {
+      merged.push(Object.assign({}, incV, { lastModified: now }));
+    }
+  }
+
+  for (const [id, incV] of incomingById) {
+    if (handled.has(id)) continue;
+    if (tombMap.has(id)) {
+      const tombAt = tombMap.get(id);
+      if (tombAt > dataReadAt) continue;  // deleted after client's read — don't resurrect
+      tombMap.delete(id);  // older tombstone; client may be intentionally re-adding
+    }
+    merged.push(Object.assign({}, incV, { lastModified: now }));
+  }
+
+  const finalTombstones = Array.from(tombMap.entries()).map(([id, deletedAt]) => ({ id, deletedAt }));
+
+  // ActivityLog: merge by id, sort desc by timestamp, trim to 200.
+  const logById = new Map();
+  for (const e of (existing.activityLog || [])) if (e && e.id) logById.set(String(e.id), e);
+  for (const e of (incoming.activityLog || [])) if (e && e.id && !logById.has(String(e.id))) logById.set(String(e.id), e);
+  const mergedLog = Array.from(logById.values())
+    .sort((a, b) => String(b.timestamp || '').localeCompare(String(a.timestamp || '')))
+    .slice(0, 200);
+
+  return Object.assign({}, existing, incoming, {
+    volunteers: merged,
+    deletedVolunteerIds: finalTombstones,
+    activityLog: mergedLog,
+    // Owned by per-action endpoints — preserve from disk to prevent bulk-save clobber.
+    checkIns: existing.checkIns || [],
+    submissions: existing.submissions || [],
+  });
+}
+
+// Legacy full-replace path: also drop volunteers that match a recent tombstone,
+// so a stale browser that hasn't picked up the new SPA can't resurrect deletes.
+function applyTombstonesToLegacyData(existing, incoming) {
+  const now = Date.now();
+  const tombList = pruneTombstones(existing.deletedVolunteerIds, now);
+  if (!tombList.length) return Object.assign({}, incoming, { deletedVolunteerIds: tombList });
+  const tombIds = new Set(tombList.map(t => String(t.id)));
+  const filtered = (incoming.volunteers || []).filter(v => !tombIds.has(String(v.id)));
+  return Object.assign({}, incoming, {
+    volunteers: filtered,
+    deletedVolunteerIds: tombList,
+  });
+}
+
 function loadArchives() {
   try {
     if (fs.existsSync(ARCHIVES_FILE)) {
@@ -792,7 +903,8 @@ app.get('/api/data', (req, res) => {
   }
 
   // Phase 1.2: strip password fields before sending to the browser.
-  res.json({ success: true, data: stripDataSecrets(data), demoMode: req.demoMode });
+  // serverNow lets the client stamp dataReadAt for the merge logic in POST /api/data.
+  res.json({ success: true, data: stripDataSecrets(data), demoMode: req.demoMode, serverNow: Date.now() });
 });
 
 app.post('/api/data', dataLimiter, requireAuth(['admin', 'chair', 'asstChair', 'captain']), (req, res) => {
@@ -801,14 +913,20 @@ app.post('/api/data', dataLimiter, requireAuth(['admin', 'chair', 'asstChair', '
     return res.status(403).json({ success: false, error: 'View-only access in captain portal' });
   }
 
-  const data = req.body;
+  const body = req.body;
   const socketId = req.headers['x-socket-id'];
   const clientIp = req.headers['x-real-ip'] || req.headers['x-forwarded-for'] || req.ip || 'unknown';
 
+  // New-mode envelope: { data, deletedIds, dataReadAt }. Legacy clients still
+  // POST the bare appData object — detect and unwrap.
+  const isNewMode = body && typeof body === 'object' && !Array.isArray(body)
+    && typeof body.dataReadAt === 'number' && body.data && typeof body.data === 'object';
+  const data = isNewMode ? body.data : body;
+  const deletedIds = isNewMode && Array.isArray(body.deletedIds) ? body.deletedIds : [];
+  const dataReadAt = isNewMode ? body.dataReadAt : 0;
+
   // --- Input validation (added 2026-04-10 after a vulnerability scanner
   // wiped data.json by POSTing empty bodies to this unauthenticated endpoint).
-  // These checks reject obviously-malformed payloads. They are NOT a
-  // substitute for real authentication, which still needs to be added.
   if (!data || typeof data !== 'object' || Array.isArray(data)) {
     console.warn('[' + new Date().toISOString() + '] REJECTED /api/data: not an object  ip=' + clientIp);
     return res.status(400).json({ success: false, error: 'Invalid payload' });
@@ -836,13 +954,14 @@ app.post('/api/data', dataLimiter, requireAuth(['admin', 'chair', 'asstChair', '
   // Serialize concurrent saves so two admins editing at once can't clobber
   // each other mid-write. Same lock used by /api/checkin and /api/hat-delivered.
   withDataLock(req.demoMode, () => {
-    // Catastrophic-shrink guard: reject if the incoming save would wipe out
-    // most volunteers compared to what's currently on disk. Override with
-    // ?force=true for intentional resets (e.g. starting a new tournament).
     const existing = loadData(req.demoMode);
     const existingCount = (existing.volunteers || []).length;
     const incomingCount = data.volunteers.length;
-    if (req.query.force !== 'true' && existingCount >= 10 && incomingCount < existingCount / 2) {
+
+    // Catastrophic-shrink guard: only meaningful for legacy mode (new mode
+    // can't drop volunteers except via explicit deletedIds). Override with
+    // ?force=true for intentional resets (e.g. starting a new tournament).
+    if (!isNewMode && req.query.force !== 'true' && existingCount >= 10 && incomingCount < existingCount / 2) {
       console.warn('[' + new Date().toISOString() + '] REJECTED /api/data: volunteer count would drop ' + existingCount + ' -> ' + incomingCount + '  ip=' + clientIp);
       return res.status(409).json({
         success: false,
@@ -850,16 +969,25 @@ app.post('/api/data', dataLimiter, requireAuth(['admin', 'chair', 'asstChair', '
       });
     }
 
-    // Phase 1.2 followup: passwords are server-owned. Strip any password
-    // fields the client sent (it shouldn't have them post-1.2, but defense
-    // in depth) and re-merge from disk by volunteer id. New volunteers (no
-    // matching id on disk) end up with no password — login falls back to
-    // the default 'admin2025' or phone-digits behavior in checkPassword.
-    // The /api/set-password endpoint is the ONLY way to set/clear passwords.
-    const existingById = new Map((existing.volunteers || []).map(v => [v.id, v]));
+    // Strip any password fields the client sent (defense in depth — passwords
+    // are server-owned since Phase 1.2). The merge step below re-applies disk
+    // passwords by id.
     for (const v of data.volunteers) {
       for (const f of VOLUNTEER_SECRET_FIELDS) delete v[f];
-      const onDisk = existingById.get(v.id);
+    }
+
+    let finalData;
+    if (isNewMode) {
+      finalData = mergeVolunteerSave(existing, data, deletedIds, dataReadAt);
+    } else {
+      finalData = applyTombstonesToLegacyData(existing, data);
+    }
+
+    // Re-apply passwords from disk (post-merge). The /api/set-password endpoint
+    // is the only authorized writer for these fields.
+    const existingById = new Map((existing.volunteers || []).map(v => [String(v.id), v]));
+    for (const v of finalData.volunteers) {
+      const onDisk = existingById.get(String(v.id));
       if (onDisk) {
         for (const f of VOLUNTEER_SECRET_FIELDS) {
           if (onDisk[f] !== undefined) v[f] = onDisk[f];
@@ -867,13 +995,16 @@ app.post('/api/data', dataLimiter, requireAuth(['admin', 'chair', 'asstChair', '
       }
     }
 
-    console.log('[' + new Date().toISOString() + '] POST /api/data  ip=' + clientIp + '  volunteers=' + incomingCount + '  checkIns=' + (data.checkIns ? data.checkIns.length : 0));
+    const mode = isNewMode ? 'merge' : 'legacy';
+    console.log('[' + new Date().toISOString() + '] POST /api/data  ip=' + clientIp + '  mode=' + mode + '  vols=' + finalData.volunteers.length + '  deletes=' + deletedIds.length);
 
-    if (saveData(data, req.demoMode)) {
-      // Broadcast to OTHER clients only — passwords were already merged in
-      // and now need to be stripped back out so they don't reach browsers.
-      broadcastUpdate(req.demoMode, 'fullUpdate', stripDataSecrets(data), socketId);
-      res.json({ success: true, demoMode: req.demoMode });
+    if (saveData(finalData, req.demoMode)) {
+      // Broadcast to OTHER clients — strip passwords before they reach browsers.
+      // Include serverNow so receivers can advance their dataReadAt.
+      const broadcastPayload = stripDataSecrets(finalData);
+      broadcastPayload.serverNow = Date.now();
+      broadcastUpdate(req.demoMode, 'fullUpdate', broadcastPayload, socketId);
+      res.json({ success: true, demoMode: req.demoMode, serverNow: Date.now() });
     } else {
       res.status(500).json({ success: false, error: 'Failed to save data' });
     }

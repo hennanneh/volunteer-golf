@@ -1061,6 +1061,18 @@
     let appData = defaultData;
     let dataLoaded = false;
 
+    // Concurrent-save merge support (server.js: mergeVolunteerSave).
+    // dataReadAt is the epoch-ms timestamp of the last data snapshot from the
+    // server (GET /api/data response or a fullUpdate broadcast). The server
+    // uses it to decide whether per-volunteer changes in our save are based
+    // on a fresh view; stale-view edits to records modified by someone else
+    // are rejected to prevent silent overwrite.
+    // pendingDeletedIds holds explicit deletions queued for the next save;
+    // cleared only after the server acks. Persists across failed saves so a
+    // delete isn't lost on transient network errors.
+    let dataReadAt = 0;
+    let pendingDeletedIds = [];
+
     let currentView = 'landing';
     let adminAuth = false; // false, 'full', or 'viewOnly'
     let adminAuthUser = null; // The volunteer object for logged-in admin
@@ -1225,6 +1237,7 @@
           appData = result.data;
           if (!appData.submissions) appData.submissions = [];
           if (!appData.settings) appData.settings = defaultData.settings;
+          dataReadAt = typeof result.serverNow === 'number' ? result.serverNow : Date.now();
         }
       } catch (err) {
         console.error('Failed to load data from server:', err);
@@ -1276,6 +1289,7 @@
           appData = result.data;
           if (!appData.submissions) appData.submissions = [];
           if (!appData.settings) appData.settings = defaultData.settings;
+          dataReadAt = typeof result.serverNow === 'number' ? result.serverNow : Date.now();
 
           // Update volunteer/captain auth with fresh data
           if (volunteerAuth) {
@@ -1406,10 +1420,31 @@
       // Debounce saves to avoid too many requests
       if (saveTimeout) clearTimeout(saveTimeout);
       saveTimeout = setTimeout(function() {
+        // Snapshot the deletes we're sending so we only clear them if the
+        // server acks. A failed save keeps them queued for the next attempt.
+        var deletesInFlight = pendingDeletedIds.slice();
         fetch('/api/data', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', 'X-Socket-ID': (socket && socket.id) || '' },
-          body: JSON.stringify(appData)
+          body: JSON.stringify({
+            data: appData,
+            deletedIds: deletesInFlight,
+            dataReadAt: dataReadAt
+          })
+        }).then(function(resp) {
+          return resp.json().then(function(j) { return { ok: resp.ok, body: j }; });
+        }).then(function(r) {
+          if (r.ok && r.body && r.body.success) {
+            // Server accepted. Clear acked deletes and advance dataReadAt
+            // so subsequent saves use the timestamp of the version we just
+            // wrote (otherwise our next edit looks stale to the server).
+            pendingDeletedIds = pendingDeletedIds.filter(function(id) {
+              return deletesInFlight.indexOf(id) === -1;
+            });
+            if (typeof r.body.serverNow === 'number') dataReadAt = r.body.serverNow;
+          } else {
+            console.error('Save rejected by server:', r.body && r.body.error);
+          }
         }).catch(function(err) {
           console.error('Failed to save data:', err);
         });
@@ -2761,6 +2796,9 @@
       if (!confirm(`Delete "${vol.name}"? This will also remove their check-in records. This cannot be undone.`)) return;
       appData.volunteers = appData.volunteers.filter(v => String(v.id) !== String(id));
       appData.checkIns = appData.checkIns.filter(c => String(c.volunteerId) !== String(id));
+      // Queue the explicit delete so the server records a tombstone and
+      // stale clients can't resurrect this volunteer.
+      if (pendingDeletedIds.indexOf(String(id)) === -1) pendingDeletedIds.push(String(id));
       logActivity('delete', vol.name, 'Deleted volunteer');
       editingVolunteer = null;
       saveData();
@@ -7063,6 +7101,13 @@
           appData = event.data;
           if (!appData.submissions) appData.submissions = [];
           if (!appData.settings) appData.settings = defaultData.settings;
+          // Advance dataReadAt so our next save isn't flagged stale against
+          // the version we just received from the server.
+          if (event.data && typeof event.data.serverNow === 'number') {
+            dataReadAt = event.data.serverNow;
+          } else if (event.timestamp) {
+            dataReadAt = Date.parse(event.timestamp) || dataReadAt;
+          }
           if (!skipRender()) render();
         } else if (event.type === 'checkIn') {
           // Single check-in added (match on hole too — same volunteer can be
