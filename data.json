@@ -6882,6 +6882,8 @@
       "volId": "243",
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
+      "hatReceived": false,
+      "notes": "",
       "volunteerPassword": "$2b$10$pTc3lbhb8ctCimaCWL.0F.aKkSZe168LZi1SxnJ1MMXZW63IYixTy"
     },
     {
@@ -8622,6 +8624,33 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1778507697087",
+      "timestamp": "2026-05-11T13:54:57.087Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Sale, Lynn",
+      "details": "Edited volunteer (Type: Captain, Hole: 2)"
+    },
+    {
+      "id": "1778507686734",
+      "timestamp": "2026-05-11T13:54:46.734Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Sale, Lynn",
+      "details": "Edited volunteer (Type: Captain, Hole: 2)"
+    },
+    {
+      "id": "1778507644174",
+      "timestamp": "2026-05-11T13:54:04.174Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
     {
       "id": "1778501455878",
       "timestamp": "2026-05-11T12:10:55.878Z",
