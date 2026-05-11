@@ -4460,10 +4460,15 @@
       "hat": "",
       "scheduled": {
         "Wednesday AM": true,
+        "Wednesday PM": true,
+        "Thursday AM": true,
         "Thursday PM": true,
+        "Friday AM": true,
         "Friday PM": true,
+        "Saturday AM": true,
         "Saturday PM": true,
-        "Sunday AM": true
+        "Sunday AM": true,
+        "Sunday PM": true
       },
       "volId": "7692",
       "address": "5791 Gleneagles Circle Fort Worth, TX 76137",
@@ -8624,6 +8629,24 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1778513114447",
+      "timestamp": "2026-05-11T15:25:14.447Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1778512926938",
+      "timestamp": "2026-05-11T15:22:06.938Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1778507697087",
       "timestamp": "2026-05-11T13:54:57.087Z",
