@@ -8623,6 +8623,24 @@
   },
   "activityLog": [
     {
+      "id": "1778501455878",
+      "timestamp": "2026-05-11T12:10:55.878Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1778501413073",
+      "timestamp": "2026-05-11T12:10:13.073Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1778471698990",
       "timestamp": "2026-05-11T03:54:58.990Z",
       "user": "Colon, Orlando",
