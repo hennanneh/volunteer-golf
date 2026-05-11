@@ -637,7 +637,12 @@
       "volId": "9610",
       "address": "4101 King Air Ct Granbury, TX 76049",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false,
+      "hasVolunteerPassword": true,
+      "pairingPreferences": [
+        "9807",
+        "10362",
+        null
+      ],
       "volunteerPassword": "$2b$10$zeLiNS91ly1.CHhvSIVcae1.NgRjfP0PArUHdLmICqNxObDV1.MOC"
     },
     {
@@ -8617,6 +8622,15 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1778461748629",
+      "timestamp": "2026-05-11T01:09:08.629Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1778461046996",
       "timestamp": "2026-05-11T00:57:26.996Z",
