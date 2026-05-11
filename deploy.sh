@@ -20,9 +20,13 @@ cd /root/volunteer-golf
 
 REPO_DIR="/root/volunteer-golf"
 HEALTH_URL="http://127.0.0.1:3001/api/health"
+LOG_URL="http://127.0.0.1:3001/api/log-deployment"
 PM2_APP="volunteer-golf"
 TIMESTAMP=$(date +%Y%m%d-%H%M%S)
 SNAPSHOT_DIR="/root/volunteer-golf-backups/pre-deploy-${TIMESTAMP}"
+
+# Optional: pass deployment notes as first argument
+DEPLOY_NOTES="${1:-}"
 
 log() { echo "[deploy $(date '+%H:%M:%S')] $*"; }
 fail() { log "ERROR: $*"; exit 1; }
@@ -95,6 +99,20 @@ check_health() {
 if check_health; then
   log "OK — health check passed at ${NEW_SHA:0:8}"
   pm2 save >/dev/null 2>&1 || true
+
+  # Log the deployment to activity log
+  if [ -n "$DEPLOY_NOTES" ]; then
+    COMMIT_MSG="$DEPLOY_NOTES"
+  else
+    # Use git commit message if no notes provided
+    COMMIT_MSG=$(git log -1 --pretty=%B | head -1)
+  fi
+  log "Logging deployment: $COMMIT_MSG"
+  curl -fsS -X POST "$LOG_URL" \
+    -H "Content-Type: application/json" \
+    -d "{\"message\": \"$COMMIT_MSG\", \"version\": \"${NEW_SHA:0:8}\"}" \
+    >/dev/null 2>&1 || log "Warning: could not log deployment to activity log"
+
   exit 0
 fi
 

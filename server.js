@@ -796,6 +796,11 @@ app.get('/api/data', requireAuth(null), (req, res) => {
 });
 
 app.post('/api/data', dataLimiter, requireAuth(['admin', 'chair', 'asstChair', 'captain']), (req, res) => {
+  // Chair/Asst. Chairman are read-only in captain portal
+  if ((req.user.role === 'chair' || req.user.role === 'asstChair') && req.user.portal === 'captain') {
+    return res.status(403).json({ success: false, error: 'View-only access in captain portal' });
+  }
+
   const data = req.body;
   const socketId = req.headers['x-socket-id'];
   const clientIp = req.headers['x-real-ip'] || req.headers['x-forwarded-for'] || req.ip || 'unknown';
@@ -876,6 +881,11 @@ app.post('/api/data', dataLimiter, requireAuth(['admin', 'chair', 'asstChair', '
 });
 
 app.post('/api/checkin', checkinLimiter, requireAuth(['admin', 'chair', 'asstChair', 'captain']), (req, res) => {
+  // Chair/Asst. Chairman are read-only in captain portal
+  if ((req.user.role === 'chair' || req.user.role === 'asstChair') && req.user.portal === 'captain') {
+    return res.status(403).json({ success: false, error: 'View-only access in captain portal' });
+  }
+
   const { volunteerId, volunteerName, hole, day, shift, checkedInBy, action, isAlternate } = req.body;
   const socketId = req.headers['x-socket-id'];
 
@@ -1106,6 +1116,47 @@ app.post('/api/hat-delivered', requireAuth(['admin', 'chair', 'asstChair', 'capt
       const safeVolunteer = stripVolunteerSecrets(data.volunteers[volIdx]);
       broadcastUpdate(req.demoMode, 'hatDelivered', { volunteerId, volunteer: safeVolunteer });
       res.json({ success: true, volunteer: safeVolunteer });
+    } else {
+      res.status(500).json({ success: false, error: 'Failed to save' });
+    }
+  });
+});
+
+// POST /api/log-deployment - Log a system update/deployment
+// Called by deploy.sh to record what was deployed
+app.post('/api/log-deployment', (req, res) => {
+  const { message, version } = req.body || {};
+  const clientIp = req.headers['x-real-ip'] || req.headers['x-forwarded-for'] || req.ip || 'unknown';
+
+  if (!message) {
+    return res.status(400).json({ success: false, error: 'message required' });
+  }
+
+  withDataLock(false, () => {  // Always log to live data, not demo
+    const data = loadData(false);
+    if (!data.activityLog) data.activityLog = [];
+
+    const entry = {
+      id: Date.now().toString(),
+      timestamp: new Date().toISOString(),
+      user: 'System',
+      userType: 'Deployment',
+      action: 'system-update',
+      target: version || '',
+      details: message
+    };
+
+    data.activityLog.unshift(entry);
+
+    // Keep last 500 entries (increased from 200 for better history)
+    if (data.activityLog.length > 500) {
+      data.activityLog = data.activityLog.slice(0, 500);
+    }
+
+    if (saveData(data, false)) {
+      console.log('[' + new Date().toISOString() + '] DEPLOYMENT LOGGED: ' + message + '  ip=' + clientIp);
+      broadcastUpdate(false, 'fullUpdate', data);
+      res.json({ success: true });
     } else {
       res.status(500).json({ success: false, error: 'Failed to save' });
     }
