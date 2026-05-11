@@ -12,8 +12,11 @@ const { Server } = require('socket.io');
 
 const app = express();
 const server = http.createServer(app);
+const ALLOWED_ORIGINS = process.env.ALLOWED_ORIGINS
+  ? process.env.ALLOWED_ORIGINS.split(',')
+  : ['https://colonialvolunteers.golf', 'http://localhost:3001'];
 const io = new Server(server, {
-  cors: { origin: '*' }
+  cors: { origin: ALLOWED_ORIGINS }
 });
 
 const resend = new Resend(process.env.RESEND_API_KEY);
@@ -277,7 +280,7 @@ const resetSubmitLimiter = makeLimiter(10, 'reset-submit');  // POST /api/reset-
 // all real users have logged in via the new flow at least once.
 // ============================================================================
 
-let STRICT_AUTH = false;  // Set to true after all users have logged in once
+let STRICT_AUTH = true;  // Requires authentication for all API endpoints
 
 const sessions = new Map();  // token -> { userId, email, name, role, portal, createdAt, lastUsed }
 const SESSION_IDLE_MS = 12 * 60 * 60 * 1000;       // 12 hours
@@ -773,7 +776,7 @@ app.post('/api/reset-password', resetSubmitLimiter, (req, res) => {
   });
 });
 
-app.get('/api/data', (req, res) => {
+app.get('/api/data', requireAuth(null), (req, res) => {
   const data = loadData(req.demoMode);
 
   // Ensure superadmin is always present in volunteers
@@ -792,7 +795,7 @@ app.get('/api/data', (req, res) => {
   res.json({ success: true, data: stripDataSecrets(data), demoMode: req.demoMode });
 });
 
-app.post('/api/data', dataLimiter, requireAuth(['admin', 'chair', 'asstChair', 'captain', 'volunteer']), (req, res) => {
+app.post('/api/data', dataLimiter, requireAuth(['admin', 'chair', 'asstChair', 'captain']), (req, res) => {
   const data = req.body;
   const socketId = req.headers['x-socket-id'];
   const clientIp = req.headers['x-real-ip'] || req.headers['x-forwarded-for'] || req.ip || 'unknown';
