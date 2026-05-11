@@ -8630,6 +8630,42 @@
   },
   "activityLog": [
     {
+      "id": "1778529310800",
+      "timestamp": "2026-05-11T19:55:10.800Z",
+      "user": "System",
+      "userType": "Deployment",
+      "action": "system-update",
+      "target": "9ef5fb3c",
+      "details": "Security fixes + activity logging"
+    },
+    {
+      "id": "1778526286208",
+      "timestamp": "2026-05-11T19:04:46.208Z",
+      "user": "Duke, Mitzie",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1778526193561",
+      "timestamp": "2026-05-11T19:03:13.562Z",
+      "user": "Duke, Mitzie",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1778526021274",
+      "timestamp": "2026-05-11T19:00:21.274Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1778522683415",
       "timestamp": "2026-05-11T18:04:43.415Z",
       "user": "Duke, Mitzie",
