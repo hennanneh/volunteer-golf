@@ -637,7 +637,8 @@
       "volId": "9610",
       "address": "4101 King Air Ct Granbury, TX 76049",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false
+      "hasVolunteerPassword": false,
+      "volunteerPassword": "$2b$10$zeLiNS91ly1.CHhvSIVcae1.NgRjfP0PArUHdLmICqNxObDV1.MOC"
     },
     {
       "id": "9807",
@@ -8616,6 +8617,24 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1778461046996",
+      "timestamp": "2026-05-11T00:57:26.996Z",
+      "user": "Bullard, Roy",
+      "userType": "Volunteer",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed volunteer password"
+    },
+    {
+      "id": "1778460888801",
+      "timestamp": "2026-05-11T00:54:48.801Z",
+      "user": "Bullard, Roy",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
     {
       "id": "1778452840890",
       "timestamp": "2026-05-10T22:40:40.890Z",
