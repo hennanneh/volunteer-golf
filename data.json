@@ -9028,6 +9028,15 @@
   },
   "activityLog": [
     {
+      "id": "1778610835249",
+      "timestamp": "2026-05-12T18:33:55.249Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1778607764437",
       "timestamp": "2026-05-12T17:42:44.437Z",
       "user": "Montalvo, Sammy",
