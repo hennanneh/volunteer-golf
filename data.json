@@ -9124,6 +9124,15 @@
   },
   "activityLog": [
     {
+      "id": "1778686273811",
+      "timestamp": "2026-05-13T15:31:13.811Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1778680679646",
       "timestamp": "2026-05-13T13:57:59.646Z",
       "user": "Johnson, Kenny",
@@ -10913,15 +10922,6 @@
       "action": "import",
       "target": "",
       "details": "Updated/added volunteers from CSV: 0 updated, 16 added"
-    },
-    {
-      "id": "1777899426682",
-      "timestamp": "2026-05-04T12:57:06.682Z",
-      "user": "Hill, Michael",
-      "userType": "Admin",
-      "action": "import",
-      "target": "",
-      "details": "Updated/added volunteers from CSV: 0 updated, 333 added"
     }
   ],
   "deletedVolunteerIds": [
@@ -10930,5 +10930,5 @@
       "deletedAt": 1778637255374
     }
   ],
-  "serverNow": 1778680658934
+  "serverNow": 1778537684173
 }
