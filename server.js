@@ -950,14 +950,14 @@ app.post('/api/data', dataLimiter, requireAuth(['admin', 'chair', 'asstChair', '
   // records (their record-level lastModified comparisons will mostly pass
   // because so much time has passed since their last read). Force them to
   // reload and re-establish a fresh baseline.
-  const STALE_READ_MAX_AGE_MS = 60 * 60 * 1000;  // 1 hour
+  const STALE_READ_MAX_AGE_MS = 30 * 60 * 1000;  // 30 minutes
   const readAge = Date.now() - dataReadAt;
   if (dataReadAt > 0 && readAge > STALE_READ_MAX_AGE_MS) {
     console.warn('[' + new Date().toISOString() + '] REJECTED /api/data: stale dataReadAt age=' + Math.round(readAge / 60000) + 'min  ip=' + clientIp);
     return res.status(409).json({
       success: false,
       code: 'STALE_READ',
-      error: 'Your data is more than an hour old. Please reload the page to get the latest data, then re-enter your changes.'
+      error: 'Your data is more than 30 minutes old. Please reload the page to get the latest data, then re-enter your changes.'
     });
   }
 
