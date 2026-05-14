@@ -183,10 +183,16 @@ function mergeVolunteerSave(existing, incoming, deletedIds, dataReadAt) {
     .sort((a, b) => String(b.timestamp || '').localeCompare(String(a.timestamp || '')))
     .slice(0, 500);
 
+  // Merge settings per-key rather than letting an empty/partial incoming.settings
+  // wipe disk state. A client posting {} would otherwise blow away tournamentName,
+  // helpPhone, etc. (this happened 2026-05-14 during a smoke test).
+  const mergedSettings = Object.assign({}, existing.settings || {}, incoming.settings || {});
+
   return Object.assign({}, existing, incoming, {
     volunteers: merged,
     deletedVolunteerIds: finalTombstones,
     activityLog: mergedLog,
+    settings: mergedSettings,
     // Owned by per-action endpoints — preserve from disk to prevent bulk-save clobber.
     checkIns: existing.checkIns || [],
     submissions: existing.submissions || [],
