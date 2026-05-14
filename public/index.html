@@ -1442,8 +1442,14 @@
               return deletesInFlight.indexOf(id) === -1;
             });
             if (typeof r.body.serverNow === 'number') dataReadAt = r.body.serverNow;
+          } else if (r.body && (r.body.code === 'STALE_CLIENT' || r.body.code === 'STALE_READ')) {
+            // This tab is running outdated code or has a too-old data snapshot.
+            // Stop saving silently into the void — surface it and force a reload
+            // so the user doesn't keep typing changes that won't persist.
+            showStaleClientPrompt(r.body.error || 'Your page is out of date. Please reload.');
           } else {
             console.error('Save rejected by server:', r.body && r.body.error);
+            showToast('Save failed — please retry');
           }
         }).catch(function(err) {
           console.error('Failed to save data:', err);
@@ -1487,10 +1493,10 @@
       if (!appData.activityLog) appData.activityLog = [];
       appData.activityLog.unshift(entry);
 
-      // Keep last 200 entries to prevent unbounded growth and to keep the
-      // broadcast payload small (every save sends the entire dataset).
+      // Keep last 500 entries to prevent unbounded growth (was 200; bumped
+      // 2026-05-14 because schedule-edit logging filled the cap quickly).
       if (appData.activityLog.length > 500) {
-        appData.activityLog = appData.activityLog.slice(0, 200);
+        appData.activityLog = appData.activityLog.slice(0, 500);
       }
 
       saveData();
@@ -3169,8 +3175,23 @@
           return c;
         });
 
-        // Log the edit
-        logActivity('edit-volunteer', newName, 'Edited volunteer (Type: ' + newType + ', Hole: ' + newHole + ')');
+        // Log the edit, including a schedule diff so the audit trail captures
+        // shift add/remove decisions (the most common admin edit).
+        var oldSched = oldVol.scheduled || {};
+        var schedAdded = [], schedRemoved = [];
+        DAYS.forEach(function(day) {
+          SHIFTS.forEach(function(shift) {
+            var k = day + ' ' + shift;
+            var was = !!oldSched[k];
+            var now = !!newSchedule[k];
+            if (now && !was) schedAdded.push(k);
+            if (!now && was) schedRemoved.push(k);
+          });
+        });
+        var editDetails = 'Edited volunteer (Type: ' + newType + ', Hole: ' + newHole + ')';
+        if (schedAdded.length) editDetails += '; schedule +' + schedAdded.join(', ');
+        if (schedRemoved.length) editDetails += '; schedule -' + schedRemoved.join(', ');
+        logActivity('edit-volunteer', newName, editDetails);
 
         saveData();
 
@@ -6330,6 +6351,25 @@
 
       const oldSchedule = appData.volunteers[idx].scheduled || {};
       appData.volunteers[idx].scheduled = newSchedule;
+
+      // Log the schedule diff so the activity log captures captain edits.
+      var added = [], removed = [];
+      DAYS.forEach(function(day) {
+        SHIFTS.forEach(function(shift) {
+          var k = day + ' ' + shift;
+          var was = !!oldSchedule[k];
+          var now = !!newSchedule[k];
+          if (now && !was) added.push(k);
+          if (!now && was) removed.push(k);
+        });
+      });
+      if (added.length || removed.length) {
+        var details = [];
+        if (added.length) details.push('added ' + added.join(', '));
+        if (removed.length) details.push('removed ' + removed.join(', '));
+        logActivity('edit-schedule', appData.volunteers[idx].name, details.join('; '));
+      }
+
       saveData();
 
       // Check if we should send email
@@ -7097,7 +7137,14 @@
         }
 
         if (event.type === 'fullUpdate') {
-          // Full data update - reload
+          // If the user is mid-edit (login screen or focused input), do NOT
+          // replace appData — that would silently wipe in-progress local
+          // mutations (hole assignments, toggles) that aren't yet saved.
+          // The server's merge logic in POST /api/data is robust to a stale
+          // dataReadAt: it preserves other captains' changes (records whose
+          // lastModified > our dataReadAt) and accepts ours. The next save
+          // will resync via the response's serverNow.
+          if (skipRender()) return;
           appData = event.data;
           if (!appData.submissions) appData.submissions = [];
           if (!appData.settings) appData.settings = defaultData.settings;
@@ -7108,7 +7155,7 @@
           } else if (event.timestamp) {
             dataReadAt = Date.parse(event.timestamp) || dataReadAt;
           }
-          if (!skipRender()) render();
+          render();
         } else if (event.type === 'checkIn') {
           // Single check-in added (match on hole too — same volunteer can be
           // checked in on multiple holes for the same day/shift in edge cases)
@@ -7248,17 +7295,34 @@
     function showToast(message) {
       var existing = document.querySelector('.realtime-toast');
       if (existing) existing.remove();
-      
+
       var toast = document.createElement('div');
       toast.className = 'realtime-toast';
       toast.textContent = message;
       document.body.appendChild(toast);
-      
+
       setTimeout(function() { toast.classList.add('show'); }, 10);
-      setTimeout(function() { 
+      setTimeout(function() {
         toast.classList.remove('show');
         setTimeout(function() { toast.remove(); }, 300);
       }, 3000);
+    }
+
+    // Modal prompt shown when the server rejects a save as STALE_CLIENT /
+    // STALE_READ. Stops the loop where a captain types changes into a stale
+    // tab that silently fails to save. Persistent until the user reloads.
+    var staleClientPromptShown = false;
+    function showStaleClientPrompt(message) {
+      if (staleClientPromptShown) return;
+      staleClientPromptShown = true;
+      var overlay = document.createElement('div');
+      overlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:10001;display:flex;align-items:center;justify-content:center;padding:20px';
+      overlay.innerHTML = '<div style="background:#fff;border-radius:12px;max-width:420px;width:100%;padding:24px;text-align:center"><h3 style="margin:0 0 12px 0;color:#b00020">Page Out of Date</h3><p style="margin:0 0 16px 0;color:#333;font-size:14px;line-height:1.4"></p><button type="button" id="staleReloadBtn" class="submit-btn" style="width:100%">Reload now</button></div>';
+      overlay.querySelector('p').textContent = message;
+      document.body.appendChild(overlay);
+      overlay.querySelector('#staleReloadBtn').onclick = function() {
+        window.location.reload();
+      };
     }
 
     loadDataFromServer();

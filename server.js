@@ -175,13 +175,13 @@ function mergeVolunteerSave(existing, incoming, deletedIds, dataReadAt) {
 
   const finalTombstones = Array.from(tombMap.entries()).map(([id, deletedAt]) => ({ id, deletedAt }));
 
-  // ActivityLog: merge by id, sort desc by timestamp, trim to 200.
+  // ActivityLog: merge by id, sort desc by timestamp, trim to 500.
   const logById = new Map();
   for (const e of (existing.activityLog || [])) if (e && e.id) logById.set(String(e.id), e);
   for (const e of (incoming.activityLog || [])) if (e && e.id && !logById.has(String(e.id))) logById.set(String(e.id), e);
   const mergedLog = Array.from(logById.values())
     .sort((a, b) => String(b.timestamp || '').localeCompare(String(a.timestamp || '')))
-    .slice(0, 200);
+    .slice(0, 500);
 
   return Object.assign({}, existing, incoming, {
     volunteers: merged,
@@ -925,6 +925,36 @@ app.post('/api/data', dataLimiter, requireAuth(['admin', 'chair', 'asstChair', '
   const deletedIds = isNewMode && Array.isArray(body.deletedIds) ? body.deletedIds : [];
   const dataReadAt = isNewMode ? body.dataReadAt : 0;
 
+  // Reject stale-client (legacy) POSTs. They full-replace the dataset with
+  // whatever the client cached at page-load, silently clobbering edits other
+  // captains made in the meantime. SPA has been on merge mode since 2026-05-11;
+  // anyone still sending a legacy POST is running cached code from before then
+  // and needs to refresh.
+  if (!isNewMode) {
+    console.warn('[' + new Date().toISOString() + '] REJECTED /api/data: legacy-mode POST (stale client)  ip=' + clientIp);
+    return res.status(409).json({
+      success: false,
+      code: 'STALE_CLIENT',
+      error: 'Your browser is running an outdated version. Please hard-refresh the page (Ctrl+Shift+R / Cmd+Shift+R) and re-enter your changes.'
+    });
+  }
+
+  // Reject saves whose dataReadAt is unreasonably old. Even in merge mode, a
+  // captain who left a tab open for hours and then hits save can clobber many
+  // records (their record-level lastModified comparisons will mostly pass
+  // because so much time has passed since their last read). Force them to
+  // reload and re-establish a fresh baseline.
+  const STALE_READ_MAX_AGE_MS = 60 * 60 * 1000;  // 1 hour
+  const readAge = Date.now() - dataReadAt;
+  if (dataReadAt > 0 && readAge > STALE_READ_MAX_AGE_MS) {
+    console.warn('[' + new Date().toISOString() + '] REJECTED /api/data: stale dataReadAt age=' + Math.round(readAge / 60000) + 'min  ip=' + clientIp);
+    return res.status(409).json({
+      success: false,
+      code: 'STALE_READ',
+      error: 'Your data is more than an hour old. Please reload the page to get the latest data, then re-enter your changes.'
+    });
+  }
+
   // --- Input validation (added 2026-04-10 after a vulnerability scanner
   // wiped data.json by POSTing empty bodies to this unauthenticated endpoint).
   if (!data || typeof data !== 'object' || Array.isArray(data)) {
@@ -1299,4 +1329,50 @@ app.get('/api/health', (req, res) => {
 });
 
 const PORT = process.env.PORT || 3001;
-server.listen(PORT, () => console.log('Volunteer Golf running on port ' + PORT + ' with WebSocket support'));
+server.listen(PORT, () => {
+  console.log('Volunteer Golf running on port ' + PORT + ' with WebSocket support');
+
+  // Auto-log every server startup as a system-update so direct restarts
+  // (not just deploy.sh runs) appear in the activity log. Captures the
+  // current git commit SHA + subject so we know what code is running.
+  try {
+    const { execSync } = require('child_process');
+    let sha = '?', subject = 'Server restart (no recent code change)';
+    try {
+      // Find the most recent commit that ISN'T an hourly auto-backup —
+      // that's the actual code change we want to surface.
+      const recent = execSync("git log -50 --pretty=format:'%h %s'", { cwd: __dirname, encoding: 'utf8' })
+        .split('\n')
+        .map(l => l.trim())
+        .filter(l => l && !/^[0-9a-f]+ Auto-backup data/.test(l));
+      if (recent.length) {
+        const parts = recent[0].split(' ');
+        sha = parts[0];
+        subject = parts.slice(1).join(' ');
+      } else {
+        try { sha = execSync('git rev-parse --short HEAD', { cwd: __dirname, encoding: 'utf8' }).trim(); } catch (e) {}
+      }
+    } catch (e) {}
+
+    withDataLock(false, () => {
+      const data = loadData(false);
+      if (!data.activityLog) data.activityLog = [];
+      // Don't double-log: if the most-recent entry is the same SHA, skip.
+      const last = data.activityLog[0];
+      if (last && last.action === 'system-update' && last.target === sha) return;
+      data.activityLog.unshift({
+        id: Date.now().toString(),
+        timestamp: new Date().toISOString(),
+        user: 'System',
+        userType: 'Deployment',
+        action: 'system-update',
+        target: sha,
+        details: subject
+      });
+      if (data.activityLog.length > 500) data.activityLog = data.activityLog.slice(0, 500);
+      saveData(data, false);
+    });
+  } catch (err) {
+    console.warn('Could not auto-log server startup:', err.message);
+  }
+});
