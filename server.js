@@ -1102,6 +1102,115 @@ app.post('/api/checkin', checkinLimiter, requireAuth(['admin', 'chair', 'asstCha
   });
 });
 
+// ============================================================================
+// PATCH /api/volunteer/:id — per-volunteer partial update.
+//
+// Replaces the full-dataset POST /api/data for single-volunteer edits (schedule
+// toggles, captain notes, admin field edits). Atomic, locked, only fields
+// present in the body are written. Server stamps lastModified, writes the
+// activity-log entry, and broadcasts a partial `volunteerUpdated` event so
+// other clients can splice the single record instead of replacing all state.
+//
+// Body: { name?, type?, hole?, phone?, email?, scheduled?, notes?, address?,
+//         volId?, yearsWorked?, hat?, hatReceived?, assignedHoles?, originalHole? }
+// Returns: { success, volunteer, changed, serverNow }
+// ============================================================================
+const VOLUNTEER_PATCH_FIELDS = ['name', 'type', 'hole', 'phone', 'email', 'scheduled',
+  'notes', 'address', 'volId', 'yearsWorked', 'hat', 'hatReceived', 'assignedHoles',
+  'originalHole'];
+
+app.patch('/api/volunteer/:id', dataLimiter, requireAuth(['admin', 'chair', 'asstChair', 'captain']), (req, res) => {
+  if ((req.user.role === 'chair' || req.user.role === 'asstChair') && req.user.portal === 'captain') {
+    return res.status(403).json({ success: false, error: 'View-only access in captain portal' });
+  }
+
+  const id = req.params.id;
+  const patch = req.body || {};
+  const socketId = req.headers['x-socket-id'];
+  const clientIp = req.headers['x-real-ip'] || req.headers['x-forwarded-for'] || req.ip || 'unknown';
+
+  withDataLock(req.demoMode, () => {
+    const data = loadData(req.demoMode);
+    if (!data.volunteers) data.volunteers = [];
+
+    const idx = data.volunteers.findIndex(v => String(v.id) === String(id));
+    if (idx === -1) {
+      return res.status(404).json({ success: false, error: 'Volunteer not found' });
+    }
+
+    const before = data.volunteers[idx];
+    const changedFields = [];
+    const updated = Object.assign({}, before);
+
+    for (const f of VOLUNTEER_PATCH_FIELDS) {
+      if (patch[f] === undefined) continue;
+      if (JSON.stringify(patch[f]) === JSON.stringify(before[f])) continue;
+      updated[f] = patch[f];
+      changedFields.push(f);
+    }
+
+    if (!changedFields.length) {
+      return res.json({ success: true, volunteer: stripVolunteerSecrets(updated), changed: [], serverNow: Date.now() });
+    }
+
+    updated.lastModified = Date.now();
+    data.volunteers[idx] = updated;
+
+    // Activity log entry — schedule-only edits get a per-shift diff, multi-field
+    // edits get a fields-changed summary. Logged server-side so we don't rely on
+    // the client remembering to log.
+    if (!data.activityLog) data.activityLog = [];
+    let action = 'edit-volunteer';
+    let details;
+    if (changedFields.length === 1 && changedFields[0] === 'scheduled') {
+      action = 'edit-schedule';
+      const oldS = before.scheduled || {};
+      const newS = updated.scheduled || {};
+      const added = [], removed = [];
+      const keys = new Set([...Object.keys(oldS), ...Object.keys(newS)]);
+      for (const k of keys) {
+        const was = !!oldS[k];
+        const now = !!newS[k];
+        if (now && !was) added.push(k);
+        if (!now && was) removed.push(k);
+      }
+      const parts = [];
+      if (added.length) parts.push('added ' + added.join(', '));
+      if (removed.length) parts.push('removed ' + removed.join(', '));
+      details = parts.join('; ');
+    } else {
+      details = 'Updated fields: ' + changedFields.join(', ');
+    }
+    const userType = req.user.role === 'admin' ? 'Admin'
+      : req.user.role === 'captain' ? 'Captain'
+      : (req.user.role || 'Unknown');
+    data.activityLog.unshift({
+      id: Date.now().toString(),
+      timestamp: new Date().toISOString(),
+      user: req.user.name || 'Unknown',
+      userType,
+      action,
+      target: updated.name || '',
+      details
+    });
+    if (data.activityLog.length > 500) data.activityLog = data.activityLog.slice(0, 500);
+
+    console.log('[' + new Date().toISOString() + '] PATCH /api/volunteer/' + id + '  fields=' + changedFields.join(',') + '  user=' + (req.user.name || '?') + '  ip=' + clientIp);
+
+    if (saveData(data, req.demoMode)) {
+      const cleanVol = stripVolunteerSecrets(updated);
+      broadcastUpdate(req.demoMode, 'volunteerUpdated', {
+        volunteer: cleanVol,
+        changedFields,
+        serverNow: Date.now()
+      }, socketId);
+      res.json({ success: true, volunteer: cleanVol, changed: changedFields, serverNow: Date.now() });
+    } else {
+      res.status(500).json({ success: false, error: 'Failed to save' });
+    }
+  });
+});
+
 app.get('/api/archives', (req, res) => {
   if (req.demoMode) {
     return res.json({ success: true, archives: [], demoMode: true });

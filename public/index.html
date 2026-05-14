@@ -1475,6 +1475,38 @@
       }
     }
 
+    // Per-volunteer atomic update. Replaces full-dataset POST /api/data for
+    // single-volunteer edits. Server stamps lastModified, writes the activity
+    // log entry, and broadcasts a partial volunteerUpdated event.
+    // Returns { success, volunteer?, changed?, error?, code? }.
+    async function apiUpdateVolunteer(id, patch) {
+      try {
+        const resp = await fetch('/api/volunteer/' + encodeURIComponent(id), {
+          method: 'PATCH',
+          headers: {
+            'Content-Type': 'application/json',
+            'X-Socket-ID': (typeof socket !== 'undefined' && socket && socket.id) || ''
+          },
+          body: JSON.stringify(patch)
+        });
+        const body = await resp.json();
+        if (resp.ok && body.success && body.volunteer) {
+          // Splice the updated record into our local appData immediately so
+          // the next save's dataReadAt comparison doesn't see our update as
+          // stale on a record we just wrote.
+          const idx = appData.volunteers.findIndex(v => String(v.id) === String(id));
+          if (idx !== -1) appData.volunteers[idx] = body.volunteer;
+          if (typeof body.serverNow === 'number') dataReadAt = body.serverNow;
+        } else if (body && (body.code === 'STALE_CLIENT' || body.code === 'STALE_READ')) {
+          showStaleClientPrompt(body.error || 'Your page is out of date. Please reload.');
+        }
+        return body;
+      } catch (err) {
+        console.error('PATCH /api/volunteer network error:', err);
+        return { success: false, error: 'Network error' };
+      }
+    }
+
     // Activity logging function
     function logActivity(action, target, details) {
       const user = adminAuthUser || (captainAuth ? appData.volunteers.find(v => v.id === captainAuth.id) : null) || volunteerAuth;
@@ -6349,28 +6381,16 @@
         return;
       }
 
-      const oldSchedule = appData.volunteers[idx].scheduled || {};
-      appData.volunteers[idx].scheduled = newSchedule;
-
-      // Log the schedule diff so the activity log captures captain edits.
-      var added = [], removed = [];
-      DAYS.forEach(function(day) {
-        SHIFTS.forEach(function(shift) {
-          var k = day + ' ' + shift;
-          var was = !!oldSchedule[k];
-          var now = !!newSchedule[k];
-          if (now && !was) added.push(k);
-          if (!now && was) removed.push(k);
-        });
-      });
-      if (added.length || removed.length) {
-        var details = [];
-        if (added.length) details.push('added ' + added.join(', '));
-        if (removed.length) details.push('removed ' + removed.join(', '));
-        logActivity('edit-schedule', appData.volunteers[idx].name, details.join('; '));
+      // Use the atomic PATCH endpoint instead of POST /api/data so concurrent
+      // captains editing different volunteers can't clobber each other.
+      // The server handles lastModified stamping and writes the activity log.
+      const patchResult = await apiUpdateVolunteer(appData.volunteers[idx].id, { scheduled: newSchedule });
+      if (!patchResult.success) {
+        if (patchResult.code !== 'STALE_CLIENT' && patchResult.code !== 'STALE_READ') {
+          alert('Could not save schedule: ' + (patchResult.error || 'unknown error'));
+        }
+        return;
       }
-
-      saveData();
 
       // Check if we should send email
       const sendEmail = document.getElementById('sendScheduleEmail');
@@ -7156,6 +7176,26 @@
             dataReadAt = Date.parse(event.timestamp) || dataReadAt;
           }
           render();
+        } else if (event.type === 'volunteerUpdated') {
+          // Partial update from PATCH /api/volunteer/:id — splice the single
+          // record into appData without touching anything else. Safe to apply
+          // even when the user is mid-edit, because it only mutates one record.
+          var vu = event.data && event.data.volunteer;
+          if (vu && vu.id != null) {
+            var vIdx = appData.volunteers.findIndex(function(v) { return String(v.id) === String(vu.id); });
+            if (vIdx !== -1) {
+              // Don't overwrite a record the user is actively editing.
+              var beingEdited = (typeof editingVolunteer !== 'undefined' && editingVolunteer && String(editingVolunteer.id) === String(vu.id))
+                || (typeof captainEditingVolunteer !== 'undefined' && captainEditingVolunteer && String(captainEditingVolunteer.id) === String(vu.id));
+              if (!beingEdited) appData.volunteers[vIdx] = vu;
+            } else {
+              appData.volunteers.push(vu);
+            }
+          }
+          if (event.data && typeof event.data.serverNow === 'number') {
+            dataReadAt = event.data.serverNow;
+          }
+          if (!skipRender()) render();
         } else if (event.type === 'checkIn') {
           // Single check-in added (match on hole too — same volunteer can be
           // checked in on multiple holes for the same day/shift in edge cases)
