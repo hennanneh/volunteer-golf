@@ -1478,8 +1478,19 @@
     // Per-volunteer atomic update. Replaces full-dataset POST /api/data for
     // single-volunteer edits. Server stamps lastModified, writes the activity
     // log entry, and broadcasts a partial volunteerUpdated event.
+    //
+    // Auto-attaches expectedLastModified from local appData so the server can
+    // reject the write if someone else edited the record after we loaded it
+    // (returns 409 STALE_RECORD; we show a conflict prompt and refresh the
+    // form to the server's current values).
+    //
     // Returns { success, volunteer?, changed?, error?, code? }.
     async function apiUpdateVolunteer(id, patch) {
+      const local = appData.volunteers.find(v => String(v.id) === String(id));
+      const finalPatch = Object.assign({}, patch);
+      if (local && typeof local.lastModified === 'number' && finalPatch.expectedLastModified === undefined) {
+        finalPatch.expectedLastModified = local.lastModified;
+      }
       try {
         const resp = await fetch('/api/volunteer/' + encodeURIComponent(id), {
           method: 'PATCH',
@@ -1487,7 +1498,7 @@
             'Content-Type': 'application/json',
             'X-Socket-ID': (typeof socket !== 'undefined' && socket && socket.id) || ''
           },
-          body: JSON.stringify(patch)
+          body: JSON.stringify(finalPatch)
         });
         const body = await resp.json();
         if (resp.ok && body.success && body.volunteer) {
@@ -1499,12 +1510,41 @@
           if (typeof body.serverNow === 'number') dataReadAt = body.serverNow;
         } else if (body && (body.code === 'STALE_CLIENT' || body.code === 'STALE_READ')) {
           showStaleClientPrompt(body.error || 'Your page is out of date. Please reload.');
+        } else if (body && body.code === 'STALE_RECORD' && body.volunteer) {
+          // Splice the server's current copy in so the UI shows fresh values,
+          // then let the user retry their edit on top of those.
+          const idx = appData.volunteers.findIndex(v => String(v.id) === String(id));
+          if (idx !== -1) appData.volunteers[idx] = body.volunteer;
+          showRecordConflictPrompt(body.volunteer);
         }
         return body;
       } catch (err) {
         console.error('PATCH /api/volunteer network error:', err);
         return { success: false, error: 'Network error' };
       }
+    }
+
+    // Modal shown when PATCH returns 409 STALE_RECORD — another captain
+    // saved this volunteer after we opened the form. We re-render so the
+    // open edit modal picks up the fresh values, and tell the user.
+    function showRecordConflictPrompt(currentVolunteer) {
+      var overlay = document.createElement('div');
+      overlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:10002;display:flex;align-items:center;justify-content:center;padding:20px';
+      var name = (currentVolunteer && currentVolunteer.name) || 'This volunteer';
+      overlay.innerHTML = '<div style="background:#fff;border-radius:12px;max-width:420px;width:100%;padding:24px"><h3 style="margin:0 0 12px 0;color:#b00020">Someone else edited ' + name + '</h3><p style="margin:0 0 16px 0;color:#333;font-size:14px;line-height:1.4">Your save was rejected because another user updated this record while you had the form open. The form has been refreshed with the current values. Please re-apply your changes and save again.</p><button type="button" id="conflictOkBtn" class="submit-btn" style="width:100%">Got it</button></div>';
+      document.body.appendChild(overlay);
+      overlay.querySelector('#conflictOkBtn').onclick = function() {
+        overlay.remove();
+        // Reopen the edit modal with the fresh server values so the user
+        // sees the current state when they re-apply their changes.
+        if (captainEditingVolunteer && String(captainEditingVolunteer.id) === String(currentVolunteer.id)) {
+          captainEditingVolunteer = Object.assign({}, currentVolunteer, { scheduled: Object.assign({}, currentVolunteer.scheduled || {}) });
+        }
+        if (editingVolunteer && String(editingVolunteer.id) === String(currentVolunteer.id)) {
+          editingVolunteer = Object.assign({}, currentVolunteer, { scheduled: Object.assign({}, currentVolunteer.scheduled || {}) });
+        }
+        render();
+      };
     }
 
     // Activity logging function
@@ -3058,7 +3098,7 @@
       printWindow.print();
     }
 
-    function saveVolunteerEdit() {
+    async function saveVolunteerEdit() {
       if (!editingVolunteer) return;
 
       // Get values from form
@@ -3152,13 +3192,35 @@
 
         alert('✓ Volunteer added successfully!');
       } else {
-        // Update existing volunteer
+        // Update existing volunteer — use the atomic PATCH endpoint so this
+        // edit doesn't full-replace the dataset and clobber concurrent saves.
         const idx = appData.volunteers.findIndex(v => v.id === editingVolunteer.id);
         if (idx === -1) return;
-
         const oldVol = appData.volunteers[idx];
-        const updatedVol = {
-          ...oldVol,
+
+        // Compute originalHole delta (server tracks it as a regular field; we
+        // decide here whether to set it, clear it via null, or leave it).
+        let originalHoleUpdate; // undefined = no change; null = clear; number = set
+        if (newHole !== oldVol.hole) {
+          if (oldVol.originalHole === undefined) {
+            originalHoleUpdate = oldVol.hole;
+          } else if (newHole === oldVol.originalHole) {
+            originalHoleUpdate = null;
+          }
+        }
+
+        // assignedHoles: include when Chairman-class, clear (null) otherwise.
+        const assignedHolesUpdate = newAssignedHoles ? newAssignedHoles : null;
+
+        const wasAdmin = oldVol.type === 'Admin' || oldVol.type === 'Chairman' || oldVol.type === 'Asst. Chairman';
+        const isAdmin = newType === 'Admin' || newType === 'Chairman' || newType === 'Asst. Chairman';
+        const passwordSideEffect = (!wasAdmin && isAdmin) || (wasAdmin && !isAdmin)
+          ? { volunteerId: editingVolunteer.id, field: 'admin', newPassword: '' }
+          : null;
+
+        // Build a patch with every editable field; the server diffs against
+        // its on-disk version and only writes/logs what actually changed.
+        const patch = {
           name: newName,
           type: newType,
           hole: newHole,
@@ -3170,83 +3232,36 @@
           scheduled: newSchedule,
           notes: newNotes,
           address: newAddress,
-          volId: newVolId
+          volId: newVolId,
+          assignedHoles: assignedHolesUpdate
         };
-        // Track original hole for move history
-        if (newHole !== oldVol.hole) {
-          if (oldVol.originalHole === undefined) {
-            updatedVol.originalHole = oldVol.hole;
-          } else if (newHole === oldVol.originalHole) {
-            // Moving back to original hole - clear tracking
-            delete updatedVol.originalHole;
+        if (originalHoleUpdate !== undefined) patch.originalHole = originalHoleUpdate;
+
+        const result = await apiUpdateVolunteer(editingVolunteer.id, patch);
+        if (!result.success) {
+          if (result.code !== 'STALE_CLIENT' && result.code !== 'STALE_READ' && result.code !== 'STALE_RECORD') {
+            alert('Could not save: ' + (result.error || 'unknown error'));
           }
+          // For conflict / stale codes, the modals are already up; leave the
+          // form in place so the user can retry on the refreshed values.
+          return;
         }
-        // Update assigned holes for Chairman types
-        if (newAssignedHoles) {
-          updatedVol.assignedHoles = newAssignedHoles;
-        } else {
-          delete updatedVol.assignedHoles;
-        }
-        // Phase 1.2/1.3: passwords are server-owned. Type-change side effects
-        // are now handled with /api/set-password after the saveData() below.
-        // (We can't mutate updatedVol here — POST /api/data strips password
-        // fields and re-merges from disk.)
-        const oldType = appData.volunteers[idx].type;
-        const wasAdmin = oldType === 'Admin' || oldType === 'Chairman' || oldType === 'Asst. Chairman';
-        const isAdmin = newType === 'Admin' || newType === 'Chairman' || newType === 'Asst. Chairman';
-        const passwordSideEffect = (!wasAdmin && isAdmin) || (wasAdmin && !isAdmin)
-          ? { volunteerId: editingVolunteer.id, field: 'admin', newPassword: '' }
-          : null;
-        appData.volunteers[idx] = updatedVol;
-
-        // Update any check-in records with new name
-        appData.checkIns = appData.checkIns.map(c => {
-          if (c.volunteerId === editingVolunteer.id) {
-            return { ...c, volunteerName: newName };
-          }
-          return c;
-        });
-
-        // Log the edit, including a schedule diff so the audit trail captures
-        // shift add/remove decisions (the most common admin edit).
-        var oldSched = oldVol.scheduled || {};
-        var schedAdded = [], schedRemoved = [];
-        DAYS.forEach(function(day) {
-          SHIFTS.forEach(function(shift) {
-            var k = day + ' ' + shift;
-            var was = !!oldSched[k];
-            var now = !!newSchedule[k];
-            if (now && !was) schedAdded.push(k);
-            if (!now && was) schedRemoved.push(k);
-          });
-        });
-        var editDetails = 'Edited volunteer (Type: ' + newType + ', Hole: ' + newHole + ')';
-        if (schedAdded.length) editDetails += '; schedule +' + schedAdded.join(', ');
-        if (schedRemoved.length) editDetails += '; schedule -' + schedRemoved.join(', ');
-        logActivity('edit-volunteer', newName, editDetails);
-
-        saveData();
 
         // Phase 1.2/1.3: when type changed to/from admin, clear the stored
-        // adminPassword on the server. Promotion → login falls back to the
-        // 'admin2025' default and prompts the user to set a real password.
-        // Demotion → no admin login possible at all.
+        // adminPassword on the server (promotion → fallback to 'admin2025',
+        // demotion → no admin login possible).
         if (passwordSideEffect) {
           apiSetPassword(passwordSideEffect).catch(() => {});
         }
 
-        // Check if we should send schedule email
+        const updatedVol = result.volunteer;
         const sendEmailCheckbox = document.getElementById('adminSendScheduleEmail');
         if (sendEmailCheckbox && sendEmailCheckbox.checked && newEmail) {
           sendScheduleEmail(updatedVol, newSchedule)
-            .then(() => {
-              alert('✓ Volunteer updated and schedule email sent!');
-            })
-            .catch(err => {
-              alert('✓ Volunteer updated, but email failed: ' + err.message);
-            });
+            .then(() => showToast('Volunteer updated; schedule email sent'))
+            .catch(err => showToast('Updated, but email failed: ' + err.message));
         } else {
-          alert('✓ Volunteer updated successfully!');
+          showToast('Volunteer updated');
         }
 
         editingVolunteer = null;
@@ -6406,8 +6421,8 @@
       // clobber each other. Server handles lastModified and activity log.
       const patchResult = await apiUpdateVolunteer(original.id, patch);
       if (!patchResult.success) {
-        if (patchResult.code !== 'STALE_CLIENT' && patchResult.code !== 'STALE_READ') {
-          alert('Could not save: ' + (patchResult.error || 'unknown error'));
+        if (patchResult.code !== 'STALE_CLIENT' && patchResult.code !== 'STALE_READ' && patchResult.code !== 'STALE_RECORD') {
+          showToast('Could not save: ' + (patchResult.error || 'unknown error'));
         }
         return;
       }
@@ -6419,15 +6434,15 @@
         if (vol.email) {
           try {
             await sendScheduleEmail(vol, newSchedule);
-            alert('Saved and email sent to ' + vol.email);
+            showToast('Saved; email sent to ' + vol.email);
           } catch (err) {
-            alert('Saved but email failed: ' + err.message);
+            showToast('Saved, but email failed: ' + err.message);
           }
         } else {
-          alert('Saved, but no email on file for this volunteer.');
+          showToast('Saved (no email on file)');
         }
       } else {
-        alert('Saved!');
+        showToast('Saved');
       }
 
       captainEditingVolunteer = null;

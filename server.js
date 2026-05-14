@@ -1139,11 +1139,36 @@ app.patch('/api/volunteer/:id', dataLimiter, requireAuth(['admin', 'chair', 'ass
     }
 
     const before = data.volunteers[idx];
+
+    // Optimistic concurrency. If client sent expectedLastModified, refuse the
+    // write when someone else edited the record in the meantime — and return
+    // the current record so the client can show a conflict prompt.
+    if (typeof patch.expectedLastModified === 'number') {
+      const currentLM = Number(before.lastModified) || 0;
+      if (currentLM !== patch.expectedLastModified) {
+        return res.status(409).json({
+          success: false,
+          code: 'STALE_RECORD',
+          error: 'This volunteer was just edited by someone else.',
+          volunteer: stripVolunteerSecrets(before),
+          serverNow: Date.now()
+        });
+      }
+    }
+
     const changedFields = [];
     const updated = Object.assign({}, before);
 
     for (const f of VOLUNTEER_PATCH_FIELDS) {
       if (patch[f] === undefined) continue;
+      // Convention: `null` means "delete this field" (used for originalHole,
+      // assignedHoles, etc. that may need to be cleared, not just overwritten).
+      if (patch[f] === null) {
+        if (before[f] === undefined) continue;
+        delete updated[f];
+        changedFields.push(f);
+        continue;
+      }
       if (JSON.stringify(patch[f]) === JSON.stringify(before[f])) continue;
       updated[f] = patch[f];
       changedFields.push(f);
@@ -1151,6 +1176,14 @@ app.patch('/api/volunteer/:id', dataLimiter, requireAuth(['admin', 'chair', 'ass
 
     if (!changedFields.length) {
       return res.json({ success: true, volunteer: stripVolunteerSecrets(updated), changed: [], serverNow: Date.now() });
+    }
+
+    // Cascade: if name changed, update the denormalized volunteerName on any
+    // existing check-in records so rosters/reports don't show stale names.
+    if (changedFields.includes('name') && Array.isArray(data.checkIns)) {
+      for (const c of data.checkIns) {
+        if (c && String(c.volunteerId) === String(before.id)) c.volunteerName = updated.name;
+      }
     }
 
     updated.lastModified = Date.now();
