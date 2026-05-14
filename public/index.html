@@ -5573,6 +5573,10 @@
               </div>
             </div>
             <div style="margin-top:20px;padding-top:15px;border-top:1px solid #eee">
+              <label style="font-size:13px;font-weight:600;margin-bottom:8px;display:block">Notes</label>
+              <textarea id="captainEditNotes" rows="4" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:6px;font-size:13px;resize:vertical;font-family:inherit" placeholder="Add notes about this volunteer...">${captainEditingVolunteer.notes || ''}</textarea>
+            </div>
+            <div style="margin-top:20px;padding-top:15px;border-top:1px solid #eee">
               <label style="display:flex;align-items:center;gap:8px;font-size:13px;cursor:pointer">
                 <input type="checkbox" id="sendScheduleEmail" style="flex-shrink:0">
                 <span>Send updated schedule to volunteer via email</span>
@@ -5582,12 +5586,7 @@
             <div class="modal-buttons" style="margin-top:20px">
               <button class="modal-btn cancel" onclick="closeCaptainEditModal()">Cancel</button>
               ${captainEditingVolunteer.email ? '<a href="mailto:' + captainEditingVolunteer.email + '" class="modal-btn" style="background:#fff;border:1px solid #ddd;color:#333;text-decoration:none;text-align:center">Create Blank Email</a>' : ''}
-              <button class="modal-btn confirm" onclick="saveCaptainVolunteerEdit()">Save Schedule</button>
-            </div>
-            <div style="margin-top:20px;padding-top:15px;border-top:1px solid #eee">
-              <label style="font-size:13px;font-weight:600;margin-bottom:8px;display:block">Notes</label>
-              <textarea id="captainEditNotes" rows="4" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:6px;font-size:13px;resize:vertical;font-family:inherit" placeholder="Add notes about this volunteer...">${captainEditingVolunteer.notes || ''}</textarea>
-              <button type="button" onclick="saveCaptainVolunteerNotes()" class="modal-btn confirm" style="margin-top:10px;width:auto">Save Notes</button>
+              <button class="modal-btn confirm" onclick="saveCaptainVolunteerEdit()">Save</button>
             </div>
           </div>
         </div>
@@ -6345,6 +6344,8 @@
           if (isNowChecked !== wasChecked) changed = true;
         });
       });
+      var notesEl = document.getElementById('captainEditNotes');
+      if (notesEl && (notesEl.value || '') !== (captainEditingVolunteer.notes || '')) changed = true;
       return changed;
     }
 
@@ -6381,53 +6382,56 @@
         return;
       }
 
-      // Use the atomic PATCH endpoint instead of POST /api/data so concurrent
-      // captains editing different volunteers can't clobber each other.
-      // The server handles lastModified stamping and writes the activity log.
-      const patchResult = await apiUpdateVolunteer(appData.volunteers[idx].id, { scheduled: newSchedule });
+      // Build a patch with only the fields that actually changed. The single
+      // Save button covers both schedule and notes; we send them in one PATCH.
+      const patch = {};
+      const original = appData.volunteers[idx];
+      if (JSON.stringify(newSchedule) !== JSON.stringify(original.scheduled || {})) {
+        patch.scheduled = newSchedule;
+      }
+      const notesEl = document.getElementById('captainEditNotes');
+      const newNotes = notesEl ? notesEl.value : (original.notes || '');
+      if (newNotes !== (original.notes || '')) {
+        patch.notes = newNotes;
+      }
+
+      if (Object.keys(patch).length === 0) {
+        // Nothing changed — close quietly.
+        captainEditingVolunteer = null;
+        render();
+        return;
+      }
+
+      // Atomic PATCH so concurrent captains editing different volunteers can't
+      // clobber each other. Server handles lastModified and activity log.
+      const patchResult = await apiUpdateVolunteer(original.id, patch);
       if (!patchResult.success) {
         if (patchResult.code !== 'STALE_CLIENT' && patchResult.code !== 'STALE_READ') {
-          alert('Could not save schedule: ' + (patchResult.error || 'unknown error'));
+          alert('Could not save: ' + (patchResult.error || 'unknown error'));
         }
         return;
       }
 
-      // Check if we should send email
+      // Check if we should send email (only if schedule actually changed)
       const sendEmail = document.getElementById('sendScheduleEmail');
-      if (sendEmail && sendEmail.checked) {
+      if (sendEmail && sendEmail.checked && patch.scheduled) {
         const vol = appData.volunteers[idx];
         if (vol.email) {
           try {
             await sendScheduleEmail(vol, newSchedule);
-            alert('Schedule updated and email sent to ' + vol.email);
+            alert('Saved and email sent to ' + vol.email);
           } catch (err) {
-            alert('Schedule updated but email failed: ' + err.message);
+            alert('Saved but email failed: ' + err.message);
           }
         } else {
-          alert('Schedule updated but no email on file for this volunteer.');
+          alert('Saved, but no email on file for this volunteer.');
         }
       } else {
-        alert('Schedule updated successfully!');
+        alert('Saved!');
       }
 
       captainEditingVolunteer = null;
       render();
-    }
-
-    function saveCaptainVolunteerNotes() {
-      if (!captainEditingVolunteer) return;
-      if (captainAuth && captainAuth.readOnly) {
-        showToast('View only access - cannot save notes');
-        return;
-      }
-      const notes = document.getElementById('captainEditNotes').value;
-      const idx = appData.volunteers.findIndex(v => v.id === captainEditingVolunteer.id);
-      if (idx === -1) { alert('Volunteer not found'); return; }
-      appData.volunteers[idx].notes = notes;
-      captainEditingVolunteer.notes = notes;
-      saveData();
-      logActivity('edit-notes', appData.volunteers[idx].name, 'Updated volunteer notes');
-      alert('Notes saved!');
     }
 
     function saveVolunteerNotes() {
