@@ -403,6 +403,56 @@ const sessions = new Map();  // token -> { userId, email, name, role, portal, cr
 const SESSION_IDLE_MS = 12 * 60 * 60 * 1000;       // 12 hours
 const SESSION_CLEANUP_INTERVAL_MS = 15 * 60 * 1000; // 15 minutes
 
+// Session persistence — store sessions in a JSON file (chmod 600, gitignored)
+// so they survive PM2 restarts. Without this, every code push or restart
+// invalidates every captain's cookie and writes get attributed to `unauth-<ip>`
+// in the activity log until they re-login.
+const SESSIONS_FILE = path.join(__dirname, 'sessions.json');
+
+function loadSessions() {
+  try {
+    if (!fs.existsSync(SESSIONS_FILE)) return;
+    const raw = fs.readFileSync(SESSIONS_FILE, 'utf8');
+    const arr = JSON.parse(raw);
+    if (!Array.isArray(arr)) return;
+    const now = Date.now();
+    let loaded = 0, expired = 0;
+    for (const [token, sess] of arr) {
+      if (!sess || typeof sess.lastUsed !== 'number') { expired++; continue; }
+      if (now - sess.lastUsed > SESSION_IDLE_MS) { expired++; continue; }
+      sessions.set(token, sess);
+      loaded++;
+    }
+    console.log('[' + new Date().toISOString() + '] Loaded ' + loaded + ' sessions from disk (' + expired + ' expired/invalid skipped)');
+  } catch (err) {
+    console.warn('Could not load sessions from disk:', err.message);
+  }
+}
+
+let persistPending = false;
+function persistSessions() {
+  // Debounce: collapse rapid lastUsed bumps into one write per tick.
+  if (persistPending) return;
+  persistPending = true;
+  setImmediate(() => {
+    persistPending = false;
+    try {
+      const tmp = SESSIONS_FILE + '.tmp';
+      fs.writeFileSync(tmp, JSON.stringify(Array.from(sessions.entries())), { mode: 0o600 });
+      fs.renameSync(tmp, SESSIONS_FILE);
+    } catch (err) {
+      console.warn('Could not persist sessions:', err.message);
+    }
+  });
+}
+
+loadSessions();
+
+// Periodic save to capture lastUsed bumps from busy sessions. Without this,
+// a session used continuously for 12 hours then a server restart would
+// reload with the original createdAt-era lastUsed and immediately expire.
+setInterval(persistSessions, 5 * 60 * 1000);  // every 5 minutes
+
 setInterval(() => {
   const now = Date.now();
   let cleaned = 0;
@@ -412,7 +462,10 @@ setInterval(() => {
       cleaned++;
     }
   }
-  if (cleaned) console.log('[' + new Date().toISOString() + '] Cleaned ' + cleaned + ' expired sessions');
+  if (cleaned) {
+    console.log('[' + new Date().toISOString() + '] Cleaned ' + cleaned + ' expired sessions');
+    persistSessions();
+  }
 }, SESSION_CLEANUP_INTERVAL_MS);
 
 function generateToken() {
@@ -613,6 +666,7 @@ app.post('/api/login', loginLimiter, (req, res) => {
     createdAt: Date.now(),
     lastUsed: Date.now()
   });
+  persistSessions();
 
   res.cookie('session', token, {
     httpOnly: true,
@@ -651,6 +705,7 @@ app.post('/api/logout', (req, res) => {
       console.log('[' + new Date().toISOString() + '] LOGOUT  user=' + sess.name);
     }
     sessions.delete(token);
+    persistSessions();
   }
   res.clearCookie('session');
   res.json({ success: true });
