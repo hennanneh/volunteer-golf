@@ -1622,7 +1622,8 @@
       "address": "7208 Wayfarer Trail Fort Worth, TX 76137",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1778813044771,
+      "volunteerPassword": "$2b$10$GKL7PZuM3WGXVhda1BP4nuxSQdXTjVDJtFyO807Xs9btQFUklwTR6"
     },
     {
       "id": "7865",
