@@ -9021,6 +9021,15 @@
   },
   "activityLog": [
     {
+      "id": "1778864703138",
+      "timestamp": "2026-05-15T17:05:03.138Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1778863423189",
       "timestamp": "2026-05-15T16:43:43.189Z",
       "user": "Wilson, Todd",
