@@ -9026,6 +9026,24 @@
   },
   "activityLog": [
     {
+      "id": "1778875506896",
+      "timestamp": "2026-05-15T20:05:06.896Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Holt, Sammy",
+      "details": "Friday PM - Hole #8"
+    },
+    {
+      "id": "1778875505724",
+      "timestamp": "2026-05-15T20:05:05.724Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Holt, Sammy",
+      "details": "Friday PM - Hole #8"
+    },
+    {
       "id": "1778875447436",
       "timestamp": "2026-05-15T20:04:07.437Z",
       "user": "Holt, Sharron",
