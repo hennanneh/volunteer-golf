@@ -9021,6 +9021,15 @@
   },
   "activityLog": [
     {
+      "id": "1778857346322",
+      "timestamp": "2026-05-15T15:02:26.322Z",
+      "user": "Clayton, Rodney",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1778857142427",
       "timestamp": "2026-05-15T14:59:02.427Z",
       "user": "Bishop, Woody",
