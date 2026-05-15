@@ -8826,14 +8826,16 @@
         "Wednesday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
+        "Saturday AM": true,
         "Saturday PM": true,
-        "Sunday AM": true
+        "Sunday AM": true,
+        "Sunday PM": true
       },
       "volId": "10279",
       "address": "5313 Roberts Rd Colleyville, TX 76034",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1778853729498
     },
     {
       "id": "4661",
@@ -8848,14 +8850,16 @@
         "Wednesday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
+        "Saturday AM": true,
         "Saturday PM": true,
-        "Sunday AM": true
+        "Sunday AM": true,
+        "Sunday PM": true
       },
       "volId": "4661",
       "address": "5313 Roberts Rd Colleyville, TX 76034",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1778853744935
     },
     {
       "id": "4634",
@@ -9006,6 +9010,33 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1778853744935",
+      "timestamp": "2026-05-15T14:02:24.935Z",
+      "user": "Browning, Wayne",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Wright, Paul",
+      "details": "added Saturday AM, Sunday PM"
+    },
+    {
+      "id": "1778853729498",
+      "timestamp": "2026-05-15T14:02:09.498Z",
+      "user": "Browning, Wayne",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Wright, Nancy",
+      "details": "added Saturday AM, Sunday PM"
+    },
+    {
+      "id": "1778853670071",
+      "timestamp": "2026-05-15T14:01:10.071Z",
+      "user": "Browning, Wayne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1778850418468",
       "timestamp": "2026-05-15T13:06:58.468Z",
