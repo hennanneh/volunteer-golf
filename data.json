@@ -9007,6 +9007,42 @@
   },
   "activityLog": [
     {
+      "id": "1778814561548",
+      "timestamp": "2026-05-15T03:09:21.549Z",
+      "user": "Clayton, Rodney",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1778814543912",
+      "timestamp": "2026-05-15T03:09:03.912Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1778814434890",
+      "timestamp": "2026-05-15T03:07:14.890Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1778814434750",
+      "timestamp": "2026-05-15T03:07:14.750Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1778813629619",
       "timestamp": "2026-05-15T02:53:49.619Z",
       "user": "Watson, Stan",
