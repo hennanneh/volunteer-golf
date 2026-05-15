@@ -9022,6 +9022,15 @@
   },
   "activityLog": [
     {
+      "id": "1778867340430",
+      "timestamp": "2026-05-15T17:49:00.431Z",
+      "user": "Volkening, David",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
       "id": "1778864703138",
       "timestamp": "2026-05-15T17:05:03.138Z",
       "user": "Holt, Sharron",
