@@ -115,7 +115,7 @@ function withDataLock(isDemo, fn) {
 //   data.deletedVolunteerIds so stale clients can't resurrect deleted ids.
 // - checkIns and submissions are owned by their dedicated endpoints and are
 //   preserved from disk to prevent bulk-save clobber.
-// - activityLog is merged by entry id (dedupe), sorted desc, trimmed to 200.
+// - activityLog is merged by entry id (dedupe), sorted desc, no trim.
 //
 // Legacy clients (no dataReadAt) still fall through to a full-replace path,
 // but tombstone-aware: any incoming volunteer matching a recent tombstone
@@ -129,7 +129,125 @@ function pruneTombstones(tombstones, now) {
   return (tombstones || []).filter(t => t && t.deletedAt > cutoff);
 }
 
-function mergeVolunteerSave(existing, incoming, deletedIds, dataReadAt) {
+// Diff two volunteer records for the purpose of activity-log entries.
+// Returns an array of changes, omitting server-managed and secret fields.
+// `scheduled` gets a per-shift added/removed breakdown; other fields are
+// flagged by name only (avoids leaking PII like phone/email diffs into the
+// log, but enough signal to spot anomalies).
+function diffVolunteerForLog(existV, incV) {
+  const SKIP = new Set(['id', 'lastModified', ...VOLUNTEER_SECRET_FIELDS,
+    'hasAdminPassword', 'hasVolunteerPassword', 'hasCustomPin', 'adminPasswordSetAt']);
+  const changes = [];
+  const allFields = new Set([
+    ...Object.keys(existV || {}),
+    ...Object.keys(incV || {}),
+  ]);
+  for (const f of allFields) {
+    if (SKIP.has(f)) continue;
+    if (f === 'scheduled') {
+      const oldS = (existV && existV.scheduled) || {};
+      const newS = (incV   && incV.scheduled)   || {};
+      const keys = new Set([...Object.keys(oldS), ...Object.keys(newS)]);
+      const added = [], removed = [];
+      for (const k of keys) {
+        const was = !!oldS[k];
+        const now = !!newS[k];
+        if (now && !was) added.push(k);
+        if (!now && was) removed.push(k);
+      }
+      if (added.length || removed.length) changes.push({ field: 'scheduled', added, removed });
+    } else {
+      const a = existV ? existV[f] : undefined;
+      const b = incV   ? incV[f]   : undefined;
+      const same = a === b || JSON.stringify(a) === JSON.stringify(b);
+      if (!same) changes.push({ field: f });
+    }
+  }
+  return changes;
+}
+
+// Authorization check for the bulk-merge path. Admins/chairs/asst-chairs
+// retain full write authority. Captains may only modify records in their
+// assigned hole (where existing.hole === incoming.hole === captain.hole),
+// plus their own profile. Hole reassignment is admin-only. Returns true to
+// allow the merge to accept the incoming version, false to silently reject
+// (the caller will keep the existing version and log a rejected-bulk-edit
+// entry for the audit trail / push alert).
+function captainAuthorized(userInfo, actorHole, existV, incV) {
+  if (!userInfo || userInfo.userType !== 'Captain') return true;
+  // If we couldn't determine the captain's hole (no matching volunteer record),
+  // be permissive rather than block all their edits — log will surface anomalies.
+  if (actorHole === null || actorHole === undefined || actorHole === '') return true;
+  // Self-edit always allowed (captains can change their own profile fields).
+  if (existV && userInfo.name && existV.name === userInfo.name) return true;
+  if (incV   && userInfo.name && incV.name   === userInfo.name) return true;
+  // ADD case: only allowed if new volunteer's hole matches captain's hole.
+  if (!existV) return !!(incV && String(incV.hole) === String(actorHole));
+  // EDIT case: existing must be in captain's hole AND incoming must stay there.
+  return String(existV.hole) === String(actorHole)
+      && !!incV && String(incV.hole) === String(actorHole);
+}
+
+// Audit-log entry for a captain attempt the merge auto-rejected.
+function buildRejectedBulkEntry(targetVol, userInfo, actorHole, reason) {
+  const entry = {
+    id: Date.now().toString() + '-' + Math.random().toString(36).slice(2, 8),
+    timestamp: new Date().toISOString(),
+    user: (userInfo && userInfo.name) || 'Unknown',
+    userType: (userInfo && userInfo.userType) || 'Unknown',
+    action: 'rejected-bulk-edit',
+    target: (targetVol && targetVol.name) || '',
+    details: reason + ' (auto-rejected via bulk save — no data changed)',
+  };
+  if (targetVol && (typeof targetVol.hole === 'number' || typeof targetVol.hole === 'string')) {
+    entry.targetHole = targetVol.hole;
+  }
+  if (actorHole !== undefined && actorHole !== null && actorHole !== '') {
+    entry.actorHole = actorHole;
+  }
+  return entry;
+}
+
+// Build an activity-log entry from a diff. Tagged "(via bulk save)" so it's
+// distinguishable from explicit PATCH-driven entries in the activity log UI.
+// Includes actorHole + targetHole so the live-watcher can detect captains
+// modifying records outside their assigned hole (silent-override flag).
+function buildBulkActivityEntry(changes, targetVol, userInfo, isNew, actorHole) {
+  if (!isNew && !changes.length) return null;
+  let action, details;
+  if (isNew) {
+    action  = 'add-volunteer';
+    details = 'Added volunteer (via bulk save)';
+  } else if (changes.length === 1 && changes[0].field === 'scheduled') {
+    action = 'edit-schedule';
+    const c = changes[0];
+    const parts = [];
+    if (c.added.length)   parts.push('added '   + c.added.join(', '));
+    if (c.removed.length) parts.push('removed ' + c.removed.join(', '));
+    details = parts.join('; ') + ' (via bulk save)';
+  } else {
+    action  = 'edit-volunteer';
+    details = 'Updated fields: ' + changes.map(c => c.field).join(', ') + ' (via bulk save)';
+  }
+  const entry = {
+    id: Date.now().toString() + '-' + Math.random().toString(36).slice(2, 8),
+    timestamp: new Date().toISOString(),
+    user: (userInfo && userInfo.name) || 'Unknown',
+    userType: (userInfo && userInfo.userType) || 'Unknown',
+    action,
+    target: (targetVol && targetVol.name) || '',
+    details,
+  };
+  if (targetVol && (typeof targetVol.hole === 'number' || typeof targetVol.hole === 'string')) {
+    entry.targetHole = targetVol.hole;
+  }
+  if (actorHole !== undefined && actorHole !== null && actorHole !== '') {
+    entry.actorHole = actorHole;
+  }
+  return entry;
+}
+
+function mergeVolunteerSave(existing, incoming, deletedIds, dataReadAt, userInfo) {
   const now = Date.now();
   const tombList = pruneTombstones(existing.deletedVolunteerIds, now);
   const tombMap = new Map(tombList.map(t => [String(t.id), t.deletedAt]));
@@ -143,6 +261,21 @@ function mergeVolunteerSave(existing, incoming, deletedIds, dataReadAt) {
 
   const merged = [];
   const handled = new Set();
+  // Collect activity entries for any record where the merge accepted a change.
+  // Catches "silent override" cases where the SPA didn't call logActivity.
+  const bulkActivityEntries = [];
+
+  // Look up the actor's assigned hole (for cross-hole detection in the watcher).
+  // Captains have a hole on their own volunteer record. Admins/Chairs typically
+  // don't or have it set inconsistently — that's fine; mismatch logic in the
+  // watcher only fires for userType === 'Captain'.
+  let actorHole = null;
+  if (userInfo && userInfo.name) {
+    const actorRec = (existing.volunteers || []).find(v => v && v.name === userInfo.name);
+    if (actorRec && (typeof actorRec.hole === 'number' || typeof actorRec.hole === 'string')) {
+      actorHole = actorRec.hole;
+    }
+  }
 
   for (const [id, existV] of existingById) {
     if (tombMap.has(id)) continue;  // explicitly deleted
@@ -153,12 +286,37 @@ function mergeVolunteerSave(existing, incoming, deletedIds, dataReadAt) {
       merged.push(existV);
       continue;
     }
+    // No-op short-circuit: the SPA echoes back every volunteer on every
+    // bulk save, so the vast majority of incoming records are byte-identical
+    // to the existing version. Skip the staleness check, the captain-auth
+    // check, and the lastModified bump — there's nothing to enforce or log.
+    // Without this, captains generated a rejected-bulk-edit entry for every
+    // out-of-hole volunteer on every save (~350+ noise entries per save).
+    const changes = diffVolunteerForLog(existV, incV);
+    if (changes.length === 0) {
+      merged.push(existV);
+      continue;
+    }
     const exMod = Number(existV.lastModified) || 0;
     if (exMod > dataReadAt) {
       // Someone else edited this record after the client's last read.
       // Reject the client's stale version of this record.
       merged.push(existV);
+    } else if (!captainAuthorized(userInfo, actorHole, existV, incV)) {
+      // Captain attempting to modify a record outside their assigned hole.
+      // Silently keep the existing version; log the attempt for the audit trail.
+      const reason = String(existV.hole) !== String(incV.hole)
+        ? `Hole reassignment attempt ${existV.hole}→${incV.hole} (admin-only)`
+        : `Captain hole ${actorHole} attempted to modify hole ${existV.hole} volunteer`;
+      const rejected = buildRejectedBulkEntry(existV, userInfo, actorHole, reason);
+      if (rejected) bulkActivityEntries.push(rejected);
+      merged.push(existV);
     } else {
+      if (userInfo) {
+        const targetForEntry = Object.assign({}, existV, incV);
+        const entry = buildBulkActivityEntry(changes, targetForEntry, userInfo, false, actorHole);
+        if (entry) bulkActivityEntries.push(entry);
+      }
       merged.push(Object.assign({}, incV, { lastModified: now }));
     }
   }
@@ -170,18 +328,32 @@ function mergeVolunteerSave(existing, incoming, deletedIds, dataReadAt) {
       if (tombAt > dataReadAt) continue;  // deleted after client's read — don't resurrect
       tombMap.delete(id);  // older tombstone; client may be intentionally re-adding
     }
+    // ADD case: captain may only add volunteers within their own hole.
+    if (!captainAuthorized(userInfo, actorHole, null, incV)) {
+      const reason = `Captain hole ${actorHole} attempted to add volunteer in hole ${incV.hole}`;
+      const rejected = buildRejectedBulkEntry(incV, userInfo, actorHole, reason);
+      if (rejected) bulkActivityEntries.push(rejected);
+      continue;  // do not add the volunteer
+    }
+    if (userInfo) {
+      const entry = buildBulkActivityEntry([], incV, userInfo, true, actorHole);
+      if (entry) bulkActivityEntries.push(entry);
+    }
     merged.push(Object.assign({}, incV, { lastModified: now }));
   }
 
   const finalTombstones = Array.from(tombMap.entries()).map(([id, deletedAt]) => ({ id, deletedAt }));
 
-  // ActivityLog: merge by id, sort desc by timestamp, trim to 500.
+  // ActivityLog: merge by id, sort desc by timestamp, retain full history.
+  // Server-generated bulk-save diff entries are included here so silent
+  // overrides ("captain's tab mutated record without their knowledge") are
+  // visible in the activity log and trigger the per-event push.
   const logById = new Map();
   for (const e of (existing.activityLog || [])) if (e && e.id) logById.set(String(e.id), e);
   for (const e of (incoming.activityLog || [])) if (e && e.id && !logById.has(String(e.id))) logById.set(String(e.id), e);
+  for (const e of bulkActivityEntries) if (e && e.id && !logById.has(String(e.id))) logById.set(String(e.id), e);
   const mergedLog = Array.from(logById.values())
-    .sort((a, b) => String(b.timestamp || '').localeCompare(String(a.timestamp || '')))
-    .slice(0, 500);
+    .sort((a, b) => String(b.timestamp || '').localeCompare(String(a.timestamp || '')));
 
   // Merge settings per-key rather than letting an empty/partial incoming.settings
   // wipe disk state. A client posting {} would otherwise blow away tournamentName,
@@ -1005,14 +1177,14 @@ app.post('/api/data', dataLimiter, requireAuth(['admin', 'chair', 'asstChair', '
   // records (their record-level lastModified comparisons will mostly pass
   // because so much time has passed since their last read). Force them to
   // reload and re-establish a fresh baseline.
-  const STALE_READ_MAX_AGE_MS = 30 * 60 * 1000;  // 30 minutes
+  const STALE_READ_MAX_AGE_MS = 10 * 60 * 1000;  // 10 minutes (tightened from 30 on 2026-05-15 ahead of tournament)
   const readAge = Date.now() - dataReadAt;
   if (dataReadAt > 0 && readAge > STALE_READ_MAX_AGE_MS) {
     console.warn('[' + new Date().toISOString() + '] REJECTED /api/data: stale dataReadAt age=' + Math.round(readAge / 60000) + 'min  ip=' + clientIp);
     return res.status(409).json({
       success: false,
       code: 'STALE_READ',
-      error: 'Your data is more than 30 minutes old. Please reload the page to get the latest data, then re-enter your changes.'
+      error: 'Your data is more than 10 minutes old. Please reload the page to get the latest data, then re-enter your changes.'
     });
   }
 
@@ -1067,9 +1239,18 @@ app.post('/api/data', dataLimiter, requireAuth(['admin', 'chair', 'asstChair', '
       for (const f of VOLUNTEER_SECRET_FIELDS) delete v[f];
     }
 
+    const userInfo = {
+      name: req.user.name || 'Unknown',
+      userType: req.user.role === 'admin' ? 'Admin'
+              : req.user.role === 'captain' ? 'Captain'
+              : req.user.role === 'chair' ? 'Chair'
+              : req.user.role === 'asstChair' ? 'AsstChair'
+              : (req.user.role || 'Unknown'),
+    };
+
     let finalData;
     if (isNewMode) {
-      finalData = mergeVolunteerSave(existing, data, deletedIds, dataReadAt);
+      finalData = mergeVolunteerSave(existing, data, deletedIds, dataReadAt, userInfo);
     } else {
       finalData = applyTombstonesToLegacyData(existing, data);
     }
@@ -1281,7 +1462,6 @@ app.patch('/api/volunteer/:id', dataLimiter, requireAuth(['admin', 'chair', 'ass
       target: updated.name || '',
       details
     });
-    if (data.activityLog.length > 500) data.activityLog = data.activityLog.slice(0, 500);
 
     console.log('[' + new Date().toISOString() + '] PATCH /api/volunteer/' + id + '  fields=' + changedFields.join(',') + '  user=' + (req.user.name || '?') + '  ip=' + clientIp);
 
@@ -1512,11 +1692,6 @@ app.post('/api/log-deployment', (req, res) => {
 
     data.activityLog.unshift(entry);
 
-    // Keep last 500 entries (increased from 200 for better history)
-    if (data.activityLog.length > 500) {
-      data.activityLog = data.activityLog.slice(0, 500);
-    }
-
     if (saveData(data, false)) {
       console.log('[' + new Date().toISOString() + '] DEPLOYMENT LOGGED: ' + message + '  ip=' + clientIp);
       broadcastUpdate(false, 'fullUpdate', data);
@@ -1572,7 +1747,6 @@ server.listen(PORT, () => {
         target: sha,
         details: subject
       });
-      if (data.activityLog.length > 500) data.activityLog = data.activityLog.slice(0, 500);
       saveData(data, false);
     });
   } catch (err) {

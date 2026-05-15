@@ -1565,12 +1565,6 @@
       if (!appData.activityLog) appData.activityLog = [];
       appData.activityLog.unshift(entry);
 
-      // Keep last 500 entries to prevent unbounded growth (was 200; bumped
-      // 2026-05-14 because schedule-edit logging filled the cap quickly).
-      if (appData.activityLog.length > 500) {
-        appData.activityLog = appData.activityLog.slice(0, 500);
-      }
-
       saveData();
     }
 
@@ -4992,9 +4986,7 @@
         });
       }
 
-      // Limit display to 200 entries
-      const displayLogs = filteredLogs.slice(0, 200);
-      const hasMore = filteredLogs.length > 200;
+      const displayLogs = filteredLogs;
 
       const actionLabels = {
         'login': 'Login',
@@ -5101,7 +5093,6 @@
         '</div>' +
         '<p style="color:#666;font-size:13px;margin-bottom:15px">' +
         'Showing ' + displayLogs.length + ' of ' + filteredLogs.length + ' entries' +
-        (hasMore ? ' <span style="color:#dc3545">(limited to 200)</span>' : '') +
         (logs.length > 0 ? ' &bull; Total: ' + logs.length + ' entries' : '') +
         '</p>' +
         emptyState + tableContent +
