@@ -4430,6 +4430,7 @@
         "Tuesday AM": true,
         "Wednesday AM": true,
         "Thursday AM": true,
+        "Thursday PM": true,
         "Friday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
@@ -4441,7 +4442,7 @@
       "address": "6428 Maple Drive The Colony, TX 75056",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1778855733556
     },
     {
       "id": "9999",
@@ -9019,6 +9020,24 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1778855770904",
+      "timestamp": "2026-05-15T14:36:10.904Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1778855733556",
+      "timestamp": "2026-05-15T14:35:33.556Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Kutzler, Jack",
+      "details": "added Thursday PM"
+    },
     {
       "id": "1778855671107",
       "timestamp": "2026-05-15T14:34:31.107Z",
