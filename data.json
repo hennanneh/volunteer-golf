@@ -192,6 +192,7 @@
       "hat": "",
       "scheduled": {
         "Tuesday AM": true,
+        "Thursday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
         "Saturday PM": true,
@@ -201,7 +202,7 @@
       "address": "8517 Marys Creek Dr Benbrook, TX 76116",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1778855512088
     },
     {
       "id": "5401",
@@ -2058,16 +2059,16 @@
       "scheduled": {
         "Monday PM": true,
         "Wednesday PM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true
+        "Thursday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
+        "Sunday PM": true
       },
       "volId": "8306",
       "address": "7230 W Peden Rd Azle, TX 76020",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1778855671107
     },
     {
       "id": "6731",
@@ -3265,7 +3266,7 @@
       "id": "4639",
       "name": "Hill, Michael",
       "type": "Admin",
-      "hole": 11,
+      "hole": 99,
       "phone": "(817) 689-4697",
       "email": "mike@hulenbend.net",
       "yearsWorked": 14,
@@ -3290,9 +3291,16 @@
       "volId": "4639",
       "hasAdminPassword": true,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771,
+      "lastModified": 1778855578134,
       "adminPassword": "$2b$10$h0CPonAkFNTz00hqbELOr.zvbfmQqWVYZkDenYxH1YQvjj64aEp8S",
-      "adminPasswordSetAt": "2026-04-20T20:13:12.730Z"
+      "adminPasswordSetAt": "2026-04-20T20:13:12.730Z",
+      "notes": "",
+      "hatReceived": false,
+      "assignedHoles": [
+        99,
+        11
+      ],
+      "originalHole": 11
     },
     {
       "id": "6903",
@@ -3702,6 +3710,7 @@
       "hat": "",
       "scheduled": {
         "Tuesday AM": true,
+        "Thursday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
         "Saturday PM": true,
@@ -3711,7 +3720,7 @@
       "address": "6032 Carmona Trl Fort Worth, TX 76123",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1778855524974
     },
     {
       "id": "2657",
@@ -9010,6 +9019,60 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1778855671107",
+      "timestamp": "2026-05-15T14:34:31.107Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Ellis, Tom",
+      "details": "added Thursday AM, Friday PM, Saturday AM, Sunday PM; removed Thursday PM, Friday AM, Saturday PM, Sunday AM"
+    },
+    {
+      "id": "1778855578134",
+      "timestamp": "2026-05-15T14:32:58.134Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Hill, Michael",
+      "details": "Updated fields: hole, notes, hatReceived, assignedHoles, originalHole"
+    },
+    {
+      "id": "1778855524974",
+      "timestamp": "2026-05-15T14:32:04.974Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Jacobs, Rick",
+      "details": "added Thursday AM"
+    },
+    {
+      "id": "1778855512088",
+      "timestamp": "2026-05-15T14:31:52.088Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Austin, Vance",
+      "details": "added Thursday AM"
+    },
+    {
+      "id": "1778855508732",
+      "timestamp": "2026-05-15T14:31:48.732Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1778855497583",
+      "timestamp": "2026-05-15T14:31:37.583Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1778853744935",
       "timestamp": "2026-05-15T14:02:24.935Z",
