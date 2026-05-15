@@ -7191,18 +7191,29 @@
           // record into appData without touching anything else. Safe to apply
           // even when the user is mid-edit, because it only mutates one record.
           var vu = event.data && event.data.volunteer;
+          var accepted = false;
           if (vu && vu.id != null) {
             var vIdx = appData.volunteers.findIndex(function(v) { return String(v.id) === String(vu.id); });
             if (vIdx !== -1) {
               // Don't overwrite a record the user is actively editing.
               var beingEdited = (typeof editingVolunteer !== 'undefined' && editingVolunteer && String(editingVolunteer.id) === String(vu.id))
                 || (typeof captainEditingVolunteer !== 'undefined' && captainEditingVolunteer && String(captainEditingVolunteer.id) === String(vu.id));
-              if (!beingEdited) appData.volunteers[vIdx] = vu;
+              if (!beingEdited) {
+                appData.volunteers[vIdx] = vu;
+                accepted = true;
+              }
             } else {
               appData.volunteers.push(vu);
+              accepted = true;
             }
           }
-          if (event.data && typeof event.data.serverNow === 'number') {
+          // Only advance dataReadAt when we actually applied the broadcast.
+          // If we skipped because the user is mid-edit on this record, the
+          // server's lastModified for that record is now newer than what's in
+          // our local appData; advancing dataReadAt past serverNow would let
+          // the next bulk save silently overwrite it (the staleness check in
+          // mergeVolunteerSave would pass when it shouldn't).
+          if (accepted && event.data && typeof event.data.serverNow === 'number') {
             dataReadAt = event.data.serverNow;
           }
           if (!skipRender()) render();
