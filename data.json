@@ -9028,6 +9028,15 @@
   },
   "activityLog": [
     {
+      "id": "1778886727088",
+      "timestamp": "2026-05-15T23:12:07.088Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1778881296327",
       "timestamp": "2026-05-15T21:41:36.327Z",
       "user": "Holt, Sharron",
