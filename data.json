@@ -6989,7 +6989,8 @@
       "address": "6 Toscany Court Mansfield, TX 76063",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1778813044771,
+      "volunteerPassword": "$2b$10$E3E5xpYiEY8nReXZKPqJ/eIoPKcGFcQ6kfNPWewg7FxWUBI3RYugq"
     },
     {
       "id": "5240",
@@ -9021,6 +9022,33 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1778874162525",
+      "timestamp": "2026-05-15T19:42:42.526Z",
+      "user": "Rodrigues, Donald",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1778874112167",
+      "timestamp": "2026-05-15T19:41:52.167Z",
+      "user": "Rodrigues, Donald",
+      "userType": "Volunteer",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed volunteer password"
+    },
+    {
+      "id": "1778874083598",
+      "timestamp": "2026-05-15T19:41:23.598Z",
+      "user": "Rodrigues, Donald",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
     {
       "id": "1778868987695",
       "timestamp": "2026-05-15T18:16:27.695Z",
