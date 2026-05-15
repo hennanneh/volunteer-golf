@@ -5262,6 +5262,7 @@
       "yearsWorked": 2,
       "hat": "",
       "scheduled": {
+        "Monday PM": true,
         "Wednesday PM": true,
         "Thursday AM": true,
         "Friday PM": true,
@@ -5272,7 +5273,7 @@
       "volId": "5015",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1778813462284
     },
     {
       "id": "8545",
@@ -6751,7 +6752,7 @@
       "yearsWorked": 18,
       "hat": "",
       "scheduled": {
-        "Tuesday PM": true,
+        "Monday PM": true,
         "Thursday PM": true,
         "Friday AM": true,
         "Saturday PM": true,
@@ -6761,7 +6762,7 @@
       "address": "1800 Woodview Dr Alvarado, TX 76009",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1778813564880
     },
     {
       "id": "10664",
@@ -6803,6 +6804,7 @@
         "Wednesday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
+        "Friday PM": true,
         "Saturday PM": true,
         "Sunday AM": true
       },
@@ -6810,7 +6812,7 @@
       "address": "1909 Chiford Lane Ft Worth, TX 76131",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1778813629618
     },
     {
       "id": "8644",
@@ -9004,6 +9006,33 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1778813629619",
+      "timestamp": "2026-05-15T02:53:49.619Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Richards, Stephen",
+      "details": "added Friday PM"
+    },
+    {
+      "id": "1778813564880",
+      "timestamp": "2026-05-15T02:52:44.880Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Reinfelds, David",
+      "details": "added Monday PM; removed Tuesday PM"
+    },
+    {
+      "id": "1778813462284",
+      "timestamp": "2026-05-15T02:51:02.284Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Meinke, Albert",
+      "details": "added Monday PM"
+    },
     {
       "id": "1778813380834",
       "timestamp": "2026-05-15T02:49:40.834Z",
