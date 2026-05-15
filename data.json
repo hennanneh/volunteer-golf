@@ -4215,7 +4215,8 @@
       "address": "6514 O'Malley Ct Garland, TX 75044",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1778813044771,
+      "volunteerPassword": "$2b$10$FwscWfDEUiwSMhzJBg5TX.sI1Qvo8Bn0ox5GsajOaWGwHCfEADl0W"
     },
     {
       "id": "2884",
@@ -7391,7 +7392,8 @@
       "address": "1201 Hudson Dr. Mansfield, TX 76063",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1778813044771,
+      "volunteerPassword": "$2b$10$ZZT0EXSNd1QAwNopo2HgcucQk89iufy1mAxDQw1/1lwYiCTmoDzq2"
     },
     {
       "id": "10550",
