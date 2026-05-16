@@ -9038,6 +9038,15 @@
   },
   "activityLog": [
     {
+      "id": "1778945005142",
+      "timestamp": "2026-05-16T15:23:25.142Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
       "id": "1778944793155",
       "timestamp": "2026-05-16T15:19:53.155Z",
       "user": "Trout, Wayne",
