@@ -9028,6 +9028,24 @@
   },
   "activityLog": [
     {
+      "id": "1778937802270",
+      "timestamp": "2026-05-16T13:23:22.270Z",
+      "user": "King, Jeff",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1778937239015",
+      "timestamp": "2026-05-16T13:13:59.015Z",
+      "user": "King, Jeff",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
       "id": "1778902397440",
       "timestamp": "2026-05-16T03:33:17.440Z",
       "user": "Volkening, David",
