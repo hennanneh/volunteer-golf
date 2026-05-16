@@ -9038,6 +9038,24 @@
   },
   "activityLog": [
     {
+      "id": "1778954788450",
+      "timestamp": "2026-05-16T18:06:28.450Z",
+      "user": "Volkening, David",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1778954767920",
+      "timestamp": "2026-05-16T18:06:07.920Z",
+      "user": "Volkening, David",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
       "id": "1778953233795",
       "timestamp": "2026-05-16T17:40:33.795Z",
       "user": "Holt, Sharron",
