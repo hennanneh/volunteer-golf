@@ -9028,6 +9028,15 @@
   },
   "activityLog": [
     {
+      "id": "1778898648054",
+      "timestamp": "2026-05-16T02:30:48.054Z",
+      "user": "Johnson, Kenny",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
       "id": "1778891764711",
       "timestamp": "2026-05-16T00:36:04.711Z",
       "user": "Wilson, Todd",
