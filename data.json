@@ -7145,10 +7145,9 @@
       "yearsWorked": 6,
       "hat": "",
       "scheduled": {
-        "Monday AM": true,
-        "Monday PM": true,
         "Tuesday AM": true,
         "Tuesday PM": true,
+        "Wednesday AM": true,
         "Wednesday PM": true,
         "Thursday PM": true,
         "Friday AM": true,
@@ -7159,7 +7158,7 @@
       "address": "500 Throckmorton Street 1407 Fort Worth, TX 76102",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1778942841962
     },
     {
       "id": "243",
@@ -9038,6 +9037,15 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1778942841962",
+      "timestamp": "2026-05-16T14:47:21.962Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Russell, Mary",
+      "details": "added Wednesday AM; removed Monday AM, Monday PM"
+    },
     {
       "id": "1778942639659",
       "timestamp": "2026-05-16T14:43:59.659Z",
