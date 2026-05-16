@@ -8419,16 +8419,16 @@
       "scheduled": {
         "Monday PM": true,
         "Wednesday AM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true
+        "Thursday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
+        "Sunday PM": true
       },
       "volId": "8609",
       "address": "3301 Cliff View Ct WEATHERFORD, TX 76087",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1778942356398
     },
     {
       "id": "9787",
@@ -9027,6 +9027,15 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1778942356398",
+      "timestamp": "2026-05-16T14:39:16.398Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Ward, Donald",
+      "details": "added Thursday AM, Friday PM, Saturday AM, Sunday PM; removed Thursday PM, Friday AM, Saturday PM, Sunday AM"
+    },
     {
       "id": "1778938036051",
       "timestamp": "2026-05-16T13:27:16.051Z",
