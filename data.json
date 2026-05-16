@@ -2538,16 +2538,16 @@
       "scheduled": {
         "Monday PM": true,
         "Tuesday AM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true
+        "Thursday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
+        "Sunday PM": true
       },
       "volId": "4128",
       "address": "4910 Westbriar Dr. Fort Worth, TX 76109",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1778942527535
     },
     {
       "id": "2540",
@@ -6404,16 +6404,16 @@
       "hat": "",
       "scheduled": {
         "Monday AM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true
+        "Thursday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
+        "Sunday PM": true
       },
       "volId": "8448",
       "address": "805 Whitetail Deer Ct Crowley, TX 76036",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1778942606837
     },
     {
       "id": "4667",
@@ -6426,16 +6426,16 @@
       "hat": "",
       "scheduled": {
         "Monday AM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true
+        "Thursday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
+        "Sunday PM": true
       },
       "volId": "4667",
       "address": "1702 Meadow Crest Ln Mansfield, TX 76063",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1778942639659
     },
     {
       "id": "6398",
@@ -9012,7 +9012,18 @@
       "hasVolunteerPassword": false
     }
   ],
-  "checkIns": [],
+  "checkIns": [
+    {
+      "volunteerId": "7232",
+      "volunteerName": "Russell, Daniel",
+      "hole": 1,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Johnson, Kenny",
+      "timestamp": "2026-05-16T14:43:32.427Z",
+      "isAlternate": true
+    }
+  ],
   "submissions": [],
   "settings": {
     "tournamentName": "Golf Tournament 2026",
@@ -9027,6 +9038,42 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1778942639659",
+      "timestamp": "2026-05-16T14:43:59.659Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Prentice, Roy",
+      "details": "added Thursday AM, Friday PM, Saturday AM, Sunday PM; removed Thursday PM, Friday AM, Saturday PM, Sunday AM"
+    },
+    {
+      "id": "1778942612465",
+      "timestamp": "2026-05-16T14:43:32.466Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Russell, Daniel",
+      "details": "Thursday AM - Hole #1 (alternate)"
+    },
+    {
+      "id": "1778942606837",
+      "timestamp": "2026-05-16T14:43:26.837Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Prater, David",
+      "details": "added Thursday AM, Friday PM, Saturday AM, Sunday PM; removed Thursday PM, Friday AM, Saturday PM, Sunday AM"
+    },
+    {
+      "id": "1778942527535",
+      "timestamp": "2026-05-16T14:42:07.535Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Gilley, Roger",
+      "details": "added Thursday AM, Friday PM, Saturday AM, Sunday PM; removed Thursday PM, Friday AM, Saturday PM, Sunday AM"
+    },
     {
       "id": "1778942356398",
       "timestamp": "2026-05-16T14:39:16.398Z",
