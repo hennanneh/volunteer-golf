@@ -9028,6 +9028,15 @@
   },
   "activityLog": [
     {
+      "id": "1778902397440",
+      "timestamp": "2026-05-16T03:33:17.440Z",
+      "user": "Volkening, David",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
       "id": "1778901915177",
       "timestamp": "2026-05-16T03:25:15.177Z",
       "user": "Volkening, David",
