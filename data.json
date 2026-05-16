@@ -9028,6 +9028,15 @@
   },
   "activityLog": [
     {
+      "id": "1778938036051",
+      "timestamp": "2026-05-16T13:27:16.051Z",
+      "user": "Bishop, Woody",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1778937802270",
       "timestamp": "2026-05-16T13:23:22.270Z",
       "user": "King, Jeff",
