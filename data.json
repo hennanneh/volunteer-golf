@@ -7243,7 +7243,12 @@
       "volId": "7191",
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
-      "lastModified": 1778813044771,
+      "lastModified": 1779020378439,
+      "pairingPreferences": [
+        "7207",
+        "9018"
+      ],
+      "notAttendingOuting": false,
       "volunteerPassword": "$2b$10$EY2fhEwzBHTYBoAaeGP1Qu7SuzkrWcABgr8L2..VBCTGyjopFVEDu"
     },
     {
@@ -9038,6 +9043,59 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779020378461-k25e3y",
+      "timestamp": "2026-05-17T12:19:38.461Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "edit-volunteer",
+      "target": "Sanders, Steve",
+      "details": "Updated fields: notAttendingOuting (via bulk save)",
+      "targetHole": 14,
+      "actorHole": 14
+    },
+    {
+      "id": "1779020367090-24kjkk",
+      "timestamp": "2026-05-17T12:19:27.090Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "edit-volunteer",
+      "target": "Sanders, Steve",
+      "details": "Updated fields: notAttendingOuting (via bulk save)",
+      "targetHole": 14,
+      "actorHole": 14
+    },
+    {
+      "id": "1779020330088-dn9yz4",
+      "timestamp": "2026-05-17T12:18:50.088Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "edit-volunteer",
+      "target": "Sanders, Steve",
+      "details": "Updated fields: pairingPreferences (via bulk save)",
+      "targetHole": 14,
+      "actorHole": 14
+    },
+    {
+      "id": "1779020306649-mnpqqw",
+      "timestamp": "2026-05-17T12:18:26.650Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "edit-volunteer",
+      "target": "Sanders, Steve",
+      "details": "Updated fields: pairingPreferences (via bulk save)",
+      "targetHole": 14,
+      "actorHole": 14
+    },
+    {
+      "id": "1779020190158",
+      "timestamp": "2026-05-17T12:16:30.158Z",
+      "user": "Sanders, Steve",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
     {
       "id": "1778962262356",
       "timestamp": "2026-05-16T20:11:02.357Z",
