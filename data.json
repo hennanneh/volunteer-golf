@@ -5931,16 +5931,16 @@
       "hat": "",
       "scheduled": {
         "Wednesday AM": true,
-        "Thursday AM": true,
-        "Friday PM": true,
-        "Saturday AM": true,
-        "Sunday PM": true
+        "Thursday PM": true,
+        "Friday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true
       },
       "volId": "9663",
       "address": "4902 Melrose Park Dr Colleyville, TX 76034",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779041374557
+      "lastModified": 1779041835151
     },
     {
       "id": "10260",
@@ -9056,6 +9056,15 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779041835151",
+      "timestamp": "2026-05-17T18:17:15.151Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Neunaber, Dean",
+      "details": "added Thursday PM, Friday AM, Saturday PM, Sunday AM; removed Thursday AM, Friday PM, Saturday AM, Sunday PM"
+    },
     {
       "id": "1779041397580",
       "timestamp": "2026-05-17T18:09:57.580Z",
