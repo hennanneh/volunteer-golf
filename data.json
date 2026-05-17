@@ -5015,16 +5015,16 @@
       "hat": "",
       "scheduled": {
         "Wednesday AM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true
+        "Thursday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
+        "Sunday PM": true
       },
       "volId": "9510",
       "address": "413 Templeton Drive Fort Worth, TX 76107",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779040943716
     },
     {
       "id": "5168",
@@ -9056,6 +9056,33 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779041093744",
+      "timestamp": "2026-05-17T18:04:53.744Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Trias, Dan",
+      "details": "Sunday PM - Hole #9"
+    },
+    {
+      "id": "1779041092760",
+      "timestamp": "2026-05-17T18:04:52.760Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Trias, Dan",
+      "details": "Sunday PM - Hole #9"
+    },
+    {
+      "id": "1779040943716",
+      "timestamp": "2026-05-17T18:02:23.716Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Mason, Larry",
+      "details": "added Thursday AM, Friday PM, Saturday AM, Sunday PM; removed Thursday PM, Friday AM, Saturday PM, Sunday AM"
+    },
     {
       "id": "1779035912735",
       "timestamp": "2026-05-17T16:38:32.735Z",
