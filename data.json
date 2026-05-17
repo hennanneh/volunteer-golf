@@ -4741,16 +4741,16 @@
       "hat": "",
       "scheduled": {
         "Wednesday PM": true,
-        "Thursday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
+        "Saturday PM": true,
         "Sunday PM": true
       },
       "volId": "2919",
       "address": "88 Lilly Ln Waxahachie, TX 75165",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779041293886
     },
     {
       "id": "8543",
@@ -5931,16 +5931,16 @@
       "hat": "",
       "scheduled": {
         "Wednesday AM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true
+        "Thursday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
+        "Sunday PM": true
       },
       "volId": "9663",
       "address": "4902 Melrose Park Dr Colleyville, TX 76034",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779041374557
     },
     {
       "id": "10260",
@@ -7627,16 +7627,16 @@
       "hat": "",
       "scheduled": {
         "Wednesday AM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true
+        "Thursday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
+        "Sunday PM": true
       },
       "volId": "8463",
       "address": "327 Jack Nicklaus Drive Austin, TX 78738",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779041397580
     },
     {
       "id": "10610",
@@ -9056,6 +9056,33 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779041397580",
+      "timestamp": "2026-05-17T18:09:57.580Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Simmons, Vance",
+      "details": "added Thursday AM, Friday PM, Saturday AM, Sunday PM; removed Thursday PM, Friday AM, Saturday PM, Sunday AM"
+    },
+    {
+      "id": "1779041374557",
+      "timestamp": "2026-05-17T18:09:34.557Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Neunaber, Dean",
+      "details": "added Thursday AM, Friday PM, Saturday AM, Sunday PM; removed Thursday PM, Friday AM, Saturday PM, Sunday AM"
+    },
+    {
+      "id": "1779041293886",
+      "timestamp": "2026-05-17T18:08:13.886Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Loveland, Edward",
+      "details": "added Saturday PM; removed Thursday AM"
+    },
     {
       "id": "1779041093744",
       "timestamp": "2026-05-17T18:04:53.744Z",
