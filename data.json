@@ -9059,6 +9059,15 @@
   },
   "activityLog": [
     {
+      "id": "1779052217009",
+      "timestamp": "2026-05-17T21:10:17.009Z",
+      "user": "Gillitzer, Dean",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
       "id": "1779051486028",
       "timestamp": "2026-05-17T20:58:06.028Z",
       "user": "Butler, Mark",
