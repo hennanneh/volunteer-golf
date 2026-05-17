@@ -9044,6 +9044,24 @@
   },
   "activityLog": [
     {
+      "id": "1779028446097",
+      "timestamp": "2026-05-17T14:34:06.097Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779028214020",
+      "timestamp": "2026-05-17T14:30:14.020Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
       "id": "1779028162910",
       "timestamp": "2026-05-17T14:29:22.910Z",
       "user": "Watson, Stan",
