@@ -7674,13 +7674,15 @@
         "Thursday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true,
         "Sunday PM": true
       },
       "volId": "9109",
       "address": "4650 Cougar Ridge Rd Fort Worth, TX 76126",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779044644752
     },
     {
       "id": "8711",
@@ -9056,6 +9058,15 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779044644752",
+      "timestamp": "2026-05-17T19:04:04.752Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Sippel, Mark",
+      "details": "added Saturday PM, Sunday AM"
+    },
     {
       "id": "1779042068964",
       "timestamp": "2026-05-17T18:21:08.964Z",
