@@ -9044,6 +9044,24 @@
   },
   "activityLog": [
     {
+      "id": "1779025860859",
+      "timestamp": "2026-05-17T13:51:00.859Z",
+      "user": "Sale, Lynn",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1779025839749",
+      "timestamp": "2026-05-17T13:50:39.749Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
       "id": "1779025637772",
       "timestamp": "2026-05-17T13:47:17.775Z",
       "user": "Sale, Lynn",
