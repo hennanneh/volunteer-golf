@@ -8147,16 +8147,16 @@
       "hat": "",
       "scheduled": {
         "Wednesday PM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true
+        "Thursday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
+        "Sunday PM": true
       },
       "address": "3005 Oaklawn Ct\r\nArlington, TX 76001",
       "volId": "1518",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779035912734
     },
     {
       "id": "4536",
@@ -9046,6 +9046,15 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779035912735",
+      "timestamp": "2026-05-17T16:38:32.735Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Trias, Dan",
+      "details": "added Thursday AM, Friday PM, Saturday AM, Sunday PM; removed Thursday PM, Friday AM, Saturday PM, Sunday AM"
+    },
     {
       "id": "1779031864604",
       "timestamp": "2026-05-17T15:31:04.604Z",
