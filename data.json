@@ -9047,6 +9047,15 @@
   },
   "activityLog": [
     {
+      "id": "1779031864604",
+      "timestamp": "2026-05-17T15:31:04.604Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1779031752105",
       "timestamp": "2026-05-17T15:29:12.105Z",
       "user": "Edwards, Bill",
