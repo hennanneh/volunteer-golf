@@ -9059,6 +9059,24 @@
   },
   "activityLog": [
     {
+      "id": "1779060955696",
+      "timestamp": "2026-05-17T23:35:55.696Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Elliott, David",
+      "details": "Sunday PM - Hole #9"
+    },
+    {
+      "id": "1779060953304",
+      "timestamp": "2026-05-17T23:35:53.304Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Elliott, David",
+      "details": "Sunday PM - Hole #9"
+    },
+    {
       "id": "1779060755217",
       "timestamp": "2026-05-17T23:32:35.217Z",
       "user": "Edwards, Bill",
