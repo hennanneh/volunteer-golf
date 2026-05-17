@@ -7583,16 +7583,16 @@
       "hat": "",
       "scheduled": {
         "Wednesday AM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true
+        "Thursday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
+        "Sunday PM": true
       },
       "volId": "8462",
       "address": "327 Jack Nicklaus Dr Austin, TX 78738",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779042068964
     },
     {
       "id": "10619",
@@ -9056,6 +9056,15 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779042068964",
+      "timestamp": "2026-05-17T18:21:08.964Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Simmons, Kim",
+      "details": "added Thursday AM, Friday PM, Saturday AM, Sunday PM; removed Thursday PM, Friday AM, Saturday PM, Sunday AM"
+    },
     {
       "id": "1779041835151",
       "timestamp": "2026-05-17T18:17:15.151Z",
