@@ -1172,6 +1172,8 @@
       "scheduled": {
         "Wednesday PM": true,
         "Thursday AM": true,
+        "Thursday PM": true,
+        "Friday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
         "Sunday PM": true
@@ -1180,7 +1182,7 @@
       "address": "216 Aledo Creeks Rd Fort Worth, TX 76126",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779031752105
     },
     {
       "id": "9134",
@@ -4510,6 +4512,7 @@
       "hat": "",
       "scheduled": {
         "Tuesday AM": true,
+        "Tuesday PM": true,
         "Wednesday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
@@ -4520,7 +4523,7 @@
       "address": "5717 Millers Creek Argyle, TX 76226",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779031653891
     },
     {
       "id": "8184",
@@ -9043,6 +9046,24 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779031752105",
+      "timestamp": "2026-05-17T15:29:12.105Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Clark, David",
+      "details": "added Thursday PM, Friday AM"
+    },
+    {
+      "id": "1779031653891",
+      "timestamp": "2026-05-17T15:27:33.892Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Land, Angela",
+      "details": "added Tuesday PM"
+    },
     {
       "id": "1779029857716",
       "timestamp": "2026-05-17T14:57:37.716Z",
