@@ -9059,6 +9059,15 @@
   },
   "activityLog": [
     {
+      "id": "1779060755217",
+      "timestamp": "2026-05-17T23:32:35.217Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Cole, Jefery",
+      "details": "Sunday PM - Hole #9"
+    },
+    {
       "id": "1779055184795",
       "timestamp": "2026-05-17T21:59:44.796Z",
       "user": "Nederostek, Brad",
