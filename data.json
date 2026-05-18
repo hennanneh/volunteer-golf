@@ -2691,12 +2691,9 @@
       "yearsWorked": 12,
       "hat": "",
       "scheduled": {
-        "Monday AM": true,
-        "Monday PM": true,
         "Tuesday AM": true,
         "Tuesday PM": true,
         "Wednesday AM": true,
-        "Wednesday PM": true,
         "Thursday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
@@ -2710,7 +2707,7 @@
       "volId": "5391",
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
-      "lastModified": 1778813044771,
+      "lastModified": 1779141383098,
       "volunteerPassword": "$2b$10$ut0YyFQqHWwpj1uQQg4TMehkc3bUN78WS4tWq2Fil3Vg5WE/pnACy"
     },
     {
@@ -9069,6 +9066,33 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779141542261",
+      "timestamp": "2026-05-18T21:59:02.261Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779141383098-lacsl0",
+      "timestamp": "2026-05-18T21:56:23.098Z",
+      "user": "Wehmeyer, Tom",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Gradt, Jason",
+      "details": "removed Monday AM, Monday PM, Wednesday PM"
+    },
+    {
+      "id": "1779141344928",
+      "timestamp": "2026-05-18T21:55:44.928Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779140885109",
       "timestamp": "2026-05-18T21:48:05.110Z",
