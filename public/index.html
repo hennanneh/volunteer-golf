@@ -6401,8 +6401,11 @@
         patch.notes = newNotes;
       }
 
-      if (Object.keys(patch).length === 0) {
-        // Nothing changed — close quietly.
+      const sendEmail = document.getElementById('sendScheduleEmail');
+      const wantsEmail = !!(sendEmail && sendEmail.checked);
+
+      if (Object.keys(patch).length === 0 && !wantsEmail) {
+        // Nothing changed and no email requested — close quietly.
         captainEditingVolunteer = null;
         render();
         return;
@@ -6410,27 +6413,32 @@
 
       // Atomic PATCH so concurrent captains editing different volunteers can't
       // clobber each other. Server handles lastModified and activity log.
-      const patchResult = await apiUpdateVolunteer(original.id, patch);
-      if (!patchResult.success) {
-        if (patchResult.code !== 'STALE_CLIENT' && patchResult.code !== 'STALE_READ' && patchResult.code !== 'STALE_RECORD') {
-          showToast('Could not save: ' + (patchResult.error || 'unknown error'));
+      // Skip the PATCH entirely when nothing changed — captain just wants to
+      // re-send the existing schedule by email.
+      if (Object.keys(patch).length > 0) {
+        const patchResult = await apiUpdateVolunteer(original.id, patch);
+        if (!patchResult.success) {
+          if (patchResult.code !== 'STALE_CLIENT' && patchResult.code !== 'STALE_READ' && patchResult.code !== 'STALE_RECORD') {
+            showToast('Could not save: ' + (patchResult.error || 'unknown error'));
+          }
+          return;
         }
-        return;
       }
 
-      // Check if we should send email (only if schedule actually changed)
-      const sendEmail = document.getElementById('sendScheduleEmail');
-      if (sendEmail && sendEmail.checked && patch.scheduled) {
+      // Send the schedule email if requested, regardless of whether the
+      // schedule changed — captains often re-send to confirm an existing
+      // schedule, or update notes alongside an email.
+      if (wantsEmail) {
         const vol = appData.volunteers[idx];
         if (vol.email) {
           try {
             await sendScheduleEmail(vol, newSchedule);
-            showToast('Saved; email sent to ' + vol.email);
+            showToast(Object.keys(patch).length ? 'Saved; email sent to ' + vol.email : 'Email sent to ' + vol.email);
           } catch (err) {
-            showToast('Saved, but email failed: ' + err.message);
+            showToast((Object.keys(patch).length ? 'Saved, but ' : '') + 'email failed: ' + err.message);
           }
         } else {
-          showToast('Saved (no email on file)');
+          showToast(Object.keys(patch).length ? 'Saved (no email on file)' : 'No email on file');
         }
       } else {
         showToast('Saved');
