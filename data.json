@@ -9068,6 +9068,33 @@
   },
   "activityLog": [
     {
+      "id": "1779128002901",
+      "timestamp": "2026-05-18T18:13:22.901Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Endicott, Eric",
+      "details": "Monday AM - Hole #14"
+    },
+    {
+      "id": "1779127999832",
+      "timestamp": "2026-05-18T18:13:19.832Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Endicott, Eric",
+      "details": "Monday AM - Hole #14"
+    },
+    {
+      "id": "1779127993748",
+      "timestamp": "2026-05-18T18:13:13.748Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1779122563788",
       "timestamp": "2026-05-18T16:42:43.788Z",
       "user": "Ruddell, Dick",
