@@ -9051,6 +9051,16 @@
       "checkedInBy": "Sale, Lynn",
       "timestamp": "2026-05-18T14:51:33.452Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "9015",
+      "volunteerName": "Aguilar, Jorge",
+      "hole": 2,
+      "day": "Saturday",
+      "shift": "AM",
+      "checkedInBy": "Sale, Lynn",
+      "timestamp": "2026-05-18T15:20:11.737Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -9067,6 +9077,69 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779117874981",
+      "timestamp": "2026-05-18T15:24:34.981Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Harrell, Michael",
+      "details": "Sunday AM - Hole #2"
+    },
+    {
+      "id": "1779117873738",
+      "timestamp": "2026-05-18T15:24:33.738Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Harrell, Michael",
+      "details": "Sunday AM - Hole #2"
+    },
+    {
+      "id": "1779117860941",
+      "timestamp": "2026-05-18T15:24:20.941Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Gillitzer, Dean",
+      "details": "Sunday AM - Hole #2"
+    },
+    {
+      "id": "1779117856112",
+      "timestamp": "2026-05-18T15:24:16.112Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Gillitzer, Dean",
+      "details": "Sunday AM - Hole #2"
+    },
+    {
+      "id": "1779117820340",
+      "timestamp": "2026-05-18T15:23:40.340Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Waruta, James",
+      "details": "Saturday PM - Hole #2"
+    },
+    {
+      "id": "1779117818300",
+      "timestamp": "2026-05-18T15:23:38.300Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Waruta, James",
+      "details": "Saturday PM - Hole #2"
+    },
+    {
+      "id": "1779117611911",
+      "timestamp": "2026-05-18T15:20:11.911Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Aguilar, Jorge",
+      "details": "Saturday AM - Hole #2"
+    },
     {
       "id": "1779117314292-445s0o",
       "timestamp": "2026-05-18T15:15:14.292Z",
