@@ -785,12 +785,22 @@ function requireAuth(allowedRoles) {
 
     // No valid session
     const ip = req.headers['x-real-ip'] || req.headers['x-forwarded-for'] || req.ip || 'unknown';
+    // Log UA so we can tell whether unauth POSTs come from iOS PWA standalone
+    // (suspected cookie-jar quirk), Android, desktop browser, or scripts. Has
+    // a token to indicate whether the request even sent the session cookie:
+    //   cookie=present  → request carried a session cookie but the server has
+    //                     no matching session (server-side eviction / restart
+    //                     before persistence)
+    //   cookie=missing  → no cookie sent at all (client-side eviction or fresh
+    //                     tab that never logged in)
+    const ua = (req.headers['user-agent'] || '').slice(0, 200) || '-';
+    const cookieState = (req.cookies && req.cookies.session) ? 'present' : 'missing';
     if (STRICT_AUTH) {
-      console.warn('[' + new Date().toISOString() + '] AUTH REJECTED ' + req.method + ' ' + req.path + '  ip=' + ip);
+      console.warn('[' + new Date().toISOString() + '] AUTH REJECTED ' + req.method + ' ' + req.path + '  ip=' + ip + '  cookie=' + cookieState + '  ua=' + ua);
       return res.status(401).json({ success: false, error: 'Authentication required - please log in' });
     } else {
       // Fallback mode: log warning but allow through
-      console.warn('[' + new Date().toISOString() + '] UNAUTH FALLBACK ALLOWED ' + req.method + ' ' + req.path + '  ip=' + ip + '  (would be rejected once STRICT_AUTH is enabled)');
+      console.warn('[' + new Date().toISOString() + '] UNAUTH FALLBACK ALLOWED ' + req.method + ' ' + req.path + '  ip=' + ip + '  cookie=' + cookieState + '  ua=' + ua + '  (would be rejected once STRICT_AUTH is enabled)');
       req.user = { role: 'unauthenticated', _fallback: true, name: 'unauth-' + ip, userId: null };
       return next();
     }
