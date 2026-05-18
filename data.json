@@ -2117,7 +2117,8 @@
       "address": "13701 Marys Ridge Road Aledo, TX 76088",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779128104044,
+      "notes": "Eric \nWill you text me and let me know you have received this email?\nI’ll also make a snapshot and send it to you in a text"
     },
     {
       "id": "8178",
@@ -9067,6 +9068,24 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779128399749",
+      "timestamp": "2026-05-18T18:19:59.749Z",
+      "user": "Clayton, Rodney",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779128104044-zpe0ic",
+      "timestamp": "2026-05-18T18:15:04.044Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "edit-volunteer",
+      "target": "Endicott, Eric",
+      "details": "Updated fields: notes"
+    },
     {
       "id": "1779128002901",
       "timestamp": "2026-05-18T18:13:22.901Z",
