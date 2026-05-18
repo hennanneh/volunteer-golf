@@ -2593,9 +2593,7 @@
       "hat": "",
       "scheduled": {
         "Wednesday PM": true,
-        "Thursday PM": true,
         "Friday AM": true,
-        "Saturday PM": true,
         "Sunday AM": true
       },
       "address": "2407 Lakepoint Drive\r\nKeller, TX 76248",
@@ -2603,7 +2601,7 @@
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
       "notAttendingOuting": true,
-      "lastModified": 1778813044771,
+      "lastModified": 1779117314291,
       "volunteerPassword": "$2b$10$wGD4Nsg5CJoBUH4a66XUQuCxufSedayVUZICfAnCGRzZsH1nPs8ke"
     },
     {
@@ -9069,6 +9067,15 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779117314292-445s0o",
+      "timestamp": "2026-05-18T15:15:14.292Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Gillitzer, Dean",
+      "details": "removed Thursday PM, Saturday PM"
+    },
     {
       "id": "1779116902933",
       "timestamp": "2026-05-18T15:08:22.933Z",
