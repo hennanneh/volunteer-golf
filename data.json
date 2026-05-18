@@ -3339,6 +3339,7 @@
       "scheduled": {
         "Wednesday PM": true,
         "Thursday AM": true,
+        "Thursday PM": true,
         "Friday PM": true,
         "Saturday AM": true,
         "Sunday PM": true
@@ -3347,7 +3348,7 @@
       "address": "5402 S Holly St Greenwood Village, CO 80111",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779079594872
     },
     {
       "id": "9564",
@@ -9058,6 +9059,42 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779079791971",
+      "timestamp": "2026-05-18T04:49:51.971Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779079669231",
+      "timestamp": "2026-05-18T04:47:49.231Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779079594872",
+      "timestamp": "2026-05-18T04:46:34.872Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Hitz, Jim",
+      "details": "added Thursday PM"
+    },
+    {
+      "id": "1779079567393",
+      "timestamp": "2026-05-18T04:46:07.393Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779068237338",
       "timestamp": "2026-05-18T01:37:17.338Z",
