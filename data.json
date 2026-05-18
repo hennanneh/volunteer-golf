@@ -9070,6 +9070,24 @@
   },
   "activityLog": [
     {
+      "id": "1779140885109",
+      "timestamp": "2026-05-18T21:48:05.110Z",
+      "user": "Wehmeyer, Tom",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779140776766",
+      "timestamp": "2026-05-18T21:46:16.766Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1779140044973-zwjmqd",
       "timestamp": "2026-05-18T21:34:04.973Z",
       "user": "Roy, Mike",
