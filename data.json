@@ -9060,6 +9060,15 @@
   },
   "activityLog": [
     {
+      "id": "1779105896867",
+      "timestamp": "2026-05-18T12:04:56.867Z",
+      "user": "Montalvo, Sammy",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1779100787381",
       "timestamp": "2026-05-18T10:39:47.381Z",
       "user": "Watson, Stan",
