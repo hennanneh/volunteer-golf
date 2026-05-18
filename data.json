@@ -9060,6 +9060,24 @@
   },
   "activityLog": [
     {
+      "id": "1779115461700",
+      "timestamp": "2026-05-18T14:44:21.700Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Craft, John",
+      "details": "Monday AM - Hole #2"
+    },
+    {
+      "id": "1779115460028",
+      "timestamp": "2026-05-18T14:44:20.028Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Craft, John",
+      "details": "Monday AM - Hole #2"
+    },
+    {
       "id": "1779114696717-5dyqi2",
       "timestamp": "2026-05-18T14:31:36.718Z",
       "user": "System",
