@@ -9070,6 +9070,78 @@
   },
   "activityLog": [
     {
+      "id": "1779116902933",
+      "timestamp": "2026-05-18T15:08:22.933Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Fee, John",
+      "details": "Thursday AM - Hole #2"
+    },
+    {
+      "id": "1779116900592",
+      "timestamp": "2026-05-18T15:08:20.592Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Fee, John",
+      "details": "Thursday AM - Hole #2"
+    },
+    {
+      "id": "1779116886833",
+      "timestamp": "2026-05-18T15:08:06.833Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Aguilar, Jorge",
+      "details": "Thursday AM - Hole #2"
+    },
+    {
+      "id": "1779116885899",
+      "timestamp": "2026-05-18T15:08:05.899Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Aguilar, Jorge",
+      "details": "Thursday AM - Hole #2"
+    },
+    {
+      "id": "1779116882306",
+      "timestamp": "2026-05-18T15:08:02.306Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Aguilar, Jorge",
+      "details": "Thursday AM - Hole #2"
+    },
+    {
+      "id": "1779116881431",
+      "timestamp": "2026-05-18T15:08:01.431Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Aguilar, Jorge",
+      "details": "Thursday AM - Hole #2"
+    },
+    {
+      "id": "1779116879268",
+      "timestamp": "2026-05-18T15:07:59.268Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Aguilar, Jorge",
+      "details": "Thursday AM - Hole #2"
+    },
+    {
+      "id": "1779116878292",
+      "timestamp": "2026-05-18T15:07:58.292Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Aguilar, Jorge",
+      "details": "Thursday AM - Hole #2"
+    },
+    {
       "id": "1779116649153",
       "timestamp": "2026-05-18T15:04:09.153Z",
       "user": "Hill, Michael",
@@ -12780,5 +12852,5 @@
       "deletedAt": 1779112526377
     }
   ],
-  "serverNow": 1778868900514
+  "serverNow": 1779116648680
 }
