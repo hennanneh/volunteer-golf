@@ -1424,6 +1424,28 @@ app.patch('/api/volunteer/:id', dataLimiter, requireAuth(['admin', 'chair', 'ass
       return res.json({ success: true, volunteer: stripVolunteerSecrets(updated), changed: [], serverNow: Date.now() });
     }
 
+    // Captain-hole authorization. POST /api/data routes every captain edit
+    // through captainAuthorized() (server.js:305) to keep captains from
+    // editing volunteers outside their own hole or moving volunteers between
+    // holes. PATCH needs the same gate; without it a captain can promote
+    // themselves to admin or reassign any volunteer.
+    if (req.user.role === 'captain') {
+      const me = data.volunteers.find(v => v.id === req.user.userId);
+      const actorHole = me && (typeof me.hole === 'number' || typeof me.hole === 'string') ? me.hole : null;
+      const userInfo = { name: req.user.name, userType: 'Captain' };
+      if (!captainAuthorized(userInfo, actorHole, before, updated)) {
+        console.warn('[' + new Date().toISOString() + '] PATCH REJECTED: captain not authorized'
+          + '  user=' + req.user.name
+          + '  actorHole=' + actorHole
+          + '  targetId=' + before.id
+          + '  targetName=' + (before.name || '')
+          + '  targetHole=' + before.hole
+          + '  fields=' + changedFields.join(',')
+          + '  ip=' + clientIp);
+        return res.status(403).json({ success: false, error: 'Captains can only edit volunteers on their own hole' });
+      }
+    }
+
     // Cascade: if name changed, update the denormalized volunteerName on any
     // existing check-in records so rosters/reports don't show stale names.
     if (changedFields.includes('name') && Array.isArray(data.checkIns)) {
@@ -1464,7 +1486,7 @@ app.patch('/api/volunteer/:id', dataLimiter, requireAuth(['admin', 'chair', 'ass
       : req.user.role === 'captain' ? 'Captain'
       : (req.user.role || 'Unknown');
     data.activityLog.unshift({
-      id: Date.now().toString(),
+      id: Date.now().toString() + '-' + Math.random().toString(36).slice(2, 8),
       timestamp: new Date().toISOString(),
       user: req.user.name || 'Unknown',
       userType,
@@ -1691,7 +1713,7 @@ app.post('/api/log-deployment', (req, res) => {
     if (!data.activityLog) data.activityLog = [];
 
     const entry = {
-      id: Date.now().toString(),
+      id: Date.now().toString() + '-' + Math.random().toString(36).slice(2, 8),
       timestamp: new Date().toISOString(),
       user: 'System',
       userType: 'Deployment',
@@ -1749,7 +1771,7 @@ server.listen(PORT, () => {
       const last = data.activityLog[0];
       if (last && last.action === 'system-update' && last.target === sha) return;
       data.activityLog.unshift({
-        id: Date.now().toString(),
+        id: Date.now().toString() + '-' + Math.random().toString(36).slice(2, 8),
         timestamp: new Date().toISOString(),
         user: 'System',
         userType: 'Deployment',
