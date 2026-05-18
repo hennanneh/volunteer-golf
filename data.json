@@ -7648,16 +7648,17 @@
       "hat": "",
       "scheduled": {
         "Tuesday PM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true
+        "Thursday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
+        "Sunday PM": true
       },
       "address": "21767 Lakewood Lane\r\nChandler, TX 75758",
       "volId": "10610",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779146670859,
+      "notes": "Talked to Russ on 5/18 about flopping schedule Thur thru Sunday. He agreed."
     },
     {
       "id": "9109",
@@ -9067,6 +9068,15 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779146670859-cj45e9",
+      "timestamp": "2026-05-18T23:24:30.860Z",
+      "user": "Wehmeyer, Tom",
+      "userType": "Captain",
+      "action": "edit-volunteer",
+      "target": "Simon, Russ",
+      "details": "Updated fields: scheduled, notes"
+    },
     {
       "id": "1779145214038",
       "timestamp": "2026-05-18T23:00:14.038Z",
