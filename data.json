@@ -9060,6 +9060,33 @@
   },
   "activityLog": [
     {
+      "id": "1779080595241",
+      "timestamp": "2026-05-18T05:03:15.241Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779080452990",
+      "timestamp": "2026-05-18T05:00:52.990Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779080408235",
+      "timestamp": "2026-05-18T05:00:08.235Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
       "id": "1779079791971",
       "timestamp": "2026-05-18T04:49:51.971Z",
       "user": "Watson, Stan",
