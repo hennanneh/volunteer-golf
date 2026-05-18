@@ -9068,6 +9068,24 @@
   },
   "activityLog": [
     {
+      "id": "1779122031389",
+      "timestamp": "2026-05-18T16:33:51.389Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779121921244",
+      "timestamp": "2026-05-18T16:32:01.244Z",
+      "user": "Ruddell, Dick",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1779119049651",
       "timestamp": "2026-05-18T15:44:09.651Z",
       "user": "Rogenski, Chris P.",
