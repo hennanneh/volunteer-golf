@@ -9068,6 +9068,51 @@
   },
   "activityLog": [
     {
+      "id": "1779118792958",
+      "timestamp": "2026-05-18T15:39:52.958Z",
+      "user": "Gordon, Gary",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779118759203",
+      "timestamp": "2026-05-18T15:39:19.203Z",
+      "user": "Gordon, Gary",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1779118741455",
+      "timestamp": "2026-05-18T15:39:01.456Z",
+      "user": "Gordon, Gary",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1779118732167",
+      "timestamp": "2026-05-18T15:38:52.167Z",
+      "user": "Gordon, Gary",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1779118572509",
+      "timestamp": "2026-05-18T15:36:12.509Z",
+      "user": "Gordon, Gary",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
       "id": "1779118201588",
       "timestamp": "2026-05-18T15:30:01.588Z",
       "user": "Sale, Lynn",
