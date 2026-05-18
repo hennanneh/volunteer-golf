@@ -9043,6 +9043,16 @@
       "checkedInBy": "Edwards, Bill",
       "timestamp": "2026-05-17T17:56:56.125Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "7768",
+      "volunteerName": "Gillitzer, Dean",
+      "hole": 2,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Sale, Lynn",
+      "timestamp": "2026-05-18T14:51:33.452Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -9059,6 +9069,15 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779115893603",
+      "timestamp": "2026-05-18T14:51:33.603Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Gillitzer, Dean",
+      "details": "Wednesday PM - Hole #2"
+    },
     {
       "id": "1779115461700",
       "timestamp": "2026-05-18T14:44:21.700Z",
