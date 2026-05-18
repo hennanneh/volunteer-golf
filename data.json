@@ -9021,6 +9021,24 @@
       "lastModified": 1778813044771,
       "hasAdminPassword": false,
       "hasVolunteerPassword": false
+    },
+    {
+      "id": "new_1779112352148",
+      "name": "Yes test",
+      "type": "Volunteer",
+      "hole": 18,
+      "phone": "2145551212",
+      "email": "1122howrey@gmail.com",
+      "yearsWorked": 0,
+      "hat": "",
+      "hatReceived": false,
+      "scheduled": {
+        "Tuesday PM": true,
+        "Wednesday AM": true,
+        "Saturday AM": true,
+        "Sunday PM": true
+      },
+      "lastModified": 1779112475809
     }
   ],
   "checkIns": [
@@ -9059,6 +9077,80 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779112475809",
+      "timestamp": "2026-05-18T13:54:35.810Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "edit-schedule",
+      "target": "Yes test",
+      "details": "added Tuesday PM, Wednesday AM, Saturday AM"
+    },
+    {
+      "id": "1779112419025",
+      "timestamp": "2026-05-18T13:53:39.025Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779112398387",
+      "timestamp": "2026-05-18T13:53:18.387Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1779112391099-uxxrxb",
+      "timestamp": "2026-05-18T13:53:11.099Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "add-volunteer",
+      "target": "Yes test",
+      "details": "Added volunteer (via bulk save)",
+      "targetHole": 18,
+      "actorHole": 99
+    },
+    {
+      "id": "1779112389189",
+      "timestamp": "2026-05-18T13:53:09.189Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "add-volunteer",
+      "target": "Yes test",
+      "details": "Added new volunteer (Type: Volunteer, Hole: 18)"
+    },
+    {
+      "id": "1779112335999",
+      "timestamp": "2026-05-18T13:52:15.999Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1779112319197",
+      "timestamp": "2026-05-18T13:51:59.197Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779112283782",
+      "timestamp": "2026-05-18T13:51:23.782Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779105896867",
       "timestamp": "2026-05-18T12:04:56.867Z",
