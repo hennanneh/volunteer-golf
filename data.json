@@ -9060,6 +9060,24 @@
   },
   "activityLog": [
     {
+      "id": "1779113608648",
+      "timestamp": "2026-05-18T14:13:28.648Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779113603997",
+      "timestamp": "2026-05-18T14:13:23.997Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
       "id": "1779113339940",
       "timestamp": "2026-05-18T14:08:59.940Z",
       "user": "System",
