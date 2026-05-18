@@ -9069,6 +9069,15 @@
   },
   "activityLog": [
     {
+      "id": "1779136920908",
+      "timestamp": "2026-05-18T20:42:00.908Z",
+      "user": "Gastinel, Buck",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
       "id": "1779136711811",
       "timestamp": "2026-05-18T20:38:31.811Z",
       "user": "Gastinel, Buck",
