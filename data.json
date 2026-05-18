@@ -9060,6 +9060,15 @@
   },
   "activityLog": [
     {
+      "id": "1779114696717-5dyqi2",
+      "timestamp": "2026-05-18T14:31:36.718Z",
+      "user": "System",
+      "userType": "Deployment",
+      "action": "system-update",
+      "target": "0df9265",
+      "details": "Log UA + cookie state on unauthenticated POSTs"
+    },
+    {
       "id": "1779114506783",
       "timestamp": "2026-05-18T14:28:26.783Z",
       "user": "Sale, Lynn",
