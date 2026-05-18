@@ -2084,6 +2084,7 @@
       "hat": "",
       "scheduled": {
         "Wednesday AM": true,
+        "Wednesday PM": true,
         "Thursday PM": true,
         "Friday AM": true,
         "Saturday PM": true,
@@ -2093,7 +2094,7 @@
       "address": "4005 Glenwood Dr Joshua, TX 76058",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779140044972
     },
     {
       "id": "9916",
@@ -9068,6 +9069,15 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779140044973-zwjmqd",
+      "timestamp": "2026-05-18T21:34:04.973Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Emerson, David",
+      "details": "added Wednesday PM"
+    },
     {
       "id": "1779136920908",
       "timestamp": "2026-05-18T20:42:00.908Z",
