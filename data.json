@@ -5952,16 +5952,16 @@
       "hat": "",
       "scheduled": {
         "Wednesday PM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true
+        "Thursday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
+        "Sunday PM": true
       },
       "volId": "10260",
       "address": "22818 Deforest Ridge Lane Katy, TX 77494",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779148313061
     },
     {
       "id": "6758",
@@ -8297,14 +8297,14 @@
         "Tuesday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true
+        "Sunday AM": true,
+        "Sunday PM": true
       },
       "volId": "2439",
       "address": "1105 Centennary Dr Allen, TX 75002",
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
-      "lastModified": 1778813044771,
+      "lastModified": 1779148364718,
       "volunteerPassword": "$2b$10$CDNIkTKVFO4yGVFJAgF2eOkeU3U4Dkka.kH.cPcWZfqEv97RVD7.a"
     },
     {
@@ -8634,14 +8634,14 @@
         "Wednesday PM": true,
         "Thursday PM": true,
         "Friday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true
+        "Sunday AM": true,
+        "Sunday PM": true
       },
       "volId": "8219",
       "address": "2422 Clayton Oaks Dr Grand Prairie, TX 75052",
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
-      "lastModified": 1778813044771,
+      "lastModified": 1779148384238,
       "volunteerPassword": "$2b$10$yfSx5W3n0gc88d.CWGaKP.OOYwPWea1tiFX/Ee4vi.MzgAUyQRGvW"
     },
     {
@@ -9068,6 +9068,33 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779148384238-5tgins",
+      "timestamp": "2026-05-18T23:53:04.238Z",
+      "user": "Wehmeyer, Tom",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "White, Gary",
+      "details": "added Sunday PM; removed Saturday PM"
+    },
+    {
+      "id": "1779148364718-ylqzag",
+      "timestamp": "2026-05-18T23:52:44.718Z",
+      "user": "Wehmeyer, Tom",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Vela, Humberto",
+      "details": "added Sunday PM; removed Saturday PM"
+    },
+    {
+      "id": "1779148313061-zjwd6c",
+      "timestamp": "2026-05-18T23:51:53.061Z",
+      "user": "Wehmeyer, Tom",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "O'Hanlon, Katherine",
+      "details": "added Thursday AM, Friday PM, Saturday AM, Sunday PM; removed Thursday PM, Friday AM, Saturday PM, Sunday AM"
+    },
     {
       "id": "1779147828976",
       "timestamp": "2026-05-18T23:43:48.976Z",
