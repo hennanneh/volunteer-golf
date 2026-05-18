@@ -9068,6 +9068,15 @@
   },
   "activityLog": [
     {
+      "id": "1779145181852",
+      "timestamp": "2026-05-18T22:59:41.852Z",
+      "user": "Wehmeyer, Tom",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
       "id": "1779144754011",
       "timestamp": "2026-05-18T22:52:34.011Z",
       "user": "Howrey, Anne",
@@ -13210,5 +13219,5 @@
       "deletedAt": 1779112526377
     }
   ],
-  "serverNow": 1779116648680
+  "serverNow": 1779144754545
 }
