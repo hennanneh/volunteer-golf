@@ -9069,6 +9069,33 @@
   },
   "activityLog": [
     {
+      "id": "1779146990739",
+      "timestamp": "2026-05-18T23:29:50.739Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779146830311",
+      "timestamp": "2026-05-18T23:27:10.311Z",
+      "user": "White, Gary",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1779146753309",
+      "timestamp": "2026-05-18T23:25:53.309Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1779146670859-cj45e9",
       "timestamp": "2026-05-18T23:24:30.860Z",
       "user": "Wehmeyer, Tom",
@@ -13238,5 +13265,5 @@
       "deletedAt": 1779112526377
     }
   ],
-  "serverNow": 1779144754545
+  "serverNow": 1779146832107
 }
