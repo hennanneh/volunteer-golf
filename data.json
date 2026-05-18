@@ -9069,6 +9069,15 @@
   },
   "activityLog": [
     {
+      "id": "1779129057629",
+      "timestamp": "2026-05-18T18:30:57.629Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
       "id": "1779128399749",
       "timestamp": "2026-05-18T18:19:59.749Z",
       "user": "Clayton, Rodney",
