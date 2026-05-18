@@ -9060,6 +9060,24 @@
   },
   "activityLog": [
     {
+      "id": "1779100787381",
+      "timestamp": "2026-05-18T10:39:47.381Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779100642843",
+      "timestamp": "2026-05-18T10:37:22.843Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1779094047939",
       "timestamp": "2026-05-18T08:47:27.939Z",
       "user": "Mcdaniel, Patrick",
