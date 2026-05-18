@@ -9068,6 +9068,24 @@
   },
   "activityLog": [
     {
+      "id": "1779122563788",
+      "timestamp": "2026-05-18T16:42:43.788Z",
+      "user": "Ruddell, Dick",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779122548712",
+      "timestamp": "2026-05-18T16:42:28.712Z",
+      "user": "Ruddell, Dick",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
       "id": "1779122031389",
       "timestamp": "2026-05-18T16:33:51.389Z",
       "user": "Johnson, Kenny",
