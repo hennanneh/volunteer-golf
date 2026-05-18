@@ -9060,6 +9060,15 @@
   },
   "activityLog": [
     {
+      "id": "1779113339940",
+      "timestamp": "2026-05-18T14:08:59.940Z",
+      "user": "System",
+      "userType": "Deployment",
+      "action": "system-update",
+      "target": "1e3bbd6",
+      "details": "Fix captain \"send schedule email\" silently dropping with no schedule change"
+    },
+    {
       "id": "1779112681631",
       "timestamp": "2026-05-18T13:58:01.631Z",
       "user": "Gastinel, Buck",
