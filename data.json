@@ -9043,16 +9043,6 @@
       "isAlternate": false
     },
     {
-      "volunteerId": "7768",
-      "volunteerName": "Gillitzer, Dean",
-      "hole": 2,
-      "day": "Wednesday",
-      "shift": "PM",
-      "checkedInBy": "Sale, Lynn",
-      "timestamp": "2026-05-18T14:51:33.452Z",
-      "isAlternate": false
-    },
-    {
       "volunteerId": "9015",
       "volunteerName": "Aguilar, Jorge",
       "hole": 2,
@@ -9077,6 +9067,15 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779118201588",
+      "timestamp": "2026-05-18T15:30:01.588Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Gillitzer, Dean",
+      "details": "Wednesday PM - Hole #2"
+    },
     {
       "id": "1779117874981",
       "timestamp": "2026-05-18T15:24:34.981Z",
