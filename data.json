@@ -9069,6 +9069,24 @@
   },
   "activityLog": [
     {
+      "id": "1779132484600",
+      "timestamp": "2026-05-18T19:28:04.600Z",
+      "user": "Bird, Bob",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1779132473929",
+      "timestamp": "2026-05-18T19:27:53.929Z",
+      "user": "Bird, Bob",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
       "id": "1779129057629",
       "timestamp": "2026-05-18T18:30:57.629Z",
       "user": "Sale, Lynn",
