@@ -9052,6 +9052,16 @@
       "checkedInBy": "Sale, Lynn",
       "timestamp": "2026-05-18T15:20:11.737Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "9834",
+      "volunteerName": "Piper, Kathleen",
+      "hole": 6,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Mcdaniel, Patrick",
+      "timestamp": "2026-05-19T13:14:12.694Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -9068,6 +9078,42 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779196470221",
+      "timestamp": "2026-05-19T13:14:30.221Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Piper, Monte",
+      "details": "Thursday PM - Hole #6"
+    },
+    {
+      "id": "1779196452725",
+      "timestamp": "2026-05-19T13:14:12.725Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Piper, Kathleen",
+      "details": "Thursday PM - Hole #6"
+    },
+    {
+      "id": "1779196451905",
+      "timestamp": "2026-05-19T13:14:11.905Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Piper, Monte",
+      "details": "Thursday PM - Hole #6"
+    },
+    {
+      "id": "1779196277080",
+      "timestamp": "2026-05-19T13:11:17.080Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779180264066",
       "timestamp": "2026-05-19T08:44:24.066Z",
