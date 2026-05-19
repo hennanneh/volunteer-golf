@@ -1463,13 +1463,14 @@
         "Thursday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
-        "Sunday PM": true
+        "Saturday PM": true
       },
       "address": "1005 Markbarry Dr.\r\nAnn Arbor, MI 48105",
       "volId": "9257",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779204769479,
+      "notes": "Here is your revised schedule "
     },
     {
       "id": "9560",
@@ -8635,15 +8636,16 @@
         "Wednesday PM": true,
         "Thursday PM": true,
         "Friday AM": true,
-        "Sunday AM": true,
-        "Sunday PM": true
+        "Saturday PM": true,
+        "Sunday AM": true
       },
       "volId": "8219",
       "address": "2422 Clayton Oaks Dr Grand Prairie, TX 75052",
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
-      "lastModified": 1779148384238,
-      "volunteerPassword": "$2b$10$yfSx5W3n0gc88d.CWGaKP.OOYwPWea1tiFX/Ee4vi.MzgAUyQRGvW"
+      "lastModified": 1779204844143,
+      "volunteerPassword": "$2b$10$yfSx5W3n0gc88d.CWGaKP.OOYwPWea1tiFX/Ee4vi.MzgAUyQRGvW",
+      "notes": "Here is your revised schedule "
     },
     {
       "id": "10733",
@@ -9089,6 +9091,33 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779204844143-40oxgj",
+      "timestamp": "2026-05-19T15:34:04.143Z",
+      "user": "Wehmeyer, Tom",
+      "userType": "Captain",
+      "action": "edit-volunteer",
+      "target": "White, Gary",
+      "details": "Updated fields: scheduled, notes"
+    },
+    {
+      "id": "1779204769479-lcafml",
+      "timestamp": "2026-05-19T15:32:49.479Z",
+      "user": "Wehmeyer, Tom",
+      "userType": "Captain",
+      "action": "edit-volunteer",
+      "target": "Cristiano, John",
+      "details": "Updated fields: scheduled, notes"
+    },
+    {
+      "id": "1779204690219",
+      "timestamp": "2026-05-19T15:31:30.219Z",
+      "user": "Wehmeyer, Tom",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779204278602-25gq8v",
       "timestamp": "2026-05-19T15:24:38.602Z",
