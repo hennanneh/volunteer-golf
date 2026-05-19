@@ -7740,7 +7740,7 @@
       "yearsWorked": 19,
       "hat": "",
       "scheduled": {
-        "Wednesday PM": true,
+        "Wednesday AM": true,
         "Thursday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
@@ -7750,7 +7750,7 @@
       "address": "409 Flagstone Drive Burleson, TX 76028",
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
-      "lastModified": 1778813044771,
+      "lastModified": 1779213403994,
       "volunteerPassword": "$2b$10$sMwzdRocUM79UA8z.TNY7.GZWF1GNAZr/39uoGlqq9.04l1rTgh5O"
     },
     {
@@ -9091,6 +9091,33 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779213442701",
+      "timestamp": "2026-05-19T17:57:22.701Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779213403994-9zwiik",
+      "timestamp": "2026-05-19T17:56:43.995Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Smith, Jeff",
+      "details": "added Wednesday AM; removed Wednesday PM"
+    },
+    {
+      "id": "1779213374109",
+      "timestamp": "2026-05-19T17:56:14.109Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779209892739",
       "timestamp": "2026-05-19T16:58:12.739Z",
