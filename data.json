@@ -3717,16 +3717,14 @@
         "Thursday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
-        "Friday PM": true,
         "Saturday PM": true,
-        "Sunday AM": true,
-        "Sunday PM": true
+        "Sunday AM": true
       },
       "volId": "10337",
       "address": "6032 Carmona Trl Fort Worth, TX 76123",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779217901434
+      "lastModified": 1779231887084
     },
     {
       "id": "2657",
@@ -9068,6 +9066,33 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779231894348",
+      "timestamp": "2026-05-19T23:04:54.348Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779231887084-tef5m5",
+      "timestamp": "2026-05-19T23:04:47.084Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Jacobs, Rick",
+      "details": "removed Friday PM, Sunday PM"
+    },
+    {
+      "id": "1779231860786",
+      "timestamp": "2026-05-19T23:04:20.786Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779228066764",
       "timestamp": "2026-05-19T22:01:06.764Z",
