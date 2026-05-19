@@ -9069,6 +9069,15 @@
   },
   "activityLog": [
     {
+      "id": "1779156525617",
+      "timestamp": "2026-05-19T02:08:45.617Z",
+      "user": "Waller, Gary",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
       "id": "1779149097290",
       "timestamp": "2026-05-19T00:04:57.290Z",
       "user": "Bishop, Woody",
