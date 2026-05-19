@@ -9092,6 +9092,15 @@
   },
   "activityLog": [
     {
+      "id": "1779204939404",
+      "timestamp": "2026-05-19T15:35:39.404Z",
+      "user": "Wehmeyer, Tom",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
       "id": "1779204844143-40oxgj",
       "timestamp": "2026-05-19T15:34:04.143Z",
       "user": "Wehmeyer, Tom",
