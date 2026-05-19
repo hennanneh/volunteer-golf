@@ -9069,6 +9069,15 @@
   },
   "activityLog": [
     {
+      "id": "1779149097290",
+      "timestamp": "2026-05-19T00:04:57.290Z",
+      "user": "Bishop, Woody",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1779148384238-5tgins",
       "timestamp": "2026-05-18T23:53:04.238Z",
       "user": "Wehmeyer, Tom",
