@@ -7514,7 +7514,7 @@
       "yearsWorked": 1,
       "hat": "",
       "scheduled": {
-        "Wednesday PM": true,
+        "Monday PM": true,
         "Thursday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
@@ -7524,7 +7524,8 @@
       "address": "2951 Picadilly Ln Apt 634 Denton, TX 76207",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779204278601,
+      "notes": "Changed Wednesday PM to Monday Pm"
     },
     {
       "id": "10126",
@@ -9088,6 +9089,33 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779204278602-25gq8v",
+      "timestamp": "2026-05-19T15:24:38.602Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "edit-volunteer",
+      "target": "Sharrah, Adam",
+      "details": "Updated fields: notes"
+    },
+    {
+      "id": "1779204212058-qpenib",
+      "timestamp": "2026-05-19T15:23:32.058Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Sharrah, Adam",
+      "details": "added Monday PM; removed Wednesday PM"
+    },
+    {
+      "id": "1779204150948",
+      "timestamp": "2026-05-19T15:22:30.948Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779201364822",
       "timestamp": "2026-05-19T14:36:04.822Z",
