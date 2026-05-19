@@ -9089,6 +9089,15 @@
   },
   "activityLog": [
     {
+      "id": "1779201364822",
+      "timestamp": "2026-05-19T14:36:04.822Z",
+      "user": "Gastinel, Buck",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
       "id": "1779196557796-qyxhhg",
       "timestamp": "2026-05-19T13:15:57.796Z",
       "user": "Mcdaniel, Patrick",
