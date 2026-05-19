@@ -5902,28 +5902,6 @@
       "volunteerPassword": "$2b$10$.9EerCPU6/FW5N1/QE/wqemf6qz7JqYqbzToD4h2Fkqxb5nYXSeiG"
     },
     {
-      "id": "9393",
-      "name": "Neufeld, Chris",
-      "type": "Volunteer",
-      "hole": 9,
-      "phone": "(850) 502-7360",
-      "email": "baldcanuck27@yahoo.com",
-      "yearsWorked": 3,
-      "hat": "",
-      "scheduled": {
-        "Wednesday AM": true,
-        "Thursday AM": true,
-        "Friday PM": true,
-        "Saturday AM": true,
-        "Sunday PM": true
-      },
-      "volId": "9393",
-      "address": "1524 Eleanor Dr Haslet, TX 76052-1518",
-      "hasAdminPassword": false,
-      "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
-    },
-    {
       "id": "9663",
       "name": "Neunaber, Dean",
       "type": "Volunteer",
@@ -9090,6 +9068,24 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779224305708",
+      "timestamp": "2026-05-19T20:58:25.708Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "delete",
+      "target": "Neufeld, Chris",
+      "details": "Deleted volunteer"
+    },
+    {
+      "id": "1779224263456",
+      "timestamp": "2026-05-19T20:57:43.456Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
     {
       "id": "1779223841601",
       "timestamp": "2026-05-19T20:50:41.601Z",
@@ -13618,6 +13614,10 @@
     {
       "id": "new_1779112352148",
       "deletedAt": 1779112526377
+    },
+    {
+      "id": "9393",
+      "deletedAt": 1779224305559
     }
   ],
   "serverNow": 1779146832107
