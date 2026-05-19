@@ -6340,17 +6340,17 @@
       "yearsWorked": 2,
       "hat": "",
       "scheduled": {
-        "Monday PM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true
+        "Wednesday PM": true,
+        "Thursday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
+        "Sunday PM": true
       },
       "volId": "9834",
       "address": "1101 W 7th St. Fort Worth, TX 76102",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779196535057
     },
     {
       "id": "9833",
@@ -6362,17 +6362,17 @@
       "yearsWorked": 2,
       "hat": "",
       "scheduled": {
-        "Monday PM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true
+        "Wednesday PM": true,
+        "Thursday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
+        "Sunday PM": true
       },
       "volId": "9833",
       "address": "1101 West 7th Street Fort Worth, TX 76102",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779196557796
     },
     {
       "id": "4745",
@@ -9062,6 +9062,16 @@
       "checkedInBy": "Mcdaniel, Patrick",
       "timestamp": "2026-05-19T13:14:12.694Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "9833",
+      "volunteerName": "Piper, Monte",
+      "hole": 6,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Mcdaniel, Patrick",
+      "timestamp": "2026-05-19T13:15:39.953Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -9078,6 +9088,33 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779196557796-qyxhhg",
+      "timestamp": "2026-05-19T13:15:57.796Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Piper, Monte",
+      "details": "added Wednesday PM, Thursday AM, Friday PM, Saturday AM, Sunday PM; removed Monday PM, Thursday PM, Friday AM, Saturday PM, Sunday AM"
+    },
+    {
+      "id": "1779196539979",
+      "timestamp": "2026-05-19T13:15:39.979Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Piper, Monte",
+      "details": "Thursday PM - Hole #6"
+    },
+    {
+      "id": "1779196535057-nvtvah",
+      "timestamp": "2026-05-19T13:15:35.058Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Piper, Kathleen",
+      "details": "added Wednesday PM, Thursday AM, Friday PM, Saturday AM, Sunday PM; removed Monday PM, Thursday PM, Friday AM, Saturday PM, Sunday AM"
+    },
     {
       "id": "1779196470221",
       "timestamp": "2026-05-19T13:14:30.221Z",
