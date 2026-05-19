@@ -9067,6 +9067,15 @@
   },
   "activityLog": [
     {
+      "id": "1779231991529",
+      "timestamp": "2026-05-19T23:06:31.529Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
       "id": "1779231894348",
       "timestamp": "2026-05-19T23:04:54.348Z",
       "user": "Trout, Wayne",
@@ -13663,5 +13672,5 @@
       "deletedAt": 1779224305559
     }
   ],
-  "serverNow": 1779146832107
+  "serverNow": 1779231895004
 }
