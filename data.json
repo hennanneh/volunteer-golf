@@ -6259,15 +6259,19 @@
       "scheduled": {
         "Tuesday AM": true,
         "Thursday AM": true,
+        "Thursday PM": true,
+        "Friday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true,
         "Sunday PM": true
       },
       "volId": "10150",
       "address": "7501 Ranch Ct. Benbrook, TX 76126",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779218923775
     },
     {
       "id": "9575",
@@ -8254,6 +8258,7 @@
       "hat": "",
       "scheduled": {
         "Wednesday PM": true,
+        "Thursday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
         "Friday PM": true,
@@ -8266,7 +8271,7 @@
       "address": "151560 US Highway 90 W Harwood, TX 78632",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779218937480
     },
     {
       "id": "7463",
@@ -9085,6 +9090,24 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779218937480-phvcep",
+      "timestamp": "2026-05-19T19:28:57.480Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Turner, Tom",
+      "details": "added Thursday AM"
+    },
+    {
+      "id": "1779218923775-et9s7i",
+      "timestamp": "2026-05-19T19:28:43.775Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Peterson, Durk",
+      "details": "added Thursday PM, Friday AM, Saturday PM, Sunday AM"
+    },
     {
       "id": "1779217901434-jw97w5",
       "timestamp": "2026-05-19T19:11:41.434Z",
