@@ -9047,16 +9047,6 @@
       "isAlternate": false
     },
     {
-      "volunteerId": "9015",
-      "volunteerName": "Aguilar, Jorge",
-      "hole": 2,
-      "day": "Saturday",
-      "shift": "AM",
-      "checkedInBy": "Sale, Lynn",
-      "timestamp": "2026-05-18T15:20:11.737Z",
-      "isAlternate": false
-    },
-    {
       "volunteerId": "9834",
       "volunteerName": "Piper, Kathleen",
       "hole": 6,
@@ -9091,6 +9081,15 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779214229137",
+      "timestamp": "2026-05-19T18:10:29.137Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Aguilar, Jorge",
+      "details": "Saturday AM - Hole #2"
+    },
     {
       "id": "1779214071078",
       "timestamp": "2026-05-19T18:07:51.078Z",
