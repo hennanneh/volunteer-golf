@@ -3717,14 +3717,16 @@
         "Thursday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
+        "Friday PM": true,
         "Saturday PM": true,
-        "Sunday AM": true
+        "Sunday AM": true,
+        "Sunday PM": true
       },
       "volId": "10337",
       "address": "6032 Carmona Trl Fort Worth, TX 76123",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778855524974
+      "lastModified": 1779217901434
     },
     {
       "id": "2657",
@@ -9083,6 +9085,15 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779217901434-jw97w5",
+      "timestamp": "2026-05-19T19:11:41.434Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Jacobs, Rick",
+      "details": "added Friday PM, Sunday PM"
+    },
     {
       "id": "1779217739993-o000ue",
       "timestamp": "2026-05-19T19:08:59.993Z",
