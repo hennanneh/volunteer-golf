@@ -59,13 +59,14 @@
         "Thursday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
+        "Saturday PM": true,
         "Sunday PM": true
       },
       "volId": "8220",
       "address": "1521 Bridge Water Ln Mansfield, TX 76063",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779217739992
     },
     {
       "id": "8522",
@@ -9082,6 +9083,15 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779217739993-o000ue",
+      "timestamp": "2026-05-19T19:08:59.993Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Anderson, Brian",
+      "details": "added Saturday PM"
+    },
     {
       "id": "1779216697003",
       "timestamp": "2026-05-19T18:51:37.003Z",
