@@ -9092,6 +9092,15 @@
   },
   "activityLog": [
     {
+      "id": "1779209892739",
+      "timestamp": "2026-05-19T16:58:12.739Z",
+      "user": "Schafer, John",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1779204939404",
       "timestamp": "2026-05-19T15:35:39.404Z",
       "user": "Wehmeyer, Tom",
