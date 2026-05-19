@@ -6166,6 +6166,7 @@
       "hat": "",
       "scheduled": {
         "Tuesday PM": true,
+        "Wednesday PM": true,
         "Thursday PM": true,
         "Friday AM": true,
         "Saturday PM": true,
@@ -6175,7 +6176,7 @@
       "volId": "5952",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779216650825
     },
     {
       "id": "7723",
@@ -9081,6 +9082,24 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779216697003",
+      "timestamp": "2026-05-19T18:51:37.003Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779216650826-hj7jtb",
+      "timestamp": "2026-05-19T18:50:50.826Z",
+      "user": "unauth-99.89.28.114",
+      "userType": "unauthenticated",
+      "action": "edit-schedule",
+      "target": "Pate, Teresa",
+      "details": "added Wednesday PM"
+    },
     {
       "id": "1779214229137",
       "timestamp": "2026-05-19T18:10:29.137Z",
