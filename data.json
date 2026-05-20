@@ -9067,6 +9067,15 @@
   },
   "activityLog": [
     {
+      "id": "1779287961725",
+      "timestamp": "2026-05-20T14:39:21.725Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1779283459211",
       "timestamp": "2026-05-20T13:24:19.211Z",
       "user": "Rogenski, Chris P.",
