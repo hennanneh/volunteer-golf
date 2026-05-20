@@ -9074,6 +9074,15 @@
   },
   "activityLog": [
     {
+      "id": "1779317528698",
+      "timestamp": "2026-05-20T22:52:08.698Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
       "id": "1779317305973-vralnv",
       "timestamp": "2026-05-20T22:48:25.973Z",
       "user": "Wehmeyer, Tom",
@@ -14038,5 +14047,5 @@
       "deletedAt": 1779315294724
     }
   ],
-  "serverNow": 1779316787261
+  "serverNow": 1779316945894
 }
