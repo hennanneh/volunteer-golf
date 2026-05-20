@@ -925,7 +925,6 @@
       "yearsWorked": 1,
       "hat": "",
       "scheduled": {
-        "Monday PM": true,
         "Tuesday PM": true,
         "Thursday PM": true,
         "Friday AM": true,
@@ -936,7 +935,7 @@
       "address": "2513 Peninsula Drive, Flower Mound, TX, USA Flower Mound, TX 75022",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779314447012
     },
     {
       "id": "10717",
@@ -9008,6 +9007,46 @@
       "lastModified": 1778813044771,
       "hasAdminPassword": false,
       "hasVolunteerPassword": false
+    },
+    {
+      "id": "8895",
+      "name": "Addison, Shirley",
+      "type": "Volunteer",
+      "hole": 16,
+      "phone": "(972) 215-9732",
+      "email": "saddis09@gmail.com",
+      "yearsWorked": 2,
+      "hat": "",
+      "scheduled": {
+        "Tuesday PM": true,
+        "Thursday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
+        "Sunday PM": true
+      },
+      "address": "7806 Raton Ridge Ln Arlington, TX 76002",
+      "volId": "8895",
+      "lastModified": 1779314445279
+    },
+    {
+      "id": "10696",
+      "name": "Schoeppach, Ryan",
+      "type": "Volunteer",
+      "hole": 18,
+      "phone": "(580) 445-4475",
+      "email": "ryanschoeppach@gmail.com",
+      "yearsWorked": 1,
+      "hat": "",
+      "scheduled": {
+        "Wednesday PM": true,
+        "Thursday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
+        "Sunday PM": true
+      },
+      "address": "912 N 5th Ave Durant, OK 74701",
+      "volId": "10696",
+      "lastModified": 1779314445279
     }
   ],
   "checkIns": [
@@ -9066,6 +9105,55 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779314487349",
+      "timestamp": "2026-05-20T22:01:27.349Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779314447013-f467mp",
+      "timestamp": "2026-05-20T22:00:47.014Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Cannon, Natalie",
+      "details": "removed Monday PM"
+    },
+    {
+      "id": "1779314445306-icpmd2",
+      "timestamp": "2026-05-20T22:00:45.306Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "add-volunteer",
+      "target": "Schoeppach, Ryan",
+      "details": "Added volunteer (via bulk save)",
+      "targetHole": 18,
+      "actorHole": 99
+    },
+    {
+      "id": "1779314445305-o7bcym",
+      "timestamp": "2026-05-20T22:00:45.305Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "add-volunteer",
+      "target": "Addison, Shirley",
+      "details": "Added volunteer (via bulk save)",
+      "targetHole": 16,
+      "actorHole": 99
+    },
+    {
+      "id": "1779314442680",
+      "timestamp": "2026-05-20T22:00:42.680Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "import",
+      "target": "",
+      "details": "Updated/added volunteers from CSV: 0 updated, 2 added"
+    },
     {
       "id": "1779310533592",
       "timestamp": "2026-05-20T20:55:33.592Z",
