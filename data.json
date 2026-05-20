@@ -6525,7 +6525,7 @@
     {
       "id": "9365",
       "name": "Pugh, Clayton",
-      "type": "Volunteer",
+      "type": "Captain",
       "hole": 12,
       "phone": "(817) 991-2331",
       "email": "cpugh4535@gmail.com",
@@ -6544,7 +6544,9 @@
       "address": "4001 High Meadows Dr. Alvarado, TX 76009-6526",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779315319375,
+      "notes": "",
+      "hatReceived": false
     },
     {
       "id": "6949",
@@ -9074,6 +9076,24 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779315331528",
+      "timestamp": "2026-05-20T22:15:31.528Z",
+      "user": "Wehmeyer, Tom",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779315319375-av4lob",
+      "timestamp": "2026-05-20T22:15:19.375Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Pugh, Clayton",
+      "details": "Updated fields: type, notes, hatReceived"
+    },
     {
       "id": "1779315295440",
       "timestamp": "2026-05-20T22:14:55.440Z",
