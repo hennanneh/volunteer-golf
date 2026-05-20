@@ -9076,6 +9076,15 @@
   },
   "activityLog": [
     {
+      "id": "1779319124902",
+      "timestamp": "2026-05-20T23:18:44.902Z",
+      "user": "Howrey, Anne",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
       "id": "1779318117479",
       "timestamp": "2026-05-20T23:01:57.479Z",
       "user": "Kutzler, Jack",
