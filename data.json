@@ -9067,6 +9067,33 @@
   },
   "activityLog": [
     {
+      "id": "1779283459211",
+      "timestamp": "2026-05-20T13:24:19.211Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Anderson, Rob",
+      "details": "Wednesday AM - Hole #8"
+    },
+    {
+      "id": "1779283457926",
+      "timestamp": "2026-05-20T13:24:17.926Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Anderson, Rob",
+      "details": "Wednesday AM - Hole #8"
+    },
+    {
+      "id": "1779283450425",
+      "timestamp": "2026-05-20T13:24:10.425Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1779281517616",
       "timestamp": "2026-05-20T12:51:57.616Z",
       "user": "Sale, Lynn",
