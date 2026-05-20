@@ -2744,6 +2744,7 @@
       "yearsWorked": 8,
       "hat": "",
       "scheduled": {
+        "Tuesday PM": true,
         "Wednesday AM": true,
         "Thursday AM": true,
         "Friday PM": true,
@@ -2754,7 +2755,7 @@
       "address": "541 Tuscanny St Brandon, FL 33511",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779316745704
     },
     {
       "id": "6335",
@@ -2766,6 +2767,7 @@
       "yearsWorked": 8,
       "hat": "",
       "scheduled": {
+        "Tuesday PM": true,
         "Wednesday AM": true,
         "Thursday AM": true,
         "Friday PM": true,
@@ -2776,7 +2778,7 @@
       "address": "2433 Timber Ridge Ln Flower Mound, TX 75028",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779316773492
     },
     {
       "id": "8359",
@@ -9071,11 +9073,65 @@
     "helpEmail": "mike@hulenbend.net",
     "amShiftCutoff": "13:00",
     "pmShiftCutoff": "19:00",
-    "numberOfHoles": 18,
+    "numberOfHoles": 20,
     "helpName": "Mike Hill",
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779316786678",
+      "timestamp": "2026-05-20T22:39:46.678Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "settings-change",
+      "target": "numberOfHoles",
+      "details": "Updated setting: numberOfHoles"
+    },
+    {
+      "id": "1779316786486",
+      "timestamp": "2026-05-20T22:39:46.486Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "settings-change",
+      "target": "numberOfHoles",
+      "details": "Updated setting: numberOfHoles"
+    },
+    {
+      "id": "1779316782481",
+      "timestamp": "2026-05-20T22:39:42.481Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1779316773492-hsy57f",
+      "timestamp": "2026-05-20T22:39:33.492Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Gray, Jerry",
+      "details": "added Tuesday PM"
+    },
+    {
+      "id": "1779316745704-jog936",
+      "timestamp": "2026-05-20T22:39:05.704Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Gray, James",
+      "details": "added Tuesday PM"
+    },
+    {
+      "id": "1779316727145",
+      "timestamp": "2026-05-20T22:38:47.145Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779315331528",
       "timestamp": "2026-05-20T22:15:31.528Z",
