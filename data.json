@@ -4448,7 +4448,8 @@
       "address": "6428 Maple Drive The Colony, TX 75056",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778855733556
+      "lastModified": 1778855733556,
+      "volunteerPassword": "$2b$10$PPSYdhx9.iFEcH140U.MAOtU1rFsaIqh1ovYvwsghLtdOZTmPz1.u"
     },
     {
       "id": "9999",
@@ -5814,13 +5815,14 @@
         "Friday PM": true,
         "Saturday AM": true,
         "Saturday PM": true,
+        "Sunday AM": true,
         "Sunday PM": true
       },
       "volId": "9133",
       "address": "1603 Cherokee Trl, Plano TX 75023 Plano, TX 75023",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779317753862
     },
     {
       "id": "9952",
@@ -9073,6 +9075,33 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779317932434",
+      "timestamp": "2026-05-20T22:58:52.434Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1779317865196",
+      "timestamp": "2026-05-20T22:57:45.196Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1779317753862-639z6u",
+      "timestamp": "2026-05-20T22:55:53.862Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Nall, Kelly",
+      "details": "added Sunday AM"
+    },
     {
       "id": "1779317528698",
       "timestamp": "2026-05-20T22:52:08.698Z",
