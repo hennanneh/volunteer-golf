@@ -6710,18 +6710,13 @@
       "email": "mreddington@envoymortgage.com",
       "yearsWorked": 1,
       "hat": "",
-      "scheduled": {
-        "Tuesday AM": true,
-        "Thursday AM": true,
-        "Friday PM": true,
-        "Saturday AM": true,
-        "Sunday PM": true
-      },
+      "scheduled": {},
       "volId": "10483",
       "address": "46 Frontier Street Rye, NH 03870",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779317305973,
+      "notes": "Will not be able to attend"
     },
     {
       "id": "7070",
@@ -9078,6 +9073,15 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779317305973-vralnv",
+      "timestamp": "2026-05-20T22:48:25.973Z",
+      "user": "Wehmeyer, Tom",
+      "userType": "Captain",
+      "action": "edit-volunteer",
+      "target": "Reddington, Michael",
+      "details": "Updated fields: scheduled, notes"
+    },
     {
       "id": "1779316944968",
       "timestamp": "2026-05-20T22:42:24.968Z",
