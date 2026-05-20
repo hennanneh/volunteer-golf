@@ -1432,7 +1432,7 @@
             dataReadAt: dataReadAt
           })
         }).then(function(resp) {
-          return resp.json().then(function(j) { return { ok: resp.ok, body: j }; });
+          return resp.json().then(function(j) { return { ok: resp.ok, status: resp.status, body: j }; });
         }).then(function(r) {
           if (r.ok && r.body && r.body.success) {
             // Server accepted. Clear acked deletes and advance dataReadAt
@@ -1447,6 +1447,11 @@
             // Stop saving silently into the void — surface it and force a reload
             // so the user doesn't keep typing changes that won't persist.
             showStaleClientPrompt(r.body.error || 'Your page is out of date. Please reload.');
+          } else if (r.status === 403) {
+            // Volunteer-role users running pre-role-restriction cached SPA code
+            // hit this when the old code path POSTs the full dataset. Tell them
+            // to reload so they get the new SPA that uses per-record PATCHes.
+            showStaleClientPrompt('Your app is out of date and your save was blocked. Tap Reload to update, then try again.');
           } else {
             console.error('Save rejected by server:', r.body && r.body.error);
             showToast('Save failed — please retry');
