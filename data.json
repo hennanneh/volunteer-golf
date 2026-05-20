@@ -7458,37 +7458,6 @@
       "lastModified": 1778813044771
     },
     {
-      "id": "7326",
-      "name": "Shackelford, Bill",
-      "type": "Captain",
-      "hole": 12,
-      "phone": "(817) 307-4072",
-      "email": "shackbmk@yahoo.com",
-      "yearsWorked": 8,
-      "hat": "",
-      "scheduled": {
-        "Monday AM": true,
-        "Monday PM": true,
-        "Tuesday AM": true,
-        "Tuesday PM": true,
-        "Wednesday AM": true,
-        "Wednesday PM": true,
-        "Thursday AM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
-        "Friday PM": true,
-        "Saturday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true,
-        "Sunday PM": true
-      },
-      "address": "5104 Pinellas Ave Fort Worth, TX 76244",
-      "volId": "7326",
-      "hasAdminPassword": false,
-      "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
-    },
-    {
       "id": "10566",
       "name": "Sharrah, Adam",
       "type": "Volunteer",
@@ -9105,6 +9074,15 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779315295440",
+      "timestamp": "2026-05-20T22:14:55.440Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "delete",
+      "target": "Shackelford, Bill",
+      "details": "Deleted volunteer"
+    },
     {
       "id": "1779314487349",
       "timestamp": "2026-05-20T22:01:27.349Z",
@@ -13956,6 +13934,10 @@
     {
       "id": "9393",
       "deletedAt": 1779224305559
+    },
+    {
+      "id": "7326",
+      "deletedAt": 1779315294724
     }
   ],
   "serverNow": 1779231895004
