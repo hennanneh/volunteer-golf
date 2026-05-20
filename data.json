@@ -9067,6 +9067,15 @@
   },
   "activityLog": [
     {
+      "id": "1779310456266",
+      "timestamp": "2026-05-20T20:54:16.266Z",
+      "user": "Butler, Mark",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1779304772327",
       "timestamp": "2026-05-20T19:19:32.327Z",
       "user": "Sanders, Steve",
