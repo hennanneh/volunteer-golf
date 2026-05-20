@@ -9076,6 +9076,15 @@
   },
   "activityLog": [
     {
+      "id": "1779318117479",
+      "timestamp": "2026-05-20T23:01:57.479Z",
+      "user": "Kutzler, Jack",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
       "id": "1779317932434",
       "timestamp": "2026-05-20T22:58:52.434Z",
       "user": "Hill, Michael",
