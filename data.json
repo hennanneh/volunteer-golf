@@ -145,7 +145,6 @@
       "hat": "",
       "scheduled": {
         "Monday PM": true,
-        "Tuesday AM": true,
         "Wednesday AM": true,
         "Wednesday PM": true,
         "Thursday PM": true,
@@ -157,7 +156,7 @@
       "volId": "8887",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779404000377
     },
     {
       "id": "10644",
@@ -9034,6 +9033,15 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779404000377-su7s1e",
+      "timestamp": "2026-05-21T22:53:20.377Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Arnold, Tyrone",
+      "details": "removed Tuesday AM"
+    },
     {
       "id": "1779402677726",
       "timestamp": "2026-05-21T22:31:17.726Z",
