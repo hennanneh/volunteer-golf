@@ -9057,6 +9057,24 @@
   },
   "activityLog": [
     {
+      "id": "1779396716310",
+      "timestamp": "2026-05-21T20:51:56.310Z",
+      "user": "Wehmeyer, Tom",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779396707272",
+      "timestamp": "2026-05-21T20:51:47.272Z",
+      "user": "Wehmeyer, Tom",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
       "id": "1779394565726",
       "timestamp": "2026-05-21T20:16:05.726Z",
       "user": "Hill, Michael",
