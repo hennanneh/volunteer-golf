@@ -1638,6 +1638,7 @@
       "yearsWorked": 7,
       "hat": "",
       "scheduled": {
+        "Wednesday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
         "Friday PM": true,
@@ -1648,7 +1649,7 @@
       "address": "3505 park hollow street fort worth, TX 76109",
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
-      "lastModified": 1778813044771,
+      "lastModified": 1779371036312,
       "volunteerPassword": "$2b$10$9FjIccqDbqxhsVPSrbVMxuKlpbdMMqmJQ/hSvcAjoDpCGg2ZoFGQW"
     },
     {
@@ -9078,6 +9079,24 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779371036312-d6v7rf",
+      "timestamp": "2026-05-21T13:43:56.312Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Davis, Sam",
+      "details": "added Wednesday AM"
+    },
+    {
+      "id": "1779371007447",
+      "timestamp": "2026-05-21T13:43:27.447Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779370556370",
       "timestamp": "2026-05-21T13:35:56.370Z",
