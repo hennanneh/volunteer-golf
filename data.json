@@ -2618,18 +2618,12 @@
       "email": "greggooch58@gmail.com",
       "yearsWorked": 2,
       "hat": "",
-      "scheduled": {
-        "Wednesday AM": true,
-        "Thursday AM": true,
-        "Friday PM": true,
-        "Saturday AM": true,
-        "Sunday PM": true
-      },
+      "scheduled": {},
       "volId": "10087",
       "address": "4110 Brownwood Lane Arlington, TX 76017",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779381066517
     },
     {
       "id": "9461",
@@ -5722,17 +5716,17 @@
       "yearsWorked": 1,
       "hat": "",
       "scheduled": {
-        "Monday PM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true
+        "Wednesday AM": true,
+        "Thursday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
+        "Sunday PM": true
       },
       "address": "5200 Kensington Ct\r\nFlower Mound, TX 75022",
       "volId": "10707",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779381217899
     },
     {
       "id": "1770",
@@ -9074,6 +9068,24 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779381217899-r537me",
+      "timestamp": "2026-05-21T16:33:37.899Z",
+      "user": "Quintana, Mike",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Mulliken, Reed",
+      "details": "added Wednesday AM, Thursday AM, Friday PM, Saturday AM, Sunday PM; removed Monday PM, Thursday PM, Friday AM, Saturday PM, Sunday AM"
+    },
+    {
+      "id": "1779381066517-bknlx7",
+      "timestamp": "2026-05-21T16:31:06.517Z",
+      "user": "Quintana, Mike",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Gooch, Greg",
+      "details": "removed Wednesday AM, Thursday AM, Friday PM, Saturday AM, Sunday PM"
+    },
     {
       "id": "1779380893049-xldo9b",
       "timestamp": "2026-05-21T16:28:13.049Z",
