@@ -6169,6 +6169,7 @@
       "scheduled": {
         "Monday AM": true,
         "Thursday AM": true,
+        "Thursday PM": true,
         "Friday PM": true,
         "Saturday AM": true,
         "Sunday PM": true
@@ -6177,7 +6178,7 @@
       "volId": "7723",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779391046820
     },
     {
       "id": "10130",
@@ -9077,6 +9078,51 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779391162228",
+      "timestamp": "2026-05-21T19:19:22.228Z",
+      "user": "Mckenzie, Roy",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779391103473",
+      "timestamp": "2026-05-21T19:18:23.473Z",
+      "user": "Mckenzie, Roy",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779391078423",
+      "timestamp": "2026-05-21T19:17:58.423Z",
+      "user": "Mckenzie, Roy",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1779391046820-3mqd8y",
+      "timestamp": "2026-05-21T19:17:26.820Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Penneman, Douglas",
+      "details": "added Thursday PM"
+    },
+    {
+      "id": "1779391043356",
+      "timestamp": "2026-05-21T19:17:23.356Z",
+      "user": "Mckenzie, Roy",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
     {
       "id": "1779390854438",
       "timestamp": "2026-05-21T19:14:14.438Z",
