@@ -9079,6 +9079,33 @@
   },
   "activityLog": [
     {
+      "id": "1779370556370",
+      "timestamp": "2026-05-21T13:35:56.370Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Sale, Lynn",
+      "details": "Thursday AM - Hole #2"
+    },
+    {
+      "id": "1779370554400",
+      "timestamp": "2026-05-21T13:35:54.400Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Sale, Lynn",
+      "details": "Thursday AM - Hole #2"
+    },
+    {
+      "id": "1779370548186",
+      "timestamp": "2026-05-21T13:35:48.189Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1779369967232",
       "timestamp": "2026-05-21T13:26:07.232Z",
       "user": "Mulvaney, Matt",
