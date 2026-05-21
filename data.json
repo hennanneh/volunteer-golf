@@ -333,19 +333,12 @@
       "email": "bles3@sbcglobal.net",
       "yearsWorked": 3,
       "hat": "",
-      "scheduled": {
-        "Monday AM": true,
-        "Wednesday AM": true,
-        "Thursday AM": true,
-        "Friday PM": true,
-        "Saturday AM": true,
-        "Sunday PM": true
-      },
+      "scheduled": {},
       "volId": "9143",
       "address": "8037 Malabar Trl. Fort Worth, TX 76123",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779394110096
     },
     {
       "id": "7794",
@@ -9079,6 +9072,15 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779394110096-gi1pa1",
+      "timestamp": "2026-05-21T20:08:30.096Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Becker, Elaine",
+      "details": "removed Monday AM, Wednesday AM, Thursday AM, Friday PM, Saturday AM, Sunday PM"
+    },
     {
       "id": "1779393667348",
       "timestamp": "2026-05-21T20:01:07.348Z",
