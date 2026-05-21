@@ -415,15 +415,15 @@
         "Monday PM": true,
         "Wednesday PM": true,
         "Thursday PM": true,
-        "Friday AM": true,
+        "Friday PM": true,
         "Saturday PM": true,
-        "Sunday AM": true
+        "Sunday PM": true
       },
       "volId": "7747",
       "address": "216 s mesquite st Muenster, TX 76252",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779380847289
     },
     {
       "id": "3937",
@@ -733,14 +733,13 @@
         "Wednesday PM": true,
         "Thursday AM": true,
         "Friday PM": true,
-        "Saturday AM": true,
-        "Sunday PM": true
+        "Saturday AM": true
       },
       "volId": "2393",
       "address": "1109 Byron Lane Arlington, TX 76012-1829",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779380893049
     },
     {
       "id": "3034",
@@ -1762,7 +1761,6 @@
       "yearsWorked": 2,
       "hat": "",
       "scheduled": {
-        "Monday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
         "Saturday PM": true,
@@ -1772,7 +1770,7 @@
       "address": "5601 Ridgepass Ln McKinney, TX 75071",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779380769952
     },
     {
       "id": "9371",
@@ -6587,8 +6585,6 @@
       "yearsWorked": 13,
       "hat": "",
       "scheduled": {
-        "Monday AM": true,
-        "Monday PM": true,
         "Tuesday AM": true,
         "Tuesday PM": true,
         "Wednesday AM": true,
@@ -6606,7 +6602,7 @@
       "volId": "5217",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779380727572
     },
     {
       "id": "450",
@@ -8336,9 +8332,6 @@
       "scheduled": {
         "Monday AM": true,
         "Monday PM": true,
-        "Tuesday AM": true,
-        "Tuesday PM": true,
-        "Wednesday AM": true,
         "Wednesday PM": true,
         "Thursday AM": true,
         "Thursday PM": true,
@@ -8353,7 +8346,7 @@
       "volId": "274",
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
-      "lastModified": 1778813044771,
+      "lastModified": 1779380744301,
       "volunteerPassword": "$2b$10$U5uVBvNFEigl6rCUOTfgY.AcIrM.K3eH8iVlsS9iux0Td3Yl3DXFy"
     },
     {
@@ -9081,6 +9074,51 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779380893049-xldo9b",
+      "timestamp": "2026-05-21T16:28:13.049Z",
+      "user": "Quintana, Mike",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Burkhead, Max",
+      "details": "removed Sunday PM"
+    },
+    {
+      "id": "1779380847289-3ho90l",
+      "timestamp": "2026-05-21T16:27:27.289Z",
+      "user": "Quintana, Mike",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Bezner, Matt",
+      "details": "added Friday PM, Sunday PM; removed Friday AM, Sunday AM"
+    },
+    {
+      "id": "1779380769952-7lbrwh",
+      "timestamp": "2026-05-21T16:26:09.952Z",
+      "user": "Quintana, Mike",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Dority, Jenny",
+      "details": "removed Monday AM"
+    },
+    {
+      "id": "1779380744301-4w7gpt",
+      "timestamp": "2026-05-21T16:25:44.301Z",
+      "user": "Quintana, Mike",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Waller, Gary",
+      "details": "removed Tuesday AM, Tuesday PM, Wednesday AM"
+    },
+    {
+      "id": "1779380727572-nm9s6f",
+      "timestamp": "2026-05-21T16:25:27.573Z",
+      "user": "Quintana, Mike",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Quintana, Mike",
+      "details": "removed Monday AM, Monday PM"
+    },
     {
       "id": "1779380555127",
       "timestamp": "2026-05-21T16:22:35.127Z",
