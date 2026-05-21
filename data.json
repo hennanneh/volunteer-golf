@@ -6241,18 +6241,16 @@
         "Tuesday AM": true,
         "Thursday AM": true,
         "Thursday PM": true,
-        "Friday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
         "Saturday PM": true,
-        "Sunday AM": true,
         "Sunday PM": true
       },
       "volId": "10150",
       "address": "7501 Ranch Ct. Benbrook, TX 76126",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779218923775
+      "lastModified": 1779368847939
     },
     {
       "id": "9575",
@@ -9080,6 +9078,51 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779368858839",
+      "timestamp": "2026-05-21T13:07:38.839Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779368847939-0i4wxi",
+      "timestamp": "2026-05-21T13:07:27.940Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Peterson, Durk",
+      "details": "removed Friday AM, Sunday AM"
+    },
+    {
+      "id": "1779368822378",
+      "timestamp": "2026-05-21T13:07:02.378Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779368771084",
+      "timestamp": "2026-05-21T13:06:11.084Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779368767994",
+      "timestamp": "2026-05-21T13:06:07.994Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
     {
       "id": "1779368610057",
       "timestamp": "2026-05-21T13:03:30.057Z",
@@ -14144,5 +14187,5 @@
       "deletedAt": 1779315294724
     }
   ],
-  "serverNow": 1779316945894
+  "serverNow": 1779368610752
 }
