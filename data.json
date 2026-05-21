@@ -7487,7 +7487,7 @@
       "yearsWorked": 2,
       "hat": "",
       "scheduled": {
-        "Monday AM": true,
+        "Wednesday PM": true,
         "Thursday AM": true,
         "Friday PM": true,
         "Saturday AM": true
@@ -7496,7 +7496,7 @@
       "volId": "10126",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779393158585
     },
     {
       "id": "10151",
@@ -9079,6 +9079,15 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779393158585-lrp8kq",
+      "timestamp": "2026-05-21T19:52:38.585Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Sickler, Debra",
+      "details": "added Wednesday PM; removed Monday AM"
+    },
     {
       "id": "1779391738159-s64esn",
       "timestamp": "2026-05-21T19:28:58.159Z",
