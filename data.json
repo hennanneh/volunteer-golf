@@ -389,7 +389,6 @@
       "yearsWorked": 1,
       "hat": "",
       "scheduled": {
-        "Monday AM": true,
         "Wednesday AM": true,
         "Thursday AM": true,
         "Thursday PM": true,
@@ -401,7 +400,7 @@
       "address": "1020 Brook Arbor Drive MANSFIELD, TX 76063",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779388124086
+      "lastModified": 1779389196917
     },
     {
       "id": "7747",
@@ -7321,7 +7320,6 @@
       "yearsWorked": 1,
       "hat": "",
       "scheduled": {
-        "Monday AM": true,
         "Wednesday AM": true,
         "Thursday AM": true,
         "Thursday PM": true,
@@ -7333,7 +7331,7 @@
       "address": "3516 Cockrill McKinney, TX 75072",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779388132455
+      "lastModified": 1779389211242
     },
     {
       "id": "8499",
@@ -9069,6 +9067,24 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779389211242-fqb4mv",
+      "timestamp": "2026-05-21T18:46:51.242Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Schaumburg, Kent",
+      "details": "removed Monday AM"
+    },
+    {
+      "id": "1779389196917-yv05zd",
+      "timestamp": "2026-05-21T18:46:36.917Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Bell, Scott",
+      "details": "removed Monday AM"
+    },
     {
       "id": "1779388132455-2748n8",
       "timestamp": "2026-05-21T18:28:52.455Z",
