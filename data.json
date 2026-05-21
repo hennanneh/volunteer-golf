@@ -7932,17 +7932,19 @@
       "yearsWorked": 1,
       "hat": "",
       "scheduled": {
+        "Monday AM": true,
+        "Tuesday AM": true,
         "Wednesday AM": true,
+        "Thursday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true
+        "Friday PM": true
       },
       "volId": "10547",
       "address": "2800 Highlawn Terrace Ft. Worth, TX 76133",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779332786007
     },
     {
       "id": "8608",
@@ -9078,6 +9080,24 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779332786008-e3a9ey",
+      "timestamp": "2026-05-21T03:06:26.008Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Surita, Rene",
+      "details": "added Monday AM, Tuesday AM, Thursday AM, Friday PM; removed Saturday PM, Sunday AM"
+    },
+    {
+      "id": "1779332716920",
+      "timestamp": "2026-05-21T03:05:16.920Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779329588808",
       "timestamp": "2026-05-21T02:13:08.808Z",
