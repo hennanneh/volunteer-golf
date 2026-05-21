@@ -7182,6 +7182,7 @@
       "yearsWorked": 3,
       "hat": "",
       "scheduled": {
+        "Tuesday AM": true,
         "Tuesday PM": true,
         "Thursday PM": true,
         "Friday AM": true,
@@ -7192,7 +7193,7 @@
       "address": "5149 Escambia Ter Fort Worth, TX 76244",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779381355451
     },
     {
       "id": "7191",
@@ -7505,8 +7506,6 @@
       "yearsWorked": 2,
       "hat": "",
       "scheduled": {
-        "Monday PM": true,
-        "Tuesday PM": true,
         "Wednesday PM": true,
         "Thursday PM": true,
         "Friday AM": true,
@@ -7517,7 +7516,7 @@
       "address": "11869 Vienna Apple Rd Fort Worth, TX 76244",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779381402004
     },
     {
       "id": "8462",
@@ -9068,6 +9067,33 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779381457269",
+      "timestamp": "2026-05-21T16:37:37.269Z",
+      "user": "Quintana, Mike",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779381402004-3ur6a6",
+      "timestamp": "2026-05-21T16:36:42.004Z",
+      "user": "Quintana, Mike",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Silvani, Rob",
+      "details": "removed Monday PM, Tuesday PM"
+    },
+    {
+      "id": "1779381355451-acklce",
+      "timestamp": "2026-05-21T16:35:55.451Z",
+      "user": "Quintana, Mike",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Sanders, Denny",
+      "details": "added Tuesday AM"
+    },
     {
       "id": "1779381217899-r537me",
       "timestamp": "2026-05-21T16:33:37.899Z",
