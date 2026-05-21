@@ -9080,6 +9080,24 @@
   },
   "activityLog": [
     {
+      "id": "1779374216951",
+      "timestamp": "2026-05-21T14:36:56.951Z",
+      "user": "Wehmeyer, Tom",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779374130676",
+      "timestamp": "2026-05-21T14:35:30.676Z",
+      "user": "Elkins, Paul",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1779371036312-d6v7rf",
       "timestamp": "2026-05-21T13:43:56.312Z",
       "user": "Holt, Sharron",
