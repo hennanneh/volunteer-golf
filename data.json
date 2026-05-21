@@ -325,22 +325,6 @@
       "lastModified": 1778813044771
     },
     {
-      "id": "9143",
-      "name": "Becker, Elaine",
-      "type": "Volunteer",
-      "hole": 16,
-      "phone": "(817) 797-5907",
-      "email": "bles3@sbcglobal.net",
-      "yearsWorked": 3,
-      "hat": "",
-      "scheduled": {},
-      "volId": "9143",
-      "address": "8037 Malabar Trl. Fort Worth, TX 76123",
-      "hasAdminPassword": false,
-      "hasVolunteerPassword": false,
-      "lastModified": 1779394110096
-    },
-    {
       "id": "7794",
       "name": "Beckley, Bob",
       "type": "Captain",
@@ -9073,6 +9057,24 @@
   },
   "activityLog": [
     {
+      "id": "1779394565726",
+      "timestamp": "2026-05-21T20:16:05.726Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "delete",
+      "target": "Becker, Elaine",
+      "details": "Deleted volunteer"
+    },
+    {
+      "id": "1779394535053",
+      "timestamp": "2026-05-21T20:15:35.053Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
       "id": "1779394110096-gi1pa1",
       "timestamp": "2026-05-21T20:08:30.096Z",
       "user": "Roy, Mike",
@@ -14575,6 +14577,10 @@
     {
       "id": "7326",
       "deletedAt": 1779315294724
+    },
+    {
+      "id": "9143",
+      "deletedAt": 1779394565613
     }
   ],
   "serverNow": 1779368610752
