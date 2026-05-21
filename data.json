@@ -1642,14 +1642,16 @@
         "Thursday PM": true,
         "Friday AM": true,
         "Friday PM": true,
+        "Saturday AM": true,
         "Saturday PM": true,
-        "Sunday AM": true
+        "Sunday AM": true,
+        "Sunday PM": true
       },
       "volId": "7865",
       "address": "3505 park hollow street fort worth, TX 76109",
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
-      "lastModified": 1779371036312,
+      "lastModified": 1779377824405,
       "volunteerPassword": "$2b$10$9FjIccqDbqxhsVPSrbVMxuKlpbdMMqmJQ/hSvcAjoDpCGg2ZoFGQW"
     },
     {
@@ -9079,6 +9081,15 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779377824405-fookyk",
+      "timestamp": "2026-05-21T15:37:04.406Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Davis, Sam",
+      "details": "added Saturday AM, Sunday PM"
+    },
     {
       "id": "1779376614505",
       "timestamp": "2026-05-21T15:16:54.505Z",
