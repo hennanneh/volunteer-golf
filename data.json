@@ -5241,7 +5241,7 @@
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
       "lastModified": 1778813044771,
-      "volunteerPassword": "$2b$10$Nwjkzj6HFvTtMNEQKQV4M.cUqH9qJaNE91dHszeJD0p.Ct6.hOrWW"
+      "volunteerPassword": "$2b$10$dw/gDj1Uo//GAtNslPH1tevBG3Lgw74SbYDsNFJqLicksyKtvp9SS"
     },
     {
       "id": "10329",
@@ -9051,6 +9051,16 @@
       "checkedInBy": "Mcdaniel, Patrick",
       "timestamp": "2026-05-19T13:15:39.953Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "342",
+      "volunteerName": "Mckenzie, Roy",
+      "hole": 12,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Mckenzie, Roy",
+      "timestamp": "2026-05-21T19:02:48.217Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -9067,6 +9077,24 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779390168276",
+      "timestamp": "2026-05-21T19:02:48.276Z",
+      "user": "Mckenzie, Roy",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Mckenzie, Roy",
+      "details": "Thursday PM - Hole #12"
+    },
+    {
+      "id": "1779390164256",
+      "timestamp": "2026-05-21T19:02:44.256Z",
+      "user": "Mckenzie, Roy",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779389211242-fqb4mv",
       "timestamp": "2026-05-21T18:46:51.242Z",
