@@ -5200,8 +5200,10 @@
       "hat": "",
       "scheduled": {
         "Monday AM": true,
+        "Thursday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
+        "Friday PM": true,
         "Saturday PM": true,
         "Sunday AM": true
       },
@@ -5209,7 +5211,7 @@
       "address": "8616 Amhurst Ct North Richland Hills, TX 76182",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779391692223
     },
     {
       "id": "342",
@@ -6122,7 +6124,6 @@
       "hat": "",
       "scheduled": {
         "Tuesday AM": true,
-        "Wednesday AM": true,
         "Thursday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
@@ -6132,7 +6133,7 @@
       "address": "2121 Robinwood Dr. Fort Worth, TX 76111",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779391738159
     },
     {
       "id": "5952",
@@ -9078,6 +9079,24 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779391738159-s64esn",
+      "timestamp": "2026-05-21T19:28:58.159Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Pate, Gene",
+      "details": "removed Wednesday AM"
+    },
+    {
+      "id": "1779391692226-9vozvb",
+      "timestamp": "2026-05-21T19:28:12.226Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Mcjunkin, Curtis",
+      "details": "added Thursday AM, Friday PM"
+    },
     {
       "id": "1779391162228",
       "timestamp": "2026-05-21T19:19:22.228Z",
