@@ -9035,6 +9035,15 @@
   },
   "activityLog": [
     {
+      "id": "1779402677726",
+      "timestamp": "2026-05-21T22:31:17.726Z",
+      "user": "Browning, Wayne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1779402579990",
       "timestamp": "2026-05-21T22:29:39.990Z",
       "user": "Wehmeyer, Tom",
