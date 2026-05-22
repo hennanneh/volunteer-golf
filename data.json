@@ -9025,6 +9025,24 @@
   },
   "activityLog": [
     {
+      "id": "1779417325568",
+      "timestamp": "2026-05-22T02:35:25.568Z",
+      "user": "Butler, Mark",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779417314970",
+      "timestamp": "2026-05-22T02:35:14.970Z",
+      "user": "Butler, Mark",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1779412814688-apgji7",
       "timestamp": "2026-05-22T01:20:14.688Z",
       "user": "Beckley, Bob",
