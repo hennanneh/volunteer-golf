@@ -867,7 +867,7 @@
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
       "lastModified": 1778813044771,
-      "volunteerPassword": "$2b$10$emURW0.XkBhWl94pFMp9Oun1BgF5RNujywKgEaJtVHz5tejWZaQL6"
+      "volunteerPassword": "$2b$10$YZEgSm5/CHsF7k2WCQv2huNrcsIesdch.xhC.s5omSMv7X.fypEXO"
     },
     {
       "id": "10573",
@@ -1628,7 +1628,7 @@
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
       "lastModified": 1779377824405,
-      "volunteerPassword": "$2b$10$9FjIccqDbqxhsVPSrbVMxuKlpbdMMqmJQ/hSvcAjoDpCGg2ZoFGQW"
+      "volunteerPassword": "$2b$10$lYLY8ZA5q3YaZEDSub8wXeobmBxenUQvgyjjuv0oNRuV7e3mKonny"
     },
     {
       "id": "636",
@@ -9024,6 +9024,15 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779458607108",
+      "timestamp": "2026-05-22T14:03:27.108Z",
+      "user": "Butler, Mark",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779456941505",
       "timestamp": "2026-05-22T13:35:41.505Z",
