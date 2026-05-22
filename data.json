@@ -9025,6 +9025,42 @@
   },
   "activityLog": [
     {
+      "id": "1779461074766",
+      "timestamp": "2026-05-22T14:44:34.766Z",
+      "user": "Thomas, Stephen",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1779461058292",
+      "timestamp": "2026-05-22T14:44:18.292Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779461020633",
+      "timestamp": "2026-05-22T14:43:40.633Z",
+      "user": "Gordon, Gary",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1779460979087",
+      "timestamp": "2026-05-22T14:42:59.087Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1779459727810",
       "timestamp": "2026-05-22T14:22:07.810Z",
       "user": "Gastinel, Buck",
@@ -14906,5 +14942,5 @@
       "deletedAt": 1779402511395
     }
   ],
-  "serverNow": 1779368610752
+  "serverNow": 1779461021414
 }
