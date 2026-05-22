@@ -9029,6 +9029,42 @@
   },
   "activityLog": [
     {
+      "id": "1779465874098",
+      "timestamp": "2026-05-22T16:04:34.098Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779465753017",
+      "timestamp": "2026-05-22T16:02:33.017Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779465737158",
+      "timestamp": "2026-05-22T16:02:17.158Z",
+      "user": "Trout, Wayne",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1779465685306",
+      "timestamp": "2026-05-22T16:01:25.306Z",
+      "user": "Trout, Wayne",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
       "id": "1779462688285",
       "timestamp": "2026-05-22T15:11:28.285Z",
       "user": "Gordon, Gary",
