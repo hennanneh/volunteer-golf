@@ -9028,6 +9028,60 @@
   },
   "activityLog": [
     {
+      "id": "1779485095049",
+      "timestamp": "2026-05-22T21:24:55.049Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779485037473",
+      "timestamp": "2026-05-22T21:23:57.473Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779484905267",
+      "timestamp": "2026-05-22T21:21:45.267Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779484900596",
+      "timestamp": "2026-05-22T21:21:40.596Z",
+      "user": "Holt, Sharron",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1779484877034",
+      "timestamp": "2026-05-22T21:21:17.035Z",
+      "user": "Holt, Sharron",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1779484872590",
+      "timestamp": "2026-05-22T21:21:12.590Z",
+      "user": "Holt, Sharron",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
       "id": "1779484799338",
       "timestamp": "2026-05-22T21:19:59.338Z",
       "user": "Holt, Sharron",
@@ -15219,5 +15273,5 @@
       "deletedAt": 1779402511395
     }
   ],
-  "serverNow": 1779480814160
+  "serverNow": 1779484799323
 }
