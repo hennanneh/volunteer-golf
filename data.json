@@ -9025,6 +9025,15 @@
   },
   "activityLog": [
     {
+      "id": "1779458732347",
+      "timestamp": "2026-05-22T14:05:32.348Z",
+      "user": "Mosler, Mitch",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1779458607108",
       "timestamp": "2026-05-22T14:03:27.108Z",
       "user": "Butler, Mark",
