@@ -240,13 +240,14 @@
         "Thursday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
+        "Sunday AM": true,
         "Sunday PM": true
       },
       "volId": "6349",
       "address": "5308 Timberwilde Fort Worth, TX 76112",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779409524658
     },
     {
       "id": "10737",
@@ -9034,6 +9035,15 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779409524658-qlc3yh",
+      "timestamp": "2026-05-22T00:25:24.658Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Bailey, Archie",
+      "details": "added Sunday AM"
+    },
     {
       "id": "1779408894702-taw11v",
       "timestamp": "2026-05-22T00:14:54.702Z",
