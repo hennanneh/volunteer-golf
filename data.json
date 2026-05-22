@@ -5052,18 +5052,13 @@
       "email": "jamesdmaxwell@yahoo.com",
       "yearsWorked": 1,
       "hat": "",
-      "scheduled": {
-        "Wednesday PM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true
-      },
+      "scheduled": {},
       "address": "9805 Brazoria Trail\r\nFort Worth, TX 76126",
       "volId": "10683",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779412814688,
+      "notes": "Had to drop out due to work in Montana."
     },
     {
       "id": "3489",
@@ -9029,6 +9024,15 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779412814688-apgji7",
+      "timestamp": "2026-05-22T01:20:14.688Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "edit-volunteer",
+      "target": "Maxwell, James",
+      "details": "Updated fields: scheduled, notes"
+    },
     {
       "id": "1779412405583",
       "timestamp": "2026-05-22T01:13:25.583Z",
