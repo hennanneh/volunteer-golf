@@ -7986,7 +7986,11 @@
       "volId": "5235",
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
-      "lastModified": 1778813044771,
+      "lastModified": 1779461164094,
+      "pairingPreferences": [
+        "6594",
+        "5924"
+      ],
       "volunteerPassword": "$2b$10$RXJPlIQSFHwTB/MVQS19SOFwYNoHqvClP1paaKyUlgYIXfNGcd5cO"
     },
     {
@@ -9024,6 +9028,64 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779461185429",
+      "timestamp": "2026-05-22T14:46:25.429Z",
+      "user": "Thomas, Stephen",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1779461164114-op50fg",
+      "timestamp": "2026-05-22T14:46:04.114Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "edit-volunteer",
+      "target": "Thomas, Stephen",
+      "details": "Updated fields: pairingPreferences (via bulk save)",
+      "targetHole": 15,
+      "actorHole": 15
+    },
+    {
+      "id": "1779461156005",
+      "timestamp": "2026-05-22T14:45:56.005Z",
+      "user": "Gordon, Gary",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779461149884",
+      "timestamp": "2026-05-22T14:45:49.884Z",
+      "user": "Gordon, Gary",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1779461141581-lnboca",
+      "timestamp": "2026-05-22T14:45:41.582Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "edit-volunteer",
+      "target": "Thomas, Stephen",
+      "details": "Updated fields: pairingPreferences (via bulk save)",
+      "targetHole": 15,
+      "actorHole": 15
+    },
+    {
+      "id": "1779461108467",
+      "timestamp": "2026-05-22T14:45:08.467Z",
+      "user": "Gordon, Gary",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
     {
       "id": "1779461074766",
       "timestamp": "2026-05-22T14:44:34.766Z",
