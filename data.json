@@ -9028,6 +9028,42 @@
   },
   "activityLog": [
     {
+      "id": "1779484799338",
+      "timestamp": "2026-05-22T21:19:59.338Z",
+      "user": "Holt, Sharron",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1779484552284",
+      "timestamp": "2026-05-22T21:15:52.284Z",
+      "user": "Holt, Sharron",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1779484544597",
+      "timestamp": "2026-05-22T21:15:44.597Z",
+      "user": "Holt, Sharron",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1779484539606",
+      "timestamp": "2026-05-22T21:15:39.606Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
       "id": "1779482066790",
       "timestamp": "2026-05-22T20:34:26.790Z",
       "user": "Hill, Michael",
