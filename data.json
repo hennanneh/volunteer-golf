@@ -3737,17 +3737,17 @@
       "hat": "",
       "scheduled": {
         "Wednesday PM": true,
+        "Thursday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
         "Friday PM": true,
-        "Saturday PM": true,
-        "Sunday AM": true
+        "Saturday PM": true
       },
       "volId": "10178",
       "address": "1855 Payne St #315 Dallas, TX 75201",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813380834
+      "lastModified": 1779480618683
     },
     {
       "id": "8787",
@@ -9027,6 +9027,60 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779480812961",
+      "timestamp": "2026-05-22T20:13:32.961Z",
+      "user": "Mulvaney, Matt",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779480806657",
+      "timestamp": "2026-05-22T20:13:26.657Z",
+      "user": "Mulvaney, Matt",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779480800887",
+      "timestamp": "2026-05-22T20:13:20.887Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779480775765",
+      "timestamp": "2026-05-22T20:12:55.765Z",
+      "user": "Mulvaney, Matt",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779480673362",
+      "timestamp": "2026-05-22T20:11:13.362Z",
+      "user": "Mulvaney, Matt",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779480618683-g0goz6",
+      "timestamp": "2026-05-22T20:10:18.685Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Jamison, Tina",
+      "details": "added Thursday AM; removed Sunday AM"
+    },
     {
       "id": "1779480090544",
       "timestamp": "2026-05-22T20:01:30.544Z",
@@ -15111,5 +15165,5 @@
       "deletedAt": 1779402511395
     }
   ],
-  "serverNow": 1779461021414
+  "serverNow": 1779480801664
 }
