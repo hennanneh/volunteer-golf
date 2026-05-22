@@ -4357,6 +4357,7 @@
       "yearsWorked": 2,
       "hat": "",
       "scheduled": {
+        "Monday AM": true,
         "Wednesday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
@@ -4367,7 +4368,7 @@
       "address": "764 Parkview Drive Burleson, TX 76028",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779408894702
     },
     {
       "id": "8345",
@@ -9033,6 +9034,24 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779408894702-taw11v",
+      "timestamp": "2026-05-22T00:14:54.702Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Kramer, Ed",
+      "details": "added Monday AM"
+    },
+    {
+      "id": "1779408879823",
+      "timestamp": "2026-05-22T00:14:39.823Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779405539362",
       "timestamp": "2026-05-21T23:18:59.362Z",
