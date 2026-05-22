@@ -9025,6 +9025,15 @@
   },
   "activityLog": [
     {
+      "id": "1779455182481",
+      "timestamp": "2026-05-22T13:06:22.481Z",
+      "user": "Elkins, Paul",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
       "id": "1779455027152",
       "timestamp": "2026-05-22T13:03:47.152Z",
       "user": "Elkins, Paul",
