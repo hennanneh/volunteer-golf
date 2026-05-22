@@ -9025,6 +9025,24 @@
   },
   "activityLog": [
     {
+      "id": "1779459589449",
+      "timestamp": "2026-05-22T14:19:49.449Z",
+      "user": "Gastinel, Buck",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1779459566520",
+      "timestamp": "2026-05-22T14:19:26.520Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1779458732347",
       "timestamp": "2026-05-22T14:05:32.348Z",
       "user": "Mosler, Mitch",
