@@ -3711,9 +3711,6 @@
       "scheduled": {
         "Monday AM": true,
         "Monday PM": true,
-        "Tuesday AM": true,
-        "Tuesday PM": true,
-        "Wednesday AM": true,
         "Wednesday PM": true,
         "Thursday AM": true,
         "Thursday PM": true,
@@ -3728,7 +3725,7 @@
       "volId": "2657",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779410970054
     },
     {
       "id": "10178",
@@ -8382,12 +8379,9 @@
       "yearsWorked": 30,
       "hat": "",
       "scheduled": {
-        "Monday AM": true,
-        "Monday PM": true,
         "Tuesday AM": true,
         "Tuesday PM": true,
         "Wednesday AM": true,
-        "Wednesday PM": true,
         "Thursday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
@@ -8401,7 +8395,7 @@
       "volId": "278",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779410914253
     },
     {
       "id": "7207",
@@ -9035,6 +9029,33 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779410970054-fg8dgc",
+      "timestamp": "2026-05-22T00:49:30.054Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "James, Marty",
+      "details": "removed Tuesday AM, Tuesday PM, Wednesday AM"
+    },
+    {
+      "id": "1779410914253-j65opu",
+      "timestamp": "2026-05-22T00:48:34.253Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Watson, Stan",
+      "details": "removed Monday AM, Monday PM, Wednesday PM"
+    },
+    {
+      "id": "1779410883253",
+      "timestamp": "2026-05-22T00:48:03.253Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779409524658-qlc3yh",
       "timestamp": "2026-05-22T00:25:24.658Z",
