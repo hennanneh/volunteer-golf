@@ -9030,6 +9030,15 @@
   },
   "activityLog": [
     {
+      "id": "1779411164870",
+      "timestamp": "2026-05-22T00:52:44.870Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
       "id": "1779410970054-fg8dgc",
       "timestamp": "2026-05-22T00:49:30.054Z",
       "user": "Watson, Stan",
