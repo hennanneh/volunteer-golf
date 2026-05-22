@@ -1617,7 +1617,6 @@
         "Wednesday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
-        "Friday PM": true,
         "Saturday AM": true,
         "Saturday PM": true,
         "Sunday AM": true,
@@ -1627,7 +1626,7 @@
       "address": "3505 park hollow street fort worth, TX 76109",
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
-      "lastModified": 1779377824405,
+      "lastModified": 1779476629493,
       "volunteerPassword": "$2b$10$lYLY8ZA5q3YaZEDSub8wXeobmBxenUQvgyjjuv0oNRuV7e3mKonny"
     },
     {
@@ -9028,6 +9027,24 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779476629493-snmwbp",
+      "timestamp": "2026-05-22T19:03:49.493Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Davis, Sam",
+      "details": "removed Friday PM"
+    },
+    {
+      "id": "1779476608524",
+      "timestamp": "2026-05-22T19:03:28.524Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779476348771",
       "timestamp": "2026-05-22T18:59:08.771Z",
