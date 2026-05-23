@@ -2260,7 +2260,7 @@
       "yearsWorked": 3,
       "hat": "",
       "scheduled": {
-        "Wednesday AM": true,
+        "Tuesday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
         "Saturday PM": true,
@@ -2270,7 +2270,7 @@
       "address": "6053 Bridgecreek Way Westworth Village, TX 76114-3538",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779563202783
     },
     {
       "id": "7317",
@@ -9163,6 +9163,24 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779563202783-hg1flj",
+      "timestamp": "2026-05-23T19:06:42.783Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Fitzjarrell, Gary",
+      "details": "added Tuesday AM; removed Wednesday AM"
+    },
+    {
+      "id": "1779563174276",
+      "timestamp": "2026-05-23T19:06:14.276Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779562796168",
       "timestamp": "2026-05-23T18:59:56.168Z",
