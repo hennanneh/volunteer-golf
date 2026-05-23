@@ -6881,7 +6881,6 @@
       "scheduled": {
         "Wednesday PM": true,
         "Thursday AM": true,
-        "Friday AM": true,
         "Friday PM": true,
         "Saturday PM": true,
         "Sunday AM": true
@@ -6890,7 +6889,7 @@
       "address": "7533 Ashcroft Cir Fort Worth, TX 76120",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779570668016
     },
     {
       "id": "10293",
@@ -9163,6 +9162,24 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779570668016-obprcj",
+      "timestamp": "2026-05-23T21:11:08.016Z",
+      "user": "Browning, Wayne",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Richie, Antonio",
+      "details": "removed Friday AM"
+    },
+    {
+      "id": "1779570619008",
+      "timestamp": "2026-05-23T21:10:19.008Z",
+      "user": "Browning, Wayne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779563202783-hg1flj",
       "timestamp": "2026-05-23T19:06:42.783Z",
