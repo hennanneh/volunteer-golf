@@ -9166,6 +9166,24 @@
   },
   "activityLog": [
     {
+      "id": "1779561567300",
+      "timestamp": "2026-05-23T18:39:27.300Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779561558641",
+      "timestamp": "2026-05-23T18:39:18.641Z",
+      "user": "Burnett, Eric",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1779560886749",
       "timestamp": "2026-05-23T18:28:06.749Z",
       "user": "Holt, Sammy",
