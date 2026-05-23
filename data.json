@@ -9141,6 +9141,15 @@
   },
   "activityLog": [
     {
+      "id": "1779575883202",
+      "timestamp": "2026-05-23T22:38:03.202Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1779574382880",
       "timestamp": "2026-05-23T22:13:02.880Z",
       "user": "Hill, Michael",
