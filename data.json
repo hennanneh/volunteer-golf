@@ -1498,28 +1498,6 @@
       "lastModified": 1778813044771
     },
     {
-      "id": "10728",
-      "name": "Crouse, Matthew",
-      "type": "Volunteer",
-      "hole": 11,
-      "phone": "(704) 575-0029",
-      "email": "mattcrouse0509@gmail.com",
-      "yearsWorked": 1,
-      "hat": "",
-      "scheduled": {
-        "Monday PM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true
-      },
-      "address": "6924 Basket Flower Road\r\nArgyle, TX 76226",
-      "volId": "10728",
-      "hasAdminPassword": false,
-      "hasVolunteerPassword": false,
-      "lastModified": 1778813080148
-    },
-    {
       "id": "333",
       "name": "Crow, Hampton",
       "type": "Volunteer",
@@ -9163,6 +9141,15 @@
   },
   "activityLog": [
     {
+      "id": "1779573349881",
+      "timestamp": "2026-05-23T21:55:49.881Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "delete",
+      "target": "Crouse, Matthew",
+      "details": "Deleted volunteer"
+    },
+    {
       "id": "1779573127401",
       "timestamp": "2026-05-23T21:52:07.401Z",
       "user": "Wilson, Todd",
@@ -16038,6 +16025,10 @@
     {
       "id": "10743",
       "deletedAt": 1779402511395
+    },
+    {
+      "id": "10728",
+      "deletedAt": 1779573373389
     }
   ],
   "serverNow": 1779548590323
