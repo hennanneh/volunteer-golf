@@ -7487,8 +7487,6 @@
       "scheduled": {
         "Monday AM": true,
         "Monday PM": true,
-        "Tuesday AM": true,
-        "Tuesday PM": true,
         "Wednesday AM": true,
         "Thursday AM": true,
         "Friday PM": true,
@@ -7499,7 +7497,7 @@
       "address": "1100 Foxtail Drive Mansfield, TX 76063",
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
-      "lastModified": 1779545347441,
+      "lastModified": 1779562782585,
       "volunteerPassword": "$2b$10$G.8xb3c2tuwsF59Cvi8P..fV0eNAa1eeIxJUgZ6oSa3gtDdT/y4Xy"
     },
     {
@@ -9165,6 +9163,24 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779562796168",
+      "timestamp": "2026-05-23T18:59:56.168Z",
+      "user": "Mcgowen, Mark",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1779562782585-7cvtni",
+      "timestamp": "2026-05-23T18:59:42.585Z",
+      "user": "Holt, Sammy",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Schumann, Rick",
+      "details": "removed Tuesday AM, Tuesday PM"
+    },
     {
       "id": "1779561567300",
       "timestamp": "2026-05-23T18:39:27.300Z",
