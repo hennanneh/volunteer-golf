@@ -3653,7 +3653,10 @@
       "volId": "5192",
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
-      "lastModified": 1778813044771,
+      "lastModified": 1779548627605,
+      "pairingPreferences": [
+        "6744"
+      ],
       "volunteerPassword": "$2b$10$0zYYM7XhyCZz9g/ylG8vZu1f3vIxfSeOxFH/1ub4jD1dSqcWkZoZe"
     },
     {
@@ -8393,7 +8396,6 @@
         "Tuesday AM": true,
         "Tuesday PM": true,
         "Wednesday AM": true,
-        "Wednesday PM": true,
         "Thursday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
@@ -8407,7 +8409,7 @@
       "volId": "278",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779548365708
+      "lastModified": 1779548456247
     },
     {
       "id": "7207",
@@ -9041,6 +9043,62 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779548654921",
+      "timestamp": "2026-05-23T15:04:14.921Z",
+      "user": "Imboden, Thomas",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1779548627610-r6pby9",
+      "timestamp": "2026-05-23T15:03:47.610Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "edit-volunteer",
+      "target": "Imboden, Thomas",
+      "details": "Updated fields: pairingPreferences (via bulk save)",
+      "targetHole": 5,
+      "actorHole": 5
+    },
+    {
+      "id": "1779548589447",
+      "timestamp": "2026-05-23T15:03:09.447Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779548555902",
+      "timestamp": "2026-05-23T15:02:35.902Z",
+      "user": "Imboden, Thomas",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1779548518315",
+      "timestamp": "2026-05-23T15:01:58.315Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779548456247-dqviyl",
+      "timestamp": "2026-05-23T15:00:56.247Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Watson, Stan",
+      "details": "removed Wednesday PM"
+    },
     {
       "id": "1779548365708-ij35lf",
       "timestamp": "2026-05-23T14:59:25.708Z",
@@ -15485,5 +15543,5 @@
       "deletedAt": 1779402511395
     }
   ],
-  "serverNow": 1779484799323
+  "serverNow": 1779548590323
 }
