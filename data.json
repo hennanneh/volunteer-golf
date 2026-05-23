@@ -2779,15 +2779,17 @@
       "hat": "",
       "scheduled": {
         "Wednesday AM": true,
+        "Thursday AM": true,
+        "Thursday PM": true,
         "Friday AM": true,
-        "Saturday AM": true,
-        "Sunday AM": true
+        "Friday PM": true,
+        "Saturday AM": true
       },
       "volId": "8359",
       "address": "PO Box 344 Gail, TX 79738",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779579845718
     },
     {
       "id": "9195",
@@ -9140,6 +9142,15 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779579845718-vc2drk",
+      "timestamp": "2026-05-23T23:44:05.718Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Gray, Leandro",
+      "details": "added Thursday AM, Thursday PM, Friday PM; removed Sunday AM"
+    },
     {
       "id": "1779575883202",
       "timestamp": "2026-05-23T22:38:03.202Z",
