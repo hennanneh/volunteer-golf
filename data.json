@@ -8989,16 +8989,6 @@
       "isAlternate": true
     },
     {
-      "volunteerId": "10730",
-      "volunteerName": "Duran, Michael",
-      "hole": 9,
-      "day": "Wednesday",
-      "shift": "AM",
-      "checkedInBy": "Edwards, Bill",
-      "timestamp": "2026-05-17T17:56:56.125Z",
-      "isAlternate": false
-    },
-    {
       "volunteerId": "9834",
       "volunteerName": "Piper, Kathleen",
       "hole": 6,
@@ -9043,6 +9033,24 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779552376593",
+      "timestamp": "2026-05-23T16:06:16.593Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Duran, Michael",
+      "details": "Wednesday AM - Hole #9"
+    },
+    {
+      "id": "1779552311684",
+      "timestamp": "2026-05-23T16:05:11.684Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779548708431",
       "timestamp": "2026-05-23T15:05:08.431Z",
