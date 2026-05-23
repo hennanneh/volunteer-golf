@@ -9163,6 +9163,15 @@
   },
   "activityLog": [
     {
+      "id": "1779573127401",
+      "timestamp": "2026-05-23T21:52:07.401Z",
+      "user": "Wilson, Todd",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1779570668016-obprcj",
       "timestamp": "2026-05-23T21:11:08.016Z",
       "user": "Browning, Wayne",
