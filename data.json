@@ -5911,7 +5911,6 @@
       "yearsWorked": 1,
       "hat": "",
       "scheduled": {
-        "Wednesday PM": true,
         "Thursday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
@@ -5921,7 +5920,7 @@
       "address": "22818 Deforest Ridge Lane Katy, TX 77494",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779148313061
+      "lastModified": 1779556270283
     },
     {
       "id": "6758",
@@ -9039,6 +9038,15 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779556270283-2zdzgo",
+      "timestamp": "2026-05-23T17:11:10.283Z",
+      "user": "Wehmeyer, Tom",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "O'Hanlon, Katherine",
+      "details": "removed Wednesday PM"
+    },
     {
       "id": "1779556036156-sug311",
       "timestamp": "2026-05-23T17:07:16.156Z",
