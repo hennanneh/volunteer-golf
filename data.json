@@ -3429,7 +3429,8 @@
       "hasVolunteerPassword": false,
       "hatReceived": false,
       "notes": "",
-      "lastModified": 1778813044771
+      "lastModified": 1778813044771,
+      "volunteerPassword": "$2b$10$owh0uhsN9UC1OUxI3TVSZOi2h4hLB08Sa98dCHiVMCRFJFInH5b.a"
     },
     {
       "id": "2543",
@@ -9164,6 +9165,69 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779560886749",
+      "timestamp": "2026-05-23T18:28:06.749Z",
+      "user": "Holt, Sammy",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779560880130",
+      "timestamp": "2026-05-23T18:28:00.130Z",
+      "user": "Holt, Sammy",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1779560871109",
+      "timestamp": "2026-05-23T18:27:51.109Z",
+      "user": "Holt, Sammy",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1779560865358",
+      "timestamp": "2026-05-23T18:27:45.358Z",
+      "user": "Holt, Sammy",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779560846109",
+      "timestamp": "2026-05-23T18:27:26.109Z",
+      "user": "Holt, Sammy",
+      "userType": "Captain",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed captain password"
+    },
+    {
+      "id": "1779560790546",
+      "timestamp": "2026-05-23T18:26:30.546Z",
+      "user": "Holt, Sammy",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779560735998",
+      "timestamp": "2026-05-23T18:25:35.998Z",
+      "user": "Holt, Sammy",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
     {
       "id": "1779560690053",
       "timestamp": "2026-05-23T18:24:50.053Z",
