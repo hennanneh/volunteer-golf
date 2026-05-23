@@ -1592,6 +1592,7 @@
       "hat": "",
       "scheduled": {
         "Monday AM": true,
+        "Monday PM": true,
         "Thursday PM": true,
         "Friday AM": true,
         "Saturday PM": true,
@@ -1601,7 +1602,7 @@
       "address": "7208 Wayfarer Trail Fort Worth, TX 76137",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771,
+      "lastModified": 1779545357304,
       "volunteerPassword": "$2b$10$GKL7PZuM3WGXVhda1BP4nuxSQdXTjVDJtFyO807Xs9btQFUklwTR6"
     },
     {
@@ -2496,7 +2497,9 @@
       "hat": "",
       "scheduled": {
         "Monday AM": true,
+        "Monday PM": true,
         "Tuesday AM": true,
+        "Tuesday PM": true,
         "Thursday PM": true,
         "Friday AM": true,
         "Saturday PM": true,
@@ -2506,7 +2509,7 @@
       "volId": "10667",
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
-      "lastModified": 1778813044771,
+      "lastModified": 1779545366278,
       "volunteerPassword": "$2b$10$TQ6zPcLveZ7Zb.xJZ45.dOorSt0laE8aaN2lY0tScMKxu5li9tmxa"
     },
     {
@@ -4620,6 +4623,7 @@
       "yearsWorked": 9,
       "hat": "",
       "scheduled": {
+        "Tuesday AM": true,
         "Tuesday PM": true,
         "Thursday PM": true,
         "Friday AM": true,
@@ -4630,7 +4634,7 @@
       "address": "6120 Fall Creek Lane Fort Worth, TX 76123",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779545374417
     },
     {
       "id": "7692",
@@ -6720,6 +6724,7 @@
       "hat": "",
       "scheduled": {
         "Tuesday AM": true,
+        "Tuesday PM": true,
         "Thursday PM": true,
         "Friday AM": true,
         "Saturday PM": true,
@@ -6732,7 +6737,7 @@
       "pairingPreferences": [
         "2135"
       ],
-      "lastModified": 1778813044771,
+      "lastModified": 1779545378945,
       "volunteerPassword": "$2b$10$bZCIVF9ebmBZCyCRs1xT5uZO0AmBYx53IKVDZlH0dwrWC2zI93uDK"
     },
     {
@@ -6912,6 +6917,7 @@
       "yearsWorked": 2,
       "hat": "",
       "scheduled": {
+        "Monday AM": true,
         "Monday PM": true,
         "Wednesday PM": true,
         "Thursday AM": true,
@@ -6923,7 +6929,7 @@
       "address": "6 Toscany Court Mansfield, TX 76063",
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
-      "lastModified": 1778874339816,
+      "lastModified": 1779545336604,
       "pairingPreferences": [
         "10436"
       ],
@@ -7367,7 +7373,9 @@
       "yearsWorked": 1,
       "hat": "",
       "scheduled": {
+        "Monday AM": true,
         "Monday PM": true,
+        "Tuesday AM": true,
         "Tuesday PM": true,
         "Wednesday AM": true,
         "Thursday AM": true,
@@ -7379,7 +7387,7 @@
       "address": "1100 Foxtail Drive Mansfield, TX 76063",
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
-      "lastModified": 1778813044771,
+      "lastModified": 1779545347441,
       "volunteerPassword": "$2b$10$G.8xb3c2tuwsF59Cvi8P..fV0eNAa1eeIxJUgZ6oSa3gtDdT/y4Xy"
     },
     {
@@ -9030,6 +9038,69 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779545378945-k65695",
+      "timestamp": "2026-05-23T14:09:38.945Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Reiter, Mackenzie",
+      "details": "added Tuesday PM"
+    },
+    {
+      "id": "1779545374417-2s1nuk",
+      "timestamp": "2026-05-23T14:09:34.417Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Leggett, Deborah",
+      "details": "added Tuesday AM"
+    },
+    {
+      "id": "1779545366278-38cxfp",
+      "timestamp": "2026-05-23T14:09:26.278Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Gilchrist, William (Bill)",
+      "details": "added Monday PM, Tuesday PM"
+    },
+    {
+      "id": "1779545357304-rf5mul",
+      "timestamp": "2026-05-23T14:09:17.304Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Davidson, Glen",
+      "details": "added Monday PM"
+    },
+    {
+      "id": "1779545347441-rwuz12",
+      "timestamp": "2026-05-23T14:09:07.441Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Schumann, Rick",
+      "details": "added Monday AM, Tuesday AM"
+    },
+    {
+      "id": "1779545336604-9rmyff",
+      "timestamp": "2026-05-23T14:08:56.604Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Rodrigues, Donald",
+      "details": "added Monday AM"
+    },
+    {
+      "id": "1779545303243",
+      "timestamp": "2026-05-23T14:08:23.243Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779544199658",
       "timestamp": "2026-05-23T13:49:59.658Z",
