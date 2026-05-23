@@ -879,17 +879,26 @@
       "yearsWorked": 1,
       "hat": "",
       "scheduled": {
+        "Monday AM": true,
+        "Monday PM": true,
+        "Tuesday AM": true,
+        "Tuesday PM": true,
+        "Wednesday AM": true,
         "Wednesday PM": true,
+        "Thursday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
         "Saturday PM": true,
-        "Sunday AM": true
+        "Sunday AM": true,
+        "Sunday PM": true
       },
       "volId": "10573",
       "address": "9501 Limosine Dr. Crowley, TN 76036",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779558247176
     },
     {
       "id": "10338",
@@ -1035,17 +1044,26 @@
       "yearsWorked": 10,
       "hat": "",
       "scheduled": {
+        "Monday AM": true,
+        "Monday PM": true,
+        "Tuesday AM": true,
+        "Tuesday PM": true,
+        "Wednesday AM": true,
         "Wednesday PM": true,
         "Thursday AM": true,
+        "Thursday PM": true,
+        "Friday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true,
         "Sunday PM": true
       },
       "volId": "6239",
       "address": "226 Wapiti Dr Azle, TX 76020",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779558263447
     },
     {
       "id": "9400",
@@ -1276,17 +1294,26 @@
       "yearsWorked": 4,
       "hat": "",
       "scheduled": {
+        "Monday AM": true,
+        "Monday PM": true,
+        "Tuesday AM": true,
+        "Tuesday PM": true,
+        "Wednesday AM": true,
         "Wednesday PM": true,
+        "Thursday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
         "Saturday PM": true,
-        "Sunday AM": true
+        "Sunday AM": true,
+        "Sunday PM": true
       },
       "volId": "8788",
       "address": "713 Whippoorwill Dr Midlothian, TX 76065",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779558281317
     },
     {
       "id": "7068",
@@ -2255,17 +2282,26 @@
       "yearsWorked": 9,
       "hat": "",
       "scheduled": {
+        "Monday AM": true,
+        "Monday PM": true,
+        "Tuesday AM": true,
+        "Tuesday PM": true,
+        "Wednesday AM": true,
         "Wednesday PM": true,
+        "Thursday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
         "Saturday PM": true,
-        "Sunday AM": true
+        "Sunday AM": true,
+        "Sunday PM": true
       },
       "volId": "7317",
       "address": "545 Abbey Court Grand Prairie, TX 75052",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779558293891
     },
     {
       "id": "10731",
@@ -2965,18 +3001,24 @@
       "scheduled": {
         "Monday AM": true,
         "Monday PM": true,
+        "Tuesday AM": true,
         "Tuesday PM": true,
+        "Wednesday AM": true,
         "Wednesday PM": true,
+        "Thursday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
         "Saturday PM": true,
-        "Sunday AM": true
+        "Sunday AM": true,
+        "Sunday PM": true
       },
       "volId": "9856",
       "address": "2411 W. Tumbleweed Dr Phoenix, AZ 85085",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779558214798
     },
     {
       "id": "10248",
@@ -7209,18 +7251,25 @@
       "hat": "",
       "scheduled": {
         "Monday AM": true,
+        "Monday PM": true,
         "Tuesday AM": true,
+        "Tuesday PM": true,
         "Wednesday AM": true,
+        "Wednesday PM": true,
         "Thursday AM": true,
+        "Thursday PM": true,
+        "Friday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true,
         "Sunday PM": true
       },
       "volId": "8066",
       "address": "6524 Dover Terrance S Fort Worth, TX 76132",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779558227922
     },
     {
       "id": "3428",
@@ -9038,6 +9087,69 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779558293891-qm22fa",
+      "timestamp": "2026-05-23T17:44:53.891Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Gagel, Chester",
+      "details": "added Monday AM, Monday PM, Tuesday AM, Tuesday PM, Wednesday AM, Thursday AM, Friday PM, Saturday AM, Sunday PM"
+    },
+    {
+      "id": "1779558281317-a7bhkw",
+      "timestamp": "2026-05-23T17:44:41.317Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Collins, Kevin",
+      "details": "added Monday AM, Monday PM, Tuesday AM, Tuesday PM, Wednesday AM, Thursday AM, Friday PM, Saturday AM, Sunday PM"
+    },
+    {
+      "id": "1779558263447-g5zo5c",
+      "timestamp": "2026-05-23T17:44:23.447Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Chapman, John",
+      "details": "added Monday AM, Monday PM, Tuesday AM, Tuesday PM, Wednesday AM, Thursday PM, Friday AM, Saturday PM, Sunday AM"
+    },
+    {
+      "id": "1779558247176-gwhoyf",
+      "timestamp": "2026-05-23T17:44:07.176Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Byrom, Kirk",
+      "details": "added Monday AM, Monday PM, Tuesday AM, Tuesday PM, Wednesday AM, Thursday AM, Friday PM, Saturday AM, Sunday PM"
+    },
+    {
+      "id": "1779558227922-in4k96",
+      "timestamp": "2026-05-23T17:43:47.922Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Sassaman, David",
+      "details": "added Monday PM, Tuesday PM, Wednesday PM, Thursday PM, Friday AM, Saturday PM, Sunday AM"
+    },
+    {
+      "id": "1779558214798-qz6syo",
+      "timestamp": "2026-05-23T17:43:34.798Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Hamic, Craig",
+      "details": "added Tuesday AM, Wednesday AM, Thursday AM, Friday PM, Saturday AM, Sunday PM"
+    },
+    {
+      "id": "1779558175616",
+      "timestamp": "2026-05-23T17:42:55.616Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779556270283-2zdzgo",
       "timestamp": "2026-05-23T17:11:10.283Z",
