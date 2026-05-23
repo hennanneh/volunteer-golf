@@ -9031,6 +9031,15 @@
   },
   "activityLog": [
     {
+      "id": "1779506388383",
+      "timestamp": "2026-05-23T03:19:48.384Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
       "id": "1779505887044",
       "timestamp": "2026-05-23T03:11:27.044Z",
       "user": "Pugh, Clayton",
