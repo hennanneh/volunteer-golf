@@ -9044,6 +9044,24 @@
   },
   "activityLog": [
     {
+      "id": "1779548708431",
+      "timestamp": "2026-05-23T15:05:08.431Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779548702053",
+      "timestamp": "2026-05-23T15:05:02.053Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1779548654921",
       "timestamp": "2026-05-23T15:04:14.921Z",
       "user": "Imboden, Thomas",
