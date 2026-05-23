@@ -4223,6 +4223,7 @@
       "hat": "",
       "scheduled": {
         "Monday AM": true,
+        "Wednesday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
         "Saturday PM": true,
@@ -4232,7 +4233,8 @@
       "address": "6617 Waterwood Cir Benbrook, TX 76132",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779502298153,
+      "notes": "Wednesday AM will be Ron’s first extra shift."
     },
     {
       "id": "9406",
@@ -9027,6 +9029,24 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779502298153-5ezas3",
+      "timestamp": "2026-05-23T02:11:38.153Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "edit-volunteer",
+      "target": "Knight, Ron",
+      "details": "Updated fields: scheduled, notes"
+    },
+    {
+      "id": "1779502240675",
+      "timestamp": "2026-05-23T02:10:40.677Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779500181228",
       "timestamp": "2026-05-23T01:36:21.228Z",
