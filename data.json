@@ -6518,7 +6518,8 @@
       "hasVolunteerPassword": false,
       "lastModified": 1779315319375,
       "notes": "",
-      "hatReceived": false
+      "hatReceived": false,
+      "volunteerPassword": "$2b$10$GttwGfwew5FIdRkLtxsb0eMmHBt1KMkSaLgTpWhZeJDMwlN6PHx92"
     },
     {
       "id": "6949",
@@ -9029,6 +9030,24 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779505887044",
+      "timestamp": "2026-05-23T03:11:27.044Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed captain password"
+    },
+    {
+      "id": "1779505832227",
+      "timestamp": "2026-05-23T03:10:32.227Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779502298153-5ezas3",
       "timestamp": "2026-05-23T02:11:38.153Z",
