@@ -8388,9 +8388,12 @@
       "yearsWorked": 30,
       "hat": "",
       "scheduled": {
+        "Monday AM": true,
+        "Monday PM": true,
         "Tuesday AM": true,
         "Tuesday PM": true,
         "Wednesday AM": true,
+        "Wednesday PM": true,
         "Thursday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
@@ -8404,7 +8407,7 @@
       "volId": "278",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779410914253
+      "lastModified": 1779548365708
     },
     {
       "id": "7207",
@@ -9038,6 +9041,33 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779548365708-ij35lf",
+      "timestamp": "2026-05-23T14:59:25.708Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Watson, Stan",
+      "details": "added Monday AM, Monday PM, Wednesday PM"
+    },
+    {
+      "id": "1779548351546",
+      "timestamp": "2026-05-23T14:59:11.546Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779548147526",
+      "timestamp": "2026-05-23T14:55:47.526Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779545378945-k65695",
       "timestamp": "2026-05-23T14:09:38.945Z",
