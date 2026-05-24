@@ -1373,6 +1373,7 @@
       "yearsWorked": 1,
       "hat": "",
       "scheduled": {
+        "Monday AM": true,
         "Wednesday AM": true,
         "Thursday AM": true,
         "Friday PM": true,
@@ -1384,7 +1385,7 @@
       "address": "1260 Dogwood Ln. CAROL STREAM, IL 60188",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779631077146
     },
     {
       "id": "1520",
@@ -9146,6 +9147,60 @@
   },
   "activityLog": [
     {
+      "id": "1779631130329",
+      "timestamp": "2026-05-24T13:58:50.329Z",
+      "user": "Butler, Mark",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779631077146-xmvlox",
+      "timestamp": "2026-05-24T13:57:57.146Z",
+      "user": "Butler, Mark",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Corson, Michael",
+      "details": "added Monday AM"
+    },
+    {
+      "id": "1779630982468",
+      "timestamp": "2026-05-24T13:56:22.468Z",
+      "user": "Sullivan, Patrick",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1779630953074",
+      "timestamp": "2026-05-24T13:55:53.074Z",
+      "user": "Butler, Mark",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Butler, Mark",
+      "details": "Monday AM - Hole #3"
+    },
+    {
+      "id": "1779630951771",
+      "timestamp": "2026-05-24T13:55:51.771Z",
+      "user": "Butler, Mark",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Butler, Mark",
+      "details": "Monday AM - Hole #3"
+    },
+    {
+      "id": "1779630927153",
+      "timestamp": "2026-05-24T13:55:27.153Z",
+      "user": "Butler, Mark",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1779626128116",
       "timestamp": "2026-05-24T12:35:28.116Z",
       "user": "Trout, Wayne",
@@ -16180,5 +16235,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779548590323
+  "serverNow": 1779630982987
 }
