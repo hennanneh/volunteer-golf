@@ -3229,6 +3229,8 @@
       "yearsWorked": 7,
       "hat": "",
       "scheduled": {
+        "Monday AM": true,
+        "Monday PM": true,
         "Tuesday PM": true,
         "Wednesday PM": true,
         "Thursday PM": true,
@@ -3240,7 +3242,7 @@
       "address": "3731 Tremont Lane Granbury, TX 76049",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779645362828
     },
     {
       "id": "3778",
@@ -3252,6 +3254,8 @@
       "yearsWorked": 7,
       "hat": "",
       "scheduled": {
+        "Monday AM": true,
+        "Monday PM": true,
         "Wednesday PM": true,
         "Thursday PM": true,
         "Friday AM": true,
@@ -3262,7 +3266,7 @@
       "address": "3731 Tremont Lane Granbury, TX 76049",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779645379769
     },
     {
       "id": "4639",
@@ -9147,6 +9151,24 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779645379769-7bp8h8",
+      "timestamp": "2026-05-24T17:56:19.769Z",
+      "user": "Browning, Wayne",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Hicks, Jackie",
+      "details": "added Monday AM, Monday PM"
+    },
+    {
+      "id": "1779645362828-vuqqv3",
+      "timestamp": "2026-05-24T17:56:02.828Z",
+      "user": "Browning, Wayne",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Hicks, Greg",
+      "details": "added Monday AM, Monday PM"
+    },
     {
       "id": "1779645288754",
       "timestamp": "2026-05-24T17:54:48.754Z",
