@@ -5597,6 +5597,8 @@
       "yearsWorked": 2,
       "hat": "",
       "scheduled": {
+        "Tuesday AM": true,
+        "Tuesday PM": true,
         "Wednesday AM": true,
         "Thursday AM": true,
         "Friday PM": true,
@@ -5608,8 +5610,8 @@
       "address": "3624 Pleasant Run Rd Irving, TX 75062",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779323460712,
-      "notes": "Thanks Hal"
+      "lastModified": 1779640266749,
+      "notes": "Thanks Hal\nI have added you to Tuesday all day practice round.\nIf you can be there by 8 AM that would be great.\n"
     },
     {
       "id": "7806",
@@ -9145,6 +9147,15 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779640266749-xgludn",
+      "timestamp": "2026-05-24T16:31:06.749Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "edit-volunteer",
+      "target": "Morrison, Hal",
+      "details": "Updated fields: scheduled, notes"
+    },
     {
       "id": "1779640012959",
       "timestamp": "2026-05-24T16:26:52.959Z",
