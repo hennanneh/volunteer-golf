@@ -9148,9 +9148,28 @@
     "pmShiftCutoff": "19:00",
     "numberOfHoles": 20,
     "helpName": "Mike Hill",
-    "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
+    "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601",
+    "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779654026447",
+      "timestamp": "2026-05-24T20:20:26.447Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "settings-change",
+      "target": "showOutingPreferences",
+      "details": "Updated setting: showOutingPreferences"
+    },
+    {
+      "id": "1779654011528",
+      "timestamp": "2026-05-24T20:20:11.529Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
     {
       "id": "1779652743673",
       "timestamp": "2026-05-24T19:59:03.673Z",
