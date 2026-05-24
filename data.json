@@ -9153,6 +9153,15 @@
   },
   "activityLog": [
     {
+      "id": "1779657870913",
+      "timestamp": "2026-05-24T21:24:30.913Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
       "id": "1779654026447",
       "timestamp": "2026-05-24T20:20:26.447Z",
       "user": "Howrey, Anne",
