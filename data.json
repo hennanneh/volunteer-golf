@@ -9154,6 +9154,15 @@
   },
   "activityLog": [
     {
+      "id": "1779661461765",
+      "timestamp": "2026-05-24T22:24:21.765Z",
+      "user": "Burnett, Eric",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1779658212438",
       "timestamp": "2026-05-24T21:30:12.438Z",
       "user": "Hill, Michael",
