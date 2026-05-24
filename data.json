@@ -9143,6 +9143,15 @@
   },
   "activityLog": [
     {
+      "id": "1779593530799",
+      "timestamp": "2026-05-24T03:32:10.799Z",
+      "user": "Montalvo, Sammy",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1779585238284",
       "timestamp": "2026-05-24T01:13:58.284Z",
       "user": "Butler, Mark",
