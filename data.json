@@ -9148,6 +9148,15 @@
   },
   "activityLog": [
     {
+      "id": "1779645288754",
+      "timestamp": "2026-05-24T17:54:48.754Z",
+      "user": "Browning, Wayne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1779640266749-xgludn",
       "timestamp": "2026-05-24T16:31:06.749Z",
       "user": "Sanders, Steve",
