@@ -1373,7 +1373,6 @@
       "yearsWorked": 1,
       "hat": "",
       "scheduled": {
-        "Monday AM": true,
         "Wednesday AM": true,
         "Thursday AM": true,
         "Friday PM": true,
@@ -1385,7 +1384,7 @@
       "address": "1260 Dogwood Ln. CAROL STREAM, IL 60188",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779631077146
+      "lastModified": 1779638600758
     },
     {
       "id": "1520",
@@ -9146,6 +9145,15 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779638600758-9lvuqq",
+      "timestamp": "2026-05-24T16:03:20.758Z",
+      "user": "Butler, Mark",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Corson, Michael",
+      "details": "removed Monday AM"
+    },
     {
       "id": "1779637519506",
       "timestamp": "2026-05-24T15:45:19.506Z",
