@@ -9159,6 +9159,15 @@
   },
   "activityLog": [
     {
+      "id": "1779665283953",
+      "timestamp": "2026-05-24T23:28:03.953Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1779665074338",
       "timestamp": "2026-05-24T23:24:34.339Z",
       "user": "Holt, Sharron",
