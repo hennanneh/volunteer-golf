@@ -9152,6 +9152,15 @@
   },
   "activityLog": [
     {
+      "id": "1779652743673",
+      "timestamp": "2026-05-24T19:59:03.673Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1779645379769-7bp8h8",
       "timestamp": "2026-05-24T17:56:19.769Z",
       "user": "Browning, Wayne",
