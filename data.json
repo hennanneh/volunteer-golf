@@ -55,6 +55,7 @@
       "yearsWorked": 4,
       "hat": "",
       "scheduled": {
+        "Tuesday AM": true,
         "Tuesday PM": true,
         "Thursday AM": true,
         "Friday PM": true,
@@ -66,7 +67,7 @@
       "address": "1521 Bridge Water Ln Mansfield, TX 76063",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779217739992
+      "lastModified": 1779626088105
     },
     {
       "id": "8522",
@@ -910,6 +911,7 @@
       "yearsWorked": 1,
       "hat": "",
       "scheduled": {
+        "Tuesday AM": true,
         "Tuesday PM": true,
         "Thursday PM": true,
         "Friday AM": true,
@@ -920,7 +922,7 @@
       "address": "2513 Peninsula Drive, Flower Mound, TX, USA Flower Mound, TX 75022",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779314447012
+      "lastModified": 1779626097846
     },
     {
       "id": "10717",
@@ -2044,7 +2046,7 @@
       "yearsWorked": 6,
       "hat": "",
       "scheduled": {
-        "Monday PM": true,
+        "Monday AM": true,
         "Wednesday PM": true,
         "Thursday AM": true,
         "Friday PM": true,
@@ -2055,7 +2057,7 @@
       "address": "7230 W Peden Rd Azle, TX 76020",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778855671107
+      "lastModified": 1779625926698
     },
     {
       "id": "6731",
@@ -4846,6 +4848,7 @@
       "yearsWorked": 3,
       "hat": "",
       "scheduled": {
+        "Monday AM": true,
         "Monday PM": true,
         "Thursday PM": true,
         "Friday AM": true,
@@ -4856,7 +4859,7 @@
       "address": "139 Canyon Creek Ct Weatherford, TX 76087",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779625947134
     },
     {
       "id": "10061",
@@ -9142,6 +9145,51 @@
     "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601"
   },
   "activityLog": [
+    {
+      "id": "1779626097846-6hjv1c",
+      "timestamp": "2026-05-24T12:34:57.846Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Cannon, Natalie",
+      "details": "added Tuesday AM"
+    },
+    {
+      "id": "1779626088105-tviidm",
+      "timestamp": "2026-05-24T12:34:48.105Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Anderson, Brian",
+      "details": "added Tuesday AM"
+    },
+    {
+      "id": "1779625947134-384xwg",
+      "timestamp": "2026-05-24T12:32:27.134Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Lutke, Jeff",
+      "details": "added Monday AM"
+    },
+    {
+      "id": "1779625926699-r5c4v1",
+      "timestamp": "2026-05-24T12:32:06.699Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Ellis, Tom",
+      "details": "added Monday AM; removed Monday PM"
+    },
+    {
+      "id": "1779625873359",
+      "timestamp": "2026-05-24T12:31:13.359Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779600345667",
       "timestamp": "2026-05-24T05:25:45.667Z",
