@@ -6742,11 +6742,11 @@
     },
     {
       "id": "10483",
-      "name": "Reddington, Michael",
+      "name": "Stoffel, Dan",
       "type": "Volunteer",
       "hole": 18,
-      "phone": "(603) 235-4948",
-      "email": "mreddington@envoymortgage.com",
+      "phone": "(469) 682-1046",
+      "email": "danstoffel@yahoo.com",
       "yearsWorked": 1,
       "hat": "",
       "scheduled": {
@@ -6756,12 +6756,13 @@
         "Saturday AM": true,
         "Sunday PM": true
       },
-      "volId": "10483",
-      "address": "46 Frontier Street Rye, NH 03870",
+      "volId": "7047",
+      "address": "1425 Auburn Place, Plano 75093",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779556036156,
-      "notes": "Will not be able to attend"
+      "lastModified": 1779658058027,
+      "notes": "Will not be able to attend",
+      "hatReceived": false
     },
     {
       "id": "7070",
@@ -9152,6 +9153,78 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779658159571",
+      "timestamp": "2026-05-24T21:29:19.571Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1779658156892",
+      "timestamp": "2026-05-24T21:29:16.892Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1779658151976",
+      "timestamp": "2026-05-24T21:29:11.976Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1779658138221",
+      "timestamp": "2026-05-24T21:28:58.221Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1779658074566",
+      "timestamp": "2026-05-24T21:27:54.566Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1779658058027-gx8cia",
+      "timestamp": "2026-05-24T21:27:38.027Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Stoffel, Dan",
+      "details": "Updated fields: volId"
+    },
+    {
+      "id": "1779658035759-fe2id2",
+      "timestamp": "2026-05-24T21:27:15.759Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Stoffel, Dan",
+      "details": "Updated fields: phone, email, address"
+    },
+    {
+      "id": "1779657933137-nd7d92",
+      "timestamp": "2026-05-24T21:25:33.138Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Stoffel, Dan",
+      "details": "Updated fields: name, hatReceived"
+    },
     {
       "id": "1779657870913",
       "timestamp": "2026-05-24T21:24:30.913Z",
