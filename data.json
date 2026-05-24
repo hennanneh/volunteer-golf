@@ -9143,6 +9143,15 @@
   },
   "activityLog": [
     {
+      "id": "1779584946268",
+      "timestamp": "2026-05-24T01:09:06.268Z",
+      "user": "Gastinel, Buck",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
       "id": "1779579845718-vc2drk",
       "timestamp": "2026-05-23T23:44:05.718Z",
       "user": "Nederostek, Brad",
