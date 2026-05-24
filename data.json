@@ -9143,6 +9143,15 @@
   },
   "activityLog": [
     {
+      "id": "1779600345667",
+      "timestamp": "2026-05-24T05:25:45.667Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
       "id": "1779599975189",
       "timestamp": "2026-05-24T05:19:35.189Z",
       "user": "Imboden, Thomas",
