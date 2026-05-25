@@ -10586,6 +10586,36 @@
       "checkedInBy": "Nederostek, Brad",
       "timestamp": "2026-05-25T21:17:22.896Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "7731",
+      "volunteerName": "Gee, Stephen",
+      "hole": 9,
+      "day": "Monday",
+      "shift": "PM",
+      "checkedInBy": "Jutras, Michael",
+      "timestamp": "2026-05-25T22:04:52.043Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2055",
+      "volunteerName": "Edwards, Bill",
+      "hole": 9,
+      "day": "Monday",
+      "shift": "PM",
+      "checkedInBy": "Jutras, Michael",
+      "timestamp": "2026-05-25T22:04:57.019Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9658",
+      "volunteerName": "Jutras, Michael",
+      "hole": 9,
+      "day": "Monday",
+      "shift": "PM",
+      "checkedInBy": "Jutras, Michael",
+      "timestamp": "2026-05-25T22:04:59.154Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -10603,6 +10633,24 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779746697083",
+      "timestamp": "2026-05-25T22:04:57.083Z",
+      "user": "Jutras, Michael",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Edwards, Bill",
+      "details": "Monday PM - Hole #9"
+    },
+    {
+      "id": "1779746692109",
+      "timestamp": "2026-05-25T22:04:52.109Z",
+      "user": "Jutras, Michael",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Gee, Stephen",
+      "details": "Monday PM - Hole #9"
+    },
     {
       "id": "1779745453185",
       "timestamp": "2026-05-25T21:44:13.185Z",
