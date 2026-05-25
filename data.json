@@ -9211,6 +9211,56 @@
       "checkedInBy": "Jutras, Michael",
       "timestamp": "2026-05-25T12:18:46.865Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "2055",
+      "volunteerName": "Edwards, Bill",
+      "hole": 9,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Jutras, Michael",
+      "timestamp": "2026-05-25T12:27:37.870Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "145",
+      "volunteerName": "Gordon, Gary",
+      "hole": 2,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Gordon, Gary",
+      "timestamp": "2026-05-25T12:29:32.154Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "136",
+      "volunteerName": "Fee, John",
+      "hole": 2,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Gordon, Gary",
+      "timestamp": "2026-05-25T12:29:40.734Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8499",
+      "volunteerName": "Schrader, Brenda",
+      "hole": 2,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Gordon, Gary",
+      "timestamp": "2026-05-25T12:29:44.208Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5876",
+      "volunteerName": "Womack, Tim",
+      "hole": 2,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Gordon, Gary",
+      "timestamp": "2026-05-25T12:29:45.987Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -9228,6 +9278,69 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779712185734",
+      "timestamp": "2026-05-25T12:29:45.734Z",
+      "user": "Gordon, Gary",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Womack, Tim",
+      "details": "Monday AM - Hole #2"
+    },
+    {
+      "id": "1779712183936",
+      "timestamp": "2026-05-25T12:29:43.936Z",
+      "user": "Gordon, Gary",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Schrader, Brenda",
+      "details": "Monday AM - Hole #2"
+    },
+    {
+      "id": "1779712180463",
+      "timestamp": "2026-05-25T12:29:40.463Z",
+      "user": "Gordon, Gary",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Fee, John",
+      "details": "Monday AM - Hole #2"
+    },
+    {
+      "id": "1779712171881",
+      "timestamp": "2026-05-25T12:29:31.881Z",
+      "user": "Gordon, Gary",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Gordon, Gary",
+      "details": "Monday AM - Hole #2"
+    },
+    {
+      "id": "1779712169438",
+      "timestamp": "2026-05-25T12:29:29.438Z",
+      "user": "Gordon, Gary",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779712060194",
+      "timestamp": "2026-05-25T12:27:40.194Z",
+      "user": "Jutras, Michael",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 9",
+      "details": "Submitted Monday AM for Hole 9"
+    },
+    {
+      "id": "1779712057933",
+      "timestamp": "2026-05-25T12:27:37.933Z",
+      "user": "Jutras, Michael",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Edwards, Bill",
+      "details": "Monday AM - Hole #9"
+    },
     {
       "id": "1779711538382",
       "timestamp": "2026-05-25T12:18:58.382Z",
