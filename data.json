@@ -2527,9 +2527,9 @@
       "volId": "10667",
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
-      "lastModified": 1779733242775,
+      "lastModified": 1779739033097,
       "volunteerPassword": "$2b$10$TQ6zPcLveZ7Zb.xJZ45.dOorSt0laE8aaN2lY0tScMKxu5li9tmxa",
-      "notes": "I screwed up Bill was also here this morning"
+      "notes": ""
     },
     {
       "id": "4128",
@@ -10573,6 +10573,15 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779739033097-u3sflv",
+      "timestamp": "2026-05-25T19:57:13.097Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "edit-volunteer",
+      "target": "Gilchrist, William (Bill)",
+      "details": "Updated fields: notes"
+    },
     {
       "id": "1779736366521-i74rum",
       "timestamp": "2026-05-25T19:12:46.521Z",
