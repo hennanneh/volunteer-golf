@@ -157,7 +157,8 @@
       "volId": "8887",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779404000377
+      "lastModified": 1779404000377,
+      "volunteerPassword": "$2b$10$jFkBv4C1aQgNMSxA0e.NN.Ns3l9uLEf6qxN7JQdV9vDv2.F6feT9O"
     },
     {
       "id": "10644",
@@ -1112,7 +1113,8 @@
       "address": "1318 Bora Bora Street Tool, TX 75143",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1778813044771,
+      "volunteerPassword": "$2b$10$1n4tYiaUM6rNeY0Vkl0Vm.9czFOByF/7n7Q.nNhRjsggIbuj3ccsq"
     },
     {
       "id": "5772",
@@ -3681,6 +3683,7 @@
       "yearsWorked": 13,
       "hat": "",
       "scheduled": {
+        "Monday AM": true,
         "Monday PM": true,
         "Tuesday AM": true,
         "Tuesday PM": true,
@@ -3698,7 +3701,7 @@
       "volId": "5192",
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
-      "lastModified": 1779548627605,
+      "lastModified": 1779740041015,
       "pairingPreferences": [
         "6744"
       ],
@@ -5500,6 +5503,7 @@
       "hat": "",
       "scheduled": {
         "Monday AM": true,
+        "Monday PM": true,
         "Tuesday AM": true,
         "Tuesday PM": true,
         "Wednesday PM": true,
@@ -5516,7 +5520,7 @@
       "volId": "8630",
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
-      "lastModified": 1778813044771,
+      "lastModified": 1779740053125,
       "volunteerPassword": "$2b$10$Tndu1Qgy..FFK0TRTSjXb..f3K3vpexGYlqjYrH7n3i.bSsv4lCtG"
     },
     {
@@ -10573,6 +10577,42 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779740053125-v7l0fc",
+      "timestamp": "2026-05-25T20:14:13.125Z",
+      "user": "Montalvo, Sammy",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Montalvo, Sammy",
+      "details": "added Monday PM"
+    },
+    {
+      "id": "1779740041016-ombf64",
+      "timestamp": "2026-05-25T20:14:01.016Z",
+      "user": "Montalvo, Sammy",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Imboden, Thomas",
+      "details": "added Monday AM"
+    },
+    {
+      "id": "1779739868447",
+      "timestamp": "2026-05-25T20:11:08.447Z",
+      "user": "Hill, Michael",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 5",
+      "details": "Submitted Monday AM for Hole 5"
+    },
+    {
+      "id": "1779739799809",
+      "timestamp": "2026-05-25T20:09:59.809Z",
+      "user": "Montalvo, Sammy",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 5",
+      "details": "Submitted Monday PM for Hole 5"
+    },
     {
       "id": "1779739677037",
       "timestamp": "2026-05-25T20:07:57.037Z",
@@ -20872,5 +20912,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779730903271
+  "serverNow": 1779739677972
 }
