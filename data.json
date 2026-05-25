@@ -6021,6 +6021,7 @@
       "yearsWorked": 10,
       "hat": "",
       "scheduled": {
+        "Monday AM": true,
         "Tuesday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
@@ -6032,7 +6033,7 @@
       "address": "6705 Lucas Ln North Richland Hills, TX 76182",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779728630179,
+      "lastModified": 1779735121104,
       "notes": "",
       "hatReceived": false
     },
@@ -10564,6 +10565,33 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779735232592",
+      "timestamp": "2026-05-25T18:53:52.592Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779735121104-601kcq",
+      "timestamp": "2026-05-25T18:52:01.104Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Oakley, Jeff",
+      "details": "added Monday AM"
+    },
+    {
+      "id": "1779735016313",
+      "timestamp": "2026-05-25T18:50:16.313Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779734308942",
       "timestamp": "2026-05-25T18:38:28.942Z",
