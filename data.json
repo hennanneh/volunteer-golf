@@ -9181,6 +9181,26 @@
       "checkedInBy": "Pugh, Clayton",
       "timestamp": "2026-05-25T11:41:54.427Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "6217",
+      "volunteerName": "Nederostek, Brad",
+      "hole": 4,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Nederostek, Brad",
+      "timestamp": "2026-05-25T12:02:06.095Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8935",
+      "volunteerName": "Knight, Ron",
+      "hole": 4,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Nederostek, Brad",
+      "timestamp": "2026-05-25T12:02:07.521Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -9198,6 +9218,60 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779710547686",
+      "timestamp": "2026-05-25T12:02:27.686Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 4",
+      "details": "Submitted Monday AM for Hole 4"
+    },
+    {
+      "id": "1779710541300",
+      "timestamp": "2026-05-25T12:02:21.300Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1779710527868",
+      "timestamp": "2026-05-25T12:02:07.868Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Knight, Ron",
+      "details": "Monday AM - Hole #4"
+    },
+    {
+      "id": "1779710526145",
+      "timestamp": "2026-05-25T12:02:06.145Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Nederostek, Brad",
+      "details": "Monday AM - Hole #4"
+    },
+    {
+      "id": "1779710520906",
+      "timestamp": "2026-05-25T12:02:00.906Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779710444369",
+      "timestamp": "2026-05-25T12:00:44.369Z",
+      "user": "Jutras, Michael",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779709867159",
       "timestamp": "2026-05-25T11:51:07.159Z",
@@ -16710,5 +16784,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779630982987
+  "serverNow": 1779710541938
 }
