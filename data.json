@@ -9649,6 +9649,76 @@
       "checkedInBy": "Imboden, Thomas",
       "timestamp": "2026-05-25T13:11:22.280Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "9988",
+      "volunteerName": "Grall, George",
+      "hole": 12,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-25T13:15:15.647Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2543",
+      "volunteerName": "Holt, Sharron",
+      "hole": 8,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Holt, Sharron",
+      "timestamp": "2026-05-25T13:17:38.631Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2507",
+      "volunteerName": "Holt, Sammy",
+      "hole": 8,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Holt, Sharron",
+      "timestamp": "2026-05-25T13:17:39.042Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2135",
+      "volunteerName": "Davidson, Glen",
+      "hole": 8,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Holt, Sharron",
+      "timestamp": "2026-05-25T13:17:42.708Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9928",
+      "volunteerName": "Rodrigues, Donald",
+      "hole": 8,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Holt, Sharron",
+      "timestamp": "2026-05-25T13:17:47.832Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10436",
+      "volunteerName": "Schumann, Rick",
+      "hole": 8,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Holt, Sharron",
+      "timestamp": "2026-05-25T13:17:50.783Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9896",
+      "volunteerName": "Sullivan, Patrick",
+      "hole": 8,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Holt, Sharron",
+      "timestamp": "2026-05-25T13:17:51.614Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -9666,6 +9736,159 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779715196743",
+      "timestamp": "2026-05-25T13:19:56.743Z",
+      "user": "Thomas, Stephen",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1779715129432",
+      "timestamp": "2026-05-25T13:18:49.432Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1779715071936",
+      "timestamp": "2026-05-25T13:17:51.936Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Sullivan, Patrick",
+      "details": "Monday AM - Hole #8"
+    },
+    {
+      "id": "1779715071123",
+      "timestamp": "2026-05-25T13:17:51.123Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Schumann, Rick",
+      "details": "Monday AM - Hole #8"
+    },
+    {
+      "id": "1779715068254",
+      "timestamp": "2026-05-25T13:17:48.254Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Rodrigues, Donald",
+      "details": "Monday AM - Hole #8"
+    },
+    {
+      "id": "1779715063140",
+      "timestamp": "2026-05-25T13:17:43.141Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Davidson, Glen",
+      "details": "Monday AM - Hole #8"
+    },
+    {
+      "id": "1779715059364",
+      "timestamp": "2026-05-25T13:17:39.364Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Holt, Sammy",
+      "details": "Monday AM - Hole #8"
+    },
+    {
+      "id": "1779715058963",
+      "timestamp": "2026-05-25T13:17:38.963Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Holt, Sharron",
+      "details": "Monday AM - Hole #8"
+    },
+    {
+      "id": "1779715057305",
+      "timestamp": "2026-05-25T13:17:37.305Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Holt, Sharron",
+      "details": "Monday AM - Hole #8"
+    },
+    {
+      "id": "1779715037702",
+      "timestamp": "2026-05-25T13:17:17.702Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1779715005587",
+      "timestamp": "2026-05-25T13:16:45.587Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Holt, Sammy",
+      "details": "Monday AM - Hole #8"
+    },
+    {
+      "id": "1779715004762",
+      "timestamp": "2026-05-25T13:16:44.762Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Holt, Sammy",
+      "details": "Monday AM - Hole #8"
+    },
+    {
+      "id": "1779715002105",
+      "timestamp": "2026-05-25T13:16:42.105Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Holt, Sharron",
+      "details": "Monday AM - Hole #8"
+    },
+    {
+      "id": "1779715000470",
+      "timestamp": "2026-05-25T13:16:40.470Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Davidson, Glen",
+      "details": "Monday AM - Hole #8"
+    },
+    {
+      "id": "1779714998694",
+      "timestamp": "2026-05-25T13:16:38.694Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Davidson, Glen",
+      "details": "Monday AM - Hole #8"
+    },
+    {
+      "id": "1779714994896",
+      "timestamp": "2026-05-25T13:16:34.896Z",
+      "user": "Gordon, Gary",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779714974990",
+      "timestamp": "2026-05-25T13:16:14.990Z",
+      "user": "Gordon, Gary",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779714689658",
       "timestamp": "2026-05-25T13:11:29.658Z",
@@ -17900,5 +18123,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779714569794
+  "serverNow": 1779714996034
 }
