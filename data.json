@@ -6014,6 +6014,7 @@
       "yearsWorked": 10,
       "hat": "",
       "scheduled": {
+        "Monday AM": true,
         "Tuesday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
@@ -6025,7 +6026,9 @@
       "address": "6705 Lucas Ln North Richland Hills, TX 76182",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778960322940
+      "lastModified": 1779723407044,
+      "notes": "",
+      "hatReceived": false
     },
     {
       "id": "8183",
@@ -9978,6 +9981,56 @@
       "checkedInBy": "Johnson, Kenny",
       "timestamp": "2026-05-25T15:34:51.504Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "10695",
+      "volunteerName": "Stone, Tyler",
+      "hole": 18,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Wehmeyer, Tom",
+      "timestamp": "2026-05-25T15:35:04.428Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4128",
+      "volunteerName": "Gilley, Roger",
+      "hole": 1,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Johnson, Kenny",
+      "timestamp": "2026-05-25T15:35:06.393Z",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "10360",
+      "volunteerName": "Parker, James",
+      "hole": 1,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Johnson, Kenny",
+      "timestamp": "2026-05-25T15:35:08.080Z",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "8609",
+      "volunteerName": "Ward, Donald",
+      "hole": 1,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Johnson, Kenny",
+      "timestamp": "2026-05-25T15:35:12.454Z",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "4222",
+      "volunteerName": "Wehmeyer, Tom",
+      "hole": 18,
+      "day": "Monday",
+      "shift": "PM",
+      "checkedInBy": "Wehmeyer, Tom",
+      "timestamp": "2026-05-25T15:35:27.424Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -9995,6 +10048,105 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779723465132",
+      "timestamp": "2026-05-25T15:37:45.132Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1779723407044-kr3zna",
+      "timestamp": "2026-05-25T15:36:47.044Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Oakley, Jeff",
+      "details": "Updated fields: scheduled, notes, hatReceived"
+    },
+    {
+      "id": "1779723379808",
+      "timestamp": "2026-05-25T15:36:19.808Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1779723345397",
+      "timestamp": "2026-05-25T15:35:45.397Z",
+      "user": "Wehmeyer, Tom",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 18",
+      "details": "Submitted Monday PM for Hole 18"
+    },
+    {
+      "id": "1779723327639",
+      "timestamp": "2026-05-25T15:35:27.639Z",
+      "user": "Wehmeyer, Tom",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Wehmeyer, Tom",
+      "details": "Monday PM - Hole #18"
+    },
+    {
+      "id": "1779723323978",
+      "timestamp": "2026-05-25T15:35:23.978Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 1",
+      "details": "Submitted Monday AM for Hole 1"
+    },
+    {
+      "id": "1779723314886",
+      "timestamp": "2026-05-25T15:35:14.887Z",
+      "user": "Wehmeyer, Tom",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 18",
+      "details": "Submitted Monday AM for Hole 18"
+    },
+    {
+      "id": "1779723312503",
+      "timestamp": "2026-05-25T15:35:12.503Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Ward, Donald",
+      "details": "Monday AM - Hole #1 (alternate)"
+    },
+    {
+      "id": "1779723308133",
+      "timestamp": "2026-05-25T15:35:08.133Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Parker, James",
+      "details": "Monday AM - Hole #1 (alternate)"
+    },
+    {
+      "id": "1779723306492",
+      "timestamp": "2026-05-25T15:35:06.492Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Gilley, Roger",
+      "details": "Monday AM - Hole #1 (alternate)"
+    },
+    {
+      "id": "1779723304486",
+      "timestamp": "2026-05-25T15:35:04.486Z",
+      "user": "Wehmeyer, Tom",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Stone, Tyler",
+      "details": "Monday AM - Hole #18"
+    },
     {
       "id": "1779722061826",
       "timestamp": "2026-05-25T15:14:21.826Z",
@@ -19009,5 +19161,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779720856740
+  "serverNow": 1779723324769
 }
