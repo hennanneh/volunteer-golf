@@ -10198,6 +10198,16 @@
       "checkedInBy": "Duncan, Larry",
       "timestamp": "2026-05-25T16:46:22.834Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "3489",
+      "volunteerName": "Maxwell, Steve",
+      "hole": 13,
+      "day": "Monday",
+      "shift": "PM",
+      "checkedInBy": "Duncan, Larry",
+      "timestamp": "2026-05-25T16:55:08.054Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -10215,6 +10225,53 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779728398253",
+      "timestamp": "2026-05-25T16:59:58.253Z",
+      "user": "Hill, Michael",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779728374680",
+      "timestamp": "2026-05-25T16:59:34.680Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1779728112673-ahz8rt",
+      "timestamp": "2026-05-25T16:55:12.673Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "rejected-bulk-edit",
+      "target": "Addison, Shirley",
+      "details": "Captain hole 13 attempted to modify hole 16 volunteer (auto-rejected via bulk save — no data changed)",
+      "targetHole": 16,
+      "actorHole": 13
+    },
+    {
+      "id": "1779728111664",
+      "timestamp": "2026-05-25T16:55:11.664Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 13",
+      "details": "Submitted Monday PM for Hole 13"
+    },
+    {
+      "id": "1779728108179",
+      "timestamp": "2026-05-25T16:55:08.179Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Maxwell, Steve",
+      "details": "Monday PM - Hole #13"
+    },
     {
       "id": "1779727916131",
       "timestamp": "2026-05-25T16:51:56.131Z",
@@ -19679,5 +19736,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779726538634
+  "serverNow": 1779727558111
 }
