@@ -6014,7 +6014,6 @@
       "yearsWorked": 10,
       "hat": "",
       "scheduled": {
-        "Monday AM": true,
         "Tuesday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
@@ -6026,7 +6025,7 @@
       "address": "6705 Lucas Ln North Richland Hills, TX 76182",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779723407044,
+      "lastModified": 1779726635506,
       "notes": "",
       "hatReceived": false
     },
@@ -10081,6 +10080,46 @@
       "checkedInBy": "Johnson, Kenny",
       "timestamp": "2026-05-25T16:29:07.542Z",
       "isAlternate": true
+    },
+    {
+      "volunteerId": "6191",
+      "volunteerName": "Browning, Wayne",
+      "hole": 17,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Browning, Wayne",
+      "timestamp": "2026-05-25T16:31:11.844Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "3138",
+      "volunteerName": "Bishop, Woody",
+      "hole": 17,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Browning, Wayne",
+      "timestamp": "2026-05-25T16:31:13.150Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "3777",
+      "volunteerName": "Hicks, Greg",
+      "hole": 17,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Browning, Wayne",
+      "timestamp": "2026-05-25T16:31:18.757Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6758",
+      "volunteerName": "Oakley, Jeff",
+      "hole": 11,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Hill, Michael",
+      "timestamp": "2026-05-25T16:34:29.393Z",
+      "isAlternate": true
     }
   ],
   "submissions": [],
@@ -10098,6 +10137,78 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779726869490",
+      "timestamp": "2026-05-25T16:34:29.490Z",
+      "user": "Hill, Michael",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Oakley, Jeff",
+      "details": "Monday AM - Hole #11 (alternate)"
+    },
+    {
+      "id": "1779726805731",
+      "timestamp": "2026-05-25T16:33:25.731Z",
+      "user": "Hill, Michael",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779726687317",
+      "timestamp": "2026-05-25T16:31:27.317Z",
+      "user": "Browning, Wayne",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 17",
+      "details": "Submitted Monday AM for Hole 17"
+    },
+    {
+      "id": "1779726678793",
+      "timestamp": "2026-05-25T16:31:18.793Z",
+      "user": "Browning, Wayne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Hicks, Greg",
+      "details": "Monday AM - Hole #17"
+    },
+    {
+      "id": "1779726673192",
+      "timestamp": "2026-05-25T16:31:13.192Z",
+      "user": "Browning, Wayne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Bishop, Woody",
+      "details": "Monday AM - Hole #17"
+    },
+    {
+      "id": "1779726671905",
+      "timestamp": "2026-05-25T16:31:11.905Z",
+      "user": "Browning, Wayne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Browning, Wayne",
+      "details": "Monday AM - Hole #17"
+    },
+    {
+      "id": "1779726659693",
+      "timestamp": "2026-05-25T16:30:59.694Z",
+      "user": "Browning, Wayne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779726635506-u4u9af",
+      "timestamp": "2026-05-25T16:30:35.506Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Oakley, Jeff",
+      "details": "removed Monday AM"
+    },
     {
       "id": "1779726569067",
       "timestamp": "2026-05-25T16:29:29.067Z",
