@@ -9159,6 +9159,24 @@
   },
   "activityLog": [
     {
+      "id": "1779679204615",
+      "timestamp": "2026-05-25T03:20:04.615Z",
+      "user": "Elkins, Paul",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779679098636",
+      "timestamp": "2026-05-25T03:18:18.636Z",
+      "user": "Elkins, Paul",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1779678117163",
       "timestamp": "2026-05-25T03:01:57.163Z",
       "user": "Mcdaniel, Patrick",
