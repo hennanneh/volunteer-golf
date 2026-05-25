@@ -9918,6 +9918,16 @@
       "checkedInBy": "Mulvaney, Matt",
       "timestamp": "2026-05-25T14:50:12.551Z",
       "isAlternate": true
+    },
+    {
+      "volunteerId": "4669",
+      "volunteerName": "Degraauw, Roland",
+      "hole": 16,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Mulvaney, Matt",
+      "timestamp": "2026-05-25T15:04:44.631Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
