@@ -10583,6 +10583,15 @@
   },
   "activityLog": [
     {
+      "id": "1779735656648",
+      "timestamp": "2026-05-25T19:00:56.648Z",
+      "user": "Howrey, Patrick",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
       "id": "1779735494971-07jeua",
       "timestamp": "2026-05-25T18:58:14.971Z",
       "user": "Pugh, Clayton",
