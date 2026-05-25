@@ -9879,6 +9879,16 @@
       "checkedInBy": "Wehmeyer, Tom",
       "timestamp": "2026-05-25T14:05:03.133Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "1518",
+      "volunteerName": "Trias, Dan",
+      "hole": 9,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Jutras, Michael",
+      "timestamp": "2026-05-25T14:29:20.319Z",
+      "isAlternate": true
     }
   ],
   "submissions": [],
@@ -9896,6 +9906,24 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779719364762",
+      "timestamp": "2026-05-25T14:29:24.762Z",
+      "user": "Jutras, Michael",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 9",
+      "details": "Submitted Monday AM for Hole 9"
+    },
+    {
+      "id": "1779719360384",
+      "timestamp": "2026-05-25T14:29:20.384Z",
+      "user": "Jutras, Michael",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Trias, Dan",
+      "details": "Monday AM - Hole #9 (alternate)"
+    },
     {
       "id": "1779718659895",
       "timestamp": "2026-05-25T14:17:39.895Z",
