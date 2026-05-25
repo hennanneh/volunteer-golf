@@ -9159,6 +9159,15 @@
   },
   "activityLog": [
     {
+      "id": "1779673380301",
+      "timestamp": "2026-05-25T01:43:00.301Z",
+      "user": "Volkening, David",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
       "id": "1779672797352",
       "timestamp": "2026-05-25T01:33:17.352Z",
       "user": "Galvan, Bob",
