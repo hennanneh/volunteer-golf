@@ -10654,6 +10654,15 @@
   },
   "activityLog": [
     {
+      "id": "1779747817177",
+      "timestamp": "2026-05-25T22:23:37.177Z",
+      "user": "Hill, Michael",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
       "id": "1779746729745",
       "timestamp": "2026-05-25T22:05:29.745Z",
       "user": "Jutras, Michael",
