@@ -6338,6 +6338,7 @@
       "hat": "",
       "scheduled": {
         "Monday PM": true,
+        "Wednesday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
         "Saturday PM": true,
@@ -6347,7 +6348,7 @@
       "address": "10409 Calaveras Dr Waco, TX 76708",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779736366521
     },
     {
       "id": "8439",
@@ -10572,6 +10573,15 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779736366521-i74rum",
+      "timestamp": "2026-05-25T19:12:46.521Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Phillips, Jason",
+      "details": "added Wednesday AM"
+    },
     {
       "id": "1779736007287",
       "timestamp": "2026-05-25T19:06:47.287Z",
