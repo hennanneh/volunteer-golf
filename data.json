@@ -10654,6 +10654,15 @@
   },
   "activityLog": [
     {
+      "id": "1779749389689",
+      "timestamp": "2026-05-25T22:49:49.689Z",
+      "user": "Gradt, Jason",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1779747817177",
       "timestamp": "2026-05-25T22:23:37.177Z",
       "user": "Hill, Michael",
