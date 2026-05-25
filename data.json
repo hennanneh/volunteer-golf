@@ -10560,6 +10560,16 @@
       "checkedInBy": "Pugh, Clayton",
       "timestamp": "2026-05-25T18:58:13.739Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "2393",
+      "volunteerName": "Burkhead, Max",
+      "hole": 7,
+      "day": "Monday",
+      "shift": "PM",
+      "checkedInBy": "Waller, Gary",
+      "timestamp": "2026-05-25T20:40:36.698Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
