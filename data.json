@@ -5653,7 +5653,7 @@
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
       "lastModified": 1778813044771,
-      "volunteerPassword": "$2b$10$yjP8aIKo1hU5IGPaEss/Fe6yoDtc4ZlCUQnwMxLMPutbGyx6hq9Ua"
+      "volunteerPassword": "$2b$10$Klep2JD2EOxiITpmLwZ3t.//e6/WmGYteJ.N0dwpsxC5/V4tP51ny"
     },
     {
       "id": "10774",
@@ -9559,6 +9559,86 @@
       "checkedInBy": "Gordon, Gary",
       "timestamp": "2026-05-25T13:04:03.622Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "7806",
+      "volunteerName": "Mosler, Mitch",
+      "hole": 14,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Mosler, Mitch",
+      "timestamp": "2026-05-25T13:06:39.979Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10675",
+      "volunteerName": "Capps, Macy",
+      "hole": 14,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Mosler, Mitch",
+      "timestamp": "2026-05-25T13:06:45.809Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9916",
+      "volunteerName": "Endicott, Eric",
+      "hole": 14,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Mosler, Mitch",
+      "timestamp": "2026-05-25T13:06:48.156Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8608",
+      "volunteerName": "Tellez, Victor",
+      "hole": 14,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Mosler, Mitch",
+      "timestamp": "2026-05-25T13:06:49.210Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10248",
+      "volunteerName": "Hardaway, Jerry",
+      "hole": 1,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Johnson, Kenny",
+      "timestamp": "2026-05-25T13:08:25.797Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "380",
+      "volunteerName": "Johnson, Kenny",
+      "hole": 1,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Johnson, Kenny",
+      "timestamp": "2026-05-25T13:08:25.991Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7528",
+      "volunteerName": "Garza, Mario",
+      "hole": 13,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Duncan, Larry",
+      "timestamp": "2026-05-25T13:09:22.040Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4433",
+      "volunteerName": "Elkins, Paul",
+      "hole": 6,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Mcdaniel, Patrick",
+      "timestamp": "2026-05-25T13:09:28.852Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -9576,6 +9656,87 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779714576042",
+      "timestamp": "2026-05-25T13:09:36.042Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 13",
+      "details": "Submitted Monday AM for Hole 13"
+    },
+    {
+      "id": "1779714568899",
+      "timestamp": "2026-05-25T13:09:28.899Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Elkins, Paul",
+      "details": "Monday AM - Hole #6"
+    },
+    {
+      "id": "1779714521645",
+      "timestamp": "2026-05-25T13:08:41.645Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 1",
+      "details": "Submitted Monday AM for Hole 1"
+    },
+    {
+      "id": "1779714424450",
+      "timestamp": "2026-05-25T13:07:04.450Z",
+      "user": "Mosler, Mitch",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 14",
+      "details": "Submitted Monday AM for Hole 14"
+    },
+    {
+      "id": "1779714409247",
+      "timestamp": "2026-05-25T13:06:49.247Z",
+      "user": "Mosler, Mitch",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Tellez, Victor",
+      "details": "Monday AM - Hole #14"
+    },
+    {
+      "id": "1779714408191",
+      "timestamp": "2026-05-25T13:06:48.191Z",
+      "user": "Mosler, Mitch",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Endicott, Eric",
+      "details": "Monday AM - Hole #14"
+    },
+    {
+      "id": "1779714405844",
+      "timestamp": "2026-05-25T13:06:45.844Z",
+      "user": "Mosler, Mitch",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Capps, Macy",
+      "details": "Monday AM - Hole #14"
+    },
+    {
+      "id": "1779714400011",
+      "timestamp": "2026-05-25T13:06:40.011Z",
+      "user": "Mosler, Mitch",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Mosler, Mitch",
+      "details": "Monday AM - Hole #14"
+    },
+    {
+      "id": "1779714395529",
+      "timestamp": "2026-05-25T13:06:35.529Z",
+      "user": "Mosler, Mitch",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779714289671",
       "timestamp": "2026-05-25T13:04:49.671Z",
@@ -17720,5 +17881,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779714259296
+  "serverNow": 1779714569794
 }
