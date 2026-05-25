@@ -3874,7 +3874,7 @@
       "yearsWorked": 7,
       "hat": "",
       "scheduled": {
-        "Monday AM": true,
+        "Monday PM": true,
         "Wednesday PM": true,
         "Thursday AM": true,
         "Friday PM": true,
@@ -3885,7 +3885,7 @@
       "address": "7329 Brightwater Road Fort Worth, TX 76132",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779715634937
+      "lastModified": 1779718497906
     },
     {
       "id": "380",
@@ -9896,6 +9896,33 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779718497906-63ee89",
+      "timestamp": "2026-05-25T14:14:57.906Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Johnson, Dean",
+      "details": "added Monday PM; removed Monday AM"
+    },
+    {
+      "id": "1779718369025",
+      "timestamp": "2026-05-25T14:12:49.025Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779718224798",
+      "timestamp": "2026-05-25T14:10:24.798Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
     {
       "id": "1779717903715",
       "timestamp": "2026-05-25T14:05:03.716Z",
@@ -18658,5 +18685,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779714996034
+  "serverNow": 1779717904733
 }
