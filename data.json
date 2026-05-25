@@ -9948,6 +9948,26 @@
       "checkedInBy": "Nederostek, Brad",
       "timestamp": "2026-05-25T15:08:59.259Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "9558",
+      "volunteerName": "Guthrie, Kay",
+      "hole": 16,
+      "day": "Monday",
+      "shift": "PM",
+      "checkedInBy": "Mulvaney, Matt",
+      "timestamp": "2026-05-25T15:13:55.732Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4807",
+      "volunteerName": "Mcjunkin, Curtis",
+      "hole": 16,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Mulvaney, Matt",
+      "timestamp": "2026-05-25T15:14:21.898Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -9965,6 +9985,33 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779722061826",
+      "timestamp": "2026-05-25T15:14:21.826Z",
+      "user": "Mulvaney, Matt",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Mcjunkin, Curtis",
+      "details": "Monday AM - Hole #16"
+    },
+    {
+      "id": "1779722035669",
+      "timestamp": "2026-05-25T15:13:55.669Z",
+      "user": "Mulvaney, Matt",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Guthrie, Kay",
+      "details": "Monday PM - Hole #16"
+    },
+    {
+      "id": "1779722001742",
+      "timestamp": "2026-05-25T15:13:21.742Z",
+      "user": "Hill, Michael",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
     {
       "id": "1779721745177",
       "timestamp": "2026-05-25T15:09:05.177Z",
