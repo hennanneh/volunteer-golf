@@ -9179,6 +9179,15 @@
   },
   "activityLog": [
     {
+      "id": "1779709072747",
+      "timestamp": "2026-05-25T11:37:52.747Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
       "id": "1779708060666",
       "timestamp": "2026-05-25T11:21:00.666Z",
       "user": "Howrey, Anne",
