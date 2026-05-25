@@ -10547,26 +10547,6 @@
       "checkedInBy": "Imboden, Thomas",
       "timestamp": "2026-05-25T18:20:55.888Z",
       "isAlternate": false
-    },
-    {
-      "volunteerId": "5924",
-      "volunteerName": "Gustaf, David",
-      "hole": 15,
-      "day": "Monday",
-      "shift": "PM",
-      "checkedInBy": "Beckley, Bob",
-      "timestamp": "2026-05-25T18:26:12.775Z",
-      "isAlternate": true
-    },
-    {
-      "volunteerId": "10362",
-      "volunteerName": "Mills, Brad",
-      "hole": 15,
-      "day": "Monday",
-      "shift": "PM",
-      "checkedInBy": "Beckley, Bob",
-      "timestamp": "2026-05-25T18:28:08.255Z",
-      "isAlternate": true
     }
   ],
   "submissions": [],
@@ -10584,6 +10564,78 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779733942918",
+      "timestamp": "2026-05-25T18:32:22.918Z",
+      "user": "Thomas, Stephen",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1779733938976",
+      "timestamp": "2026-05-25T18:32:18.976Z",
+      "user": "Thomas, Stephen",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1779733928575",
+      "timestamp": "2026-05-25T18:32:08.575Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779733863859",
+      "timestamp": "2026-05-25T18:31:03.859Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Mills, Brad",
+      "details": "Monday PM - Hole #15 (alternate)"
+    },
+    {
+      "id": "1779733861099",
+      "timestamp": "2026-05-25T18:31:01.099Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Gustaf, David",
+      "details": "Monday PM - Hole #15 (alternate)"
+    },
+    {
+      "id": "1779733855993",
+      "timestamp": "2026-05-25T18:30:55.993Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 6",
+      "details": "Submitted Monday PM for Hole 6"
+    },
+    {
+      "id": "1779733849807",
+      "timestamp": "2026-05-25T18:30:49.807Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779733826122",
+      "timestamp": "2026-05-25T18:30:26.122Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
     {
       "id": "1779733711149-g0yv96",
       "timestamp": "2026-05-25T18:28:31.149Z",
@@ -20632,5 +20684,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779733196046
+  "serverNow": 1779733864684
 }
