@@ -9150,16 +9150,6 @@
       "isAlternate": false
     },
     {
-      "volunteerId": "6217",
-      "volunteerName": "Nederostek, Brad",
-      "hole": 4,
-      "day": "Monday",
-      "shift": "AM",
-      "checkedInBy": "Nederostek, Brad",
-      "timestamp": "2026-05-25T12:02:06.095Z",
-      "isAlternate": false
-    },
-    {
       "volunteerId": "8935",
       "volunteerName": "Knight, Ron",
       "hole": 4,
@@ -9928,6 +9918,36 @@
       "checkedInBy": "Mulvaney, Matt",
       "timestamp": "2026-05-25T15:04:44.631Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "3974",
+      "volunteerName": "Schafer, John",
+      "hole": 4,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Nederostek, Brad",
+      "timestamp": "2026-05-25T15:08:16.274Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6217",
+      "volunteerName": "Nederostek, Brad",
+      "hole": 4,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Nederostek, Brad",
+      "timestamp": "2026-05-25T15:08:59.037Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "3974",
+      "volunteerName": "Schafer, John",
+      "hole": 4,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Nederostek, Brad",
+      "timestamp": "2026-05-25T15:08:59.259Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -9945,6 +9965,69 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779721745177",
+      "timestamp": "2026-05-25T15:09:05.177Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 4",
+      "details": "Submitted Monday AM for Hole 4"
+    },
+    {
+      "id": "1779721739302",
+      "timestamp": "2026-05-25T15:08:59.302Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Schafer, John",
+      "details": "Monday AM - Hole #4"
+    },
+    {
+      "id": "1779721739075",
+      "timestamp": "2026-05-25T15:08:59.075Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Nederostek, Brad",
+      "details": "Monday AM - Hole #4"
+    },
+    {
+      "id": "1779721730667",
+      "timestamp": "2026-05-25T15:08:50.667Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779721724629",
+      "timestamp": "2026-05-25T15:08:44.629Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779721706102",
+      "timestamp": "2026-05-25T15:08:26.102Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Nederostek, Brad",
+      "details": "Monday AM - Hole #4"
+    },
+    {
+      "id": "1779721696317",
+      "timestamp": "2026-05-25T15:08:16.317Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Schafer, John",
+      "details": "Friday AM - Hole #4"
+    },
     {
       "id": "1779720876784",
       "timestamp": "2026-05-25T14:54:36.784Z",
