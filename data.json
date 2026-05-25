@@ -10588,6 +10588,15 @@
   },
   "activityLog": [
     {
+      "id": "1779742201585",
+      "timestamp": "2026-05-25T20:50:01.585Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Davidson, Glen",
+      "details": "Monday PM - Hole #8"
+    },
+    {
       "id": "1779742188072",
       "timestamp": "2026-05-25T20:49:48.073Z",
       "user": "Holt, Sharron",
