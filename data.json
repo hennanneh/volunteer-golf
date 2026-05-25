@@ -9159,6 +9159,15 @@
   },
   "activityLog": [
     {
+      "id": "1779669878787",
+      "timestamp": "2026-05-25T00:44:38.787Z",
+      "user": "Wilson, Todd",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1779669376701",
       "timestamp": "2026-05-25T00:36:16.701Z",
       "user": "Montalvo, Sammy",
