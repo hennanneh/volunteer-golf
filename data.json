@@ -9639,6 +9639,16 @@
       "checkedInBy": "Mcdaniel, Patrick",
       "timestamp": "2026-05-25T13:09:28.852Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "6903",
+      "volunteerName": "Hinojosa, Frank",
+      "hole": 5,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Imboden, Thomas",
+      "timestamp": "2026-05-25T13:11:22.280Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -9656,6 +9666,15 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779714689658",
+      "timestamp": "2026-05-25T13:11:29.658Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 5",
+      "details": "Submitted Monday AM for Hole 5"
+    },
     {
       "id": "1779714576042",
       "timestamp": "2026-05-25T13:09:36.042Z",
