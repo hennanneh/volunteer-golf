@@ -10259,6 +10259,26 @@
       "checkedInBy": "Pugh, Clayton",
       "timestamp": "2026-05-25T17:14:17.582Z",
       "isAlternate": true
+    },
+    {
+      "volunteerId": "10451",
+      "volunteerName": "Miller, David",
+      "hole": 3,
+      "day": "Monday",
+      "shift": "PM",
+      "checkedInBy": "Butler, Mark",
+      "timestamp": "2026-05-25T17:29:51.918Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9398",
+      "volunteerName": "Whitcomb, Diane",
+      "hole": 3,
+      "day": "Monday",
+      "shift": "PM",
+      "checkedInBy": "Butler, Mark",
+      "timestamp": "2026-05-25T17:29:52.887Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -10276,6 +10296,42 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779730199995",
+      "timestamp": "2026-05-25T17:29:59.995Z",
+      "user": "Butler, Mark",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 3",
+      "details": "Submitted Monday PM for Hole 3"
+    },
+    {
+      "id": "1779730192962",
+      "timestamp": "2026-05-25T17:29:52.962Z",
+      "user": "Butler, Mark",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Whitcomb, Diane",
+      "details": "Monday PM - Hole #3"
+    },
+    {
+      "id": "1779730191977",
+      "timestamp": "2026-05-25T17:29:51.977Z",
+      "user": "Butler, Mark",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Miller, David",
+      "details": "Monday PM - Hole #3"
+    },
+    {
+      "id": "1779730103018",
+      "timestamp": "2026-05-25T17:28:23.018Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
     {
       "id": "1779729730504",
       "timestamp": "2026-05-25T17:22:10.504Z",
