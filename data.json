@@ -10249,6 +10249,16 @@
       "checkedInBy": "Pugh, Clayton",
       "timestamp": "2026-05-25T17:06:05.615Z",
       "isAlternate": true
+    },
+    {
+      "volunteerId": "7052",
+      "volunteerName": "Fisher, Paul",
+      "hole": 12,
+      "day": "Monday",
+      "shift": "PM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-25T17:14:17.582Z",
+      "isAlternate": true
     }
   ],
   "submissions": [],
@@ -10266,6 +10276,15 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779729257420",
+      "timestamp": "2026-05-25T17:14:17.420Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Fisher, Paul",
+      "details": "Monday PM - Hole #12 (alternate)"
+    },
     {
       "id": "1779728765458",
       "timestamp": "2026-05-25T17:06:05.458Z",
