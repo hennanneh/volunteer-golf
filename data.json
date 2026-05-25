@@ -9159,6 +9159,15 @@
   },
   "activityLog": [
     {
+      "id": "1779707408009",
+      "timestamp": "2026-05-25T11:10:08.009Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1779706898507",
       "timestamp": "2026-05-25T11:01:38.508Z",
       "user": "Volkening, David",
