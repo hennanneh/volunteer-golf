@@ -3256,8 +3256,6 @@
       "yearsWorked": 7,
       "hat": "",
       "scheduled": {
-        "Monday AM": true,
-        "Monday PM": true,
         "Wednesday PM": true,
         "Thursday PM": true,
         "Friday AM": true,
@@ -3270,7 +3268,7 @@
       "address": "3731 Tremont Lane Granbury, TX 76049",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779663261999
+      "lastModified": 1779726937472
     },
     {
       "id": "4639",
@@ -10137,6 +10135,24 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779726968679",
+      "timestamp": "2026-05-25T16:36:08.679Z",
+      "user": "Hill, Michael",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779726937472-khg90g",
+      "timestamp": "2026-05-25T16:35:37.472Z",
+      "user": "Browning, Wayne",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Hicks, Jackie",
+      "details": "removed Monday AM, Monday PM"
+    },
     {
       "id": "1779726869490",
       "timestamp": "2026-05-25T16:34:29.490Z",
