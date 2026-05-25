@@ -10361,6 +10361,26 @@
       "checkedInBy": "Mcdaniel, Patrick",
       "timestamp": "2026-05-25T17:38:14.933Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "5192",
+      "volunteerName": "Imboden, Thomas",
+      "hole": 5,
+      "day": "Monday",
+      "shift": "PM",
+      "checkedInBy": "Imboden, Thomas",
+      "timestamp": "2026-05-25T17:41:54.530Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8630",
+      "volunteerName": "Montalvo, Sammy",
+      "hole": 5,
+      "day": "Monday",
+      "shift": "PM",
+      "checkedInBy": "Imboden, Thomas",
+      "timestamp": "2026-05-25T17:41:55.759Z",
+      "isAlternate": true
     }
   ],
   "submissions": [],
@@ -10378,6 +10398,42 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779730922212",
+      "timestamp": "2026-05-25T17:42:02.212Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 5",
+      "details": "Submitted Monday PM for Hole 5"
+    },
+    {
+      "id": "1779730915793",
+      "timestamp": "2026-05-25T17:41:55.793Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Montalvo, Sammy",
+      "details": "Monday PM - Hole #5 (alternate)"
+    },
+    {
+      "id": "1779730914576",
+      "timestamp": "2026-05-25T17:41:54.576Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Imboden, Thomas",
+      "details": "Monday PM - Hole #5"
+    },
+    {
+      "id": "1779730900082",
+      "timestamp": "2026-05-25T17:41:40.082Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
     {
       "id": "1779730702456",
       "timestamp": "2026-05-25T17:38:22.456Z",
@@ -20136,5 +20192,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779730193548
+  "serverNow": 1779730903271
 }
