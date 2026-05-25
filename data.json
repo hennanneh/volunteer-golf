@@ -9161,6 +9161,26 @@
       "checkedInBy": "Schafer, John",
       "timestamp": "2026-05-25T11:15:53.620Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "342",
+      "volunteerName": "Mckenzie, Roy",
+      "hole": 12,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-25T11:41:47.751Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9365",
+      "volunteerName": "Pugh, Clayton",
+      "hole": 12,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-25T11:41:54.427Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -9178,6 +9198,24 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779709314348",
+      "timestamp": "2026-05-25T11:41:54.348Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Pugh, Clayton",
+      "details": "Monday AM - Hole #12"
+    },
+    {
+      "id": "1779709307741",
+      "timestamp": "2026-05-25T11:41:47.741Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Mckenzie, Roy",
+      "details": "Monday AM - Hole #12"
+    },
     {
       "id": "1779709072747",
       "timestamp": "2026-05-25T11:37:52.747Z",
