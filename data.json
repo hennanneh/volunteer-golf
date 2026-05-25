@@ -5402,6 +5402,7 @@
       "yearsWorked": 1,
       "hat": "",
       "scheduled": {
+        "Monday AM": true,
         "Monday PM": true,
         "Wednesday PM": true,
         "Thursday AM": true,
@@ -5413,7 +5414,7 @@
       "address": "7249 S ABERDEEN DR CLEBURNE, TX 76033",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779714199806
     },
     {
       "id": "8295",
@@ -9498,6 +9499,66 @@
       "checkedInBy": "Thomas, Stephen",
       "timestamp": "2026-05-25T12:58:22.222Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "1464",
+      "volunteerName": "Mcdaniel, Patrick",
+      "hole": 6,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Mcdaniel, Patrick",
+      "timestamp": "2026-05-25T13:01:30.660Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10499",
+      "volunteerName": "Henson, Barry",
+      "hole": 3,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Butler, Mark",
+      "timestamp": "2026-05-25T13:03:27.924Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10634",
+      "volunteerName": "Jones, David",
+      "hole": 3,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Butler, Mark",
+      "timestamp": "2026-05-25T13:03:28.417Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10451",
+      "volunteerName": "Miller, David",
+      "hole": 3,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Butler, Mark",
+      "timestamp": "2026-05-25T13:03:29.999Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "1720",
+      "volunteerName": "Butler, Mark",
+      "hole": 3,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Butler, Mark",
+      "timestamp": "2026-05-25T13:03:33.134Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "145",
+      "volunteerName": "Gordon, Gary",
+      "hole": 2,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Gordon, Gary",
+      "timestamp": "2026-05-25T13:04:03.622Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -9515,6 +9576,87 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779714289671",
+      "timestamp": "2026-05-25T13:04:49.671Z",
+      "user": "Butler, Mark",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 3",
+      "details": "Submitted Monday AM for Hole 3"
+    },
+    {
+      "id": "1779714257837",
+      "timestamp": "2026-05-25T13:04:17.837Z",
+      "user": "Gordon, Gary",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779714213199",
+      "timestamp": "2026-05-25T13:03:33.199Z",
+      "user": "Butler, Mark",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Butler, Mark",
+      "details": "Monday AM - Hole #3"
+    },
+    {
+      "id": "1779714210080",
+      "timestamp": "2026-05-25T13:03:30.080Z",
+      "user": "Butler, Mark",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Miller, David",
+      "details": "Monday AM - Hole #3"
+    },
+    {
+      "id": "1779714208476",
+      "timestamp": "2026-05-25T13:03:28.476Z",
+      "user": "Butler, Mark",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Jones, David",
+      "details": "Monday AM - Hole #3"
+    },
+    {
+      "id": "1779714208019",
+      "timestamp": "2026-05-25T13:03:28.019Z",
+      "user": "Butler, Mark",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Henson, Barry",
+      "details": "Monday AM - Hole #3"
+    },
+    {
+      "id": "1779714199806-9u4sdv",
+      "timestamp": "2026-05-25T13:03:19.806Z",
+      "user": "Butler, Mark",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Miller, David",
+      "details": "added Monday AM"
+    },
+    {
+      "id": "1779714167127",
+      "timestamp": "2026-05-25T13:02:47.127Z",
+      "user": "Bishop, Woody",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779714090715",
+      "timestamp": "2026-05-25T13:01:30.715Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Mcdaniel, Patrick",
+      "details": "Monday AM - Hole #6"
+    },
     {
       "id": "1779713924661",
       "timestamp": "2026-05-25T12:58:44.661Z",
@@ -17578,5 +17720,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779713906001
+  "serverNow": 1779714259296
 }
