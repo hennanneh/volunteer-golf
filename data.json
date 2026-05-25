@@ -9869,6 +9869,16 @@
       "checkedInBy": "Trout, Wayne",
       "timestamp": "2026-05-25T14:04:22.713Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "4222",
+      "volunteerName": "Wehmeyer, Tom",
+      "hole": 18,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Wehmeyer, Tom",
+      "timestamp": "2026-05-25T14:05:03.133Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -9886,6 +9896,15 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779717903715",
+      "timestamp": "2026-05-25T14:05:03.716Z",
+      "user": "Wehmeyer, Tom",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Wehmeyer, Tom",
+      "details": "Monday AM - Hole #18"
+    },
     {
       "id": "1779717839102",
       "timestamp": "2026-05-25T14:03:59.102Z",
