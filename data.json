@@ -9056,7 +9056,7 @@
       "yearsWorked": 2,
       "hat": "",
       "scheduled": {
-        "Tuesday PM": true,
+        "Wednesday PM": true,
         "Thursday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
@@ -9064,7 +9064,7 @@
       },
       "address": "7806 Raton Ridge Ln Arlington, TX 76002",
       "volId": "8895",
-      "lastModified": 1779314445279,
+      "lastModified": 1779727886439,
       "volunteerPassword": "$2b$10$gRn.htG.lHFqoggAZTw2ReNdb9mck55odP1ZAf1lesgqH2KAuQif."
     },
     {
@@ -10215,6 +10215,69 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779727916131",
+      "timestamp": "2026-05-25T16:51:56.131Z",
+      "user": "Waller, Gary",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 7",
+      "details": "Submitted Monday AM for Hole 7"
+    },
+    {
+      "id": "1779727903807",
+      "timestamp": "2026-05-25T16:51:43.807Z",
+      "user": "Waller, Gary",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 7",
+      "details": "Submitted Monday AM for Hole 7"
+    },
+    {
+      "id": "1779727901980",
+      "timestamp": "2026-05-25T16:51:41.980Z",
+      "user": "Waller, Gary",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Riemitis, Andy",
+      "details": "Monday AM - Hole #7 (alternate)"
+    },
+    {
+      "id": "1779727895952",
+      "timestamp": "2026-05-25T16:51:35.952Z",
+      "user": "Waller, Gary",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Quintana, Mike",
+      "details": "Monday AM - Hole #7 (alternate)"
+    },
+    {
+      "id": "1779727894821",
+      "timestamp": "2026-05-25T16:51:34.821Z",
+      "user": "Waller, Gary",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Waller, Gary",
+      "details": "Monday AM - Hole #7"
+    },
+    {
+      "id": "1779727886439-0er0s7",
+      "timestamp": "2026-05-25T16:51:26.439Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Addison, Shirley",
+      "details": "added Wednesday PM; removed Tuesday PM"
+    },
+    {
+      "id": "1779727841803",
+      "timestamp": "2026-05-25T16:50:41.803Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 1",
+      "details": "Submitted Monday AM for Hole 1"
+    },
     {
       "id": "1779727587925",
       "timestamp": "2026-05-25T16:46:27.925Z",
@@ -19616,5 +19679,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779727558111
+  "serverNow": 1779726538634
 }
