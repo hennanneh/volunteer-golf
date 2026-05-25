@@ -10118,6 +10118,16 @@
       "checkedInBy": "Hill, Michael",
       "timestamp": "2026-05-25T16:34:29.393Z",
       "isAlternate": true
+    },
+    {
+      "volunteerId": "10566",
+      "volunteerName": "Sharrah, Adam",
+      "hole": 13,
+      "day": "Monday",
+      "shift": "PM",
+      "checkedInBy": "Duncan, Larry",
+      "timestamp": "2026-05-25T16:44:29.130Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -10135,6 +10145,24 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779727487572",
+      "timestamp": "2026-05-25T16:44:47.572Z",
+      "user": "Waller, Gary",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779727338425",
+      "timestamp": "2026-05-25T16:42:18.425Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779726968679",
       "timestamp": "2026-05-25T16:36:08.679Z",
