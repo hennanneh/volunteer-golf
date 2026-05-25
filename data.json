@@ -10031,6 +10031,56 @@
       "checkedInBy": "Wehmeyer, Tom",
       "timestamp": "2026-05-25T15:35:27.424Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "278",
+      "volunteerName": "Watson, Stan",
+      "hole": 11,
+      "day": "Monday",
+      "shift": "PM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-25T16:28:24.172Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2657",
+      "volunteerName": "James, Marty",
+      "hole": 11,
+      "day": "Monday",
+      "shift": "PM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-25T16:28:24.541Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5015",
+      "volunteerName": "Meinke, Albert",
+      "hole": 11,
+      "day": "Monday",
+      "shift": "PM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-25T16:28:28.968Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2488",
+      "volunteerName": "Reinfelds, David",
+      "hole": 11,
+      "day": "Monday",
+      "shift": "PM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-25T16:28:29.339Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10364",
+      "volunteerName": "Thomas, Harold",
+      "hole": 1,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Johnson, Kenny",
+      "timestamp": "2026-05-25T16:29:07.542Z",
+      "isAlternate": true
     }
   ],
   "submissions": [],
@@ -10048,6 +10098,69 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779726569067",
+      "timestamp": "2026-05-25T16:29:29.067Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 1",
+      "details": "Submitted Monday AM for Hole 1"
+    },
+    {
+      "id": "1779726547590",
+      "timestamp": "2026-05-25T16:29:07.590Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Thomas, Harold",
+      "details": "Monday AM - Hole #1 (alternate)"
+    },
+    {
+      "id": "1779726537061",
+      "timestamp": "2026-05-25T16:28:57.061Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 11",
+      "details": "Submitted Monday PM for Hole 11"
+    },
+    {
+      "id": "1779726509383",
+      "timestamp": "2026-05-25T16:28:29.383Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Reinfelds, David",
+      "details": "Monday PM - Hole #11"
+    },
+    {
+      "id": "1779726509022",
+      "timestamp": "2026-05-25T16:28:29.022Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Meinke, Albert",
+      "details": "Monday PM - Hole #11"
+    },
+    {
+      "id": "1779726504591",
+      "timestamp": "2026-05-25T16:28:24.591Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "James, Marty",
+      "details": "Monday PM - Hole #11"
+    },
+    {
+      "id": "1779726504222",
+      "timestamp": "2026-05-25T16:28:24.222Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Watson, Stan",
+      "details": "Monday PM - Hole #11"
+    },
     {
       "id": "1779725093496",
       "timestamp": "2026-05-25T16:04:53.496Z",
@@ -19188,5 +19301,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779723324769
+  "serverNow": 1779726538634
 }
