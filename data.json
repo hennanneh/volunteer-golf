@@ -9141,6 +9141,26 @@
       "checkedInBy": "Mckenzie, Roy",
       "timestamp": "2026-05-21T19:02:48.217Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "3974",
+      "volunteerName": "Schafer, John",
+      "hole": 4,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Schafer, John",
+      "timestamp": "2026-05-25T11:15:36.968Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "3974",
+      "volunteerName": "Schafer, John",
+      "hole": 4,
+      "day": "Monday",
+      "shift": "PM",
+      "checkedInBy": "Schafer, John",
+      "timestamp": "2026-05-25T11:15:53.620Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -9158,6 +9178,33 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779707753670",
+      "timestamp": "2026-05-25T11:15:53.670Z",
+      "user": "Schafer, John",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Schafer, John",
+      "details": "Monday PM - Hole #4"
+    },
+    {
+      "id": "1779707737016",
+      "timestamp": "2026-05-25T11:15:37.016Z",
+      "user": "Schafer, John",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Schafer, John",
+      "details": "Monday AM - Hole #4"
+    },
+    {
+      "id": "1779707727533",
+      "timestamp": "2026-05-25T11:15:27.533Z",
+      "user": "Schafer, John",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779707408009",
       "timestamp": "2026-05-25T11:10:08.009Z",
