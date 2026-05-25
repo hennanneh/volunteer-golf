@@ -10243,16 +10243,6 @@
       "isAlternate": true
     },
     {
-      "volunteerId": "8013",
-      "volunteerName": "Naukam, Philip",
-      "hole": 12,
-      "day": "Monday",
-      "shift": "PM",
-      "checkedInBy": "Pugh, Clayton",
-      "timestamp": "2026-05-25T17:06:05.615Z",
-      "isAlternate": true
-    },
-    {
       "volunteerId": "7052",
       "volunteerName": "Fisher, Paul",
       "hole": 12,
@@ -10381,6 +10371,36 @@
       "checkedInBy": "Imboden, Thomas",
       "timestamp": "2026-05-25T17:41:55.759Z",
       "isAlternate": true
+    },
+    {
+      "volunteerId": "342",
+      "volunteerName": "Mckenzie, Roy",
+      "hole": 12,
+      "day": "Monday",
+      "shift": "PM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-25T17:45:33.105Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9365",
+      "volunteerName": "Pugh, Clayton",
+      "hole": 12,
+      "day": "Monday",
+      "shift": "PM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-25T17:45:41.994Z",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "8013",
+      "volunteerName": "Naukam, Philip",
+      "hole": 12,
+      "day": "Monday",
+      "shift": "PM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-25T17:46:15.984Z",
+      "isAlternate": true
     }
   ],
   "submissions": [],
@@ -10398,6 +10418,33 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779731175812",
+      "timestamp": "2026-05-25T17:46:15.812Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Naukam, Philip",
+      "details": "Monday PM - Hole #12 (alternate)"
+    },
+    {
+      "id": "1779731174813",
+      "timestamp": "2026-05-25T17:46:14.813Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Naukam, Philip",
+      "details": "Monday PM - Hole #12 (alternate)"
+    },
+    {
+      "id": "1779731141819",
+      "timestamp": "2026-05-25T17:45:41.819Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Pugh, Clayton",
+      "details": "Monday PM - Hole #12 (alternate)"
+    },
     {
       "id": "1779730922212",
       "timestamp": "2026-05-25T17:42:02.212Z",
