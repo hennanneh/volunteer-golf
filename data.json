@@ -10277,6 +10277,15 @@
   },
   "activityLog": [
     {
+      "id": "1779729730504",
+      "timestamp": "2026-05-25T17:22:10.504Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
       "id": "1779729257420",
       "timestamp": "2026-05-25T17:14:17.420Z",
       "user": "Pugh, Clayton",
