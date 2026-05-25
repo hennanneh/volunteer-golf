@@ -10574,6 +10574,33 @@
   },
   "activityLog": [
     {
+      "id": "1779739677037",
+      "timestamp": "2026-05-25T20:07:57.037Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 5",
+      "details": "Submitted Monday PM for Hole 5"
+    },
+    {
+      "id": "1779739670650",
+      "timestamp": "2026-05-25T20:07:50.650Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 5",
+      "details": "Submitted Monday PM for Hole 5"
+    },
+    {
+      "id": "1779739563144",
+      "timestamp": "2026-05-25T20:06:03.144Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 5",
+      "details": "Submitted Monday PM for Hole 5"
+    },
+    {
       "id": "1779739484192",
       "timestamp": "2026-05-25T20:04:44.192Z",
       "user": "Sale, Lynn",
