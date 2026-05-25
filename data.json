@@ -10441,6 +10441,96 @@
       "checkedInBy": "Sanders, Steve",
       "timestamp": "2026-05-25T17:57:04.337Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "10667",
+      "volunteerName": "Gilchrist, William (Bill)",
+      "hole": 8,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Holt, Sharron",
+      "timestamp": "2026-05-25T18:19:38.436Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2543",
+      "volunteerName": "Holt, Sharron",
+      "hole": 8,
+      "day": "Monday",
+      "shift": "PM",
+      "checkedInBy": "Holt, Sharron",
+      "timestamp": "2026-05-25T18:19:48.065Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2507",
+      "volunteerName": "Holt, Sammy",
+      "hole": 8,
+      "day": "Monday",
+      "shift": "PM",
+      "checkedInBy": "Holt, Sharron",
+      "timestamp": "2026-05-25T18:19:48.513Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5240",
+      "volunteerName": "Rogenski, Chris P.",
+      "hole": 8,
+      "day": "Monday",
+      "shift": "PM",
+      "checkedInBy": "Holt, Sharron",
+      "timestamp": "2026-05-25T18:19:48.905Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2135",
+      "volunteerName": "Davidson, Glen",
+      "hole": 8,
+      "day": "Monday",
+      "shift": "PM",
+      "checkedInBy": "Holt, Sharron",
+      "timestamp": "2026-05-25T18:19:50.771Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10667",
+      "volunteerName": "Gilchrist, William (Bill)",
+      "hole": 8,
+      "day": "Monday",
+      "shift": "PM",
+      "checkedInBy": "Holt, Sharron",
+      "timestamp": "2026-05-25T18:19:51.473Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9928",
+      "volunteerName": "Rodrigues, Donald",
+      "hole": 8,
+      "day": "Monday",
+      "shift": "PM",
+      "checkedInBy": "Holt, Sharron",
+      "timestamp": "2026-05-25T18:19:52.764Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10436",
+      "volunteerName": "Schumann, Rick",
+      "hole": 8,
+      "day": "Monday",
+      "shift": "PM",
+      "checkedInBy": "Holt, Sharron",
+      "timestamp": "2026-05-25T18:19:53.967Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9896",
+      "volunteerName": "Sullivan, Patrick",
+      "hole": 8,
+      "day": "Monday",
+      "shift": "PM",
+      "checkedInBy": "Holt, Sharron",
+      "timestamp": "2026-05-25T18:19:55.357Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -10458,6 +10548,87 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779733195950",
+      "timestamp": "2026-05-25T18:19:55.950Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Sullivan, Patrick",
+      "details": "Monday PM - Hole #8"
+    },
+    {
+      "id": "1779733194624",
+      "timestamp": "2026-05-25T18:19:54.624Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Schumann, Rick",
+      "details": "Monday PM - Hole #8"
+    },
+    {
+      "id": "1779733193397",
+      "timestamp": "2026-05-25T18:19:53.397Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Rodrigues, Donald",
+      "details": "Monday PM - Hole #8"
+    },
+    {
+      "id": "1779733192097",
+      "timestamp": "2026-05-25T18:19:52.097Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Gilchrist, William (Bill)",
+      "details": "Monday PM - Hole #8"
+    },
+    {
+      "id": "1779733191440",
+      "timestamp": "2026-05-25T18:19:51.440Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Davidson, Glen",
+      "details": "Monday PM - Hole #8"
+    },
+    {
+      "id": "1779733189501",
+      "timestamp": "2026-05-25T18:19:49.501Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Rogenski, Chris P.",
+      "details": "Monday PM - Hole #8"
+    },
+    {
+      "id": "1779733189133",
+      "timestamp": "2026-05-25T18:19:49.133Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Holt, Sammy",
+      "details": "Monday PM - Hole #8"
+    },
+    {
+      "id": "1779733188789",
+      "timestamp": "2026-05-25T18:19:48.789Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Holt, Sharron",
+      "details": "Monday PM - Hole #8"
+    },
+    {
+      "id": "1779733158569",
+      "timestamp": "2026-05-25T18:19:18.569Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 15",
+      "details": "Submitted Monday PM for Hole 15"
+    },
     {
       "id": "1779732492299",
       "timestamp": "2026-05-25T18:08:12.299Z",
