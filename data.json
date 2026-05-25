@@ -3308,7 +3308,8 @@
         99,
         11
       ],
-      "originalHole": 11
+      "originalHole": 11,
+      "volunteerPassword": "$2b$10$FR6K6NNPONmgorfriPR/jO7wK9rl0gZhSLFBPZj.U90uWBRFGH1T2"
     },
     {
       "id": "6903",
@@ -6023,7 +6024,7 @@
       "address": "6705 Lucas Ln North Richland Hills, TX 76182",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779726635506,
+      "lastModified": 1779728630179,
       "notes": "",
       "hatReceived": false
     },
@@ -10208,6 +10209,16 @@
       "checkedInBy": "Duncan, Larry",
       "timestamp": "2026-05-25T16:55:08.054Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "9018",
+      "volunteerName": "Chee, Wendell",
+      "hole": 14,
+      "day": "Monday",
+      "shift": "PM",
+      "checkedInBy": "Sanders, Steve",
+      "timestamp": "2026-05-25T17:02:27.043Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -10225,6 +10236,91 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779728630187-40gnpw",
+      "timestamp": "2026-05-25T17:03:50.187Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Oakley, Jeff",
+      "details": "Updated fields: hole, originalHole (via bulk save)",
+      "targetHole": 11,
+      "actorHole": 99
+    },
+    {
+      "id": "1779728629826",
+      "timestamp": "2026-05-25T17:03:49.826Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "edit",
+      "target": "Oakley, Jeff",
+      "details": "Moved from Hole #10 to Hole #11"
+    },
+    {
+      "id": "1779728616590-0xsyme",
+      "timestamp": "2026-05-25T17:03:36.590Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Oakley, Jeff",
+      "details": "Updated fields: hole, originalHole (via bulk save)",
+      "targetHole": 10,
+      "actorHole": 99
+    },
+    {
+      "id": "1779728615957",
+      "timestamp": "2026-05-25T17:03:35.957Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "edit",
+      "target": "Oakley, Jeff",
+      "details": "Moved from Hole #11 to Hole #10"
+    },
+    {
+      "id": "1779728573032",
+      "timestamp": "2026-05-25T17:02:53.032Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 14",
+      "details": "Submitted Monday PM for Hole 14"
+    },
+    {
+      "id": "1779728555620",
+      "timestamp": "2026-05-25T17:02:35.620Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Chee, Wendell",
+      "details": "Monday PM - Hole #14"
+    },
+    {
+      "id": "1779728538749",
+      "timestamp": "2026-05-25T17:02:18.749Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1779728531180",
+      "timestamp": "2026-05-25T17:02:11.180Z",
+      "user": "Hill, Michael",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779728471439",
+      "timestamp": "2026-05-25T17:01:11.439Z",
+      "user": "Hill, Michael",
+      "userType": "Captain",
+      "action": "password-change",
+      "target": "",
+      "details": "Changed captain password"
+    },
     {
       "id": "1779728398253",
       "timestamp": "2026-05-25T16:59:58.253Z",
@@ -19736,5 +19832,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779727558111
+  "serverNow": 1779728565564
 }
