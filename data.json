@@ -9291,6 +9291,26 @@
       "checkedInBy": "Duncan, Larry",
       "timestamp": "2026-05-25T12:34:07.228Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "111",
+      "volunteerName": "Cary, Ron",
+      "hole": 9,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Jutras, Michael",
+      "timestamp": "2026-05-25T12:36:19.831Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7731",
+      "volunteerName": "Gee, Stephen",
+      "hole": 9,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Jutras, Michael",
+      "timestamp": "2026-05-25T12:36:54.545Z",
+      "isAlternate": true
     }
   ],
   "submissions": [],
@@ -9308,6 +9328,51 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779712775836",
+      "timestamp": "2026-05-25T12:39:35.836Z",
+      "user": "Butler, Mark",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779712620244",
+      "timestamp": "2026-05-25T12:37:00.244Z",
+      "user": "Jutras, Michael",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 9",
+      "details": "Submitted Monday AM for Hole 9"
+    },
+    {
+      "id": "1779712614602",
+      "timestamp": "2026-05-25T12:36:54.602Z",
+      "user": "Jutras, Michael",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Gee, Stephen",
+      "details": "Monday AM - Hole #9 (alternate)"
+    },
+    {
+      "id": "1779712583436",
+      "timestamp": "2026-05-25T12:36:23.436Z",
+      "user": "Jutras, Michael",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 9",
+      "details": "Submitted Monday AM for Hole 9"
+    },
+    {
+      "id": "1779712579909",
+      "timestamp": "2026-05-25T12:36:19.909Z",
+      "user": "Jutras, Michael",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Cary, Ron",
+      "details": "Monday AM - Hole #9"
+    },
     {
       "id": "1779712456820",
       "timestamp": "2026-05-25T12:34:16.820Z",
@@ -17009,5 +17074,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779712455739
+  "serverNow": 1779710541938
 }
