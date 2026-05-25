@@ -9159,6 +9159,24 @@
   },
   "activityLog": [
     {
+      "id": "1779672797352",
+      "timestamp": "2026-05-25T01:33:17.352Z",
+      "user": "Galvan, Bob",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1779672764824",
+      "timestamp": "2026-05-25T01:32:44.824Z",
+      "user": "Galvan, Bob",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
       "id": "1779672308163",
       "timestamp": "2026-05-25T01:25:08.164Z",
       "user": "Pugh, Clayton",
