@@ -10636,6 +10636,16 @@
       "checkedInBy": "Jutras, Michael",
       "timestamp": "2026-05-25T22:05:25.931Z",
       "isAlternate": true
+    },
+    {
+      "volunteerId": "10695",
+      "volunteerName": "Stone, Tyler",
+      "hole": 18,
+      "day": "Monday",
+      "shift": "PM",
+      "checkedInBy": "Wehmeyer, Tom",
+      "timestamp": "2026-05-25T22:51:37.755Z",
+      "isAlternate": true
     }
   ],
   "submissions": [],
@@ -10653,6 +10663,24 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779749504395",
+      "timestamp": "2026-05-25T22:51:44.395Z",
+      "user": "Wehmeyer, Tom",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 18",
+      "details": "Submitted Monday PM for Hole 18"
+    },
+    {
+      "id": "1779749497789",
+      "timestamp": "2026-05-25T22:51:37.790Z",
+      "user": "Wehmeyer, Tom",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Stone, Tyler",
+      "details": "Monday PM - Hole #18 (alternate)"
+    },
     {
       "id": "1779749389689",
       "timestamp": "2026-05-25T22:49:49.689Z",
