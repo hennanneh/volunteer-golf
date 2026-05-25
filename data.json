@@ -3874,7 +3874,7 @@
       "yearsWorked": 7,
       "hat": "",
       "scheduled": {
-        "Monday PM": true,
+        "Monday AM": true,
         "Wednesday PM": true,
         "Thursday AM": true,
         "Friday PM": true,
@@ -3885,7 +3885,7 @@
       "address": "7329 Brightwater Road Fort Worth, TX 76132",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779715634937
     },
     {
       "id": "380",
@@ -6284,15 +6284,15 @@
       "scheduled": {
         "Monday AM": true,
         "Thursday PM": true,
-        "Friday AM": true,
         "Saturday PM": true,
-        "Sunday AM": true
+        "Sunday AM": true,
+        "Sunday PM": true
       },
       "volId": "4143",
       "address": "7425 Ewing Ave Fort Worth, TX 76116",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779715502080
     },
     {
       "id": "10150",
@@ -9729,6 +9729,26 @@
       "checkedInBy": "Holt, Sharron",
       "timestamp": "2026-05-25T13:23:14.563Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "2552",
+      "volunteerName": "Kane, Joseph",
+      "hole": 15,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Thomas, Stephen",
+      "timestamp": "2026-05-25T13:27:27.068Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8630",
+      "volunteerName": "Montalvo, Sammy",
+      "hole": 5,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Imboden, Thomas",
+      "timestamp": "2026-05-25T13:29:03.478Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -9746,6 +9766,93 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779715750117",
+      "timestamp": "2026-05-25T13:29:10.117Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 5",
+      "details": "Submitted Monday AM for Hole 5"
+    },
+    {
+      "id": "1779715653728-qqxqkp",
+      "timestamp": "2026-05-25T13:27:33.728Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "rejected-bulk-edit",
+      "target": "Perez, Emerico",
+      "details": "Captain hole 15 attempted to modify hole 13 volunteer (auto-rejected via bulk save — no data changed)",
+      "targetHole": 13,
+      "actorHole": 15
+    },
+    {
+      "id": "1779715652742",
+      "timestamp": "2026-05-25T13:27:32.742Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 15",
+      "details": "Submitted Monday AM for Hole 15"
+    },
+    {
+      "id": "1779715647921-70dj58",
+      "timestamp": "2026-05-25T13:27:27.921Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "rejected-bulk-edit",
+      "target": "Perez, Emerico",
+      "details": "Captain hole 15 attempted to modify hole 13 volunteer (auto-rejected via bulk save — no data changed)",
+      "targetHole": 13,
+      "actorHole": 15
+    },
+    {
+      "id": "1779715647103",
+      "timestamp": "2026-05-25T13:27:27.103Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Kane, Joseph",
+      "details": "Monday AM - Hole #15"
+    },
+    {
+      "id": "1779715639776-18msol",
+      "timestamp": "2026-05-25T13:27:19.776Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "rejected-bulk-edit",
+      "target": "Perez, Emerico",
+      "details": "Captain hole 15 attempted to modify hole 13 volunteer (auto-rejected via bulk save — no data changed)",
+      "targetHole": 13,
+      "actorHole": 15
+    },
+    {
+      "id": "1779715638993",
+      "timestamp": "2026-05-25T13:27:18.993Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779715634937-mc54b4",
+      "timestamp": "2026-05-25T13:27:14.937Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Johnson, Dean",
+      "details": "added Monday AM; removed Monday PM"
+    },
+    {
+      "id": "1779715502080-wdt02v",
+      "timestamp": "2026-05-25T13:25:02.080Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Perez, Emerico",
+      "details": "added Sunday PM; removed Friday AM"
+    },
     {
       "id": "1779715468064",
       "timestamp": "2026-05-25T13:24:28.064Z",
