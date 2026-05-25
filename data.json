@@ -9159,6 +9159,15 @@
   },
   "activityLog": [
     {
+      "id": "1779706486163",
+      "timestamp": "2026-05-25T10:54:46.163Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
       "id": "1779679204615",
       "timestamp": "2026-05-25T03:20:04.615Z",
       "user": "Elkins, Paul",
