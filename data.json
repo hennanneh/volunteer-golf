@@ -10128,6 +10128,76 @@
       "checkedInBy": "Duncan, Larry",
       "timestamp": "2026-05-25T16:44:29.130Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "274",
+      "volunteerName": "Waller, Gary",
+      "hole": 7,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Waller, Gary",
+      "timestamp": "2026-05-25T16:45:05.690Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6672",
+      "volunteerName": "Bravo, Albert",
+      "hole": 13,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Duncan, Larry",
+      "timestamp": "2026-05-25T16:45:15.994Z",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "7926",
+      "volunteerName": "Johnson, Linda",
+      "hole": 13,
+      "day": "Monday",
+      "shift": "PM",
+      "checkedInBy": "Duncan, Larry",
+      "timestamp": "2026-05-25T16:45:20.441Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5217",
+      "volunteerName": "Quintana, Mike",
+      "hole": 7,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Waller, Gary",
+      "timestamp": "2026-05-25T16:45:20.584Z",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "4531",
+      "volunteerName": "Duncan, Larry",
+      "hole": 13,
+      "day": "Monday",
+      "shift": "PM",
+      "checkedInBy": "Duncan, Larry",
+      "timestamp": "2026-05-25T16:45:25.095Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9900",
+      "volunteerName": "Riemitis, Andy",
+      "hole": 7,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Waller, Gary",
+      "timestamp": "2026-05-25T16:45:56.866Z",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "7927",
+      "volunteerName": "Johnson, Dean",
+      "hole": 13,
+      "day": "Monday",
+      "shift": "PM",
+      "checkedInBy": "Duncan, Larry",
+      "timestamp": "2026-05-25T16:46:22.834Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -10145,6 +10215,96 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779727587925",
+      "timestamp": "2026-05-25T16:46:27.925Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 13",
+      "details": "Submitted Monday PM for Hole 13"
+    },
+    {
+      "id": "1779727582873",
+      "timestamp": "2026-05-25T16:46:22.873Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Johnson, Dean",
+      "details": "Monday PM - Hole #13"
+    },
+    {
+      "id": "1779727568759",
+      "timestamp": "2026-05-25T16:46:08.759Z",
+      "user": "Waller, Gary",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 7",
+      "details": "Submitted Monday AM for Hole 7"
+    },
+    {
+      "id": "1779727556907",
+      "timestamp": "2026-05-25T16:45:56.907Z",
+      "user": "Waller, Gary",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Riemitis, Andy",
+      "details": "Monday AM - Hole #7 (alternate)"
+    },
+    {
+      "id": "1779727535024",
+      "timestamp": "2026-05-25T16:45:35.024Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 13",
+      "details": "Submitted Monday PM for Hole 13"
+    },
+    {
+      "id": "1779727525133",
+      "timestamp": "2026-05-25T16:45:25.133Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Duncan, Larry",
+      "details": "Monday PM - Hole #13"
+    },
+    {
+      "id": "1779727520624",
+      "timestamp": "2026-05-25T16:45:20.624Z",
+      "user": "Waller, Gary",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Quintana, Mike",
+      "details": "Monday AM - Hole #7 (alternate)"
+    },
+    {
+      "id": "1779727520477",
+      "timestamp": "2026-05-25T16:45:20.477Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Johnson, Linda",
+      "details": "Monday PM - Hole #13"
+    },
+    {
+      "id": "1779727516032",
+      "timestamp": "2026-05-25T16:45:16.032Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Bravo, Albert",
+      "details": "Monday AM - Hole #13 (alternate)"
+    },
+    {
+      "id": "1779727505743",
+      "timestamp": "2026-05-25T16:45:05.743Z",
+      "user": "Waller, Gary",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Waller, Gary",
+      "details": "Monday AM - Hole #7"
+    },
     {
       "id": "1779727487572",
       "timestamp": "2026-05-25T16:44:47.572Z",
@@ -19456,5 +19616,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779726538634
+  "serverNow": 1779727558111
 }
