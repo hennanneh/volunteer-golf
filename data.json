@@ -10487,16 +10487,6 @@
       "isAlternate": false
     },
     {
-      "volunteerId": "5240",
-      "volunteerName": "Rogenski, Chris P.",
-      "hole": 8,
-      "day": "Monday",
-      "shift": "PM",
-      "checkedInBy": "Holt, Sharron",
-      "timestamp": "2026-05-25T18:19:48.905Z",
-      "isAlternate": false
-    },
-    {
       "volunteerId": "2135",
       "volunteerName": "Davidson, Glen",
       "hole": 8,
@@ -10582,6 +10572,15 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779736007287",
+      "timestamp": "2026-05-25T19:06:47.287Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 6",
+      "details": "Submitted Monday PM for Hole 6"
+    },
     {
       "id": "1779735656648",
       "timestamp": "2026-05-25T19:00:56.648Z",
