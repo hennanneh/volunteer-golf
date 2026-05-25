@@ -9174,10 +9174,19 @@
     "pmShiftCutoff": "19:00",
     "numberOfHoles": 20,
     "helpName": "Mike Hill",
-    "pairingsUrl": "https://mydigitalpublication.com/publication/?i=843601",
+    "pairingsUrl": "https://www.charlesschwabchallenge.com/players",
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779708060666",
+      "timestamp": "2026-05-25T11:21:00.666Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "settings-change",
+      "target": "pairingsUrl",
+      "details": "Updated setting: pairingsUrl"
+    },
     {
       "id": "1779707753670",
       "timestamp": "2026-05-25T11:15:53.670Z",
