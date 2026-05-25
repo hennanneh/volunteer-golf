@@ -2784,14 +2784,13 @@
         "Thursday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
-        "Friday PM": true,
         "Saturday AM": true
       },
       "volId": "8359",
       "address": "PO Box 344 Gail, TX 79738",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779579845718
+      "lastModified": 1779719979748
     },
     {
       "id": "9195",
@@ -9906,6 +9905,15 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779719979748-5h80pf",
+      "timestamp": "2026-05-25T14:39:39.748Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Gray, Leandro",
+      "details": "removed Friday PM"
+    },
     {
       "id": "1779719364762",
       "timestamp": "2026-05-25T14:29:24.762Z",
