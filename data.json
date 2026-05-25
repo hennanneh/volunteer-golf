@@ -2518,8 +2518,6 @@
       "scheduled": {
         "Monday AM": true,
         "Monday PM": true,
-        "Tuesday AM": true,
-        "Tuesday PM": true,
         "Thursday PM": true,
         "Friday AM": true,
         "Saturday PM": true,
@@ -2529,7 +2527,7 @@
       "volId": "10667",
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
-      "lastModified": 1779739033097,
+      "lastModified": 1779744220873,
       "volunteerPassword": "$2b$10$TQ6zPcLveZ7Zb.xJZ45.dOorSt0laE8aaN2lY0tScMKxu5li9tmxa",
       "notes": ""
     },
@@ -7068,8 +7066,6 @@
       "scheduled": {
         "Monday AM": true,
         "Monday PM": true,
-        "Tuesday AM": true,
-        "Tuesday PM": true,
         "Wednesday AM": true,
         "Wednesday PM": true,
         "Thursday AM": true,
@@ -7085,7 +7081,7 @@
       "volId": "5240",
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
-      "lastModified": 1778813044771,
+      "lastModified": 1779744192001,
       "volunteerPassword": "$2b$10$DKkDxxf8bOMizLhn87uLdOVDrzEDqIsLI.w5T15zABd1S7QCXtcGi"
     },
     {
@@ -10607,6 +10603,24 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779744220873-n1jeaz",
+      "timestamp": "2026-05-25T21:23:40.873Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Gilchrist, William (Bill)",
+      "details": "removed Tuesday AM, Tuesday PM"
+    },
+    {
+      "id": "1779744192001-ivle7y",
+      "timestamp": "2026-05-25T21:23:12.001Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Rogenski, Chris P.",
+      "details": "removed Tuesday AM, Tuesday PM"
+    },
     {
       "id": "1779743845052",
       "timestamp": "2026-05-25T21:17:25.052Z",
