@@ -10604,6 +10604,24 @@
   },
   "activityLog": [
     {
+      "id": "1779745453185",
+      "timestamp": "2026-05-25T21:44:13.185Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779745417917",
+      "timestamp": "2026-05-25T21:43:37.917Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1779744220873-n1jeaz",
       "timestamp": "2026-05-25T21:23:40.873Z",
       "user": "Holt, Sharron",
