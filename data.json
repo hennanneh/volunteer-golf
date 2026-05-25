@@ -9908,6 +9908,16 @@
       "checkedInBy": "Mulvaney, Matt",
       "timestamp": "2026-05-25T14:49:16.398Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "10126",
+      "volunteerName": "Sickler, Debra",
+      "hole": 16,
+      "day": "Monday",
+      "shift": "PM",
+      "checkedInBy": "Mulvaney, Matt",
+      "timestamp": "2026-05-25T14:50:12.551Z",
+      "isAlternate": true
     }
   ],
   "submissions": [],
@@ -9925,6 +9935,51 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779720876784",
+      "timestamp": "2026-05-25T14:54:36.784Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 14",
+      "details": "Submitted Monday AM for Hole 14"
+    },
+    {
+      "id": "1779720855349",
+      "timestamp": "2026-05-25T14:54:15.349Z",
+      "user": "Gordon, Gary",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779720841813",
+      "timestamp": "2026-05-25T14:54:01.813Z",
+      "user": "Gordon, Gary",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779720706900",
+      "timestamp": "2026-05-25T14:51:46.900Z",
+      "user": "Sippel, Mark",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1779720612486",
+      "timestamp": "2026-05-25T14:50:12.487Z",
+      "user": "Mulvaney, Matt",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Sickler, Debra",
+      "details": "Monday PM - Hole #16 (alternate)"
+    },
     {
       "id": "1779720556317",
       "timestamp": "2026-05-25T14:49:16.317Z",
@@ -18804,5 +18859,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779717904733
+  "serverNow": 1779720856740
 }
