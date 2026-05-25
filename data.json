@@ -10616,6 +10616,26 @@
       "checkedInBy": "Jutras, Michael",
       "timestamp": "2026-05-25T22:04:59.154Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "111",
+      "volunteerName": "Cary, Ron",
+      "hole": 9,
+      "day": "Monday",
+      "shift": "PM",
+      "checkedInBy": "Jutras, Michael",
+      "timestamp": "2026-05-25T22:05:06.367Z",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "1518",
+      "volunteerName": "Trias, Dan",
+      "hole": 9,
+      "day": "Monday",
+      "shift": "PM",
+      "checkedInBy": "Jutras, Michael",
+      "timestamp": "2026-05-25T22:05:25.931Z",
+      "isAlternate": true
     }
   ],
   "submissions": [],
@@ -10633,6 +10653,42 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779746729745",
+      "timestamp": "2026-05-25T22:05:29.745Z",
+      "user": "Jutras, Michael",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 9",
+      "details": "Submitted Monday PM for Hole 9"
+    },
+    {
+      "id": "1779746725991",
+      "timestamp": "2026-05-25T22:05:25.991Z",
+      "user": "Jutras, Michael",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Trias, Dan",
+      "details": "Monday PM - Hole #9 (alternate)"
+    },
+    {
+      "id": "1779746706437",
+      "timestamp": "2026-05-25T22:05:06.437Z",
+      "user": "Jutras, Michael",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Cary, Ron",
+      "details": "Monday PM - Hole #9 (alternate)"
+    },
+    {
+      "id": "1779746699215",
+      "timestamp": "2026-05-25T22:04:59.215Z",
+      "user": "Jutras, Michael",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Jutras, Michael",
+      "details": "Monday PM - Hole #9"
+    },
     {
       "id": "1779746697083",
       "timestamp": "2026-05-25T22:04:57.083Z",
