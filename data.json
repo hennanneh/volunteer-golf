@@ -10570,6 +10570,26 @@
       "checkedInBy": "Holt, Sharron",
       "timestamp": "2026-05-25T20:50:00.769Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "6217",
+      "volunteerName": "Nederostek, Brad",
+      "hole": 4,
+      "day": "Monday",
+      "shift": "PM",
+      "checkedInBy": "Nederostek, Brad",
+      "timestamp": "2026-05-25T21:17:21.724Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9581",
+      "volunteerName": "Williams, David",
+      "hole": 4,
+      "day": "Monday",
+      "shift": "PM",
+      "checkedInBy": "Nederostek, Brad",
+      "timestamp": "2026-05-25T21:17:22.896Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -10587,6 +10607,51 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779743845052",
+      "timestamp": "2026-05-25T21:17:25.052Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 4",
+      "details": "Submitted Monday PM for Hole 4"
+    },
+    {
+      "id": "1779743842939",
+      "timestamp": "2026-05-25T21:17:22.939Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Williams, David",
+      "details": "Monday PM - Hole #4"
+    },
+    {
+      "id": "1779743841767",
+      "timestamp": "2026-05-25T21:17:21.767Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Nederostek, Brad",
+      "details": "Monday PM - Hole #4"
+    },
+    {
+      "id": "1779743779134",
+      "timestamp": "2026-05-25T21:16:19.134Z",
+      "user": "Browning, Wayne",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 17",
+      "details": "Submitted Monday PM for Hole 17"
+    },
+    {
+      "id": "1779743747933",
+      "timestamp": "2026-05-25T21:15:47.933Z",
+      "user": "Browning, Wayne",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Hicks, Jackie",
+      "details": "Monday PM - Hole #17 (alternate)"
+    },
     {
       "id": "1779742201585",
       "timestamp": "2026-05-25T20:50:01.585Z",
