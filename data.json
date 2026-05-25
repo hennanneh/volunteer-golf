@@ -10459,6 +10459,33 @@
   },
   "activityLog": [
     {
+      "id": "1779732492299",
+      "timestamp": "2026-05-25T18:08:12.299Z",
+      "user": "Sanders, Steve",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1779732398578",
+      "timestamp": "2026-05-25T18:06:38.578Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779732366462",
+      "timestamp": "2026-05-25T18:06:06.462Z",
+      "user": "Hill, Michael",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1779731844514",
       "timestamp": "2026-05-25T17:57:24.514Z",
       "user": "Sanders, Steve",
