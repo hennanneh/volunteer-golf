@@ -10219,6 +10219,36 @@
       "checkedInBy": "Sanders, Steve",
       "timestamp": "2026-05-25T17:02:27.043Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "9988",
+      "volunteerName": "Grall, George",
+      "hole": 12,
+      "day": "Monday",
+      "shift": "PM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-25T17:05:06.914Z",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "6692",
+      "volunteerName": "Starks, Michael",
+      "hole": 12,
+      "day": "Monday",
+      "shift": "PM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-25T17:05:32.442Z",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "8013",
+      "volunteerName": "Naukam, Philip",
+      "hole": 12,
+      "day": "Monday",
+      "shift": "PM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-25T17:06:05.615Z",
+      "isAlternate": true
     }
   ],
   "submissions": [],
@@ -10236,6 +10266,33 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779728765458",
+      "timestamp": "2026-05-25T17:06:05.458Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Naukam, Philip",
+      "details": "Monday PM - Hole #12 (alternate)"
+    },
+    {
+      "id": "1779728732285",
+      "timestamp": "2026-05-25T17:05:32.285Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Starks, Michael",
+      "details": "Monday PM - Hole #12 (alternate)"
+    },
+    {
+      "id": "1779728706756",
+      "timestamp": "2026-05-25T17:05:06.756Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Grall, George",
+      "details": "Monday PM - Hole #12 (alternate)"
+    },
     {
       "id": "1779728630187-40gnpw",
       "timestamp": "2026-05-25T17:03:50.187Z",
