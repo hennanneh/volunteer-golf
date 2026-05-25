@@ -9759,6 +9759,46 @@
       "checkedInBy": "Mosler, Mitch",
       "timestamp": "2026-05-25T13:31:22.048Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "7794",
+      "volunteerName": "Beckley, Bob",
+      "hole": 15,
+      "day": "Monday",
+      "shift": "PM",
+      "checkedInBy": "Beckley, Bob",
+      "timestamp": "2026-05-25T13:37:12.636Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5235",
+      "volunteerName": "Thomas, Stephen",
+      "hole": 15,
+      "day": "Monday",
+      "shift": "PM",
+      "checkedInBy": "Beckley, Bob",
+      "timestamp": "2026-05-25T13:37:12.913Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7191",
+      "volunteerName": "Sanders, Steve",
+      "hole": 14,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Mosler, Mitch",
+      "timestamp": "2026-05-25T13:39:41.097Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7207",
+      "volunteerName": "Watson, Steve",
+      "hole": 14,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Mosler, Mitch",
+      "timestamp": "2026-05-25T13:39:44.343Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -9776,6 +9816,78 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779716388099",
+      "timestamp": "2026-05-25T13:39:48.099Z",
+      "user": "Mosler, Mitch",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 14",
+      "details": "Submitted Monday AM for Hole 14"
+    },
+    {
+      "id": "1779716384383",
+      "timestamp": "2026-05-25T13:39:44.383Z",
+      "user": "Mosler, Mitch",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Watson, Steve",
+      "details": "Monday AM - Hole #14"
+    },
+    {
+      "id": "1779716381158",
+      "timestamp": "2026-05-25T13:39:41.158Z",
+      "user": "Mosler, Mitch",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Sanders, Steve",
+      "details": "Monday AM - Hole #14"
+    },
+    {
+      "id": "1779716350801",
+      "timestamp": "2026-05-25T13:39:10.801Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779716266091",
+      "timestamp": "2026-05-25T13:37:46.091Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 15",
+      "details": "Submitted Monday PM for Hole 15"
+    },
+    {
+      "id": "1779716239816",
+      "timestamp": "2026-05-25T13:37:19.816Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 15",
+      "details": "Submitted Monday PM for Hole 15"
+    },
+    {
+      "id": "1779716232947",
+      "timestamp": "2026-05-25T13:37:12.947Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Thomas, Stephen",
+      "details": "Monday PM - Hole #15"
+    },
+    {
+      "id": "1779716232669",
+      "timestamp": "2026-05-25T13:37:12.669Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Beckley, Bob",
+      "details": "Monday PM - Hole #15"
+    },
     {
       "id": "1779716095644",
       "timestamp": "2026-05-25T13:34:55.644Z",
