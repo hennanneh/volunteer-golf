@@ -9719,6 +9719,16 @@
       "checkedInBy": "Holt, Sharron",
       "timestamp": "2026-05-25T13:17:51.614Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "5240",
+      "volunteerName": "Rogenski, Chris P.",
+      "hole": 8,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Holt, Sharron",
+      "timestamp": "2026-05-25T13:23:14.563Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -9736,6 +9746,60 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779715468064",
+      "timestamp": "2026-05-25T13:24:28.064Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779715394913",
+      "timestamp": "2026-05-25T13:23:14.913Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Rogenski, Chris P.",
+      "details": "Monday AM - Hole #8"
+    },
+    {
+      "id": "1779715372442",
+      "timestamp": "2026-05-25T13:22:52.442Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779715299568",
+      "timestamp": "2026-05-25T13:21:39.568Z",
+      "user": "Thomas, Stephen",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1779715290300",
+      "timestamp": "2026-05-25T13:21:30.300Z",
+      "user": "Thomas, Stephen",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1779715280650",
+      "timestamp": "2026-05-25T13:21:20.650Z",
+      "user": "Thomas, Stephen",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
     {
       "id": "1779715196743",
       "timestamp": "2026-05-25T13:19:56.743Z",
