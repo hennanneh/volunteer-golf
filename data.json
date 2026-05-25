@@ -10291,6 +10291,76 @@
       "checkedInBy": "Watson, Stan",
       "timestamp": "2026-05-25T17:31:26.183Z",
       "isAlternate": true
+    },
+    {
+      "volunteerId": "3138",
+      "volunteerName": "Bishop, Woody",
+      "hole": 17,
+      "day": "Monday",
+      "shift": "PM",
+      "checkedInBy": "Bishop, Woody",
+      "timestamp": "2026-05-25T17:37:03.527Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6191",
+      "volunteerName": "Browning, Wayne",
+      "hole": 17,
+      "day": "Monday",
+      "shift": "PM",
+      "checkedInBy": "Bishop, Woody",
+      "timestamp": "2026-05-25T17:37:04.226Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "3777",
+      "volunteerName": "Hicks, Greg",
+      "hole": 17,
+      "day": "Monday",
+      "shift": "PM",
+      "checkedInBy": "Bishop, Woody",
+      "timestamp": "2026-05-25T17:37:05.290Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "1464",
+      "volunteerName": "Mcdaniel, Patrick",
+      "hole": 6,
+      "day": "Monday",
+      "shift": "PM",
+      "checkedInBy": "Mcdaniel, Patrick",
+      "timestamp": "2026-05-25T17:38:11.145Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4433",
+      "volunteerName": "Elkins, Paul",
+      "hole": 6,
+      "day": "Monday",
+      "shift": "PM",
+      "checkedInBy": "Mcdaniel, Patrick",
+      "timestamp": "2026-05-25T17:38:12.033Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9461",
+      "volunteerName": "Goodenough, Timothy",
+      "hole": 6,
+      "day": "Monday",
+      "shift": "PM",
+      "checkedInBy": "Mcdaniel, Patrick",
+      "timestamp": "2026-05-25T17:38:13.825Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4190",
+      "volunteerName": "Towers, Douglas",
+      "hole": 6,
+      "day": "Monday",
+      "shift": "PM",
+      "checkedInBy": "Mcdaniel, Patrick",
+      "timestamp": "2026-05-25T17:38:14.933Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -10308,6 +10378,60 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779730702456",
+      "timestamp": "2026-05-25T17:38:22.456Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 6",
+      "details": "Submitted Monday PM for Hole 6"
+    },
+    {
+      "id": "1779730694982",
+      "timestamp": "2026-05-25T17:38:14.982Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Towers, Douglas",
+      "details": "Monday PM - Hole #6"
+    },
+    {
+      "id": "1779730693921",
+      "timestamp": "2026-05-25T17:38:13.921Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Goodenough, Timothy",
+      "details": "Monday PM - Hole #6"
+    },
+    {
+      "id": "1779730692112",
+      "timestamp": "2026-05-25T17:38:12.112Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Elkins, Paul",
+      "details": "Monday PM - Hole #6"
+    },
+    {
+      "id": "1779730691199",
+      "timestamp": "2026-05-25T17:38:11.199Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Mcdaniel, Patrick",
+      "details": "Monday PM - Hole #6"
+    },
+    {
+      "id": "1779730685971",
+      "timestamp": "2026-05-25T17:38:05.971Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779730350117-w0609o",
       "timestamp": "2026-05-25T17:32:30.117Z",
