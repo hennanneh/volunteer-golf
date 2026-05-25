@@ -9201,6 +9201,16 @@
       "checkedInBy": "Nederostek, Brad",
       "timestamp": "2026-05-25T12:02:07.521Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "9658",
+      "volunteerName": "Jutras, Michael",
+      "hole": 9,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Jutras, Michael",
+      "timestamp": "2026-05-25T12:18:46.865Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -9218,6 +9228,15 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779711538382",
+      "timestamp": "2026-05-25T12:18:58.382Z",
+      "user": "Jutras, Michael",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 9",
+      "details": "Submitted Monday AM for Hole 9"
+    },
     {
       "id": "1779710547686",
       "timestamp": "2026-05-25T12:02:27.686Z",
