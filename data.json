@@ -9261,6 +9261,36 @@
       "checkedInBy": "Gordon, Gary",
       "timestamp": "2026-05-25T12:29:45.987Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "8013",
+      "volunteerName": "Naukam, Philip",
+      "hole": 12,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-25T12:31:35.236Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5192",
+      "volunteerName": "Imboden, Thomas",
+      "hole": 5,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Imboden, Thomas",
+      "timestamp": "2026-05-25T12:33:46.307Z",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "4143",
+      "volunteerName": "Perez, Emerico",
+      "hole": 13,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Duncan, Larry",
+      "timestamp": "2026-05-25T12:34:07.228Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -9278,6 +9308,69 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779712456820",
+      "timestamp": "2026-05-25T12:34:16.820Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 13",
+      "details": "Submitted Monday AM for Hole 13"
+    },
+    {
+      "id": "1779712454655",
+      "timestamp": "2026-05-25T12:34:14.661Z",
+      "user": "Wehmeyer, Tom",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779712447263",
+      "timestamp": "2026-05-25T12:34:07.263Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Perez, Emerico",
+      "details": "Monday AM - Hole #13"
+    },
+    {
+      "id": "1779712443993",
+      "timestamp": "2026-05-25T12:34:03.993Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779712435449",
+      "timestamp": "2026-05-25T12:33:55.449Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 5",
+      "details": "Submitted Monday AM for Hole 5"
+    },
+    {
+      "id": "1779712426359",
+      "timestamp": "2026-05-25T12:33:46.359Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Imboden, Thomas",
+      "details": "Monday AM - Hole #5 (alternate)"
+    },
+    {
+      "id": "1779712417263",
+      "timestamp": "2026-05-25T12:33:37.263Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779712185734",
       "timestamp": "2026-05-25T12:29:45.734Z",
@@ -16916,5 +17009,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779710541938
+  "serverNow": 1779712455739
 }
