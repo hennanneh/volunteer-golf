@@ -2943,13 +2943,14 @@
         "Thursday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
+        "Saturday PM": true,
         "Sunday PM": true
       },
       "volId": "5924",
       "address": "117 Springwood Ranch Loop, Springtown, TX 76082",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779733583489
     },
     {
       "id": "9558",
@@ -5451,15 +5452,19 @@
       "scheduled": {
         "Wednesday AM": true,
         "Thursday AM": true,
+        "Thursday PM": true,
+        "Friday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true,
         "Sunday PM": true
       },
       "volId": "10362",
       "address": "4107 Fairway Dr Granbury, TX 76049",
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
-      "lastModified": 1778813044771,
+      "lastModified": 1779733711149,
       "volunteerPassword": "$2b$10$6tpJfJpcEuE4cMJ4mDekk..9sEu4KcQmEXVRY3aiTS8CezqniNjci"
     },
     {
@@ -10542,6 +10547,26 @@
       "checkedInBy": "Imboden, Thomas",
       "timestamp": "2026-05-25T18:20:55.888Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "5924",
+      "volunteerName": "Gustaf, David",
+      "hole": 15,
+      "day": "Monday",
+      "shift": "PM",
+      "checkedInBy": "Beckley, Bob",
+      "timestamp": "2026-05-25T18:26:12.775Z",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "10362",
+      "volunteerName": "Mills, Brad",
+      "hole": 15,
+      "day": "Monday",
+      "shift": "PM",
+      "checkedInBy": "Beckley, Bob",
+      "timestamp": "2026-05-25T18:28:08.255Z",
+      "isAlternate": true
     }
   ],
   "submissions": [],
@@ -10559,6 +10584,53 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779733711149-g0yv96",
+      "timestamp": "2026-05-25T18:28:31.149Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Mills, Brad",
+      "details": "added Thursday PM, Friday AM, Saturday PM, Sunday AM"
+    },
+    {
+      "id": "1779733689119-6etjtr",
+      "timestamp": "2026-05-25T18:28:09.119Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "rejected-bulk-edit",
+      "target": "Gilchrist, William (Bill)",
+      "details": "Captain hole 15 attempted to modify hole 8 volunteer (auto-rejected via bulk save — no data changed)",
+      "targetHole": 8,
+      "actorHole": 15
+    },
+    {
+      "id": "1779733688322",
+      "timestamp": "2026-05-25T18:28:08.322Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Mills, Brad",
+      "details": "Monday PM - Hole #15 (alternate)"
+    },
+    {
+      "id": "1779733583490-zv9y1z",
+      "timestamp": "2026-05-25T18:26:23.490Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Gustaf, David",
+      "details": "added Saturday PM"
+    },
+    {
+      "id": "1779733572861",
+      "timestamp": "2026-05-25T18:26:12.861Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Gustaf, David",
+      "details": "Monday PM - Hole #15 (alternate)"
+    },
     {
       "id": "1779733375273",
       "timestamp": "2026-05-25T18:22:55.273Z",
@@ -20560,5 +20632,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779730903271
+  "serverNow": 1779733196046
 }
