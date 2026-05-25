@@ -10636,6 +10636,26 @@
       "checkedInBy": "Wehmeyer, Tom",
       "timestamp": "2026-05-25T22:51:37.755Z",
       "isAlternate": true
+    },
+    {
+      "volunteerId": "8194",
+      "volunteerName": "Croxdale, Jack",
+      "hole": 10,
+      "day": "Monday",
+      "shift": "PM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-25T23:44:37.394Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9485",
+      "volunteerName": "Lutke, Jeff",
+      "hole": 10,
+      "day": "Monday",
+      "shift": "PM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-25T23:44:37.718Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -10653,6 +10673,33 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779752677782",
+      "timestamp": "2026-05-25T23:44:37.782Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Lutke, Jeff",
+      "details": "Monday PM - Hole #10"
+    },
+    {
+      "id": "1779752677450",
+      "timestamp": "2026-05-25T23:44:37.450Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Croxdale, Jack",
+      "details": "Monday PM - Hole #10"
+    },
+    {
+      "id": "1779752658122",
+      "timestamp": "2026-05-25T23:44:18.122Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779750519018",
       "timestamp": "2026-05-25T23:08:39.018Z",
