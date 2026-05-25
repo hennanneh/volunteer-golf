@@ -2527,8 +2527,9 @@
       "volId": "10667",
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
-      "lastModified": 1779545366278,
-      "volunteerPassword": "$2b$10$TQ6zPcLveZ7Zb.xJZ45.dOorSt0laE8aaN2lY0tScMKxu5li9tmxa"
+      "lastModified": 1779733242775,
+      "volunteerPassword": "$2b$10$TQ6zPcLveZ7Zb.xJZ45.dOorSt0laE8aaN2lY0tScMKxu5li9tmxa",
+      "notes": "I screwed up Bill was also here this morning"
     },
     {
       "id": "4128",
@@ -10531,6 +10532,16 @@
       "checkedInBy": "Holt, Sharron",
       "timestamp": "2026-05-25T18:19:55.357Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "7070",
+      "volunteerName": "Reding, Gary",
+      "hole": 5,
+      "day": "Monday",
+      "shift": "PM",
+      "checkedInBy": "Imboden, Thomas",
+      "timestamp": "2026-05-25T18:20:55.888Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -10548,6 +10559,42 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779733375273",
+      "timestamp": "2026-05-25T18:22:55.273Z",
+      "user": "Mosler, Mitch",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779733258043",
+      "timestamp": "2026-05-25T18:20:58.043Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 5",
+      "details": "Submitted Monday PM for Hole 5"
+    },
+    {
+      "id": "1779733255925",
+      "timestamp": "2026-05-25T18:20:55.925Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Reding, Gary",
+      "details": "Monday PM - Hole #5"
+    },
+    {
+      "id": "1779733242775-tts1my",
+      "timestamp": "2026-05-25T18:20:42.775Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "edit-volunteer",
+      "target": "Gilchrist, William (Bill)",
+      "details": "Updated fields: notes"
+    },
     {
       "id": "1779733195950",
       "timestamp": "2026-05-25T18:19:55.950Z",
