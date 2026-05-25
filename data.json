@@ -10574,6 +10574,15 @@
   },
   "activityLog": [
     {
+      "id": "1779739484192",
+      "timestamp": "2026-05-25T20:04:44.192Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1779739033097-u3sflv",
       "timestamp": "2026-05-25T19:57:13.097Z",
       "user": "Holt, Sharron",
