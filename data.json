@@ -6116,8 +6116,7 @@
       "yearsWorked": 3,
       "hat": "",
       "scheduled": {
-        "Monday PM": true,
-        "Tuesday PM": true,
+        "Wednesday AM": true,
         "Thursday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
@@ -6127,7 +6126,8 @@
       "address": "5821 Waltham Ave Fort Worth, TX 76133",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779724938342,
+      "notes": "Mark here is your new shift change "
     },
     {
       "id": "9574",
@@ -10048,6 +10048,33 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779725093496",
+      "timestamp": "2026-05-25T16:04:53.496Z",
+      "user": "Duke, Mitzie",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1779724938342-jaff1s",
+      "timestamp": "2026-05-25T16:02:18.342Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "edit-volunteer",
+      "target": "Ozier, Mark",
+      "details": "Updated fields: scheduled, notes"
+    },
+    {
+      "id": "1779724909665",
+      "timestamp": "2026-05-25T16:01:49.665Z",
+      "user": "Duke, Mitzie",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
     {
       "id": "1779723465132",
       "timestamp": "2026-05-25T15:37:45.132Z",
