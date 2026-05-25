@@ -9125,16 +9125,6 @@
       "volunteerName": "Schafer, John",
       "hole": 4,
       "day": "Monday",
-      "shift": "AM",
-      "checkedInBy": "Schafer, John",
-      "timestamp": "2026-05-25T11:15:36.968Z",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "3974",
-      "volunteerName": "Schafer, John",
-      "hole": 4,
-      "day": "Monday",
       "shift": "PM",
       "checkedInBy": "Schafer, John",
       "timestamp": "2026-05-25T11:15:53.620Z",
@@ -9849,6 +9839,36 @@
       "checkedInBy": "Watson, Stan",
       "timestamp": "2026-05-25T13:51:59.839Z",
       "isAlternate": true
+    },
+    {
+      "volunteerId": "1770",
+      "volunteerName": "Mulvaney, Matt",
+      "hole": 16,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Mulvaney, Matt",
+      "timestamp": "2026-05-25T14:03:33.870Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "1770",
+      "volunteerName": "Mulvaney, Matt",
+      "hole": 16,
+      "day": "Monday",
+      "shift": "PM",
+      "checkedInBy": "Mulvaney, Matt",
+      "timestamp": "2026-05-25T14:03:59.171Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "214",
+      "volunteerName": "Osiek, Curt",
+      "hole": 10,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-25T14:04:22.713Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -9866,6 +9886,33 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779717839102",
+      "timestamp": "2026-05-25T14:03:59.102Z",
+      "user": "Mulvaney, Matt",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Mulvaney, Matt",
+      "details": "Monday PM - Hole #16"
+    },
+    {
+      "id": "1779717813799",
+      "timestamp": "2026-05-25T14:03:33.799Z",
+      "user": "Mulvaney, Matt",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Mulvaney, Matt",
+      "details": "Monday AM - Hole #16"
+    },
+    {
+      "id": "1779717811143",
+      "timestamp": "2026-05-25T14:03:31.143Z",
+      "user": "Mulvaney, Matt",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779717138832",
       "timestamp": "2026-05-25T13:52:18.832Z",
