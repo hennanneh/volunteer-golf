@@ -4476,6 +4476,7 @@
         "Monday AM": true,
         "Tuesday AM": true,
         "Wednesday AM": true,
+        "Wednesday PM": true,
         "Thursday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
@@ -4489,7 +4490,7 @@
       "address": "6428 Maple Drive The Colony, TX 75056",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778855733556,
+      "lastModified": 1779752879808,
       "volunteerPassword": "$2b$10$PPSYdhx9.iFEcH140U.MAOtU1rFsaIqh1ovYvwsghLtdOZTmPz1.u"
     },
     {
@@ -6993,6 +6994,11 @@
       "yearsWorked": 8,
       "hat": "",
       "scheduled": {
+        "Monday AM": true,
+        "Monday PM": true,
+        "Tuesday AM": true,
+        "Tuesday PM": true,
+        "Wednesday AM": true,
         "Wednesday PM": true,
         "Thursday PM": true,
         "Friday AM": true,
@@ -7003,7 +7009,7 @@
       "address": "8857 Oakville St Fort Worth, TX 76244",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779752760781
     },
     {
       "id": "9818",
@@ -10673,6 +10679,33 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779752926157",
+      "timestamp": "2026-05-25T23:48:46.157Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779752879808-mngctp",
+      "timestamp": "2026-05-25T23:47:59.808Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Kutzler, Jack",
+      "details": "added Wednesday PM"
+    },
+    {
+      "id": "1779752760781-f1ixdj",
+      "timestamp": "2026-05-25T23:46:00.781Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Roberson, Chris",
+      "details": "added Monday AM, Monday PM, Tuesday AM, Tuesday PM, Wednesday AM"
+    },
     {
       "id": "1779752677782",
       "timestamp": "2026-05-25T23:44:37.782Z",
