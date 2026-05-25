@@ -10401,6 +10401,26 @@
       "checkedInBy": "Pugh, Clayton",
       "timestamp": "2026-05-25T17:46:15.984Z",
       "isAlternate": true
+    },
+    {
+      "volunteerId": "8887",
+      "volunteerName": "Arnold, Tyrone",
+      "hole": 14,
+      "day": "Monday",
+      "shift": "PM",
+      "checkedInBy": "Mosler, Mitch",
+      "timestamp": "2026-05-25T17:54:05.610Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10582",
+      "volunteerName": "Corrales, Jack",
+      "hole": 14,
+      "day": "Monday",
+      "shift": "PM",
+      "checkedInBy": "Mosler, Mitch",
+      "timestamp": "2026-05-25T17:54:17.536Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -10418,6 +10438,24 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779731660504",
+      "timestamp": "2026-05-25T17:54:20.504Z",
+      "user": "Mosler, Mitch",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 14",
+      "details": "Submitted Monday PM for Hole 14"
+    },
+    {
+      "id": "1779731657689",
+      "timestamp": "2026-05-25T17:54:17.689Z",
+      "user": "Mosler, Mitch",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Corrales, Jack",
+      "details": "Monday PM - Hole #14"
+    },
     {
       "id": "1779731175812",
       "timestamp": "2026-05-25T17:46:15.812Z",
