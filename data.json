@@ -169,6 +169,8 @@
       "yearsWorked": 1,
       "hat": "",
       "scheduled": {
+        "Monday AM": true,
+        "Monday PM": true,
         "Wednesday AM": true,
         "Thursday AM": true,
         "Friday PM": true,
@@ -180,7 +182,7 @@
       "volId": "10644",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779730350116
     },
     {
       "id": "8802",
@@ -10279,6 +10281,16 @@
       "checkedInBy": "Butler, Mark",
       "timestamp": "2026-05-25T17:29:52.887Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "10644",
+      "volunteerName": "Ash, Michael",
+      "hole": 11,
+      "day": "Monday",
+      "shift": "PM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-25T17:31:26.183Z",
+      "isAlternate": true
     }
   ],
   "submissions": [],
@@ -10296,6 +10308,33 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779730350117-w0609o",
+      "timestamp": "2026-05-25T17:32:30.117Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Ash, Michael",
+      "details": "added Monday AM, Monday PM"
+    },
+    {
+      "id": "1779730299735",
+      "timestamp": "2026-05-25T17:31:39.735Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 11",
+      "details": "Submitted Monday PM for Hole 11"
+    },
+    {
+      "id": "1779730286588",
+      "timestamp": "2026-05-25T17:31:26.588Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Ash, Michael",
+      "details": "Monday PM - Hole #11 (alternate)"
+    },
     {
       "id": "1779730199995",
       "timestamp": "2026-05-25T17:29:59.995Z",
@@ -19973,5 +20012,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779728565564
+  "serverNow": 1779730193548
 }
