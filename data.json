@@ -10492,16 +10492,6 @@
       "isAlternate": false
     },
     {
-      "volunteerId": "2135",
-      "volunteerName": "Davidson, Glen",
-      "hole": 8,
-      "day": "Monday",
-      "shift": "PM",
-      "checkedInBy": "Holt, Sharron",
-      "timestamp": "2026-05-25T18:19:50.771Z",
-      "isAlternate": false
-    },
-    {
       "volunteerId": "10667",
       "volunteerName": "Gilchrist, William (Bill)",
       "hole": 8,
@@ -10570,6 +10560,16 @@
       "checkedInBy": "Waller, Gary",
       "timestamp": "2026-05-25T20:40:36.698Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "2135",
+      "volunteerName": "Davidson, Glen",
+      "hole": 8,
+      "day": "Monday",
+      "shift": "PM",
+      "checkedInBy": "Holt, Sharron",
+      "timestamp": "2026-05-25T20:50:00.769Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -10587,6 +10587,15 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779742188072",
+      "timestamp": "2026-05-25T20:49:48.073Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Davidson, Glen",
+      "details": "Monday PM - Hole #8"
+    },
     {
       "id": "1779740462059",
       "timestamp": "2026-05-25T20:21:02.059Z",
