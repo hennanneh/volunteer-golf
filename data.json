@@ -9047,19 +9047,6 @@
       "volunteerPassword": "$2b$10$9H06MCPpLzQI65orJ1OtZuARWqRVdjz2/cvj7yZOmCIWXLEE187tq"
     },
     {
-      "id": "superadmin",
-      "email": "annehowrey@yahoo.com",
-      "name": "Howrey, Anne",
-      "type": "Admin",
-      "phone": "",
-      "hole": "",
-      "yearsWorked": "",
-      "scheduled": {},
-      "lastModified": 1778813044771,
-      "hasAdminPassword": false,
-      "hasVolunteerPassword": false
-    },
-    {
       "id": "8895",
       "name": "Addison, Shirley",
       "type": "Volunteer",
@@ -9311,6 +9298,26 @@
       "checkedInBy": "Jutras, Michael",
       "timestamp": "2026-05-25T12:36:54.545Z",
       "isAlternate": true
+    },
+    {
+      "volunteerId": "1520",
+      "volunteerName": "Craft, John",
+      "hole": 2,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Gordon, Gary",
+      "timestamp": "2026-05-25T12:41:37.408Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10731",
+      "volunteerName": "Gaines, Lisa",
+      "hole": 2,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Gordon, Gary",
+      "timestamp": "2026-05-25T12:41:45.585Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -9328,6 +9335,24 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779712905311",
+      "timestamp": "2026-05-25T12:41:45.311Z",
+      "user": "Gordon, Gary",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Gaines, Lisa",
+      "details": "Monday AM - Hole #2"
+    },
+    {
+      "id": "1779712893293",
+      "timestamp": "2026-05-25T12:41:33.293Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "delete",
+      "target": "Howrey, Anne",
+      "details": "Deleted volunteer"
+    },
     {
       "id": "1779712775836",
       "timestamp": "2026-05-25T12:39:35.836Z",
@@ -17072,7 +17097,11 @@
     {
       "id": "10728",
       "deletedAt": 1779573373389
+    },
+    {
+      "id": "superadmin",
+      "deletedAt": 1779712894000
     }
   ],
-  "serverNow": 1779710541938
+  "serverNow": 1779712776538
 }
