@@ -9799,6 +9799,56 @@
       "checkedInBy": "Mosler, Mitch",
       "timestamp": "2026-05-25T13:39:44.343Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "278",
+      "volunteerName": "Watson, Stan",
+      "hole": 11,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-25T13:51:55.099Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2657",
+      "volunteerName": "James, Marty",
+      "hole": 11,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-25T13:51:55.357Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7291",
+      "volunteerName": "Casey, John",
+      "hole": 11,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-25T13:51:58.593Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9796",
+      "volunteerName": "Richards, Stephen",
+      "hole": 11,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-25T13:51:58.903Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10644",
+      "volunteerName": "Ash, Michael",
+      "hole": 11,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-25T13:51:59.839Z",
+      "isAlternate": true
     }
   ],
   "submissions": [],
@@ -9816,6 +9866,69 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779717138832",
+      "timestamp": "2026-05-25T13:52:18.832Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 11",
+      "details": "Submitted Monday AM for Hole 11"
+    },
+    {
+      "id": "1779717119911",
+      "timestamp": "2026-05-25T13:51:59.911Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Ash, Michael",
+      "details": "Monday AM - Hole #11 (alternate)"
+    },
+    {
+      "id": "1779717118979",
+      "timestamp": "2026-05-25T13:51:58.979Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Richards, Stephen",
+      "details": "Monday AM - Hole #11"
+    },
+    {
+      "id": "1779717118665",
+      "timestamp": "2026-05-25T13:51:58.665Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Casey, John",
+      "details": "Monday AM - Hole #11"
+    },
+    {
+      "id": "1779717115435",
+      "timestamp": "2026-05-25T13:51:55.435Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "James, Marty",
+      "details": "Monday AM - Hole #11"
+    },
+    {
+      "id": "1779717115170",
+      "timestamp": "2026-05-25T13:51:55.170Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Watson, Stan",
+      "details": "Monday AM - Hole #11"
+    },
+    {
+      "id": "1779717079625",
+      "timestamp": "2026-05-25T13:51:19.625Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779716388099",
       "timestamp": "2026-05-25T13:39:48.099Z",
