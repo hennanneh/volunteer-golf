@@ -9318,6 +9318,26 @@
       "checkedInBy": "Gordon, Gary",
       "timestamp": "2026-05-25T12:41:45.585Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "6692",
+      "volunteerName": "Starks, Michael",
+      "hole": 12,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-25T12:45:54.820Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7052",
+      "volunteerName": "Fisher, Paul",
+      "hole": 12,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-25T12:45:58.526Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -9335,6 +9355,35 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779713159664-qkq3gy",
+      "timestamp": "2026-05-25T12:45:59.664Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "rejected-bulk-edit",
+      "target": "Howrey, Anne",
+      "details": "Captain hole 12 attempted to add volunteer in hole  (auto-rejected via bulk save — no data changed)",
+      "targetHole": "",
+      "actorHole": 12
+    },
+    {
+      "id": "1779713158617",
+      "timestamp": "2026-05-25T12:45:58.617Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Fisher, Paul",
+      "details": "Monday AM - Hole #12"
+    },
+    {
+      "id": "1779713154938",
+      "timestamp": "2026-05-25T12:45:54.939Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Starks, Michael",
+      "details": "Monday AM - Hole #12"
+    },
     {
       "id": "1779712905311",
       "timestamp": "2026-05-25T12:41:45.311Z",
@@ -17097,11 +17146,7 @@
     {
       "id": "10728",
       "deletedAt": 1779573373389
-    },
-    {
-      "id": "superadmin",
-      "deletedAt": 1779712894000
     }
   ],
-  "serverNow": 1779712776538
+  "serverNow": 1779712584265
 }
