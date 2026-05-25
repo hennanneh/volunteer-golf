@@ -6612,18 +6612,25 @@
       "hat": "",
       "scheduled": {
         "Monday AM": true,
+        "Monday PM": true,
         "Tuesday AM": true,
+        "Tuesday PM": true,
         "Wednesday AM": true,
+        "Wednesday PM": true,
         "Thursday AM": true,
+        "Thursday PM": true,
+        "Friday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true,
         "Sunday PM": true
       },
       "volId": "9365",
       "address": "4001 High Meadows Dr. Alvarado, TX 76009-6526",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779315319375,
+      "lastModified": 1779735472788,
       "notes": "",
       "hatReceived": false,
       "volunteerPassword": "$2b$10$GttwGfwew5FIdRkLtxsb0eMmHBt1KMkSaLgTpWhZeJDMwlN6PHx92"
@@ -10548,6 +10555,16 @@
       "checkedInBy": "Imboden, Thomas",
       "timestamp": "2026-05-25T18:20:55.888Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "9575",
+      "volunteerName": "Phillips, Jason",
+      "hole": 12,
+      "day": "Monday",
+      "shift": "PM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-25T18:58:13.739Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -10565,6 +10582,68 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779735494971-07jeua",
+      "timestamp": "2026-05-25T18:58:14.971Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "rejected-bulk-edit",
+      "target": "Oakley, Jeff",
+      "details": "Captain hole 12 attempted to modify hole 11 volunteer (auto-rejected via bulk save — no data changed)",
+      "targetHole": 11,
+      "actorHole": 12
+    },
+    {
+      "id": "1779735494970-8l9o6n",
+      "timestamp": "2026-05-25T18:58:14.970Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "rejected-bulk-edit",
+      "target": "Mills, Brad",
+      "details": "Captain hole 12 attempted to modify hole 15 volunteer (auto-rejected via bulk save — no data changed)",
+      "targetHole": 15,
+      "actorHole": 12
+    },
+    {
+      "id": "1779735494956-ju500p",
+      "timestamp": "2026-05-25T18:58:14.956Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "rejected-bulk-edit",
+      "target": "Gilchrist, William (Bill)",
+      "details": "Captain hole 12 attempted to modify hole 8 volunteer (auto-rejected via bulk save — no data changed)",
+      "targetHole": 8,
+      "actorHole": 12
+    },
+    {
+      "id": "1779735494956-5hnjfk",
+      "timestamp": "2026-05-25T18:58:14.956Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "rejected-bulk-edit",
+      "target": "Gustaf, David",
+      "details": "Captain hole 12 attempted to modify hole 15 volunteer (auto-rejected via bulk save — no data changed)",
+      "targetHole": 15,
+      "actorHole": 12
+    },
+    {
+      "id": "1779735493544",
+      "timestamp": "2026-05-25T18:58:13.544Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Phillips, Jason",
+      "details": "Monday PM - Hole #12"
+    },
+    {
+      "id": "1779735472788-5pwamq",
+      "timestamp": "2026-05-25T18:57:52.788Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Pugh, Clayton",
+      "details": "added Monday PM, Tuesday PM, Wednesday PM, Thursday PM, Friday AM, Saturday PM, Sunday AM"
+    },
     {
       "id": "1779735232592",
       "timestamp": "2026-05-25T18:53:52.592Z",
@@ -20730,5 +20809,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779733864684
+  "serverNow": 1779730903271
 }
