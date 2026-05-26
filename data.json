@@ -11545,6 +11545,16 @@
       "checkedInBy": "Gradt, Jason",
       "timestamp": "2026-05-26T14:58:57.382Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "9015",
+      "volunteerName": "Aguilar, Jorge",
+      "hole": 2,
+      "day": "Tuesday",
+      "shift": "AM",
+      "checkedInBy": "Sale, Lynn",
+      "timestamp": "2026-05-26T15:02:07.241Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -11563,6 +11573,51 @@
     "pairingsText": "Pairings Sheet (demo data)"
   },
   "activityLog": [
+    {
+      "id": "1779807780570",
+      "timestamp": "2026-05-26T15:03:00.570Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779807772400",
+      "timestamp": "2026-05-26T15:02:52.400Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 2",
+      "details": "Submitted Tuesday AM for Hole 2"
+    },
+    {
+      "id": "1779807727156",
+      "timestamp": "2026-05-26T15:02:07.156Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Aguilar, Jorge",
+      "details": "Tuesday AM - Hole #2"
+    },
+    {
+      "id": "1779807639292",
+      "timestamp": "2026-05-26T15:00:39.292Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779807604155",
+      "timestamp": "2026-05-26T15:00:04.155Z",
+      "user": "Gradt, Jason",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 18",
+      "details": "Submitted Tuesday PM for Hole 18"
+    },
     {
       "id": "1779807559233",
       "timestamp": "2026-05-26T14:59:19.233Z",
