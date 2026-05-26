@@ -20,7 +20,8 @@
       "address": "644 Tierra Vista Way Fort Worth, TX 76131",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779834395001,
+      "notes": "Hey Jill, here is the most recent schedule.  See you tomorrow morning.  "
     },
     {
       "id": "9015",
@@ -12144,16 +12145,6 @@
       "checkedInBy": "Jutras, Michael",
       "timestamp": "2026-05-26T20:58:55.374Z",
       "isAlternate": true
-    },
-    {
-      "volunteerId": "7363",
-      "volunteerName": "Roberson, Chris",
-      "hole": 10,
-      "day": "Wednesday",
-      "shift": "AM",
-      "checkedInBy": "Trout, Wayne",
-      "timestamp": "2026-05-26T22:05:53.726Z",
-      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -12172,6 +12163,33 @@
     "pairingsText": "Pairings Sheet (demo data)"
   },
   "activityLog": [
+    {
+      "id": "1779834524716",
+      "timestamp": "2026-05-26T22:28:44.716Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779834428449",
+      "timestamp": "2026-05-26T22:27:08.449Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Roberson, Chris",
+      "details": "Wednesday AM - Hole #10"
+    },
+    {
+      "id": "1779834395002-5myt59",
+      "timestamp": "2026-05-26T22:26:35.002Z",
+      "user": "Montalvo, Sammy",
+      "userType": "Captain",
+      "action": "edit-volunteer",
+      "target": "A Schultz, Jill",
+      "details": "Updated fields: notes"
+    },
     {
       "id": "1779833439236",
       "timestamp": "2026-05-26T22:10:39.236Z",
