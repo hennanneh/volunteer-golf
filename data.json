@@ -11244,6 +11244,16 @@
       "checkedInBy": "Thomas, Stephen",
       "timestamp": "2026-05-26T13:29:13.048Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "10338",
+      "volunteerName": "Cannon, Natalie",
+      "hole": 10,
+      "day": "Tuesday",
+      "shift": "AM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-26T14:07:32.163Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -11262,6 +11272,24 @@
     "pairingsText": "Pairings Sheet (demo data)"
   },
   "activityLog": [
+    {
+      "id": "1779804452111",
+      "timestamp": "2026-05-26T14:07:32.111Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Cannon, Natalie",
+      "details": "Tuesday AM - Hole #10"
+    },
+    {
+      "id": "1779804407269",
+      "timestamp": "2026-05-26T14:06:47.270Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779803306430",
       "timestamp": "2026-05-26T13:48:26.430Z",
