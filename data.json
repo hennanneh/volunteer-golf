@@ -10680,6 +10680,15 @@
   },
   "activityLog": [
     {
+      "id": "1779756772549",
+      "timestamp": "2026-05-26T00:52:52.549Z",
+      "user": "Ruddell, Dick",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1779753826942",
       "timestamp": "2026-05-26T00:03:46.942Z",
       "user": "Burnett, Eric",
