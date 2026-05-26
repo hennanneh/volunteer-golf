@@ -4450,7 +4450,7 @@
       "id": "8345",
       "name": "Kuhnell, David",
       "type": "Volunteer",
-      "hole": 10,
+      "hole": 20,
       "phone": "(817) 229-3353",
       "email": "wkuhnell@gmail.com",
       "yearsWorked": 3,
@@ -4468,7 +4468,10 @@
       "volId": "8345",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779825489963,
+      "notes": "",
+      "hatReceived": false,
+      "originalHole": 10
     },
     {
       "id": "4518",
@@ -5479,7 +5482,7 @@
       "id": "8571",
       "name": "Mobley, Ken",
       "type": "Volunteer",
-      "hole": 4,
+      "hole": 20,
       "phone": "(512) 636-6282",
       "email": "kmobley777@gmail.com",
       "yearsWorked": 4,
@@ -5495,7 +5498,10 @@
       "address": "2720 River Path Court Burleson, TX 76028",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779825503116,
+      "notes": "",
+      "hatReceived": false,
+      "originalHole": 4
     },
     {
       "id": "8630",
@@ -12115,6 +12121,24 @@
     "pairingsText": "Pairings Sheet (demo data)"
   },
   "activityLog": [
+    {
+      "id": "1779825503116-jm9tdp",
+      "timestamp": "2026-05-26T19:58:23.116Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Mobley, Ken",
+      "details": "Updated fields: hole, notes, hatReceived, originalHole"
+    },
+    {
+      "id": "1779825489963-cr7wai",
+      "timestamp": "2026-05-26T19:58:09.963Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Kuhnell, David",
+      "details": "Updated fields: hole, notes, hatReceived, originalHole"
+    },
     {
       "id": "1779825051996-5rajjz",
       "timestamp": "2026-05-26T19:50:51.996Z",
