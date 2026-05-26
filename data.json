@@ -11605,6 +11605,24 @@
   },
   "activityLog": [
     {
+      "id": "1779811333067",
+      "timestamp": "2026-05-26T16:02:13.068Z",
+      "user": "Gordon, Gary",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779811298735",
+      "timestamp": "2026-05-26T16:01:38.735Z",
+      "user": "Gordon, Gary",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1779811079282",
       "timestamp": "2026-05-26T15:57:59.282Z",
       "user": "Clayton, Rodney",
