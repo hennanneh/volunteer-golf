@@ -12117,6 +12117,15 @@
   },
   "activityLog": [
     {
+      "id": "1779822579000",
+      "timestamp": "2026-05-26T19:09:39.000Z",
+      "user": "Peterson, Durk",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
       "id": "1779820638802",
       "timestamp": "2026-05-26T18:37:18.802Z",
       "user": "Pugh, Clayton",
