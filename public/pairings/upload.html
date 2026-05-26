@@ -630,20 +630,29 @@ Akshay Bhatia
     els.parseStatus.className = 'parse-status' + (kind ? ' ' + kind : '');
   }
 
-  function renderCurrentStatus() {
-    const data = loadStorage();
+  async function renderCurrentStatus() {
+    // Show what's actually live on the server (what every device sees), falling
+    // back to the local cache only if the server is unreachable.
+    let data = null;
+    try {
+      const res = await fetch('/api/pairings', { cache: 'no-store' });
+      if (res.ok) {
+        const json = await res.json();
+        if (json && json.success && json.pairings) data = json.pairings;
+      }
+    } catch (e) { /* offline */ }
+    if (!data) data = loadStorage();
+
     if (!data || !Array.isArray(data.groups) || data.groups.length === 0) {
       els.currentStatus.className = 'status empty';
-      els.currentStatus.innerHTML = '<strong>No pairings loaded.</strong><br>The volunteer tracker shows an empty state until you load pairings below.';
+      els.currentStatus.innerHTML = '<strong>No pairings loaded.</strong><br>The volunteer tracker shows an empty state on every device until you load pairings below.';
       els.previewCard.style.display = 'none';
       return;
     }
     const totalPlayers = data.groups.reduce((s, g) => s + g.players.length, 0);
-    const checkedCount = Array.isArray(data.checked) ? data.checked.length : 0;
     const when = humanizeTime(data.loadedAt);
     els.currentStatus.className = 'status loaded';
-    els.currentStatus.innerHTML = `<strong>${data.groups.length} groups, ${totalPlayers} players loaded${when ? ' ' + when : ''}.</strong>` +
-      (checkedCount ? `<br>${checkedCount} marked passed.` : '');
+    els.currentStatus.innerHTML = `<strong>${data.groups.length} groups, ${totalPlayers} players live on all devices${when ? ' — published ' + when : ''}.</strong>`;
     renderPreview(data.groups);
   }
 
@@ -654,22 +663,42 @@ Akshay Bhatia
     ).join('');
   }
 
-  function loadFromText(text) {
+  async function loadFromText(text) {
     const groups = parsePairings(text);
     if (!groups.length) {
       setParseStatus('Could not parse any groups. Check that you pasted the tee times block.', 'error');
       return;
     }
     const totalPlayers = groups.reduce((s, g) => s + g.players.length, 0);
-    const data = {
-      rawText: text,
-      groups,
-      loadedAt: new Date().toISOString(),
-      checked: []
-    };
-    saveStorage(data);
-    setParseStatus(`Loaded ${groups.length} groups (${totalPlayers} players). Volunteer tracker updated.`, 'success');
-    renderCurrentStatus();
+    setParseStatus(`Parsed ${groups.length} groups (${totalPlayers} players). Publishing to all devices…`);
+    try {
+      const res = await fetch('/api/pairings', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ groups })
+      });
+      const json = await res.json().catch(() => null);
+      if (!res.ok || !json || !json.success) {
+        if (res.status === 401) {
+          setParseStatus('Not logged in. Open the main app, log in as an admin or chair, then come back and press Load again.', 'error');
+        } else {
+          setParseStatus((json && json.error) ? ('Could not publish: ' + json.error) : 'Could not publish pairings to the server.', 'error');
+        }
+        return;
+      }
+      // Cache locally too, so this device works offline; preserve any local check marks.
+      const local = loadStorage() || {};
+      saveStorage({
+        rawText: text,
+        groups: json.pairings.groups,
+        loadedAt: json.pairings.loadedAt,
+        checked: Array.isArray(local.checked) ? local.checked : []
+      });
+      setParseStatus(`Published ${groups.length} groups (${totalPlayers} players) — now visible on every device.`, 'success');
+      renderCurrentStatus();
+    } catch (e) {
+      setParseStatus('Network error while publishing. Check your connection and try again.', 'error');
+    }
   }
 
   els.loadBtn.addEventListener('click', () => {
@@ -678,18 +707,38 @@ Akshay Bhatia
     loadFromText(text);
   });
   els.sampleBtn.addEventListener('click', () => {
+    // Only fill the box — do NOT auto-publish, or pressing Sample would push
+    // fake pairings live to every device. The user must press Load to publish.
     els.pasteArea.value = SAMPLE_DATA;
-    loadFromText(SAMPLE_DATA);
+    setParseStatus('Sample pasted into the box. Press “Load Pairings” to publish it.');
   });
   els.clearTextBtn.addEventListener('click', () => {
     els.pasteArea.value = '';
     setParseStatus('');
   });
-  els.clearAllBtn.addEventListener('click', () => {
-    if (!confirm('Clear all loaded pairings AND any tracking progress? Volunteer tracker will show empty state.')) return;
-    localStorage.removeItem(STORAGE_KEY);
-    setParseStatus('Cleared.', 'success');
-    renderCurrentStatus();
+  els.clearAllBtn.addEventListener('click', async () => {
+    if (!confirm('Clear pairings for ALL devices? Every tracker will show the empty state.')) return;
+    try {
+      const res = await fetch('/api/pairings', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ groups: [], clear: true })
+      });
+      const json = await res.json().catch(() => null);
+      if (!res.ok || !json || !json.success) {
+        if (res.status === 401) {
+          setParseStatus('Not logged in. Open the main app, log in as an admin or chair, then try again.', 'error');
+        } else {
+          setParseStatus((json && json.error) ? ('Could not clear: ' + json.error) : 'Could not clear pairings.', 'error');
+        }
+        return;
+      }
+      localStorage.removeItem(STORAGE_KEY);
+      setParseStatus('Cleared for all devices.', 'success');
+      renderCurrentStatus();
+    } catch (e) {
+      setParseStatus('Network error while clearing. Check your connection and try again.', 'error');
+    }
   });
 
   document.getElementById('todayDate').textContent =

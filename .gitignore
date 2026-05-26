@@ -3,3 +3,5 @@ node_modules/
 data.json.before-restore-*
 sessions.json
 sessions.json.tmp
+pairings.json
+pairings.json.tmp

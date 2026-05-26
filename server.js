@@ -97,6 +97,66 @@ function withDataLock(isDemo, fn) {
 }
 
 // ============================================================================
+// Pairings (server-side, added 2026-05-26)
+//
+// The /pairings tracker was originally localStorage-only, so an upload on one
+// device never reached another. These helpers persist the pairings payload in
+// its OWN file (pairings.json), deliberately separate from data.json so this
+// feature can never touch or endanger live tournament data. Shape:
+//   { groups: [{ id, teeTime, teeNum, players: [] }], loadedAt, startTee }
+// Per-device check-off marks intentionally stay in each browser's localStorage.
+// ============================================================================
+const PAIRINGS_FILE = path.join(__dirname, 'pairings.json');
+const EMPTY_PAIRINGS = { groups: [], loadedAt: null, startTee: 1 };
+
+function loadPairings() {
+  try {
+    if (fs.existsSync(PAIRINGS_FILE)) {
+      const parsed = JSON.parse(fs.readFileSync(PAIRINGS_FILE, 'utf8'));
+      return {
+        groups: Array.isArray(parsed.groups) ? parsed.groups : [],
+        loadedAt: parsed.loadedAt || null,
+        startTee: parsed.startTee === 10 ? 10 : 1
+      };
+    }
+  } catch (err) {
+    console.error('Error loading pairings:', err.message);
+  }
+  return { ...EMPTY_PAIRINGS };
+}
+
+function savePairings(data) {
+  try {
+    const tmpFile = PAIRINGS_FILE + '.tmp';
+    fs.writeFileSync(tmpFile, JSON.stringify(data, null, 2));
+    fs.renameSync(tmpFile, PAIRINGS_FILE);
+    return true;
+  } catch (err) {
+    console.error('Error saving pairings:', err.message);
+    return false;
+  }
+}
+
+// Dedicated lock so concurrent pairings writes can't clobber each other,
+// kept separate from the data.json locks above.
+let pairingsLock = Promise.resolve();
+function withPairingsLock(fn) {
+  const prev = pairingsLock;
+  let resolve;
+  pairingsLock = new Promise(r => { resolve = r; });
+  return prev.then(() => fn()).finally(resolve);
+}
+
+// Validate one parsed group from an upload. Returns true if usable.
+function isValidPairingGroup(g) {
+  return g && typeof g === 'object'
+    && typeof g.teeTime === 'string' && g.teeTime.length > 0 && g.teeTime.length <= 20
+    && (g.teeNum === undefined || (Number.isInteger(g.teeNum) && g.teeNum >= 1 && g.teeNum <= 36))
+    && Array.isArray(g.players) && g.players.length > 0 && g.players.length <= 8
+    && g.players.every(p => typeof p === 'string' && p.length > 0 && p.length <= 120);
+}
+
+// ============================================================================
 // Concurrent-save merge (added 2026-05-11 after captains reported schedule
 // edits silently overwriting each other and a deleted volunteer reappearing).
 //
@@ -556,6 +616,7 @@ const emailLimiter   = makeLimiter(5,   'email');    // POST /api/email        5
 const loginLimiter   = makeLimiter(10,  'login');    // POST /api/login       10/min (block guessing)
 const resetReqLimiter    = makeLimiter(5,  'reset-request'); // POST /api/request-password-reset
 const resetSubmitLimiter = makeLimiter(10, 'reset-submit');  // POST /api/reset-password
+const pairingsLimiter    = makeLimiter(30, 'pairings');      // POST /api/pairings    30/min
 
 // ============================================================================
 // Authentication (Phase 1.1, added 2026-04-10 — see SECURITY.md)
@@ -1148,6 +1209,59 @@ app.get('/api/data', (req, res) => {
   // Phase 1.2: strip password fields before sending to the browser.
   // serverNow lets the client stamp dataReadAt for the merge logic in POST /api/data.
   res.json({ success: true, data: stripDataSecrets(data), demoMode: req.demoMode, serverNow: Date.now() });
+});
+
+// ----------------------------------------------------------------------------
+// Pairings tracker (server-side). GET is public — viewers on course are not
+// logged in, and pairings (tee times + player names) are already shown openly
+// on the tracker. POST is auth-protected and validated, because an
+// unauthenticated write endpoint is exactly the 2026-04-10 wipe vector.
+// ----------------------------------------------------------------------------
+app.get('/api/pairings', (req, res) => {
+  res.json({ success: true, pairings: loadPairings(), serverNow: Date.now() });
+});
+
+app.post('/api/pairings', pairingsLimiter, requireAuth(['admin', 'chair', 'asstChair', 'captain']), (req, res) => {
+  const body = req.body;
+  if (!body || typeof body !== 'object') {
+    return res.status(400).json({ success: false, error: 'Invalid pairings payload' });
+  }
+
+  const clear = body.clear === true;
+  const groups = Array.isArray(body.groups) ? body.groups : null;
+
+  if (!groups) {
+    return res.status(400).json({ success: false, error: 'Missing groups array' });
+  }
+  // Empty-body / empty-groups guard: refuse to wipe pairings unless the caller
+  // explicitly asked to clear (mirrors the catastrophic-shrink guard on /api/data).
+  if (groups.length === 0 && !clear) {
+    return res.status(400).json({ success: false, error: 'Refusing to clear pairings without an explicit clear flag' });
+  }
+  if (groups.length > 200) {
+    return res.status(400).json({ success: false, error: 'Too many groups' });
+  }
+  for (const g of groups) {
+    if (!isValidPairingGroup(g)) {
+      return res.status(400).json({ success: false, error: 'One or more groups are malformed' });
+    }
+  }
+
+  const startTee = body.startTee === 10 ? 10 : 1;
+  const ip = clientIpFromReq(req);
+  const who = (req.user && req.user.name) || 'unknown';
+
+  withPairingsLock(() => {
+    const next = groups.length === 0
+      ? { ...EMPTY_PAIRINGS }
+      : { groups, loadedAt: new Date().toISOString(), startTee };
+    if (savePairings(next)) {
+      console.log('[' + new Date().toISOString() + '] PAIRINGS SAVED groups=' + groups.length + ' by=' + who + ' ip=' + ip);
+      res.json({ success: true, pairings: next });
+    } else {
+      res.status(500).json({ success: false, error: 'Failed to save pairings' });
+    }
+  });
 });
 
 app.post('/api/data', dataLimiter, requireAuth(['admin', 'chair', 'asstChair', 'captain']), (req, res) => {

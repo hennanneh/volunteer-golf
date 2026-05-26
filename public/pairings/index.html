@@ -56,6 +56,40 @@
     font-size: 15px;
     font-weight: 600;
   }
+  .tee-toggle {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .tee-toggle-label {
+    font-size: 13px;
+    font-weight: 600;
+    opacity: 0.9;
+  }
+  .tee-toggle .seg {
+    display: inline-flex;
+    background: rgba(255,255,255,0.15);
+    border-radius: 8px;
+    padding: 2px;
+  }
+  .tee-toggle button {
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 700;
+    color: white;
+    background: transparent;
+    border: none;
+    padding: 6px 14px;
+    min-height: 36px;
+    border-radius: 6px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .tee-toggle button.active {
+    background: white;
+    color: #1a472a;
+  }
   .stale-warning {
     background: #fff3e0;
     color: #8a4b00;
@@ -154,6 +188,13 @@
     <span class="updated" id="updated"></span>
   </div>
   <div class="counter" id="counter">No pairings loaded</div>
+  <div class="tee-toggle" id="teeToggle" style="display:none;">
+    <span class="tee-toggle-label">Start with</span>
+    <div class="seg">
+      <button type="button" data-tee="1">Tee 1</button>
+      <button type="button" data-tee="10">Tee 10</button>
+    </div>
+  </div>
 </header>
 <div id="staleWarning"></div>
 <main>
@@ -183,15 +224,16 @@
   function loadStorage() {
     try {
       const raw = localStorage.getItem(STORAGE_KEY);
-      if (!raw) return { groups: [], checked: [], loadedAt: null };
+      if (!raw) return { groups: [], checked: [], loadedAt: null, startTee: 1 };
       const parsed = JSON.parse(raw);
       return {
         groups: Array.isArray(parsed.groups) ? parsed.groups : [],
         checked: Array.isArray(parsed.checked) ? parsed.checked : [],
-        loadedAt: parsed.loadedAt || null
+        loadedAt: parsed.loadedAt || null,
+        startTee: parsed.startTee === 10 ? 10 : 1
       };
     } catch (e) {
-      return { groups: [], checked: [], loadedAt: null };
+      return { groups: [], checked: [], loadedAt: null, startTee: 1 };
     }
   }
   function saveChecked(checked) {
@@ -199,6 +241,13 @@
     let data;
     try { data = raw ? JSON.parse(raw) : {}; } catch(e) { data = {}; }
     data.checked = checked;
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+  }
+  function saveStartTee(startTee) {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    let data;
+    try { data = raw ? JSON.parse(raw) : {}; } catch(e) { data = {}; }
+    data.startTee = startTee;
     localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
   }
 
@@ -225,13 +274,14 @@
     return d.toDateString() !== new Date().toDateString();
   }
 
-  const state = { groups: [], checked: new Set(), loadedAt: null };
+  const state = { groups: [], checked: new Set(), loadedAt: null, startTee: 1 };
   const els = {
     counter: document.getElementById('counter'),
     updated: document.getElementById('updated'),
     groupList: document.getElementById('groupList'),
     todayDate: document.getElementById('todayDate'),
-    staleWarning: document.getElementById('staleWarning')
+    staleWarning: document.getElementById('staleWarning'),
+    teeToggle: document.getElementById('teeToggle')
   };
 
   function hydrate() {
@@ -239,6 +289,7 @@
     state.groups = s.groups;
     state.checked = new Set(s.checked);
     state.loadedAt = s.loadedAt;
+    state.startTee = s.startTee;
   }
 
   function render() {
@@ -247,6 +298,11 @@
     els.staleWarning.innerHTML = (state.groups.length && isStaleLoad(state.loadedAt))
       ? '<div class="stale-warning">⚠ These pairings were loaded before today. Check back soon for an update.</div>'
       : '';
+    const distinctTees = [...new Set(state.groups.map(g => g.teeNum))];
+    els.teeToggle.style.display = distinctTees.length > 1 ? '' : 'none';
+    els.teeToggle.querySelectorAll('button').forEach(btn => {
+      btn.classList.toggle('active', parseInt(btn.dataset.tee, 10) === state.startTee);
+    });
     els.groupList.innerHTML = '';
     if (!state.groups.length) {
       const empty = document.createElement('div');
@@ -271,8 +327,11 @@
         });
       });
     });
+    const teeRank = teeNum => (teeNum === state.startTee ? 0 : 1);
     rows.sort((a, b) => {
       if (a.checked !== b.checked) return a.checked ? 1 : -1;
+      const ra = teeRank(a.teeNum), rb = teeRank(b.teeNum);
+      if (ra !== rb) return ra - rb;
       if (a.teeMin !== b.teeMin) return a.teeMin - b.teeMin;
       return a.player.localeCompare(b.player);
     });
@@ -305,13 +364,59 @@
     render();
   }
 
+  els.teeToggle.addEventListener('click', e => {
+    const btn = e.target.closest('button[data-tee]');
+    if (!btn) return;
+    const tee = parseInt(btn.dataset.tee, 10);
+    if (tee === state.startTee) return;
+    state.startTee = tee;
+    saveStartTee(tee);
+    render();
+  });
+
+  // Pairings content now lives server-side so an upload on any device shows up
+  // here. localStorage is kept only as an offline cache + per-device store for
+  // `checked` and `startTee` (both intentionally local — see upload.html).
+  function cacheContentToLocal() {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    let data;
+    try { data = raw ? JSON.parse(raw) : {}; } catch (e) { data = {}; }
+    data.groups = state.groups;
+    data.loadedAt = state.loadedAt;
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+  }
+
+  async function fetchServer() {
+    try {
+      const res = await fetch('/api/pairings', { cache: 'no-store' });
+      if (!res.ok) return;
+      const json = await res.json();
+      if (!json || !json.success || !json.pairings) return;
+      state.groups = Array.isArray(json.pairings.groups) ? json.pairings.groups : [];
+      state.loadedAt = json.pairings.loadedAt || null;
+      cacheContentToLocal();
+      render();
+    } catch (e) {
+      // Offline or server unreachable: keep whatever hydrate() loaded from cache.
+    }
+  }
+
   window.addEventListener('storage', e => {
     if (e.key === STORAGE_KEY) { hydrate(); render(); }
   });
-  window.addEventListener('focus', () => { hydrate(); render(); });
+  window.addEventListener('focus', () => { hydrate(); render(); fetchServer(); });
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'visible') fetchServer();
+  });
+  // Light poll while the page is open so re-uploaded pairings reach marshals
+  // without a manual refresh.
+  setInterval(() => {
+    if (document.visibilityState === 'visible') fetchServer();
+  }, 60000);
 
-  hydrate();
+  hydrate();   // instant paint from the offline cache
   render();
+  fetchServer();  // then refresh content from the server
 </script>
 </body>
 </html>
