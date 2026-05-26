@@ -3454,12 +3454,9 @@
         DAYS.forEach(day => {
           SHIFTS.forEach(shift => {
             const key = day + ' ' + shift;
-            if (v.scheduled && v.scheduled[key]) {
-              scheduledCount++;
-              if (appData.checkIns.some(c => c.volunteerId === v.id && c.day === day && c.shift === shift)) {
-                workedCount++;
-              }
-            }
+            const worked = appData.checkIns.some(c => c.volunteerId === v.id && c.day === day && c.shift === shift);
+            if (v.scheduled && v.scheduled[key]) scheduledCount++;
+            if (worked) workedCount++;
           });
         });
 
@@ -3714,6 +3711,7 @@
                         let color = isMovedAway ? '#ccc' : '#ccc';
                         if (isScheduled && isCheckedIn) { icon = '✓'; color = isMovedAway ? '#ccc' : '#4caf50'; }
                         else if (isScheduled) { icon = '○'; color = isMovedAway ? '#ccc' : '#1a472a'; }
+                        else if (isCheckedIn) { icon = '✓<sup style="font-size:10px">*</sup>'; color = isMovedAway ? '#ccc' : '#4caf50'; }
                         return `<td style="text-align:center;padding:10px 6px;border:1px solid #ccc;color:${color};font-weight:600">${icon}</td>`;
                       }).join('')
                     ).join('')}
@@ -3723,12 +3721,9 @@
                       days.forEach(day => {
                         SHIFTS.forEach(shift => {
                           const key = day + ' ' + shift;
-                          if (v.scheduled && v.scheduled[key]) {
-                            scheduledCount++;
-                            if (appData.checkIns.some(c => c.volunteerId === v.id && c.day === day && c.shift === shift)) {
-                              checkedInCount++;
-                            }
-                          }
+                          const isCheckedIn = appData.checkIns.some(c => c.volunteerId === v.id && c.day === day && c.shift === shift);
+                          if (v.scheduled && v.scheduled[key]) scheduledCount++;
+                          if (isCheckedIn) checkedInCount++;
                         });
                       });
                       const ciColor = isMovedAway ? '#ccc' : '#4caf50';
@@ -3762,6 +3757,7 @@
             <div style="margin-top:15px;font-size:12px;color:#666">
               <span style="color:#1a472a;font-weight:700">*</span> = Captain / Chairman &nbsp;&nbsp;
               <span style="color:#4caf50;font-weight:600">✓</span> = Checked in &nbsp;&nbsp;
+              <span style="color:#4caf50;font-weight:600">✓<sup style="font-size:9px">*</sup></span> = Checked in (not scheduled) &nbsp;&nbsp;
               <span style="color:#1a472a;font-weight:600">○</span> = Scheduled
               ${historyLegend}
             </div>
@@ -3776,6 +3772,7 @@
           <div style="font-size:12px;color:#666">
             <span style="color:#1a472a;font-weight:700">*</span> = Captain / Chairman &nbsp;&nbsp;
             <span style="color:#4caf50;font-weight:600">✓</span> = Checked in &nbsp;&nbsp;
+            <span style="color:#4caf50;font-weight:600">✓<sup style="font-size:9px">*</sup></span> = Checked in (not scheduled) &nbsp;&nbsp;
             <span style="color:#1a472a;font-weight:600">○</span> = Scheduled
             ${historyLegend}
           </div>
