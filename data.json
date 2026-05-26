@@ -2737,6 +2737,7 @@
       "yearsWorked": 8,
       "hat": "",
       "scheduled": {
+        "Tuesday AM": true,
         "Tuesday PM": true,
         "Wednesday AM": true,
         "Thursday AM": true,
@@ -2748,7 +2749,7 @@
       "address": "541 Tuscanny St Brandon, FL 33511",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779316745704
+      "lastModified": 1779798556228
     },
     {
       "id": "6335",
@@ -2760,6 +2761,7 @@
       "yearsWorked": 8,
       "hat": "",
       "scheduled": {
+        "Tuesday AM": true,
         "Tuesday PM": true,
         "Wednesday AM": true,
         "Thursday AM": true,
@@ -2771,7 +2773,7 @@
       "address": "2433 Timber Ridge Ln Flower Mound, TX 75028",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779316773492
+      "lastModified": 1779798569659
     },
     {
       "id": "8359",
@@ -6026,6 +6028,7 @@
       "scheduled": {
         "Monday AM": true,
         "Tuesday AM": true,
+        "Tuesday PM": true,
         "Thursday PM": true,
         "Friday AM": true,
         "Saturday PM": true,
@@ -6036,7 +6039,7 @@
       "address": "6705 Lucas Ln North Richland Hills, TX 76182",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779796856367,
+      "lastModified": 1779798579943,
       "notes": "",
       "hatReceived": false
     },
@@ -10930,10 +10933,66 @@
     "pmShiftCutoff": "19:00",
     "numberOfHoles": 20,
     "helpName": "Mike Hill",
-    "pairingsUrl": "https://colonialvolunteers.golf/pairings/",
+    "pairingsUrl": "https://www.charlesschwabchallenge.com/players",
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779798596413-fyn0l0",
+      "timestamp": "2026-05-26T12:29:56.413Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "rejected-bulk-edit",
+      "target": "Reiter, Mackenzie",
+      "details": "Captain hole 16 attempted to add volunteer in hole 8 (auto-rejected via bulk save — no data changed)",
+      "targetHole": 8,
+      "actorHole": 16
+    },
+    {
+      "id": "1779798593514",
+      "timestamp": "2026-05-26T12:29:53.514Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779798579943-m8j9b3",
+      "timestamp": "2026-05-26T12:29:39.943Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Oakley, Jeff",
+      "details": "added Tuesday PM"
+    },
+    {
+      "id": "1779798569659-qq77gf",
+      "timestamp": "2026-05-26T12:29:29.659Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Gray, Jerry",
+      "details": "added Tuesday AM"
+    },
+    {
+      "id": "1779798556228-4ure0m",
+      "timestamp": "2026-05-26T12:29:16.228Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Gray, James",
+      "details": "added Tuesday AM"
+    },
+    {
+      "id": "1779798398024",
+      "timestamp": "2026-05-26T12:26:38.024Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779798238873",
       "timestamp": "2026-05-26T12:23:58.873Z",
@@ -22241,11 +22300,7 @@
     {
       "id": "10728",
       "deletedAt": 1779573373389
-    },
-    {
-      "id": "10664",
-      "deletedAt": 1779797297831
     }
   ],
-  "serverNow": 1779795499141
+  "serverNow": 1779739677972
 }
