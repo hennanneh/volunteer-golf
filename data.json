@@ -6835,33 +6835,6 @@
       "lastModified": 1778813564880
     },
     {
-      "id": "10664",
-      "name": "Reiter, Mackenzie",
-      "type": "Volunteer",
-      "hole": 8,
-      "phone": "(817) 773-6893",
-      "email": "mackenziereiter@gmail.com",
-      "yearsWorked": 1,
-      "hat": "",
-      "scheduled": {
-        "Tuesday AM": true,
-        "Tuesday PM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true
-      },
-      "address": "82 County Road 3632\r\nGainesville, TX 76240",
-      "volId": "10664",
-      "hasAdminPassword": false,
-      "hasVolunteerPassword": true,
-      "pairingPreferences": [
-        "2135"
-      ],
-      "lastModified": 1779545378945,
-      "volunteerPassword": "$2b$10$bZCIVF9ebmBZCyCRs1xT5uZO0AmBYx53IKVDZlH0dwrWC2zI93uDK"
-    },
-    {
       "id": "9796",
       "name": "Richards, Stephen",
       "type": "Volunteer",
@@ -10784,6 +10757,56 @@
       "checkedInBy": "Ruddell, Dick",
       "timestamp": "2026-05-26T12:01:22.549Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "2543",
+      "volunteerName": "Holt, Sharron",
+      "hole": 8,
+      "day": "Tuesday",
+      "shift": "AM",
+      "checkedInBy": "Holt, Sharron",
+      "timestamp": "2026-05-26T12:06:22.205Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2507",
+      "volunteerName": "Holt, Sammy",
+      "hole": 8,
+      "day": "Tuesday",
+      "shift": "AM",
+      "checkedInBy": "Holt, Sharron",
+      "timestamp": "2026-05-26T12:06:22.393Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6967",
+      "volunteerName": "Leggett, Deborah",
+      "hole": 8,
+      "day": "Tuesday",
+      "shift": "AM",
+      "checkedInBy": "Holt, Sharron",
+      "timestamp": "2026-05-26T12:06:25.090Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9896",
+      "volunteerName": "Sullivan, Patrick",
+      "hole": 8,
+      "day": "Tuesday",
+      "shift": "AM",
+      "checkedInBy": "Holt, Sharron",
+      "timestamp": "2026-05-26T12:06:28.214Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9658",
+      "volunteerName": "Jutras, Michael",
+      "hole": 9,
+      "day": "Tuesday",
+      "shift": "AM",
+      "checkedInBy": "Jutras, Michael",
+      "timestamp": "2026-05-26T12:06:49.404Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -10801,6 +10824,96 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779797296916",
+      "timestamp": "2026-05-26T12:08:16.916Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "delete",
+      "target": "Reiter, Mackenzie",
+      "details": "Deleted volunteer"
+    },
+    {
+      "id": "1779797228092",
+      "timestamp": "2026-05-26T12:07:08.092Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779797221879",
+      "timestamp": "2026-05-26T12:07:01.879Z",
+      "user": "Jutras, Michael",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 9",
+      "details": "Submitted Tuesday AM for Hole 9"
+    },
+    {
+      "id": "1779797209544",
+      "timestamp": "2026-05-26T12:06:49.544Z",
+      "user": "Jutras, Michael",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Jutras, Michael",
+      "details": "Tuesday AM - Hole #9"
+    },
+    {
+      "id": "1779797201962",
+      "timestamp": "2026-05-26T12:06:41.962Z",
+      "user": "Jutras, Michael",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779797189880",
+      "timestamp": "2026-05-26T12:06:29.880Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Sullivan, Patrick",
+      "details": "Tuesday AM - Hole #8"
+    },
+    {
+      "id": "1779797186703",
+      "timestamp": "2026-05-26T12:06:26.703Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Leggett, Deborah",
+      "details": "Tuesday AM - Hole #8"
+    },
+    {
+      "id": "1779797183973",
+      "timestamp": "2026-05-26T12:06:23.973Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Holt, Sammy",
+      "details": "Tuesday AM - Hole #8"
+    },
+    {
+      "id": "1779797183784",
+      "timestamp": "2026-05-26T12:06:23.784Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Holt, Sharron",
+      "details": "Tuesday AM - Hole #8"
+    },
+    {
+      "id": "1779797182094",
+      "timestamp": "2026-05-26T12:06:22.094Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779796888793",
       "timestamp": "2026-05-26T12:01:28.793Z",
@@ -21865,6 +21978,10 @@
     {
       "id": "10728",
       "deletedAt": 1779573373389
+    },
+    {
+      "id": "10664",
+      "deletedAt": 1779797297831
     }
   ],
   "serverNow": 1779795499141
