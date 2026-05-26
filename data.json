@@ -12117,6 +12117,15 @@
   },
   "activityLog": [
     {
+      "id": "1779823601091",
+      "timestamp": "2026-05-26T19:26:41.091Z",
+      "user": "Schafer, John",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 4",
+      "details": "Submitted Tuesday PM for Hole 4"
+    },
+    {
       "id": "1779822867033",
       "timestamp": "2026-05-26T19:14:27.033Z",
       "user": "Howrey, Anne",
