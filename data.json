@@ -11134,6 +11134,56 @@
       "checkedInBy": "Clayton, Rodney",
       "timestamp": "2026-05-26T12:48:37.779Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "7806",
+      "volunteerName": "Mosler, Mitch",
+      "hole": 14,
+      "day": "Tuesday",
+      "shift": "AM",
+      "checkedInBy": "Mosler, Mitch",
+      "timestamp": "2026-05-26T12:56:30.977Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10675",
+      "volunteerName": "Capps, Macy",
+      "hole": 14,
+      "day": "Tuesday",
+      "shift": "AM",
+      "checkedInBy": "Mosler, Mitch",
+      "timestamp": "2026-05-26T12:56:33.524Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9916",
+      "volunteerName": "Endicott, Eric",
+      "hole": 14,
+      "day": "Tuesday",
+      "shift": "AM",
+      "checkedInBy": "Mosler, Mitch",
+      "timestamp": "2026-05-26T12:56:34.649Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9138",
+      "volunteerName": "Morrison, Hal",
+      "hole": 14,
+      "day": "Tuesday",
+      "shift": "AM",
+      "checkedInBy": "Mosler, Mitch",
+      "timestamp": "2026-05-26T12:56:36.169Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9988",
+      "volunteerName": "Grall, George",
+      "hole": 12,
+      "day": "Tuesday",
+      "shift": "AM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-26T12:56:57.242Z",
+      "isAlternate": true
     }
   ],
   "submissions": [],
@@ -11152,6 +11202,69 @@
     "pairingsText": "Pairings Sheet (demo data)"
   },
   "activityLog": [
+    {
+      "id": "1779800256683-yg7k6d",
+      "timestamp": "2026-05-26T12:57:36.683Z",
+      "user": "System",
+      "userType": "Deployment",
+      "action": "system-update",
+      "target": "06489ba",
+      "details": "stress-test: make soak duration configurable via DURATION env"
+    },
+    {
+      "id": "1779800216823",
+      "timestamp": "2026-05-26T12:56:56.823Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Grall, George",
+      "details": "Tuesday AM - Hole #12 (alternate)"
+    },
+    {
+      "id": "1779800199333",
+      "timestamp": "2026-05-26T12:56:39.333Z",
+      "user": "Mosler, Mitch",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 14",
+      "details": "Submitted Tuesday AM for Hole 14"
+    },
+    {
+      "id": "1779800196204",
+      "timestamp": "2026-05-26T12:56:36.204Z",
+      "user": "Mosler, Mitch",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Morrison, Hal",
+      "details": "Tuesday AM - Hole #14"
+    },
+    {
+      "id": "1779800194700",
+      "timestamp": "2026-05-26T12:56:34.700Z",
+      "user": "Mosler, Mitch",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Endicott, Eric",
+      "details": "Tuesday AM - Hole #14"
+    },
+    {
+      "id": "1779800193570",
+      "timestamp": "2026-05-26T12:56:33.570Z",
+      "user": "Mosler, Mitch",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Capps, Macy",
+      "details": "Tuesday AM - Hole #14"
+    },
+    {
+      "id": "1779800191026",
+      "timestamp": "2026-05-26T12:56:31.026Z",
+      "user": "Mosler, Mitch",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Mosler, Mitch",
+      "details": "Tuesday AM - Hole #14"
+    },
     {
       "id": "1779799905799",
       "timestamp": "2026-05-26T12:51:45.799Z",
@@ -22859,5 +22972,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779799490339
+  "serverNow": 1779800200946
 }
