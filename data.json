@@ -2178,7 +2178,8 @@
       "address": "4512 Ridge North Rd Fort Worth, TX 76126",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1778813044771,
+      "volunteerPassword": "$2b$10$d/yXpBVOrnBWGfcfzi86zezYiYXP8HUE86eSm1ZAMQtyeyy5p3HhW"
     },
     {
       "id": "8009",
@@ -3647,7 +3648,8 @@
       "address": "336 Vista Way Saginaw, TX 76179",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1778813044771,
+      "volunteerPassword": "$2b$10$jOHOzjXzR6ma4lzWANYTv.OvOxhJmlbl2Hy7d17RgwpCGTV./Yt6u"
     },
     {
       "id": "10213",
@@ -11020,6 +11022,26 @@
       "checkedInBy": "Sale, Lynn",
       "timestamp": "2026-05-26T12:31:23.522Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "9811",
+      "volunteerName": "Land, Angela",
+      "hole": 9,
+      "day": "Tuesday",
+      "shift": "AM",
+      "checkedInBy": "Jutras, Michael",
+      "timestamp": "2026-05-26T12:36:30.886Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9581",
+      "volunteerName": "Williams, David",
+      "hole": 4,
+      "day": "Tuesday",
+      "shift": "AM",
+      "checkedInBy": "Schafer, John",
+      "timestamp": "2026-05-26T12:36:45.153Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -11037,6 +11059,78 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779799193025",
+      "timestamp": "2026-05-26T12:39:53.025Z",
+      "user": "Holt, Sharron",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1779799132195",
+      "timestamp": "2026-05-26T12:38:52.195Z",
+      "user": "Holt, Sharron",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1779799128524",
+      "timestamp": "2026-05-26T12:38:48.524Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779799121482",
+      "timestamp": "2026-05-26T12:38:41.482Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779799018190",
+      "timestamp": "2026-05-26T12:36:58.190Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Mecum, Scott",
+      "details": "Tuesday AM - Hole #10 (alternate)"
+    },
+    {
+      "id": "1779799015229",
+      "timestamp": "2026-05-26T12:36:55.229Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Mecum, Scott",
+      "details": "Tuesday AM - Hole #10 (alternate)"
+    },
+    {
+      "id": "1779799007550",
+      "timestamp": "2026-05-26T12:36:47.550Z",
+      "user": "Jutras, Michael",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 9",
+      "details": "Submitted Tuesday AM for Hole 9"
+    },
+    {
+      "id": "1779799005198",
+      "timestamp": "2026-05-26T12:36:45.198Z",
+      "user": "Schafer, John",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Williams, David",
+      "details": "Tuesday AM - Hole #4"
+    },
     {
       "id": "1779798855489",
       "timestamp": "2026-05-26T12:34:15.489Z",
@@ -22501,5 +22595,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779798596428
+  "serverNow": 1779799008518
 }
