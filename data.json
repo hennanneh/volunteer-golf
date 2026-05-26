@@ -12025,6 +12025,15 @@
   },
   "activityLog": [
     {
+      "id": "1779817600801",
+      "timestamp": "2026-05-26T17:46:40.801Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
       "id": "1779817480729",
       "timestamp": "2026-05-26T17:44:40.729Z",
       "user": "Watson, Stan",
