@@ -12117,6 +12117,24 @@
   },
   "activityLog": [
     {
+      "id": "1779822867033",
+      "timestamp": "2026-05-26T19:14:27.033Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1779822860313",
+      "timestamp": "2026-05-26T19:14:20.313Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
       "id": "1779822579000",
       "timestamp": "2026-05-26T19:09:39.000Z",
       "user": "Peterson, Durk",
@@ -25695,5 +25713,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779815525231
+  "serverNow": 1779822580079
 }
