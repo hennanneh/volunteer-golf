@@ -11618,14 +11618,24 @@
       "isAlternate": false
     },
     {
-      "volunteerId": "1720",
-      "volunteerName": "Butler, Mark",
+      "volunteerId": "8234",
+      "volunteerName": "Wilson, Todd",
       "hole": 3,
       "day": "Tuesday",
-      "shift": "AM",
+      "shift": "PM",
       "checkedInBy": "Wilson, Todd",
-      "timestamp": "2026-05-26T16:22:15.057Z",
-      "isAlternate": true
+      "timestamp": "2026-05-26T16:37:04.095Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10634",
+      "volunteerName": "Jones, David",
+      "hole": 3,
+      "day": "Tuesday",
+      "shift": "PM",
+      "checkedInBy": "Wilson, Todd",
+      "timestamp": "2026-05-26T16:37:26.103Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -11644,6 +11654,24 @@
     "pairingsText": "Pairings Sheet (demo data)"
   },
   "activityLog": [
+    {
+      "id": "1779813446153",
+      "timestamp": "2026-05-26T16:37:26.153Z",
+      "user": "Wilson, Todd",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Jones, David",
+      "details": "Tuesday PM - Hole #3"
+    },
+    {
+      "id": "1779813439135",
+      "timestamp": "2026-05-26T16:37:19.135Z",
+      "user": "Wilson, Todd",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Butler, Mark",
+      "details": "Tuesday AM - Hole #3 (alternate)"
+    },
     {
       "id": "1779813294619",
       "timestamp": "2026-05-26T16:34:54.619Z",
