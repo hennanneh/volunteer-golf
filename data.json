@@ -3937,7 +3937,7 @@
       "yearsWorked": 1,
       "hat": "",
       "scheduled": {
-        "Wednesday AM": true,
+        "Thursday PM": true,
         "Friday AM": true,
         "Friday PM": true,
         "Saturday PM": true,
@@ -3947,7 +3947,7 @@
       "address": "5317 Whiting Way Denton, TX 76208",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779813238206
     },
     {
       "id": "7926",
@@ -11644,6 +11644,33 @@
     "pairingsText": "Pairings Sheet (demo data)"
   },
   "activityLog": [
+    {
+      "id": "1779813294619",
+      "timestamp": "2026-05-26T16:34:54.619Z",
+      "user": "Ruddell, Dick",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779813238206-6nunsl",
+      "timestamp": "2026-05-26T16:33:58.206Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Johnson, Kyle",
+      "details": "added Thursday PM; removed Wednesday AM"
+    },
+    {
+      "id": "1779813226143",
+      "timestamp": "2026-05-26T16:33:46.143Z",
+      "user": "Volkening, David",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
     {
       "id": "1779812745898",
       "timestamp": "2026-05-26T16:25:45.898Z",
