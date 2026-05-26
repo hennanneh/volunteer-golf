@@ -2355,7 +2355,6 @@
       "yearsWorked": 1,
       "hat": "",
       "scheduled": {
-        "Wednesday PM": true,
         "Thursday PM": true,
         "Friday AM": true,
         "Saturday PM": true,
@@ -2365,7 +2364,7 @@
       "volId": "10735",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779826832297
     },
     {
       "id": "7528",
@@ -12103,16 +12102,6 @@
       "checkedInBy": "Pugh, Clayton",
       "timestamp": "2026-05-26T18:37:19.312Z",
       "isAlternate": true
-    },
-    {
-      "volunteerId": "8878",
-      "volunteerName": "Myrick, Byron",
-      "hole": 12,
-      "day": "Tuesday",
-      "shift": "PM",
-      "checkedInBy": "Pugh, Clayton",
-      "timestamp": "2026-05-26T20:19:58.918Z",
-      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -12131,6 +12120,60 @@
     "pairingsText": "Pairings Sheet (demo data)"
   },
   "activityLog": [
+    {
+      "id": "1779826844070",
+      "timestamp": "2026-05-26T20:20:44.070Z",
+      "user": "Burnett, Eric",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Gaona, Carlos",
+      "details": "Tuesday PM - Hole #9 (alternate)"
+    },
+    {
+      "id": "1779826832297-gm6mao",
+      "timestamp": "2026-05-26T20:20:32.297Z",
+      "user": "Burnett, Eric",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Gaona, Carlos",
+      "details": "removed Wednesday PM"
+    },
+    {
+      "id": "1779826808822",
+      "timestamp": "2026-05-26T20:20:08.822Z",
+      "user": "Burnett, Eric",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Gaona, Carlos",
+      "details": "Tuesday PM - Hole #9 (alternate)"
+    },
+    {
+      "id": "1779826805391",
+      "timestamp": "2026-05-26T20:20:05.391Z",
+      "user": "Burnett, Eric",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Gaona, Carlos",
+      "details": "Tuesday PM - Hole #9 (alternate)"
+    },
+    {
+      "id": "1779826804957",
+      "timestamp": "2026-05-26T20:20:04.957Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Myrick, Byron",
+      "details": "Tuesday PM - Hole #12"
+    },
+    {
+      "id": "1779826798389",
+      "timestamp": "2026-05-26T20:19:58.389Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Myrick, Byron",
+      "details": "Tuesday PM - Hole #12"
+    },
     {
       "id": "1779825503116-jm9tdp",
       "timestamp": "2026-05-26T19:58:23.116Z",
@@ -25764,5 +25807,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779822580079
+  "serverNow": 1779826807731
 }
