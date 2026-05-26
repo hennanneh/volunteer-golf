@@ -11605,6 +11605,33 @@
   },
   "activityLog": [
     {
+      "id": "1779811079282",
+      "timestamp": "2026-05-26T15:57:59.282Z",
+      "user": "Clayton, Rodney",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Johnson, Linda",
+      "details": "Wednesday PM - Hole #13"
+    },
+    {
+      "id": "1779811076903",
+      "timestamp": "2026-05-26T15:57:56.903Z",
+      "user": "Clayton, Rodney",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Johnson, Linda",
+      "details": "Wednesday PM - Hole #13"
+    },
+    {
+      "id": "1779811025846",
+      "timestamp": "2026-05-26T15:57:05.846Z",
+      "user": "Clayton, Rodney",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1779810380698",
       "timestamp": "2026-05-26T15:46:20.698Z",
       "user": "Wehmeyer, Tom",
