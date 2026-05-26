@@ -11996,6 +11996,26 @@
       "checkedInBy": "Watson, Stan",
       "timestamp": "2026-05-26T17:44:33.200Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "2745",
+      "volunteerName": "Roy, Mike",
+      "hole": 16,
+      "day": "Tuesday",
+      "shift": "PM",
+      "checkedInBy": "Roy, Mike",
+      "timestamp": "2026-05-26T18:02:24.834Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "1770",
+      "volunteerName": "Mulvaney, Matt",
+      "hole": 16,
+      "day": "Tuesday",
+      "shift": "PM",
+      "checkedInBy": "Roy, Mike",
+      "timestamp": "2026-05-26T18:02:26.176Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -12014,6 +12034,42 @@
     "pairingsText": "Pairings Sheet (demo data)"
   },
   "activityLog": [
+    {
+      "id": "1779818571064",
+      "timestamp": "2026-05-26T18:02:51.064Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 16",
+      "details": "Submitted Tuesday PM for Hole 16"
+    },
+    {
+      "id": "1779818546258",
+      "timestamp": "2026-05-26T18:02:26.258Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Mulvaney, Matt",
+      "details": "Tuesday PM - Hole #16"
+    },
+    {
+      "id": "1779818545895",
+      "timestamp": "2026-05-26T18:02:25.895Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Roy, Mike",
+      "details": "Tuesday PM - Hole #16"
+    },
+    {
+      "id": "1779818506119",
+      "timestamp": "2026-05-26T18:01:46.119Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779818368263",
       "timestamp": "2026-05-26T17:59:28.263Z",
