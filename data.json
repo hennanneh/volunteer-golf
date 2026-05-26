@@ -10764,6 +10764,16 @@
       "checkedInBy": "Schafer, John",
       "timestamp": "2026-05-26T11:40:46.726Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "3974",
+      "volunteerName": "Schafer, John",
+      "hole": 4,
+      "day": "Tuesday",
+      "shift": "PM",
+      "checkedInBy": "Schafer, John",
+      "timestamp": "2026-05-26T11:45:14.244Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -10781,6 +10791,15 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779795914289",
+      "timestamp": "2026-05-26T11:45:14.289Z",
+      "user": "Schafer, John",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Schafer, John",
+      "details": "Tuesday PM - Hole #4"
+    },
     {
       "id": "1779795646769",
       "timestamp": "2026-05-26T11:40:46.769Z",
