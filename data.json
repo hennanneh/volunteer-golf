@@ -11194,6 +11194,16 @@
       "checkedInBy": "Pugh, Clayton",
       "timestamp": "2026-05-26T13:01:33.174Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "8630",
+      "volunteerName": "Montalvo, Sammy",
+      "hole": 5,
+      "day": "Tuesday",
+      "shift": "AM",
+      "checkedInBy": "Imboden, Thomas",
+      "timestamp": "2026-05-26T13:22:52.043Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -11212,6 +11222,24 @@
     "pairingsText": "Pairings Sheet (demo data)"
   },
   "activityLog": [
+    {
+      "id": "1779801775047",
+      "timestamp": "2026-05-26T13:22:55.047Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 5",
+      "details": "Submitted Tuesday AM for Hole 5"
+    },
+    {
+      "id": "1779801772125",
+      "timestamp": "2026-05-26T13:22:52.125Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Montalvo, Sammy",
+      "details": "Tuesday AM - Hole #5"
+    },
     {
       "id": "1779800939627",
       "timestamp": "2026-05-26T13:08:59.627Z",
