@@ -12048,6 +12048,56 @@
       "checkedInBy": "Browning, Wayne",
       "timestamp": "2026-05-26T18:24:56.938Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "9365",
+      "volunteerName": "Pugh, Clayton",
+      "hole": 12,
+      "day": "Tuesday",
+      "shift": "PM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-26T18:36:48.951Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "342",
+      "volunteerName": "Mckenzie, Roy",
+      "hole": 12,
+      "day": "Tuesday",
+      "shift": "PM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-26T18:36:49.821Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7052",
+      "volunteerName": "Fisher, Paul",
+      "hole": 12,
+      "day": "Tuesday",
+      "shift": "PM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-26T18:36:57.452Z",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "4988",
+      "volunteerName": "Mashburn, Victor",
+      "hole": 12,
+      "day": "Tuesday",
+      "shift": "PM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-26T18:37:14.502Z",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "9988",
+      "volunteerName": "Grall, George",
+      "hole": 12,
+      "day": "Tuesday",
+      "shift": "PM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-26T18:37:19.312Z",
+      "isAlternate": true
     }
   ],
   "submissions": [],
@@ -12066,6 +12116,51 @@
     "pairingsText": "Pairings Sheet (demo data)"
   },
   "activityLog": [
+    {
+      "id": "1779820638802",
+      "timestamp": "2026-05-26T18:37:18.802Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Grall, George",
+      "details": "Tuesday PM - Hole #12 (alternate)"
+    },
+    {
+      "id": "1779820633992",
+      "timestamp": "2026-05-26T18:37:13.992Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Mashburn, Victor",
+      "details": "Tuesday PM - Hole #12 (alternate)"
+    },
+    {
+      "id": "1779820616949",
+      "timestamp": "2026-05-26T18:36:56.949Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Fisher, Paul",
+      "details": "Tuesday PM - Hole #12 (alternate)"
+    },
+    {
+      "id": "1779820609309",
+      "timestamp": "2026-05-26T18:36:49.309Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Mckenzie, Roy",
+      "details": "Tuesday PM - Hole #12"
+    },
+    {
+      "id": "1779820608438",
+      "timestamp": "2026-05-26T18:36:48.439Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Pugh, Clayton",
+      "details": "Tuesday PM - Hole #12"
+    },
     {
       "id": "1779820114189",
       "timestamp": "2026-05-26T18:28:34.189Z",
