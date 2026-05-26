@@ -11616,6 +11616,16 @@
       "checkedInBy": "Sanders, Steve",
       "timestamp": "2026-05-26T16:13:16.811Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "1720",
+      "volunteerName": "Butler, Mark",
+      "hole": 3,
+      "day": "Tuesday",
+      "shift": "AM",
+      "checkedInBy": "Wilson, Todd",
+      "timestamp": "2026-05-26T16:22:15.057Z",
+      "isAlternate": true
     }
   ],
   "submissions": [],
@@ -11634,6 +11644,42 @@
     "pairingsText": "Pairings Sheet (demo data)"
   },
   "activityLog": [
+    {
+      "id": "1779812692428",
+      "timestamp": "2026-05-26T16:24:52.428Z",
+      "user": "Harrell, John",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1779812602963",
+      "timestamp": "2026-05-26T16:23:22.963Z",
+      "user": "Harrell, John",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1779812535107",
+      "timestamp": "2026-05-26T16:22:15.107Z",
+      "user": "Wilson, Todd",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Butler, Mark",
+      "details": "Tuesday AM - Hole #3 (alternate)"
+    },
+    {
+      "id": "1779812464147",
+      "timestamp": "2026-05-26T16:21:04.147Z",
+      "user": "Aguilar, Jorge",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
     {
       "id": "1779812006535",
       "timestamp": "2026-05-26T16:13:26.535Z",
