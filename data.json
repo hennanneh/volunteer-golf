@@ -11284,6 +11284,66 @@
       "checkedInBy": "Bishop, Woody",
       "timestamp": "2026-05-26T14:19:03.745Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "214",
+      "volunteerName": "Osiek, Curt",
+      "hole": 10,
+      "day": "Tuesday",
+      "shift": "AM",
+      "checkedInBy": "Osiek, Curt",
+      "timestamp": "2026-05-26T14:20:04.249Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2745",
+      "volunteerName": "Roy, Mike",
+      "hole": 16,
+      "day": "Tuesday",
+      "shift": "AM",
+      "checkedInBy": "Roy, Mike",
+      "timestamp": "2026-05-26T14:21:02.285Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "1770",
+      "volunteerName": "Mulvaney, Matt",
+      "hole": 16,
+      "day": "Tuesday",
+      "shift": "AM",
+      "checkedInBy": "Roy, Mike",
+      "timestamp": "2026-05-26T14:21:04.125Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "3937",
+      "volunteerName": "Bianchi, Edward",
+      "hole": 16,
+      "day": "Tuesday",
+      "shift": "AM",
+      "checkedInBy": "Roy, Mike",
+      "timestamp": "2026-05-26T14:21:08.247Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9366",
+      "volunteerName": "Fitzjarrell, Gary",
+      "hole": 16,
+      "day": "Tuesday",
+      "shift": "AM",
+      "checkedInBy": "Roy, Mike",
+      "timestamp": "2026-05-26T14:21:09.334Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "155",
+      "volunteerName": "Harvey, Dalton",
+      "hole": 16,
+      "day": "Tuesday",
+      "shift": "AM",
+      "checkedInBy": "Roy, Mike",
+      "timestamp": "2026-05-26T14:21:25.185Z",
+      "isAlternate": true
     }
   ],
   "submissions": [],
@@ -11302,6 +11362,87 @@
     "pairingsText": "Pairings Sheet (demo data)"
   },
   "activityLog": [
+    {
+      "id": "1779805289662",
+      "timestamp": "2026-05-26T14:21:29.662Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 16",
+      "details": "Submitted Tuesday AM for Hole 16"
+    },
+    {
+      "id": "1779805285248",
+      "timestamp": "2026-05-26T14:21:25.248Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Harvey, Dalton",
+      "details": "Tuesday AM - Hole #16 (alternate)"
+    },
+    {
+      "id": "1779805269398",
+      "timestamp": "2026-05-26T14:21:09.398Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Fitzjarrell, Gary",
+      "details": "Tuesday AM - Hole #16"
+    },
+    {
+      "id": "1779805268308",
+      "timestamp": "2026-05-26T14:21:08.308Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Bianchi, Edward",
+      "details": "Tuesday AM - Hole #16"
+    },
+    {
+      "id": "1779805264177",
+      "timestamp": "2026-05-26T14:21:04.177Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Mulvaney, Matt",
+      "details": "Tuesday AM - Hole #16"
+    },
+    {
+      "id": "1779805262368",
+      "timestamp": "2026-05-26T14:21:02.368Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Roy, Mike",
+      "details": "Tuesday AM - Hole #16"
+    },
+    {
+      "id": "1779805211861",
+      "timestamp": "2026-05-26T14:20:11.861Z",
+      "user": "Bishop, Woody",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 17",
+      "details": "Submitted Tuesday AM for Hole 17"
+    },
+    {
+      "id": "1779805210130",
+      "timestamp": "2026-05-26T14:20:10.130Z",
+      "user": "Osiek, Curt",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 10",
+      "details": "Submitted Tuesday AM for Hole 10"
+    },
+    {
+      "id": "1779805204439",
+      "timestamp": "2026-05-26T14:20:04.439Z",
+      "user": "Osiek, Curt",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Osiek, Curt",
+      "details": "Tuesday AM - Hole #10"
+    },
     {
       "id": "1779805197374",
       "timestamp": "2026-05-26T14:19:57.374Z",
@@ -23423,5 +23564,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779802329992
+  "serverNow": 1779805212064
 }
