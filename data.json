@@ -10920,6 +10920,106 @@
       "checkedInBy": "Ruddell, Dick",
       "timestamp": "2026-05-26T12:23:55.685Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "278",
+      "volunteerName": "Watson, Stan",
+      "hole": 11,
+      "day": "Tuesday",
+      "shift": "AM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-26T12:30:22.111Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7043",
+      "volunteerName": "Gray, James",
+      "hole": 11,
+      "day": "Tuesday",
+      "shift": "AM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-26T12:30:27.245Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6758",
+      "volunteerName": "Oakley, Jeff",
+      "hole": 11,
+      "day": "Tuesday",
+      "shift": "AM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-26T12:30:27.463Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6335",
+      "volunteerName": "Gray, Jerry",
+      "hole": 11,
+      "day": "Tuesday",
+      "shift": "AM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-26T12:30:27.497Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "243",
+      "volunteerName": "Sale, Lynn",
+      "hole": 2,
+      "day": "Tuesday",
+      "shift": "AM",
+      "checkedInBy": "Sale, Lynn",
+      "timestamp": "2026-05-26T12:31:13.040Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "136",
+      "volunteerName": "Fee, John",
+      "hole": 2,
+      "day": "Tuesday",
+      "shift": "AM",
+      "checkedInBy": "Sale, Lynn",
+      "timestamp": "2026-05-26T12:31:16.721Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8127",
+      "volunteerName": "Harrell, Michael",
+      "hole": 2,
+      "day": "Tuesday",
+      "shift": "AM",
+      "checkedInBy": "Sale, Lynn",
+      "timestamp": "2026-05-26T12:31:18.881Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9662",
+      "volunteerName": "Hunter, David",
+      "hole": 2,
+      "day": "Tuesday",
+      "shift": "AM",
+      "checkedInBy": "Sale, Lynn",
+      "timestamp": "2026-05-26T12:31:20.759Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8499",
+      "volunteerName": "Schrader, Brenda",
+      "hole": 2,
+      "day": "Tuesday",
+      "shift": "AM",
+      "checkedInBy": "Sale, Lynn",
+      "timestamp": "2026-05-26T12:31:22.807Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "1790",
+      "volunteerName": "Turner, Charlie",
+      "hole": 2,
+      "day": "Tuesday",
+      "shift": "AM",
+      "checkedInBy": "Sale, Lynn",
+      "timestamp": "2026-05-26T12:31:23.522Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -10933,10 +11033,109 @@
     "pmShiftCutoff": "19:00",
     "numberOfHoles": 20,
     "helpName": "Mike Hill",
-    "pairingsUrl": "https://www.charlesschwabchallenge.com/players",
+    "pairingsUrl": "https://colonialvolunteers.golf/pairings/",
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779798855489",
+      "timestamp": "2026-05-26T12:34:15.489Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "settings-change",
+      "target": "pairingsUrl",
+      "details": "Updated setting: pairingsUrl"
+    },
+    {
+      "id": "1779798683464",
+      "timestamp": "2026-05-26T12:31:23.464Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Turner, Charlie",
+      "details": "Tuesday AM - Hole #2"
+    },
+    {
+      "id": "1779798682725",
+      "timestamp": "2026-05-26T12:31:22.725Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Schrader, Brenda",
+      "details": "Tuesday AM - Hole #2"
+    },
+    {
+      "id": "1779798680676",
+      "timestamp": "2026-05-26T12:31:20.676Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Hunter, David",
+      "details": "Tuesday AM - Hole #2"
+    },
+    {
+      "id": "1779798678829",
+      "timestamp": "2026-05-26T12:31:18.829Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Harrell, Michael",
+      "details": "Tuesday AM - Hole #2"
+    },
+    {
+      "id": "1779798676646",
+      "timestamp": "2026-05-26T12:31:16.647Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Fee, John",
+      "details": "Tuesday AM - Hole #2"
+    },
+    {
+      "id": "1779798672959",
+      "timestamp": "2026-05-26T12:31:12.959Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Sale, Lynn",
+      "details": "Tuesday AM - Hole #2"
+    },
+    {
+      "id": "1779798635009",
+      "timestamp": "2026-05-26T12:30:35.009Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 11",
+      "details": "Submitted Tuesday AM for Hole 11"
+    },
+    {
+      "id": "1779798627711",
+      "timestamp": "2026-05-26T12:30:27.711Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Gray, Jerry",
+      "details": "Tuesday AM - Hole #11"
+    },
+    {
+      "id": "1779798627327",
+      "timestamp": "2026-05-26T12:30:27.327Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Gray, James",
+      "details": "Tuesday AM - Hole #11"
+    },
+    {
+      "id": "1779798622690",
+      "timestamp": "2026-05-26T12:30:22.690Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Watson, Stan",
+      "details": "Tuesday AM - Hole #11"
+    },
     {
       "id": "1779798596413-fyn0l0",
       "timestamp": "2026-05-26T12:29:56.413Z",
@@ -22302,5 +22501,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779739677972
+  "serverNow": 1779798596428
 }
