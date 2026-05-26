@@ -11666,6 +11666,46 @@
       "checkedInBy": "Ruddell, Dick",
       "timestamp": "2026-05-26T16:43:49.273Z",
       "isAlternate": true
+    },
+    {
+      "volunteerId": "10248",
+      "volunteerName": "Hardaway, Jerry",
+      "hole": 1,
+      "day": "Tuesday",
+      "shift": "PM",
+      "checkedInBy": "Ruddell, Dick",
+      "timestamp": "2026-05-26T16:53:33.888Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10364",
+      "volunteerName": "Thomas, Harold",
+      "hole": 1,
+      "day": "Tuesday",
+      "shift": "PM",
+      "checkedInBy": "Ruddell, Dick",
+      "timestamp": "2026-05-26T16:53:36.910Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9850",
+      "volunteerName": "Hartman, Cathy",
+      "hole": 1,
+      "day": "Tuesday",
+      "shift": "PM",
+      "checkedInBy": "Ruddell, Dick",
+      "timestamp": "2026-05-26T16:53:44.309Z",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "6829",
+      "volunteerName": "Russell, Mary",
+      "hole": 1,
+      "day": "Tuesday",
+      "shift": "PM",
+      "checkedInBy": "Ruddell, Dick",
+      "timestamp": "2026-05-26T16:54:20.919Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -11684,6 +11724,51 @@
     "pairingsText": "Pairings Sheet (demo data)"
   },
   "activityLog": [
+    {
+      "id": "1779814471163",
+      "timestamp": "2026-05-26T16:54:31.163Z",
+      "user": "Ruddell, Dick",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 1",
+      "details": "Submitted Tuesday PM for Hole 1"
+    },
+    {
+      "id": "1779814461484",
+      "timestamp": "2026-05-26T16:54:21.484Z",
+      "user": "Ruddell, Dick",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Russell, Mary",
+      "details": "Tuesday PM - Hole #1"
+    },
+    {
+      "id": "1779814424698",
+      "timestamp": "2026-05-26T16:53:44.698Z",
+      "user": "Ruddell, Dick",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Hartman, Cathy",
+      "details": "Tuesday PM - Hole #1 (alternate)"
+    },
+    {
+      "id": "1779814417303",
+      "timestamp": "2026-05-26T16:53:37.303Z",
+      "user": "Ruddell, Dick",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Thomas, Harold",
+      "details": "Tuesday PM - Hole #1"
+    },
+    {
+      "id": "1779814414282",
+      "timestamp": "2026-05-26T16:53:34.282Z",
+      "user": "Ruddell, Dick",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Hardaway, Jerry",
+      "details": "Tuesday PM - Hole #1"
+    },
     {
       "id": "1779813834443",
       "timestamp": "2026-05-26T16:43:54.443Z",
