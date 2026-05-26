@@ -10680,6 +10680,15 @@
   },
   "activityLog": [
     {
+      "id": "1779792464434",
+      "timestamp": "2026-05-26T10:47:44.435Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1779762689671-y0dz7n",
       "timestamp": "2026-05-26T02:31:29.671Z",
       "user": "Montalvo, Sammy",
