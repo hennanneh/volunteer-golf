@@ -11886,6 +11886,126 @@
       "checkedInBy": "Wilson, Todd",
       "timestamp": "2026-05-26T17:38:39.765Z",
       "isAlternate": true
+    },
+    {
+      "volunteerId": "9015",
+      "volunteerName": "Aguilar, Jorge",
+      "hole": 2,
+      "day": "Tuesday",
+      "shift": "PM",
+      "checkedInBy": "Sale, Lynn",
+      "timestamp": "2026-05-26T17:43:37.742Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7068",
+      "volunteerName": "Colon, Orlando",
+      "hole": 2,
+      "day": "Tuesday",
+      "shift": "PM",
+      "checkedInBy": "Sale, Lynn",
+      "timestamp": "2026-05-26T17:43:39.567Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "136",
+      "volunteerName": "Fee, John",
+      "hole": 2,
+      "day": "Tuesday",
+      "shift": "PM",
+      "checkedInBy": "Sale, Lynn",
+      "timestamp": "2026-05-26T17:43:41.431Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8127",
+      "volunteerName": "Harrell, Michael",
+      "hole": 2,
+      "day": "Tuesday",
+      "shift": "PM",
+      "checkedInBy": "Sale, Lynn",
+      "timestamp": "2026-05-26T17:43:42.160Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9662",
+      "volunteerName": "Hunter, David",
+      "hole": 2,
+      "day": "Tuesday",
+      "shift": "PM",
+      "checkedInBy": "Sale, Lynn",
+      "timestamp": "2026-05-26T17:43:43.641Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8499",
+      "volunteerName": "Schrader, Brenda",
+      "hole": 2,
+      "day": "Tuesday",
+      "shift": "PM",
+      "checkedInBy": "Sale, Lynn",
+      "timestamp": "2026-05-26T17:43:44.607Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "1790",
+      "volunteerName": "Turner, Charlie",
+      "hole": 2,
+      "day": "Tuesday",
+      "shift": "PM",
+      "checkedInBy": "Sale, Lynn",
+      "timestamp": "2026-05-26T17:43:46.368Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "243",
+      "volunteerName": "Sale, Lynn",
+      "hole": 2,
+      "day": "Tuesday",
+      "shift": "PM",
+      "checkedInBy": "Sale, Lynn",
+      "timestamp": "2026-05-26T17:43:49.284Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "278",
+      "volunteerName": "Watson, Stan",
+      "hole": 11,
+      "day": "Tuesday",
+      "shift": "PM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-26T17:44:29.327Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7043",
+      "volunteerName": "Gray, James",
+      "hole": 11,
+      "day": "Tuesday",
+      "shift": "PM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-26T17:44:32.568Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6335",
+      "volunteerName": "Gray, Jerry",
+      "hole": 11,
+      "day": "Tuesday",
+      "shift": "PM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-26T17:44:32.916Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6758",
+      "volunteerName": "Oakley, Jeff",
+      "hole": 11,
+      "day": "Tuesday",
+      "shift": "PM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-26T17:44:33.200Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -11904,6 +12024,132 @@
     "pairingsText": "Pairings Sheet (demo data)"
   },
   "activityLog": [
+    {
+      "id": "1779817480729",
+      "timestamp": "2026-05-26T17:44:40.729Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 11",
+      "details": "Submitted Tuesday PM for Hole 11"
+    },
+    {
+      "id": "1779817473284",
+      "timestamp": "2026-05-26T17:44:33.284Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Oakley, Jeff",
+      "details": "Tuesday PM - Hole #11"
+    },
+    {
+      "id": "1779817472997",
+      "timestamp": "2026-05-26T17:44:32.997Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Gray, Jerry",
+      "details": "Tuesday PM - Hole #11"
+    },
+    {
+      "id": "1779817472653",
+      "timestamp": "2026-05-26T17:44:32.653Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Gray, James",
+      "details": "Tuesday PM - Hole #11"
+    },
+    {
+      "id": "1779817469421",
+      "timestamp": "2026-05-26T17:44:29.421Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Watson, Stan",
+      "details": "Tuesday PM - Hole #11"
+    },
+    {
+      "id": "1779817441581",
+      "timestamp": "2026-05-26T17:44:01.581Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 2",
+      "details": "Submitted Tuesday PM for Hole 2"
+    },
+    {
+      "id": "1779817429186",
+      "timestamp": "2026-05-26T17:43:49.186Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Sale, Lynn",
+      "details": "Tuesday PM - Hole #2"
+    },
+    {
+      "id": "1779817426284",
+      "timestamp": "2026-05-26T17:43:46.284Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Turner, Charlie",
+      "details": "Tuesday PM - Hole #2"
+    },
+    {
+      "id": "1779817424513",
+      "timestamp": "2026-05-26T17:43:44.513Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Schrader, Brenda",
+      "details": "Tuesday PM - Hole #2"
+    },
+    {
+      "id": "1779817423548",
+      "timestamp": "2026-05-26T17:43:43.548Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Hunter, David",
+      "details": "Tuesday PM - Hole #2"
+    },
+    {
+      "id": "1779817422066",
+      "timestamp": "2026-05-26T17:43:42.066Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Harrell, Michael",
+      "details": "Tuesday PM - Hole #2"
+    },
+    {
+      "id": "1779817421339",
+      "timestamp": "2026-05-26T17:43:41.339Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Fee, John",
+      "details": "Tuesday PM - Hole #2"
+    },
+    {
+      "id": "1779817419467",
+      "timestamp": "2026-05-26T17:43:39.467Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Colon, Orlando",
+      "details": "Tuesday PM - Hole #2"
+    },
+    {
+      "id": "1779817417647",
+      "timestamp": "2026-05-26T17:43:37.647Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Aguilar, Jorge",
+      "details": "Tuesday PM - Hole #2"
+    },
     {
       "id": "1779817119822",
       "timestamp": "2026-05-26T17:38:39.822Z",
