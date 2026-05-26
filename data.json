@@ -6329,6 +6329,7 @@
       "hat": "",
       "scheduled": {
         "Tuesday AM": true,
+        "Wednesday PM": true,
         "Thursday AM": true,
         "Thursday PM": true,
         "Friday PM": true,
@@ -6340,7 +6341,7 @@
       "address": "7501 Ranch Ct. Benbrook, TX 76126",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779368847939
+      "lastModified": 1779832394574
     },
     {
       "id": "9575",
@@ -12160,6 +12161,15 @@
     "pairingsText": "Pairings Sheet (demo data)"
   },
   "activityLog": [
+    {
+      "id": "1779832394574-9amixn",
+      "timestamp": "2026-05-26T21:53:14.574Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Peterson, Durk",
+      "details": "added Wednesday PM"
+    },
     {
       "id": "1779831502538",
       "timestamp": "2026-05-26T21:38:22.538Z",
