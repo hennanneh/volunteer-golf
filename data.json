@@ -11344,6 +11344,76 @@
       "checkedInBy": "Roy, Mike",
       "timestamp": "2026-05-26T14:21:25.185Z",
       "isAlternate": true
+    },
+    {
+      "volunteerId": "5217",
+      "volunteerName": "Quintana, Mike",
+      "hole": 7,
+      "day": "Tuesday",
+      "shift": "AM",
+      "checkedInBy": "Quintana, Mike",
+      "timestamp": "2026-05-26T14:44:35.676Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "274",
+      "volunteerName": "Waller, Gary",
+      "hole": 7,
+      "day": "Tuesday",
+      "shift": "AM",
+      "checkedInBy": "Quintana, Mike",
+      "timestamp": "2026-05-26T14:44:36.637Z",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "4264",
+      "volunteerName": "Burns, Mike",
+      "hole": 7,
+      "day": "Tuesday",
+      "shift": "AM",
+      "checkedInBy": "Quintana, Mike",
+      "timestamp": "2026-05-26T14:44:40.904Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4657",
+      "volunteerName": "Burns, Dianne",
+      "hole": 7,
+      "day": "Tuesday",
+      "shift": "AM",
+      "checkedInBy": "Quintana, Mike",
+      "timestamp": "2026-05-26T14:44:41.394Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9952",
+      "volunteerName": "Nartker, Christopher",
+      "hole": 7,
+      "day": "Tuesday",
+      "shift": "AM",
+      "checkedInBy": "Quintana, Mike",
+      "timestamp": "2026-05-26T14:44:43.859Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9204",
+      "volunteerName": "Sanders, Denny",
+      "hole": 7,
+      "day": "Tuesday",
+      "shift": "AM",
+      "checkedInBy": "Quintana, Mike",
+      "timestamp": "2026-05-26T14:44:45.337Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5857",
+      "volunteerName": "Gunn, Eric",
+      "hole": 7,
+      "day": "Tuesday",
+      "shift": "AM",
+      "checkedInBy": "Quintana, Mike",
+      "timestamp": "2026-05-26T14:44:52.958Z",
+      "isAlternate": true
     }
   ],
   "submissions": [],
@@ -11362,6 +11432,78 @@
     "pairingsText": "Pairings Sheet (demo data)"
   },
   "activityLog": [
+    {
+      "id": "1779806692930",
+      "timestamp": "2026-05-26T14:44:52.931Z",
+      "user": "Quintana, Mike",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Gunn, Eric",
+      "details": "Tuesday AM - Hole #7 (alternate)"
+    },
+    {
+      "id": "1779806685333",
+      "timestamp": "2026-05-26T14:44:45.333Z",
+      "user": "Quintana, Mike",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Sanders, Denny",
+      "details": "Tuesday AM - Hole #7"
+    },
+    {
+      "id": "1779806683842",
+      "timestamp": "2026-05-26T14:44:43.842Z",
+      "user": "Quintana, Mike",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Nartker, Christopher",
+      "details": "Tuesday AM - Hole #7"
+    },
+    {
+      "id": "1779806681365",
+      "timestamp": "2026-05-26T14:44:41.366Z",
+      "user": "Quintana, Mike",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Burns, Dianne",
+      "details": "Tuesday AM - Hole #7"
+    },
+    {
+      "id": "1779806680876",
+      "timestamp": "2026-05-26T14:44:40.876Z",
+      "user": "Quintana, Mike",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Burns, Mike",
+      "details": "Tuesday AM - Hole #7"
+    },
+    {
+      "id": "1779806676610",
+      "timestamp": "2026-05-26T14:44:36.610Z",
+      "user": "Quintana, Mike",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Waller, Gary",
+      "details": "Tuesday AM - Hole #7 (alternate)"
+    },
+    {
+      "id": "1779806675653",
+      "timestamp": "2026-05-26T14:44:35.653Z",
+      "user": "Quintana, Mike",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Quintana, Mike",
+      "details": "Tuesday AM - Hole #7"
+    },
+    {
+      "id": "1779806651354",
+      "timestamp": "2026-05-26T14:44:11.354Z",
+      "user": "Quintana, Mike",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779805850267",
       "timestamp": "2026-05-26T14:30:50.267Z",
