@@ -10680,6 +10680,24 @@
   },
   "activityLog": [
     {
+      "id": "1779794355108",
+      "timestamp": "2026-05-26T11:19:15.108Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779794304025",
+      "timestamp": "2026-05-26T11:18:24.025Z",
+      "user": "Clayton, Rodney",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1779793483608",
       "timestamp": "2026-05-26T11:04:43.608Z",
       "user": "Howrey, Anne",
