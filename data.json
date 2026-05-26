@@ -12164,6 +12164,24 @@
   },
   "activityLog": [
     {
+      "id": "1779836160201",
+      "timestamp": "2026-05-26T22:56:00.201Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Ash, Michael",
+      "details": "Tuesday PM - Hole #11 (alternate)"
+    },
+    {
+      "id": "1779836149143",
+      "timestamp": "2026-05-26T22:55:49.143Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Ash, Michael",
+      "details": "Tuesday PM - Hole #11 (alternate)"
+    },
+    {
       "id": "1779834980979",
       "timestamp": "2026-05-26T22:36:20.979Z",
       "user": "Quintana, Mike",
