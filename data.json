@@ -12158,6 +12158,24 @@
   },
   "activityLog": [
     {
+      "id": "1779838830428",
+      "timestamp": "2026-05-26T23:40:30.428Z",
+      "user": "Wehmeyer, Tom",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779838823024",
+      "timestamp": "2026-05-26T23:40:23.024Z",
+      "user": "Wehmeyer, Tom",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
       "id": "1779837199981-rzbuug",
       "timestamp": "2026-05-26T23:13:19.981Z",
       "user": "Browning, Wayne",
