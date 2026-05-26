@@ -10887,6 +10887,16 @@
       "checkedInBy": "Trout, Wayne",
       "timestamp": "2026-05-26T12:10:32.739Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "10150",
+      "volunteerName": "Peterson, Durk",
+      "hole": 10,
+      "day": "Tuesday",
+      "shift": "AM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-26T12:15:10.543Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -10900,10 +10910,55 @@
     "pmShiftCutoff": "19:00",
     "numberOfHoles": 20,
     "helpName": "Mike Hill",
-    "pairingsUrl": "https://www.charlesschwabchallenge.com/players",
+    "pairingsUrl": "https://colonialvolunteers.golf/pairings/",
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779797909090",
+      "timestamp": "2026-05-26T12:18:29.090Z",
+      "user": "Harrell, Michael",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1779797880267",
+      "timestamp": "2026-05-26T12:18:00.267Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "settings-change",
+      "target": "pairingsUrl",
+      "details": "Updated setting: pairingsUrl"
+    },
+    {
+      "id": "1779797869187",
+      "timestamp": "2026-05-26T12:17:49.187Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1779797845220",
+      "timestamp": "2026-05-26T12:17:25.220Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1779797710511",
+      "timestamp": "2026-05-26T12:15:10.511Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Peterson, Durk",
+      "details": "Tuesday AM - Hole #10"
+    },
     {
       "id": "1779797432732",
       "timestamp": "2026-05-26T12:10:32.732Z",
