@@ -12103,6 +12103,16 @@
       "checkedInBy": "Pugh, Clayton",
       "timestamp": "2026-05-26T18:37:19.312Z",
       "isAlternate": true
+    },
+    {
+      "volunteerId": "8878",
+      "volunteerName": "Myrick, Byron",
+      "hole": 12,
+      "day": "Tuesday",
+      "shift": "PM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-26T20:19:58.918Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
