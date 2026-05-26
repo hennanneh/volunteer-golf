@@ -11565,6 +11565,26 @@
       "checkedInBy": "Roy, Mike",
       "timestamp": "2026-05-26T15:33:04.482Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "3034",
+      "volunteerName": "Burnett, Eric",
+      "hole": 9,
+      "day": "Tuesday",
+      "shift": "AM",
+      "checkedInBy": "Jutras, Michael",
+      "timestamp": "2026-05-26T15:36:22.393Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5952",
+      "volunteerName": "Pate, Teresa",
+      "hole": 16,
+      "day": "Tuesday",
+      "shift": "PM",
+      "checkedInBy": "Roy, Mike",
+      "timestamp": "2026-05-26T15:39:03.512Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -11583,6 +11603,42 @@
     "pairingsText": "Pairings Sheet (demo data)"
   },
   "activityLog": [
+    {
+      "id": "1779809946385",
+      "timestamp": "2026-05-26T15:39:06.385Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 16",
+      "details": "Submitted Tuesday PM for Hole 16"
+    },
+    {
+      "id": "1779809943591",
+      "timestamp": "2026-05-26T15:39:03.591Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Pate, Teresa",
+      "details": "Tuesday PM - Hole #16"
+    },
+    {
+      "id": "1779809796442",
+      "timestamp": "2026-05-26T15:36:36.442Z",
+      "user": "Jutras, Michael",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 9",
+      "details": "Submitted Tuesday AM for Hole 9"
+    },
+    {
+      "id": "1779809782466",
+      "timestamp": "2026-05-26T15:36:22.466Z",
+      "user": "Jutras, Michael",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Burnett, Eric",
+      "details": "Tuesday AM - Hole #9"
+    },
     {
       "id": "1779809619138",
       "timestamp": "2026-05-26T15:33:39.138Z",
@@ -24271,5 +24327,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779809589879
+  "serverNow": 1779809581800
 }
