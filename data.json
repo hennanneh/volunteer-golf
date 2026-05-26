@@ -11866,6 +11866,26 @@
       "checkedInBy": "Mcdaniel, Patrick",
       "timestamp": "2026-05-26T17:31:43.903Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "10499",
+      "volunteerName": "Henson, Barry",
+      "hole": 3,
+      "day": "Tuesday",
+      "shift": "PM",
+      "checkedInBy": "Wilson, Todd",
+      "timestamp": "2026-05-26T17:35:59.953Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10451",
+      "volunteerName": "Miller, David",
+      "hole": 3,
+      "day": "Tuesday",
+      "shift": "PM",
+      "checkedInBy": "Wilson, Todd",
+      "timestamp": "2026-05-26T17:38:39.765Z",
+      "isAlternate": true
     }
   ],
   "submissions": [],
@@ -11884,6 +11904,33 @@
     "pairingsText": "Pairings Sheet (demo data)"
   },
   "activityLog": [
+    {
+      "id": "1779817119822",
+      "timestamp": "2026-05-26T17:38:39.822Z",
+      "user": "Wilson, Todd",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Miller, David",
+      "details": "Tuesday PM - Hole #3 (alternate)"
+    },
+    {
+      "id": "1779816964019",
+      "timestamp": "2026-05-26T17:36:04.019Z",
+      "user": "Wilson, Todd",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 3",
+      "details": "Submitted Tuesday PM for Hole 3"
+    },
+    {
+      "id": "1779816960007",
+      "timestamp": "2026-05-26T17:36:00.007Z",
+      "user": "Wilson, Todd",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Henson, Barry",
+      "details": "Tuesday PM - Hole #3"
+    },
     {
       "id": "1779816706571",
       "timestamp": "2026-05-26T17:31:46.571Z",
