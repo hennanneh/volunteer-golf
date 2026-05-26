@@ -5685,7 +5685,7 @@
       "yearsWorked": 1,
       "hat": "",
       "scheduled": {
-        "Tuesday AM": true,
+        "Wednesday PM": true,
         "Thursday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
@@ -5695,7 +5695,7 @@
       "volId": "10774",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779833184880
     },
     {
       "id": "7943",
@@ -6038,6 +6038,7 @@
         "Monday AM": true,
         "Tuesday AM": true,
         "Tuesday PM": true,
+        "Wednesday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
         "Saturday PM": true,
@@ -6048,7 +6049,7 @@
       "address": "6705 Lucas Ln North Richland Hills, TX 76182",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779798579943,
+      "lastModified": 1779833342231,
       "notes": "",
       "hatReceived": false
     },
@@ -12143,6 +12144,16 @@
       "checkedInBy": "Jutras, Michael",
       "timestamp": "2026-05-26T20:58:55.374Z",
       "isAlternate": true
+    },
+    {
+      "volunteerId": "7363",
+      "volunteerName": "Roberson, Chris",
+      "hole": 10,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-26T22:05:53.726Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -12161,6 +12172,33 @@
     "pairingsText": "Pairings Sheet (demo data)"
   },
   "activityLog": [
+    {
+      "id": "1779833342231-pgpx4r",
+      "timestamp": "2026-05-26T22:09:02.231Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Oakley, Jeff",
+      "details": "added Wednesday AM"
+    },
+    {
+      "id": "1779833301058",
+      "timestamp": "2026-05-26T22:08:21.058Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779833184880-0atuoe",
+      "timestamp": "2026-05-26T22:06:24.880Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Moss, Doyle",
+      "details": "added Wednesday PM; removed Tuesday AM"
+    },
     {
       "id": "1779832394574-9amixn",
       "timestamp": "2026-05-26T21:53:14.574Z",
