@@ -7896,23 +7896,27 @@
       "id": "10695",
       "name": "Stone, Tyler",
       "type": "Volunteer",
-      "hole": 18,
+      "hole": 16,
       "phone": "(817) 659-8727",
       "email": "tylerstone90@gmail.com",
       "yearsWorked": 1,
       "hat": "",
       "scheduled": {
         "Monday AM": true,
+        "Tuesday PM": true,
         "Thursday AM": true,
         "Saturday AM": true,
         "Sunday AM": true,
         "Sunday PM": true
       },
-      "address": "805 Sugar Hill\r\nCleburne, TX 76033",
+      "address": "805 Sugar Hill\nCleburne, TX 76033",
       "volId": "10695",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779397836321
+      "lastModified": 1779795273444,
+      "notes": "",
+      "hatReceived": false,
+      "originalHole": 18
     },
     {
       "id": "10495",
@@ -10709,6 +10713,24 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779795273444-rh6hdr",
+      "timestamp": "2026-05-26T11:34:33.444Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Stone, Tyler",
+      "details": "Updated fields: hole, scheduled, notes, address, hatReceived, originalHole"
+    },
+    {
+      "id": "1779795118654",
+      "timestamp": "2026-05-26T11:31:58.654Z",
+      "user": "Mosler, Mitch",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779794764133",
       "timestamp": "2026-05-26T11:26:04.133Z",
