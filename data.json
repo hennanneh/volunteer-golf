@@ -5100,18 +5100,12 @@
       "email": "mwnosam@gmail.com",
       "yearsWorked": 13,
       "hat": "",
-      "scheduled": {
-        "Wednesday PM": true,
-        "Thursday AM": true,
-        "Friday PM": true,
-        "Saturday AM": true,
-        "Sunday PM": true
-      },
+      "scheduled": {},
       "volId": "5168",
       "address": "101 Cinnamon Ct Weatherford, TX 76088-7235",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779837199981
     },
     {
       "id": "5764",
@@ -12163,6 +12157,15 @@
     "pairingsText": "Pairings Sheet (demo data)"
   },
   "activityLog": [
+    {
+      "id": "1779837199981-rzbuug",
+      "timestamp": "2026-05-26T23:13:19.981Z",
+      "user": "Browning, Wayne",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Mason, Mike",
+      "details": "removed Wednesday PM, Thursday AM, Friday PM, Saturday AM, Sunday PM"
+    },
     {
       "id": "1779836658170",
       "timestamp": "2026-05-26T23:04:18.170Z",
