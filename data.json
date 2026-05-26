@@ -5055,7 +5055,6 @@
       "yearsWorked": 14,
       "hat": "",
       "scheduled": {
-        "Wednesday PM": true,
         "Thursday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
@@ -5065,7 +5064,7 @@
       "address": "4735 Saddlebrook Drive Fort Worth, TX 7611681736",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779825051995
     },
     {
       "id": "9510",
@@ -12116,6 +12115,15 @@
     "pairingsText": "Pairings Sheet (demo data)"
   },
   "activityLog": [
+    {
+      "id": "1779825051996-5rajjz",
+      "timestamp": "2026-05-26T19:50:51.996Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Mashburn, Victor",
+      "details": "removed Wednesday PM"
+    },
     {
       "id": "1779823601091",
       "timestamp": "2026-05-26T19:26:41.091Z",
