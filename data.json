@@ -12164,6 +12164,24 @@
   },
   "activityLog": [
     {
+      "id": "1779834661433",
+      "timestamp": "2026-05-26T22:31:01.433Z",
+      "user": "Trout, Wayne",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1779834603870",
+      "timestamp": "2026-05-26T22:30:03.870Z",
+      "user": "Trout, Wayne",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
       "id": "1779834524716",
       "timestamp": "2026-05-26T22:28:44.716Z",
       "user": "Trout, Wayne",
