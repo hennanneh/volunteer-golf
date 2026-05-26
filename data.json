@@ -6025,6 +6025,7 @@
       "hat": "",
       "scheduled": {
         "Monday AM": true,
+        "Monday PM": true,
         "Tuesday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
@@ -6036,7 +6037,7 @@
       "address": "6705 Lucas Ln North Richland Hills, TX 76182",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779735121104,
+      "lastModified": 1779796769328,
       "notes": "",
       "hatReceived": false
     },
@@ -10791,6 +10792,42 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779796769328-sw35fn",
+      "timestamp": "2026-05-26T11:59:29.328Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Oakley, Jeff",
+      "details": "added Monday PM"
+    },
+    {
+      "id": "1779796654684",
+      "timestamp": "2026-05-26T11:57:34.684Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779796635107-lgp9h7",
+      "timestamp": "2026-05-26T11:57:15.107Z",
+      "user": "System",
+      "userType": "Deployment",
+      "action": "system-update",
+      "target": "8ed2eadb",
+      "details": "Add /pairings tracker (volunteer view + locked upload page)"
+    },
+    {
+      "id": "1779796633019-b842c1",
+      "timestamp": "2026-05-26T11:57:13.019Z",
+      "user": "System",
+      "userType": "Deployment",
+      "action": "system-update",
+      "target": "b152f18",
+      "details": "Add /pairings tracker (volunteer view + locked upload page)"
+    },
     {
       "id": "1779796304739",
       "timestamp": "2026-05-26T11:51:44.739Z",
