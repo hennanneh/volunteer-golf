@@ -7896,14 +7896,13 @@
       "id": "10695",
       "name": "Stone, Tyler",
       "type": "Volunteer",
-      "hole": 16,
+      "hole": 18,
       "phone": "(817) 659-8727",
       "email": "tylerstone90@gmail.com",
       "yearsWorked": 1,
       "hat": "",
       "scheduled": {
         "Monday AM": true,
-        "Tuesday PM": true,
         "Thursday AM": true,
         "Saturday AM": true,
         "Sunday AM": true,
@@ -7913,10 +7912,9 @@
       "volId": "10695",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779795273444,
+      "lastModified": 1779795421197,
       "notes": "",
-      "hatReceived": false,
-      "originalHole": 18
+      "hatReceived": false
     },
     {
       "id": "10495",
@@ -9114,6 +9112,26 @@
       "address": "912 N 5th Ave Durant, OK 74701",
       "volId": "10696",
       "lastModified": 1779314445279
+    },
+    {
+      "id": "new_1779795430211",
+      "name": "Karenes, Tripp",
+      "type": "Volunteer",
+      "hole": 16,
+      "phone": "",
+      "email": "",
+      "yearsWorked": 0,
+      "hat": "",
+      "hatReceived": false,
+      "scheduled": {
+        "Monday AM": true,
+        "Wednesday PM": true
+      },
+      "lastModified": 1779795575930,
+      "notes": "",
+      "address": "",
+      "volId": "",
+      "originalHole": 18
     }
   ],
   "checkIns": [
@@ -10696,6 +10714,46 @@
       "checkedInBy": "Clayton, Rodney",
       "timestamp": "2026-05-26T11:23:39.873Z",
       "isAlternate": true
+    },
+    {
+      "volunteerId": "6553",
+      "volunteerName": "Ruddell, Dick",
+      "hole": 1,
+      "day": "Tuesday",
+      "shift": "AM",
+      "checkedInBy": "Ruddell, Dick",
+      "timestamp": "2026-05-26T11:35:06.620Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5192",
+      "volunteerName": "Imboden, Thomas",
+      "hole": 5,
+      "day": "Tuesday",
+      "shift": "AM",
+      "checkedInBy": "Imboden, Thomas",
+      "timestamp": "2026-05-26T11:38:17.775Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "new_1779795430211",
+      "volunteerName": "Karenes, Tripp",
+      "hole": 18,
+      "day": "Monday",
+      "shift": "PM",
+      "checkedInBy": "Howrey, Anne",
+      "timestamp": "2026-05-26T11:38:39.052Z",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "new_1779795430211",
+      "volunteerName": "Karenes, Tripp",
+      "hole": 18,
+      "day": "Monday",
+      "shift": "AM",
+      "checkedInBy": "Howrey, Anne",
+      "timestamp": "2026-05-26T11:38:56.582Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -10713,6 +10771,143 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779795575930-g11d18",
+      "timestamp": "2026-05-26T11:39:35.930Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Karenes, Tripp",
+      "details": "Updated fields: hole, notes, address, volId, originalHole"
+    },
+    {
+      "id": "1779795562250",
+      "timestamp": "2026-05-26T11:39:22.250Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1779795555436",
+      "timestamp": "2026-05-26T11:39:15.436Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779795546595",
+      "timestamp": "2026-05-26T11:39:06.595Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 18",
+      "details": "Submitted Monday AM for Hole 18"
+    },
+    {
+      "id": "1779795536538",
+      "timestamp": "2026-05-26T11:38:56.538Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Karenes, Tripp",
+      "details": "Monday AM - Hole #18"
+    },
+    {
+      "id": "1779795519005",
+      "timestamp": "2026-05-26T11:38:39.005Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Karenes, Tripp",
+      "details": "Monday PM - Hole #18 (alternate)"
+    },
+    {
+      "id": "1779795497816",
+      "timestamp": "2026-05-26T11:38:17.816Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Imboden, Thomas",
+      "details": "Tuesday AM - Hole #5"
+    },
+    {
+      "id": "1779795491182",
+      "timestamp": "2026-05-26T11:38:11.182Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779795479158",
+      "timestamp": "2026-05-26T11:37:59.158Z",
+      "user": "Ruddell, Dick",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 1",
+      "details": "Submitted Tuesday AM for Hole 1"
+    },
+    {
+      "id": "1779795471667",
+      "timestamp": "2026-05-26T11:37:51.667Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779795468775",
+      "timestamp": "2026-05-26T11:37:48.775Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1779795459867-k1zqki",
+      "timestamp": "2026-05-26T11:37:39.867Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "add-volunteer",
+      "target": "Karenes, Tripp",
+      "details": "Added volunteer (via bulk save)",
+      "targetHole": 18,
+      "actorHole": 99
+    },
+    {
+      "id": "1779795457402",
+      "timestamp": "2026-05-26T11:37:37.402Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "add-volunteer",
+      "target": "Karenes, Tripp",
+      "details": "Added new volunteer (Type: Volunteer, Hole: 18)"
+    },
+    {
+      "id": "1779795421197-e18c0r",
+      "timestamp": "2026-05-26T11:37:01.197Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Stone, Tyler",
+      "details": "Updated fields: hole, scheduled, originalHole"
+    },
+    {
+      "id": "1779795306939",
+      "timestamp": "2026-05-26T11:35:06.939Z",
+      "user": "Ruddell, Dick",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Ruddell, Dick",
+      "details": "Tuesday AM - Hole #1"
+    },
     {
       "id": "1779795273444-rh6hdr",
       "timestamp": "2026-05-26T11:34:33.444Z",
@@ -21534,5 +21729,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779794621187
+  "serverNow": 1779795499141
 }
