@@ -12102,6 +12102,46 @@
       "checkedInBy": "Pugh, Clayton",
       "timestamp": "2026-05-26T18:37:19.312Z",
       "isAlternate": true
+    },
+    {
+      "volunteerId": "9658",
+      "volunteerName": "Jutras, Michael",
+      "hole": 9,
+      "day": "Tuesday",
+      "shift": "PM",
+      "checkedInBy": "Jutras, Michael",
+      "timestamp": "2026-05-26T20:58:40.123Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9853",
+      "volunteerName": "Cole, Jefery",
+      "hole": 9,
+      "day": "Tuesday",
+      "shift": "PM",
+      "checkedInBy": "Jutras, Michael",
+      "timestamp": "2026-05-26T20:58:44.775Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9811",
+      "volunteerName": "Land, Angela",
+      "hole": 9,
+      "day": "Tuesday",
+      "shift": "PM",
+      "checkedInBy": "Jutras, Michael",
+      "timestamp": "2026-05-26T20:58:45.773Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6714",
+      "volunteerName": "Hellis, Neil",
+      "hole": 9,
+      "day": "Tuesday",
+      "shift": "PM",
+      "checkedInBy": "Jutras, Michael",
+      "timestamp": "2026-05-26T20:58:55.374Z",
+      "isAlternate": true
     }
   ],
   "submissions": [],
@@ -12120,6 +12160,60 @@
     "pairingsText": "Pairings Sheet (demo data)"
   },
   "activityLog": [
+    {
+      "id": "1779829162001",
+      "timestamp": "2026-05-26T20:59:22.001Z",
+      "user": "Jutras, Michael",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 9",
+      "details": "Submitted Tuesday PM for Hole 9"
+    },
+    {
+      "id": "1779829135435",
+      "timestamp": "2026-05-26T20:58:55.435Z",
+      "user": "Jutras, Michael",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Hellis, Neil",
+      "details": "Tuesday PM - Hole #9 (alternate)"
+    },
+    {
+      "id": "1779829125836",
+      "timestamp": "2026-05-26T20:58:45.836Z",
+      "user": "Jutras, Michael",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Land, Angela",
+      "details": "Tuesday PM - Hole #9"
+    },
+    {
+      "id": "1779829124835",
+      "timestamp": "2026-05-26T20:58:44.835Z",
+      "user": "Jutras, Michael",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Cole, Jefery",
+      "details": "Tuesday PM - Hole #9"
+    },
+    {
+      "id": "1779829120189",
+      "timestamp": "2026-05-26T20:58:40.189Z",
+      "user": "Jutras, Michael",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Jutras, Michael",
+      "details": "Tuesday PM - Hole #9"
+    },
+    {
+      "id": "1779828938130",
+      "timestamp": "2026-05-26T20:55:38.130Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779828413981",
       "timestamp": "2026-05-26T20:46:53.981Z",
