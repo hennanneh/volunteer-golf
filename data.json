@@ -11263,6 +11263,33 @@
   },
   "activityLog": [
     {
+      "id": "1779803306430",
+      "timestamp": "2026-05-26T13:48:26.430Z",
+      "user": "Mulvaney, Matt",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779803255150",
+      "timestamp": "2026-05-26T13:47:35.150Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1779803117666",
+      "timestamp": "2026-05-26T13:45:17.666Z",
+      "user": "Volkening, David",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
       "id": "1779802777930",
       "timestamp": "2026-05-26T13:39:37.930Z",
       "user": "Pueblo, Vange",
