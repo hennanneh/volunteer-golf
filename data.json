@@ -10680,6 +10680,33 @@
   },
   "activityLog": [
     {
+      "id": "1779793483608",
+      "timestamp": "2026-05-26T11:04:43.608Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779793479018",
+      "timestamp": "2026-05-26T11:04:39.018Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1779793391146",
+      "timestamp": "2026-05-26T11:03:11.146Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
       "id": "1779792917536",
       "timestamp": "2026-05-26T10:55:17.536Z",
       "user": "Sanders, Steve",
