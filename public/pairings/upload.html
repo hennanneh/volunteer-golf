@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Pairings Upload</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #f5f5f5;
+    color: #333;
+    -webkit-text-size-adjust: 100%;
+  }
+  header {
+    background: linear-gradient(135deg, #1a472a, #2d5a3f);
+    color: white;
+    padding: 16px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  }
+  header h1 { margin: 0; font-size: 22px; font-weight: 700; }
+  header .sub { margin-top: 4px; font-size: 13px; opacity: 0.85; }
+  main { padding: 16px; max-width: 720px; margin: 0 auto; }
+  .card {
+    background: white;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 14px;
+    border: 1px solid #ddd;
+  }
+  .card h2 { margin: 0 0 10px; font-size: 16px; font-weight: 600; color: #1a472a; }
+  .status {
+    padding: 12px 14px;
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  .status.loaded { background: #e8f5e9; color: #1a472a; border: 1px solid #c8e6c9; }
+  .status.empty { background: #fff3e0; color: #8a4b00; border: 1px solid #ffe0b2; }
+  .status strong { font-weight: 700; }
+  textarea {
+    width: 100%;
+    min-height: 220px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: 'SF Mono', Menlo, Consolas, monospace;
+    font-size: 13px;
+    color: #333;
+    resize: vertical;
+  }
+  textarea:focus { outline: none; border-color: #1a472a; }
+  .btn-row { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
+  button {
+    font-family: inherit;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 18px;
+    min-height: 44px;
+    cursor: pointer;
+    font-size: 15px;
+  }
+  button.primary { background: #1a472a; color: white; }
+  button.primary:hover { background: #2d5a3f; }
+  button.secondary { background: #f0f0f0; color: #555; }
+  button.secondary:hover { background: #e5e5e5; }
+  button.danger { background: #fff; color: #d32f2f; border: 1px solid #ffcdd2; }
+  button.danger:hover { background: #ffebee; }
+  .parse-status {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #666;
+    min-height: 18px;
+  }
+  .parse-status.error { color: #d32f2f; font-weight: 600; }
+  .parse-status.success { color: #1a472a; font-weight: 600; }
+  .preview {
+    max-height: 240px;
+    overflow-y: auto;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 8px 12px;
+    background: #fafafa;
+    font-size: 13px;
+    line-height: 1.45;
+  }
+  .preview-row { padding: 4px 0; border-bottom: 1px dotted #eee; }
+  .preview-row:last-child { border-bottom: none; }
+  .preview-time { color: #1a472a; font-weight: 600; }
+  a.tracker-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #1a472a;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 0;
+  }
+  a.tracker-link:hover { text-decoration: underline; }
+  .locked-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+    color: #999;
+    text-align: center;
+    padding: 20px;
+  }
+  .locked-screen h1 { color: #666; font-weight: 600; }
+  .locked-screen p { max-width: 400px; }
+  .future-note {
+    margin-top: 4px;
+    font-size: 12px;
+    color: #999;
+    font-style: italic;
+  }
+</style>
+</head>
+<body>
+
+<div id="lockedScreen" class="locked-screen" style="display:none;">
+  <h1>Not authorized</h1>
+  <p>This page requires an access key. If you should have access, ask Anne for the URL.</p>
+</div>
+
+<div id="adminApp" style="display:none;">
+<header>
+  <h1>Pairings Upload</h1>
+  <div class="sub" id="todayDate"></div>
+  <div class="sub">Load today's pairings. Volunteers see them in the tracker.</div>
+</header>
+<main>
+  <div class="card">
+    <h2>Current status</h2>
+    <div class="status" id="currentStatus">No pairings loaded.</div>
+    <a class="tracker-link" href="./">→ Open volunteer tracker</a>
+  </div>
+
+  <div class="card">
+    <h2>Load new pairings</h2>
+    <textarea id="pasteArea" placeholder="Paste the Tee Times &amp; Pairings text from charlesschwabchallenge.com/players here..."></textarea>
+    <div class="btn-row">
+      <button class="primary" id="loadBtn">Load Pairings</button>
+      <button class="secondary" id="sampleBtn">Load Sample Data</button>
+      <button class="secondary" id="clearTextBtn">Clear Text</button>
+      <button class="danger" id="clearAllBtn">Clear All Pairings</button>
+    </div>
+    <div class="parse-status" id="parseStatus"></div>
+    <div class="future-note">Image upload for Pro-Am pairings coming next.</div>
+  </div>
+
+  <div class="card" id="previewCard" style="display:none;">
+    <h2>Preview of loaded groups</h2>
+    <div class="preview" id="preview"></div>
+  </div>
+</main>
+</div>
+
+<script>
+  // ---- Access key gate (client-side only; obscurity-based) ----
+  // Change UPLOAD_KEY to rotate. The matching key must appear in the URL as ?key=...
+  // Bookmark: https://colonialvolunteers.golf/pairings/upload.html?key=YOUR-KEY
+  const UPLOAD_KEY = 'colonial26';
+  const _key = new URLSearchParams(window.location.search).get('key');
+  if (_key !== UPLOAD_KEY) {
+    document.getElementById('lockedScreen').style.display = '';
+    document.title = 'Not authorized';
+    throw new Error('upload page: missing or invalid key');
+  }
+  document.getElementById('adminApp').style.display = '';
+
+  // ---- Admin app ----
+  const STORAGE_KEY = 'pairingsTracker';
+
+  const SAMPLE_DATA = `Round
+4
+
+
+Time Zone
+CDT
+
+All Players
+Time
+Tee
+Players
+Status
+7:00 AM
+CDT
+1
+
+Dylan Wu
+USA
+Dylan Wu
+Rico Hoey
+PHI
+Rico Hoey
+Taylor Moore
+USA
+Taylor Moore
+Round Complete
+7:11 AM
+CDT
+1
+
+Erik van Rooyen
+RSA
+Erik van Rooyen
+Hayden Springer
+USA
+Hayden Springer
+Will Chandler
+USA
+Will Chandler
+Round Complete
+7:22 AM
+CDT
+1
+
+Austin Eckroat
+USA
+Austin Eckroat
+Ryan Gerard
+USA
+Ryan Gerard
+Ben Silverman
+CAN
+Ben Silverman
+Round Complete
+7:33 AM
+CDT
+1
+
+Sam Ryder
+USA
+Sam Ryder
+Max McGreevy
+USA
+Max McGreevy
+Frankie Capan III
+USA
+Frankie Capan III
+Round Complete
+7:44 AM
+CDT
+1
+
+Harris English
+USA
+Harris English
+Matt Kuchar
+USA
+Matt Kuchar
+Victor Perez
+FRA
+Victor Perez
+Round Complete
+
+7:55 AM
+CDT
+1
+
+Thorbjørn Olesen
+DEN
+Thorbjørn Olesen
+Henrik Norlander
+SWE
+Henrik Norlander
+Beau Hossler
+USA
+Beau Hossler
+Round Complete
+8:06 AM
+CDT
+1
+
+Brice Garnett
+USA
+Brice Garnett
+Camilo Villegas
+COL
+Camilo Villegas
+Lee Hodges
+USA
+Lee Hodges
+Round Complete
+8:17 AM
+CDT
+1
+
+Patrick Rodgers
+USA
+Patrick Rodgers
+Steven Fisk
+USA
+Steven Fisk
+Tom Kim
+KOR
+Tom Kim
+Round Complete
+8:33 AM
+CDT
+1
+
+Nico Echavarria
+COL
+Nico Echavarria
+Jesper Svensson
+SWE
+Jesper Svensson
+Jeremy Paul
+GER
+Jeremy Paul
+Round Complete
+8:44 AM
+CDT
+1
+
+Gary Woodland
+USA
+Gary Woodland
+Max Greyserman
+USA
+Max Greyserman
+Seamus Power
+IRL
+Seamus Power
+Round Complete
+8:55 AM
+CDT
+1
+
+Keith Mitchell
+USA
+Keith Mitchell
+Michael Kim
+USA
+Michael Kim
+Kevin Roy
+USA
+Kevin Roy
+Round Complete
+9:06 AM
+CDT
+1
+
+Harry Higgs
+USA
+Harry Higgs
+Mac Meissner
+USA
+Mac Meissner
+Sam Stevens
+USA
+Sam Stevens
+Round Complete
+9:17 AM
+CDT
+1
+
+Carson Young
+USA
+Carson Young
+Doug Ghim
+USA
+Doug Ghim
+Chris Gotterup
+USA
+Chris Gotterup
+Round Complete
+9:28 AM
+CDT
+1
+
+Adam Svensson
+CAN
+Adam Svensson
+Mark Hubbard
+USA
+Mark Hubbard
+Andrew Putnam
+USA
+Andrew Putnam
+Round Complete
+9:39 AM
+CDT
+1
+
+Webb Simpson
+USA
+Webb Simpson
+Vince Whaley
+USA
+Vince Whaley
+Peter Malnati
+USA
+Peter Malnati
+Round Complete
+9:55 AM
+CDT
+1
+
+J.T. Poston
+USA
+J.T. Poston
+Jordan Spieth
+USA
+Jordan Spieth
+Luke List
+USA
+Luke List
+Round Complete
+10:06 AM
+CDT
+1
+
+Matt Wallace
+ENG
+Matt Wallace
+Quade Cummins
+USA
+Quade Cummins
+Jackson Suber
+USA
+Jackson Suber
+Round Complete
+10:17 AM
+CDT
+1
+
+Brian Harman
+USA
+Brian Harman
+Christiaan Bezuidenhout
+RSA
+Christiaan Bezuidenhout
+Si Woo Kim
+KOR
+Si Woo Kim
+Round Complete
+10:28 AM
+CDT
+1
+
+Aldrich Potgieter
+RSA
+Aldrich Potgieter
+Pierceson Coody
+USA
+Pierceson Coody
+Harry Hall
+ENG
+Harry Hall
+Round Complete
+10:39 AM
+CDT
+1
+
+Ricky Castillo
+USA
+Ricky Castillo
+Hideki Matsuyama
+JPN
+Hideki Matsuyama
+Kris Ventura
+NOR
+Kris Ventura
+Round Complete
+10:50 AM
+CDT
+1
+
+Ryo Hisatsune
+JPN
+Ryo Hisatsune
+John Pak
+USA
+John Pak
+Eric Cole
+USA
+Eric Cole
+Round Complete
+11:06 AM
+CDT
+1
+
+J.J. Spaun
+USA
+J.J. Spaun
+Emiliano Grillo
+ARG
+Emiliano Grillo
+Tommy Fleetwood
+ENG
+Tommy Fleetwood
+Round Complete
+11:17 AM
+CDT
+1
+
+Lucas Glover
+USA
+Lucas Glover
+Karl Vilips
+AUS
+Karl Vilips
+Bud Cauley
+USA
+Bud Cauley
+Round Complete
+11:28 AM
+CDT
+1
+
+Scottie Scheffler
+USA
+Scottie Scheffler
+Andrew Novak
+USA
+Andrew Novak
+Kurt Kitayama
+USA
+Kurt Kitayama
+Round Complete
+11:39 AM
+CDT
+1
+
+Robert MacIntyre
+SCO
+Robert MacIntyre
+Nick Hardy
+USA
+Nick Hardy
+Akshay Bhatia
+USA
+Akshay Bhatia
+`;
+
+  const TIME_REGEX = /^(\d{1,2}):(\d{2})\s*(AM|PM)$/i;
+  const COUNTRY_REGEX = /^[A-Z]{3}$/;
+  const TIMEZONE_REGEX = /^(CDT|CST|EDT|EST|MDT|MST|PDT|PST|AKDT|AKST|HST|UTC|GMT|BST)$/i;
+
+  function escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));
+  }
+  function slugify(s) {
+    return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+  }
+
+  function parsePairings(text) {
+    const lines = text.split('\n').map(l => l.trim());
+    const markers = [];
+    for (let i = 0; i < lines.length; i++) {
+      if (TIME_REGEX.test(lines[i])) {
+        let teeNum = 1;
+        for (let j = i + 1; j < Math.min(i + 6, lines.length); j++) {
+          if (!lines[j]) continue;
+          if (TIMEZONE_REGEX.test(lines[j])) continue;
+          if (/^\d{1,2}$/.test(lines[j])) { teeNum = parseInt(lines[j], 10); break; }
+          break;
+        }
+        markers.push({ lineIdx: i, time: lines[i].toUpperCase().replace(/\s+/g, ' '), teeNum, players: [] });
+      }
+    }
+    for (let i = 1; i < lines.length - 1; i++) {
+      if (COUNTRY_REGEX.test(lines[i]) && !TIMEZONE_REGEX.test(lines[i])) {
+        const above = lines[i - 1], below = lines[i + 1];
+        if (above && below && above === below && !TIME_REGEX.test(above)) {
+          let marker = null;
+          for (const m of markers) { if (m.lineIdx < i) marker = m; else break; }
+          if (marker && marker.players.length < 5 && !marker.players.includes(above)) {
+            marker.players.push(above);
+          }
+        }
+      }
+    }
+    return markers.filter(m => m.players.length > 0).map(m => ({
+      id: `${m.time.replace(/\s+/g,'')}_${m.teeNum}_${slugify(m.players[0])}`,
+      teeTime: m.time,
+      teeNum: m.teeNum,
+      players: m.players
+    }));
+  }
+
+  function loadStorage() {
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if (!raw) return null;
+      return JSON.parse(raw);
+    } catch(e) { return null; }
+  }
+  function saveStorage(data) {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+  }
+
+  const els = {
+    pasteArea: document.getElementById('pasteArea'),
+    loadBtn: document.getElementById('loadBtn'),
+    sampleBtn: document.getElementById('sampleBtn'),
+    clearTextBtn: document.getElementById('clearTextBtn'),
+    clearAllBtn: document.getElementById('clearAllBtn'),
+    parseStatus: document.getElementById('parseStatus'),
+    currentStatus: document.getElementById('currentStatus'),
+    previewCard: document.getElementById('previewCard'),
+    preview: document.getElementById('preview')
+  };
+
+  function humanizeTime(iso) {
+    if (!iso) return '';
+    const d = new Date(iso);
+    if (isNaN(d.getTime())) return '';
+    const now = new Date();
+    const sameDay = d.toDateString() === now.toDateString();
+    let h = d.getHours() % 12; if (h === 0) h = 12;
+    const ampm = d.getHours() >= 12 ? 'PM' : 'AM';
+    const time = `${h}:${String(d.getMinutes()).padStart(2,'0')} ${ampm}`;
+    if (sameDay) return `today at ${time}`;
+    const month = d.toLocaleString(undefined, { month: 'short' });
+    return `${month} ${d.getDate()} at ${time}`;
+  }
+
+  function setParseStatus(msg, kind) {
+    els.parseStatus.textContent = msg;
+    els.parseStatus.className = 'parse-status' + (kind ? ' ' + kind : '');
+  }
+
+  function renderCurrentStatus() {
+    const data = loadStorage();
+    if (!data || !Array.isArray(data.groups) || data.groups.length === 0) {
+      els.currentStatus.className = 'status empty';
+      els.currentStatus.innerHTML = '<strong>No pairings loaded.</strong><br>The volunteer tracker shows an empty state until you load pairings below.';
+      els.previewCard.style.display = 'none';
+      return;
+    }
+    const totalPlayers = data.groups.reduce((s, g) => s + g.players.length, 0);
+    const checkedCount = Array.isArray(data.checked) ? data.checked.length : 0;
+    const when = humanizeTime(data.loadedAt);
+    els.currentStatus.className = 'status loaded';
+    els.currentStatus.innerHTML = `<strong>${data.groups.length} groups, ${totalPlayers} players loaded${when ? ' ' + when : ''}.</strong>` +
+      (checkedCount ? `<br>${checkedCount} marked passed.` : '');
+    renderPreview(data.groups);
+  }
+
+  function renderPreview(groups) {
+    els.previewCard.style.display = '';
+    els.preview.innerHTML = groups.map(g =>
+      `<div class="preview-row"><span class="preview-time">${escapeHtml(g.teeTime)} · T${g.teeNum}</span> &nbsp; ${escapeHtml(g.players.join(', '))}</div>`
+    ).join('');
+  }
+
+  function loadFromText(text) {
+    const groups = parsePairings(text);
+    if (!groups.length) {
+      setParseStatus('Could not parse any groups. Check that you pasted the tee times block.', 'error');
+      return;
+    }
+    const totalPlayers = groups.reduce((s, g) => s + g.players.length, 0);
+    const data = {
+      rawText: text,
+      groups,
+      loadedAt: new Date().toISOString(),
+      checked: []
+    };
+    saveStorage(data);
+    setParseStatus(`Loaded ${groups.length} groups (${totalPlayers} players). Volunteer tracker updated.`, 'success');
+    renderCurrentStatus();
+  }
+
+  els.loadBtn.addEventListener('click', () => {
+    const text = els.pasteArea.value.trim();
+    if (!text) { setParseStatus('Paste pairings text first.', 'error'); return; }
+    loadFromText(text);
+  });
+  els.sampleBtn.addEventListener('click', () => {
+    els.pasteArea.value = SAMPLE_DATA;
+    loadFromText(SAMPLE_DATA);
+  });
+  els.clearTextBtn.addEventListener('click', () => {
+    els.pasteArea.value = '';
+    setParseStatus('');
+  });
+  els.clearAllBtn.addEventListener('click', () => {
+    if (!confirm('Clear all loaded pairings AND any tracking progress? Volunteer tracker will show empty state.')) return;
+    localStorage.removeItem(STORAGE_KEY);
+    setParseStatus('Cleared.', 'success');
+    renderCurrentStatus();
+  });
+
+  document.getElementById('todayDate').textContent =
+    new Date().toLocaleDateString(undefined, { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
+
+  renderCurrentStatus();
+</script>
+</body>
+</html>

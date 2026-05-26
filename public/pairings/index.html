@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Pairings Tracker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #f5f5f5;
+    color: #333;
+    -webkit-text-size-adjust: 100%;
+  }
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: linear-gradient(135deg, #1a472a, #2d5a3f);
+    color: white;
+    padding: 14px 16px 16px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  }
+  .today-date {
+    font-size: 14px;
+    font-weight: 600;
+    opacity: 0.92;
+    letter-spacing: 0.02em;
+    margin-bottom: 6px;
+  }
+  .head-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  header h1 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+  .updated {
+    font-size: 12px;
+    opacity: 0.85;
+    font-weight: 500;
+  }
+  .counter {
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .stale-warning {
+    background: #fff3e0;
+    color: #8a4b00;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-weight: 600;
+    margin: 12px 14px 0;
+    font-size: 14px;
+    border: 1px solid #ffe0b2;
+    max-width: 720px;
+  }
+  @media (min-width: 752px) { .stale-warning { margin-left: auto; margin-right: auto; } }
+  main {
+    padding: 14px 14px 80px;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .empty {
+    background: white;
+    border-radius: 12px;
+    padding: 36px 20px;
+    text-align: center;
+    color: #666;
+    border: 1px dashed #ddd;
+  }
+  .group {
+    background: white;
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin-bottom: 10px;
+    border-left: 5px solid transparent;
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .group:active { background: #f0f0f0; }
+  .group.checked {
+    background: #e8f5e9;
+    border-left-color: #4caf50;
+  }
+  .group.checked .player-name {
+    text-decoration: line-through;
+    color: #666;
+  }
+  .group.checked .groupmates { opacity: 0.55; }
+  .group-top {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 4px;
+    flex-wrap: wrap;
+  }
+  .player-name {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a472a;
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+  .group.checked .player-name { color: #4caf50; }
+  .tee-badge {
+    background: #1a472a;
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 6px;
+    letter-spacing: 0.05em;
+  }
+  .group.checked .tee-badge { background: #4caf50; }
+  .meta {
+    font-size: 13px;
+    color: #555;
+    font-weight: 500;
+    margin-top: 2px;
+  }
+  .groupmates {
+    font-size: 13px;
+    color: #777;
+    margin-top: 4px;
+    font-style: italic;
+  }
+  @media (min-width: 600px) {
+    header h1 { font-size: 26px; }
+    .player-name { font-size: 22px; }
+    .meta, .groupmates { font-size: 14px; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="today-date" id="todayDate"></div>
+  <div class="head-row">
+    <h1>Pairings Tracker</h1>
+    <span class="updated" id="updated"></span>
+  </div>
+  <div class="counter" id="counter">No pairings loaded</div>
+</header>
+<div id="staleWarning"></div>
+<main>
+  <div id="groupList"></div>
+</main>
+
+<script>
+  const STORAGE_KEY = 'pairingsTracker';
+
+  function escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));
+  }
+  function parseTimeToMinutes(t) {
+    const m = t.match(/^(\d{1,2}):(\d{2})\s*(AM|PM)$/i);
+    if (!m) return 0;
+    let h = parseInt(m[1], 10);
+    const min = parseInt(m[2], 10);
+    const pm = m[3].toUpperCase() === 'PM';
+    if (pm && h !== 12) h += 12;
+    if (!pm && h === 12) h = 0;
+    return h * 60 + min;
+  }
+  function slugify(s) {
+    return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+  }
+
+  function loadStorage() {
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if (!raw) return { groups: [], checked: [], loadedAt: null };
+      const parsed = JSON.parse(raw);
+      return {
+        groups: Array.isArray(parsed.groups) ? parsed.groups : [],
+        checked: Array.isArray(parsed.checked) ? parsed.checked : [],
+        loadedAt: parsed.loadedAt || null
+      };
+    } catch (e) {
+      return { groups: [], checked: [], loadedAt: null };
+    }
+  }
+  function saveChecked(checked) {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    let data;
+    try { data = raw ? JSON.parse(raw) : {}; } catch(e) { data = {}; }
+    data.checked = checked;
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+  }
+
+  function humanizeTime(iso) {
+    if (!iso) return '';
+    const d = new Date(iso);
+    if (isNaN(d.getTime())) return '';
+    const now = new Date();
+    const sameDay = d.toDateString() === now.toDateString();
+    let h = d.getHours() % 12; if (h === 0) h = 12;
+    const ampm = d.getHours() >= 12 ? 'PM' : 'AM';
+    const time = `${h}:${String(d.getMinutes()).padStart(2,'0')} ${ampm}`;
+    if (sameDay) return `Updated ${time}`;
+    const month = d.toLocaleString(undefined, { month: 'short' });
+    return `Updated ${month} ${d.getDate()} ${time}`;
+  }
+  function formatToday() {
+    return new Date().toLocaleDateString(undefined, { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
+  }
+  function isStaleLoad(iso) {
+    if (!iso) return false;
+    const d = new Date(iso);
+    if (isNaN(d.getTime())) return false;
+    return d.toDateString() !== new Date().toDateString();
+  }
+
+  const state = { groups: [], checked: new Set(), loadedAt: null };
+  const els = {
+    counter: document.getElementById('counter'),
+    updated: document.getElementById('updated'),
+    groupList: document.getElementById('groupList'),
+    todayDate: document.getElementById('todayDate'),
+    staleWarning: document.getElementById('staleWarning')
+  };
+
+  function hydrate() {
+    const s = loadStorage();
+    state.groups = s.groups;
+    state.checked = new Set(s.checked);
+    state.loadedAt = s.loadedAt;
+  }
+
+  function render() {
+    els.todayDate.textContent = formatToday();
+    els.updated.textContent = humanizeTime(state.loadedAt);
+    els.staleWarning.innerHTML = (state.groups.length && isStaleLoad(state.loadedAt))
+      ? '<div class="stale-warning">⚠ These pairings were loaded before today. Check back soon for an update.</div>'
+      : '';
+    els.groupList.innerHTML = '';
+    if (!state.groups.length) {
+      const empty = document.createElement('div');
+      empty.className = 'empty';
+      empty.innerHTML = 'No pairings loaded yet.<br><br>Today\'s pairings will appear here once they\'re posted.';
+      els.groupList.appendChild(empty);
+      els.counter.textContent = 'No pairings loaded';
+      return;
+    }
+    const rows = [];
+    state.groups.forEach(g => {
+      g.players.forEach((player, idx) => {
+        const playerId = `${g.teeTime.replace(/\s+/g,'')}_${g.teeNum}_${slugify(player)}`;
+        rows.push({
+          id: playerId,
+          player,
+          teeTime: g.teeTime,
+          teeNum: g.teeNum,
+          teeMin: parseTimeToMinutes(g.teeTime),
+          groupmates: g.players.filter((_, i) => i !== idx),
+          checked: state.checked.has(playerId)
+        });
+      });
+    });
+    rows.sort((a, b) => {
+      if (a.checked !== b.checked) return a.checked ? 1 : -1;
+      if (a.teeMin !== b.teeMin) return a.teeMin - b.teeMin;
+      return a.player.localeCompare(b.player);
+    });
+    rows.forEach(r => {
+      const div = document.createElement('div');
+      div.className = 'group' + (r.checked ? ' checked' : '');
+      div.dataset.id = r.id;
+      const groupmatesHtml = r.groupmates.length
+        ? `<div class="groupmates">with ${r.groupmates.map(escapeHtml).join(', ')}</div>`
+        : '';
+      div.innerHTML = `
+        <div class="group-top">
+          <span class="player-name">${escapeHtml(r.player)}</span>
+          <span class="tee-badge">T${r.teeNum}</span>
+        </div>
+        <div class="meta">Tee time ${r.teeTime}</div>
+        ${groupmatesHtml}
+      `;
+      div.addEventListener('click', () => toggleChecked(r.id));
+      els.groupList.appendChild(div);
+    });
+    const checkedCount = rows.filter(r => r.checked).length;
+    els.counter.textContent = `${checkedCount} of ${rows.length} players passed`;
+  }
+
+  function toggleChecked(id) {
+    if (state.checked.has(id)) state.checked.delete(id);
+    else state.checked.add(id);
+    saveChecked([...state.checked]);
+    render();
+  }
+
+  window.addEventListener('storage', e => {
+    if (e.key === STORAGE_KEY) { hydrate(); render(); }
+  });
+  window.addEventListener('focus', () => { hydrate(); render(); });
+
+  hydrate();
+  render();
+</script>
+</body>
+</html>
