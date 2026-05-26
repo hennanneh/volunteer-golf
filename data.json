@@ -11878,16 +11878,6 @@
       "isAlternate": false
     },
     {
-      "volunteerId": "10451",
-      "volunteerName": "Miller, David",
-      "hole": 3,
-      "day": "Tuesday",
-      "shift": "PM",
-      "checkedInBy": "Wilson, Todd",
-      "timestamp": "2026-05-26T17:38:39.765Z",
-      "isAlternate": true
-    },
-    {
       "volunteerId": "9015",
       "volunteerName": "Aguilar, Jorge",
       "hole": 2,
@@ -12024,6 +12014,33 @@
     "pairingsText": "Pairings Sheet (demo data)"
   },
   "activityLog": [
+    {
+      "id": "1779818368263",
+      "timestamp": "2026-05-26T17:59:28.263Z",
+      "user": "Wilson, Todd",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 3",
+      "details": "Submitted Tuesday PM for Hole 3"
+    },
+    {
+      "id": "1779818355653",
+      "timestamp": "2026-05-26T17:59:15.653Z",
+      "user": "Wilson, Todd",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 3",
+      "details": "Submitted Tuesday PM for Hole 3"
+    },
+    {
+      "id": "1779818330213",
+      "timestamp": "2026-05-26T17:58:50.213Z",
+      "user": "Diaz, Rickey",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
     {
       "id": "1779817600801",
       "timestamp": "2026-05-26T17:46:40.801Z",
