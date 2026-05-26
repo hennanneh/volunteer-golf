@@ -11776,6 +11776,26 @@
       "checkedInBy": "Imboden, Thomas",
       "timestamp": "2026-05-26T17:12:08.511Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "8152",
+      "volunteerName": "Citty, Derek",
+      "hole": 9,
+      "day": "Tuesday",
+      "shift": "AM",
+      "checkedInBy": "Burnett, Eric",
+      "timestamp": "2026-05-26T17:26:51.630Z",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "2393",
+      "volunteerName": "Burkhead, Max",
+      "hole": 7,
+      "day": "Tuesday",
+      "shift": "AM",
+      "checkedInBy": "Quintana, Mike",
+      "timestamp": "2026-05-26T17:29:12.435Z",
+      "isAlternate": true
     }
   ],
   "submissions": [],
@@ -11794,6 +11814,42 @@
     "pairingsText": "Pairings Sheet (demo data)"
   },
   "activityLog": [
+    {
+      "id": "1779816557534",
+      "timestamp": "2026-05-26T17:29:17.534Z",
+      "user": "Quintana, Mike",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 7",
+      "details": "Submitted Tuesday AM for Hole 7"
+    },
+    {
+      "id": "1779816552414",
+      "timestamp": "2026-05-26T17:29:12.414Z",
+      "user": "Quintana, Mike",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Burkhead, Max",
+      "details": "Tuesday AM - Hole #7 (alternate)"
+    },
+    {
+      "id": "1779816411732",
+      "timestamp": "2026-05-26T17:26:51.732Z",
+      "user": "Burnett, Eric",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Citty, Derek",
+      "details": "Tuesday AM - Hole #9 (alternate)"
+    },
+    {
+      "id": "1779816337639",
+      "timestamp": "2026-05-26T17:25:37.639Z",
+      "user": "Burnett, Eric",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779815530727",
       "timestamp": "2026-05-26T17:12:10.727Z",
