@@ -12158,6 +12158,24 @@
   },
   "activityLog": [
     {
+      "id": "1779839585037",
+      "timestamp": "2026-05-26T23:53:05.037Z",
+      "user": "Holt, Sharron",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1779839581195",
+      "timestamp": "2026-05-26T23:53:01.195Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
       "id": "1779838830428",
       "timestamp": "2026-05-26T23:40:30.428Z",
       "user": "Wehmeyer, Tom",
