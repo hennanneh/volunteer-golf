@@ -9116,26 +9116,6 @@
   ],
   "checkIns": [
     {
-      "volunteerId": "9834",
-      "volunteerName": "Piper, Kathleen",
-      "hole": 6,
-      "day": "Thursday",
-      "shift": "PM",
-      "checkedInBy": "Mcdaniel, Patrick",
-      "timestamp": "2026-05-19T13:14:12.694Z",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "9833",
-      "volunteerName": "Piper, Monte",
-      "hole": 6,
-      "day": "Thursday",
-      "shift": "PM",
-      "checkedInBy": "Mcdaniel, Patrick",
-      "timestamp": "2026-05-19T13:15:39.953Z",
-      "isAlternate": false
-    },
-    {
       "volunteerId": "3974",
       "volunteerName": "Schafer, John",
       "hole": 4,
@@ -9933,16 +9913,6 @@
       "shift": "AM",
       "checkedInBy": "Mulvaney, Matt",
       "timestamp": "2026-05-25T15:04:44.631Z",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "3974",
-      "volunteerName": "Schafer, John",
-      "hole": 4,
-      "day": "Friday",
-      "shift": "AM",
-      "checkedInBy": "Nederostek, Brad",
-      "timestamp": "2026-05-25T15:08:16.274Z",
       "isAlternate": false
     },
     {
@@ -11292,6 +11262,60 @@
     "pairingsText": "Pairings Sheet (demo data)"
   },
   "activityLog": [
+    {
+      "id": "1779802494524",
+      "timestamp": "2026-05-26T13:34:54.524Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779802396328",
+      "timestamp": "2026-05-26T13:33:16.328Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Piper, Monte",
+      "details": "Thursday PM - Hole #6 (alternate)"
+    },
+    {
+      "id": "1779802395538",
+      "timestamp": "2026-05-26T13:33:15.538Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Piper, Kathleen",
+      "details": "Thursday PM - Hole #6 (alternate)"
+    },
+    {
+      "id": "1779802380616",
+      "timestamp": "2026-05-26T13:33:00.616Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Schafer, John",
+      "details": "Friday AM - Hole #4"
+    },
+    {
+      "id": "1779802329360",
+      "timestamp": "2026-05-26T13:32:09.360Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1779802307205",
+      "timestamp": "2026-05-26T13:31:47.205Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779802156295",
       "timestamp": "2026-05-26T13:29:16.295Z",
@@ -23215,5 +23239,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779802137594
+  "serverNow": 1779802329992
 }
