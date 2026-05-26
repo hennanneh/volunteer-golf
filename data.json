@@ -10680,6 +10680,15 @@
   },
   "activityLog": [
     {
+      "id": "1779792917536",
+      "timestamp": "2026-05-26T10:55:17.536Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1779792661041",
       "timestamp": "2026-05-26T10:51:01.041Z",
       "user": "Wilson, Todd",
