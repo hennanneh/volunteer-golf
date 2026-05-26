@@ -11263,6 +11263,33 @@
   },
   "activityLog": [
     {
+      "id": "1779802777930",
+      "timestamp": "2026-05-26T13:39:37.930Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Kalbfleisch, Joe",
+      "details": "Tuesday PM - Hole #20"
+    },
+    {
+      "id": "1779802775674",
+      "timestamp": "2026-05-26T13:39:35.674Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Kalbfleisch, Joe",
+      "details": "Tuesday PM - Hole #20"
+    },
+    {
+      "id": "1779802730216",
+      "timestamp": "2026-05-26T13:38:50.216Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1779802494524",
       "timestamp": "2026-05-26T13:34:54.524Z",
       "user": "Mcdaniel, Patrick",
