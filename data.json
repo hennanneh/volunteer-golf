@@ -12018,6 +12018,36 @@
       "checkedInBy": "Roy, Mike",
       "timestamp": "2026-05-26T18:02:26.176Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "3777",
+      "volunteerName": "Hicks, Greg",
+      "hole": 17,
+      "day": "Tuesday",
+      "shift": "PM",
+      "checkedInBy": "Browning, Wayne",
+      "timestamp": "2026-05-26T18:24:47.562Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6191",
+      "volunteerName": "Browning, Wayne",
+      "hole": 17,
+      "day": "Tuesday",
+      "shift": "PM",
+      "checkedInBy": "Browning, Wayne",
+      "timestamp": "2026-05-26T18:24:55.841Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "3138",
+      "volunteerName": "Bishop, Woody",
+      "hole": 17,
+      "day": "Tuesday",
+      "shift": "PM",
+      "checkedInBy": "Browning, Wayne",
+      "timestamp": "2026-05-26T18:24:56.938Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -12036,6 +12066,33 @@
     "pairingsText": "Pairings Sheet (demo data)"
   },
   "activityLog": [
+    {
+      "id": "1779819897028",
+      "timestamp": "2026-05-26T18:24:57.028Z",
+      "user": "Browning, Wayne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Bishop, Woody",
+      "details": "Tuesday PM - Hole #17"
+    },
+    {
+      "id": "1779819895921",
+      "timestamp": "2026-05-26T18:24:55.921Z",
+      "user": "Browning, Wayne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Browning, Wayne",
+      "details": "Tuesday PM - Hole #17"
+    },
+    {
+      "id": "1779819682388",
+      "timestamp": "2026-05-26T18:21:22.388Z",
+      "user": "Montalvo, Sammy",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779819580570-zsep3w",
       "timestamp": "2026-05-26T18:19:40.570Z",
