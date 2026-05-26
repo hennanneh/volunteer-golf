@@ -11555,6 +11555,16 @@
       "checkedInBy": "Sale, Lynn",
       "timestamp": "2026-05-26T15:02:07.241Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "333",
+      "volunteerName": "Crow, Hampton",
+      "hole": 16,
+      "day": "Tuesday",
+      "shift": "PM",
+      "checkedInBy": "Roy, Mike",
+      "timestamp": "2026-05-26T15:33:04.482Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -11573,6 +11583,69 @@
     "pairingsText": "Pairings Sheet (demo data)"
   },
   "activityLog": [
+    {
+      "id": "1779809619138",
+      "timestamp": "2026-05-26T15:33:39.138Z",
+      "user": "Hill, Michael",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779809589343",
+      "timestamp": "2026-05-26T15:33:09.343Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 16",
+      "details": "Submitted Tuesday PM for Hole 16"
+    },
+    {
+      "id": "1779809584540",
+      "timestamp": "2026-05-26T15:33:04.540Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Crow, Hampton",
+      "details": "Tuesday PM - Hole #16"
+    },
+    {
+      "id": "1779809581332",
+      "timestamp": "2026-05-26T15:33:01.332Z",
+      "user": "Hill, Michael",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779809563100",
+      "timestamp": "2026-05-26T15:32:43.100Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779809559597",
+      "timestamp": "2026-05-26T15:32:39.597Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1779809525525",
+      "timestamp": "2026-05-26T15:32:05.525Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
     {
       "id": "1779808446409",
       "timestamp": "2026-05-26T15:14:06.409Z",
@@ -24198,5 +24271,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779807516066
+  "serverNow": 1779809589879
 }
