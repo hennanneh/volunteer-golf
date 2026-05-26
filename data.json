@@ -10662,6 +10662,36 @@
       "checkedInBy": "Trout, Wayne",
       "timestamp": "2026-05-25T23:44:37.718Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "9365",
+      "volunteerName": "Pugh, Clayton",
+      "hole": 12,
+      "day": "Tuesday",
+      "shift": "AM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-26T11:23:11.507Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "342",
+      "volunteerName": "Mckenzie, Roy",
+      "hole": 12,
+      "day": "Tuesday",
+      "shift": "AM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-26T11:23:12.471Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9019",
+      "volunteerName": "Barron, Jamey",
+      "hole": 13,
+      "day": "Tuesday",
+      "shift": "AM",
+      "checkedInBy": "Clayton, Rodney",
+      "timestamp": "2026-05-26T11:23:39.873Z",
+      "isAlternate": true
     }
   ],
   "submissions": [],
@@ -10679,6 +10709,69 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779794639515",
+      "timestamp": "2026-05-26T11:23:59.515Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Borgschatz, Keith",
+      "details": "Tuesday AM - Hole #12 (alternate)"
+    },
+    {
+      "id": "1779794637371",
+      "timestamp": "2026-05-26T11:23:57.371Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Borgschatz, Keith",
+      "details": "Tuesday AM - Hole #12 (alternate)"
+    },
+    {
+      "id": "1779794619911",
+      "timestamp": "2026-05-26T11:23:39.911Z",
+      "user": "Clayton, Rodney",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Barron, Jamey",
+      "details": "Tuesday AM - Hole #13 (alternate)"
+    },
+    {
+      "id": "1779794592049",
+      "timestamp": "2026-05-26T11:23:12.049Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Mckenzie, Roy",
+      "details": "Tuesday AM - Hole #12"
+    },
+    {
+      "id": "1779794591084",
+      "timestamp": "2026-05-26T11:23:11.084Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Pugh, Clayton",
+      "details": "Tuesday AM - Hole #12"
+    },
+    {
+      "id": "1779794588171",
+      "timestamp": "2026-05-26T11:23:08.171Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779794423553",
+      "timestamp": "2026-05-26T11:20:23.553Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
     {
       "id": "1779794355108",
       "timestamp": "2026-05-26T11:19:15.108Z",
@@ -21401,5 +21494,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779739677972
+  "serverNow": 1779794621187
 }
