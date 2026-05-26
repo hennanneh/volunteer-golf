@@ -10792,6 +10792,24 @@
   },
   "activityLog": [
     {
+      "id": "1779796304739",
+      "timestamp": "2026-05-26T11:51:44.739Z",
+      "user": "Harrell, Michael",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1779796214994",
+      "timestamp": "2026-05-26T11:50:14.994Z",
+      "user": "Harrell, Michael",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
       "id": "1779795914289",
       "timestamp": "2026-05-26T11:45:14.289Z",
       "user": "Schafer, John",
