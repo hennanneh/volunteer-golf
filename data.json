@@ -709,7 +709,6 @@
       "yearsWorked": 5,
       "hat": "",
       "scheduled": {
-        "Monday PM": true,
         "Tuesday PM": true,
         "Wednesday PM": true,
         "Thursday AM": true,
@@ -720,7 +719,7 @@
       "address": "1109 Byron Lane Arlington, TX 76012-1829",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779380893049
+      "lastModified": 1779758735544
     },
     {
       "id": "3034",
@@ -10679,6 +10678,15 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779758735545-0ovyb2",
+      "timestamp": "2026-05-26T01:25:35.545Z",
+      "user": "Waller, Gary",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Burkhead, Max",
+      "details": "removed Monday PM"
+    },
     {
       "id": "1779757333500",
       "timestamp": "2026-05-26T01:02:13.500Z",
