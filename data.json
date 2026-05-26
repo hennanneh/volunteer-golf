@@ -441,6 +441,7 @@
         "Tuesday PM": true,
         "Thursday PM": true,
         "Friday AM": true,
+        "Friday PM": true,
         "Saturday PM": true,
         "Sunday AM": true
       },
@@ -448,8 +449,9 @@
       "address": "9716 Wild Prairie Way Crowley, TX 76036",
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
-      "lastModified": 1778813044771,
-      "volunteerPassword": "$2b$10$wq0uX0L9d0zbH/1BFvTscu3Xm5j2XEFa2uaC3RQGJ.T2kok6288Xm"
+      "lastModified": 1779819580570,
+      "volunteerPassword": "$2b$10$wq0uX0L9d0zbH/1BFvTscu3Xm5j2XEFa2uaC3RQGJ.T2kok6288Xm",
+      "notes": "Will be working a double shift on Friday for 1 day pass."
     },
     {
       "id": "3138",
@@ -12034,6 +12036,15 @@
     "pairingsText": "Pairings Sheet (demo data)"
   },
   "activityLog": [
+    {
+      "id": "1779819580570-zsep3w",
+      "timestamp": "2026-05-26T18:19:40.570Z",
+      "user": "Wehmeyer, Tom",
+      "userType": "Captain",
+      "action": "edit-volunteer",
+      "target": "Bird, Bob",
+      "details": "Updated fields: scheduled, notes"
+    },
     {
       "id": "1779818571064",
       "timestamp": "2026-05-26T18:02:51.064Z",
