@@ -6025,7 +6025,6 @@
       "hat": "",
       "scheduled": {
         "Monday AM": true,
-        "Monday PM": true,
         "Tuesday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
@@ -6037,7 +6036,7 @@
       "address": "6705 Lucas Ln North Richland Hills, TX 76182",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779796769328,
+      "lastModified": 1779796856367,
       "notes": "",
       "hatReceived": false
     },
@@ -10775,6 +10774,16 @@
       "checkedInBy": "Schafer, John",
       "timestamp": "2026-05-26T11:45:14.244Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "6829",
+      "volunteerName": "Russell, Mary",
+      "hole": 1,
+      "day": "Tuesday",
+      "shift": "AM",
+      "checkedInBy": "Ruddell, Dick",
+      "timestamp": "2026-05-26T12:01:22.549Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -10792,6 +10801,33 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779796888793",
+      "timestamp": "2026-05-26T12:01:28.793Z",
+      "user": "Ruddell, Dick",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 1",
+      "details": "Submitted Tuesday AM for Hole 1"
+    },
+    {
+      "id": "1779796882864",
+      "timestamp": "2026-05-26T12:01:22.864Z",
+      "user": "Ruddell, Dick",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Russell, Mary",
+      "details": "Tuesday AM - Hole #1"
+    },
+    {
+      "id": "1779796856367-qn8fkq",
+      "timestamp": "2026-05-26T12:00:56.367Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Oakley, Jeff",
+      "details": "removed Monday PM"
+    },
     {
       "id": "1779796769328-sw35fn",
       "timestamp": "2026-05-26T11:59:29.328Z",
