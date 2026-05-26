@@ -10897,6 +10897,26 @@
       "checkedInBy": "Trout, Wayne",
       "timestamp": "2026-05-26T12:15:10.543Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "10547",
+      "volunteerName": "Surita, Rene",
+      "hole": 1,
+      "day": "Tuesday",
+      "shift": "AM",
+      "checkedInBy": "Ruddell, Dick",
+      "timestamp": "2026-05-26T12:23:28.597Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10213",
+      "volunteerName": "Hurr, Randy",
+      "hole": 1,
+      "day": "Tuesday",
+      "shift": "AM",
+      "checkedInBy": "Ruddell, Dick",
+      "timestamp": "2026-05-26T12:23:55.685Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -10914,6 +10934,42 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779798238873",
+      "timestamp": "2026-05-26T12:23:58.873Z",
+      "user": "Ruddell, Dick",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 1",
+      "details": "Submitted Tuesday AM for Hole 1"
+    },
+    {
+      "id": "1779798236016",
+      "timestamp": "2026-05-26T12:23:56.016Z",
+      "user": "Ruddell, Dick",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Hurr, Randy",
+      "details": "Tuesday AM - Hole #1"
+    },
+    {
+      "id": "1779798212114",
+      "timestamp": "2026-05-26T12:23:32.115Z",
+      "user": "Ruddell, Dick",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 1",
+      "details": "Submitted Tuesday AM for Hole 1"
+    },
+    {
+      "id": "1779798208923",
+      "timestamp": "2026-05-26T12:23:28.924Z",
+      "user": "Ruddell, Dick",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Surita, Rene",
+      "details": "Tuesday AM - Hole #1"
+    },
     {
       "id": "1779797909090",
       "timestamp": "2026-05-26T12:18:29.090Z",
