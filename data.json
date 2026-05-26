@@ -5227,7 +5227,7 @@
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
       "lastModified": 1778813044771,
-      "volunteerPassword": "$2b$10$KnchLojoAQBOoMNc4/64S.5FYHUQo5eTWnP/SIAk.r5z2pOydxh6S"
+      "volunteerPassword": "$2b$10$66tayOAL8/0KdeXcHvPYY.TIkDR3tivvT9zIAvh8sZi9dcqPnWvam"
     },
     {
       "id": "10271",
@@ -12163,6 +12163,24 @@
     "pairingsText": "Pairings Sheet (demo data)"
   },
   "activityLog": [
+    {
+      "id": "1779836658170",
+      "timestamp": "2026-05-26T23:04:18.170Z",
+      "user": "Browning, Wayne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779836407086",
+      "timestamp": "2026-05-26T23:00:07.086Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779836160201",
       "timestamp": "2026-05-26T22:56:00.201Z",
