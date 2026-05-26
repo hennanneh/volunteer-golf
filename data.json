@@ -496,6 +496,7 @@
         "Monday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
+        "Friday PM": true,
         "Saturday PM": true,
         "Sunday AM": true
       },
@@ -503,7 +504,7 @@
       "address": "904 Chapel Drive Denton, TX 76205",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779762689671
     },
     {
       "id": "10012",
@@ -10678,6 +10679,15 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779762689671-y0dz7n",
+      "timestamp": "2026-05-26T02:31:29.671Z",
+      "user": "Montalvo, Sammy",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Blankenship, Mitch",
+      "details": "added Friday PM"
+    },
     {
       "id": "1779762381840",
       "timestamp": "2026-05-26T02:26:21.840Z",
