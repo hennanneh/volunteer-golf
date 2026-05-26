@@ -12067,6 +12067,51 @@
   },
   "activityLog": [
     {
+      "id": "1779820114189",
+      "timestamp": "2026-05-26T18:28:34.189Z",
+      "user": "Thomas, Stephen",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1779820109086",
+      "timestamp": "2026-05-26T18:28:29.087Z",
+      "user": "Thomas, Stephen",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1779820098662",
+      "timestamp": "2026-05-26T18:28:18.662Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779819999515",
+      "timestamp": "2026-05-26T18:26:39.516Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779819903941",
+      "timestamp": "2026-05-26T18:25:03.941Z",
+      "user": "Browning, Wayne",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 17",
+      "details": "Submitted Tuesday PM for Hole 17"
+    },
+    {
       "id": "1779819897028",
       "timestamp": "2026-05-26T18:24:57.028Z",
       "user": "Browning, Wayne",
