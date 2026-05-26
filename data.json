@@ -11184,6 +11184,16 @@
       "checkedInBy": "Pugh, Clayton",
       "timestamp": "2026-05-26T12:56:57.242Z",
       "isAlternate": true
+    },
+    {
+      "volunteerId": "8013",
+      "volunteerName": "Naukam, Philip",
+      "hole": 12,
+      "day": "Tuesday",
+      "shift": "AM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-26T13:01:33.174Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -11202,6 +11212,15 @@
     "pairingsText": "Pairings Sheet (demo data)"
   },
   "activityLog": [
+    {
+      "id": "1779800492749",
+      "timestamp": "2026-05-26T13:01:32.749Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Naukam, Philip",
+      "details": "Tuesday AM - Hole #12"
+    },
     {
       "id": "1779800256683-yg7k6d",
       "timestamp": "2026-05-26T12:57:36.683Z",
