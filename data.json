@@ -1737,7 +1737,7 @@
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
       "lastModified": 1778813044771,
-      "volunteerPassword": "$2b$10$fBsNnfW5vNs49gNnqE/p3OrnQYoult.Cg4lKSb2AUtxSxSnHBznPi"
+      "volunteerPassword": "$2b$10$ySUA68yoI3mSz0z3859Rqe7aBjIMIvUkOCph2d7uBgI3j7XshfsUq"
     },
     {
       "id": "9969",
@@ -7460,6 +7460,7 @@
       "scheduled": {
         "Tuesday AM": true,
         "Wednesday PM": true,
+        "Thursday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
         "Sunday PM": true
@@ -7468,8 +7469,8 @@
       "address": "9204 King Air Drive Granbury, TX 76049",
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
-      "notes": "Cannot work Thursday.",
-      "lastModified": 1778813044771,
+      "notes": "",
+      "lastModified": 1779807130813,
       "volunteerPassword": "$2b$10$w1xd2loPnmEAFEv73loWHOgwqo9FCv/3MAC8k087QbxOAVXifBjKa"
     },
     {
@@ -11514,6 +11515,16 @@
       "checkedInBy": "Gradt, Jason",
       "timestamp": "2026-05-26T14:48:04.917Z",
       "isAlternate": true
+    },
+    {
+      "volunteerId": "7363",
+      "volunteerName": "Roberson, Chris",
+      "hole": 10,
+      "day": "Tuesday",
+      "shift": "AM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-26T14:55:00.055Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -11532,6 +11543,15 @@
     "pairingsText": "Pairings Sheet (demo data)"
   },
   "activityLog": [
+    {
+      "id": "1779807130813-41gcty",
+      "timestamp": "2026-05-26T14:52:10.813Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "edit-volunteer",
+      "target": "Schultz, Joni",
+      "details": "Updated fields: scheduled, notes"
+    },
     {
       "id": "1779806957342",
       "timestamp": "2026-05-26T14:49:17.342Z",
