@@ -11796,6 +11796,76 @@
       "checkedInBy": "Quintana, Mike",
       "timestamp": "2026-05-26T17:29:12.435Z",
       "isAlternate": true
+    },
+    {
+      "volunteerId": "9461",
+      "volunteerName": "Goodenough, Timothy",
+      "hole": 6,
+      "day": "Tuesday",
+      "shift": "AM",
+      "checkedInBy": "Mcdaniel, Patrick",
+      "timestamp": "2026-05-26T17:31:17.231Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4433",
+      "volunteerName": "Elkins, Paul",
+      "hole": 6,
+      "day": "Tuesday",
+      "shift": "AM",
+      "checkedInBy": "Mcdaniel, Patrick",
+      "timestamp": "2026-05-26T17:31:19.260Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "1464",
+      "volunteerName": "Mcdaniel, Patrick",
+      "hole": 6,
+      "day": "Tuesday",
+      "shift": "AM",
+      "checkedInBy": "Mcdaniel, Patrick",
+      "timestamp": "2026-05-26T17:31:20.036Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "1464",
+      "volunteerName": "Mcdaniel, Patrick",
+      "hole": 6,
+      "day": "Tuesday",
+      "shift": "PM",
+      "checkedInBy": "Mcdaniel, Patrick",
+      "timestamp": "2026-05-26T17:31:41.683Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4433",
+      "volunteerName": "Elkins, Paul",
+      "hole": 6,
+      "day": "Tuesday",
+      "shift": "PM",
+      "checkedInBy": "Mcdaniel, Patrick",
+      "timestamp": "2026-05-26T17:31:41.990Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9195",
+      "volunteerName": "Greener, Jim",
+      "hole": 6,
+      "day": "Tuesday",
+      "shift": "PM",
+      "checkedInBy": "Mcdaniel, Patrick",
+      "timestamp": "2026-05-26T17:31:43.449Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4190",
+      "volunteerName": "Towers, Douglas",
+      "hole": 6,
+      "day": "Tuesday",
+      "shift": "PM",
+      "checkedInBy": "Mcdaniel, Patrick",
+      "timestamp": "2026-05-26T17:31:43.903Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -11814,6 +11884,87 @@
     "pairingsText": "Pairings Sheet (demo data)"
   },
   "activityLog": [
+    {
+      "id": "1779816706571",
+      "timestamp": "2026-05-26T17:31:46.571Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 6",
+      "details": "Submitted Tuesday PM for Hole 6"
+    },
+    {
+      "id": "1779816703956",
+      "timestamp": "2026-05-26T17:31:43.956Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Towers, Douglas",
+      "details": "Tuesday PM - Hole #6"
+    },
+    {
+      "id": "1779816703511",
+      "timestamp": "2026-05-26T17:31:43.511Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Greener, Jim",
+      "details": "Tuesday PM - Hole #6"
+    },
+    {
+      "id": "1779816702045",
+      "timestamp": "2026-05-26T17:31:42.045Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Elkins, Paul",
+      "details": "Tuesday PM - Hole #6"
+    },
+    {
+      "id": "1779816701747",
+      "timestamp": "2026-05-26T17:31:41.747Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Mcdaniel, Patrick",
+      "details": "Tuesday PM - Hole #6"
+    },
+    {
+      "id": "1779816696014",
+      "timestamp": "2026-05-26T17:31:36.014Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 6",
+      "details": "Submitted Tuesday AM for Hole 6"
+    },
+    {
+      "id": "1779816680098",
+      "timestamp": "2026-05-26T17:31:20.098Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Mcdaniel, Patrick",
+      "details": "Tuesday AM - Hole #6"
+    },
+    {
+      "id": "1779816679319",
+      "timestamp": "2026-05-26T17:31:19.320Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Elkins, Paul",
+      "details": "Tuesday AM - Hole #6"
+    },
+    {
+      "id": "1779816677289",
+      "timestamp": "2026-05-26T17:31:17.289Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Goodenough, Timothy",
+      "details": "Tuesday AM - Hole #6"
+    },
     {
       "id": "1779816557534",
       "timestamp": "2026-05-26T17:29:17.534Z",
