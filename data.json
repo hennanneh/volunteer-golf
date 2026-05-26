@@ -11756,6 +11756,26 @@
       "checkedInBy": "Quintana, Mike",
       "timestamp": "2026-05-26T17:08:42.728Z",
       "isAlternate": true
+    },
+    {
+      "volunteerId": "5192",
+      "volunteerName": "Imboden, Thomas",
+      "hole": 5,
+      "day": "Tuesday",
+      "shift": "PM",
+      "checkedInBy": "Imboden, Thomas",
+      "timestamp": "2026-05-26T17:12:06.963Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8630",
+      "volunteerName": "Montalvo, Sammy",
+      "hole": 5,
+      "day": "Tuesday",
+      "shift": "PM",
+      "checkedInBy": "Imboden, Thomas",
+      "timestamp": "2026-05-26T17:12:08.511Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -11774,6 +11794,42 @@
     "pairingsText": "Pairings Sheet (demo data)"
   },
   "activityLog": [
+    {
+      "id": "1779815530727",
+      "timestamp": "2026-05-26T17:12:10.727Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 5",
+      "details": "Submitted Tuesday PM for Hole 5"
+    },
+    {
+      "id": "1779815528594",
+      "timestamp": "2026-05-26T17:12:08.594Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Montalvo, Sammy",
+      "details": "Tuesday PM - Hole #5"
+    },
+    {
+      "id": "1779815527051",
+      "timestamp": "2026-05-26T17:12:07.051Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Imboden, Thomas",
+      "details": "Tuesday PM - Hole #5"
+    },
+    {
+      "id": "1779815523915",
+      "timestamp": "2026-05-26T17:12:03.915Z",
+      "user": "Aguilar, Jorge",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
     {
       "id": "1779815335734",
       "timestamp": "2026-05-26T17:08:55.734Z",
@@ -24840,5 +24896,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779813816831
+  "serverNow": 1779815525231
 }
