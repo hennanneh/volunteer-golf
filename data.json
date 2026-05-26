@@ -11148,9 +11148,19 @@
     "numberOfHoles": 20,
     "helpName": "Mike Hill",
     "pairingsUrl": "https://colonialvolunteers.golf/pairings/",
-    "showOutingPreferences": false
+    "showOutingPreferences": false,
+    "pairingsText": "Pairings Sheet (demo data)"
   },
   "activityLog": [
+    {
+      "id": "1779799905799",
+      "timestamp": "2026-05-26T12:51:45.799Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "settings-change",
+      "target": "pairingsText",
+      "details": "Updated setting: pairingsText"
+    },
     {
       "id": "1779799729221",
       "timestamp": "2026-05-26T12:48:49.221Z",
@@ -22849,5 +22859,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779799580147
+  "serverNow": 1779799490339
 }
