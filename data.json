@@ -12161,6 +12161,15 @@
   },
   "activityLog": [
     {
+      "id": "1779831502538",
+      "timestamp": "2026-05-26T21:38:22.538Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
       "id": "1779829162001",
       "timestamp": "2026-05-26T20:59:22.001Z",
       "user": "Jutras, Michael",
