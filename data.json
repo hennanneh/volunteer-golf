@@ -11636,6 +11636,36 @@
       "checkedInBy": "Wilson, Todd",
       "timestamp": "2026-05-26T16:37:26.103Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "8608",
+      "volunteerName": "Tellez, Victor",
+      "hole": 14,
+      "day": "Tuesday",
+      "shift": "PM",
+      "checkedInBy": "Sanders, Steve",
+      "timestamp": "2026-05-26T16:43:17.708Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9233",
+      "volunteerName": "Wooldridge, Brad",
+      "hole": 14,
+      "day": "Tuesday",
+      "shift": "PM",
+      "checkedInBy": "Sanders, Steve",
+      "timestamp": "2026-05-26T16:43:30.737Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10364",
+      "volunteerName": "Thomas, Harold",
+      "hole": 1,
+      "day": "Tuesday",
+      "shift": "AM",
+      "checkedInBy": "Ruddell, Dick",
+      "timestamp": "2026-05-26T16:43:49.273Z",
+      "isAlternate": true
     }
   ],
   "submissions": [],
@@ -11654,6 +11684,51 @@
     "pairingsText": "Pairings Sheet (demo data)"
   },
   "activityLog": [
+    {
+      "id": "1779813834443",
+      "timestamp": "2026-05-26T16:43:54.443Z",
+      "user": "Ruddell, Dick",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 1",
+      "details": "Submitted Tuesday AM for Hole 1"
+    },
+    {
+      "id": "1779813829668",
+      "timestamp": "2026-05-26T16:43:49.668Z",
+      "user": "Ruddell, Dick",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Thomas, Harold",
+      "details": "Tuesday AM - Hole #1 (alternate)"
+    },
+    {
+      "id": "1779813825281",
+      "timestamp": "2026-05-26T16:43:45.281Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 14",
+      "details": "Submitted Tuesday PM for Hole 14"
+    },
+    {
+      "id": "1779813820472",
+      "timestamp": "2026-05-26T16:43:40.472Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Wooldridge, Brad",
+      "details": "Tuesday PM - Hole #14"
+    },
+    {
+      "id": "1779813711782",
+      "timestamp": "2026-05-26T16:41:51.782Z",
+      "user": "Ruddell, Dick",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779813446153",
       "timestamp": "2026-05-26T16:37:26.153Z",
@@ -24540,5 +24615,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779809581800
+  "serverNow": 1779813816831
 }
