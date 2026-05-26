@@ -11746,6 +11746,16 @@
       "checkedInBy": "Holt, Sharron",
       "timestamp": "2026-05-26T17:00:52.205Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "9900",
+      "volunteerName": "Riemitis, Andy",
+      "hole": 7,
+      "day": "Tuesday",
+      "shift": "AM",
+      "checkedInBy": "Quintana, Mike",
+      "timestamp": "2026-05-26T17:08:42.728Z",
+      "isAlternate": true
     }
   ],
   "submissions": [],
@@ -11764,6 +11774,42 @@
     "pairingsText": "Pairings Sheet (demo data)"
   },
   "activityLog": [
+    {
+      "id": "1779815335734",
+      "timestamp": "2026-05-26T17:08:55.734Z",
+      "user": "Quintana, Mike",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 7",
+      "details": "Submitted Tuesday AM for Hole 7"
+    },
+    {
+      "id": "1779815322720",
+      "timestamp": "2026-05-26T17:08:42.720Z",
+      "user": "Quintana, Mike",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Riemitis, Andy",
+      "details": "Tuesday AM - Hole #7 (alternate)"
+    },
+    {
+      "id": "1779815310289",
+      "timestamp": "2026-05-26T17:08:30.289Z",
+      "user": "Quintana, Mike",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779815167702",
+      "timestamp": "2026-05-26T17:06:07.702Z",
+      "user": "Peterson, Durk",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
     {
       "id": "1779815082107",
       "timestamp": "2026-05-26T17:04:42.107Z",
