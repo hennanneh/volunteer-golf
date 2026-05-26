@@ -11645,6 +11645,15 @@
   },
   "activityLog": [
     {
+      "id": "1779812745898",
+      "timestamp": "2026-05-26T16:25:45.898Z",
+      "user": "Harrell, John",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
       "id": "1779812692428",
       "timestamp": "2026-05-26T16:24:52.428Z",
       "user": "Harrell, John",
