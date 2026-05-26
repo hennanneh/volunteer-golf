@@ -11586,6 +11586,36 @@
       "checkedInBy": "Roy, Mike",
       "timestamp": "2026-05-26T15:39:03.512Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "7191",
+      "volunteerName": "Sanders, Steve",
+      "hole": 14,
+      "day": "Tuesday",
+      "shift": "PM",
+      "checkedInBy": "Sanders, Steve",
+      "timestamp": "2026-05-26T16:13:01.146Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7806",
+      "volunteerName": "Mosler, Mitch",
+      "hole": 14,
+      "day": "Tuesday",
+      "shift": "PM",
+      "checkedInBy": "Sanders, Steve",
+      "timestamp": "2026-05-26T16:13:01.356Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9138",
+      "volunteerName": "Morrison, Hal",
+      "hole": 14,
+      "day": "Tuesday",
+      "shift": "PM",
+      "checkedInBy": "Sanders, Steve",
+      "timestamp": "2026-05-26T16:13:16.811Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -11604,6 +11634,24 @@
     "pairingsText": "Pairings Sheet (demo data)"
   },
   "activityLog": [
+    {
+      "id": "1779812006535",
+      "timestamp": "2026-05-26T16:13:26.535Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Morrison, Hal",
+      "details": "Tuesday PM - Hole #14"
+    },
+    {
+      "id": "1779811930768",
+      "timestamp": "2026-05-26T16:12:10.768Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779811333067",
       "timestamp": "2026-05-26T16:02:13.068Z",
