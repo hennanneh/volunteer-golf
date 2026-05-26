@@ -12173,6 +12173,15 @@
   },
   "activityLog": [
     {
+      "id": "1779833439236",
+      "timestamp": "2026-05-26T22:10:39.236Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
       "id": "1779833342231-pgpx4r",
       "timestamp": "2026-05-26T22:09:02.231Z",
       "user": "Watson, Stan",
