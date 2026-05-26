@@ -7422,7 +7422,8 @@
       "address": "4112 Ridglea County Club Dr #1614 Benbrook, TX 76126",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1778813044771,
+      "volunteerPassword": "$2b$10$z.I4EwcHvW3SouRQqyRRMOwoyo/WvYPdwwkYZjr7A5u2ijmTouX2G"
     },
     {
       "id": "9418",
@@ -8272,7 +8273,8 @@
       "address": "8513 Woodslane Drive Fort Worth, TX 76179",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1778813044771,
+      "volunteerPassword": "$2b$10$sK32LSwdhApaLsUs94aVweA.GNGANTzHIKx3jX.wXjv3jzS4HrDmW"
     },
     {
       "id": "4225",
@@ -10684,16 +10686,6 @@
       "isAlternate": false
     },
     {
-      "volunteerId": "9019",
-      "volunteerName": "Barron, Jamey",
-      "hole": 13,
-      "day": "Tuesday",
-      "shift": "AM",
-      "checkedInBy": "Clayton, Rodney",
-      "timestamp": "2026-05-26T11:23:39.873Z",
-      "isAlternate": true
-    },
-    {
       "volunteerId": "6553",
       "volunteerName": "Ruddell, Dick",
       "hole": 1,
@@ -11092,6 +11084,56 @@
       "checkedInBy": "Sale, Lynn",
       "timestamp": "2026-05-26T12:43:49.747Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "9853",
+      "volunteerName": "Cole, Jefery",
+      "hole": 9,
+      "day": "Tuesday",
+      "shift": "AM",
+      "checkedInBy": "Jutras, Michael",
+      "timestamp": "2026-05-26T12:46:18.000Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6714",
+      "volunteerName": "Hellis, Neil",
+      "hole": 9,
+      "day": "Tuesday",
+      "shift": "AM",
+      "checkedInBy": "Jutras, Michael",
+      "timestamp": "2026-05-26T12:46:19.302Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9397",
+      "volunteerName": "Seebaum, Todd",
+      "hole": 13,
+      "day": "Tuesday",
+      "shift": "AM",
+      "checkedInBy": "Clayton, Rodney",
+      "timestamp": "2026-05-26T12:48:33.066Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9775",
+      "volunteerName": "Stults, Mike",
+      "hole": 13,
+      "day": "Tuesday",
+      "shift": "AM",
+      "checkedInBy": "Clayton, Rodney",
+      "timestamp": "2026-05-26T12:48:34.481Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "3986",
+      "volunteerName": "Clayton, Rodney",
+      "hole": 13,
+      "day": "Tuesday",
+      "shift": "AM",
+      "checkedInBy": "Clayton, Rodney",
+      "timestamp": "2026-05-26T12:48:37.779Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -11109,6 +11151,96 @@
     "showOutingPreferences": false
   },
   "activityLog": [
+    {
+      "id": "1779799729221",
+      "timestamp": "2026-05-26T12:48:49.221Z",
+      "user": "Clayton, Rodney",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 13",
+      "details": "Submitted Tuesday AM for Hole 13"
+    },
+    {
+      "id": "1779799717832",
+      "timestamp": "2026-05-26T12:48:37.832Z",
+      "user": "Clayton, Rodney",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Clayton, Rodney",
+      "details": "Tuesday AM - Hole #13"
+    },
+    {
+      "id": "1779799714546",
+      "timestamp": "2026-05-26T12:48:34.546Z",
+      "user": "Clayton, Rodney",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Stults, Mike",
+      "details": "Tuesday AM - Hole #13"
+    },
+    {
+      "id": "1779799713123",
+      "timestamp": "2026-05-26T12:48:33.123Z",
+      "user": "Clayton, Rodney",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Seebaum, Todd",
+      "details": "Tuesday AM - Hole #13"
+    },
+    {
+      "id": "1779799684487",
+      "timestamp": "2026-05-26T12:48:04.487Z",
+      "user": "Nederostek, Brad",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1779799640238",
+      "timestamp": "2026-05-26T12:47:20.238Z",
+      "user": "Nederostek, Brad",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1779799621375",
+      "timestamp": "2026-05-26T12:47:01.375Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779799583810",
+      "timestamp": "2026-05-26T12:46:23.810Z",
+      "user": "Jutras, Michael",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 9",
+      "details": "Submitted Tuesday AM for Hole 9"
+    },
+    {
+      "id": "1779799579357",
+      "timestamp": "2026-05-26T12:46:19.357Z",
+      "user": "Jutras, Michael",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Hellis, Neil",
+      "details": "Tuesday AM - Hole #9"
+    },
+    {
+      "id": "1779799578061",
+      "timestamp": "2026-05-26T12:46:18.061Z",
+      "user": "Jutras, Michael",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Cole, Jefery",
+      "details": "Tuesday AM - Hole #9"
+    },
     {
       "id": "1779799489538",
       "timestamp": "2026-05-26T12:44:49.538Z",
@@ -22717,5 +22849,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779799131577
+  "serverNow": 1779799580147
 }
