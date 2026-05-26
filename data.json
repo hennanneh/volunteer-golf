@@ -11574,6 +11574,42 @@
   },
   "activityLog": [
     {
+      "id": "1779808446409",
+      "timestamp": "2026-05-26T15:14:06.409Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779808315883",
+      "timestamp": "2026-05-26T15:11:55.883Z",
+      "user": "Beckley, Bob",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1779808274645",
+      "timestamp": "2026-05-26T15:11:14.645Z",
+      "user": "Beckley, Bob",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1779808245035",
+      "timestamp": "2026-05-26T15:10:45.035Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
       "id": "1779807780570",
       "timestamp": "2026-05-26T15:03:00.570Z",
       "user": "Holt, Sharron",
