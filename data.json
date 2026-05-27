@@ -5489,17 +5489,26 @@
       "yearsWorked": 4,
       "hat": "",
       "scheduled": {
+        "Monday AM": true,
+        "Monday PM": true,
+        "Tuesday AM": true,
+        "Tuesday PM": true,
+        "Wednesday AM": true,
         "Wednesday PM": true,
+        "Thursday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
+        "Friday PM": true,
+        "Saturday AM": true,
         "Saturday PM": true,
-        "Sunday AM": true
+        "Sunday AM": true,
+        "Sunday PM": true
       },
       "volId": "8571",
       "address": "2720 River Path Court Burleson, TX 76028",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779825503116,
+      "lastModified": 1779849908936,
       "notes": "",
       "hatReceived": false,
       "originalHole": 4
@@ -5950,7 +5959,8 @@
       "address": "1912 N Aster Ave Broken Arrow, OK 74012-1305",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1778813044771,
+      "volunteerPassword": "$2b$10$NJ4wTYixAuxiRp7O/xeGAOrsVEfPbMc6SKDg8sN2W5Ss3O1Uz/mzy"
     },
     {
       "id": "6217",
@@ -12164,6 +12174,15 @@
     "pairingsText": "Pairings Sheet (demo data)"
   },
   "activityLog": [
+    {
+      "id": "1779849908936-z3tkpf",
+      "timestamp": "2026-05-27T02:45:08.936Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Mobley, Ken",
+      "details": "added Monday AM, Monday PM, Tuesday AM, Tuesday PM, Wednesday AM, Thursday AM, Friday PM, Saturday AM, Sunday PM"
+    },
     {
       "id": "1779849891331-dprc2y",
       "timestamp": "2026-05-27T02:44:51.331Z",
