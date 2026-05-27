@@ -15102,6 +15102,16 @@
       "checkedInBy": "Nederostek, Brad",
       "timestamp": "2026-05-27T17:53:25.854Z",
       "isAlternate": true
+    },
+    {
+      "volunteerId": "4659",
+      "volunteerName": "Lynch, Cindy",
+      "hole": 7,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Quintana, Mike",
+      "timestamp": "2026-05-27T18:01:41.223Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -15121,6 +15131,46 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779904923879-7dmocm",
+      "timestamp": "2026-05-27T18:02:03.880Z",
+      "user": "Quintana, Mike",
+      "userType": "Captain",
+      "action": "rejected-bulk-edit",
+      "target": "Daly, Lee",
+      "details": "Captain hole 7 attempted to modify hole 9 volunteer (auto-rejected via bulk save — no data changed)",
+      "targetHole": 9,
+      "actorHole": 7
+    },
+    {
+      "id": "1779904922215",
+      "timestamp": "2026-05-27T18:02:02.215Z",
+      "user": "Quintana, Mike",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 7",
+      "details": "Submitted Wednesday PM for Hole 7"
+    },
+    {
+      "id": "1779904902329-c8vl1l",
+      "timestamp": "2026-05-27T18:01:42.329Z",
+      "user": "Quintana, Mike",
+      "userType": "Captain",
+      "action": "rejected-bulk-edit",
+      "target": "Daly, Lee",
+      "details": "Captain hole 7 attempted to modify hole 9 volunteer (auto-rejected via bulk save — no data changed)",
+      "targetHole": 9,
+      "actorHole": 7
+    },
+    {
+      "id": "1779904901291",
+      "timestamp": "2026-05-27T18:01:41.291Z",
+      "user": "Quintana, Mike",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Lynch, Cindy",
+      "details": "Wednesday PM - Hole #7"
+    },
     {
       "id": "1779904482277-bzahar",
       "timestamp": "2026-05-27T17:54:42.277Z",
@@ -34787,5 +34837,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779892270463
+  "serverNow": 1779903979673
 }
