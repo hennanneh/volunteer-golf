@@ -6372,7 +6372,6 @@
       "hat": "",
       "scheduled": {
         "Monday PM": true,
-        "Wednesday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
         "Saturday PM": true,
@@ -6382,7 +6381,7 @@
       "address": "10409 Calaveras Dr Waco, TX 76708",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779736366521
+      "lastModified": 1779912839514
     },
     {
       "id": "8439",
@@ -15346,6 +15345,24 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779912839514-50lwk5",
+      "timestamp": "2026-05-27T20:13:59.514Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Phillips, Jason",
+      "details": "removed Wednesday AM"
+    },
+    {
+      "id": "1779912753375",
+      "timestamp": "2026-05-27T20:12:33.375Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779912258414",
       "timestamp": "2026-05-27T20:04:18.414Z",
