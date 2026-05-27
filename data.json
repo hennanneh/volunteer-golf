@@ -13440,6 +13440,15 @@
   },
   "activityLog": [
     {
+      "id": "1779889094682",
+      "timestamp": "2026-05-27T13:38:14.682Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
       "id": "1779888846366",
       "timestamp": "2026-05-27T13:34:06.366Z",
       "user": "Duncan, Larry",
