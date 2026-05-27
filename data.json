@@ -12746,16 +12746,6 @@
       "isAlternate": false
     },
     {
-      "volunteerId": "8182",
-      "volunteerName": "Walters, Mark",
-      "hole": 14,
-      "day": "Wednesday",
-      "shift": "AM",
-      "checkedInBy": "Sanders, Steve",
-      "timestamp": "2026-05-27T12:23:23.037Z",
-      "isAlternate": false
-    },
-    {
       "volunteerId": "4745",
       "volunteerName": "Pittman, Tom",
       "hole": 12,
@@ -12926,16 +12916,6 @@
       "isAlternate": false
     },
     {
-      "volunteerId": "9590",
-      "volunteerName": "Ozier, Mark",
-      "hole": 14,
-      "day": "Wednesday",
-      "shift": "AM",
-      "checkedInBy": "Mosler, Mitch",
-      "timestamp": "2026-05-27T12:34:47.165Z",
-      "isAlternate": false
-    },
-    {
       "volunteerId": "8887",
       "volunteerName": "Arnold, Tyrone",
       "hole": 14,
@@ -12943,6 +12923,56 @@
       "shift": "AM",
       "checkedInBy": "Mosler, Mitch",
       "timestamp": "2026-05-27T12:34:50.519Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8182",
+      "volunteerName": "Walters, Mark",
+      "hole": 14,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Mosler, Mitch",
+      "timestamp": "2026-05-27T12:42:10.236Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6962",
+      "volunteerName": "Eisen, Scott",
+      "hole": 13,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Duncan, Larry",
+      "timestamp": "2026-05-27T12:43:01.437Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4531",
+      "volunteerName": "Duncan, Larry",
+      "hole": 13,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Duncan, Larry",
+      "timestamp": "2026-05-27T12:43:10.428Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10349",
+      "volunteerName": "Gunnels, Cliff",
+      "hole": 13,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Duncan, Larry",
+      "timestamp": "2026-05-27T12:43:14.548Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5695",
+      "volunteerName": "Jessop, Tim",
+      "hole": 13,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Duncan, Larry",
+      "timestamp": "2026-05-27T12:43:16.595Z",
       "isAlternate": false
     }
   ],
@@ -12959,10 +12989,224 @@
     "helpName": "Mike Hill",
     "pairingsUrl": "https://colonialvolunteers.golf/pairings/",
     "showOutingPreferences": false,
-    "pairingsText": "Pairings Sheet (demo data)",
+    "pairingsText": "Pairings Wednesday ProAm",
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779885853413",
+      "timestamp": "2026-05-27T12:44:13.413Z",
+      "user": "Browning, Wayne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779885833773",
+      "timestamp": "2026-05-27T12:43:53.773Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1779885818635",
+      "timestamp": "2026-05-27T12:43:38.635Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "settings-change",
+      "target": "pairingsText",
+      "details": "Updated setting: pairingsText"
+    },
+    {
+      "id": "1779885811223",
+      "timestamp": "2026-05-27T12:43:31.223Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779885803422",
+      "timestamp": "2026-05-27T12:43:23.422Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 13",
+      "details": "Submitted Wednesday AM for Hole 13"
+    },
+    {
+      "id": "1779885796637",
+      "timestamp": "2026-05-27T12:43:16.637Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Jessop, Tim",
+      "details": "Wednesday AM - Hole #13"
+    },
+    {
+      "id": "1779885794587",
+      "timestamp": "2026-05-27T12:43:14.587Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Gunnels, Cliff",
+      "details": "Wednesday AM - Hole #13"
+    },
+    {
+      "id": "1779885790468",
+      "timestamp": "2026-05-27T12:43:10.468Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Duncan, Larry",
+      "details": "Wednesday AM - Hole #13"
+    },
+    {
+      "id": "1779885742447",
+      "timestamp": "2026-05-27T12:42:22.447Z",
+      "user": "Kocek, Greg",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1779885741900-i9yeiu",
+      "timestamp": "2026-05-27T12:42:21.900Z",
+      "user": "Mosler, Mitch",
+      "userType": "Captain",
+      "action": "rejected-bulk-edit",
+      "target": "Livingston, Jennifier",
+      "details": "Captain hole 14 attempted to modify hole 4 volunteer (auto-rejected via bulk save — no data changed)",
+      "targetHole": 4,
+      "actorHole": 14
+    },
+    {
+      "id": "1779885741897-y75gdr",
+      "timestamp": "2026-05-27T12:42:21.897Z",
+      "user": "Mosler, Mitch",
+      "userType": "Captain",
+      "action": "rejected-bulk-edit",
+      "target": "Bravo, Albert",
+      "details": "Captain hole 14 attempted to modify hole 13 volunteer (auto-rejected via bulk save — no data changed)",
+      "targetHole": 13,
+      "actorHole": 14
+    },
+    {
+      "id": "1779885739553-67gp6y",
+      "timestamp": "2026-05-27T12:42:19.553Z",
+      "user": "Mosler, Mitch",
+      "userType": "Captain",
+      "action": "rejected-bulk-edit",
+      "target": "Livingston, Jennifier",
+      "details": "Captain hole 14 attempted to modify hole 4 volunteer (auto-rejected via bulk save — no data changed)",
+      "targetHole": 4,
+      "actorHole": 14
+    },
+    {
+      "id": "1779885739552-3a6t20",
+      "timestamp": "2026-05-27T12:42:19.552Z",
+      "user": "Mosler, Mitch",
+      "userType": "Captain",
+      "action": "rejected-bulk-edit",
+      "target": "Bravo, Albert",
+      "details": "Captain hole 14 attempted to modify hole 13 volunteer (auto-rejected via bulk save — no data changed)",
+      "targetHole": 13,
+      "actorHole": 14
+    },
+    {
+      "id": "1779885737926-6t8i14",
+      "timestamp": "2026-05-27T12:42:17.926Z",
+      "user": "Mosler, Mitch",
+      "userType": "Captain",
+      "action": "rejected-bulk-edit",
+      "target": "Livingston, Jennifier",
+      "details": "Captain hole 14 attempted to modify hole 4 volunteer (auto-rejected via bulk save — no data changed)",
+      "targetHole": 4,
+      "actorHole": 14
+    },
+    {
+      "id": "1779885737923-0iqt9g",
+      "timestamp": "2026-05-27T12:42:17.923Z",
+      "user": "Mosler, Mitch",
+      "userType": "Captain",
+      "action": "rejected-bulk-edit",
+      "target": "Bravo, Albert",
+      "details": "Captain hole 14 attempted to modify hole 13 volunteer (auto-rejected via bulk save — no data changed)",
+      "targetHole": 13,
+      "actorHole": 14
+    },
+    {
+      "id": "1779885735408",
+      "timestamp": "2026-05-27T12:42:15.408Z",
+      "user": "Mosler, Mitch",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 14",
+      "details": "Submitted Wednesday AM for Hole 14"
+    },
+    {
+      "id": "1779885732552-gq7xcw",
+      "timestamp": "2026-05-27T12:42:12.552Z",
+      "user": "Mosler, Mitch",
+      "userType": "Captain",
+      "action": "rejected-bulk-edit",
+      "target": "Livingston, Jennifier",
+      "details": "Captain hole 14 attempted to modify hole 4 volunteer (auto-rejected via bulk save — no data changed)",
+      "targetHole": 4,
+      "actorHole": 14
+    },
+    {
+      "id": "1779885732550-vhe54j",
+      "timestamp": "2026-05-27T12:42:12.550Z",
+      "user": "Mosler, Mitch",
+      "userType": "Captain",
+      "action": "rejected-bulk-edit",
+      "target": "Bravo, Albert",
+      "details": "Captain hole 14 attempted to modify hole 13 volunteer (auto-rejected via bulk save — no data changed)",
+      "targetHole": 13,
+      "actorHole": 14
+    },
+    {
+      "id": "1779885732523",
+      "timestamp": "2026-05-27T12:42:12.523Z",
+      "user": "Mosler, Mitch",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Ozier, Mark",
+      "details": "Wednesday AM - Hole #14"
+    },
+    {
+      "id": "1779885730426",
+      "timestamp": "2026-05-27T12:42:10.426Z",
+      "user": "Mosler, Mitch",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Walters, Mark",
+      "details": "Wednesday AM - Hole #14"
+    },
+    {
+      "id": "1779885727666",
+      "timestamp": "2026-05-27T12:42:07.666Z",
+      "user": "Mosler, Mitch",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Walters, Mark",
+      "details": "Wednesday AM - Hole #14"
+    },
+    {
+      "id": "1779885713904",
+      "timestamp": "2026-05-27T12:41:53.904Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "settings-change",
+      "target": "pairingsText",
+      "details": "Updated setting: pairingsText"
+    },
     {
       "id": "1779885566444",
       "timestamp": "2026-05-27T12:39:26.444Z",
@@ -28317,5 +28561,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779885067951
+  "serverNow": 1779885820545
 }
