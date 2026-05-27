@@ -15335,6 +15335,15 @@
   },
   "activityLog": [
     {
+      "id": "1779923578981",
+      "timestamp": "2026-05-27T23:12:58.981Z",
+      "user": "Quintana, Mike",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
       "id": "1779923202180",
       "timestamp": "2026-05-27T23:06:42.180Z",
       "user": "Hill, Michael",
