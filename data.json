@@ -13420,6 +13420,156 @@
       "checkedInBy": "Duncan, Larry",
       "timestamp": "2026-05-27T13:33:55.980Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "9658",
+      "volunteerName": "Jutras, Michael",
+      "hole": 9,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Jutras, Michael",
+      "timestamp": "2026-05-27T14:30:14.512Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2055",
+      "volunteerName": "Edwards, Bill",
+      "hole": 9,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Jutras, Michael",
+      "timestamp": "2026-05-27T14:30:17.375Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "3149",
+      "volunteerName": "Broom, Douglas",
+      "hole": 9,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Jutras, Michael",
+      "timestamp": "2026-05-27T14:30:23.096Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9853",
+      "volunteerName": "Cole, Jefery",
+      "hole": 9,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Jutras, Michael",
+      "timestamp": "2026-05-27T14:30:38.432Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8056",
+      "volunteerName": "Daly, Lee",
+      "hole": 9,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Jutras, Michael",
+      "timestamp": "2026-05-27T14:30:48.009Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9371",
+      "volunteerName": "Duckett, Gary",
+      "hole": 9,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Jutras, Michael",
+      "timestamp": "2026-05-27T14:31:00.196Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10730",
+      "volunteerName": "Duran, Michael",
+      "hole": 9,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Jutras, Michael",
+      "timestamp": "2026-05-27T14:31:01.726Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7430",
+      "volunteerName": "Grizzle, Bob",
+      "hole": 9,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Jutras, Michael",
+      "timestamp": "2026-05-27T14:31:23.347Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8291",
+      "volunteerName": "Keith, Stephen",
+      "hole": 9,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Jutras, Michael",
+      "timestamp": "2026-05-27T14:31:35.776Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9811",
+      "volunteerName": "Land, Angela",
+      "hole": 9,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Jutras, Michael",
+      "timestamp": "2026-05-27T14:31:36.983Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9510",
+      "volunteerName": "Mason, Larry",
+      "hole": 9,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Jutras, Michael",
+      "timestamp": "2026-05-27T14:31:43.683Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9663",
+      "volunteerName": "Neunaber, Dean",
+      "hole": 9,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Jutras, Michael",
+      "timestamp": "2026-05-27T14:31:48.998Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8462",
+      "volunteerName": "Simmons, Kim",
+      "hole": 9,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Jutras, Michael",
+      "timestamp": "2026-05-27T14:31:57.181Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8463",
+      "volunteerName": "Simmons, Vance",
+      "hole": 9,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Jutras, Michael",
+      "timestamp": "2026-05-27T14:31:58.088Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10733",
+      "volunteerName": "Wilkinson, Rick",
+      "hole": 9,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Jutras, Michael",
+      "timestamp": "2026-05-27T14:32:01.749Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -13439,6 +13589,168 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779892343817",
+      "timestamp": "2026-05-27T14:32:23.817Z",
+      "user": "Jutras, Michael",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 9",
+      "details": "Submitted Wednesday AM for Hole 9"
+    },
+    {
+      "id": "1779892321814",
+      "timestamp": "2026-05-27T14:32:01.814Z",
+      "user": "Jutras, Michael",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Wilkinson, Rick",
+      "details": "Wednesday AM - Hole #9"
+    },
+    {
+      "id": "1779892318142",
+      "timestamp": "2026-05-27T14:31:58.142Z",
+      "user": "Jutras, Michael",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Simmons, Vance",
+      "details": "Wednesday AM - Hole #9"
+    },
+    {
+      "id": "1779892317239",
+      "timestamp": "2026-05-27T14:31:57.239Z",
+      "user": "Jutras, Michael",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Simmons, Kim",
+      "details": "Wednesday AM - Hole #9"
+    },
+    {
+      "id": "1779892309063",
+      "timestamp": "2026-05-27T14:31:49.063Z",
+      "user": "Jutras, Michael",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Neunaber, Dean",
+      "details": "Wednesday AM - Hole #9"
+    },
+    {
+      "id": "1779892303740",
+      "timestamp": "2026-05-27T14:31:43.740Z",
+      "user": "Jutras, Michael",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Mason, Larry",
+      "details": "Wednesday AM - Hole #9"
+    },
+    {
+      "id": "1779892297066",
+      "timestamp": "2026-05-27T14:31:37.066Z",
+      "user": "Jutras, Michael",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Land, Angela",
+      "details": "Wednesday AM - Hole #9"
+    },
+    {
+      "id": "1779892296018",
+      "timestamp": "2026-05-27T14:31:36.018Z",
+      "user": "Jutras, Michael",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Keith, Stephen",
+      "details": "Wednesday AM - Hole #9"
+    },
+    {
+      "id": "1779892283530",
+      "timestamp": "2026-05-27T14:31:23.530Z",
+      "user": "Jutras, Michael",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Grizzle, Bob",
+      "details": "Wednesday AM - Hole #9"
+    },
+    {
+      "id": "1779892269510",
+      "timestamp": "2026-05-27T14:31:09.510Z",
+      "user": "Mulvaney, Matt",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779892261792",
+      "timestamp": "2026-05-27T14:31:01.792Z",
+      "user": "Jutras, Michael",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Duran, Michael",
+      "details": "Wednesday AM - Hole #9"
+    },
+    {
+      "id": "1779892260273",
+      "timestamp": "2026-05-27T14:31:00.273Z",
+      "user": "Jutras, Michael",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Duckett, Gary",
+      "details": "Wednesday AM - Hole #9"
+    },
+    {
+      "id": "1779892248079",
+      "timestamp": "2026-05-27T14:30:48.079Z",
+      "user": "Jutras, Michael",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Daly, Lee",
+      "details": "Wednesday AM - Hole #9"
+    },
+    {
+      "id": "1779892238498",
+      "timestamp": "2026-05-27T14:30:38.498Z",
+      "user": "Jutras, Michael",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Cole, Jefery",
+      "details": "Wednesday AM - Hole #9"
+    },
+    {
+      "id": "1779892223153",
+      "timestamp": "2026-05-27T14:30:23.153Z",
+      "user": "Jutras, Michael",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Broom, Douglas",
+      "details": "Wednesday AM - Hole #9"
+    },
+    {
+      "id": "1779892217618",
+      "timestamp": "2026-05-27T14:30:17.618Z",
+      "user": "Jutras, Michael",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Edwards, Bill",
+      "details": "Wednesday AM - Hole #9"
+    },
+    {
+      "id": "1779892214574",
+      "timestamp": "2026-05-27T14:30:14.574Z",
+      "user": "Jutras, Michael",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Jutras, Michael",
+      "details": "Wednesday AM - Hole #9"
+    },
+    {
+      "id": "1779892208617",
+      "timestamp": "2026-05-27T14:30:08.617Z",
+      "user": "Jutras, Michael",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779892184100",
       "timestamp": "2026-05-27T14:29:44.100Z",
@@ -30250,5 +30562,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779891253959
+  "serverNow": 1779892270463
 }
