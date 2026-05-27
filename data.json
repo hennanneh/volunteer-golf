@@ -13440,6 +13440,24 @@
   },
   "activityLog": [
     {
+      "id": "1779891573791",
+      "timestamp": "2026-05-27T14:19:33.792Z",
+      "user": "Diaz, Rickey",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1779891512509",
+      "timestamp": "2026-05-27T14:18:32.509Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
       "id": "1779891252765",
       "timestamp": "2026-05-27T14:14:12.765Z",
       "user": "Mcdaniel, Patrick",
@@ -30196,5 +30214,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779891222844
+  "serverNow": 1779891253959
 }
