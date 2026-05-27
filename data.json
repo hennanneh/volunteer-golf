@@ -553,7 +553,8 @@
       "address": "1661 S Forum Dr Apt 4402 Grand Prairie, TX 75052",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779886244560
+      "lastModified": 1779895467933,
+      "notes": "Albert was scheduled for the morning shift but couldn’t make it. Asked to be moved to PM shift."
     },
     {
       "id": "3149",
@@ -4225,7 +4226,8 @@
       "address": "2217 High Point Drive CARROLLTON, DENTON, TX, TX 75007",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1778813044771,
+      "volunteerPassword": "$2b$10$J5vPFkFruriHKRXJLiltMewxX0xwQlrTQksSGJquK.FbgRQ03XQpW"
     },
     {
       "id": "9082",
@@ -13691,6 +13693,56 @@
       "checkedInBy": "Roy, Mike",
       "timestamp": "2026-05-27T15:06:25.553Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "380",
+      "volunteerName": "Johnson, Kenny",
+      "hole": 1,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Johnson, Kenny",
+      "timestamp": "2026-05-27T15:22:35.025Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6553",
+      "volunteerName": "Ruddell, Dick",
+      "hole": 1,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Johnson, Kenny",
+      "timestamp": "2026-05-27T15:22:35.339Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10248",
+      "volunteerName": "Hardaway, Jerry",
+      "hole": 1,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Johnson, Kenny",
+      "timestamp": "2026-05-27T15:22:39.712Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10364",
+      "volunteerName": "Thomas, Harold",
+      "hole": 1,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Johnson, Kenny",
+      "timestamp": "2026-05-27T15:22:41.578Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10360",
+      "volunteerName": "Parker, James",
+      "hole": 1,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Johnson, Kenny",
+      "timestamp": "2026-05-27T15:22:47.627Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -13710,6 +13762,60 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779895467933-bbswee",
+      "timestamp": "2026-05-27T15:24:27.933Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "edit-volunteer",
+      "target": "Bravo, Albert",
+      "details": "Updated fields: notes"
+    },
+    {
+      "id": "1779895367678",
+      "timestamp": "2026-05-27T15:22:47.678Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Parker, James",
+      "details": "Wednesday PM - Hole #1"
+    },
+    {
+      "id": "1779895361641",
+      "timestamp": "2026-05-27T15:22:41.641Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Thomas, Harold",
+      "details": "Wednesday PM - Hole #1"
+    },
+    {
+      "id": "1779895359761",
+      "timestamp": "2026-05-27T15:22:39.761Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Hardaway, Jerry",
+      "details": "Wednesday PM - Hole #1"
+    },
+    {
+      "id": "1779895355403",
+      "timestamp": "2026-05-27T15:22:35.403Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Ruddell, Dick",
+      "details": "Wednesday PM - Hole #1"
+    },
+    {
+      "id": "1779895355080",
+      "timestamp": "2026-05-27T15:22:35.080Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Johnson, Kenny",
+      "details": "Wednesday PM - Hole #1"
+    },
     {
       "id": "1779894413556",
       "timestamp": "2026-05-27T15:06:53.556Z",
