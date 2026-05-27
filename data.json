@@ -14001,6 +14001,66 @@
       "checkedInBy": "Trout, Wayne",
       "timestamp": "2026-05-27T16:31:24.139Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "6829",
+      "volunteerName": "Russell, Mary",
+      "hole": 1,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Johnson, Kenny",
+      "timestamp": "2026-05-27T16:35:33.753Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "1445",
+      "volunteerName": "Clark, David",
+      "hole": 9,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Burnett, Eric",
+      "timestamp": "2026-05-27T16:37:03.314Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10766",
+      "volunteerName": "Rose, Jacob",
+      "hole": 9,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Burnett, Eric",
+      "timestamp": "2026-05-27T16:37:21.516Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9365",
+      "volunteerName": "Pugh, Clayton",
+      "hole": 12,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-27T16:39:37.446Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "342",
+      "volunteerName": "Mckenzie, Roy",
+      "hole": 12,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-27T16:39:38.266Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9988",
+      "volunteerName": "Grall, George",
+      "hole": 12,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-27T16:39:55.661Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -14020,6 +14080,78 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779899995577",
+      "timestamp": "2026-05-27T16:39:55.577Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Grall, George",
+      "details": "Wednesday PM - Hole #12"
+    },
+    {
+      "id": "1779899917027",
+      "timestamp": "2026-05-27T16:38:37.027Z",
+      "user": "Clayton, Rodney",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1779899880778",
+      "timestamp": "2026-05-27T16:38:00.778Z",
+      "user": "Burnett, Eric",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 9",
+      "details": "Submitted Wednesday PM for Hole 9"
+    },
+    {
+      "id": "1779899841578",
+      "timestamp": "2026-05-27T16:37:21.578Z",
+      "user": "Burnett, Eric",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Rose, Jacob",
+      "details": "Wednesday PM - Hole #9"
+    },
+    {
+      "id": "1779899737818",
+      "timestamp": "2026-05-27T16:35:37.818Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 1",
+      "details": "Submitted Wednesday PM for Hole 1"
+    },
+    {
+      "id": "1779899733816",
+      "timestamp": "2026-05-27T16:35:33.816Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Russell, Mary",
+      "details": "Wednesday PM - Hole #1"
+    },
+    {
+      "id": "1779899733099",
+      "timestamp": "2026-05-27T16:35:33.099Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Russell, Mary",
+      "details": "Wednesday PM - Hole #1"
+    },
+    {
+      "id": "1779899732900",
+      "timestamp": "2026-05-27T16:35:32.904Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Russell, Mary",
+      "details": "Wednesday PM - Hole #1"
+    },
     {
       "id": "1779899484339",
       "timestamp": "2026-05-27T16:31:24.339Z",
@@ -31623,5 +31755,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779899317580
+  "serverNow": 1779899466795
 }
