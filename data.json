@@ -12158,6 +12158,33 @@
   },
   "activityLog": [
     {
+      "id": "1779840542843",
+      "timestamp": "2026-05-27T00:09:02.843Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779840535593",
+      "timestamp": "2026-05-27T00:08:55.593Z",
+      "user": "Imboden, Thomas",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1779840501767",
+      "timestamp": "2026-05-27T00:08:21.767Z",
+      "user": "Imboden, Thomas",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
       "id": "1779839585037",
       "timestamp": "2026-05-26T23:53:05.037Z",
       "user": "Holt, Sharron",
