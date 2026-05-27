@@ -15276,6 +15276,42 @@
   },
   "activityLog": [
     {
+      "id": "1779907728677",
+      "timestamp": "2026-05-27T18:48:48.677Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779907711932",
+      "timestamp": "2026-05-27T18:48:31.932Z",
+      "user": "Holt, Sharron",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1779907702460",
+      "timestamp": "2026-05-27T18:48:22.460Z",
+      "user": "Holt, Sharron",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1779907681506",
+      "timestamp": "2026-05-27T18:48:01.506Z",
+      "user": "Holt, Sharron",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
       "id": "1779907380103",
       "timestamp": "2026-05-27T18:43:00.103Z",
       "user": "Trout, Wayne",
