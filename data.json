@@ -6572,7 +6572,8 @@
       "address": "100 Sam Bass Rd Willow Park, TX 76087",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1778813044771,
+      "volunteerPassword": "$2b$10$kP/d8tWvX6OPXwM5TSXkTuOGp1TZ.83p2j90CFfJVM.KsrQdRCHj2"
     },
     {
       "id": "6338",
@@ -7927,6 +7928,7 @@
       "yearsWorked": 1,
       "hat": "",
       "scheduled": {
+        "Wednesday AM": true,
         "Wednesday PM": true,
         "Thursday AM": true,
         "Friday PM": true,
@@ -7937,7 +7939,7 @@
       "address": "4183 Old T Bone Rd. wichita falls, TX 76305",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779886540172
     },
     {
       "id": "9775",
@@ -13146,6 +13148,36 @@
       "checkedInBy": "Gradt, Jason",
       "timestamp": "2026-05-27T12:53:05.653Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "2657",
+      "volunteerName": "James, Marty",
+      "hole": 11,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-27T12:58:13.234Z",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "10667",
+      "volunteerName": "Gilchrist, William (Bill)",
+      "hole": 8,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-27T12:59:32.811Z",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "9418",
+      "volunteerName": "Schuljak, Patty",
+      "hole": 8,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-27T12:59:46.777Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -13165,6 +13197,60 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779886787245",
+      "timestamp": "2026-05-27T12:59:47.245Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Schuljak, Patty",
+      "details": "Wednesday AM - Hole #8"
+    },
+    {
+      "id": "1779886612639",
+      "timestamp": "2026-05-27T12:56:52.639Z",
+      "user": "Prill, Gina",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1779886546746",
+      "timestamp": "2026-05-27T12:55:46.746Z",
+      "user": "Larrabee, Robert",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1779886540173-1ndqxe",
+      "timestamp": "2026-05-27T12:55:40.173Z",
+      "user": "Bishop, Woody",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Studdard, William",
+      "details": "added Wednesday AM"
+    },
+    {
+      "id": "1779886500625",
+      "timestamp": "2026-05-27T12:55:00.625Z",
+      "user": "Bishop, Woody",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779886494071",
+      "timestamp": "2026-05-27T12:54:54.071Z",
+      "user": "Prill, Chuck",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
     {
       "id": "1779886415140",
       "timestamp": "2026-05-27T12:53:35.140Z",
@@ -29336,5 +29422,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779886350055
+  "serverNow": 1779886501666
 }
