@@ -15276,6 +15276,24 @@
   },
   "activityLog": [
     {
+      "id": "1779908006532",
+      "timestamp": "2026-05-27T18:53:26.532Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779907976182",
+      "timestamp": "2026-05-27T18:52:56.182Z",
+      "user": "Gustaf, David",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
       "id": "1779907728677",
       "timestamp": "2026-05-27T18:48:48.677Z",
       "user": "Holt, Sharron",
@@ -35287,5 +35305,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779900841375
+  "serverNow": 1779907977218
 }
