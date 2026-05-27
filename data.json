@@ -7736,7 +7736,6 @@
       "hat": "",
       "scheduled": {
         "Wednesday AM": true,
-        "Wednesday PM": true,
         "Thursday PM": true,
         "Friday AM": true,
         "Saturday PM": true,
@@ -7746,7 +7745,7 @@
       "address": "481 Pecan Dr Burleson, TX 76028",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779885169025
+      "lastModified": 1779902788415
     },
     {
       "id": "4204",
@@ -13795,16 +13794,6 @@
       "isAlternate": false
     },
     {
-      "volunteerId": "2507",
-      "volunteerName": "Holt, Sammy",
-      "hole": 8,
-      "day": "Wednesday",
-      "shift": "PM",
-      "checkedInBy": "Holt, Sharron",
-      "timestamp": "2026-05-27T16:25:54.317Z",
-      "isAlternate": false
-    },
-    {
       "volunteerId": "2543",
       "volunteerName": "Holt, Sharron",
       "hole": 8,
@@ -14675,16 +14664,6 @@
       "isAlternate": false
     },
     {
-      "volunteerId": "8711",
-      "volunteerName": "Smith, Bruce T.",
-      "hole": 12,
-      "day": "Wednesday",
-      "shift": "PM",
-      "checkedInBy": "Pugh, Clayton",
-      "timestamp": "2026-05-27T17:21:08.597Z",
-      "isAlternate": false
-    },
-    {
       "volunteerId": "6744",
       "volunteerName": "Livermore, James",
       "hole": 5,
@@ -14723,6 +14702,16 @@
       "checkedInBy": "Clayton, Rodney",
       "timestamp": "2026-05-27T17:24:36.290Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "2507",
+      "volunteerName": "Holt, Sammy",
+      "hole": 8,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Holt, Sharron",
+      "timestamp": "2026-05-27T17:25:14.509Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -14742,6 +14731,69 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779902878528",
+      "timestamp": "2026-05-27T17:27:58.528Z",
+      "user": "Burnett, Eric",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Sippel, Mark",
+      "details": "Wednesday PM - Hole #9"
+    },
+    {
+      "id": "1779902802452",
+      "timestamp": "2026-05-27T17:26:42.452Z",
+      "user": "Burnett, Eric",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 9",
+      "details": "Submitted Wednesday PM for Hole 9"
+    },
+    {
+      "id": "1779902795923",
+      "timestamp": "2026-05-27T17:26:35.923Z",
+      "user": "Burnett, Eric",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Sippel, Mark",
+      "details": "Wednesday PM - Hole #9"
+    },
+    {
+      "id": "1779902788415-3xradf",
+      "timestamp": "2026-05-27T17:26:28.415Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Smith, Bruce T.",
+      "details": "removed Wednesday PM"
+    },
+    {
+      "id": "1779902780439",
+      "timestamp": "2026-05-27T17:26:20.439Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Smith, Bruce T.",
+      "details": "Wednesday PM - Hole #12"
+    },
+    {
+      "id": "1779902714784",
+      "timestamp": "2026-05-27T17:25:14.784Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Holt, Sammy",
+      "details": "Wednesday PM - Hole #8"
+    },
+    {
+      "id": "1779902710987",
+      "timestamp": "2026-05-27T17:25:10.987Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Holt, Sammy",
+      "details": "Wednesday PM - Hole #8"
+    },
     {
       "id": "1779902676323",
       "timestamp": "2026-05-27T17:24:36.323Z",
@@ -33723,5 +33775,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779902669582
+  "serverNow": 1779902781878
 }
