@@ -12206,6 +12206,36 @@
       "checkedInBy": "Ruddell, Dick",
       "timestamp": "2026-05-27T11:00:01.390Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "9405",
+      "volunteerName": "Wilson, Anita",
+      "hole": 1,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Ruddell, Dick",
+      "timestamp": "2026-05-27T11:00:15.345Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "380",
+      "volunteerName": "Johnson, Kenny",
+      "hole": 1,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Ruddell, Dick",
+      "timestamp": "2026-05-27T11:00:31.074Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9365",
+      "volunteerName": "Pugh, Clayton",
+      "hole": 12,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-27T11:03:03.974Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -12224,6 +12254,15 @@
     "pairingsText": "Pairings Sheet (demo data)"
   },
   "activityLog": [
+    {
+      "id": "1779879783938",
+      "timestamp": "2026-05-27T11:03:03.938Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Pugh, Clayton",
+      "details": "Wednesday AM - Hole #12"
+    },
     {
       "id": "1779879569356",
       "timestamp": "2026-05-27T10:59:29.356Z",
