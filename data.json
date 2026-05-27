@@ -15218,16 +15218,6 @@
       "isAlternate": true
     },
     {
-      "volunteerId": "9051",
-      "volunteerName": "Edmiston, Charles",
-      "hole": 16,
-      "day": "Wednesday",
-      "shift": "PM",
-      "checkedInBy": "Mulvaney, Matt",
-      "timestamp": "2026-05-27T18:32:41.879Z",
-      "isAlternate": false
-    },
-    {
       "volunteerId": "9788",
       "volunteerName": "Kramer, Ed",
       "hole": 10,
@@ -15245,6 +15235,86 @@
       "shift": "PM",
       "checkedInBy": "Sanders, Steve",
       "timestamp": "2026-05-27T19:05:07.988Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2745",
+      "volunteerName": "Roy, Mike",
+      "hole": 16,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Roy, Mike",
+      "timestamp": "2026-05-27T19:33:15.222Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "1770",
+      "volunteerName": "Mulvaney, Matt",
+      "hole": 16,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Roy, Mike",
+      "timestamp": "2026-05-27T19:33:20.352Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8895",
+      "volunteerName": "Addison, Shirley",
+      "hole": 16,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Roy, Mike",
+      "timestamp": "2026-05-27T19:33:20.479Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6349",
+      "volunteerName": "Bailey, Archie",
+      "hole": 16,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Roy, Mike",
+      "timestamp": "2026-05-27T19:33:22.367Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6731",
+      "volunteerName": "Emerson, David",
+      "hole": 16,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Roy, Mike",
+      "timestamp": "2026-05-27T19:33:29.612Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10126",
+      "volunteerName": "Sickler, Debra",
+      "hole": 16,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Roy, Mike",
+      "timestamp": "2026-05-27T19:33:33.858Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7250",
+      "volunteerName": "Wilson, Jane",
+      "hole": 16,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Roy, Mike",
+      "timestamp": "2026-05-27T19:33:35.529Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5952",
+      "volunteerName": "Pate, Teresa",
+      "hole": 16,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Roy, Mike",
+      "timestamp": "2026-05-27T19:33:35.842Z",
       "isAlternate": false
     }
   ],
@@ -15265,6 +15335,105 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779910419510",
+      "timestamp": "2026-05-27T19:33:39.510Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 16",
+      "details": "Submitted Wednesday PM for Hole 16"
+    },
+    {
+      "id": "1779910415903",
+      "timestamp": "2026-05-27T19:33:35.903Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Pate, Teresa",
+      "details": "Wednesday PM - Hole #16"
+    },
+    {
+      "id": "1779910415609",
+      "timestamp": "2026-05-27T19:33:35.609Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Wilson, Jane",
+      "details": "Wednesday PM - Hole #16"
+    },
+    {
+      "id": "1779910413929",
+      "timestamp": "2026-05-27T19:33:33.929Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Sickler, Debra",
+      "details": "Wednesday PM - Hole #16"
+    },
+    {
+      "id": "1779910409678",
+      "timestamp": "2026-05-27T19:33:29.678Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Emerson, David",
+      "details": "Wednesday PM - Hole #16"
+    },
+    {
+      "id": "1779910406194",
+      "timestamp": "2026-05-27T19:33:26.194Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Edmiston, Charles",
+      "details": "Wednesday PM - Hole #16"
+    },
+    {
+      "id": "1779910402436",
+      "timestamp": "2026-05-27T19:33:22.436Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Bailey, Archie",
+      "details": "Wednesday PM - Hole #16"
+    },
+    {
+      "id": "1779910400535",
+      "timestamp": "2026-05-27T19:33:20.535Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Addison, Shirley",
+      "details": "Wednesday PM - Hole #16"
+    },
+    {
+      "id": "1779910400414",
+      "timestamp": "2026-05-27T19:33:20.414Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Mulvaney, Matt",
+      "details": "Wednesday PM - Hole #16"
+    },
+    {
+      "id": "1779910395292",
+      "timestamp": "2026-05-27T19:33:15.292Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Roy, Mike",
+      "details": "Wednesday PM - Hole #16"
+    },
+    {
+      "id": "1779910374210",
+      "timestamp": "2026-05-27T19:32:54.210Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779909666707",
       "timestamp": "2026-05-27T19:21:06.707Z",
