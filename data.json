@@ -1588,6 +1588,7 @@
       "hat": "",
       "scheduled": {
         "Wednesday AM": true,
+        "Wednesday PM": true,
         "Thursday PM": true,
         "Friday AM": true,
         "Saturday PM": true,
@@ -1597,7 +1598,7 @@
       "address": "17 Corona Cir Odessa, TX 79763-2216",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779904303329
     },
     {
       "id": "2135",
@@ -1952,8 +1953,6 @@
       "scheduled": {
         "Monday AM": true,
         "Monday PM": true,
-        "Tuesday AM": true,
-        "Tuesday PM": true,
         "Wednesday AM": true,
         "Wednesday PM": true,
         "Thursday AM": true,
@@ -1969,7 +1968,7 @@
       "volId": "2055",
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
-      "lastModified": 1778813044771,
+      "lastModified": 1779904482276,
       "volunteerPassword": "$2b$10$pciWl12HrO/RItMHahovzO2jlrwCzV/bt1htIdrohvFxaBsXXBaBK"
     },
     {
@@ -13445,16 +13444,6 @@
       "isAlternate": false
     },
     {
-      "volunteerId": "8056",
-      "volunteerName": "Daly, Lee",
-      "hole": 9,
-      "day": "Wednesday",
-      "shift": "AM",
-      "checkedInBy": "Jutras, Michael",
-      "timestamp": "2026-05-27T14:30:48.009Z",
-      "isAlternate": false
-    },
-    {
       "volunteerId": "9371",
       "volunteerName": "Duckett, Gary",
       "hole": 9,
@@ -14993,6 +14982,126 @@
       "checkedInBy": "Browning, Wayne",
       "timestamp": "2026-05-27T17:47:30.445Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "8056",
+      "volunteerName": "Daly, Lee",
+      "hole": 9,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Edwards, Bill",
+      "timestamp": "2026-05-27T17:52:13.262Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8056",
+      "volunteerName": "Daly, Lee",
+      "hole": 9,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Burnett, Eric",
+      "timestamp": "2026-05-27T17:52:45.498Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10328",
+      "volunteerName": "Elliott, David",
+      "hole": 9,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Burnett, Eric",
+      "timestamp": "2026-05-27T17:52:48.738Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10276",
+      "volunteerName": "Lawson, Arnie",
+      "hole": 9,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Burnett, Eric",
+      "timestamp": "2026-05-27T17:52:51.647Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9109",
+      "volunteerName": "Sippel, Mark",
+      "hole": 9,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Burnett, Eric",
+      "timestamp": "2026-05-27T17:52:54.494Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6217",
+      "volunteerName": "Nederostek, Brad",
+      "hole": 4,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Nederostek, Brad",
+      "timestamp": "2026-05-27T17:53:17.707Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "3974",
+      "volunteerName": "Schafer, John",
+      "hole": 4,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Nederostek, Brad",
+      "timestamp": "2026-05-27T17:53:17.954Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7771",
+      "volunteerName": "Burford, Gary",
+      "hole": 4,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Nederostek, Brad",
+      "timestamp": "2026-05-27T17:53:20.353Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "182",
+      "volunteerName": "Killinger, George",
+      "hole": 4,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Nederostek, Brad",
+      "timestamp": "2026-05-27T17:53:20.446Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9831",
+      "volunteerName": "Korywchak, Alan",
+      "hole": 4,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Nederostek, Brad",
+      "timestamp": "2026-05-27T17:53:21.158Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9830",
+      "volunteerName": "Korywchak, Joanne",
+      "hole": 4,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Nederostek, Brad",
+      "timestamp": "2026-05-27T17:53:21.542Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4800",
+      "volunteerName": "Livingston, Jennifier",
+      "hole": 4,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Nederostek, Brad",
+      "timestamp": "2026-05-27T17:53:25.854Z",
+      "isAlternate": true
     }
   ],
   "submissions": [],
@@ -15012,6 +15121,322 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779904482277-bzahar",
+      "timestamp": "2026-05-27T17:54:42.277Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Edwards, Bill",
+      "details": "removed Tuesday AM, Tuesday PM"
+    },
+    {
+      "id": "1779904418192",
+      "timestamp": "2026-05-27T17:53:38.193Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 4",
+      "details": "Submitted Wednesday PM for Hole 4"
+    },
+    {
+      "id": "1779904405907",
+      "timestamp": "2026-05-27T17:53:25.907Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Livingston, Jennifier",
+      "details": "Wednesday PM - Hole #4 (alternate)"
+    },
+    {
+      "id": "1779904405586",
+      "timestamp": "2026-05-27T17:53:25.586Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Knight, Ron",
+      "details": "Wednesday PM - Hole #4 (alternate)"
+    },
+    {
+      "id": "1779904405533",
+      "timestamp": "2026-05-27T17:53:25.533Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Knight, Ron",
+      "details": "Wednesday PM - Hole #4 (alternate)"
+    },
+    {
+      "id": "1779904401582",
+      "timestamp": "2026-05-27T17:53:21.582Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Korywchak, Joanne",
+      "details": "Wednesday PM - Hole #4"
+    },
+    {
+      "id": "1779904401198",
+      "timestamp": "2026-05-27T17:53:21.198Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Korywchak, Alan",
+      "details": "Wednesday PM - Hole #4"
+    },
+    {
+      "id": "1779904400552",
+      "timestamp": "2026-05-27T17:53:20.552Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Killinger, George",
+      "details": "Wednesday PM - Hole #4"
+    },
+    {
+      "id": "1779904397998",
+      "timestamp": "2026-05-27T17:53:17.998Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Schafer, John",
+      "details": "Wednesday PM - Hole #4"
+    },
+    {
+      "id": "1779904397747",
+      "timestamp": "2026-05-27T17:53:17.748Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Nederostek, Brad",
+      "details": "Wednesday PM - Hole #4"
+    },
+    {
+      "id": "1779904385101",
+      "timestamp": "2026-05-27T17:53:05.101Z",
+      "user": "Burnett, Eric",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 9",
+      "details": "Submitted Wednesday PM for Hole 9"
+    },
+    {
+      "id": "1779904374550",
+      "timestamp": "2026-05-27T17:52:54.550Z",
+      "user": "Burnett, Eric",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Sippel, Mark",
+      "details": "Wednesday PM - Hole #9"
+    },
+    {
+      "id": "1779904371701",
+      "timestamp": "2026-05-27T17:52:51.701Z",
+      "user": "Burnett, Eric",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Lawson, Arnie",
+      "details": "Wednesday PM - Hole #9"
+    },
+    {
+      "id": "1779904368801",
+      "timestamp": "2026-05-27T17:52:48.801Z",
+      "user": "Burnett, Eric",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Elliott, David",
+      "details": "Wednesday PM - Hole #9"
+    },
+    {
+      "id": "1779904365563",
+      "timestamp": "2026-05-27T17:52:45.563Z",
+      "user": "Burnett, Eric",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Daly, Lee",
+      "details": "Wednesday PM - Hole #9"
+    },
+    {
+      "id": "1779904335972-pgveyl",
+      "timestamp": "2026-05-27T17:52:15.972Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "rejected-bulk-edit",
+      "target": "Smith, Bruce T.",
+      "details": "Captain hole 9 attempted to modify hole 12 volunteer (auto-rejected via bulk save — no data changed)",
+      "targetHole": 12,
+      "actorHole": 9
+    },
+    {
+      "id": "1779904335972-4bgzdj",
+      "timestamp": "2026-05-27T17:52:15.972Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "rejected-bulk-edit",
+      "target": "Karnes, Tripp",
+      "details": "Hole reassignment attempt 18→16 (admin-only) (auto-rejected via bulk save — no data changed)",
+      "targetHole": 18,
+      "actorHole": 9
+    },
+    {
+      "id": "1779904335971-8wi9aq",
+      "timestamp": "2026-05-27T17:52:15.971Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "rejected-bulk-edit",
+      "target": "Kramer, Ed",
+      "details": "Captain hole 9 attempted to modify hole 10 volunteer (auto-rejected via bulk save — no data changed)",
+      "targetHole": 10,
+      "actorHole": 9
+    },
+    {
+      "id": "1779904335971-8i4xb2",
+      "timestamp": "2026-05-27T17:52:15.971Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "rejected-bulk-edit",
+      "target": "Oakley, Jeff",
+      "details": "Captain hole 9 attempted to modify hole 11 volunteer (auto-rejected via bulk save — no data changed)",
+      "targetHole": 11,
+      "actorHole": 9
+    },
+    {
+      "id": "1779904335970-2x3zw8",
+      "timestamp": "2026-05-27T17:52:15.970Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "rejected-bulk-edit",
+      "target": "Hardaway, Jerry",
+      "details": "Captain hole 9 attempted to modify hole 1 volunteer (auto-rejected via bulk save — no data changed)",
+      "targetHole": 1,
+      "actorHole": 9
+    },
+    {
+      "id": "1779904335969-h1v3zi",
+      "timestamp": "2026-05-27T17:52:15.969Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "rejected-bulk-edit",
+      "target": "Anderson, Rob",
+      "details": "Captain hole 9 attempted to modify hole 8 volunteer (auto-rejected via bulk save — no data changed)",
+      "targetHole": 8,
+      "actorHole": 9
+    },
+    {
+      "id": "1779904335969-6m45o4",
+      "timestamp": "2026-05-27T17:52:15.969Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "rejected-bulk-edit",
+      "target": "Bravo, Albert",
+      "details": "Captain hole 9 attempted to modify hole 13 volunteer (auto-rejected via bulk save — no data changed)",
+      "targetHole": 13,
+      "actorHole": 9
+    },
+    {
+      "id": "1779904334446-emmur6",
+      "timestamp": "2026-05-27T17:52:14.446Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "rejected-bulk-edit",
+      "target": "Karnes, Tripp",
+      "details": "Hole reassignment attempt 18→16 (admin-only) (auto-rejected via bulk save — no data changed)",
+      "targetHole": 18,
+      "actorHole": 9
+    },
+    {
+      "id": "1779904334445-25wg3d",
+      "timestamp": "2026-05-27T17:52:14.445Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "rejected-bulk-edit",
+      "target": "Smith, Bruce T.",
+      "details": "Captain hole 9 attempted to modify hole 12 volunteer (auto-rejected via bulk save — no data changed)",
+      "targetHole": 12,
+      "actorHole": 9
+    },
+    {
+      "id": "1779904334444-qw5li5",
+      "timestamp": "2026-05-27T17:52:14.444Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "rejected-bulk-edit",
+      "target": "Kramer, Ed",
+      "details": "Captain hole 9 attempted to modify hole 10 volunteer (auto-rejected via bulk save — no data changed)",
+      "targetHole": 10,
+      "actorHole": 9
+    },
+    {
+      "id": "1779904334444-oge9t0",
+      "timestamp": "2026-05-27T17:52:14.444Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "rejected-bulk-edit",
+      "target": "Oakley, Jeff",
+      "details": "Captain hole 9 attempted to modify hole 11 volunteer (auto-rejected via bulk save — no data changed)",
+      "targetHole": 11,
+      "actorHole": 9
+    },
+    {
+      "id": "1779904334443-l2ia1x",
+      "timestamp": "2026-05-27T17:52:14.443Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "rejected-bulk-edit",
+      "target": "Hardaway, Jerry",
+      "details": "Captain hole 9 attempted to modify hole 1 volunteer (auto-rejected via bulk save — no data changed)",
+      "targetHole": 1,
+      "actorHole": 9
+    },
+    {
+      "id": "1779904334442-pf75vo",
+      "timestamp": "2026-05-27T17:52:14.442Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "rejected-bulk-edit",
+      "target": "Bravo, Albert",
+      "details": "Captain hole 9 attempted to modify hole 13 volunteer (auto-rejected via bulk save — no data changed)",
+      "targetHole": 13,
+      "actorHole": 9
+    },
+    {
+      "id": "1779904334441-q98gi1",
+      "timestamp": "2026-05-27T17:52:14.441Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "rejected-bulk-edit",
+      "target": "Anderson, Rob",
+      "details": "Captain hole 9 attempted to modify hole 8 volunteer (auto-rejected via bulk save — no data changed)",
+      "targetHole": 8,
+      "actorHole": 9
+    },
+    {
+      "id": "1779904333230",
+      "timestamp": "2026-05-27T17:52:13.230Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Daly, Lee",
+      "details": "Wednesday AM - Hole #9"
+    },
+    {
+      "id": "1779904330389",
+      "timestamp": "2026-05-27T17:52:10.389Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Daly, Lee",
+      "details": "Wednesday AM - Hole #9"
+    },
+    {
+      "id": "1779904303329-6tuqcg",
+      "timestamp": "2026-05-27T17:51:43.329Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Daly, Lee",
+      "details": "added Wednesday PM"
+    },
     {
       "id": "1779904059811",
       "timestamp": "2026-05-27T17:47:39.811Z",
@@ -17028,6 +17453,24 @@
       "action": "edit-volunteer",
       "target": "Karenes, Tripp",
       "details": "Updated fields: hole, originalHole"
+    },
+    {
+      "id": "1779897658523",
+      "timestamp": "2026-05-27T16:00:58.523Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 9",
+      "details": "Submitted Wednesday PM for Hole 9"
+    },
+    {
+      "id": "1779897652575",
+      "timestamp": "2026-05-27T16:00:52.575Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Trias, Dan",
+      "details": "Wednesday PM - Hole #9"
     },
     {
       "id": "1779897636934",
@@ -34344,5 +34787,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779903160961
+  "serverNow": 1779892270463
 }
