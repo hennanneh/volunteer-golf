@@ -15366,6 +15366,15 @@
   },
   "activityLog": [
     {
+      "id": "1779920517446",
+      "timestamp": "2026-05-27T22:21:57.446Z",
+      "user": "Clayton, Rodney",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1779919255460",
       "timestamp": "2026-05-27T22:00:55.460Z",
       "user": "Mcdaniel, Patrick",
