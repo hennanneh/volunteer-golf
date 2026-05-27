@@ -12517,6 +12517,16 @@
       "checkedInBy": "Trout, Wayne",
       "timestamp": "2026-05-27T11:42:16.975Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "10437",
+      "volunteerName": "White, Drake",
+      "hole": 2,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Gordon, Gary",
+      "timestamp": "2026-05-27T11:45:17.009Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -12535,6 +12545,24 @@
     "pairingsText": "Pairings Sheet (demo data)"
   },
   "activityLog": [
+    {
+      "id": "1779882370924",
+      "timestamp": "2026-05-27T11:46:10.924Z",
+      "user": "Butler, Mark",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779882316852",
+      "timestamp": "2026-05-27T11:45:16.852Z",
+      "user": "Gordon, Gary",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "White, Drake",
+      "details": "Wednesday AM - Hole #2"
+    },
     {
       "id": "1779882137674-hjwuqt",
       "timestamp": "2026-05-27T11:42:17.674Z",
@@ -27034,5 +27062,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779881549572
+  "serverNow": 1779882137720
 }
