@@ -13440,6 +13440,15 @@
   },
   "activityLog": [
     {
+      "id": "1779889991971",
+      "timestamp": "2026-05-27T13:53:11.971Z",
+      "user": "Gilchrist, William (Bill)",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
       "id": "1779889588391",
       "timestamp": "2026-05-27T13:46:28.391Z",
       "user": "Moore, Barry",
