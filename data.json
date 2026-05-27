@@ -12175,6 +12175,24 @@
   },
   "activityLog": [
     {
+      "id": "1779878873749",
+      "timestamp": "2026-05-27T10:47:53.749Z",
+      "user": "Montalvo, Sammy",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779878709275",
+      "timestamp": "2026-05-27T10:45:09.275Z",
+      "user": "Wilson, Todd",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1779878602988",
       "timestamp": "2026-05-27T10:43:22.988Z",
       "user": "Watson, Stan",
