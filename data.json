@@ -1588,7 +1588,6 @@
       "hat": "",
       "scheduled": {
         "Wednesday AM": true,
-        "Wednesday PM": true,
         "Thursday PM": true,
         "Friday AM": true,
         "Saturday PM": true,
@@ -1598,7 +1597,7 @@
       "address": "17 Corona Cir Odessa, TX 79763-2216",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779904303329
+      "lastModified": 1779907286539
     },
     {
       "id": "2135",
@@ -1953,6 +1952,8 @@
       "scheduled": {
         "Monday AM": true,
         "Monday PM": true,
+        "Tuesday AM": true,
+        "Tuesday PM": true,
         "Wednesday AM": true,
         "Wednesday PM": true,
         "Thursday AM": true,
@@ -1968,7 +1969,7 @@
       "volId": "2055",
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
-      "lastModified": 1779904482276,
+      "lastModified": 1779907286539,
       "volunteerPassword": "$2b$10$pciWl12HrO/RItMHahovzO2jlrwCzV/bt1htIdrohvFxaBsXXBaBK"
     },
     {
@@ -3147,7 +3148,7 @@
       "hole": 16,
       "phone": "(972) 935-7020",
       "email": "dwharv22@yahoo.com",
-      "yearsWorked": 19,
+      "yearsWorked": 18,
       "hat": "",
       "scheduled": {
         "Wednesday AM": true,
@@ -3160,9 +3161,7 @@
       "address": "215 SANTA FE TRL WAXAHACHIE, TX 75165",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779905759664,
-      "notes": "",
-      "hatReceived": false
+      "lastModified": 1779907286539
     },
     {
       "id": "10348",
@@ -4442,9 +4441,11 @@
       "scheduled": {
         "Monday AM": true,
         "Wednesday AM": true,
+        "Wednesday PM": true,
         "Thursday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
+        "Friday PM": true,
         "Saturday AM": true,
         "Saturday PM": true,
         "Sunday AM": true
@@ -4453,7 +4454,7 @@
       "address": "764 Parkview Drive Burleson, TX 76028",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779901418839
+      "lastModified": 1779907264397
     },
     {
       "id": "8345",
@@ -4697,6 +4698,7 @@
       "scheduled": {
         "Wednesday PM": true,
         "Thursday AM": true,
+        "Friday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
         "Sunday PM": true
@@ -4705,7 +4707,7 @@
       "volId": "5441",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779902269761
+      "lastModified": 1779907286539
     },
     {
       "id": "6967",
@@ -6054,7 +6056,6 @@
         "Tuesday AM": true,
         "Tuesday PM": true,
         "Wednesday AM": true,
-        "Wednesday PM": true,
         "Thursday PM": true,
         "Friday AM": true,
         "Saturday PM": true,
@@ -6065,7 +6066,7 @@
       "address": "6705 Lucas Ln North Richland Hills, TX 76182",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779903225828,
+      "lastModified": 1779907286539,
       "notes": "",
       "hatReceived": false
     },
@@ -7487,8 +7488,8 @@
       "hat": "",
       "scheduled": {
         "Tuesday AM": true,
-        "Wednesday PM": true,
         "Thursday AM": true,
+        "Thursday PM": true,
         "Friday PM": true,
         "Saturday AM": true,
         "Sunday PM": true
@@ -7498,7 +7499,7 @@
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
       "notes": "",
-      "lastModified": 1779902269761,
+      "lastModified": 1779907286539,
       "volunteerPassword": "$2b$10$w1xd2loPnmEAFEv73loWHOgwqo9FCv/3MAC8k087QbxOAVXifBjKa"
     },
     {
@@ -7738,6 +7739,7 @@
       "hat": "",
       "scheduled": {
         "Wednesday AM": true,
+        "Wednesday PM": true,
         "Thursday PM": true,
         "Friday AM": true,
         "Saturday PM": true,
@@ -7747,7 +7749,7 @@
       "address": "481 Pecan Dr Burleson, TX 76028",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779902788415
+      "lastModified": 1779907286539
     },
     {
       "id": "4204",
@@ -15244,6 +15246,16 @@
       "checkedInBy": "Mulvaney, Matt",
       "timestamp": "2026-05-27T18:32:41.879Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "9788",
+      "volunteerName": "Kramer, Ed",
+      "hole": 10,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-27T18:42:59.871Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -15263,6 +15275,130 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779907380103",
+      "timestamp": "2026-05-27T18:43:00.103Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Kramer, Ed",
+      "details": "Wednesday PM - Hole #10"
+    },
+    {
+      "id": "1779907368198",
+      "timestamp": "2026-05-27T18:42:48.199Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779907338698",
+      "timestamp": "2026-05-27T18:42:18.699Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1779907286551-8vhnc3",
+      "timestamp": "2026-05-27T18:41:26.551Z",
+      "user": "unauth-107.116.180.139",
+      "userType": "unauthenticated",
+      "action": "edit-schedule",
+      "target": "Schultz, Joni",
+      "details": "added Thursday PM; removed Wednesday PM (via bulk save)",
+      "targetHole": 15
+    },
+    {
+      "id": "1779907286551-1uuz3h",
+      "timestamp": "2026-05-27T18:41:26.551Z",
+      "user": "unauth-107.116.180.139",
+      "userType": "unauthenticated",
+      "action": "edit-schedule",
+      "target": "Smith, Bruce T.",
+      "details": "added Wednesday PM (via bulk save)",
+      "targetHole": 12
+    },
+    {
+      "id": "1779907286550-vqekas",
+      "timestamp": "2026-05-27T18:41:26.550Z",
+      "user": "unauth-107.116.180.139",
+      "userType": "unauthenticated",
+      "action": "edit-schedule",
+      "target": "Oakley, Jeff",
+      "details": "removed Wednesday PM (via bulk save)",
+      "targetHole": 11
+    },
+    {
+      "id": "1779907286545-hn7kwu",
+      "timestamp": "2026-05-27T18:41:26.545Z",
+      "user": "unauth-107.116.180.139",
+      "userType": "unauthenticated",
+      "action": "edit-schedule",
+      "target": "Lee, Rodney",
+      "details": "added Friday AM (via bulk save)",
+      "targetHole": 6
+    },
+    {
+      "id": "1779907286544-jzsb64",
+      "timestamp": "2026-05-27T18:41:26.544Z",
+      "user": "unauth-107.116.180.139",
+      "userType": "unauthenticated",
+      "action": "edit-volunteer",
+      "target": "Harvey, Dalton",
+      "details": "Updated fields: yearsWorked, notes, hatReceived (via bulk save)",
+      "targetHole": 16
+    },
+    {
+      "id": "1779907286543-9u87s5",
+      "timestamp": "2026-05-27T18:41:26.543Z",
+      "user": "unauth-107.116.180.139",
+      "userType": "unauthenticated",
+      "action": "edit-schedule",
+      "target": "Daly, Lee",
+      "details": "removed Wednesday PM (via bulk save)",
+      "targetHole": 9
+    },
+    {
+      "id": "1779907286543-ze1ffh",
+      "timestamp": "2026-05-27T18:41:26.543Z",
+      "user": "unauth-107.116.180.139",
+      "userType": "unauthenticated",
+      "action": "edit-schedule",
+      "target": "Edwards, Bill",
+      "details": "added Tuesday AM, Tuesday PM (via bulk save)",
+      "targetHole": 9
+    },
+    {
+      "id": "1779907285992",
+      "timestamp": "2026-05-27T18:41:25.992Z",
+      "user": "Gradt, Jason",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 18",
+      "details": "Submitted Wednesday PM for Hole 18"
+    },
+    {
+      "id": "1779907285730",
+      "timestamp": "2026-05-27T18:41:25.731Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779907264397-tlp0gv",
+      "timestamp": "2026-05-27T18:41:04.397Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Kramer, Ed",
+      "details": "added Wednesday PM, Friday PM"
+    },
     {
       "id": "1779906761731",
       "timestamp": "2026-05-27T18:32:41.731Z",
@@ -35115,5 +35251,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779906222881
+  "serverNow": 1779900841375
 }
