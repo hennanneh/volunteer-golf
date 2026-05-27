@@ -13220,6 +13220,16 @@
       "checkedInBy": "Pugh, Clayton",
       "timestamp": "2026-05-27T13:12:40.950Z",
       "isAlternate": true
+    },
+    {
+      "volunteerId": "5401",
+      "volunteerName": "Badalamenti, Jim",
+      "hole": 8,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-27T13:15:33.839Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -13239,6 +13249,51 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779887757414",
+      "timestamp": "2026-05-27T13:15:57.414Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779887746353",
+      "timestamp": "2026-05-27T13:15:46.353Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Davidson, Glen",
+      "details": "Wednesday AM - Hole #8 (alternate)"
+    },
+    {
+      "id": "1779887744618",
+      "timestamp": "2026-05-27T13:15:44.618Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Davidson, Glen",
+      "details": "Wednesday AM - Hole #8 (alternate)"
+    },
+    {
+      "id": "1779887737714",
+      "timestamp": "2026-05-27T13:15:37.714Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 8",
+      "details": "Submitted Wednesday AM for Hole 8"
+    },
+    {
+      "id": "1779887734240",
+      "timestamp": "2026-05-27T13:15:34.240Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Badalamenti, Jim",
+      "details": "Wednesday AM - Hole #8"
+    },
     {
       "id": "1779887611507-om6gw8",
       "timestamp": "2026-05-27T13:13:31.507Z",
