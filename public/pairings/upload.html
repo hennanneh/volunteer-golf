@@ -574,7 +574,7 @@ Akshay Bhatia
         if (above && below && above === below && !TIME_REGEX.test(above)) {
           let marker = null;
           for (const m of markers) { if (m.lineIdx < i) marker = m; else break; }
-          if (marker && marker.players.length < 5 && !marker.players.includes(above)) {
+          if (marker && marker.players.length < 6 && !marker.players.includes(above)) {
             marker.players.push(above);
           }
         }
