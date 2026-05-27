@@ -12591,6 +12591,36 @@
       "checkedInBy": "Gordon, Gary",
       "timestamp": "2026-05-27T12:04:13.847Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "10229",
+      "volunteerName": "Corson, Michael",
+      "hole": 3,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Wilson, Todd",
+      "timestamp": "2026-05-27T12:12:05.945Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7191",
+      "volunteerName": "Sanders, Steve",
+      "hole": 14,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Sanders, Steve",
+      "timestamp": "2026-05-27T12:12:11.391Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5192",
+      "volunteerName": "Imboden, Thomas",
+      "hole": 5,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Imboden, Thomas",
+      "timestamp": "2026-05-27T12:13:42.721Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -12609,6 +12639,60 @@
     "pairingsText": "Pairings Sheet (demo data)"
   },
   "activityLog": [
+    {
+      "id": "1779884024790",
+      "timestamp": "2026-05-27T12:13:44.790Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 5",
+      "details": "Submitted Wednesday AM for Hole 5"
+    },
+    {
+      "id": "1779884022806",
+      "timestamp": "2026-05-27T12:13:42.806Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Imboden, Thomas",
+      "details": "Wednesday AM - Hole #5"
+    },
+    {
+      "id": "1779884019350",
+      "timestamp": "2026-05-27T12:13:39.350Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779883942092",
+      "timestamp": "2026-05-27T12:12:22.092Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Sanders, Steve",
+      "details": "Wednesday AM - Hole #14"
+    },
+    {
+      "id": "1779883929346",
+      "timestamp": "2026-05-27T12:12:09.346Z",
+      "user": "Wilson, Todd",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 3",
+      "details": "Submitted Wednesday AM for Hole 3"
+    },
+    {
+      "id": "1779883926097",
+      "timestamp": "2026-05-27T12:12:06.097Z",
+      "user": "Wilson, Todd",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Corson, Michael",
+      "details": "Wednesday AM - Hole #3"
+    },
     {
       "id": "1779883785682-9ukosu",
       "timestamp": "2026-05-27T12:09:45.682Z",
@@ -27189,5 +27273,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779882137720
+  "serverNow": 1779883930334
 }
