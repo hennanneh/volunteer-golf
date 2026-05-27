@@ -12551,6 +12551,46 @@
       "checkedInBy": "Pugh, Clayton",
       "timestamp": "2026-05-27T11:52:49.469Z",
       "isAlternate": true
+    },
+    {
+      "volunteerId": "5240",
+      "volunteerName": "Rogenski, Chris P.",
+      "hole": 8,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-27T12:02:10.618Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5240",
+      "volunteerName": "Rogenski, Chris P.",
+      "hole": 8,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-27T12:02:21.073Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "214",
+      "volunteerName": "Osiek, Curt",
+      "hole": 10,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-27T12:04:08.861Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2629",
+      "volunteerName": "Smith, Jeff",
+      "hole": 2,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Gordon, Gary",
+      "timestamp": "2026-05-27T12:04:13.847Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -12569,6 +12609,24 @@
     "pairingsText": "Pairings Sheet (demo data)"
   },
   "activityLog": [
+    {
+      "id": "1779883472712",
+      "timestamp": "2026-05-27T12:04:32.712Z",
+      "user": "Gordon, Gary",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779883252010",
+      "timestamp": "2026-05-27T12:00:52.011Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779883159563-e2eiua",
       "timestamp": "2026-05-27T11:59:19.563Z",
