@@ -14476,16 +14476,6 @@
       "isAlternate": false
     },
     {
-      "volunteerId": "9834",
-      "volunteerName": "Piper, Kathleen",
-      "hole": 6,
-      "day": "Wednesday",
-      "shift": "PM",
-      "checkedInBy": "Mcdaniel, Patrick",
-      "timestamp": "2026-05-27T16:59:46.323Z",
-      "isAlternate": false
-    },
-    {
       "volunteerId": "4634",
       "volunteerName": "Wright, Tony",
       "hole": 6,
@@ -14514,6 +14504,66 @@
       "checkedInBy": "Pugh, Clayton",
       "timestamp": "2026-05-27T17:03:56.883Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "10451",
+      "volunteerName": "Miller, David",
+      "hole": 3,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Butler, Mark",
+      "timestamp": "2026-05-27T17:05:17.564Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "1720",
+      "volunteerName": "Butler, Mark",
+      "hole": 3,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Butler, Mark",
+      "timestamp": "2026-05-27T17:05:21.140Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8234",
+      "volunteerName": "Wilson, Todd",
+      "hole": 3,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Butler, Mark",
+      "timestamp": "2026-05-27T17:05:23.550Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8013",
+      "volunteerName": "Naukam, Philip",
+      "hole": 12,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-27T17:06:27.492Z",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "8791",
+      "volunteerName": "Moss, Linc",
+      "hole": 3,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Butler, Mark",
+      "timestamp": "2026-05-27T17:06:41.879Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9082",
+      "volunteerName": "King, Pat",
+      "hole": 8,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-27T17:08:30.169Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -14533,6 +14583,175 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779901712448-h98fmv",
+      "timestamp": "2026-05-27T17:08:32.448Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "rejected-bulk-edit",
+      "target": "Lee, Rodney",
+      "details": "Captain hole 8 attempted to modify hole 6 volunteer (auto-rejected via bulk save — no data changed)",
+      "targetHole": 6,
+      "actorHole": 8
+    },
+    {
+      "id": "1779901710761",
+      "timestamp": "2026-05-27T17:08:30.761Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "King, Pat",
+      "details": "Wednesday PM - Hole #8"
+    },
+    {
+      "id": "1779901708946-w5ag95",
+      "timestamp": "2026-05-27T17:08:28.946Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "rejected-bulk-edit",
+      "target": "Lee, Rodney",
+      "details": "Captain hole 8 attempted to modify hole 6 volunteer (auto-rejected via bulk save — no data changed)",
+      "targetHole": 6,
+      "actorHole": 8
+    },
+    {
+      "id": "1779901706605",
+      "timestamp": "2026-05-27T17:08:26.605Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779901605957",
+      "timestamp": "2026-05-27T17:06:45.957Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Piper, Kathleen",
+      "details": "Wednesday PM - Hole #6"
+    },
+    {
+      "id": "1779901602928-5slzmr",
+      "timestamp": "2026-05-27T17:06:42.928Z",
+      "user": "Butler, Mark",
+      "userType": "Captain",
+      "action": "rejected-bulk-edit",
+      "target": "Lee, Rodney",
+      "details": "Captain hole 3 attempted to modify hole 6 volunteer (auto-rejected via bulk save — no data changed)",
+      "targetHole": 6,
+      "actorHole": 3
+    },
+    {
+      "id": "1779901602927-w7ykoy",
+      "timestamp": "2026-05-27T17:06:42.927Z",
+      "user": "Butler, Mark",
+      "userType": "Captain",
+      "action": "rejected-bulk-edit",
+      "target": "Kramer, Ed",
+      "details": "Captain hole 3 attempted to modify hole 10 volunteer (auto-rejected via bulk save — no data changed)",
+      "targetHole": 10,
+      "actorHole": 3
+    },
+    {
+      "id": "1779901602032",
+      "timestamp": "2026-05-27T17:06:42.032Z",
+      "user": "Butler, Mark",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Moss, Linc",
+      "details": "Wednesday PM - Hole #3"
+    },
+    {
+      "id": "1779901591517",
+      "timestamp": "2026-05-27T17:06:31.517Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 6",
+      "details": "Submitted Wednesday AM for Hole 6"
+    },
+    {
+      "id": "1779901587403",
+      "timestamp": "2026-05-27T17:06:27.403Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Naukam, Philip",
+      "details": "Wednesday PM - Hole #12 (alternate)"
+    },
+    {
+      "id": "1779901524426-yo5g6f",
+      "timestamp": "2026-05-27T17:05:24.426Z",
+      "user": "Butler, Mark",
+      "userType": "Captain",
+      "action": "rejected-bulk-edit",
+      "target": "Kramer, Ed",
+      "details": "Captain hole 3 attempted to modify hole 10 volunteer (auto-rejected via bulk save — no data changed)",
+      "targetHole": 10,
+      "actorHole": 3
+    },
+    {
+      "id": "1779901524426-z09gy9",
+      "timestamp": "2026-05-27T17:05:24.426Z",
+      "user": "Butler, Mark",
+      "userType": "Captain",
+      "action": "rejected-bulk-edit",
+      "target": "Lee, Rodney",
+      "details": "Captain hole 3 attempted to modify hole 6 volunteer (auto-rejected via bulk save — no data changed)",
+      "targetHole": 6,
+      "actorHole": 3
+    },
+    {
+      "id": "1779901523649",
+      "timestamp": "2026-05-27T17:05:23.649Z",
+      "user": "Butler, Mark",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Wilson, Todd",
+      "details": "Wednesday PM - Hole #3"
+    },
+    {
+      "id": "1779901521923-q5tggt",
+      "timestamp": "2026-05-27T17:05:21.923Z",
+      "user": "Butler, Mark",
+      "userType": "Captain",
+      "action": "rejected-bulk-edit",
+      "target": "Kramer, Ed",
+      "details": "Captain hole 3 attempted to modify hole 10 volunteer (auto-rejected via bulk save — no data changed)",
+      "targetHole": 10,
+      "actorHole": 3
+    },
+    {
+      "id": "1779901521923-1jn5n9",
+      "timestamp": "2026-05-27T17:05:21.923Z",
+      "user": "Butler, Mark",
+      "userType": "Captain",
+      "action": "rejected-bulk-edit",
+      "target": "Lee, Rodney",
+      "details": "Captain hole 3 attempted to modify hole 6 volunteer (auto-rejected via bulk save — no data changed)",
+      "targetHole": 6,
+      "actorHole": 3
+    },
+    {
+      "id": "1779901521199",
+      "timestamp": "2026-05-27T17:05:21.199Z",
+      "user": "Butler, Mark",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Butler, Mark",
+      "details": "Wednesday PM - Hole #3"
+    },
+    {
+      "id": "1779901517630",
+      "timestamp": "2026-05-27T17:05:17.630Z",
+      "user": "Butler, Mark",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Miller, David",
+      "details": "Wednesday PM - Hole #3"
+    },
     {
       "id": "1779901436799",
       "timestamp": "2026-05-27T17:03:56.800Z",
@@ -32986,5 +33205,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779900866726
+  "serverNow": 1779900841375
 }
