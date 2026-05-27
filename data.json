@@ -13811,6 +13811,126 @@
       "checkedInBy": "Burnett, Eric",
       "timestamp": "2026-05-27T16:13:08.455Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "2507",
+      "volunteerName": "Holt, Sammy",
+      "hole": 8,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Holt, Sharron",
+      "timestamp": "2026-05-27T16:25:54.317Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2543",
+      "volunteerName": "Holt, Sharron",
+      "hole": 8,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Holt, Sharron",
+      "timestamp": "2026-05-27T16:25:54.527Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "3986",
+      "volunteerName": "Clayton, Rodney",
+      "hole": 13,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Clayton, Rodney",
+      "timestamp": "2026-05-27T16:26:17.001Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9916",
+      "volunteerName": "Endicott, Eric",
+      "hole": 14,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Mosler, Mitch",
+      "timestamp": "2026-05-27T16:26:24.840Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10222",
+      "volunteerName": "Weber, James",
+      "hole": 1,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Johnson, Kenny",
+      "timestamp": "2026-05-27T16:26:49.074Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "243",
+      "volunteerName": "Sale, Lynn",
+      "hole": 2,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Sale, Lynn",
+      "timestamp": "2026-05-27T16:27:13.218Z",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "243",
+      "volunteerName": "Sale, Lynn",
+      "hole": 2,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Sale, Lynn",
+      "timestamp": "2026-05-27T16:27:16.991Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7768",
+      "volunteerName": "Gillitzer, Dean",
+      "hole": 2,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Sale, Lynn",
+      "timestamp": "2026-05-27T16:27:19.703Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9503",
+      "volunteerName": "Gregston, Bryan",
+      "hole": 2,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Sale, Lynn",
+      "timestamp": "2026-05-27T16:27:20.899Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7806",
+      "volunteerName": "Mosler, Mitch",
+      "hole": 14,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Mosler, Mitch",
+      "timestamp": "2026-05-27T16:28:00.113Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7191",
+      "volunteerName": "Sanders, Steve",
+      "hole": 14,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Mosler, Mitch",
+      "timestamp": "2026-05-27T16:28:00.478Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8946",
+      "volunteerName": "Gregston, Parker",
+      "hole": 2,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Sale, Lynn",
+      "timestamp": "2026-05-27T16:28:36.598Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -13830,6 +13950,168 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779899399142",
+      "timestamp": "2026-05-27T16:29:59.143Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 1",
+      "details": "Submitted Wednesday PM for Hole 1"
+    },
+    {
+      "id": "1779899316476",
+      "timestamp": "2026-05-27T16:28:36.476Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Gregston, Parker",
+      "details": "Wednesday PM - Hole #2"
+    },
+    {
+      "id": "1779899315576",
+      "timestamp": "2026-05-27T16:28:35.576Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Gregston, Parker",
+      "details": "Wednesday PM - Hole #2"
+    },
+    {
+      "id": "1779899307971",
+      "timestamp": "2026-05-27T16:28:27.971Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Hoover, Thomas",
+      "details": "Wednesday PM - Hole #2"
+    },
+    {
+      "id": "1779899286653",
+      "timestamp": "2026-05-27T16:28:06.653Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Hoover, Thomas",
+      "details": "Wednesday PM - Hole #2"
+    },
+    {
+      "id": "1779899280655",
+      "timestamp": "2026-05-27T16:28:00.655Z",
+      "user": "Mosler, Mitch",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Sanders, Steve",
+      "details": "Wednesday PM - Hole #14"
+    },
+    {
+      "id": "1779899280315",
+      "timestamp": "2026-05-27T16:28:00.315Z",
+      "user": "Mosler, Mitch",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Mosler, Mitch",
+      "details": "Wednesday PM - Hole #14"
+    },
+    {
+      "id": "1779899241653",
+      "timestamp": "2026-05-27T16:27:21.653Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Gregston, Parker",
+      "details": "Wednesday PM - Hole #2"
+    },
+    {
+      "id": "1779899240772",
+      "timestamp": "2026-05-27T16:27:20.772Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Gregston, Bryan",
+      "details": "Wednesday PM - Hole #2"
+    },
+    {
+      "id": "1779899239576",
+      "timestamp": "2026-05-27T16:27:19.576Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Gillitzer, Dean",
+      "details": "Wednesday PM - Hole #2"
+    },
+    {
+      "id": "1779899236890",
+      "timestamp": "2026-05-27T16:27:16.890Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Sale, Lynn",
+      "details": "Wednesday PM - Hole #2"
+    },
+    {
+      "id": "1779899229050",
+      "timestamp": "2026-05-27T16:27:09.051Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779899209130",
+      "timestamp": "2026-05-27T16:26:49.131Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Weber, James",
+      "details": "Wednesday PM - Hole #1"
+    },
+    {
+      "id": "1779899202696",
+      "timestamp": "2026-05-27T16:26:42.696Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779899177059",
+      "timestamp": "2026-05-27T16:26:17.059Z",
+      "user": "Clayton, Rodney",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Clayton, Rodney",
+      "details": "Wednesday PM - Hole #13"
+    },
+    {
+      "id": "1779899154705",
+      "timestamp": "2026-05-27T16:25:54.705Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Holt, Sharron",
+      "details": "Wednesday PM - Hole #8"
+    },
+    {
+      "id": "1779899154420",
+      "timestamp": "2026-05-27T16:25:54.420Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Holt, Sammy",
+      "details": "Wednesday PM - Hole #8"
+    },
+    {
+      "id": "1779899149531",
+      "timestamp": "2026-05-27T16:25:49.531Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779898680469",
       "timestamp": "2026-05-27T16:18:00.469Z",
@@ -31217,5 +31499,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779895533078
+  "serverNow": 1779899317580
 }
