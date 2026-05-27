@@ -2066,8 +2066,8 @@
       "volId": "8306",
       "address": "7230 W Peden Rd Azle, TX 76020",
       "hasAdminPassword": false,
-      "hasVolunteerPassword": false,
-      "lastModified": 1779625926698,
+      "hasVolunteerPassword": true,
+      "lastModified": 1779891201608,
       "volunteerPassword": "$2b$10$XsvaASZ5ngV7g0OtD9IZDORpVuv4JCjdGtTXdh9NklCSRCBg2xiQC"
     },
     {
@@ -4043,7 +4043,7 @@
       "yearsWorked": 4,
       "hat": "",
       "scheduled": {
-        "Wednesday AM": true,
+        "Wednesday PM": true,
         "Thursday PM": true,
         "Friday AM": true,
         "Saturday PM": true,
@@ -4053,7 +4053,7 @@
       "address": "913 Warbler Court Burleson, TX 76028",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779891235705
     },
     {
       "id": "9658",
@@ -6588,16 +6588,16 @@
       "hat": "",
       "scheduled": {
         "Wednesday AM": true,
-        "Thursday AM": true,
-        "Friday PM": true,
-        "Saturday AM": true,
-        "Sunday PM": true
+        "Thursday PM": true,
+        "Friday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true
       },
       "volId": "6338",
       "address": "435 Panorama Circle Pottsboro, TX 75076",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779891227291
     },
     {
       "id": "7527",
@@ -13439,6 +13439,115 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779891252765",
+      "timestamp": "2026-05-27T14:14:12.765Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 6",
+      "details": "Submitted Wednesday AM for Hole 6"
+    },
+    {
+      "id": "1779891235706-56p6nw",
+      "timestamp": "2026-05-27T14:13:55.706Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Justice, Neal",
+      "details": "added Wednesday PM; removed Wednesday AM"
+    },
+    {
+      "id": "1779891227291-fyz0pv",
+      "timestamp": "2026-05-27T14:13:47.291Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Pryor, Wesley",
+      "details": "added Thursday PM, Friday AM, Saturday PM, Sunday AM; removed Thursday AM, Friday PM, Saturday AM, Sunday PM"
+    },
+    {
+      "id": "1779891222179",
+      "timestamp": "2026-05-27T14:13:42.179Z",
+      "user": "Clayton, Rodney",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779891209217",
+      "timestamp": "2026-05-27T14:13:29.217Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779891201797",
+      "timestamp": "2026-05-27T14:13:21.797Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779891201612-iia5o1",
+      "timestamp": "2026-05-27T14:13:21.612Z",
+      "user": "unauth-174.237.67.237",
+      "userType": "unauthenticated",
+      "action": "edit-schedule",
+      "target": "Ellis, Tom",
+      "details": "added Wednesday PM (via bulk save)",
+      "targetHole": 10
+    },
+    {
+      "id": "1779891200167",
+      "timestamp": "2026-05-27T14:13:20.167Z",
+      "user": "Anderson, Rob",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1779891191306",
+      "timestamp": "2026-05-27T14:13:11.306Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779891057242",
+      "timestamp": "2026-05-27T14:10:57.242Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779891037401",
+      "timestamp": "2026-05-27T14:10:37.401Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779891016609-wqv6r6",
+      "timestamp": "2026-05-27T14:10:16.610Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Ellis, Tom",
+      "details": "removed Wednesday PM"
+    },
     {
       "id": "1779890770615",
       "timestamp": "2026-05-27T14:06:10.615Z",
@@ -30087,5 +30196,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779887759033
+  "serverNow": 1779891222844
 }
