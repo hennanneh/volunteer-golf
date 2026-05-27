@@ -13178,6 +13178,36 @@
       "checkedInBy": "Rogenski, Chris P.",
       "timestamp": "2026-05-27T12:59:46.777Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "9083",
+      "volunteerName": "Lyons, Dak",
+      "hole": 13,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Duncan, Larry",
+      "timestamp": "2026-05-27T13:00:13.375Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10239",
+      "volunteerName": "A Schultz, Jill",
+      "hole": 5,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Imboden, Thomas",
+      "timestamp": "2026-05-27T13:00:56.148Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10436",
+      "volunteerName": "Schumann, Rick",
+      "hole": 8,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-27T13:01:01.918Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -13197,6 +13227,42 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779886862288",
+      "timestamp": "2026-05-27T13:01:02.288Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Schumann, Rick",
+      "details": "Wednesday AM - Hole #8"
+    },
+    {
+      "id": "1779886857950",
+      "timestamp": "2026-05-27T13:00:57.950Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 5",
+      "details": "Submitted Wednesday AM for Hole 5"
+    },
+    {
+      "id": "1779886856225",
+      "timestamp": "2026-05-27T13:00:56.225Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "A Schultz, Jill",
+      "details": "Wednesday AM - Hole #5"
+    },
+    {
+      "id": "1779886835866",
+      "timestamp": "2026-05-27T13:00:35.866Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 13",
+      "details": "Submitted Wednesday AM for Hole 13"
+    },
     {
       "id": "1779886787245",
       "timestamp": "2026-05-27T12:59:47.245Z",
@@ -29422,5 +29488,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779886501666
+  "serverNow": 1779886859302
 }
