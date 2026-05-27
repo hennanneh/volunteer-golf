@@ -15204,6 +15204,46 @@
       "checkedInBy": "Gradt, Jason",
       "timestamp": "2026-05-27T18:25:05.827Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "274",
+      "volunteerName": "Waller, Gary",
+      "hole": 7,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Quintana, Mike",
+      "timestamp": "2026-05-27T18:31:23.686Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "292",
+      "volunteerName": "Zamzow, Steve",
+      "hole": 16,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Mulvaney, Matt",
+      "timestamp": "2026-05-27T18:32:28.180Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10207",
+      "volunteerName": "Bell, Scott",
+      "hole": 16,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Mulvaney, Matt",
+      "timestamp": "2026-05-27T18:32:40.340Z",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "9051",
+      "volunteerName": "Edmiston, Charles",
+      "hole": 16,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Mulvaney, Matt",
+      "timestamp": "2026-05-27T18:32:41.879Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -15223,6 +15263,24 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779906761731",
+      "timestamp": "2026-05-27T18:32:41.731Z",
+      "user": "Mulvaney, Matt",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Edmiston, Charles",
+      "details": "Wednesday PM - Hole #16"
+    },
+    {
+      "id": "1779906760183",
+      "timestamp": "2026-05-27T18:32:40.183Z",
+      "user": "Mulvaney, Matt",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Bell, Scott",
+      "details": "Wednesday PM - Hole #16 (alternate)"
+    },
     {
       "id": "1779906426864",
       "timestamp": "2026-05-27T18:27:06.864Z",
