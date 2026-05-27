@@ -13763,6 +13763,24 @@
   },
   "activityLog": [
     {
+      "id": "1779895882818",
+      "timestamp": "2026-05-27T15:31:22.818Z",
+      "user": "Wilson, Todd",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779895840417",
+      "timestamp": "2026-05-27T15:30:40.417Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 1",
+      "details": "Submitted Wednesday PM for Hole 1"
+    },
+    {
       "id": "1779895531594",
       "timestamp": "2026-05-27T15:25:31.594Z",
       "user": "Hill, Michael",
@@ -30978,5 +30996,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779894369994
+  "serverNow": 1779895533078
 }
