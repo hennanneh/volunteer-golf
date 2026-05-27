@@ -13931,6 +13931,76 @@
       "checkedInBy": "Sale, Lynn",
       "timestamp": "2026-05-27T16:28:36.598Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "4518",
+      "volunteerName": "Kutzler, Jack",
+      "hole": 10,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-27T16:30:40.800Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10774",
+      "volunteerName": "Moss, Doyle",
+      "hole": 10,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-27T16:30:57.304Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9198",
+      "volunteerName": "Pierce, Mike",
+      "hole": 10,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-27T16:31:01.730Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7363",
+      "volunteerName": "Roberson, Chris",
+      "hole": 10,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-27T16:31:02.839Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4225",
+      "volunteerName": "Turner, Tom",
+      "hole": 10,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-27T16:31:04.985Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4536",
+      "volunteerName": "Trout, Wayne",
+      "hole": 10,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-27T16:31:23.483Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "214",
+      "volunteerName": "Osiek, Curt",
+      "hole": 10,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-27T16:31:24.139Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -13950,6 +14020,60 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779899484339",
+      "timestamp": "2026-05-27T16:31:24.339Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Osiek, Curt",
+      "details": "Wednesday PM - Hole #10"
+    },
+    {
+      "id": "1779899483674",
+      "timestamp": "2026-05-27T16:31:23.674Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Trout, Wayne",
+      "details": "Wednesday PM - Hole #10"
+    },
+    {
+      "id": "1779899465700",
+      "timestamp": "2026-05-27T16:31:05.700Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Turner, Tom",
+      "details": "Wednesday PM - Hole #10"
+    },
+    {
+      "id": "1779899463134",
+      "timestamp": "2026-05-27T16:31:03.134Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Roberson, Chris",
+      "details": "Wednesday PM - Hole #10"
+    },
+    {
+      "id": "1779899461924",
+      "timestamp": "2026-05-27T16:31:01.924Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Pierce, Mike",
+      "details": "Wednesday PM - Hole #10"
+    },
+    {
+      "id": "1779899457977",
+      "timestamp": "2026-05-27T16:30:57.977Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Moss, Doyle",
+      "details": "Wednesday PM - Hole #10"
+    },
     {
       "id": "1779899399142",
       "timestamp": "2026-05-27T16:29:59.143Z",
