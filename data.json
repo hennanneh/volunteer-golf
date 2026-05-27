@@ -542,7 +542,7 @@
       "yearsWorked": 12,
       "hat": "",
       "scheduled": {
-        "Wednesday PM": true,
+        "Wednesday AM": true,
         "Thursday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
@@ -552,7 +552,7 @@
       "address": "1661 S Forum Dr Apt 4402 Grand Prairie, TX 75052",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779884438898
+      "lastModified": 1779885268477
     },
     {
       "id": "3149",
@@ -4784,22 +4784,16 @@
       "hat": "",
       "scheduled": {
         "Wednesday AM": true,
-        "Wednesday PM": true,
         "Thursday AM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true,
         "Sunday PM": true
       },
       "volId": "4800",
       "address": "3201 Medina Ave Fort Worth, TX 76133",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779884512810,
-      "notes": "Jennifer will work 5 extra shifts: Wednesday PM, Thursday PM, Friday AM, Saturday PM, and Sunday AM"
+      "lastModified": 1779885268477
     },
     {
       "id": "2919",
@@ -6677,6 +6671,7 @@
       "yearsWorked": 7,
       "hat": "",
       "scheduled": {
+        "Wednesday AM": true,
         "Wednesday PM": true,
         "Thursday AM": true,
         "Friday PM": true,
@@ -6687,7 +6682,7 @@
       "address": "1200 Eastridge Dr Yukon, OK 73099",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779885193756
     },
     {
       "id": "5217",
@@ -7732,6 +7727,7 @@
       "yearsWorked": 5,
       "hat": "",
       "scheduled": {
+        "Wednesday AM": true,
         "Wednesday PM": true,
         "Thursday PM": true,
         "Friday AM": true,
@@ -7742,7 +7738,7 @@
       "address": "481 Pecan Dr Burleson, TX 76028",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779885169025
     },
     {
       "id": "4204",
@@ -12908,6 +12904,46 @@
       "checkedInBy": "Rogenski, Chris P.",
       "timestamp": "2026-05-27T12:29:03.923Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "897",
+      "volunteerName": "Colborg, Jerry",
+      "hole": 15,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Beckley, Bob",
+      "timestamp": "2026-05-27T12:30:20.065Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "167",
+      "volunteerName": "Howell, John",
+      "hole": 5,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Imboden, Thomas",
+      "timestamp": "2026-05-27T12:31:03.421Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9590",
+      "volunteerName": "Ozier, Mark",
+      "hole": 14,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Mosler, Mitch",
+      "timestamp": "2026-05-27T12:34:47.165Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8887",
+      "volunteerName": "Arnold, Tyrone",
+      "hole": 14,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Mosler, Mitch",
+      "timestamp": "2026-05-27T12:34:50.519Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -12927,6 +12963,209 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779885298850-gjirxd",
+      "timestamp": "2026-05-27T12:34:58.850Z",
+      "user": "Mosler, Mitch",
+      "userType": "Captain",
+      "action": "rejected-bulk-edit",
+      "target": "Livingston, Jennifier",
+      "details": "Captain hole 14 attempted to modify hole 4 volunteer (auto-rejected via bulk save — no data changed)",
+      "targetHole": 4,
+      "actorHole": 14
+    },
+    {
+      "id": "1779885298846-cbylym",
+      "timestamp": "2026-05-27T12:34:58.846Z",
+      "user": "Mosler, Mitch",
+      "userType": "Captain",
+      "action": "rejected-bulk-edit",
+      "target": "Bravo, Albert",
+      "details": "Captain hole 14 attempted to modify hole 13 volunteer (auto-rejected via bulk save — no data changed)",
+      "targetHole": 13,
+      "actorHole": 14
+    },
+    {
+      "id": "1779885297004",
+      "timestamp": "2026-05-27T12:34:57.004Z",
+      "user": "Mosler, Mitch",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 14",
+      "details": "Submitted Wednesday AM for Hole 14"
+    },
+    {
+      "id": "1779885295696-8f83p2",
+      "timestamp": "2026-05-27T12:34:55.696Z",
+      "user": "Mosler, Mitch",
+      "userType": "Captain",
+      "action": "rejected-bulk-edit",
+      "target": "Livingston, Jennifier",
+      "details": "Captain hole 14 attempted to modify hole 4 volunteer (auto-rejected via bulk save — no data changed)",
+      "targetHole": 4,
+      "actorHole": 14
+    },
+    {
+      "id": "1779885295695-2ynsbu",
+      "timestamp": "2026-05-27T12:34:55.695Z",
+      "user": "Mosler, Mitch",
+      "userType": "Captain",
+      "action": "rejected-bulk-edit",
+      "target": "Bravo, Albert",
+      "details": "Captain hole 14 attempted to modify hole 13 volunteer (auto-rejected via bulk save — no data changed)",
+      "targetHole": 13,
+      "actorHole": 14
+    },
+    {
+      "id": "1779885291795-gobl08",
+      "timestamp": "2026-05-27T12:34:51.795Z",
+      "user": "Mosler, Mitch",
+      "userType": "Captain",
+      "action": "rejected-bulk-edit",
+      "target": "Livingston, Jennifier",
+      "details": "Captain hole 14 attempted to modify hole 4 volunteer (auto-rejected via bulk save — no data changed)",
+      "targetHole": 4,
+      "actorHole": 14
+    },
+    {
+      "id": "1779885291790-le0fcg",
+      "timestamp": "2026-05-27T12:34:51.790Z",
+      "user": "Mosler, Mitch",
+      "userType": "Captain",
+      "action": "rejected-bulk-edit",
+      "target": "Bravo, Albert",
+      "details": "Captain hole 14 attempted to modify hole 13 volunteer (auto-rejected via bulk save — no data changed)",
+      "targetHole": 13,
+      "actorHole": 14
+    },
+    {
+      "id": "1779885290737",
+      "timestamp": "2026-05-27T12:34:50.737Z",
+      "user": "Mosler, Mitch",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Arnold, Tyrone",
+      "details": "Wednesday AM - Hole #14"
+    },
+    {
+      "id": "1779885287256",
+      "timestamp": "2026-05-27T12:34:47.256Z",
+      "user": "Mosler, Mitch",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Ozier, Mark",
+      "details": "Wednesday AM - Hole #14"
+    },
+    {
+      "id": "1779885276033",
+      "timestamp": "2026-05-27T12:34:36.033Z",
+      "user": "Mosler, Mitch",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779885268486-3iv2v1",
+      "timestamp": "2026-05-27T12:34:28.486Z",
+      "user": "unauth-146.75.164.253",
+      "userType": "unauthenticated",
+      "action": "edit-volunteer",
+      "target": "Livingston, Jennifier",
+      "details": "Updated fields: scheduled, notes (via bulk save)",
+      "targetHole": 4
+    },
+    {
+      "id": "1779885268479-0fsh2p",
+      "timestamp": "2026-05-27T12:34:28.479Z",
+      "user": "unauth-146.75.164.253",
+      "userType": "unauthenticated",
+      "action": "edit-schedule",
+      "target": "Bravo, Albert",
+      "details": "added Wednesday AM; removed Wednesday PM (via bulk save)",
+      "targetHole": 13
+    },
+    {
+      "id": "1779885267160",
+      "timestamp": "2026-05-27T12:34:27.160Z",
+      "user": "Butler, Mark",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779885193756-66qbwg",
+      "timestamp": "2026-05-27T12:33:13.756Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Putt, Gerald",
+      "details": "added Wednesday AM"
+    },
+    {
+      "id": "1779885169025-i7qoqq",
+      "timestamp": "2026-05-27T12:32:49.025Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Smith, Bruce T.",
+      "details": "added Wednesday AM"
+    },
+    {
+      "id": "1779885067457",
+      "timestamp": "2026-05-27T12:31:07.457Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779885065221",
+      "timestamp": "2026-05-27T12:31:05.221Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 5",
+      "details": "Submitted Wednesday AM for Hole 5"
+    },
+    {
+      "id": "1779885063507",
+      "timestamp": "2026-05-27T12:31:03.507Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Howell, John",
+      "details": "Wednesday AM - Hole #5"
+    },
+    {
+      "id": "1779885028711",
+      "timestamp": "2026-05-27T12:30:28.711Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 4",
+      "details": "Submitted Wednesday AM for Hole 4"
+    },
+    {
+      "id": "1779885022755",
+      "timestamp": "2026-05-27T12:30:22.755Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 15",
+      "details": "Submitted Wednesday AM for Hole 15"
+    },
+    {
+      "id": "1779885020114",
+      "timestamp": "2026-05-27T12:30:20.114Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Colborg, Jerry",
+      "details": "Wednesday AM - Hole #15"
+    },
     {
       "id": "1779884942610",
       "timestamp": "2026-05-27T12:29:02.610Z",
@@ -28038,5 +28277,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779884940652
+  "serverNow": 1779885065836
 }
