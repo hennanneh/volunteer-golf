@@ -13792,6 +13792,15 @@
   },
   "activityLog": [
     {
+      "id": "1779896748074",
+      "timestamp": "2026-05-27T15:45:48.074Z",
+      "user": "Pryor, Wesley",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
       "id": "1779896673907",
       "timestamp": "2026-05-27T15:44:33.907Z",
       "user": "Mosler, Mitch",
