@@ -15246,6 +15246,16 @@
       "checkedInBy": "Trout, Wayne",
       "timestamp": "2026-05-27T18:42:59.871Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "5029",
+      "volunteerName": "Stevens, Deborah",
+      "hole": 14,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Sanders, Steve",
+      "timestamp": "2026-05-27T19:05:07.988Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -15265,6 +15275,24 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779908723188",
+      "timestamp": "2026-05-27T19:05:23.188Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 14",
+      "details": "Submitted Wednesday PM for Hole 14"
+    },
+    {
+      "id": "1779908719087",
+      "timestamp": "2026-05-27T19:05:19.087Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Stevens, Deborah",
+      "details": "Wednesday PM - Hole #14"
+    },
     {
       "id": "1779908222141",
       "timestamp": "2026-05-27T18:57:02.141Z",
