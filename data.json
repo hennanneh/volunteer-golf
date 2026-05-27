@@ -13763,6 +13763,24 @@
   },
   "activityLog": [
     {
+      "id": "1779895531594",
+      "timestamp": "2026-05-27T15:25:31.594Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1779895514232",
+      "timestamp": "2026-05-27T15:25:14.232Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
       "id": "1779895467933-bbswee",
       "timestamp": "2026-05-27T15:24:27.933Z",
       "user": "Duncan, Larry",
