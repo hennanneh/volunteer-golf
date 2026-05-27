@@ -2723,6 +2723,8 @@
       "hat": "",
       "scheduled": {
         "Monday AM": true,
+        "Wednesday AM": true,
+        "Wednesday PM": true,
         "Thursday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
@@ -2732,7 +2734,7 @@
       "address": "7017 Twin Hills Dr JOSHUA, TX 76058",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779887611506
     },
     {
       "id": "7043",
@@ -13208,6 +13210,16 @@
       "checkedInBy": "Rogenski, Chris P.",
       "timestamp": "2026-05-27T13:01:01.918Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "9988",
+      "volunteerName": "Grall, George",
+      "hole": 12,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-27T13:12:40.950Z",
+      "isAlternate": true
     }
   ],
   "submissions": [],
@@ -13227,6 +13239,51 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779887611507-om6gw8",
+      "timestamp": "2026-05-27T13:13:31.507Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Grall, George",
+      "details": "added Wednesday AM, Wednesday PM"
+    },
+    {
+      "id": "1779887602484",
+      "timestamp": "2026-05-27T13:13:22.484Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779887513053",
+      "timestamp": "2026-05-27T13:11:53.053Z",
+      "user": "Diaz, Rickey",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1779887509762",
+      "timestamp": "2026-05-27T13:11:49.762Z",
+      "user": "Pryor, Wesley",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1779887439450",
+      "timestamp": "2026-05-27T13:10:39.450Z",
+      "user": "Sippel, Mark",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
     {
       "id": "1779886862288",
       "timestamp": "2026-05-27T13:01:02.288Z",
@@ -29488,5 +29545,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779886859302
+  "serverNow": 1779887510846
 }
