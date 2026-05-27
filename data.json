@@ -15208,16 +15208,6 @@
       "isAlternate": false
     },
     {
-      "volunteerId": "10207",
-      "volunteerName": "Bell, Scott",
-      "hole": 16,
-      "day": "Wednesday",
-      "shift": "PM",
-      "checkedInBy": "Mulvaney, Matt",
-      "timestamp": "2026-05-27T18:32:40.340Z",
-      "isAlternate": true
-    },
-    {
       "volunteerId": "9788",
       "volunteerName": "Kramer, Ed",
       "hole": 10,
@@ -15235,16 +15225,6 @@
       "shift": "PM",
       "checkedInBy": "Sanders, Steve",
       "timestamp": "2026-05-27T19:05:07.988Z",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "2745",
-      "volunteerName": "Roy, Mike",
-      "hole": 16,
-      "day": "Wednesday",
-      "shift": "PM",
-      "checkedInBy": "Roy, Mike",
-      "timestamp": "2026-05-27T19:33:15.222Z",
       "isAlternate": false
     },
     {
@@ -15326,6 +15306,16 @@
       "checkedInBy": "Rogenski, Chris P.",
       "timestamp": "2026-05-27T19:43:54.823Z",
       "isAlternate": true
+    },
+    {
+      "volunteerId": "2745",
+      "volunteerName": "Roy, Mike",
+      "hole": 16,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Roy, Mike",
+      "timestamp": "2026-05-27T20:31:56.728Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -15345,6 +15335,60 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779913973706",
+      "timestamp": "2026-05-27T20:32:53.706Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 16",
+      "details": "Submitted Wednesday PM for Hole 16"
+    },
+    {
+      "id": "1779913951541",
+      "timestamp": "2026-05-27T20:32:31.541Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1779913930165",
+      "timestamp": "2026-05-27T20:32:10.165Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Bell, Scott",
+      "details": "Wednesday PM - Hole #16 (alternate)"
+    },
+    {
+      "id": "1779913917404",
+      "timestamp": "2026-05-27T20:31:57.404Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Roy, Mike",
+      "details": "Wednesday PM - Hole #16"
+    },
+    {
+      "id": "1779913915486",
+      "timestamp": "2026-05-27T20:31:55.486Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Roy, Mike",
+      "details": "Wednesday PM - Hole #16"
+    },
+    {
+      "id": "1779913910687",
+      "timestamp": "2026-05-27T20:31:50.687Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779912839514-50lwk5",
       "timestamp": "2026-05-27T20:13:59.514Z",
@@ -35600,5 +35644,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779912202707
+  "serverNow": 1779913952261
 }
