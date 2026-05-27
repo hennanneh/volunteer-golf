@@ -13410,6 +13410,16 @@
       "checkedInBy": "Quintana, Mike",
       "timestamp": "2026-05-27T13:25:32.959Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "9069",
+      "volunteerName": "Harper, Leroy",
+      "hole": 13,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Duncan, Larry",
+      "timestamp": "2026-05-27T13:33:55.980Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -13429,6 +13439,15 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779888846366",
+      "timestamp": "2026-05-27T13:34:06.366Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 13",
+      "details": "Submitted Wednesday AM for Hole 13"
+    },
     {
       "id": "1779888546428",
       "timestamp": "2026-05-27T13:29:06.428Z",
