@@ -8212,6 +8212,7 @@
       "yearsWorked": 21,
       "hat": "",
       "scheduled": {
+        "Wednesday AM": true,
         "Wednesday PM": true,
         "Thursday AM": true,
         "Friday PM": true,
@@ -8222,7 +8223,7 @@
       "volId": "1518",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779035912734
+      "lastModified": 1779894198267
     },
     {
       "id": "4536",
@@ -13570,6 +13571,16 @@
       "checkedInBy": "Jutras, Michael",
       "timestamp": "2026-05-27T14:32:01.749Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "1518",
+      "volunteerName": "Trias, Dan",
+      "hole": 9,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Edwards, Bill",
+      "timestamp": "2026-05-27T15:03:09.234Z",
+      "isAlternate": true
     }
   ],
   "submissions": [],
@@ -13589,6 +13600,42 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779894247647",
+      "timestamp": "2026-05-27T15:04:07.647Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779894198267-vxf37j",
+      "timestamp": "2026-05-27T15:03:18.267Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Trias, Dan",
+      "details": "added Wednesday AM"
+    },
+    {
+      "id": "1779894189328",
+      "timestamp": "2026-05-27T15:03:09.328Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Trias, Dan",
+      "details": "Wednesday AM - Hole #9 (alternate)"
+    },
+    {
+      "id": "1779894132543",
+      "timestamp": "2026-05-27T15:02:12.543Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779893132113",
       "timestamp": "2026-05-27T14:45:32.113Z",
