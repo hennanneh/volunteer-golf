@@ -3147,7 +3147,7 @@
       "hole": 16,
       "phone": "(972) 935-7020",
       "email": "dwharv22@yahoo.com",
-      "yearsWorked": 18,
+      "yearsWorked": 19,
       "hat": "",
       "scheduled": {
         "Wednesday AM": true,
@@ -3160,7 +3160,9 @@
       "address": "215 SANTA FE TRL WAXAHACHIE, TX 75165",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779905759664,
+      "notes": "",
+      "hatReceived": false
     },
     {
       "id": "10348",
@@ -15122,6 +15124,16 @@
       "checkedInBy": "Johnson, Kenny",
       "timestamp": "2026-05-27T18:08:52.839Z",
       "isAlternate": true
+    },
+    {
+      "volunteerId": "10547",
+      "volunteerName": "Surita, Rene",
+      "hole": 1,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Johnson, Kenny",
+      "timestamp": "2026-05-27T18:17:29.224Z",
+      "isAlternate": true
     }
   ],
   "submissions": [],
@@ -15141,6 +15153,44 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779905853001-x1lxfu",
+      "timestamp": "2026-05-27T18:17:33.001Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "rejected-bulk-edit",
+      "target": "Harvey, Dalton",
+      "details": "Captain hole 1 attempted to modify hole 16 volunteer (auto-rejected via bulk save — no data changed)",
+      "targetHole": 16,
+      "actorHole": 1
+    },
+    {
+      "id": "1779905851814",
+      "timestamp": "2026-05-27T18:17:31.814Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 1",
+      "details": "Submitted Wednesday PM for Hole 1"
+    },
+    {
+      "id": "1779905849287",
+      "timestamp": "2026-05-27T18:17:29.287Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Surita, Rene",
+      "details": "Wednesday PM - Hole #1 (alternate)"
+    },
+    {
+      "id": "1779905759664-q1lww2",
+      "timestamp": "2026-05-27T18:15:59.664Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Harvey, Dalton",
+      "details": "Updated fields: notes, yearsWorked, hatReceived"
+    },
     {
       "id": "1779905342066",
       "timestamp": "2026-05-27T18:09:02.066Z",
