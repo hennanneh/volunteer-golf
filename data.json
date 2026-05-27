@@ -14793,6 +14793,126 @@
       "checkedInBy": "Watson, Stan",
       "timestamp": "2026-05-27T17:33:54.793Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "10629",
+      "volunteerName": "Millard, Tyrone",
+      "hole": 5,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Imboden, Thomas",
+      "timestamp": "2026-05-27T17:35:27.618Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10619",
+      "volunteerName": "Simmons, Rick",
+      "hole": 5,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Imboden, Thomas",
+      "timestamp": "2026-05-27T17:35:34.330Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "3428",
+      "volunteerName": "Saunders, Martin",
+      "hole": 5,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Imboden, Thomas",
+      "timestamp": "2026-05-27T17:35:39.219Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5217",
+      "volunteerName": "Quintana, Mike",
+      "hole": 7,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Quintana, Mike",
+      "timestamp": "2026-05-27T17:36:34.480Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7747",
+      "volunteerName": "Bezner, Matt",
+      "hole": 7,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Quintana, Mike",
+      "timestamp": "2026-05-27T17:36:39.897Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2393",
+      "volunteerName": "Burkhead, Max",
+      "hole": 7,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Quintana, Mike",
+      "timestamp": "2026-05-27T17:36:40.575Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2884",
+      "volunteerName": "Knaus, Chuck",
+      "hole": 7,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Quintana, Mike",
+      "timestamp": "2026-05-27T17:36:42.065Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9900",
+      "volunteerName": "Riemitis, Andy",
+      "hole": 7,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Quintana, Mike",
+      "timestamp": "2026-05-27T17:36:45.892Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4014",
+      "volunteerName": "Hoover, Thomas",
+      "hole": 2,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Sale, Lynn",
+      "timestamp": "2026-05-27T17:37:23.504Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7692",
+      "volunteerName": "Lemay, Mark",
+      "hole": 2,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Sale, Lynn",
+      "timestamp": "2026-05-27T17:37:24.454Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8127",
+      "volunteerName": "Harrell, Michael",
+      "hole": 2,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Sale, Lynn",
+      "timestamp": "2026-05-27T17:38:02.442Z",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "5924",
+      "volunteerName": "Gustaf, David",
+      "hole": 15,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Thomas, Stephen",
+      "timestamp": "2026-05-27T17:39:40.649Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -14812,6 +14932,105 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779903482319",
+      "timestamp": "2026-05-27T17:38:02.319Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Harrell, Michael",
+      "details": "Wednesday PM - Hole #2 (alternate)"
+    },
+    {
+      "id": "1779903481732",
+      "timestamp": "2026-05-27T17:38:01.732Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Harrell, Michael",
+      "details": "Wednesday PM - Hole #2 (alternate)"
+    },
+    {
+      "id": "1779903481461",
+      "timestamp": "2026-05-27T17:38:01.461Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Harrell, Michael",
+      "details": "Wednesday PM - Hole #2 (alternate)"
+    },
+    {
+      "id": "1779903471506",
+      "timestamp": "2026-05-27T17:37:51.506Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 2",
+      "details": "Submitted Wednesday PM for Hole 2"
+    },
+    {
+      "id": "1779903444324",
+      "timestamp": "2026-05-27T17:37:24.324Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Lemay, Mark",
+      "details": "Wednesday PM - Hole #2"
+    },
+    {
+      "id": "1779903443379",
+      "timestamp": "2026-05-27T17:37:23.379Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Hoover, Thomas",
+      "details": "Wednesday PM - Hole #2"
+    },
+    {
+      "id": "1779903339305",
+      "timestamp": "2026-05-27T17:35:39.305Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Saunders, Martin",
+      "details": "Wednesday PM - Hole #5"
+    },
+    {
+      "id": "1779903334953",
+      "timestamp": "2026-05-27T17:35:34.953Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 5",
+      "details": "Submitted Wednesday PM for Hole 5"
+    },
+    {
+      "id": "1779903334416",
+      "timestamp": "2026-05-27T17:35:34.416Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Simmons, Rick",
+      "details": "Wednesday PM - Hole #5"
+    },
+    {
+      "id": "1779903330414",
+      "timestamp": "2026-05-27T17:35:30.414Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 5",
+      "details": "Submitted Wednesday PM for Hole 5"
+    },
+    {
+      "id": "1779903327712",
+      "timestamp": "2026-05-27T17:35:27.712Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Millard, Tyrone",
+      "details": "Wednesday PM - Hole #5"
+    },
     {
       "id": "1779903238134",
       "timestamp": "2026-05-27T17:33:58.134Z",
@@ -33964,5 +34183,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779903216140
+  "serverNow": 1779903160961
 }
