@@ -15194,6 +15194,16 @@
       "checkedInBy": "Gradt, Jason",
       "timestamp": "2026-05-27T18:24:51.900Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "8219",
+      "volunteerName": "White, Gary",
+      "hole": 18,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Gradt, Jason",
+      "timestamp": "2026-05-27T18:25:05.827Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -15213,6 +15223,24 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779906426864",
+      "timestamp": "2026-05-27T18:27:06.864Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779906305881",
+      "timestamp": "2026-05-27T18:25:05.881Z",
+      "user": "Gradt, Jason",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "White, Gary",
+      "details": "Wednesday PM - Hole #18"
+    },
     {
       "id": "1779906291976",
       "timestamp": "2026-05-27T18:24:51.976Z",
