@@ -13831,6 +13831,15 @@
   },
   "activityLog": [
     {
+      "id": "1779898680469",
+      "timestamp": "2026-05-27T16:18:00.469Z",
+      "user": "Burnett, Eric",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 9",
+      "details": "Submitted Wednesday PM for Hole 9"
+    },
+    {
       "id": "1779898422126",
       "timestamp": "2026-05-27T16:13:42.126Z",
       "user": "Burnett, Eric",
