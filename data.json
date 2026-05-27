@@ -15112,6 +15112,16 @@
       "checkedInBy": "Quintana, Mike",
       "timestamp": "2026-05-27T18:01:41.223Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "9405",
+      "volunteerName": "Wilson, Anita",
+      "hole": 1,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Johnson, Kenny",
+      "timestamp": "2026-05-27T18:08:52.839Z",
+      "isAlternate": true
     }
   ],
   "submissions": [],
@@ -15131,6 +15141,15 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779905342066",
+      "timestamp": "2026-05-27T18:09:02.066Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 1",
+      "details": "Submitted Wednesday PM for Hole 1"
+    },
     {
       "id": "1779904923879-7dmocm",
       "timestamp": "2026-05-27T18:02:03.880Z",
