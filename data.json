@@ -12158,6 +12158,15 @@
   },
   "activityLog": [
     {
+      "id": "1779849334540",
+      "timestamp": "2026-05-27T02:35:34.540Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1779845477657",
       "timestamp": "2026-05-27T01:31:17.658Z",
       "user": "Thomas, Stephen",
