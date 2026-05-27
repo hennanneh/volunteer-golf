@@ -13781,6 +13781,36 @@
       "checkedInBy": "Edwards, Bill",
       "timestamp": "2026-05-27T16:00:52.411Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "3034",
+      "volunteerName": "Burnett, Eric",
+      "hole": 9,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Burnett, Eric",
+      "timestamp": "2026-05-27T16:12:01.326Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8152",
+      "volunteerName": "Citty, Derek",
+      "hole": 9,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Burnett, Eric",
+      "timestamp": "2026-05-27T16:12:11.477Z",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "8152",
+      "volunteerName": "Citty, Derek",
+      "hole": 9,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Burnett, Eric",
+      "timestamp": "2026-05-27T16:13:08.455Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -13800,6 +13830,51 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779898422126",
+      "timestamp": "2026-05-27T16:13:42.126Z",
+      "user": "Burnett, Eric",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 9",
+      "details": "Submitted Wednesday PM for Hole 9"
+    },
+    {
+      "id": "1779898388522",
+      "timestamp": "2026-05-27T16:13:08.522Z",
+      "user": "Burnett, Eric",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Citty, Derek",
+      "details": "Wednesday PM - Hole #9"
+    },
+    {
+      "id": "1779898331547",
+      "timestamp": "2026-05-27T16:12:11.547Z",
+      "user": "Burnett, Eric",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Citty, Derek",
+      "details": "Wednesday AM - Hole #9 (alternate)"
+    },
+    {
+      "id": "1779898321391",
+      "timestamp": "2026-05-27T16:12:01.391Z",
+      "user": "Burnett, Eric",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Burnett, Eric",
+      "details": "Wednesday AM - Hole #9"
+    },
+    {
+      "id": "1779898311417",
+      "timestamp": "2026-05-27T16:11:51.417Z",
+      "user": "Burnett, Eric",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779897720373-jc6gdu",
       "timestamp": "2026-05-27T16:02:00.373Z",
