@@ -12175,6 +12175,15 @@
   },
   "activityLog": [
     {
+      "id": "1779875673179",
+      "timestamp": "2026-05-27T09:54:33.179Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
       "id": "1779851157324",
       "timestamp": "2026-05-27T03:05:57.324Z",
       "user": "Beckley, Bob",
