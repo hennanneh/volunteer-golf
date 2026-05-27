@@ -543,7 +543,7 @@
       "yearsWorked": 12,
       "hat": "",
       "scheduled": {
-        "Wednesday AM": true,
+        "Wednesday PM": true,
         "Thursday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
@@ -553,7 +553,7 @@
       "address": "1661 S Forum Dr Apt 4402 Grand Prairie, TX 75052",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779885268477
+      "lastModified": 1779886244560
     },
     {
       "id": "3149",
@@ -4633,8 +4633,7 @@
       "volId": "2133",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771,
-      "volunteerPassword": "$2b$10$/.QDwfmlOemLRnL.zkmbRe4eYneVKnwWyyCPvtKPLrzCApwr2.uF2"
+      "lastModified": 1778813044771
     },
     {
       "id": "10276",
@@ -13017,6 +13016,136 @@
       "checkedInBy": "Rogenski, Chris P.",
       "timestamp": "2026-05-27T12:48:30.928Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "1464",
+      "volunteerName": "Mcdaniel, Patrick",
+      "hole": 6,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Mcdaniel, Patrick",
+      "timestamp": "2026-05-27T12:50:37.188Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4433",
+      "volunteerName": "Elkins, Paul",
+      "hole": 6,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Mcdaniel, Patrick",
+      "timestamp": "2026-05-27T12:50:37.514Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7463",
+      "volunteerName": "Uy, Antonio",
+      "hole": 6,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Mcdaniel, Patrick",
+      "timestamp": "2026-05-27T12:51:03.212Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10717",
+      "volunteerName": "Cantu, Brady",
+      "hole": 6,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Mcdaniel, Patrick",
+      "timestamp": "2026-05-27T12:51:47.560Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "419",
+      "volunteerName": "Cantu, Doug",
+      "hole": 6,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Mcdaniel, Patrick",
+      "timestamp": "2026-05-27T12:51:48.634Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5391",
+      "volunteerName": "Gradt, Jason",
+      "hole": 18,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Gradt, Jason",
+      "timestamp": "2026-05-27T12:52:42.927Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4222",
+      "volunteerName": "Wehmeyer, Tom",
+      "hole": 18,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Gradt, Jason",
+      "timestamp": "2026-05-27T12:52:43.699Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "1919",
+      "volunteerName": "Crow, Michael",
+      "hole": 18,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Gradt, Jason",
+      "timestamp": "2026-05-27T12:52:49.955Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2133",
+      "volunteerName": "Larrabee, Robert",
+      "hole": 18,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Gradt, Jason",
+      "timestamp": "2026-05-27T12:52:50.239Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9868",
+      "volunteerName": "Mcgowen, Mark",
+      "hole": 18,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Gradt, Jason",
+      "timestamp": "2026-05-27T12:52:51.712Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "3558",
+      "volunteerName": "Moore, Barry",
+      "hole": 18,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Gradt, Jason",
+      "timestamp": "2026-05-27T12:53:04.675Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6398",
+      "volunteerName": "Prill, Chuck",
+      "hole": 18,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Gradt, Jason",
+      "timestamp": "2026-05-27T12:53:04.833Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8276",
+      "volunteerName": "Prill, Gina",
+      "hole": 18,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Gradt, Jason",
+      "timestamp": "2026-05-27T12:53:05.653Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -13036,6 +13165,204 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779886415140",
+      "timestamp": "2026-05-27T12:53:35.140Z",
+      "user": "Gradt, Jason",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 18",
+      "details": "Submitted Wednesday AM for Hole 18"
+    },
+    {
+      "id": "1779886413882",
+      "timestamp": "2026-05-27T12:53:33.882Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1779886404393",
+      "timestamp": "2026-05-27T12:53:24.393Z",
+      "user": "Gradt, Jason",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 18",
+      "details": "Submitted Wednesday AM for Hole 18"
+    },
+    {
+      "id": "1779886385890",
+      "timestamp": "2026-05-27T12:53:05.890Z",
+      "user": "Gradt, Jason",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Prill, Gina",
+      "details": "Wednesday AM - Hole #18"
+    },
+    {
+      "id": "1779886384893",
+      "timestamp": "2026-05-27T12:53:04.893Z",
+      "user": "Gradt, Jason",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Prill, Chuck",
+      "details": "Wednesday AM - Hole #18"
+    },
+    {
+      "id": "1779886384737",
+      "timestamp": "2026-05-27T12:53:04.737Z",
+      "user": "Gradt, Jason",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Moore, Barry",
+      "details": "Wednesday AM - Hole #18"
+    },
+    {
+      "id": "1779886371765",
+      "timestamp": "2026-05-27T12:52:51.765Z",
+      "user": "Gradt, Jason",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Mcgowen, Mark",
+      "details": "Wednesday AM - Hole #18"
+    },
+    {
+      "id": "1779886370400",
+      "timestamp": "2026-05-27T12:52:50.400Z",
+      "user": "Gradt, Jason",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Larrabee, Robert",
+      "details": "Wednesday AM - Hole #18"
+    },
+    {
+      "id": "1779886370009",
+      "timestamp": "2026-05-27T12:52:50.009Z",
+      "user": "Gradt, Jason",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Crow, Michael",
+      "details": "Wednesday AM - Hole #18"
+    },
+    {
+      "id": "1779886363759",
+      "timestamp": "2026-05-27T12:52:43.759Z",
+      "user": "Gradt, Jason",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Wehmeyer, Tom",
+      "details": "Wednesday AM - Hole #18"
+    },
+    {
+      "id": "1779886362983",
+      "timestamp": "2026-05-27T12:52:42.983Z",
+      "user": "Gradt, Jason",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Gradt, Jason",
+      "details": "Wednesday AM - Hole #18"
+    },
+    {
+      "id": "1779886334083",
+      "timestamp": "2026-05-27T12:52:14.083Z",
+      "user": "Prill, Chuck",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1779886322556",
+      "timestamp": "2026-05-27T12:52:02.557Z",
+      "user": "Gradt, Jason",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779886308696",
+      "timestamp": "2026-05-27T12:51:48.696Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Cantu, Doug",
+      "details": "Wednesday AM - Hole #6"
+    },
+    {
+      "id": "1779886307622",
+      "timestamp": "2026-05-27T12:51:47.622Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Cantu, Brady",
+      "details": "Wednesday AM - Hole #6"
+    },
+    {
+      "id": "1779886290959",
+      "timestamp": "2026-05-27T12:51:30.959Z",
+      "user": "Larrabee, Robert",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1779886263269",
+      "timestamp": "2026-05-27T12:51:03.269Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Uy, Antonio",
+      "details": "Wednesday AM - Hole #6"
+    },
+    {
+      "id": "1779886246779",
+      "timestamp": "2026-05-27T12:50:46.779Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Elkins, Paul",
+      "details": "Wednesday AM - Hole #6"
+    },
+    {
+      "id": "1779886246038",
+      "timestamp": "2026-05-27T12:50:46.038Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Mcdaniel, Patrick",
+      "details": "Wednesday AM - Hole #6"
+    },
+    {
+      "id": "1779886244560-lft5qu",
+      "timestamp": "2026-05-27T12:50:44.560Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Bravo, Albert",
+      "details": "added Wednesday PM; removed Wednesday AM"
+    },
+    {
+      "id": "1779886237594",
+      "timestamp": "2026-05-27T12:50:37.594Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Elkins, Paul",
+      "details": "Wednesday AM - Hole #6"
+    },
+    {
+      "id": "1779886235894",
+      "timestamp": "2026-05-27T12:50:35.894Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779886111280",
       "timestamp": "2026-05-27T12:48:31.280Z",
@@ -29009,5 +29336,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779885986053
+  "serverNow": 1779886350055
 }
