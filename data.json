@@ -14963,6 +14963,36 @@
       "checkedInBy": "Browning, Wayne",
       "timestamp": "2026-05-27T17:41:47.513Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "10237",
+      "volunteerName": "Sumrall, Stuart",
+      "hole": 17,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Browning, Wayne",
+      "timestamp": "2026-05-27T17:46:17.930Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7943",
+      "volunteerName": "Moss, Jeff",
+      "hole": 17,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Browning, Wayne",
+      "timestamp": "2026-05-27T17:47:29.948Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4096",
+      "volunteerName": "Otis, Mike",
+      "hole": 17,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Browning, Wayne",
+      "timestamp": "2026-05-27T17:47:30.445Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -14982,6 +15012,42 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779904059811",
+      "timestamp": "2026-05-27T17:47:39.811Z",
+      "user": "Browning, Wayne",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 17",
+      "details": "Submitted Wednesday PM for Hole 17"
+    },
+    {
+      "id": "1779904050529",
+      "timestamp": "2026-05-27T17:47:30.529Z",
+      "user": "Browning, Wayne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Otis, Mike",
+      "details": "Wednesday PM - Hole #17"
+    },
+    {
+      "id": "1779904050035",
+      "timestamp": "2026-05-27T17:47:30.035Z",
+      "user": "Browning, Wayne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Moss, Jeff",
+      "details": "Wednesday PM - Hole #17"
+    },
+    {
+      "id": "1779903978012",
+      "timestamp": "2026-05-27T17:46:18.012Z",
+      "user": "Browning, Wayne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Sumrall, Stuart",
+      "details": "Wednesday PM - Hole #17"
+    },
     {
       "id": "1779903707592",
       "timestamp": "2026-05-27T17:41:47.592Z",
