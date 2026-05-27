@@ -13590,6 +13590,15 @@
   },
   "activityLog": [
     {
+      "id": "1779893132113",
+      "timestamp": "2026-05-27T14:45:32.113Z",
+      "user": "Pryor, Wesley",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
       "id": "1779892770526",
       "timestamp": "2026-05-27T14:39:30.526Z",
       "user": "Roy, Mike",
