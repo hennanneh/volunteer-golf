@@ -4441,8 +4441,10 @@
       "scheduled": {
         "Monday AM": true,
         "Wednesday AM": true,
+        "Thursday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
+        "Saturday AM": true,
         "Saturday PM": true,
         "Sunday AM": true
       },
@@ -4450,7 +4452,7 @@
       "address": "764 Parkview Drive Burleson, TX 76028",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779408894702
+      "lastModified": 1779900842315
     },
     {
       "id": "8345",
@@ -12863,16 +12865,6 @@
       "isAlternate": false
     },
     {
-      "volunteerId": "7865",
-      "volunteerName": "Davis, Sam",
-      "hole": 8,
-      "day": "Wednesday",
-      "shift": "AM",
-      "checkedInBy": "Rogenski, Chris P.",
-      "timestamp": "2026-05-27T12:28:48.592Z",
-      "isAlternate": false
-    },
-    {
       "volunteerId": "10271",
       "volunteerName": "Mcintyre, Sean",
       "hole": 5,
@@ -14111,6 +14103,56 @@
       "checkedInBy": "Trout, Wayne",
       "timestamp": "2026-05-27T16:47:18.000Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "10222",
+      "volunteerName": "Weber, James",
+      "hole": 1,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Ruddell, Dick",
+      "timestamp": "2026-05-27T16:50:31.202Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2919",
+      "volunteerName": "Loveland, Edward",
+      "hole": 9,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Burnett, Eric",
+      "timestamp": "2026-05-27T16:52:47.949Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7865",
+      "volunteerName": "Davis, Sam",
+      "hole": 8,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-27T16:52:56.366Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8179",
+      "volunteerName": "Deese, Buddy",
+      "hole": 9,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Burnett, Eric",
+      "timestamp": "2026-05-27T16:53:56.841Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10075",
+      "volunteerName": "Giamfortone, Joseph",
+      "hole": 9,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Burnett, Eric",
+      "timestamp": "2026-05-27T16:54:25.669Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -14130,6 +14172,150 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779900895887",
+      "timestamp": "2026-05-27T16:54:55.887Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779900869147",
+      "timestamp": "2026-05-27T16:54:29.147Z",
+      "user": "Burnett, Eric",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 9",
+      "details": "Submitted Wednesday PM for Hole 9"
+    },
+    {
+      "id": "1779900865733",
+      "timestamp": "2026-05-27T16:54:25.733Z",
+      "user": "Burnett, Eric",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Giamfortone, Joseph",
+      "details": "Wednesday PM - Hole #9"
+    },
+    {
+      "id": "1779900842316-o2ooqr",
+      "timestamp": "2026-05-27T16:54:02.316Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Kramer, Ed",
+      "details": "added Thursday AM, Saturday AM"
+    },
+    {
+      "id": "1779900839910",
+      "timestamp": "2026-05-27T16:53:59.910Z",
+      "user": "Burnett, Eric",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 9",
+      "details": "Submitted Wednesday PM for Hole 9"
+    },
+    {
+      "id": "1779900836902",
+      "timestamp": "2026-05-27T16:53:56.902Z",
+      "user": "Burnett, Eric",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Deese, Buddy",
+      "details": "Wednesday PM - Hole #9"
+    },
+    {
+      "id": "1779900835427",
+      "timestamp": "2026-05-27T16:53:55.427Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Davis, Sam",
+      "details": "Wednesday PM - Hole #8 (alternate)"
+    },
+    {
+      "id": "1779900793872",
+      "timestamp": "2026-05-27T16:53:13.872Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Davis, Sam",
+      "details": "Wednesday PM - Hole #8 (alternate)"
+    },
+    {
+      "id": "1779900793654",
+      "timestamp": "2026-05-27T16:53:13.654Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Davis, Sam",
+      "details": "Wednesday PM - Hole #8 (alternate)"
+    },
+    {
+      "id": "1779900777234",
+      "timestamp": "2026-05-27T16:52:57.234Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Davis, Sam",
+      "details": "Wednesday PM - Hole #8"
+    },
+    {
+      "id": "1779900775044",
+      "timestamp": "2026-05-27T16:52:55.044Z",
+      "user": "Burnett, Eric",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 9",
+      "details": "Submitted Wednesday PM for Hole 9"
+    },
+    {
+      "id": "1779900769390",
+      "timestamp": "2026-05-27T16:52:49.390Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Davis, Sam",
+      "details": "Wednesday AM - Hole #8"
+    },
+    {
+      "id": "1779900768002",
+      "timestamp": "2026-05-27T16:52:48.002Z",
+      "user": "Burnett, Eric",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Loveland, Edward",
+      "details": "Wednesday PM - Hole #9"
+    },
+    {
+      "id": "1779900643197",
+      "timestamp": "2026-05-27T16:50:43.197Z",
+      "user": "Ruddell, Dick",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 1",
+      "details": "Submitted Wednesday PM for Hole 1"
+    },
+    {
+      "id": "1779900643158",
+      "timestamp": "2026-05-27T16:50:43.158Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 1",
+      "details": "Submitted Wednesday PM for Hole 1"
+    },
+    {
+      "id": "1779900631920",
+      "timestamp": "2026-05-27T16:50:31.920Z",
+      "user": "Ruddell, Dick",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Weber, James",
+      "details": "Wednesday PM - Hole #1"
+    },
     {
       "id": "1779900528002",
       "timestamp": "2026-05-27T16:48:48.002Z",
