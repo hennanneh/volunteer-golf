@@ -6774,7 +6774,8 @@
       "address": "3300 W 7th Street, apt 204 Fort Worth, TX 76107",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1778813044771,
+      "volunteerPassword": "$2b$10$AeQh3uq8ZjAkrfQlGdE3w.MrfwnqPRJ30rvEz9P7VGsLTX3Oop6o6"
     },
     {
       "id": "8510",
@@ -15345,6 +15346,33 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779912258414",
+      "timestamp": "2026-05-27T20:04:18.414Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1779912201034",
+      "timestamp": "2026-05-27T20:03:21.034Z",
+      "user": "Ready, Charles",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1779912019904",
+      "timestamp": "2026-05-27T20:00:19.904Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
     {
       "id": "1779910819464",
       "timestamp": "2026-05-27T19:40:19.464Z",
@@ -35555,5 +35583,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779908153971
+  "serverNow": 1779912202707
 }
