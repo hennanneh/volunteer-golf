@@ -12158,6 +12158,15 @@
   },
   "activityLog": [
     {
+      "id": "1779843863827",
+      "timestamp": "2026-05-27T01:04:23.827Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1779842969319",
       "timestamp": "2026-05-27T00:49:29.320Z",
       "user": "Nederostek, Brad",
