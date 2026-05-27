@@ -12768,6 +12768,146 @@
       "checkedInBy": "Pugh, Clayton",
       "timestamp": "2026-05-27T12:23:42.825Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "7794",
+      "volunteerName": "Beckley, Bob",
+      "hole": 15,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Beckley, Bob",
+      "timestamp": "2026-05-27T12:26:49.026Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5235",
+      "volunteerName": "Thomas, Stephen",
+      "hole": 15,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Beckley, Bob",
+      "timestamp": "2026-05-27T12:26:51.351Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9610",
+      "volunteerName": "Bullard, Roy",
+      "hole": 15,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Beckley, Bob",
+      "timestamp": "2026-05-27T12:26:56.768Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9807",
+      "volunteerName": "Bullard, Tricia",
+      "hole": 15,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Beckley, Bob",
+      "timestamp": "2026-05-27T12:26:57.882Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9134",
+      "volunteerName": "Clark, Jason",
+      "hole": 15,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Beckley, Bob",
+      "timestamp": "2026-05-27T12:26:59.766Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10362",
+      "volunteerName": "Mills, Brad",
+      "hole": 15,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Beckley, Bob",
+      "timestamp": "2026-05-27T12:27:02.111Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6281",
+      "volunteerName": "Dunn, Steve",
+      "hole": 5,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Imboden, Thomas",
+      "timestamp": "2026-05-27T12:27:20.610Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2507",
+      "volunteerName": "Holt, Sammy",
+      "hole": 8,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-27T12:28:35.226Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2543",
+      "volunteerName": "Holt, Sharron",
+      "hole": 8,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-27T12:28:35.736Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5307",
+      "volunteerName": "Anderson, Rob",
+      "hole": 8,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-27T12:28:41.433Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7865",
+      "volunteerName": "Davis, Sam",
+      "hole": 8,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-27T12:28:48.592Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10271",
+      "volunteerName": "Mcintyre, Sean",
+      "hole": 5,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Imboden, Thomas",
+      "timestamp": "2026-05-27T12:28:59.333Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9896",
+      "volunteerName": "Sullivan, Patrick",
+      "hole": 8,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-27T12:28:59.843Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9874",
+      "volunteerName": "Hughes, Allen",
+      "hole": 8,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-27T12:29:03.923Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -12783,9 +12923,190 @@
     "helpName": "Mike Hill",
     "pairingsUrl": "https://colonialvolunteers.golf/pairings/",
     "showOutingPreferences": false,
-    "pairingsText": "Pairings Sheet (demo data)"
+    "pairingsText": "Pairings Sheet (demo data)",
+    "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779884942610",
+      "timestamp": "2026-05-27T12:29:02.610Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 5",
+      "details": "Submitted Wednesday AM for Hole 5"
+    },
+    {
+      "id": "1779884940177",
+      "timestamp": "2026-05-27T12:29:00.177Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Sullivan, Patrick",
+      "details": "Wednesday AM - Hole #8"
+    },
+    {
+      "id": "1779884939411",
+      "timestamp": "2026-05-27T12:28:59.411Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Mcintyre, Sean",
+      "details": "Wednesday AM - Hole #5"
+    },
+    {
+      "id": "1779884932730",
+      "timestamp": "2026-05-27T12:28:52.730Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "settings-change",
+      "target": "showPoweredBy",
+      "details": "Updated setting: showPoweredBy"
+    },
+    {
+      "id": "1779884928938",
+      "timestamp": "2026-05-27T12:28:48.938Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Davis, Sam",
+      "details": "Wednesday AM - Hole #8"
+    },
+    {
+      "id": "1779884921766",
+      "timestamp": "2026-05-27T12:28:41.766Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Anderson, Rob",
+      "details": "Wednesday AM - Hole #8"
+    },
+    {
+      "id": "1779884916065",
+      "timestamp": "2026-05-27T12:28:36.065Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Holt, Sharron",
+      "details": "Wednesday AM - Hole #8"
+    },
+    {
+      "id": "1779884915560",
+      "timestamp": "2026-05-27T12:28:35.561Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Holt, Sammy",
+      "details": "Wednesday AM - Hole #8"
+    },
+    {
+      "id": "1779884915236",
+      "timestamp": "2026-05-27T12:28:35.236Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779884909481",
+      "timestamp": "2026-05-27T12:28:29.481Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779884845504",
+      "timestamp": "2026-05-27T12:27:25.504Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 5",
+      "details": "Submitted Wednesday AM for Hole 5"
+    },
+    {
+      "id": "1779884840691",
+      "timestamp": "2026-05-27T12:27:20.691Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Dunn, Steve",
+      "details": "Wednesday AM - Hole #5"
+    },
+    {
+      "id": "1779884829768",
+      "timestamp": "2026-05-27T12:27:09.768Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 15",
+      "details": "Submitted Wednesday AM for Hole 15"
+    },
+    {
+      "id": "1779884822158",
+      "timestamp": "2026-05-27T12:27:02.158Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Mills, Brad",
+      "details": "Wednesday AM - Hole #15"
+    },
+    {
+      "id": "1779884819811",
+      "timestamp": "2026-05-27T12:26:59.811Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Clark, Jason",
+      "details": "Wednesday AM - Hole #15"
+    },
+    {
+      "id": "1779884817924",
+      "timestamp": "2026-05-27T12:26:57.924Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Bullard, Tricia",
+      "details": "Wednesday AM - Hole #15"
+    },
+    {
+      "id": "1779884816810",
+      "timestamp": "2026-05-27T12:26:56.810Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Bullard, Roy",
+      "details": "Wednesday AM - Hole #15"
+    },
+    {
+      "id": "1779884811391",
+      "timestamp": "2026-05-27T12:26:51.391Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Thomas, Stephen",
+      "details": "Wednesday AM - Hole #15"
+    },
+    {
+      "id": "1779884809071",
+      "timestamp": "2026-05-27T12:26:49.071Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Beckley, Bob",
+      "details": "Wednesday AM - Hole #15"
+    },
+    {
+      "id": "1779884797546",
+      "timestamp": "2026-05-27T12:26:37.546Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779884622792",
       "timestamp": "2026-05-27T12:23:42.793Z",
@@ -27717,5 +28038,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779884178808
+  "serverNow": 1779884940652
 }
