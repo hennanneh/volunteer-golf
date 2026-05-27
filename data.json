@@ -13581,6 +13581,116 @@
       "checkedInBy": "Edwards, Bill",
       "timestamp": "2026-05-27T15:03:09.234Z",
       "isAlternate": true
+    },
+    {
+      "volunteerId": "2745",
+      "volunteerName": "Roy, Mike",
+      "hole": 16,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Roy, Mike",
+      "timestamp": "2026-05-27T15:06:01.288Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "1770",
+      "volunteerName": "Mulvaney, Matt",
+      "hole": 16,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Roy, Mike",
+      "timestamp": "2026-05-27T15:06:02.919Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "292",
+      "volunteerName": "Zamzow, Steve",
+      "hole": 16,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Roy, Mike",
+      "timestamp": "2026-05-27T15:06:03.918Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8522",
+      "volunteerName": "Anderson, Jodie",
+      "hole": 16,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Roy, Mike",
+      "timestamp": "2026-05-27T15:06:06.319Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10207",
+      "volunteerName": "Bell, Scott",
+      "hole": 16,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Roy, Mike",
+      "timestamp": "2026-05-27T15:06:09.499Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5772",
+      "volunteerName": "Cherry, Charles",
+      "hole": 16,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Roy, Mike",
+      "timestamp": "2026-05-27T15:06:11.624Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6731",
+      "volunteerName": "Emerson, David",
+      "hole": 16,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Roy, Mike",
+      "timestamp": "2026-05-27T15:06:14.269Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "155",
+      "volunteerName": "Harvey, Dalton",
+      "hole": 16,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Roy, Mike",
+      "timestamp": "2026-05-27T15:06:18.120Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5656",
+      "volunteerName": "Jackson, Ronald",
+      "hole": 16,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Roy, Mike",
+      "timestamp": "2026-05-27T15:06:21.633Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10240",
+      "volunteerName": "Schaumburg, Kent",
+      "hole": 16,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Roy, Mike",
+      "timestamp": "2026-05-27T15:06:23.162Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7120",
+      "volunteerName": "Truitt, Norman",
+      "hole": 16,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Roy, Mike",
+      "timestamp": "2026-05-27T15:06:25.553Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -13600,6 +13710,123 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779894413556",
+      "timestamp": "2026-05-27T15:06:53.556Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 16",
+      "details": "Submitted Wednesday AM for Hole 16"
+    },
+    {
+      "id": "1779894385615",
+      "timestamp": "2026-05-27T15:06:25.615Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Truitt, Norman",
+      "details": "Wednesday AM - Hole #16"
+    },
+    {
+      "id": "1779894383218",
+      "timestamp": "2026-05-27T15:06:23.218Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Schaumburg, Kent",
+      "details": "Wednesday AM - Hole #16"
+    },
+    {
+      "id": "1779894381693",
+      "timestamp": "2026-05-27T15:06:21.693Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Jackson, Ronald",
+      "details": "Wednesday AM - Hole #16"
+    },
+    {
+      "id": "1779894378190",
+      "timestamp": "2026-05-27T15:06:18.190Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Harvey, Dalton",
+      "details": "Wednesday AM - Hole #16"
+    },
+    {
+      "id": "1779894374332",
+      "timestamp": "2026-05-27T15:06:14.332Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Emerson, David",
+      "details": "Wednesday AM - Hole #16"
+    },
+    {
+      "id": "1779894371690",
+      "timestamp": "2026-05-27T15:06:11.690Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Cherry, Charles",
+      "details": "Wednesday AM - Hole #16"
+    },
+    {
+      "id": "1779894369561",
+      "timestamp": "2026-05-27T15:06:09.561Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Bell, Scott",
+      "details": "Wednesday AM - Hole #16"
+    },
+    {
+      "id": "1779894367551",
+      "timestamp": "2026-05-27T15:06:07.551Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779894366384",
+      "timestamp": "2026-05-27T15:06:06.384Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Anderson, Jodie",
+      "details": "Wednesday AM - Hole #16"
+    },
+    {
+      "id": "1779894364033",
+      "timestamp": "2026-05-27T15:06:04.033Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Zamzow, Steve",
+      "details": "Wednesday AM - Hole #16"
+    },
+    {
+      "id": "1779894362975",
+      "timestamp": "2026-05-27T15:06:02.975Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Mulvaney, Matt",
+      "details": "Wednesday AM - Hole #16"
+    },
+    {
+      "id": "1779894361367",
+      "timestamp": "2026-05-27T15:06:01.367Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Roy, Mike",
+      "details": "Wednesday AM - Hole #16"
+    },
     {
       "id": "1779894247647",
       "timestamp": "2026-05-27T15:04:07.647Z",
@@ -30627,5 +30854,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779892270463
+  "serverNow": 1779894369994
 }
