@@ -13440,6 +13440,33 @@
   },
   "activityLog": [
     {
+      "id": "1779891840085",
+      "timestamp": "2026-05-27T14:24:00.085Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779891833073",
+      "timestamp": "2026-05-27T14:23:53.073Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779891825129",
+      "timestamp": "2026-05-27T14:23:45.129Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1779891573791",
       "timestamp": "2026-05-27T14:19:33.792Z",
       "user": "Diaz, Rickey",
