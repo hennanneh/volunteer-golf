@@ -12276,6 +12276,46 @@
       "checkedInBy": "Johnson, Kenny",
       "timestamp": "2026-05-27T11:19:55.970Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "10547",
+      "volunteerName": "Surita, Rene",
+      "hole": 1,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Johnson, Kenny",
+      "timestamp": "2026-05-27T11:20:07.670Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8609",
+      "volunteerName": "Ward, Donald",
+      "hole": 1,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Johnson, Kenny",
+      "timestamp": "2026-05-27T11:20:08.516Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4536",
+      "volunteerName": "Trout, Wayne",
+      "hole": 10,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-27T11:24:50.947Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9560",
+      "volunteerName": "Cross, Britt",
+      "hole": 10,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-27T11:24:59.864Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -12294,6 +12334,60 @@
     "pairingsText": "Pairings Sheet (demo data)"
   },
   "activityLog": [
+    {
+      "id": "1779881100009",
+      "timestamp": "2026-05-27T11:25:00.009Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Cross, Britt",
+      "details": "Wednesday AM - Hole #10"
+    },
+    {
+      "id": "1779881091101",
+      "timestamp": "2026-05-27T11:24:51.101Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Trout, Wayne",
+      "details": "Wednesday AM - Hole #10"
+    },
+    {
+      "id": "1779881086484",
+      "timestamp": "2026-05-27T11:24:46.484Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779880831003",
+      "timestamp": "2026-05-27T11:20:31.003Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 1",
+      "details": "Submitted Wednesday AM for Hole 1"
+    },
+    {
+      "id": "1779880808578",
+      "timestamp": "2026-05-27T11:20:08.578Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Ward, Donald",
+      "details": "Wednesday AM - Hole #1"
+    },
+    {
+      "id": "1779880807731",
+      "timestamp": "2026-05-27T11:20:07.731Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Surita, Rene",
+      "details": "Wednesday AM - Hole #1"
+    },
     {
       "id": "1779880796026",
       "timestamp": "2026-05-27T11:19:56.026Z",
