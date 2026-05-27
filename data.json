@@ -12964,6 +12964,46 @@
   },
   "activityLog": [
     {
+      "id": "1779885566444",
+      "timestamp": "2026-05-27T12:39:26.444Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 14",
+      "details": "Submitted Wednesday AM for Hole 14"
+    },
+    {
+      "id": "1779885556898-cco6gd",
+      "timestamp": "2026-05-27T12:39:16.898Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "rejected-bulk-edit",
+      "target": "Livingston, Jennifier",
+      "details": "Captain hole 14 attempted to modify hole 4 volunteer (auto-rejected via bulk save — no data changed)",
+      "targetHole": 4,
+      "actorHole": 14
+    },
+    {
+      "id": "1779885556896-50dgc6",
+      "timestamp": "2026-05-27T12:39:16.896Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "rejected-bulk-edit",
+      "target": "Bravo, Albert",
+      "details": "Captain hole 14 attempted to modify hole 13 volunteer (auto-rejected via bulk save — no data changed)",
+      "targetHole": 13,
+      "actorHole": 14
+    },
+    {
+      "id": "1779885516973",
+      "timestamp": "2026-05-27T12:38:36.973Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Arnold, Tyrone",
+      "details": "Wednesday AM - Hole #14"
+    },
+    {
       "id": "1779885298850-gjirxd",
       "timestamp": "2026-05-27T12:34:58.850Z",
       "user": "Mosler, Mitch",
@@ -28277,5 +28317,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779885065836
+  "serverNow": 1779885067951
 }
