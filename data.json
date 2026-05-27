@@ -106,14 +106,14 @@
         "Wednesday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
-        "Saturday PM": true,
+        "Saturday AM": true,
         "Sunday AM": true
       },
       "address": "3216 Sawmill Way\r\nMansfield, TX 76063",
       "volId": "5307",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779897629044
     },
     {
       "id": "2658",
@@ -9123,9 +9123,9 @@
     },
     {
       "id": "new_1779795430211",
-      "name": "Karenes, Tripp",
+      "name": "Karnes, Tripp",
       "type": "Volunteer",
-      "hole": 16,
+      "hole": 18,
       "phone": "",
       "email": "",
       "yearsWorked": 0,
@@ -9135,11 +9135,10 @@
         "Monday AM": true,
         "Wednesday PM": true
       },
-      "lastModified": 1779795575930,
+      "lastModified": 1779897720373,
       "notes": "",
       "address": "",
-      "volId": "",
-      "originalHole": 18
+      "volId": ""
     }
   ],
   "checkIns": [
@@ -10705,7 +10704,7 @@
     },
     {
       "volunteerId": "new_1779795430211",
-      "volunteerName": "Karenes, Tripp",
+      "volunteerName": "Karnes, Tripp",
       "hole": 18,
       "day": "Monday",
       "shift": "PM",
@@ -10715,7 +10714,7 @@
     },
     {
       "volunteerId": "new_1779795430211",
-      "volunteerName": "Karenes, Tripp",
+      "volunteerName": "Karnes, Tripp",
       "hole": 18,
       "day": "Monday",
       "shift": "AM",
@@ -13772,6 +13771,16 @@
       "checkedInBy": "Mosler, Mitch",
       "timestamp": "2026-05-27T15:44:24.113Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "1518",
+      "volunteerName": "Trias, Dan",
+      "hole": 9,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Edwards, Bill",
+      "timestamp": "2026-05-27T16:00:52.411Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -13791,6 +13800,42 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779897720373-jc6gdu",
+      "timestamp": "2026-05-27T16:02:00.373Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Karnes, Tripp",
+      "details": "Updated fields: name"
+    },
+    {
+      "id": "1779897667597-nsw2gt",
+      "timestamp": "2026-05-27T16:01:07.597Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Karenes, Tripp",
+      "details": "Updated fields: hole, originalHole"
+    },
+    {
+      "id": "1779897636934",
+      "timestamp": "2026-05-27T16:00:36.934Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779897629044-qozk3f",
+      "timestamp": "2026-05-27T16:00:29.044Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Anderson, Rob",
+      "details": "added Saturday AM; removed Saturday PM"
+    },
     {
       "id": "1779896748074",
       "timestamp": "2026-05-27T15:45:48.074Z",
