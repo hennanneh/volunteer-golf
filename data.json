@@ -5124,18 +5124,12 @@
       "email": "resmaxm@gmail.com",
       "yearsWorked": 12,
       "hat": "",
-      "scheduled": {
-        "Wednesday AM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true
-      },
+      "scheduled": {},
       "volId": "5764",
       "address": "5101 Dewdrop Lane Fort Worth, TX 76123-1934",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779883159562
     },
     {
       "id": "10683",
@@ -12575,6 +12569,24 @@
     "pairingsText": "Pairings Sheet (demo data)"
   },
   "activityLog": [
+    {
+      "id": "1779883159563-e2eiua",
+      "timestamp": "2026-05-27T11:59:19.563Z",
+      "user": "Wehmeyer, Tom",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Maxfield, Michael",
+      "details": "removed Wednesday AM, Thursday PM, Friday AM, Saturday PM, Sunday AM"
+    },
+    {
+      "id": "1779883129826",
+      "timestamp": "2026-05-27T11:58:49.826Z",
+      "user": "Wehmeyer, Tom",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779882769444",
       "timestamp": "2026-05-27T11:52:49.444Z",
