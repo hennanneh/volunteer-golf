@@ -13230,6 +13230,106 @@
       "checkedInBy": "Rogenski, Chris P.",
       "timestamp": "2026-05-27T13:15:33.839Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "3138",
+      "volunteerName": "Bishop, Woody",
+      "hole": 17,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Bishop, Woody",
+      "timestamp": "2026-05-27T13:21:28.360Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6191",
+      "volunteerName": "Browning, Wayne",
+      "hole": 17,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Bishop, Woody",
+      "timestamp": "2026-05-27T13:21:29.047Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9406",
+      "volunteerName": "Kocek, Greg",
+      "hole": 17,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Bishop, Woody",
+      "timestamp": "2026-05-27T13:21:29.809Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10339",
+      "volunteerName": "Lancaster, Barry",
+      "hole": 17,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Bishop, Woody",
+      "timestamp": "2026-05-27T13:21:31.095Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10495",
+      "volunteerName": "Studdard, William",
+      "hole": 17,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Bishop, Woody",
+      "timestamp": "2026-05-27T13:21:32.512Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10279",
+      "volunteerName": "Wright, Nancy",
+      "hole": 17,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Bishop, Woody",
+      "timestamp": "2026-05-27T13:21:33.709Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4661",
+      "volunteerName": "Wright, Paul",
+      "hole": 17,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Bishop, Woody",
+      "timestamp": "2026-05-27T13:21:33.999Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9427",
+      "volunteerName": "Yost, Kc",
+      "hole": 17,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Bishop, Woody",
+      "timestamp": "2026-05-27T13:21:35.518Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8295",
+      "volunteerName": "Miller, Ken",
+      "hole": 6,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Mcdaniel, Patrick",
+      "timestamp": "2026-05-27T13:24:28.318Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2658",
+      "volunteerName": "Andrews, Joseph",
+      "hole": 6,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Mcdaniel, Patrick",
+      "timestamp": "2026-05-27T13:24:45.076Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -13249,6 +13349,141 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779888299726",
+      "timestamp": "2026-05-27T13:24:59.728Z",
+      "user": "Quintana, Mike",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779888285144",
+      "timestamp": "2026-05-27T13:24:45.144Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Andrews, Joseph",
+      "details": "Wednesday AM - Hole #6"
+    },
+    {
+      "id": "1779888227020",
+      "timestamp": "2026-05-27T13:23:47.020Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Hoover, Thomas",
+      "details": "Wednesday PM - Hole #2"
+    },
+    {
+      "id": "1779888224884",
+      "timestamp": "2026-05-27T13:23:44.884Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Hoover, Thomas",
+      "details": "Wednesday PM - Hole #2"
+    },
+    {
+      "id": "1779888207268",
+      "timestamp": "2026-05-27T13:23:27.268Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Lemay, Mark",
+      "details": "Wednesday PM - Hole #2"
+    },
+    {
+      "id": "1779888205337",
+      "timestamp": "2026-05-27T13:23:25.338Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Lemay, Mark",
+      "details": "Wednesday PM - Hole #2"
+    },
+    {
+      "id": "1779888144378",
+      "timestamp": "2026-05-27T13:22:24.378Z",
+      "user": "Bishop, Woody",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 17",
+      "details": "Submitted Wednesday AM for Hole 17"
+    },
+    {
+      "id": "1779888095597",
+      "timestamp": "2026-05-27T13:21:35.597Z",
+      "user": "Bishop, Woody",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Yost, Kc",
+      "details": "Wednesday AM - Hole #17"
+    },
+    {
+      "id": "1779888094078",
+      "timestamp": "2026-05-27T13:21:34.078Z",
+      "user": "Bishop, Woody",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Wright, Paul",
+      "details": "Wednesday AM - Hole #17"
+    },
+    {
+      "id": "1779888093795",
+      "timestamp": "2026-05-27T13:21:33.796Z",
+      "user": "Bishop, Woody",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Wright, Nancy",
+      "details": "Wednesday AM - Hole #17"
+    },
+    {
+      "id": "1779888092593",
+      "timestamp": "2026-05-27T13:21:32.593Z",
+      "user": "Bishop, Woody",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Studdard, William",
+      "details": "Wednesday AM - Hole #17"
+    },
+    {
+      "id": "1779888091171",
+      "timestamp": "2026-05-27T13:21:31.171Z",
+      "user": "Bishop, Woody",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Lancaster, Barry",
+      "details": "Wednesday AM - Hole #17"
+    },
+    {
+      "id": "1779888089907",
+      "timestamp": "2026-05-27T13:21:29.907Z",
+      "user": "Bishop, Woody",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Kocek, Greg",
+      "details": "Wednesday AM - Hole #17"
+    },
+    {
+      "id": "1779888089133",
+      "timestamp": "2026-05-27T13:21:29.134Z",
+      "user": "Bishop, Woody",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Browning, Wayne",
+      "details": "Wednesday AM - Hole #17"
+    },
+    {
+      "id": "1779888088452",
+      "timestamp": "2026-05-27T13:21:28.452Z",
+      "user": "Bishop, Woody",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Bishop, Woody",
+      "details": "Wednesday AM - Hole #17"
+    },
     {
       "id": "1779887757414",
       "timestamp": "2026-05-27T13:15:57.414Z",
@@ -29600,5 +29835,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779887510846
+  "serverNow": 1779887759033
 }
