@@ -14913,6 +14913,56 @@
       "checkedInBy": "Thomas, Stephen",
       "timestamp": "2026-05-27T17:39:40.649Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "6191",
+      "volunteerName": "Browning, Wayne",
+      "hole": 17,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Browning, Wayne",
+      "timestamp": "2026-05-27T17:41:26.925Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "3138",
+      "volunteerName": "Bishop, Woody",
+      "hole": 17,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Browning, Wayne",
+      "timestamp": "2026-05-27T17:41:27.302Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "3777",
+      "volunteerName": "Hicks, Greg",
+      "hole": 17,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Browning, Wayne",
+      "timestamp": "2026-05-27T17:41:37.200Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "3778",
+      "volunteerName": "Hicks, Jackie",
+      "hole": 17,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Browning, Wayne",
+      "timestamp": "2026-05-27T17:41:38.329Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8644",
+      "volunteerName": "Richie, Antonio",
+      "hole": 17,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Browning, Wayne",
+      "timestamp": "2026-05-27T17:41:47.513Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -14932,6 +14982,51 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779903707592",
+      "timestamp": "2026-05-27T17:41:47.592Z",
+      "user": "Browning, Wayne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Richie, Antonio",
+      "details": "Wednesday PM - Hole #17"
+    },
+    {
+      "id": "1779903698402",
+      "timestamp": "2026-05-27T17:41:38.402Z",
+      "user": "Browning, Wayne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Hicks, Jackie",
+      "details": "Wednesday PM - Hole #17"
+    },
+    {
+      "id": "1779903697276",
+      "timestamp": "2026-05-27T17:41:37.276Z",
+      "user": "Browning, Wayne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Hicks, Greg",
+      "details": "Wednesday PM - Hole #17"
+    },
+    {
+      "id": "1779903636829",
+      "timestamp": "2026-05-27T17:40:36.829Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779903604649",
+      "timestamp": "2026-05-27T17:40:04.649Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 15",
+      "details": "Submitted Wednesday PM for Hole 15"
+    },
     {
       "id": "1779903482319",
       "timestamp": "2026-05-27T17:38:02.319Z",
