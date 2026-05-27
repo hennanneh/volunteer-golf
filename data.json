@@ -13440,6 +13440,15 @@
   },
   "activityLog": [
     {
+      "id": "1779892184100",
+      "timestamp": "2026-05-27T14:29:44.100Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
       "id": "1779891840085",
       "timestamp": "2026-05-27T14:24:00.085Z",
       "user": "Holt, Sharron",
