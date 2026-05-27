@@ -15316,6 +15316,36 @@
       "checkedInBy": "Roy, Mike",
       "timestamp": "2026-05-27T20:31:56.728Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "7922",
+      "volunteerName": "Justice, Neal",
+      "hole": 6,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Mcdaniel, Patrick",
+      "timestamp": "2026-05-27T22:00:30.818Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9834",
+      "volunteerName": "Piper, Kathleen",
+      "hole": 6,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Mcdaniel, Patrick",
+      "timestamp": "2026-05-27T22:00:33.615Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9833",
+      "volunteerName": "Piper, Monte",
+      "hole": 6,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Mcdaniel, Patrick",
+      "timestamp": "2026-05-27T22:00:34.427Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -15335,6 +15365,42 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779919255460",
+      "timestamp": "2026-05-27T22:00:55.460Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 6",
+      "details": "Submitted Wednesday PM for Hole 6"
+    },
+    {
+      "id": "1779919234486",
+      "timestamp": "2026-05-27T22:00:34.486Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Piper, Monte",
+      "details": "Wednesday PM - Hole #6"
+    },
+    {
+      "id": "1779919233666",
+      "timestamp": "2026-05-27T22:00:33.666Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Piper, Kathleen",
+      "details": "Wednesday PM - Hole #6"
+    },
+    {
+      "id": "1779919230880",
+      "timestamp": "2026-05-27T22:00:30.880Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Justice, Neal",
+      "details": "Wednesday PM - Hole #6"
+    },
     {
       "id": "1779918954461",
       "timestamp": "2026-05-27T21:55:54.461Z",
