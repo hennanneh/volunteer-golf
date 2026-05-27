@@ -12466,6 +12466,16 @@
       "checkedInBy": "Gordon, Gary",
       "timestamp": "2026-05-27T11:34:03.268Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "7363",
+      "volunteerName": "Roberson, Chris",
+      "hole": 10,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-27T11:39:33.512Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -12484,6 +12494,15 @@
     "pairingsText": "Pairings Sheet (demo data)"
   },
   "activityLog": [
+    {
+      "id": "1779881973659",
+      "timestamp": "2026-05-27T11:39:33.659Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Roberson, Chris",
+      "details": "Wednesday AM - Hole #10"
+    },
     {
       "id": "1779881643121",
       "timestamp": "2026-05-27T11:34:03.121Z",
@@ -26918,5 +26937,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779881640598
+  "serverNow": 1779881549572
 }
