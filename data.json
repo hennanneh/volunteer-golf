@@ -14468,16 +14468,6 @@
       "isAlternate": false
     },
     {
-      "volunteerId": "10012",
-      "volunteerName": "Borgschatz, Keith",
-      "hole": 12,
-      "day": "Wednesday",
-      "shift": "PM",
-      "checkedInBy": "Pugh, Clayton",
-      "timestamp": "2026-05-27T17:03:56.883Z",
-      "isAlternate": false
-    },
-    {
       "volunteerId": "10451",
       "volunteerName": "Miller, David",
       "hole": 3,
@@ -15275,6 +15265,15 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779909002272",
+      "timestamp": "2026-05-27T19:10:02.274Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Borgschatz, Keith",
+      "details": "Wednesday PM - Hole #12"
+    },
     {
       "id": "1779908723188",
       "timestamp": "2026-05-27T19:05:23.188Z",
