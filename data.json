@@ -12156,6 +12156,56 @@
       "checkedInBy": "Jutras, Michael",
       "timestamp": "2026-05-26T20:58:55.374Z",
       "isAlternate": true
+    },
+    {
+      "volunteerId": "10644",
+      "volunteerName": "Ash, Michael",
+      "hole": 11,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-27T10:59:19.773Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9796",
+      "volunteerName": "Richards, Stephen",
+      "hole": 11,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-27T10:59:22.933Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8154",
+      "volunteerName": "Wyatt, Jeff",
+      "hole": 11,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-27T10:59:23.569Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "278",
+      "volunteerName": "Watson, Stan",
+      "hole": 11,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-27T10:59:29.304Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6553",
+      "volunteerName": "Ruddell, Dick",
+      "hole": 1,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Ruddell, Dick",
+      "timestamp": "2026-05-27T11:00:01.390Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -12174,6 +12224,60 @@
     "pairingsText": "Pairings Sheet (demo data)"
   },
   "activityLog": [
+    {
+      "id": "1779879569356",
+      "timestamp": "2026-05-27T10:59:29.356Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Watson, Stan",
+      "details": "Wednesday AM - Hole #11"
+    },
+    {
+      "id": "1779879563633",
+      "timestamp": "2026-05-27T10:59:23.633Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Wyatt, Jeff",
+      "details": "Wednesday AM - Hole #11"
+    },
+    {
+      "id": "1779879563232",
+      "timestamp": "2026-05-27T10:59:23.232Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Richards, Stephen",
+      "details": "Wednesday AM - Hole #11"
+    },
+    {
+      "id": "1779879559841",
+      "timestamp": "2026-05-27T10:59:19.841Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Ash, Michael",
+      "details": "Wednesday AM - Hole #11"
+    },
+    {
+      "id": "1779879498557",
+      "timestamp": "2026-05-27T10:58:18.557Z",
+      "user": "Schafer, John",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779879413708",
+      "timestamp": "2026-05-27T10:56:53.708Z",
+      "user": "Butler, Mark",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779878873749",
       "timestamp": "2026-05-27T10:47:53.749Z",
@@ -26284,5 +26388,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779826807731
+  "serverNow": 1779879499540
 }
