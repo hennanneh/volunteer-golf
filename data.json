@@ -15266,6 +15266,15 @@
   },
   "activityLog": [
     {
+      "id": "1779909352547",
+      "timestamp": "2026-05-27T19:15:52.548Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 8",
+      "details": "Submitted Wednesday PM for Hole 8"
+    },
+    {
       "id": "1779909002272",
       "timestamp": "2026-05-27T19:10:02.274Z",
       "user": "Pugh, Clayton",
