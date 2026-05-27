@@ -12255,6 +12255,24 @@
   },
   "activityLog": [
     {
+      "id": "1779880192577",
+      "timestamp": "2026-05-27T11:09:52.577Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1779879971204",
+      "timestamp": "2026-05-27T11:06:11.204Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1779879783938",
       "timestamp": "2026-05-27T11:03:03.938Z",
       "user": "Pugh, Clayton",
