@@ -13853,16 +13853,6 @@
       "isAlternate": false
     },
     {
-      "volunteerId": "10222",
-      "volunteerName": "Weber, James",
-      "hole": 1,
-      "day": "Wednesday",
-      "shift": "PM",
-      "checkedInBy": "Johnson, Kenny",
-      "timestamp": "2026-05-27T16:26:49.074Z",
-      "isAlternate": false
-    },
-    {
       "volunteerId": "243",
       "volunteerName": "Sale, Lynn",
       "hole": 2,
@@ -14111,6 +14101,16 @@
       "checkedInBy": "Rogenski, Chris P.",
       "timestamp": "2026-05-27T16:41:51.964Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "10150",
+      "volunteerName": "Peterson, Durk",
+      "hole": 10,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-27T16:47:18.000Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -14130,6 +14130,15 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779900528002",
+      "timestamp": "2026-05-27T16:48:48.002Z",
+      "user": "Ruddell, Dick",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Weber, James",
+      "details": "Wednesday PM - Hole #1"
+    },
     {
       "id": "1779900264557",
       "timestamp": "2026-05-27T16:44:24.557Z",
