@@ -383,7 +383,8 @@
       "address": "1020 Brook Arbor Drive MANSFIELD, TX 76063",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779389196917
+      "lastModified": 1779389196917,
+      "volunteerPassword": "$2b$10$X2urA13mdVKLgS2unGkBgOsm8ypen0KbZ8SzUSeBwFRUNH.sz3LIi"
     },
     {
       "id": "7747",
@@ -4632,7 +4633,8 @@
       "volId": "2133",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1778813044771,
+      "volunteerPassword": "$2b$10$/.QDwfmlOemLRnL.zkmbRe4eYneVKnwWyyCPvtKPLrzCApwr2.uF2"
     },
     {
       "id": "10276",
@@ -7415,7 +7417,8 @@
       "address": "3516 Cockrill McKinney, TX 75072",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779389211242
+      "lastModified": 1779389211242,
+      "volunteerPassword": "$2b$10$0n6QAN/5Xk2nLCaoDEhb.OWNoRFKYBfCg08MFjrucCGaoD8P4zjQ2"
     },
     {
       "id": "8499",
@@ -12974,6 +12977,46 @@
       "checkedInBy": "Duncan, Larry",
       "timestamp": "2026-05-27T12:43:16.595Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "9775",
+      "volunteerName": "Stults, Mike",
+      "hole": 13,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Duncan, Larry",
+      "timestamp": "2026-05-27T12:45:48.442Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8852",
+      "volunteerName": "Vollintine, Derek",
+      "hole": 13,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Duncan, Larry",
+      "timestamp": "2026-05-27T12:45:53.528Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6340",
+      "volunteerName": "Diaz, Rickey",
+      "hole": 8,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-27T12:48:29.657Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6338",
+      "volunteerName": "Pryor, Wesley",
+      "hole": 8,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-27T12:48:30.928Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -12993,6 +13036,411 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779886111280",
+      "timestamp": "2026-05-27T12:48:31.280Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Pryor, Wesley",
+      "details": "Wednesday AM - Hole #8"
+    },
+    {
+      "id": "1779886110008",
+      "timestamp": "2026-05-27T12:48:30.008Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Diaz, Rickey",
+      "details": "Wednesday AM - Hole #8"
+    },
+    {
+      "id": "1779886040891",
+      "timestamp": "2026-05-27T12:47:20.891Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Williams, Amy",
+      "details": "Wednesday AM - Hole #20"
+    },
+    {
+      "id": "1779886039275",
+      "timestamp": "2026-05-27T12:47:19.275Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Tidwell, Jim",
+      "details": "Wednesday AM - Hole #20"
+    },
+    {
+      "id": "1779886037890",
+      "timestamp": "2026-05-27T12:47:17.890Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Stephens, Rayford",
+      "details": "Wednesday AM - Hole #20"
+    },
+    {
+      "id": "1779886036422",
+      "timestamp": "2026-05-27T12:47:16.422Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Sassaman, David",
+      "details": "Wednesday AM - Hole #20"
+    },
+    {
+      "id": "1779886035212",
+      "timestamp": "2026-05-27T12:47:15.212Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Paine, Danny",
+      "details": "Wednesday AM - Hole #20"
+    },
+    {
+      "id": "1779886033857",
+      "timestamp": "2026-05-27T12:47:13.857Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Mobley, Ken",
+      "details": "Wednesday AM - Hole #20"
+    },
+    {
+      "id": "1779886032403",
+      "timestamp": "2026-05-27T12:47:12.403Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Mendoza, Ralph",
+      "details": "Wednesday AM - Hole #20"
+    },
+    {
+      "id": "1779886031145",
+      "timestamp": "2026-05-27T12:47:11.145Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Lucas, John H.",
+      "details": "Wednesday AM - Hole #20"
+    },
+    {
+      "id": "1779886030179",
+      "timestamp": "2026-05-27T12:47:10.179Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Kuhnell, David",
+      "details": "Wednesday AM - Hole #20"
+    },
+    {
+      "id": "1779886028450",
+      "timestamp": "2026-05-27T12:47:08.450Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Kalbfleisch, Joe",
+      "details": "Wednesday AM - Hole #20"
+    },
+    {
+      "id": "1779886027259",
+      "timestamp": "2026-05-27T12:47:07.259Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Jones, Dietrich",
+      "details": "Wednesday AM - Hole #20"
+    },
+    {
+      "id": "1779886025891",
+      "timestamp": "2026-05-27T12:47:05.891Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Hix, 'Winky",
+      "details": "Wednesday AM - Hole #20"
+    },
+    {
+      "id": "1779886024611",
+      "timestamp": "2026-05-27T12:47:04.611Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Hamic, Craig",
+      "details": "Wednesday AM - Hole #20"
+    },
+    {
+      "id": "1779886023377",
+      "timestamp": "2026-05-27T12:47:03.377Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Gagel, Chester",
+      "details": "Wednesday AM - Hole #20"
+    },
+    {
+      "id": "1779886022134",
+      "timestamp": "2026-05-27T12:47:02.134Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Collins, Kevin",
+      "details": "Wednesday AM - Hole #20"
+    },
+    {
+      "id": "1779886020776",
+      "timestamp": "2026-05-27T12:47:00.776Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Chapman, John",
+      "details": "Wednesday AM - Hole #20"
+    },
+    {
+      "id": "1779886020167",
+      "timestamp": "2026-05-27T12:47:00.167Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Byrom, Kirk",
+      "details": "Wednesday AM - Hole #20"
+    },
+    {
+      "id": "1779886018014",
+      "timestamp": "2026-05-27T12:46:58.014Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Barber, Michael",
+      "details": "Wednesday AM - Hole #20"
+    },
+    {
+      "id": "1779886017189",
+      "timestamp": "2026-05-27T12:46:57.189Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Pueblo, Vange",
+      "details": "Wednesday AM - Hole #20"
+    },
+    {
+      "id": "1779885989959",
+      "timestamp": "2026-05-27T12:46:29.959Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Paine, Danny",
+      "details": "Wednesday AM - Hole #20"
+    },
+    {
+      "id": "1779885984959",
+      "timestamp": "2026-05-27T12:46:24.959Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 13",
+      "details": "Submitted Wednesday AM for Hole 13"
+    },
+    {
+      "id": "1779885979638",
+      "timestamp": "2026-05-27T12:46:19.638Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Paine, Danny",
+      "details": "Wednesday AM - Hole #20"
+    },
+    {
+      "id": "1779885964047",
+      "timestamp": "2026-05-27T12:46:04.047Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Pueblo, Vange",
+      "details": "Wednesday AM - Hole #20"
+    },
+    {
+      "id": "1779885962946",
+      "timestamp": "2026-05-27T12:46:02.946Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Barber, Michael",
+      "details": "Wednesday AM - Hole #20"
+    },
+    {
+      "id": "1779885961972",
+      "timestamp": "2026-05-27T12:46:01.972Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Byrom, Kirk",
+      "details": "Wednesday AM - Hole #20"
+    },
+    {
+      "id": "1779885959343",
+      "timestamp": "2026-05-27T12:45:59.343Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Chapman, John",
+      "details": "Wednesday AM - Hole #20"
+    },
+    {
+      "id": "1779885958591",
+      "timestamp": "2026-05-27T12:45:58.591Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Collins, Kevin",
+      "details": "Wednesday AM - Hole #20"
+    },
+    {
+      "id": "1779885954288",
+      "timestamp": "2026-05-27T12:45:54.288Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Gagel, Chester",
+      "details": "Wednesday AM - Hole #20"
+    },
+    {
+      "id": "1779885953567",
+      "timestamp": "2026-05-27T12:45:53.567Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Vollintine, Derek",
+      "details": "Wednesday AM - Hole #13"
+    },
+    {
+      "id": "1779885952874",
+      "timestamp": "2026-05-27T12:45:52.874Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Hamic, Craig",
+      "details": "Wednesday AM - Hole #20"
+    },
+    {
+      "id": "1779885952864",
+      "timestamp": "2026-05-27T12:45:52.864Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Hix, 'Winky",
+      "details": "Wednesday AM - Hole #20"
+    },
+    {
+      "id": "1779885950871",
+      "timestamp": "2026-05-27T12:45:50.871Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Jones, Dietrich",
+      "details": "Wednesday AM - Hole #20"
+    },
+    {
+      "id": "1779885949107",
+      "timestamp": "2026-05-27T12:45:49.107Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Kalbfleisch, Joe",
+      "details": "Wednesday AM - Hole #20"
+    },
+    {
+      "id": "1779885948731",
+      "timestamp": "2026-05-27T12:45:48.731Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Kuhnell, David",
+      "details": "Wednesday AM - Hole #20"
+    },
+    {
+      "id": "1779885948478",
+      "timestamp": "2026-05-27T12:45:48.478Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Stults, Mike",
+      "details": "Wednesday AM - Hole #13"
+    },
+    {
+      "id": "1779885946899",
+      "timestamp": "2026-05-27T12:45:46.899Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Lucas, John H.",
+      "details": "Wednesday AM - Hole #20"
+    },
+    {
+      "id": "1779885946837",
+      "timestamp": "2026-05-27T12:45:46.837Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Mendoza, Ralph",
+      "details": "Wednesday AM - Hole #20"
+    },
+    {
+      "id": "1779885945468",
+      "timestamp": "2026-05-27T12:45:45.468Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Mobley, Ken",
+      "details": "Wednesday AM - Hole #20"
+    },
+    {
+      "id": "1779885944949",
+      "timestamp": "2026-05-27T12:45:44.949Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Paine, Danny",
+      "details": "Wednesday AM - Hole #20"
+    },
+    {
+      "id": "1779885942779",
+      "timestamp": "2026-05-27T12:45:42.779Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Sassaman, David",
+      "details": "Wednesday AM - Hole #20"
+    },
+    {
+      "id": "1779885942195",
+      "timestamp": "2026-05-27T12:45:42.195Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Stephens, Rayford",
+      "details": "Wednesday AM - Hole #20"
+    },
+    {
+      "id": "1779885941650",
+      "timestamp": "2026-05-27T12:45:41.650Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Tidwell, Jim",
+      "details": "Wednesday AM - Hole #20"
+    },
+    {
+      "id": "1779885940610",
+      "timestamp": "2026-05-27T12:45:40.610Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Williams, Amy",
+      "details": "Wednesday AM - Hole #20"
+    },
     {
       "id": "1779885853413",
       "timestamp": "2026-05-27T12:44:13.413Z",
@@ -28561,5 +29009,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779885820545
+  "serverNow": 1779885986053
 }
