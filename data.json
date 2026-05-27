@@ -15316,6 +15316,16 @@
       "checkedInBy": "Roy, Mike",
       "timestamp": "2026-05-27T19:33:35.842Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "6967",
+      "volunteerName": "Leggett, Deborah",
+      "hole": 8,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-27T19:43:54.823Z",
+      "isAlternate": true
     }
   ],
   "submissions": [],
@@ -15335,6 +15345,15 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779910819464",
+      "timestamp": "2026-05-27T19:40:19.464Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
     {
       "id": "1779910419510",
       "timestamp": "2026-05-27T19:33:39.510Z",
