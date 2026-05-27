@@ -542,7 +542,7 @@
       "yearsWorked": 12,
       "hat": "",
       "scheduled": {
-        "Wednesday AM": true,
+        "Wednesday PM": true,
         "Thursday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
@@ -552,7 +552,7 @@
       "address": "1661 S Forum Dr Apt 4402 Grand Prairie, TX 75052",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779884438898
     },
     {
       "id": "3149",
@@ -4784,16 +4784,22 @@
       "hat": "",
       "scheduled": {
         "Wednesday AM": true,
+        "Wednesday PM": true,
         "Thursday AM": true,
+        "Thursday PM": true,
+        "Friday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true,
         "Sunday PM": true
       },
       "volId": "4800",
       "address": "3201 Medina Ave Fort Worth, TX 76133",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779884512810,
+      "notes": "Jennifer will work 5 extra shifts: Wednesday PM, Thursday PM, Friday AM, Saturday PM, and Sunday AM"
     },
     {
       "id": "2919",
@@ -12682,6 +12688,86 @@
       "checkedInBy": "Sanders, Steve",
       "timestamp": "2026-05-27T12:18:53.717Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "6217",
+      "volunteerName": "Nederostek, Brad",
+      "hole": 4,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Nederostek, Brad",
+      "timestamp": "2026-05-27T12:22:05.009Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "3974",
+      "volunteerName": "Schafer, John",
+      "hole": 4,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Nederostek, Brad",
+      "timestamp": "2026-05-27T12:22:05.344Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8935",
+      "volunteerName": "Knight, Ron",
+      "hole": 4,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Nederostek, Brad",
+      "timestamp": "2026-05-27T12:22:28.781Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4800",
+      "volunteerName": "Livingston, Jennifier",
+      "hole": 4,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Nederostek, Brad",
+      "timestamp": "2026-05-27T12:22:30.036Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9581",
+      "volunteerName": "Williams, David",
+      "hole": 4,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Nederostek, Brad",
+      "timestamp": "2026-05-27T12:22:31.090Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8359",
+      "volunteerName": "Gray, Leandro",
+      "hole": 4,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Nederostek, Brad",
+      "timestamp": "2026-05-27T12:22:51.709Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8182",
+      "volunteerName": "Walters, Mark",
+      "hole": 14,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Sanders, Steve",
+      "timestamp": "2026-05-27T12:23:23.037Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4745",
+      "volunteerName": "Pittman, Tom",
+      "hole": 12,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-27T12:23:42.825Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -12697,9 +12783,126 @@
     "helpName": "Mike Hill",
     "pairingsUrl": "https://colonialvolunteers.golf/pairings/",
     "showOutingPreferences": false,
-    "pairingsText": "Pairings- Wednesday ProAm"
+    "pairingsText": "Pairings Sheet (demo data)"
   },
   "activityLog": [
+    {
+      "id": "1779884622792",
+      "timestamp": "2026-05-27T12:23:42.793Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Pittman, Tom",
+      "details": "Wednesday AM - Hole #12"
+    },
+    {
+      "id": "1779884613752",
+      "timestamp": "2026-05-27T12:23:33.752Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Walters, Mark",
+      "details": "Wednesday AM - Hole #14"
+    },
+    {
+      "id": "1779884579136",
+      "timestamp": "2026-05-27T12:22:59.136Z",
+      "user": "Hughes, Allen",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1779884571754",
+      "timestamp": "2026-05-27T12:22:51.754Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Gray, Leandro",
+      "details": "Wednesday AM - Hole #4"
+    },
+    {
+      "id": "1779884551195",
+      "timestamp": "2026-05-27T12:22:31.195Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Williams, David",
+      "details": "Wednesday AM - Hole #4"
+    },
+    {
+      "id": "1779884550081",
+      "timestamp": "2026-05-27T12:22:30.081Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Livingston, Jennifier",
+      "details": "Wednesday AM - Hole #4"
+    },
+    {
+      "id": "1779884548819",
+      "timestamp": "2026-05-27T12:22:28.819Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Knight, Ron",
+      "details": "Wednesday AM - Hole #4"
+    },
+    {
+      "id": "1779884525418",
+      "timestamp": "2026-05-27T12:22:05.418Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Schafer, John",
+      "details": "Wednesday AM - Hole #4"
+    },
+    {
+      "id": "1779884525073",
+      "timestamp": "2026-05-27T12:22:05.073Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Nederostek, Brad",
+      "details": "Wednesday AM - Hole #4"
+    },
+    {
+      "id": "1779884512810-t49b6g",
+      "timestamp": "2026-05-27T12:21:52.810Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "edit-volunteer",
+      "target": "Livingston, Jennifier",
+      "details": "Updated fields: scheduled, notes"
+    },
+    {
+      "id": "1779884438898-afvd4i",
+      "timestamp": "2026-05-27T12:20:38.898Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Bravo, Albert",
+      "details": "added Wednesday PM; removed Wednesday AM"
+    },
+    {
+      "id": "1779884415186",
+      "timestamp": "2026-05-27T12:20:15.187Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779884414143",
+      "timestamp": "2026-05-27T12:20:14.143Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779884398368",
       "timestamp": "2026-05-27T12:19:58.368Z",
@@ -27514,5 +27717,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779884377375
+  "serverNow": 1779884178808
 }
