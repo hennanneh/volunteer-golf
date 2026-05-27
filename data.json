@@ -6053,6 +6053,7 @@
         "Tuesday AM": true,
         "Tuesday PM": true,
         "Wednesday AM": true,
+        "Wednesday PM": true,
         "Thursday PM": true,
         "Friday AM": true,
         "Saturday PM": true,
@@ -6063,7 +6064,7 @@
       "address": "6705 Lucas Ln North Richland Hills, TX 76182",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779833342231,
+      "lastModified": 1779903225828,
       "notes": "",
       "hatReceived": false
     },
@@ -14712,6 +14713,86 @@
       "checkedInBy": "Holt, Sharron",
       "timestamp": "2026-05-27T17:25:14.509Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "278",
+      "volunteerName": "Watson, Stan",
+      "hole": 11,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-27T17:32:19.400Z",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "2657",
+      "volunteerName": "James, Marty",
+      "hole": 11,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-27T17:32:19.613Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10274",
+      "volunteerName": "Hitz, Jim",
+      "hole": 11,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-27T17:32:36.521Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10178",
+      "volunteerName": "Jamison, Tina",
+      "hole": 11,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-27T17:32:36.941Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5015",
+      "volunteerName": "Meinke, Albert",
+      "hole": 11,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-27T17:32:37.118Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5612",
+      "volunteerName": "Tengra, Mary",
+      "hole": 11,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-27T17:32:37.918Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9019",
+      "volunteerName": "Barron, Jamey",
+      "hole": 13,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Clayton, Rodney",
+      "timestamp": "2026-05-27T17:32:40.074Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6758",
+      "volunteerName": "Oakley, Jeff",
+      "hole": 11,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-27T17:33:54.793Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -14731,6 +14812,114 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779903238134",
+      "timestamp": "2026-05-27T17:33:58.134Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 11",
+      "details": "Submitted Wednesday PM for Hole 11"
+    },
+    {
+      "id": "1779903235222",
+      "timestamp": "2026-05-27T17:33:55.222Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Oakley, Jeff",
+      "details": "Wednesday PM - Hole #11"
+    },
+    {
+      "id": "1779903225828-cl5t8f",
+      "timestamp": "2026-05-27T17:33:45.828Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Oakley, Jeff",
+      "details": "added Wednesday PM"
+    },
+    {
+      "id": "1779903214618",
+      "timestamp": "2026-05-27T17:33:34.618Z",
+      "user": "Clayton, Rodney",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 13",
+      "details": "Submitted Wednesday PM for Hole 13"
+    },
+    {
+      "id": "1779903176590",
+      "timestamp": "2026-05-27T17:32:56.590Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 11",
+      "details": "Submitted Wednesday PM for Hole 11"
+    },
+    {
+      "id": "1779903175772",
+      "timestamp": "2026-05-27T17:32:55.772Z",
+      "user": "Clayton, Rodney",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 13",
+      "details": "Submitted Wednesday PM for Hole 13"
+    },
+    {
+      "id": "1779903162104",
+      "timestamp": "2026-05-27T17:32:42.104Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 5",
+      "details": "Submitted Wednesday PM for Hole 5"
+    },
+    {
+      "id": "1779903160102",
+      "timestamp": "2026-05-27T17:32:40.102Z",
+      "user": "Clayton, Rodney",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Barron, Jamey",
+      "details": "Wednesday PM - Hole #13"
+    },
+    {
+      "id": "1779903158127",
+      "timestamp": "2026-05-27T17:32:38.127Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Tengra, Mary",
+      "details": "Wednesday PM - Hole #11"
+    },
+    {
+      "id": "1779903157065",
+      "timestamp": "2026-05-27T17:32:37.065Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Meinke, Albert",
+      "details": "Wednesday PM - Hole #11"
+    },
+    {
+      "id": "1779903156894",
+      "timestamp": "2026-05-27T17:32:36.894Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Jamison, Tina",
+      "details": "Wednesday PM - Hole #11"
+    },
+    {
+      "id": "1779903156765",
+      "timestamp": "2026-05-27T17:32:36.765Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Hitz, Jim",
+      "details": "Wednesday PM - Hole #11"
+    },
     {
       "id": "1779902878528",
       "timestamp": "2026-05-27T17:27:58.528Z",
@@ -33775,5 +33964,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779902781878
+  "serverNow": 1779903216140
 }
