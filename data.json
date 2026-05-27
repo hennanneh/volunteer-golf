@@ -6170,37 +6170,6 @@
       "notes": "Mark here is your new shift change "
     },
     {
-      "id": "9574",
-      "name": "Paine, Danny",
-      "type": "Volunteer",
-      "hole": 20,
-      "phone": "(817) 734-1383",
-      "email": "dannypaine@ymail.com",
-      "yearsWorked": 3,
-      "hat": "",
-      "scheduled": {
-        "Monday AM": true,
-        "Monday PM": true,
-        "Tuesday AM": true,
-        "Tuesday PM": true,
-        "Wednesday AM": true,
-        "Wednesday PM": true,
-        "Thursday AM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
-        "Friday PM": true,
-        "Saturday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true,
-        "Sunday PM": true
-      },
-      "volId": "9574",
-      "address": "1089 Gonzollas Rd Springtown, TX 76082",
-      "hasAdminPassword": false,
-      "hasVolunteerPassword": false,
-      "lastModified": 1779558394014
-    },
-    {
       "id": "10360",
       "name": "Parker, James",
       "type": "Volunteer",
@@ -15365,6 +15334,24 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779923202180",
+      "timestamp": "2026-05-27T23:06:42.180Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "delete",
+      "target": "Paine, Danny",
+      "details": "Deleted volunteer"
+    },
+    {
+      "id": "1779923176863",
+      "timestamp": "2026-05-27T23:06:16.863Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
     {
       "id": "1779923077508",
       "timestamp": "2026-05-27T23:04:37.510Z",
@@ -35762,6 +35749,10 @@
     {
       "id": "10728",
       "deletedAt": 1779573373389
+    },
+    {
+      "id": "9574",
+      "deletedAt": 1779923202912
     }
   ],
   "serverNow": 1779913952261
