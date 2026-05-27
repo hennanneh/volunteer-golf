@@ -13155,16 +13155,6 @@
       "isAlternate": true
     },
     {
-      "volunteerId": "10667",
-      "volunteerName": "Gilchrist, William (Bill)",
-      "hole": 8,
-      "day": "Wednesday",
-      "shift": "AM",
-      "checkedInBy": "Rogenski, Chris P.",
-      "timestamp": "2026-05-27T12:59:32.811Z",
-      "isAlternate": true
-    },
-    {
       "volunteerId": "9418",
       "volunteerName": "Schuljak, Patty",
       "hole": 8,
@@ -14575,26 +14565,6 @@
       "isAlternate": false
     },
     {
-      "volunteerId": "8787",
-      "volunteerName": "Jefferies, David",
-      "hole": 8,
-      "day": "Wednesday",
-      "shift": "AM",
-      "checkedInBy": "Holt, Sharron",
-      "timestamp": "2026-05-27T17:14:37.663Z",
-      "isAlternate": true
-    },
-    {
-      "volunteerId": "3779",
-      "volunteerName": "Johnson, Claude",
-      "hole": 8,
-      "day": "Wednesday",
-      "shift": "AM",
-      "checkedInBy": "Holt, Sharron",
-      "timestamp": "2026-05-27T17:14:39.632Z",
-      "isAlternate": true
-    },
-    {
       "volunteerId": "9928",
       "volunteerName": "Rodrigues, Donald",
       "hole": 8,
@@ -14703,6 +14673,56 @@
       "checkedInBy": "Burnett, Eric",
       "timestamp": "2026-05-27T17:19:23.159Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "8711",
+      "volunteerName": "Smith, Bruce T.",
+      "hole": 12,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-27T17:21:08.597Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6744",
+      "volunteerName": "Livermore, James",
+      "hole": 5,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Imboden, Thomas",
+      "timestamp": "2026-05-27T17:21:33.317Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6967",
+      "volunteerName": "Leggett, Deborah",
+      "hole": 8,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Holt, Sharron",
+      "timestamp": "2026-05-27T17:23:01.595Z",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "10667",
+      "volunteerName": "Gilchrist, William (Bill)",
+      "hole": 8,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Holt, Sharron",
+      "timestamp": "2026-05-27T17:24:18.072Z",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "6672",
+      "volunteerName": "Bravo, Albert",
+      "hole": 13,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Clayton, Rodney",
+      "timestamp": "2026-05-27T17:24:36.290Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -14722,6 +14742,123 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779902676323",
+      "timestamp": "2026-05-27T17:24:36.323Z",
+      "user": "Clayton, Rodney",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Bravo, Albert",
+      "details": "Wednesday PM - Hole #13"
+    },
+    {
+      "id": "1779902665373",
+      "timestamp": "2026-05-27T17:24:25.373Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Johnson, Claude",
+      "details": "Wednesday AM - Hole #8 (alternate)"
+    },
+    {
+      "id": "1779902658263",
+      "timestamp": "2026-05-27T17:24:18.263Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Gilchrist, William (Bill)",
+      "details": "Wednesday AM - Hole #8 (alternate)"
+    },
+    {
+      "id": "1779902655269",
+      "timestamp": "2026-05-27T17:24:15.269Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Gilchrist, William (Bill)",
+      "details": "Wednesday AM - Hole #8 (alternate)"
+    },
+    {
+      "id": "1779902651538",
+      "timestamp": "2026-05-27T17:24:11.538Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Jefferies, David",
+      "details": "Wednesday AM - Hole #8 (alternate)"
+    },
+    {
+      "id": "1779902647975",
+      "timestamp": "2026-05-27T17:24:07.975Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Davidson, Glen",
+      "details": "Wednesday AM - Hole #8 (alternate)"
+    },
+    {
+      "id": "1779902584753",
+      "timestamp": "2026-05-27T17:23:04.753Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Davidson, Glen",
+      "details": "Wednesday AM - Hole #8 (alternate)"
+    },
+    {
+      "id": "1779902581759",
+      "timestamp": "2026-05-27T17:23:01.759Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Leggett, Deborah",
+      "details": "Wednesday AM - Hole #8 (alternate)"
+    },
+    {
+      "id": "1779902558534",
+      "timestamp": "2026-05-27T17:22:38.534Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 15",
+      "details": "Submitted Wednesday PM for Hole 15"
+    },
+    {
+      "id": "1779902495173",
+      "timestamp": "2026-05-27T17:21:35.174Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 5",
+      "details": "Submitted Wednesday PM for Hole 5"
+    },
+    {
+      "id": "1779902493402",
+      "timestamp": "2026-05-27T17:21:33.403Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Livermore, James",
+      "details": "Wednesday PM - Hole #5"
+    },
+    {
+      "id": "1779902468539",
+      "timestamp": "2026-05-27T17:21:08.540Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Smith, Bruce T.",
+      "details": "Wednesday PM - Hole #12"
+    },
+    {
+      "id": "1779902425972",
+      "timestamp": "2026-05-27T17:20:25.972Z",
+      "user": "Wilson, Todd",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
     {
       "id": "1779902386601",
       "timestamp": "2026-05-27T17:19:46.601Z",
@@ -14748,6 +14885,42 @@
       "action": "check-in",
       "target": "Burnett, Eric",
       "details": "Wednesday PM - Hole #9"
+    },
+    {
+      "id": "1779902288871",
+      "timestamp": "2026-05-27T17:18:08.871Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 5",
+      "details": "Submitted Wednesday PM for Hole 5"
+    },
+    {
+      "id": "1779902287914",
+      "timestamp": "2026-05-27T17:18:07.914Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Smith, Fred",
+      "details": "Wednesday PM - Hole #5"
+    },
+    {
+      "id": "1779902286250",
+      "timestamp": "2026-05-27T17:18:06.250Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Smith, Fred",
+      "details": "Wednesday PM - Hole #5"
+    },
+    {
+      "id": "1779902285524",
+      "timestamp": "2026-05-27T17:18:05.524Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Smith, Fred",
+      "details": "Wednesday PM - Hole #5"
     },
     {
       "id": "1779902273981",
@@ -33550,5 +33723,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779902296702
+  "serverNow": 1779902669582
 }
