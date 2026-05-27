@@ -90,7 +90,8 @@
       "address": "2210 Emerald Lake Dr Arlington, TX 76013",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1778813044771,
+      "volunteerPassword": "$2b$10$koP6zXmDvGRPut6U9XZbtuSXvOcVXIDJ0aZ/IfCZf6fLyaxyMYgDq"
     },
     {
       "id": "5307",
@@ -12621,6 +12622,66 @@
       "checkedInBy": "Imboden, Thomas",
       "timestamp": "2026-05-27T12:13:42.721Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "7806",
+      "volunteerName": "Mosler, Mitch",
+      "hole": 14,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Sanders, Steve",
+      "timestamp": "2026-05-27T12:18:39.684Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9138",
+      "volunteerName": "Morrison, Hal",
+      "hole": 14,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Sanders, Steve",
+      "timestamp": "2026-05-27T12:18:41.135Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9621",
+      "volunteerName": "Ready, Charles",
+      "hole": 14,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Sanders, Steve",
+      "timestamp": "2026-05-27T12:18:46.167Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8608",
+      "volunteerName": "Tellez, Victor",
+      "hole": 14,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Sanders, Steve",
+      "timestamp": "2026-05-27T12:18:47.296Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9233",
+      "volunteerName": "Wooldridge, Brad",
+      "hole": 14,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Sanders, Steve",
+      "timestamp": "2026-05-27T12:18:52.714Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7207",
+      "volunteerName": "Watson, Steve",
+      "hole": 14,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Sanders, Steve",
+      "timestamp": "2026-05-27T12:18:53.717Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -12636,9 +12697,162 @@
     "helpName": "Mike Hill",
     "pairingsUrl": "https://colonialvolunteers.golf/pairings/",
     "showOutingPreferences": false,
-    "pairingsText": "Pairings Sheet (demo data)"
+    "pairingsText": "Pairings- Wednesday ProAm"
   },
   "activityLog": [
+    {
+      "id": "1779884398368",
+      "timestamp": "2026-05-27T12:19:58.368Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "settings-change",
+      "target": "pairingsText",
+      "details": "Updated setting: pairingsText"
+    },
+    {
+      "id": "1779884376671",
+      "timestamp": "2026-05-27T12:19:36.671Z",
+      "user": "Anderson, Jodie",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1779884347792",
+      "timestamp": "2026-05-27T12:19:07.792Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779884344424",
+      "timestamp": "2026-05-27T12:19:04.424Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Watson, Steve",
+      "details": "Wednesday AM - Hole #14"
+    },
+    {
+      "id": "1779884343422",
+      "timestamp": "2026-05-27T12:19:03.422Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Wooldridge, Brad",
+      "details": "Wednesday AM - Hole #14"
+    },
+    {
+      "id": "1779884338009",
+      "timestamp": "2026-05-27T12:18:58.009Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Tellez, Victor",
+      "details": "Wednesday AM - Hole #14"
+    },
+    {
+      "id": "1779884336903",
+      "timestamp": "2026-05-27T12:18:56.903Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Ready, Charles",
+      "details": "Wednesday AM - Hole #14"
+    },
+    {
+      "id": "1779884334738",
+      "timestamp": "2026-05-27T12:18:54.738Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Morrison, Hal",
+      "details": "Wednesday AM - Hole #14"
+    },
+    {
+      "id": "1779884331840",
+      "timestamp": "2026-05-27T12:18:51.840Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Morrison, Hal",
+      "details": "Wednesday AM - Hole #14"
+    },
+    {
+      "id": "1779884330405",
+      "timestamp": "2026-05-27T12:18:50.405Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Mosler, Mitch",
+      "details": "Wednesday AM - Hole #14"
+    },
+    {
+      "id": "1779884325685",
+      "timestamp": "2026-05-27T12:18:45.685Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779884321574",
+      "timestamp": "2026-05-27T12:18:41.574Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779884296760",
+      "timestamp": "2026-05-27T12:18:16.760Z",
+      "user": "Holt, Sharron",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1779884288827",
+      "timestamp": "2026-05-27T12:18:08.827Z",
+      "user": "Holt, Sharron",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1779884269583",
+      "timestamp": "2026-05-27T12:17:49.583Z",
+      "user": "Anderson, Jodie",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1779884254864",
+      "timestamp": "2026-05-27T12:17:34.864Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779884177410",
+      "timestamp": "2026-05-27T12:16:17.410Z",
+      "user": "Anderson, Jodie",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
     {
       "id": "1779884024790",
       "timestamp": "2026-05-27T12:13:44.790Z",
@@ -12710,6 +12924,33 @@
       "action": "system-update",
       "target": "e81a7f9",
       "details": "sw.js: bump CACHE_NAME v36 -> v37"
+    },
+    {
+      "id": "1779883722276",
+      "timestamp": "2026-05-27T12:08:42.276Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Holt, Sharron",
+      "details": "Wednesday AM - Hole #8"
+    },
+    {
+      "id": "1779883722059",
+      "timestamp": "2026-05-27T12:08:42.059Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Holt, Sammy",
+      "details": "Wednesday AM - Hole #8"
+    },
+    {
+      "id": "1779883719581",
+      "timestamp": "2026-05-27T12:08:39.581Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
     },
     {
       "id": "1779883472712",
@@ -27273,5 +27514,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779883930334
+  "serverNow": 1779884377375
 }
