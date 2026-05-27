@@ -12246,6 +12246,36 @@
       "checkedInBy": "Pugh, Clayton",
       "timestamp": "2026-05-27T11:13:04.471Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "342",
+      "volunteerName": "Mckenzie, Roy",
+      "hole": 12,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-27T11:16:16.460Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10213",
+      "volunteerName": "Hurr, Randy",
+      "hole": 1,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Johnson, Kenny",
+      "timestamp": "2026-05-27T11:19:47.102Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9850",
+      "volunteerName": "Hartman, Cathy",
+      "hole": 1,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Johnson, Kenny",
+      "timestamp": "2026-05-27T11:19:55.970Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -12264,6 +12294,33 @@
     "pairingsText": "Pairings Sheet (demo data)"
   },
   "activityLog": [
+    {
+      "id": "1779880796026",
+      "timestamp": "2026-05-27T11:19:56.026Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Hartman, Cathy",
+      "details": "Wednesday AM - Hole #1"
+    },
+    {
+      "id": "1779880576430",
+      "timestamp": "2026-05-27T11:16:16.430Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Mckenzie, Roy",
+      "details": "Wednesday AM - Hole #12"
+    },
+    {
+      "id": "1779880562360",
+      "timestamp": "2026-05-27T11:16:02.360Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779880384438",
       "timestamp": "2026-05-27T11:13:04.439Z",
@@ -26464,5 +26521,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779879971933
+  "serverNow": 1779880563449
 }
