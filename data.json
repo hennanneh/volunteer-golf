@@ -15266,6 +15266,15 @@
   },
   "activityLog": [
     {
+      "id": "1779909666707",
+      "timestamp": "2026-05-27T19:21:06.707Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
       "id": "1779909352547",
       "timestamp": "2026-05-27T19:15:52.548Z",
       "user": "Rogenski, Chris P.",
