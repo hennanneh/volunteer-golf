@@ -3249,7 +3249,7 @@
         "Tuesday PM": true,
         "Wednesday PM": true,
         "Thursday PM": true,
-        "Friday AM": true,
+        "Friday PM": true,
         "Saturday AM": true,
         "Saturday PM": true,
         "Sunday AM": true,
@@ -3259,7 +3259,7 @@
       "address": "3731 Tremont Lane Granbury, TX 76049",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779663232215
+      "lastModified": 1779925782766
     },
     {
       "id": "3778",
@@ -3273,7 +3273,7 @@
       "scheduled": {
         "Wednesday PM": true,
         "Thursday PM": true,
-        "Friday AM": true,
+        "Friday PM": true,
         "Saturday AM": true,
         "Saturday PM": true,
         "Sunday AM": true,
@@ -3283,7 +3283,7 @@
       "address": "3731 Tremont Lane Granbury, TX 76049",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779726937472
+      "lastModified": 1779925794550
     },
     {
       "id": "4639",
@@ -15334,6 +15334,24 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779925794550-e5fmra",
+      "timestamp": "2026-05-27T23:49:54.551Z",
+      "user": "Bishop, Woody",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Hicks, Jackie",
+      "details": "added Friday PM; removed Friday AM"
+    },
+    {
+      "id": "1779925782766-cttl5d",
+      "timestamp": "2026-05-27T23:49:42.766Z",
+      "user": "Bishop, Woody",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Hicks, Greg",
+      "details": "added Friday PM; removed Friday AM"
+    },
     {
       "id": "1779925309976",
       "timestamp": "2026-05-27T23:41:49.976Z",
