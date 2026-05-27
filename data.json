@@ -14061,6 +14061,56 @@
       "checkedInBy": "Pugh, Clayton",
       "timestamp": "2026-05-27T16:39:55.661Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "8878",
+      "volunteerName": "Myrick, Byron",
+      "hole": 12,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-27T16:40:03.110Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "3986",
+      "volunteerName": "Clayton, Rodney",
+      "hole": 13,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Clayton, Rodney",
+      "timestamp": "2026-05-27T16:40:29.796Z",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "9850",
+      "volunteerName": "Hartman, Cathy",
+      "hole": 1,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Ruddell, Dick",
+      "timestamp": "2026-05-27T16:40:46.314Z",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "10293",
+      "volunteerName": "Ricks, Bob",
+      "hole": 12,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-27T16:41:44.866Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "3779",
+      "volunteerName": "Johnson, Claude",
+      "hole": 8,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-27T16:41:51.964Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -14080,6 +14130,123 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779900264557",
+      "timestamp": "2026-05-27T16:44:24.557Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Gustaf, David",
+      "details": "Wednesday PM - Hole #15"
+    },
+    {
+      "id": "1779900263736",
+      "timestamp": "2026-05-27T16:44:23.736Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Gustaf, David",
+      "details": "Wednesday PM - Hole #15"
+    },
+    {
+      "id": "1779900180500",
+      "timestamp": "2026-05-27T16:43:00.500Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779900112531",
+      "timestamp": "2026-05-27T16:41:52.531Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Johnson, Claude",
+      "details": "Wednesday PM - Hole #8"
+    },
+    {
+      "id": "1779900104786",
+      "timestamp": "2026-05-27T16:41:44.786Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Ricks, Bob",
+      "details": "Wednesday PM - Hole #12"
+    },
+    {
+      "id": "1779900049480",
+      "timestamp": "2026-05-27T16:40:49.480Z",
+      "user": "Ruddell, Dick",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 1",
+      "details": "Submitted Wednesday PM for Hole 1"
+    },
+    {
+      "id": "1779900047034",
+      "timestamp": "2026-05-27T16:40:47.034Z",
+      "user": "Ruddell, Dick",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Hartman, Cathy",
+      "details": "Wednesday PM - Hole #1 (alternate)"
+    },
+    {
+      "id": "1779900043952",
+      "timestamp": "2026-05-27T16:40:43.952Z",
+      "user": "Ruddell, Dick",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Hartman, Cathy",
+      "details": "Wednesday PM - Hole #1 (alternate)"
+    },
+    {
+      "id": "1779900039872",
+      "timestamp": "2026-05-27T16:40:39.872Z",
+      "user": "Ruddell, Dick",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Hartman, Cathy",
+      "details": "Wednesday PM - Hole #1 (alternate)"
+    },
+    {
+      "id": "1779900029869",
+      "timestamp": "2026-05-27T16:40:29.869Z",
+      "user": "Clayton, Rodney",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Clayton, Rodney",
+      "details": "Wednesday AM - Hole #13 (alternate)"
+    },
+    {
+      "id": "1779900019386",
+      "timestamp": "2026-05-27T16:40:19.386Z",
+      "user": "Clayton, Rodney",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779900005871",
+      "timestamp": "2026-05-27T16:40:05.871Z",
+      "user": "Clayton, Rodney",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1779900003049",
+      "timestamp": "2026-05-27T16:40:03.049Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Myrick, Byron",
+      "details": "Wednesday PM - Hole #12"
+    },
     {
       "id": "1779899995577",
       "timestamp": "2026-05-27T16:39:55.577Z",
@@ -31755,5 +31922,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779899466795
+  "serverNow": 1779900031072
 }
