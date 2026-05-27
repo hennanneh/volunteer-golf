@@ -13440,6 +13440,33 @@
   },
   "activityLog": [
     {
+      "id": "1779890649811",
+      "timestamp": "2026-05-27T14:04:09.811Z",
+      "user": "Butler, Mark",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779890611448",
+      "timestamp": "2026-05-27T14:03:31.448Z",
+      "user": "Butler, Mark",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779890588856",
+      "timestamp": "2026-05-27T14:03:08.856Z",
+      "user": "Butler, Mark",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1779889991971",
       "timestamp": "2026-05-27T13:53:11.971Z",
       "user": "Gilchrist, William (Bill)",
