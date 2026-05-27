@@ -12316,6 +12316,46 @@
       "checkedInBy": "Trout, Wayne",
       "timestamp": "2026-05-27T11:24:59.864Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "9788",
+      "volunteerName": "Kramer, Ed",
+      "hole": 10,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-27T11:25:05.188Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10329",
+      "volunteerName": "Mecum, Scott",
+      "hole": 10,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-27T11:25:09.217Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7232",
+      "volunteerName": "Russell, Daniel",
+      "hole": 1,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Johnson, Kenny",
+      "timestamp": "2026-05-27T11:27:04.348Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6829",
+      "volunteerName": "Russell, Mary",
+      "hole": 1,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Johnson, Kenny",
+      "timestamp": "2026-05-27T11:27:08.298Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -12334,6 +12374,51 @@
     "pairingsText": "Pairings Sheet (demo data)"
   },
   "activityLog": [
+    {
+      "id": "1779881231573",
+      "timestamp": "2026-05-27T11:27:11.573Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 1",
+      "details": "Submitted Wednesday AM for Hole 1"
+    },
+    {
+      "id": "1779881228348",
+      "timestamp": "2026-05-27T11:27:08.348Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Russell, Mary",
+      "details": "Wednesday AM - Hole #1"
+    },
+    {
+      "id": "1779881224409",
+      "timestamp": "2026-05-27T11:27:04.409Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Russell, Daniel",
+      "details": "Wednesday AM - Hole #1"
+    },
+    {
+      "id": "1779881109376",
+      "timestamp": "2026-05-27T11:25:09.376Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Mecum, Scott",
+      "details": "Wednesday AM - Hole #10"
+    },
+    {
+      "id": "1779881105343",
+      "timestamp": "2026-05-27T11:25:05.343Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Kramer, Ed",
+      "details": "Wednesday AM - Hole #10"
+    },
     {
       "id": "1779881100009",
       "timestamp": "2026-05-27T11:25:00.009Z",
