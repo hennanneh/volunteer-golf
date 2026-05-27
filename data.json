@@ -3032,14 +3032,13 @@
         "Wednesday PM": true,
         "Thursday PM": true,
         "Friday AM": true,
-        "Saturday PM": true,
         "Sunday AM": true
       },
       "volId": "10248",
       "address": "4404 Mallow Oak Dr FORT Worth, TX 76123",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779896523551
     },
     {
       "id": "9069",
@@ -13743,6 +13742,36 @@
       "checkedInBy": "Johnson, Kenny",
       "timestamp": "2026-05-27T15:22:47.627Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "8887",
+      "volunteerName": "Arnold, Tyrone",
+      "hole": 14,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Mosler, Mitch",
+      "timestamp": "2026-05-27T15:44:20.035Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8608",
+      "volunteerName": "Tellez, Victor",
+      "hole": 14,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Mosler, Mitch",
+      "timestamp": "2026-05-27T15:44:23.092Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7207",
+      "volunteerName": "Watson, Steve",
+      "hole": 14,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Mosler, Mitch",
+      "timestamp": "2026-05-27T15:44:24.113Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -13762,6 +13791,51 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779896673907",
+      "timestamp": "2026-05-27T15:44:33.907Z",
+      "user": "Mosler, Mitch",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 14",
+      "details": "Submitted Wednesday PM for Hole 14"
+    },
+    {
+      "id": "1779896664180",
+      "timestamp": "2026-05-27T15:44:24.180Z",
+      "user": "Mosler, Mitch",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Watson, Steve",
+      "details": "Wednesday PM - Hole #14"
+    },
+    {
+      "id": "1779896663162",
+      "timestamp": "2026-05-27T15:44:23.162Z",
+      "user": "Mosler, Mitch",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Tellez, Victor",
+      "details": "Wednesday PM - Hole #14"
+    },
+    {
+      "id": "1779896660107",
+      "timestamp": "2026-05-27T15:44:20.107Z",
+      "user": "Mosler, Mitch",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Arnold, Tyrone",
+      "details": "Wednesday PM - Hole #14"
+    },
+    {
+      "id": "1779896523551-jy8wsd",
+      "timestamp": "2026-05-27T15:42:03.551Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Hardaway, Jerry",
+      "details": "removed Saturday PM"
+    },
     {
       "id": "1779896273890",
       "timestamp": "2026-05-27T15:37:53.890Z",
