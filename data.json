@@ -15134,6 +15134,66 @@
       "checkedInBy": "Johnson, Kenny",
       "timestamp": "2026-05-27T18:17:29.224Z",
       "isAlternate": true
+    },
+    {
+      "volunteerId": "new_1779795430211",
+      "volunteerName": "Karnes, Tripp",
+      "hole": 18,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Gradt, Jason",
+      "timestamp": "2026-05-27T18:22:29.569Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9568",
+      "volunteerName": "Krajca, Brian",
+      "hole": 18,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Gradt, Jason",
+      "timestamp": "2026-05-27T18:22:31.007Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10797",
+      "volunteerName": "Martin, Hubert",
+      "hole": 18,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Gradt, Jason",
+      "timestamp": "2026-05-27T18:22:31.903Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2125",
+      "volunteerName": "Moore, Keith",
+      "hole": 18,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Gradt, Jason",
+      "timestamp": "2026-05-27T18:22:34.493Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10696",
+      "volunteerName": "Schoeppach, Ryan",
+      "hole": 18,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Gradt, Jason",
+      "timestamp": "2026-05-27T18:22:35.757Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4222",
+      "volunteerName": "Wehmeyer, Tom",
+      "hole": 18,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Gradt, Jason",
+      "timestamp": "2026-05-27T18:24:51.900Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -15153,6 +15213,69 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779906291976",
+      "timestamp": "2026-05-27T18:24:51.976Z",
+      "user": "Gradt, Jason",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Wehmeyer, Tom",
+      "details": "Wednesday PM - Hole #18"
+    },
+    {
+      "id": "1779906222647",
+      "timestamp": "2026-05-27T18:23:42.647Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779906155803",
+      "timestamp": "2026-05-27T18:22:35.803Z",
+      "user": "Gradt, Jason",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Schoeppach, Ryan",
+      "details": "Wednesday PM - Hole #18"
+    },
+    {
+      "id": "1779906154536",
+      "timestamp": "2026-05-27T18:22:34.536Z",
+      "user": "Gradt, Jason",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Moore, Keith",
+      "details": "Wednesday PM - Hole #18"
+    },
+    {
+      "id": "1779906151940",
+      "timestamp": "2026-05-27T18:22:31.940Z",
+      "user": "Gradt, Jason",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Martin, Hubert",
+      "details": "Wednesday PM - Hole #18"
+    },
+    {
+      "id": "1779906151075",
+      "timestamp": "2026-05-27T18:22:31.075Z",
+      "user": "Gradt, Jason",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Krajca, Brian",
+      "details": "Wednesday PM - Hole #18"
+    },
+    {
+      "id": "1779906149616",
+      "timestamp": "2026-05-27T18:22:29.617Z",
+      "user": "Gradt, Jason",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Karnes, Tripp",
+      "details": "Wednesday PM - Hole #18"
+    },
     {
       "id": "1779905853001-x1lxfu",
       "timestamp": "2026-05-27T18:17:33.001Z",
@@ -34906,5 +35029,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779903979673
+  "serverNow": 1779906222881
 }
