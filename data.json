@@ -12527,6 +12527,36 @@
       "checkedInBy": "Gordon, Gary",
       "timestamp": "2026-05-27T11:45:17.009Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "9398",
+      "volunteerName": "Whitcomb, Diane",
+      "hole": 3,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Wilson, Todd",
+      "timestamp": "2026-05-27T11:51:06.091Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6949",
+      "volunteerName": "Putt, Gerald",
+      "hole": 12,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-27T11:51:40.001Z",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "8711",
+      "volunteerName": "Smith, Bruce T.",
+      "hole": 12,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-27T11:52:49.469Z",
+      "isAlternate": true
     }
   ],
   "submissions": [],
@@ -12545,6 +12575,15 @@
     "pairingsText": "Pairings Sheet (demo data)"
   },
   "activityLog": [
+    {
+      "id": "1779882769444",
+      "timestamp": "2026-05-27T11:52:49.444Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Smith, Bruce T.",
+      "details": "Wednesday AM - Hole #12 (alternate)"
+    },
     {
       "id": "1779882370924",
       "timestamp": "2026-05-27T11:46:10.924Z",
