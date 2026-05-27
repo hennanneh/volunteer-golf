@@ -12610,6 +12610,24 @@
   },
   "activityLog": [
     {
+      "id": "1779883785682-9ukosu",
+      "timestamp": "2026-05-27T12:09:45.682Z",
+      "user": "System",
+      "userType": "Deployment",
+      "action": "system-update",
+      "target": "e81a7f9c",
+      "details": "Pairings 6-player cap (0373115) + sw.js v37 cache bump"
+    },
+    {
+      "id": "1779883783304-3lszqn",
+      "timestamp": "2026-05-27T12:09:43.304Z",
+      "user": "System",
+      "userType": "Deployment",
+      "action": "system-update",
+      "target": "e81a7f9",
+      "details": "sw.js: bump CACHE_NAME v36 -> v37"
+    },
+    {
       "id": "1779883472712",
       "timestamp": "2026-05-27T12:04:32.712Z",
       "user": "Gordon, Gary",
