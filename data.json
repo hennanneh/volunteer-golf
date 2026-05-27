@@ -7486,8 +7486,8 @@
       "hat": "",
       "scheduled": {
         "Tuesday AM": true,
-        "Wednesday PM": true,
         "Thursday AM": true,
+        "Thursday PM": true,
         "Friday PM": true,
         "Saturday AM": true,
         "Sunday PM": true
@@ -7497,7 +7497,7 @@
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
       "notes": "",
-      "lastModified": 1779807130813,
+      "lastModified": 1779901993644,
       "volunteerPassword": "$2b$10$w1xd2loPnmEAFEv73loWHOgwqo9FCv/3MAC8k087QbxOAVXifBjKa"
     },
     {
@@ -14564,6 +14564,46 @@
       "checkedInBy": "Rogenski, Chris P.",
       "timestamp": "2026-05-27T17:08:30.169Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "10321",
+      "volunteerName": "Crawford, Billy",
+      "hole": 10,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-27T17:13:14.187Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8787",
+      "volunteerName": "Jefferies, David",
+      "hole": 8,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Holt, Sharron",
+      "timestamp": "2026-05-27T17:14:37.663Z",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "3779",
+      "volunteerName": "Johnson, Claude",
+      "hole": 8,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Holt, Sharron",
+      "timestamp": "2026-05-27T17:14:39.632Z",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "9928",
+      "volunteerName": "Rodrigues, Donald",
+      "hole": 8,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Holt, Sharron",
+      "timestamp": "2026-05-27T17:14:44.389Z",
+      "isAlternate": true
     }
   ],
   "submissions": [],
@@ -14583,6 +14623,60 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779902084542",
+      "timestamp": "2026-05-27T17:14:44.542Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Rodrigues, Donald",
+      "details": "Wednesday AM - Hole #8 (alternate)"
+    },
+    {
+      "id": "1779902082567",
+      "timestamp": "2026-05-27T17:14:42.567Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Johnson, Claude",
+      "details": "Wednesday AM - Hole #8 (alternate)"
+    },
+    {
+      "id": "1779902082357",
+      "timestamp": "2026-05-27T17:14:42.357Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "King, Jeff",
+      "details": "Wednesday AM - Hole #8 (alternate)"
+    },
+    {
+      "id": "1779902082181",
+      "timestamp": "2026-05-27T17:14:42.181Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "King, Jeff",
+      "details": "Wednesday AM - Hole #8 (alternate)"
+    },
+    {
+      "id": "1779902077813",
+      "timestamp": "2026-05-27T17:14:37.813Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Jefferies, David",
+      "details": "Wednesday AM - Hole #8 (alternate)"
+    },
+    {
+      "id": "1779901993644-0c389q",
+      "timestamp": "2026-05-27T17:13:13.644Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Schultz, Joni",
+      "details": "added Thursday PM; removed Wednesday PM"
+    },
     {
       "id": "1779901712448-h98fmv",
       "timestamp": "2026-05-27T17:08:32.448Z",
