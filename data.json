@@ -15336,6 +15336,15 @@
   },
   "activityLog": [
     {
+      "id": "1779918954461",
+      "timestamp": "2026-05-27T21:55:54.461Z",
+      "user": "Turner, Charlie",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
       "id": "1779918696963",
       "timestamp": "2026-05-27T21:51:36.963Z",
       "user": "Quintana, Mike",
