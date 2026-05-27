@@ -14888,16 +14888,6 @@
       "isAlternate": false
     },
     {
-      "volunteerId": "8127",
-      "volunteerName": "Harrell, Michael",
-      "hole": 2,
-      "day": "Wednesday",
-      "shift": "PM",
-      "checkedInBy": "Sale, Lynn",
-      "timestamp": "2026-05-27T17:38:02.442Z",
-      "isAlternate": true
-    },
-    {
       "volunteerId": "5924",
       "volunteerName": "Gustaf, David",
       "hole": 15,
@@ -15275,6 +15265,33 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779908222141",
+      "timestamp": "2026-05-27T18:57:02.141Z",
+      "user": "Quintana, Mike",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 7",
+      "details": "Submitted Wednesday PM for Hole 7"
+    },
+    {
+      "id": "1779908210340",
+      "timestamp": "2026-05-27T18:56:50.340Z",
+      "user": "Quintana, Mike",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 7",
+      "details": "Submitted Wednesday PM for Hole 7"
+    },
+    {
+      "id": "1779908151642",
+      "timestamp": "2026-05-27T18:55:51.642Z",
+      "user": "King, Jeff",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
     {
       "id": "1779908006532",
       "timestamp": "2026-05-27T18:53:26.532Z",
@@ -35305,5 +35322,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779907977218
+  "serverNow": 1779908153971
 }
