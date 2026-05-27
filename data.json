@@ -4441,11 +4441,9 @@
       "scheduled": {
         "Monday AM": true,
         "Wednesday AM": true,
-        "Wednesday PM": true,
         "Thursday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
-        "Friday PM": true,
         "Saturday AM": true,
         "Saturday PM": true,
         "Sunday AM": true
@@ -4454,7 +4452,7 @@
       "address": "764 Parkview Drive Burleson, TX 76028",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779900986658
+      "lastModified": 1779901418839
     },
     {
       "id": "8345",
@@ -4698,6 +4696,7 @@
       "scheduled": {
         "Wednesday PM": true,
         "Thursday AM": true,
+        "Friday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
         "Sunday PM": true
@@ -4706,7 +4705,7 @@
       "volId": "5441",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779901383649
     },
     {
       "id": "6967",
@@ -14495,6 +14494,26 @@
       "checkedInBy": "Mcdaniel, Patrick",
       "timestamp": "2026-05-27T16:59:47.281Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "5454",
+      "volunteerName": "Kopenec, Rich",
+      "hole": 13,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Clayton, Rodney",
+      "timestamp": "2026-05-27T17:00:01.465Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10012",
+      "volunteerName": "Borgschatz, Keith",
+      "hole": 12,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-27T17:03:56.883Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -14514,6 +14533,97 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779901436799",
+      "timestamp": "2026-05-27T17:03:56.800Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Borgschatz, Keith",
+      "details": "Wednesday PM - Hole #12"
+    },
+    {
+      "id": "1779901418845-kvt9g9",
+      "timestamp": "2026-05-27T17:03:38.845Z",
+      "user": "unauth-216.195.117.242",
+      "userType": "unauthenticated",
+      "action": "edit-schedule",
+      "target": "Kramer, Ed",
+      "details": "removed Wednesday PM, Friday PM (via bulk save)",
+      "targetHole": 10
+    },
+    {
+      "id": "1779901418588",
+      "timestamp": "2026-05-27T17:03:38.588Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779901386363",
+      "timestamp": "2026-05-27T17:03:06.363Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Lee, Rodney",
+      "details": "Friday AM - Hole #6 (alternate)"
+    },
+    {
+      "id": "1779901383649-80khjt",
+      "timestamp": "2026-05-27T17:03:03.649Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Lee, Rodney",
+      "details": "added Friday AM"
+    },
+    {
+      "id": "1779901379418",
+      "timestamp": "2026-05-27T17:02:59.418Z",
+      "user": "Johnson, Claude",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1779901343867",
+      "timestamp": "2026-05-27T17:02:23.867Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 6",
+      "details": "Submitted Friday AM for Hole 6"
+    },
+    {
+      "id": "1779901330165",
+      "timestamp": "2026-05-27T17:02:10.165Z",
+      "user": "Butler, Mark",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779901307209",
+      "timestamp": "2026-05-27T17:01:47.209Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Lee, Rodney",
+      "details": "Friday AM - Hole #6 (alternate)"
+    },
+    {
+      "id": "1779901201568",
+      "timestamp": "2026-05-27T17:00:01.568Z",
+      "user": "Clayton, Rodney",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Kopenec, Rich",
+      "details": "Wednesday PM - Hole #13"
+    },
     {
       "id": "1779901187339",
       "timestamp": "2026-05-27T16:59:47.339Z",
@@ -32876,5 +32986,5 @@
       "deletedAt": 1779573373389
     }
   ],
-  "serverNow": 1779900841375
+  "serverNow": 1779900866726
 }
