@@ -17688,16 +17688,6 @@
       "isAlternate": false
     },
     {
-      "volunteerId": "10248",
-      "volunteerName": "Hardaway, Jerry",
-      "hole": 1,
-      "day": "Thursday",
-      "shift": "PM",
-      "checkedInBy": "Johnson, Kenny",
-      "timestamp": "2026-05-28T15:04:07.183Z",
-      "isAlternate": false
-    },
-    {
       "volunteerId": "6217",
       "volunteerName": "Nederostek, Brad",
       "hole": 4,
@@ -18296,6 +18286,56 @@
       "checkedInBy": "Gordon, Gary",
       "timestamp": "2026-05-28T16:24:57.111Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "10364",
+      "volunteerName": "Thomas, Harold",
+      "hole": 1,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Johnson, Kenny",
+      "timestamp": "2026-05-28T16:25:18.048Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8894",
+      "volunteerName": "Lawson, David",
+      "hole": 1,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Johnson, Kenny",
+      "timestamp": "2026-05-28T16:29:12.228Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10248",
+      "volunteerName": "Hardaway, Jerry",
+      "hole": 1,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Johnson, Kenny",
+      "timestamp": "2026-05-28T16:29:45.273Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8234",
+      "volunteerName": "Wilson, Todd",
+      "hole": 3,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Wilson, Todd",
+      "timestamp": "2026-05-28T16:29:54.771Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "1720",
+      "volunteerName": "Butler, Mark",
+      "hole": 3,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Wilson, Todd",
+      "timestamp": "2026-05-28T16:29:56.189Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -18316,6 +18356,87 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1779985796414",
+      "timestamp": "2026-05-28T16:29:56.414Z",
+      "user": "Wilson, Todd",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Butler, Mark",
+      "details": "Thursday PM - Hole #3"
+    },
+    {
+      "id": "1779985794838",
+      "timestamp": "2026-05-28T16:29:54.838Z",
+      "user": "Wilson, Todd",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Wilson, Todd",
+      "details": "Thursday PM - Hole #3"
+    },
+    {
+      "id": "1779985785367",
+      "timestamp": "2026-05-28T16:29:45.367Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Hardaway, Jerry",
+      "details": "Thursday PM - Hole #1"
+    },
+    {
+      "id": "1779985769414",
+      "timestamp": "2026-05-28T16:29:29.414Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Hardaway, Jerry",
+      "details": "Thursday PM - Hole #1"
+    },
+    {
+      "id": "1779985765469",
+      "timestamp": "2026-05-28T16:29:25.469Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Hardaway, Jerry",
+      "details": "Thursday PM - Hole #1"
+    },
+    {
+      "id": "1779985752324",
+      "timestamp": "2026-05-28T16:29:12.324Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Lawson, David",
+      "details": "Thursday PM - Hole #1"
+    },
+    {
+      "id": "1779985748668",
+      "timestamp": "2026-05-28T16:29:08.669Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Hardaway, Jerry",
+      "details": "Thursday PM - Hole #1"
+    },
+    {
+      "id": "1779985562998",
+      "timestamp": "2026-05-28T16:26:02.998Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 1",
+      "details": "Submitted Thursday PM for Hole 1"
+    },
+    {
+      "id": "1779985518146",
+      "timestamp": "2026-05-28T16:25:18.148Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Thomas, Harold",
+      "details": "Thursday PM - Hole #1"
+    },
     {
       "id": "1779985497429",
       "timestamp": "2026-05-28T16:24:57.429Z",
@@ -44545,5 +44666,5 @@
       "deletedAt": 1779923202912
     }
   ],
-  "serverNow": 1779981906202
+  "serverNow": 1779985786648
 }
