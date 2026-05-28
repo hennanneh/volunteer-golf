@@ -17695,6 +17695,36 @@
       "checkedInBy": "Sanders, Steve",
       "timestamp": "2026-05-28T13:37:54.377Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "1770",
+      "volunteerName": "Mulvaney, Matt",
+      "hole": 16,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Roy, Mike",
+      "timestamp": "2026-05-28T13:56:22.084Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "155",
+      "volunteerName": "Harvey, Dalton",
+      "hole": 16,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Roy, Mike",
+      "timestamp": "2026-05-28T13:56:35.834Z",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "3937",
+      "volunteerName": "Bianchi, Edward",
+      "hole": 16,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Roy, Mike",
+      "timestamp": "2026-05-28T13:56:48.599Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -17714,6 +17744,78 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779976796599",
+      "timestamp": "2026-05-28T13:59:56.599Z",
+      "user": "Mulvaney, Matt",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779976773127",
+      "timestamp": "2026-05-28T13:59:33.127Z",
+      "user": "Putt, Gerald",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1779976732855",
+      "timestamp": "2026-05-28T13:58:52.855Z",
+      "user": "Putt, Gerald",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1779976615895",
+      "timestamp": "2026-05-28T13:56:55.895Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 16",
+      "details": "Submitted Thursday AM for Hole 16"
+    },
+    {
+      "id": "1779976608671",
+      "timestamp": "2026-05-28T13:56:48.671Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Bianchi, Edward",
+      "details": "Thursday AM - Hole #16"
+    },
+    {
+      "id": "1779976595899",
+      "timestamp": "2026-05-28T13:56:35.899Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Harvey, Dalton",
+      "details": "Thursday AM - Hole #16 (alternate)"
+    },
+    {
+      "id": "1779976582151",
+      "timestamp": "2026-05-28T13:56:22.151Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Mulvaney, Matt",
+      "details": "Thursday AM - Hole #16"
+    },
+    {
+      "id": "1779976577220",
+      "timestamp": "2026-05-28T13:56:17.221Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779975589009",
       "timestamp": "2026-05-28T13:39:49.009Z",
