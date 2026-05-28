@@ -17107,16 +17107,6 @@
       "isAlternate": false
     },
     {
-      "volunteerId": "193",
-      "volunteerName": "Markus, Richard",
-      "hole": 99,
-      "day": "Monday",
-      "shift": "AM",
-      "checkedInBy": "Howrey, Anne",
-      "timestamp": "2026-05-28T13:26:36.714Z",
-      "isAlternate": false
-    },
-    {
       "volunteerId": "450",
       "volunteerName": "Rambo, James",
       "hole": 99,
@@ -17277,16 +17267,6 @@
       "isAlternate": false
     },
     {
-      "volunteerId": "193",
-      "volunteerName": "Markus, Richard",
-      "hole": 99,
-      "day": "Monday",
-      "shift": "PM",
-      "checkedInBy": "Howrey, Anne",
-      "timestamp": "2026-05-28T13:26:57.900Z",
-      "isAlternate": false
-    },
-    {
       "volunteerId": "450",
       "volunteerName": "Rambo, James",
       "hole": 99,
@@ -17397,16 +17377,6 @@
       "isAlternate": false
     },
     {
-      "volunteerId": "1521",
-      "volunteerName": "Harrell, John",
-      "hole": 99,
-      "day": "Tuesday",
-      "shift": "AM",
-      "checkedInBy": "Howrey, Anne",
-      "timestamp": "2026-05-28T13:27:14.882Z",
-      "isAlternate": false
-    },
-    {
       "volunteerId": "4639",
       "volunteerName": "Hill, Michael",
       "hole": 99,
@@ -17487,16 +17457,6 @@
       "isAlternate": false
     },
     {
-      "volunteerId": "271",
-      "volunteerName": "Volkening, David",
-      "hole": 99,
-      "day": "Tuesday",
-      "shift": "AM",
-      "checkedInBy": "Howrey, Anne",
-      "timestamp": "2026-05-28T13:27:21.053Z",
-      "isAlternate": false
-    },
-    {
       "volunteerId": "10249",
       "volunteerName": "Howrey, Anne",
       "hole": 99,
@@ -17564,16 +17524,6 @@
       "shift": "PM",
       "checkedInBy": "Howrey, Anne",
       "timestamp": "2026-05-28T13:27:33.003Z",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "1521",
-      "volunteerName": "Harrell, John",
-      "hole": 99,
-      "day": "Tuesday",
-      "shift": "PM",
-      "checkedInBy": "Howrey, Anne",
-      "timestamp": "2026-05-28T13:27:34.171Z",
       "isAlternate": false
     },
     {
@@ -17654,16 +17604,6 @@
       "shift": "PM",
       "checkedInBy": "Howrey, Anne",
       "timestamp": "2026-05-28T13:27:40.179Z",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "271",
-      "volunteerName": "Volkening, David",
-      "hole": 99,
-      "day": "Tuesday",
-      "shift": "PM",
-      "checkedInBy": "Howrey, Anne",
-      "timestamp": "2026-05-28T13:27:40.642Z",
       "isAlternate": false
     },
     {
@@ -17835,6 +17775,346 @@
       "checkedInBy": "Nederostek, Brad",
       "timestamp": "2026-05-28T15:07:07.234Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "1521",
+      "volunteerName": "Harrell, John",
+      "hole": 99,
+      "day": "Tuesday",
+      "shift": "AM",
+      "checkedInBy": "Howrey, Anne",
+      "timestamp": "2026-05-28T15:33:34.186Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "271",
+      "volunteerName": "Volkening, David",
+      "hole": 99,
+      "day": "Tuesday",
+      "shift": "AM",
+      "checkedInBy": "Howrey, Anne",
+      "timestamp": "2026-05-28T15:33:36.100Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "1521",
+      "volunteerName": "Harrell, John",
+      "hole": 99,
+      "day": "Tuesday",
+      "shift": "PM",
+      "checkedInBy": "Howrey, Anne",
+      "timestamp": "2026-05-28T15:33:42.945Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "271",
+      "volunteerName": "Volkening, David",
+      "hole": 99,
+      "day": "Tuesday",
+      "shift": "PM",
+      "checkedInBy": "Howrey, Anne",
+      "timestamp": "2026-05-28T15:33:44.910Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10249",
+      "volunteerName": "Howrey, Anne",
+      "hole": 99,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Howrey, Anne",
+      "timestamp": "2026-05-28T15:33:52.935Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "636",
+      "volunteerName": "Deering, Brad",
+      "hole": 99,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Howrey, Anne",
+      "timestamp": "2026-05-28T15:33:53.611Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "394",
+      "volunteerName": "Duke, Mitzie",
+      "hole": 99,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Howrey, Anne",
+      "timestamp": "2026-05-28T15:33:53.973Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8009",
+      "volunteerName": "Fescenmeyer, Brent",
+      "hole": 99,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Howrey, Anne",
+      "timestamp": "2026-05-28T15:33:54.706Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2441",
+      "volunteerName": "Galvan, Bob",
+      "hole": 99,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Howrey, Anne",
+      "timestamp": "2026-05-28T15:33:55.705Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "421",
+      "volunteerName": "Gastinel, Buck",
+      "hole": 99,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Howrey, Anne",
+      "timestamp": "2026-05-28T15:33:56.208Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2540",
+      "volunteerName": "Gillilan, Rusty",
+      "hole": 99,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Howrey, Anne",
+      "timestamp": "2026-05-28T15:33:56.740Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4639",
+      "volunteerName": "Hill, Michael",
+      "hole": 99,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Howrey, Anne",
+      "timestamp": "2026-05-28T15:33:58.583Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "359",
+      "volunteerName": "Howrey, Patrick",
+      "hole": 99,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Howrey, Anne",
+      "timestamp": "2026-05-28T15:33:59.252Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2442",
+      "volunteerName": "Hunt, Scott",
+      "hole": 99,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Howrey, Anne",
+      "timestamp": "2026-05-28T15:34:01.115Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9999",
+      "volunteerName": "Lackey, Lyn",
+      "hole": 99,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Howrey, Anne",
+      "timestamp": "2026-05-28T15:34:02.299Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "193",
+      "volunteerName": "Markus, Richard",
+      "hole": 99,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Howrey, Anne",
+      "timestamp": "2026-05-28T15:34:03.845Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "450",
+      "volunteerName": "Rambo, James",
+      "hole": 99,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Howrey, Anne",
+      "timestamp": "2026-05-28T15:34:04.807Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5521",
+      "volunteerName": "Rico, Andrew",
+      "hole": 99,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Howrey, Anne",
+      "timestamp": "2026-05-28T15:34:05.405Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "438",
+      "volunteerName": "Steward, Denny",
+      "hole": 99,
+      "day": "Wednesday",
+      "shift": "PM",
+      "checkedInBy": "Howrey, Anne",
+      "timestamp": "2026-05-28T15:34:06.407Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10249",
+      "volunteerName": "Howrey, Anne",
+      "hole": 99,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Howrey, Anne",
+      "timestamp": "2026-05-28T15:34:15.405Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "636",
+      "volunteerName": "Deering, Brad",
+      "hole": 99,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Howrey, Anne",
+      "timestamp": "2026-05-28T15:34:15.811Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "394",
+      "volunteerName": "Duke, Mitzie",
+      "hole": 99,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Howrey, Anne",
+      "timestamp": "2026-05-28T15:34:16.253Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8009",
+      "volunteerName": "Fescenmeyer, Brent",
+      "hole": 99,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Howrey, Anne",
+      "timestamp": "2026-05-28T15:34:16.798Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2441",
+      "volunteerName": "Galvan, Bob",
+      "hole": 99,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Howrey, Anne",
+      "timestamp": "2026-05-28T15:34:18.225Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "421",
+      "volunteerName": "Gastinel, Buck",
+      "hole": 99,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Howrey, Anne",
+      "timestamp": "2026-05-28T15:34:18.554Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2540",
+      "volunteerName": "Gillilan, Rusty",
+      "hole": 99,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Howrey, Anne",
+      "timestamp": "2026-05-28T15:34:19.216Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4639",
+      "volunteerName": "Hill, Michael",
+      "hole": 99,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Howrey, Anne",
+      "timestamp": "2026-05-28T15:34:20.847Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "359",
+      "volunteerName": "Howrey, Patrick",
+      "hole": 99,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Howrey, Anne",
+      "timestamp": "2026-05-28T15:34:21.218Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2442",
+      "volunteerName": "Hunt, Scott",
+      "hole": 99,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Howrey, Anne",
+      "timestamp": "2026-05-28T15:34:22.300Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9999",
+      "volunteerName": "Lackey, Lyn",
+      "hole": 99,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Howrey, Anne",
+      "timestamp": "2026-05-28T15:34:22.761Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "193",
+      "volunteerName": "Markus, Richard",
+      "hole": 99,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Howrey, Anne",
+      "timestamp": "2026-05-28T15:34:23.468Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "450",
+      "volunteerName": "Rambo, James",
+      "hole": 99,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Howrey, Anne",
+      "timestamp": "2026-05-28T15:34:23.993Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5521",
+      "volunteerName": "Rico, Andrew",
+      "hole": 99,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Howrey, Anne",
+      "timestamp": "2026-05-28T15:34:25.054Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "438",
+      "volunteerName": "Steward, Denny",
+      "hole": 99,
+      "day": "Wednesday",
+      "shift": "AM",
+      "checkedInBy": "Howrey, Anne",
+      "timestamp": "2026-05-28T15:34:25.594Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -17855,6 +18135,456 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1779982483675",
+      "timestamp": "2026-05-28T15:34:43.675Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1779982477487",
+      "timestamp": "2026-05-28T15:34:37.487Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779982467971",
+      "timestamp": "2026-05-28T15:34:27.971Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 99",
+      "details": "Submitted Wednesday AM for Hole 99"
+    },
+    {
+      "id": "1779982465575",
+      "timestamp": "2026-05-28T15:34:25.575Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Steward, Denny",
+      "details": "Wednesday AM - Hole #99"
+    },
+    {
+      "id": "1779982465029",
+      "timestamp": "2026-05-28T15:34:25.030Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Rico, Andrew",
+      "details": "Wednesday AM - Hole #99"
+    },
+    {
+      "id": "1779982463946",
+      "timestamp": "2026-05-28T15:34:23.946Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Rambo, James",
+      "details": "Wednesday AM - Hole #99"
+    },
+    {
+      "id": "1779982463430",
+      "timestamp": "2026-05-28T15:34:23.430Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Markus, Richard",
+      "details": "Wednesday AM - Hole #99"
+    },
+    {
+      "id": "1779982462724",
+      "timestamp": "2026-05-28T15:34:22.724Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Lackey, Lyn",
+      "details": "Wednesday AM - Hole #99"
+    },
+    {
+      "id": "1779982462290",
+      "timestamp": "2026-05-28T15:34:22.290Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Hunt, Scott",
+      "details": "Wednesday AM - Hole #99"
+    },
+    {
+      "id": "1779982461245",
+      "timestamp": "2026-05-28T15:34:21.245Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Howrey, Patrick",
+      "details": "Wednesday AM - Hole #99"
+    },
+    {
+      "id": "1779982460806",
+      "timestamp": "2026-05-28T15:34:20.806Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Hill, Michael",
+      "details": "Wednesday AM - Hole #99"
+    },
+    {
+      "id": "1779982459175",
+      "timestamp": "2026-05-28T15:34:19.175Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Gillilan, Rusty",
+      "details": "Wednesday AM - Hole #99"
+    },
+    {
+      "id": "1779982458623",
+      "timestamp": "2026-05-28T15:34:18.623Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Gastinel, Buck",
+      "details": "Wednesday AM - Hole #99"
+    },
+    {
+      "id": "1779982458179",
+      "timestamp": "2026-05-28T15:34:18.179Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Galvan, Bob",
+      "details": "Wednesday AM - Hole #99"
+    },
+    {
+      "id": "1779982456761",
+      "timestamp": "2026-05-28T15:34:16.761Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Fescenmeyer, Brent",
+      "details": "Wednesday AM - Hole #99"
+    },
+    {
+      "id": "1779982456211",
+      "timestamp": "2026-05-28T15:34:16.211Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Duke, Mitzie",
+      "details": "Wednesday AM - Hole #99"
+    },
+    {
+      "id": "1779982455761",
+      "timestamp": "2026-05-28T15:34:15.761Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Deering, Brad",
+      "details": "Wednesday AM - Hole #99"
+    },
+    {
+      "id": "1779982455354",
+      "timestamp": "2026-05-28T15:34:15.354Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Howrey, Anne",
+      "details": "Wednesday AM - Hole #99"
+    },
+    {
+      "id": "1779982449884",
+      "timestamp": "2026-05-28T15:34:09.884Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 99",
+      "details": "Submitted Wednesday PM for Hole 99"
+    },
+    {
+      "id": "1779982446364",
+      "timestamp": "2026-05-28T15:34:06.364Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Steward, Denny",
+      "details": "Wednesday PM - Hole #99"
+    },
+    {
+      "id": "1779982445377",
+      "timestamp": "2026-05-28T15:34:05.377Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Rico, Andrew",
+      "details": "Wednesday PM - Hole #99"
+    },
+    {
+      "id": "1779982444766",
+      "timestamp": "2026-05-28T15:34:04.766Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Rambo, James",
+      "details": "Wednesday PM - Hole #99"
+    },
+    {
+      "id": "1779982443799",
+      "timestamp": "2026-05-28T15:34:03.799Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Markus, Richard",
+      "details": "Wednesday PM - Hole #99"
+    },
+    {
+      "id": "1779982442258",
+      "timestamp": "2026-05-28T15:34:02.258Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Lackey, Lyn",
+      "details": "Wednesday PM - Hole #99"
+    },
+    {
+      "id": "1779982441069",
+      "timestamp": "2026-05-28T15:34:01.069Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Hunt, Scott",
+      "details": "Wednesday PM - Hole #99"
+    },
+    {
+      "id": "1779982439230",
+      "timestamp": "2026-05-28T15:33:59.230Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Howrey, Patrick",
+      "details": "Wednesday PM - Hole #99"
+    },
+    {
+      "id": "1779982438539",
+      "timestamp": "2026-05-28T15:33:58.539Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Hill, Michael",
+      "details": "Wednesday PM - Hole #99"
+    },
+    {
+      "id": "1779982436696",
+      "timestamp": "2026-05-28T15:33:56.696Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Gillilan, Rusty",
+      "details": "Wednesday PM - Hole #99"
+    },
+    {
+      "id": "1779982436164",
+      "timestamp": "2026-05-28T15:33:56.164Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Gastinel, Buck",
+      "details": "Wednesday PM - Hole #99"
+    },
+    {
+      "id": "1779982435654",
+      "timestamp": "2026-05-28T15:33:55.654Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Galvan, Bob",
+      "details": "Wednesday PM - Hole #99"
+    },
+    {
+      "id": "1779982434653",
+      "timestamp": "2026-05-28T15:33:54.653Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Fescenmeyer, Brent",
+      "details": "Wednesday PM - Hole #99"
+    },
+    {
+      "id": "1779982433984",
+      "timestamp": "2026-05-28T15:33:53.984Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Duke, Mitzie",
+      "details": "Wednesday PM - Hole #99"
+    },
+    {
+      "id": "1779982433564",
+      "timestamp": "2026-05-28T15:33:53.564Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Deering, Brad",
+      "details": "Wednesday PM - Hole #99"
+    },
+    {
+      "id": "1779982432933",
+      "timestamp": "2026-05-28T15:33:52.933Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Howrey, Anne",
+      "details": "Wednesday PM - Hole #99"
+    },
+    {
+      "id": "1779982426320",
+      "timestamp": "2026-05-28T15:33:46.320Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 99",
+      "details": "Submitted Tuesday PM for Hole 99"
+    },
+    {
+      "id": "1779982424858",
+      "timestamp": "2026-05-28T15:33:44.858Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Volkening, David",
+      "details": "Tuesday PM - Hole #99"
+    },
+    {
+      "id": "1779982422971",
+      "timestamp": "2026-05-28T15:33:42.971Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Harrell, John",
+      "details": "Tuesday PM - Hole #99"
+    },
+    {
+      "id": "1779982418979",
+      "timestamp": "2026-05-28T15:33:38.979Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 99",
+      "details": "Submitted Tuesday AM for Hole 99"
+    },
+    {
+      "id": "1779982416060",
+      "timestamp": "2026-05-28T15:33:36.060Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Volkening, David",
+      "details": "Tuesday AM - Hole #99"
+    },
+    {
+      "id": "1779982414144",
+      "timestamp": "2026-05-28T15:33:34.144Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Harrell, John",
+      "details": "Tuesday AM - Hole #99"
+    },
+    {
+      "id": "1779982403621",
+      "timestamp": "2026-05-28T15:33:23.621Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 99",
+      "details": "Submitted Tuesday AM for Hole 99"
+    },
+    {
+      "id": "1779982401560",
+      "timestamp": "2026-05-28T15:33:21.560Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Harrell, John",
+      "details": "Tuesday AM - Hole #99"
+    },
+    {
+      "id": "1779982398414",
+      "timestamp": "2026-05-28T15:33:18.414Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Volkening, David",
+      "details": "Tuesday AM - Hole #99"
+    },
+    {
+      "id": "1779982392957",
+      "timestamp": "2026-05-28T15:33:12.957Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 99",
+      "details": "Submitted Tuesday PM for Hole 99"
+    },
+    {
+      "id": "1779982390550",
+      "timestamp": "2026-05-28T15:33:10.550Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Volkening, David",
+      "details": "Tuesday PM - Hole #99"
+    },
+    {
+      "id": "1779982387834",
+      "timestamp": "2026-05-28T15:33:07.834Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Harrell, John",
+      "details": "Tuesday PM - Hole #99"
+    },
+    {
+      "id": "1779982379084",
+      "timestamp": "2026-05-28T15:32:59.084Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 99",
+      "details": "Submitted Monday PM for Hole 99"
+    },
+    {
+      "id": "1779982377436",
+      "timestamp": "2026-05-28T15:32:57.436Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Markus, Richard",
+      "details": "Monday PM - Hole #99"
+    },
+    {
+      "id": "1779982372826",
+      "timestamp": "2026-05-28T15:32:52.826Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 99",
+      "details": "Submitted Monday AM for Hole 99"
+    },
+    {
+      "id": "1779982369341",
+      "timestamp": "2026-05-28T15:32:49.341Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Markus, Richard",
+      "details": "Monday AM - Hole #99"
+    },
     {
       "id": "1779981904890",
       "timestamp": "2026-05-28T15:25:04.890Z",
@@ -43391,5 +44121,5 @@
       "deletedAt": 1779923202912
     }
   ],
-  "serverNow": 1779980651729
+  "serverNow": 1779981906202
 }
