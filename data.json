@@ -20032,6 +20032,15 @@
   },
   "activityLog": [
     {
+      "id": "1779995718079",
+      "timestamp": "2026-05-28T19:15:18.080Z",
+      "user": "Gordon, Gary",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1779995558544",
       "timestamp": "2026-05-28T19:12:38.544Z",
       "user": "Pueblo, Vange",
