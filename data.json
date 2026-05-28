@@ -18125,6 +18125,36 @@
       "checkedInBy": "Rogenski, Chris P.",
       "timestamp": "2026-05-28T15:36:17.431Z",
       "isAlternate": true
+    },
+    {
+      "volunteerId": "7232",
+      "volunteerName": "Russell, Daniel",
+      "hole": 1,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Johnson, Kenny",
+      "timestamp": "2026-05-28T15:51:30.832Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6829",
+      "volunteerName": "Russell, Mary",
+      "hole": 1,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Johnson, Kenny",
+      "timestamp": "2026-05-28T15:51:31.964Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8056",
+      "volunteerName": "Daly, Lee",
+      "hole": 9,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Burnett, Eric",
+      "timestamp": "2026-05-28T15:53:21.329Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -18145,6 +18175,42 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1779983606368",
+      "timestamp": "2026-05-28T15:53:26.368Z",
+      "user": "Burnett, Eric",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 9",
+      "details": "Submitted Thursday PM for Hole 9"
+    },
+    {
+      "id": "1779983601413",
+      "timestamp": "2026-05-28T15:53:21.413Z",
+      "user": "Burnett, Eric",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Daly, Lee",
+      "details": "Thursday PM - Hole #9"
+    },
+    {
+      "id": "1779983576817",
+      "timestamp": "2026-05-28T15:52:56.817Z",
+      "user": "Burnett, Eric",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779983566113",
+      "timestamp": "2026-05-28T15:52:46.113Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 1",
+      "details": "Submitted Thursday PM for Hole 1"
+    },
     {
       "id": "1779982631210",
       "timestamp": "2026-05-28T15:37:11.210Z",
