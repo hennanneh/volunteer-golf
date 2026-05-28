@@ -15313,6 +15313,16 @@
       "checkedInBy": "Mcdaniel, Patrick",
       "timestamp": "2026-05-27T22:00:34.427Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "9775",
+      "volunteerName": "Stults, Mike",
+      "hole": 13,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Duncan, Larry",
+      "timestamp": "2026-05-28T00:25:33.883Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -15332,6 +15342,33 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779927946163",
+      "timestamp": "2026-05-28T00:25:46.163Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Sharrah, Adam",
+      "details": "Thursday PM - Hole #13 (alternate)"
+    },
+    {
+      "id": "1779927944508",
+      "timestamp": "2026-05-28T00:25:44.508Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Sharrah, Adam",
+      "details": "Thursday PM - Hole #13 (alternate)"
+    },
+    {
+      "id": "1779927933932",
+      "timestamp": "2026-05-28T00:25:33.932Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Stults, Mike",
+      "details": "Thursday PM - Hole #13"
+    },
     {
       "id": "1779927177751-pvzuvl",
       "timestamp": "2026-05-28T00:12:57.751Z",
