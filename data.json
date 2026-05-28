@@ -18708,6 +18708,106 @@
       "checkedInBy": "Trout, Wayne",
       "timestamp": "2026-05-28T16:42:52.660Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "10667",
+      "volunteerName": "Gilchrist, William (Bill)",
+      "hole": 8,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-28T16:45:09.060Z",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "8852",
+      "volunteerName": "Vollintine, Derek",
+      "hole": 13,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Duncan, Larry",
+      "timestamp": "2026-05-28T16:45:23.017Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10437",
+      "volunteerName": "White, Drake",
+      "hole": 2,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Gordon, Gary",
+      "timestamp": "2026-05-28T16:45:31.379Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10349",
+      "volunteerName": "Gunnels, Cliff",
+      "hole": 13,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Duncan, Larry",
+      "timestamp": "2026-05-28T16:45:38.826Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10547",
+      "volunteerName": "Surita, Rene",
+      "hole": 1,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Johnson, Kenny",
+      "timestamp": "2026-05-28T16:45:47.591Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "3986",
+      "volunteerName": "Clayton, Rodney",
+      "hole": 13,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Duncan, Larry",
+      "timestamp": "2026-05-28T16:47:16.237Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4531",
+      "volunteerName": "Duncan, Larry",
+      "hole": 13,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Duncan, Larry",
+      "timestamp": "2026-05-28T16:47:16.692Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9069",
+      "volunteerName": "Harper, Leroy",
+      "hole": 13,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Duncan, Larry",
+      "timestamp": "2026-05-28T16:47:21.399Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10342",
+      "volunteerName": "Johnson, Kyle",
+      "hole": 13,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Duncan, Larry",
+      "timestamp": "2026-05-28T16:47:58.507Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9485",
+      "volunteerName": "Lutke, Jeff",
+      "hole": 10,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-28T16:48:35.568Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -18728,6 +18828,141 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1779986915373",
+      "timestamp": "2026-05-28T16:48:35.373Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Lutke, Jeff",
+      "details": "Thursday PM - Hole #10"
+    },
+    {
+      "id": "1779986890628",
+      "timestamp": "2026-05-28T16:48:10.628Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 13",
+      "details": "Submitted Thursday PM for Hole 13"
+    },
+    {
+      "id": "1779986878563",
+      "timestamp": "2026-05-28T16:47:58.563Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Johnson, Kyle",
+      "details": "Thursday PM - Hole #13"
+    },
+    {
+      "id": "1779986844860",
+      "timestamp": "2026-05-28T16:47:24.860Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 13",
+      "details": "Submitted Thursday PM for Hole 13"
+    },
+    {
+      "id": "1779986841468",
+      "timestamp": "2026-05-28T16:47:21.468Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Harper, Leroy",
+      "details": "Thursday PM - Hole #13"
+    },
+    {
+      "id": "1779986836752",
+      "timestamp": "2026-05-28T16:47:16.752Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Duncan, Larry",
+      "details": "Thursday PM - Hole #13"
+    },
+    {
+      "id": "1779986836288",
+      "timestamp": "2026-05-28T16:47:16.288Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Clayton, Rodney",
+      "details": "Thursday PM - Hole #13"
+    },
+    {
+      "id": "1779986770398",
+      "timestamp": "2026-05-28T16:46:10.398Z",
+      "user": "Gordon, Gary",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779986749113",
+      "timestamp": "2026-05-28T16:45:49.113Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 1",
+      "details": "Submitted Thursday PM for Hole 1"
+    },
+    {
+      "id": "1779986747689",
+      "timestamp": "2026-05-28T16:45:47.689Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Surita, Rene",
+      "details": "Thursday PM - Hole #1"
+    },
+    {
+      "id": "1779986740941",
+      "timestamp": "2026-05-28T16:45:40.941Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 13",
+      "details": "Submitted Thursday PM for Hole 13"
+    },
+    {
+      "id": "1779986738877",
+      "timestamp": "2026-05-28T16:45:38.877Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Gunnels, Cliff",
+      "details": "Thursday PM - Hole #13"
+    },
+    {
+      "id": "1779986731680",
+      "timestamp": "2026-05-28T16:45:31.680Z",
+      "user": "Gordon, Gary",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "White, Drake",
+      "details": "Thursday PM - Hole #2"
+    },
+    {
+      "id": "1779986725197",
+      "timestamp": "2026-05-28T16:45:25.197Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 13",
+      "details": "Submitted Thursday PM for Hole 13"
+    },
+    {
+      "id": "1779986723073",
+      "timestamp": "2026-05-28T16:45:23.074Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Vollintine, Derek",
+      "details": "Thursday PM - Hole #13"
+    },
     {
       "id": "1779986573255",
       "timestamp": "2026-05-28T16:42:53.255Z",
@@ -45481,5 +45716,5 @@
       "deletedAt": 1779923202912
     }
   ],
-  "serverNow": 1779986547445
+  "serverNow": 1779986575044
 }
