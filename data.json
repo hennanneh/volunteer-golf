@@ -8010,7 +8010,6 @@
         "Monday AM": true,
         "Tuesday AM": true,
         "Wednesday AM": true,
-        "Thursday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
         "Friday PM": true
@@ -8019,7 +8018,7 @@
       "address": "2800 Highlawn Terrace Ft. Worth, TX 76133",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779332786007
+      "lastModified": 1779968434082
     },
     {
       "id": "8608",
@@ -15870,6 +15869,62 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779968685866",
+      "timestamp": "2026-05-28T11:44:45.866Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779968599068",
+      "timestamp": "2026-05-28T11:43:19.068Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1779968590084",
+      "timestamp": "2026-05-28T11:43:10.085Z",
+      "user": "Ruddell, Dick",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779968454171-oqrgqm",
+      "timestamp": "2026-05-28T11:40:54.171Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "rejected-bulk-edit",
+      "target": "Steward, Denny",
+      "details": "Captain hole 1 attempted to modify hole 99 volunteer (auto-rejected via bulk save — no data changed)",
+      "targetHole": 99,
+      "actorHole": 1
+    },
+    {
+      "id": "1779968452029",
+      "timestamp": "2026-05-28T11:40:52.029Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 1",
+      "details": "Submitted Thursday AM for Hole 1"
+    },
+    {
+      "id": "1779968434084-a57s2m",
+      "timestamp": "2026-05-28T11:40:34.084Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Surita, Rene",
+      "details": "removed Thursday AM"
+    },
     {
       "id": "1779968399489",
       "timestamp": "2026-05-28T11:39:59.489Z",
@@ -37173,5 +37228,5 @@
       "deletedAt": 1779923202912
     }
   ],
-  "serverNow": 1779968265545
+  "serverNow": 1779968590444
 }
