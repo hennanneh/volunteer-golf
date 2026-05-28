@@ -18950,6 +18950,66 @@
       "checkedInBy": "Trout, Wayne",
       "timestamp": "2026-05-28T16:59:28.184Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "8711",
+      "volunteerName": "Smith, Bruce T.",
+      "hole": 12,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-28T17:00:17.510Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9874",
+      "volunteerName": "Hughes, Allen",
+      "hole": 8,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-28T17:01:50.374Z",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "6340",
+      "volunteerName": "Diaz, Rickey",
+      "hole": 8,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-28T17:01:54.399Z",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "5307",
+      "volunteerName": "Anderson, Rob",
+      "hole": 8,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-28T17:02:02.491Z",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "6338",
+      "volunteerName": "Pryor, Wesley",
+      "hole": 8,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-28T17:02:05.705Z",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "9083",
+      "volunteerName": "Lyons, Dak",
+      "hole": 13,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Duncan, Larry",
+      "timestamp": "2026-05-28T17:03:10.025Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -18970,6 +19030,51 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1779987891763",
+      "timestamp": "2026-05-28T17:04:51.763Z",
+      "user": "Larrabee, Robert",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1779987792172",
+      "timestamp": "2026-05-28T17:03:12.172Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 13",
+      "details": "Submitted Thursday PM for Hole 13"
+    },
+    {
+      "id": "1779987790084",
+      "timestamp": "2026-05-28T17:03:10.084Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Lyons, Dak",
+      "details": "Thursday PM - Hole #13"
+    },
+    {
+      "id": "1779987762769",
+      "timestamp": "2026-05-28T17:02:42.769Z",
+      "user": "Larrabee, Robert",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1779987617151",
+      "timestamp": "2026-05-28T17:00:17.151Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Smith, Bruce T.",
+      "details": "Thursday PM - Hole #12"
+    },
     {
       "id": "1779987567969",
       "timestamp": "2026-05-28T16:59:27.969Z",
@@ -46002,5 +46107,5 @@
       "deletedAt": 1779923202912
     }
   ],
-  "serverNow": 1779986916772
+  "serverNow": 1779987280311
 }
