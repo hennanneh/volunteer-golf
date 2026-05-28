@@ -16354,6 +16354,86 @@
       "checkedInBy": "Gradt, Jason",
       "timestamp": "2026-05-28T12:33:55.446Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "9510",
+      "volunteerName": "Mason, Larry",
+      "hole": 9,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Jutras, Michael",
+      "timestamp": "2026-05-28T12:35:56.943Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6714",
+      "volunteerName": "Hellis, Neil",
+      "hole": 9,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Jutras, Michael",
+      "timestamp": "2026-05-28T12:36:00.455Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8367",
+      "volunteerName": "King, Jeff",
+      "hole": 8,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-28T12:37:33.993Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9082",
+      "volunteerName": "King, Pat",
+      "hole": 8,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-28T12:37:34.281Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6471",
+      "volunteerName": "King, Steve",
+      "hole": 8,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-28T12:37:39.425Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9418",
+      "volunteerName": "Schuljak, Patty",
+      "hole": 8,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-28T12:37:41.905Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7528",
+      "volunteerName": "Garza, Mario",
+      "hole": 13,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Duncan, Larry",
+      "timestamp": "2026-05-28T12:39:03.163Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4204",
+      "volunteerName": "Smith, Fred",
+      "hole": 5,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Imboden, Thomas",
+      "timestamp": "2026-05-28T12:39:15.210Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -16373,6 +16453,96 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779971957164",
+      "timestamp": "2026-05-28T12:39:17.164Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 5",
+      "details": "Submitted Thursday AM for Hole 5"
+    },
+    {
+      "id": "1779971955256",
+      "timestamp": "2026-05-28T12:39:15.256Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Smith, Fred",
+      "details": "Thursday AM - Hole #5"
+    },
+    {
+      "id": "1779971952538",
+      "timestamp": "2026-05-28T12:39:12.538Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 8",
+      "details": "Submitted Thursday AM for Hole 8"
+    },
+    {
+      "id": "1779971948485",
+      "timestamp": "2026-05-28T12:39:08.485Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 13",
+      "details": "Submitted Thursday AM for Hole 13"
+    },
+    {
+      "id": "1779971943213",
+      "timestamp": "2026-05-28T12:39:03.214Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Garza, Mario",
+      "details": "Thursday AM - Hole #13"
+    },
+    {
+      "id": "1779971863546",
+      "timestamp": "2026-05-28T12:37:43.546Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Schuljak, Patty",
+      "details": "Thursday AM - Hole #8"
+    },
+    {
+      "id": "1779971861067",
+      "timestamp": "2026-05-28T12:37:41.067Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "King, Steve",
+      "details": "Thursday AM - Hole #8"
+    },
+    {
+      "id": "1779971809256",
+      "timestamp": "2026-05-28T12:36:49.256Z",
+      "user": "Jutras, Michael",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 9",
+      "details": "Submitted Thursday AM for Hole 9"
+    },
+    {
+      "id": "1779971760526",
+      "timestamp": "2026-05-28T12:36:00.526Z",
+      "user": "Jutras, Michael",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Hellis, Neil",
+      "details": "Thursday AM - Hole #9"
+    },
+    {
+      "id": "1779971757014",
+      "timestamp": "2026-05-28T12:35:57.015Z",
+      "user": "Jutras, Michael",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Mason, Larry",
+      "details": "Thursday AM - Hole #9"
+    },
     {
       "id": "1779971635506",
       "timestamp": "2026-05-28T12:33:55.506Z",
@@ -38480,5 +38650,5 @@
       "deletedAt": 1779923202912
     }
   ],
-  "serverNow": 1779971551581
+  "serverNow": 1779971554878
 }
