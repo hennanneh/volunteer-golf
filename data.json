@@ -15910,6 +15910,76 @@
       "checkedInBy": "Pugh, Clayton",
       "timestamp": "2026-05-28T11:59:17.062Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "8234",
+      "volunteerName": "Wilson, Todd",
+      "hole": 3,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Wilson, Todd",
+      "timestamp": "2026-05-28T12:00:45.621Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "1720",
+      "volunteerName": "Butler, Mark",
+      "hole": 3,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Wilson, Todd",
+      "timestamp": "2026-05-28T12:00:46.112Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10229",
+      "volunteerName": "Corson, Michael",
+      "hole": 3,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Wilson, Todd",
+      "timestamp": "2026-05-28T12:00:54.491Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10451",
+      "volunteerName": "Miller, David",
+      "hole": 3,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Wilson, Todd",
+      "timestamp": "2026-05-28T12:00:55.170Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8791",
+      "volunteerName": "Moss, Linc",
+      "hole": 3,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Wilson, Todd",
+      "timestamp": "2026-05-28T12:00:56.923Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8790",
+      "volunteerName": "Moss, Linda",
+      "hole": 3,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Wilson, Todd",
+      "timestamp": "2026-05-28T12:00:58.033Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9400",
+      "volunteerName": "Chapman, John A.",
+      "hole": 12,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-28T12:02:52.196Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -15929,6 +15999,60 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779969771888",
+      "timestamp": "2026-05-28T12:02:51.888Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Chapman, John A.",
+      "details": "Thursday AM - Hole #12"
+    },
+    {
+      "id": "1779969661645",
+      "timestamp": "2026-05-28T12:01:01.645Z",
+      "user": "Wilson, Todd",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 3",
+      "details": "Submitted Thursday AM for Hole 3"
+    },
+    {
+      "id": "1779969658098",
+      "timestamp": "2026-05-28T12:00:58.098Z",
+      "user": "Wilson, Todd",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Moss, Linda",
+      "details": "Thursday AM - Hole #3"
+    },
+    {
+      "id": "1779969656989",
+      "timestamp": "2026-05-28T12:00:56.989Z",
+      "user": "Wilson, Todd",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Moss, Linc",
+      "details": "Thursday AM - Hole #3"
+    },
+    {
+      "id": "1779969655242",
+      "timestamp": "2026-05-28T12:00:55.242Z",
+      "user": "Wilson, Todd",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Miller, David",
+      "details": "Thursday AM - Hole #3"
+    },
+    {
+      "id": "1779969654566",
+      "timestamp": "2026-05-28T12:00:54.566Z",
+      "user": "Wilson, Todd",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Corson, Michael",
+      "details": "Thursday AM - Hole #3"
+    },
     {
       "id": "1779969556747",
       "timestamp": "2026-05-28T11:59:16.747Z",
