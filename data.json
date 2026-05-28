@@ -18226,6 +18226,36 @@
       "checkedInBy": "Gordon, Gary",
       "timestamp": "2026-05-28T16:08:21.019Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "9662",
+      "volunteerName": "Hunter, David",
+      "hole": 2,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Gordon, Gary",
+      "timestamp": "2026-05-28T16:18:13.805Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "1790",
+      "volunteerName": "Turner, Charlie",
+      "hole": 2,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Gordon, Gary",
+      "timestamp": "2026-05-28T16:18:18.451Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9787",
+      "volunteerName": "Waruta, James",
+      "hole": 2,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Gordon, Gary",
+      "timestamp": "2026-05-28T16:19:54.198Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -18246,6 +18276,33 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1779985194512",
+      "timestamp": "2026-05-28T16:19:54.512Z",
+      "user": "Gordon, Gary",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Waruta, James",
+      "details": "Thursday PM - Hole #2"
+    },
+    {
+      "id": "1779985098763",
+      "timestamp": "2026-05-28T16:18:18.763Z",
+      "user": "Gordon, Gary",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Turner, Charlie",
+      "details": "Thursday PM - Hole #2"
+    },
+    {
+      "id": "1779985094127",
+      "timestamp": "2026-05-28T16:18:14.127Z",
+      "user": "Gordon, Gary",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Hunter, David",
+      "details": "Thursday PM - Hole #2"
+    },
     {
       "id": "1779984501344",
       "timestamp": "2026-05-28T16:08:21.345Z",
