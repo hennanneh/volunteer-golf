@@ -17745,6 +17745,24 @@
   },
   "activityLog": [
     {
+      "id": "1779977049247",
+      "timestamp": "2026-05-28T14:04:09.247Z",
+      "user": "Peterson, Durk",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1779976811176",
+      "timestamp": "2026-05-28T14:00:11.176Z",
+      "user": "Clayton, Rodney",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1779976796599",
       "timestamp": "2026-05-28T13:59:56.599Z",
       "user": "Mulvaney, Matt",
