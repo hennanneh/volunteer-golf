@@ -20032,6 +20032,15 @@
   },
   "activityLog": [
     {
+      "id": "1779996734295",
+      "timestamp": "2026-05-28T19:32:14.295Z",
+      "user": "Montalvo, Sammy",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
       "id": "1779995718079",
       "timestamp": "2026-05-28T19:15:18.080Z",
       "user": "Gordon, Gary",
