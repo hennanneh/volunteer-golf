@@ -15592,6 +15592,96 @@
       "checkedInBy": "Pugh, Clayton",
       "timestamp": "2026-05-28T11:14:14.066Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "145",
+      "volunteerName": "Gordon, Gary",
+      "hole": 2,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Gordon, Gary",
+      "timestamp": "2026-05-28T11:15:48.043Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9015",
+      "volunteerName": "Aguilar, Jorge",
+      "hole": 2,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Gordon, Gary",
+      "timestamp": "2026-05-28T11:15:51.953Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7068",
+      "volunteerName": "Colon, Orlando",
+      "hole": 2,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Gordon, Gary",
+      "timestamp": "2026-05-28T11:15:55.200Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "136",
+      "volunteerName": "Fee, John",
+      "hole": 2,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Gordon, Gary",
+      "timestamp": "2026-05-28T11:15:56.798Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7692",
+      "volunteerName": "Lemay, Mark",
+      "hole": 2,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Gordon, Gary",
+      "timestamp": "2026-05-28T11:16:00.420Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8499",
+      "volunteerName": "Schrader, Brenda",
+      "hole": 2,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Gordon, Gary",
+      "timestamp": "2026-05-28T11:16:05.458Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9988",
+      "volunteerName": "Grall, George",
+      "hole": 12,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-28T11:18:50.277Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "243",
+      "volunteerName": "Sale, Lynn",
+      "hole": 2,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Gordon, Gary",
+      "timestamp": "2026-05-28T11:19:06.467Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "342",
+      "volunteerName": "Mckenzie, Roy",
+      "hole": 12,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-28T11:19:12.327Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -15611,6 +15701,96 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779967152220",
+      "timestamp": "2026-05-28T11:19:12.220Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Mckenzie, Roy",
+      "details": "Thursday AM - Hole #12"
+    },
+    {
+      "id": "1779967146788",
+      "timestamp": "2026-05-28T11:19:06.788Z",
+      "user": "Gordon, Gary",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Sale, Lynn",
+      "details": "Thursday AM - Hole #2"
+    },
+    {
+      "id": "1779967130453",
+      "timestamp": "2026-05-28T11:18:50.453Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Grall, George",
+      "details": "Thursday AM - Hole #12"
+    },
+    {
+      "id": "1779966965774",
+      "timestamp": "2026-05-28T11:16:05.774Z",
+      "user": "Gordon, Gary",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Schrader, Brenda",
+      "details": "Thursday AM - Hole #2"
+    },
+    {
+      "id": "1779966960734",
+      "timestamp": "2026-05-28T11:16:00.734Z",
+      "user": "Gordon, Gary",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Lemay, Mark",
+      "details": "Thursday AM - Hole #2"
+    },
+    {
+      "id": "1779966957107",
+      "timestamp": "2026-05-28T11:15:57.108Z",
+      "user": "Gordon, Gary",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Fee, John",
+      "details": "Thursday AM - Hole #2"
+    },
+    {
+      "id": "1779966955526",
+      "timestamp": "2026-05-28T11:15:55.526Z",
+      "user": "Gordon, Gary",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Colon, Orlando",
+      "details": "Thursday AM - Hole #2"
+    },
+    {
+      "id": "1779966952269",
+      "timestamp": "2026-05-28T11:15:52.269Z",
+      "user": "Gordon, Gary",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Aguilar, Jorge",
+      "details": "Thursday AM - Hole #2"
+    },
+    {
+      "id": "1779966948362",
+      "timestamp": "2026-05-28T11:15:48.362Z",
+      "user": "Gordon, Gary",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Gordon, Gary",
+      "details": "Thursday AM - Hole #2"
+    },
+    {
+      "id": "1779966942352",
+      "timestamp": "2026-05-28T11:15:42.352Z",
+      "user": "Gordon, Gary",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779966853775",
       "timestamp": "2026-05-28T11:14:13.775Z",
@@ -36554,5 +36734,5 @@
       "deletedAt": 1779923202912
     }
   ],
-  "serverNow": 1779966813716
+  "serverNow": 1779967147840
 }
