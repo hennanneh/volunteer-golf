@@ -17455,6 +17455,96 @@
       "checkedInBy": "Howrey, Anne",
       "timestamp": "2026-05-28T13:05:38.350Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "10126",
+      "volunteerName": "Sickler, Debra",
+      "hole": 16,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Roy, Mike",
+      "timestamp": "2026-05-28T13:10:10.455Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "1464",
+      "volunteerName": "Mcdaniel, Patrick",
+      "hole": 6,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Mcdaniel, Patrick",
+      "timestamp": "2026-05-28T13:10:30.963Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4433",
+      "volunteerName": "Elkins, Paul",
+      "hole": 6,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Mcdaniel, Patrick",
+      "timestamp": "2026-05-28T13:10:33.466Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2658",
+      "volunteerName": "Andrews, Joseph",
+      "hole": 6,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Mcdaniel, Patrick",
+      "timestamp": "2026-05-28T13:10:46.936Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9461",
+      "volunteerName": "Goodenough, Timothy",
+      "hole": 6,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Mcdaniel, Patrick",
+      "timestamp": "2026-05-28T13:10:48.611Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5441",
+      "volunteerName": "Lee, Rodney",
+      "hole": 6,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Mcdaniel, Patrick",
+      "timestamp": "2026-05-28T13:10:50.052Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9834",
+      "volunteerName": "Piper, Kathleen",
+      "hole": 6,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Mcdaniel, Patrick",
+      "timestamp": "2026-05-28T13:10:51.372Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9833",
+      "volunteerName": "Piper, Monte",
+      "hole": 6,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Mcdaniel, Patrick",
+      "timestamp": "2026-05-28T13:10:51.728Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4190",
+      "volunteerName": "Towers, Douglas",
+      "hole": 6,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Mcdaniel, Patrick",
+      "timestamp": "2026-05-28T13:10:53.461Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -17474,6 +17564,123 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779973975237",
+      "timestamp": "2026-05-28T13:12:55.237Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779973954129",
+      "timestamp": "2026-05-28T13:12:34.129Z",
+      "user": "Putt, Gerald",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1779973953761",
+      "timestamp": "2026-05-28T13:12:33.761Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1779973853529",
+      "timestamp": "2026-05-28T13:10:53.529Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Towers, Douglas",
+      "details": "Thursday AM - Hole #6"
+    },
+    {
+      "id": "1779973851788",
+      "timestamp": "2026-05-28T13:10:51.788Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Piper, Monte",
+      "details": "Thursday AM - Hole #6"
+    },
+    {
+      "id": "1779973851435",
+      "timestamp": "2026-05-28T13:10:51.435Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Piper, Kathleen",
+      "details": "Thursday AM - Hole #6"
+    },
+    {
+      "id": "1779973850157",
+      "timestamp": "2026-05-28T13:10:50.157Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Lee, Rodney",
+      "details": "Thursday AM - Hole #6"
+    },
+    {
+      "id": "1779973848682",
+      "timestamp": "2026-05-28T13:10:48.682Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Goodenough, Timothy",
+      "details": "Thursday AM - Hole #6"
+    },
+    {
+      "id": "1779973847022",
+      "timestamp": "2026-05-28T13:10:47.022Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Andrews, Joseph",
+      "details": "Thursday AM - Hole #6"
+    },
+    {
+      "id": "1779973833542",
+      "timestamp": "2026-05-28T13:10:33.542Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Elkins, Paul",
+      "details": "Thursday AM - Hole #6"
+    },
+    {
+      "id": "1779973833155",
+      "timestamp": "2026-05-28T13:10:33.155Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Mcdaniel, Patrick",
+      "details": "Thursday AM - Hole #6"
+    },
+    {
+      "id": "1779973813443",
+      "timestamp": "2026-05-28T13:10:13.443Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 16",
+      "details": "Submitted Thursday AM for Hole 16"
+    },
+    {
+      "id": "1779973810532",
+      "timestamp": "2026-05-28T13:10:10.532Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Sickler, Debra",
+      "details": "Thursday AM - Hole #16"
+    },
     {
       "id": "1779973650782-6llkrj",
       "timestamp": "2026-05-28T13:07:30.782Z",
@@ -40769,5 +40976,5 @@
       "deletedAt": 1779923202912
     }
   ],
-  "serverNow": 1779973546203
+  "serverNow": 1779973854745
 }
