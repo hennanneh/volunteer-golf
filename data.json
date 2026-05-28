@@ -19553,6 +19553,146 @@
       "checkedInBy": "Gradt, Jason",
       "timestamp": "2026-05-28T17:59:47.070Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "5401",
+      "volunteerName": "Badalamenti, Jim",
+      "hole": 8,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-28T18:13:29.513Z",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "5240",
+      "volunteerName": "Rogenski, Chris P.",
+      "hole": 8,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-28T18:13:39.473Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2507",
+      "volunteerName": "Holt, Sammy",
+      "hole": 8,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-28T18:13:39.729Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2543",
+      "volunteerName": "Holt, Sharron",
+      "hole": 8,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-28T18:13:39.977Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5307",
+      "volunteerName": "Anderson, Rob",
+      "hole": 8,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-28T18:13:41.476Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5401",
+      "volunteerName": "Badalamenti, Jim",
+      "hole": 8,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-28T18:13:41.846Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2135",
+      "volunteerName": "Davidson, Glen",
+      "hole": 8,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-28T18:13:42.186Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7865",
+      "volunteerName": "Davis, Sam",
+      "hole": 8,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-28T18:13:43.188Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6340",
+      "volunteerName": "Diaz, Rickey",
+      "hole": 8,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-28T18:13:43.452Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10667",
+      "volunteerName": "Gilchrist, William (Bill)",
+      "hole": 8,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-28T18:13:44.603Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9874",
+      "volunteerName": "Hughes, Allen",
+      "hole": 8,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-28T18:13:44.742Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6967",
+      "volunteerName": "Leggett, Deborah",
+      "hole": 8,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-28T18:13:45.771Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6338",
+      "volunteerName": "Pryor, Wesley",
+      "hole": 8,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-28T18:13:46.005Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9896",
+      "volunteerName": "Sullivan, Patrick",
+      "hole": 8,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-28T18:13:46.998Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -19573,6 +19713,132 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1779992032330",
+      "timestamp": "2026-05-28T18:13:52.330Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 8",
+      "details": "Submitted Thursday PM for Hole 8"
+    },
+    {
+      "id": "1779992028966",
+      "timestamp": "2026-05-28T18:13:48.966Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Sullivan, Patrick",
+      "details": "Thursday PM - Hole #8"
+    },
+    {
+      "id": "1779992027980",
+      "timestamp": "2026-05-28T18:13:47.980Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Pryor, Wesley",
+      "details": "Thursday PM - Hole #8"
+    },
+    {
+      "id": "1779992027745",
+      "timestamp": "2026-05-28T18:13:47.745Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Leggett, Deborah",
+      "details": "Thursday PM - Hole #8"
+    },
+    {
+      "id": "1779992026716",
+      "timestamp": "2026-05-28T18:13:46.716Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Hughes, Allen",
+      "details": "Thursday PM - Hole #8"
+    },
+    {
+      "id": "1779992026625",
+      "timestamp": "2026-05-28T18:13:46.625Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Gilchrist, William (Bill)",
+      "details": "Thursday PM - Hole #8"
+    },
+    {
+      "id": "1779992025426",
+      "timestamp": "2026-05-28T18:13:45.426Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Diaz, Rickey",
+      "details": "Thursday PM - Hole #8"
+    },
+    {
+      "id": "1779992025181",
+      "timestamp": "2026-05-28T18:13:45.181Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Davis, Sam",
+      "details": "Thursday PM - Hole #8"
+    },
+    {
+      "id": "1779992024150",
+      "timestamp": "2026-05-28T18:13:44.150Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Davidson, Glen",
+      "details": "Thursday PM - Hole #8"
+    },
+    {
+      "id": "1779992023811",
+      "timestamp": "2026-05-28T18:13:43.811Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Badalamenti, Jim",
+      "details": "Thursday PM - Hole #8"
+    },
+    {
+      "id": "1779992023454",
+      "timestamp": "2026-05-28T18:13:43.454Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Anderson, Rob",
+      "details": "Thursday PM - Hole #8"
+    },
+    {
+      "id": "1779992021942",
+      "timestamp": "2026-05-28T18:13:41.942Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Holt, Sharron",
+      "details": "Thursday PM - Hole #8"
+    },
+    {
+      "id": "1779992021699",
+      "timestamp": "2026-05-28T18:13:41.699Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Holt, Sammy",
+      "details": "Thursday PM - Hole #8"
+    },
+    {
+      "id": "1779992021436",
+      "timestamp": "2026-05-28T18:13:41.436Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Rogenski, Chris P.",
+      "details": "Thursday PM - Hole #8"
+    },
     {
       "id": "1779991187139",
       "timestamp": "2026-05-28T17:59:47.139Z",
