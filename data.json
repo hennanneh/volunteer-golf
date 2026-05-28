@@ -19323,6 +19323,96 @@
       "checkedInBy": "Sanders, Steve",
       "timestamp": "2026-05-28T17:44:10.006Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "5217",
+      "volunteerName": "Quintana, Mike",
+      "hole": 7,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Quintana, Mike",
+      "timestamp": "2026-05-28T17:49:43.803Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "274",
+      "volunteerName": "Waller, Gary",
+      "hole": 7,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Quintana, Mike",
+      "timestamp": "2026-05-28T17:49:44.861Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9969",
+      "volunteerName": "Dority, Jenny",
+      "hole": 7,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Quintana, Mike",
+      "timestamp": "2026-05-28T17:49:49.895Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8178",
+      "volunteerName": "Escobedo, Leo",
+      "hole": 7,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Quintana, Mike",
+      "timestamp": "2026-05-28T17:49:52.230Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7912",
+      "volunteerName": "Escobedo, Xavier",
+      "hole": 7,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Quintana, Mike",
+      "timestamp": "2026-05-28T17:49:53.555Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5857",
+      "volunteerName": "Gunn, Eric",
+      "hole": 7,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Quintana, Mike",
+      "timestamp": "2026-05-28T17:49:55.808Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8183",
+      "volunteerName": "Olney, Doug",
+      "hole": 7,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Quintana, Mike",
+      "timestamp": "2026-05-28T17:49:56.971Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9900",
+      "volunteerName": "Riemitis, Andy",
+      "hole": 7,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Quintana, Mike",
+      "timestamp": "2026-05-28T17:49:58.766Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9204",
+      "volunteerName": "Sanders, Denny",
+      "hole": 7,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Quintana, Mike",
+      "timestamp": "2026-05-28T17:50:00.755Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -19343,6 +19433,78 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1779990598735",
+      "timestamp": "2026-05-28T17:49:58.735Z",
+      "user": "Quintana, Mike",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Riemitis, Andy",
+      "details": "Thursday PM - Hole #7"
+    },
+    {
+      "id": "1779990596982",
+      "timestamp": "2026-05-28T17:49:56.982Z",
+      "user": "Quintana, Mike",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Olney, Doug",
+      "details": "Thursday PM - Hole #7"
+    },
+    {
+      "id": "1779990595787",
+      "timestamp": "2026-05-28T17:49:55.787Z",
+      "user": "Quintana, Mike",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Gunn, Eric",
+      "details": "Thursday PM - Hole #7"
+    },
+    {
+      "id": "1779990593590",
+      "timestamp": "2026-05-28T17:49:53.590Z",
+      "user": "Quintana, Mike",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Escobedo, Xavier",
+      "details": "Thursday PM - Hole #7"
+    },
+    {
+      "id": "1779990592198",
+      "timestamp": "2026-05-28T17:49:52.198Z",
+      "user": "Quintana, Mike",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Escobedo, Leo",
+      "details": "Thursday PM - Hole #7"
+    },
+    {
+      "id": "1779990590076",
+      "timestamp": "2026-05-28T17:49:50.076Z",
+      "user": "Quintana, Mike",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Dority, Jenny",
+      "details": "Thursday PM - Hole #7"
+    },
+    {
+      "id": "1779990584870",
+      "timestamp": "2026-05-28T17:49:44.870Z",
+      "user": "Quintana, Mike",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Waller, Gary",
+      "details": "Thursday PM - Hole #7"
+    },
+    {
+      "id": "1779990583798",
+      "timestamp": "2026-05-28T17:49:43.798Z",
+      "user": "Quintana, Mike",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Quintana, Mike",
+      "details": "Thursday PM - Hole #7"
+    },
     {
       "id": "1779989963208",
       "timestamp": "2026-05-28T17:39:23.208Z",
