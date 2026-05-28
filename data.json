@@ -15352,6 +15352,66 @@
       "checkedInBy": "Howrey, Anne",
       "timestamp": "2026-05-28T11:05:00.262Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "278",
+      "volunteerName": "Watson, Stan",
+      "hole": 11,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-28T11:08:03.227Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10644",
+      "volunteerName": "Ash, Michael",
+      "hole": 11,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-28T11:08:10.250Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6335",
+      "volunteerName": "Gray, Jerry",
+      "hole": 11,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-28T11:08:10.706Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7043",
+      "volunteerName": "Gray, James",
+      "hole": 11,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-28T11:08:10.754Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5015",
+      "volunteerName": "Meinke, Albert",
+      "hole": 11,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-28T11:08:24.975Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8154",
+      "volunteerName": "Wyatt, Jeff",
+      "hole": 11,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-28T11:08:26.259Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -15371,6 +15431,78 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779966581066",
+      "timestamp": "2026-05-28T11:09:41.067Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779966506316",
+      "timestamp": "2026-05-28T11:08:26.316Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Wyatt, Jeff",
+      "details": "Thursday AM - Hole #11"
+    },
+    {
+      "id": "1779966505037",
+      "timestamp": "2026-05-28T11:08:25.037Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Meinke, Albert",
+      "details": "Thursday AM - Hole #11"
+    },
+    {
+      "id": "1779966490820",
+      "timestamp": "2026-05-28T11:08:10.820Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Gray, James",
+      "details": "Thursday AM - Hole #11"
+    },
+    {
+      "id": "1779966490304",
+      "timestamp": "2026-05-28T11:08:10.304Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Ash, Michael",
+      "details": "Thursday AM - Hole #11"
+    },
+    {
+      "id": "1779966483769",
+      "timestamp": "2026-05-28T11:08:03.769Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Watson, Stan",
+      "details": "Thursday AM - Hole #11"
+    },
+    {
+      "id": "1779966459452",
+      "timestamp": "2026-05-28T11:07:39.452Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779966303273",
+      "timestamp": "2026-05-28T11:05:03.273Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 12",
+      "details": "Submitted Wednesday PM for Hole 12"
+    },
     {
       "id": "1779966300277",
       "timestamp": "2026-05-28T11:05:00.277Z",
