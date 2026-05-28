@@ -15343,6 +15343,15 @@
   },
   "activityLog": [
     {
+      "id": "1779932574488",
+      "timestamp": "2026-05-28T01:42:54.488Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1779931488943",
       "timestamp": "2026-05-28T01:24:48.943Z",
       "user": "Wehmeyer, Tom",
