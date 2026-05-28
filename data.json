@@ -17856,6 +17856,15 @@
   },
   "activityLog": [
     {
+      "id": "1779981904890",
+      "timestamp": "2026-05-28T15:25:04.890Z",
+      "user": "Montalvo, Sammy",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1779981765066",
       "timestamp": "2026-05-28T15:22:45.066Z",
       "user": "Imboden, Thomas",
