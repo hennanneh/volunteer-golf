@@ -20161,6 +20161,16 @@
       "checkedInBy": "Jutras, Michael",
       "timestamp": "2026-05-28T22:22:56.351Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "10766",
+      "volunteerName": "Rose, Jacob",
+      "hole": 9,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Jutras, Michael",
+      "timestamp": "2026-05-28T22:29:03.462Z",
+      "isAlternate": true
     }
   ],
   "submissions": [],
@@ -20181,6 +20191,24 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1780007348253",
+      "timestamp": "2026-05-28T22:29:08.253Z",
+      "user": "Jutras, Michael",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 9",
+      "details": "Submitted Thursday PM for Hole 9"
+    },
+    {
+      "id": "1780007343978",
+      "timestamp": "2026-05-28T22:29:03.978Z",
+      "user": "Jutras, Michael",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Rose, Jacob",
+      "details": "Thursday PM - Hole #9 (alternate)"
+    },
     {
       "id": "1780007005003",
       "timestamp": "2026-05-28T22:23:25.003Z",
