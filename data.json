@@ -15342,6 +15342,15 @@
   },
   "activityLog": [
     {
+      "id": "1779936920503",
+      "timestamp": "2026-05-28T02:55:20.503Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1779933524116",
       "timestamp": "2026-05-28T01:58:44.116Z",
       "user": "Watson, Stan",
