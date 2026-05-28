@@ -2727,15 +2727,19 @@
         "Wednesday AM": true,
         "Wednesday PM": true,
         "Thursday AM": true,
+        "Thursday PM": true,
+        "Friday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true,
         "Sunday PM": true
       },
       "volId": "9988",
       "address": "7017 Twin Hills Dr JOSHUA, TX 76058",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779887611506
+      "lastModified": 1779971160651
     },
     {
       "id": "7043",
@@ -6659,7 +6663,7 @@
       "address": "1200 Eastridge Dr Yukon, OK 73099",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779885193756
+      "lastModified": 1779971167094
     },
     {
       "id": "5217",
@@ -8554,7 +8558,7 @@
         "Monday AM": true,
         "Wednesday AM": true,
         "Wednesday PM": true,
-        "Thursday PM": true,
+        "Thursday AM": true,
         "Friday AM": true,
         "Saturday PM": true,
         "Sunday AM": true
@@ -8563,7 +8567,7 @@
       "address": "3128 Woodridge Dr Hurst, TX 76054",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779971287475
     },
     {
       "id": "10222",
@@ -15342,16 +15346,6 @@
       "isAlternate": false
     },
     {
-      "volunteerId": "7207",
-      "volunteerName": "Watson, Steve",
-      "hole": 14,
-      "day": "Thursday",
-      "shift": "PM",
-      "checkedInBy": "Sanders, Steve",
-      "timestamp": "2026-05-28T11:02:08.452Z",
-      "isAlternate": false
-    },
-    {
       "volunteerId": "10012",
       "volunteerName": "Borgschatz, Keith",
       "hole": 12,
@@ -16170,6 +16164,36 @@
       "checkedInBy": "Duncan, Larry",
       "timestamp": "2026-05-28T12:24:56.980Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "10629",
+      "volunteerName": "Millard, Tyrone",
+      "hole": 5,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Imboden, Thomas",
+      "timestamp": "2026-05-28T12:27:44.318Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "3428",
+      "volunteerName": "Saunders, Martin",
+      "hole": 5,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Imboden, Thomas",
+      "timestamp": "2026-05-28T12:28:33.202Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10619",
+      "volunteerName": "Simmons, Rick",
+      "hole": 5,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Imboden, Thomas",
+      "timestamp": "2026-05-28T12:28:34.627Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -16189,6 +16213,97 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779971321893",
+      "timestamp": "2026-05-28T12:28:41.893Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 5",
+      "details": "Submitted Thursday AM for Hole 5"
+    },
+    {
+      "id": "1779971314678",
+      "timestamp": "2026-05-28T12:28:34.678Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Simmons, Rick",
+      "details": "Thursday AM - Hole #5"
+    },
+    {
+      "id": "1779971313255",
+      "timestamp": "2026-05-28T12:28:33.255Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Saunders, Martin",
+      "details": "Thursday AM - Hole #5"
+    },
+    {
+      "id": "1779971287475-vflqjr",
+      "timestamp": "2026-05-28T12:28:07.475Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Watson, Steve",
+      "details": "added Thursday AM; removed Thursday PM"
+    },
+    {
+      "id": "1779971212512",
+      "timestamp": "2026-05-28T12:26:52.512Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Watson, Steve",
+      "details": "Thursday PM - Hole #14"
+    },
+    {
+      "id": "1779971167097-0wna58",
+      "timestamp": "2026-05-28T12:26:07.097Z",
+      "user": "unauth-146.75.234.48",
+      "userType": "unauthenticated",
+      "action": "edit-schedule",
+      "target": "Putt, Gerald",
+      "details": "removed Saturday PM, Sunday AM (via bulk save)",
+      "targetHole": 12
+    },
+    {
+      "id": "1779971166275",
+      "timestamp": "2026-05-28T12:26:06.275Z",
+      "user": "Wilson, Todd",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779971160651-kswtrh",
+      "timestamp": "2026-05-28T12:26:00.651Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Grall, George",
+      "details": "added Thursday PM, Friday AM, Saturday PM, Sunday AM"
+    },
+    {
+      "id": "1779971121758-qio0w4",
+      "timestamp": "2026-05-28T12:25:21.758Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Putt, Gerald",
+      "details": "added Saturday PM, Sunday AM"
+    },
+    {
+      "id": "1779971106573",
+      "timestamp": "2026-05-28T12:25:06.573Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 13",
+      "details": "Submitted Thursday AM for Hole 13"
+    },
     {
       "id": "1779971097028",
       "timestamp": "2026-05-28T12:24:57.028Z",
@@ -38016,5 +38131,5 @@
       "deletedAt": 1779923202912
     }
   ],
-  "serverNow": 1779970757691
+  "serverNow": 1779971167126
 }
