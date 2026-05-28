@@ -5086,27 +5086,6 @@
       "lastModified": 1778813044771
     },
     {
-      "id": "4988",
-      "name": "Mashburn, Victor",
-      "type": "Volunteer",
-      "hole": 12,
-      "phone": "(817) 360-4153",
-      "email": "vcmash48@gmail.com",
-      "yearsWorked": 14,
-      "hat": "",
-      "scheduled": {
-        "Thursday AM": true,
-        "Friday PM": true,
-        "Saturday AM": true,
-        "Sunday PM": true
-      },
-      "volId": "4988",
-      "address": "4735 Saddlebrook Drive Fort Worth, TX 7611681736",
-      "hasAdminPassword": false,
-      "hasVolunteerPassword": false,
-      "lastModified": 1779825051995
-    },
-    {
       "id": "9510",
       "name": "Mason, Larry",
       "type": "Volunteer",
@@ -19144,6 +19123,166 @@
       "checkedInBy": "Imboden, Thomas",
       "timestamp": "2026-05-28T17:28:10.552Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "1464",
+      "volunteerName": "Mcdaniel, Patrick",
+      "hole": 6,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Mcdaniel, Patrick",
+      "timestamp": "2026-05-28T17:37:48.343Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4433",
+      "volunteerName": "Elkins, Paul",
+      "hole": 6,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Mcdaniel, Patrick",
+      "timestamp": "2026-05-28T17:37:49.104Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10717",
+      "volunteerName": "Cantu, Brady",
+      "hole": 6,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Mcdaniel, Patrick",
+      "timestamp": "2026-05-28T17:37:52.076Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "419",
+      "volunteerName": "Cantu, Doug",
+      "hole": 6,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Mcdaniel, Patrick",
+      "timestamp": "2026-05-28T17:37:52.906Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9195",
+      "volunteerName": "Greener, Jim",
+      "hole": 6,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Mcdaniel, Patrick",
+      "timestamp": "2026-05-28T17:37:57.080Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7922",
+      "volunteerName": "Justice, Neal",
+      "hole": 6,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Mcdaniel, Patrick",
+      "timestamp": "2026-05-28T17:37:57.164Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5441",
+      "volunteerName": "Lee, Rodney",
+      "hole": 6,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Mcdaniel, Patrick",
+      "timestamp": "2026-05-28T17:37:57.411Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8295",
+      "volunteerName": "Miller, Ken",
+      "hole": 6,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Mcdaniel, Patrick",
+      "timestamp": "2026-05-28T17:38:00.478Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7463",
+      "volunteerName": "Uy, Antonio",
+      "hole": 6,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Mcdaniel, Patrick",
+      "timestamp": "2026-05-28T17:38:03.990Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4634",
+      "volunteerName": "Wright, Tony",
+      "hole": 6,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Mcdaniel, Patrick",
+      "timestamp": "2026-05-28T17:38:04.320Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9427",
+      "volunteerName": "Yost, Kc",
+      "hole": 17,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Bishop, Woody",
+      "timestamp": "2026-05-28T17:38:27.841Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "3777",
+      "volunteerName": "Hicks, Greg",
+      "hole": 17,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Bishop, Woody",
+      "timestamp": "2026-05-28T17:38:32.556Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "3778",
+      "volunteerName": "Hicks, Jackie",
+      "hole": 17,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Bishop, Woody",
+      "timestamp": "2026-05-28T17:38:33.271Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9406",
+      "volunteerName": "Kocek, Greg",
+      "hole": 17,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Bishop, Woody",
+      "timestamp": "2026-05-28T17:38:40.443Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10237",
+      "volunteerName": "Sumrall, Stuart",
+      "hole": 17,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Bishop, Woody",
+      "timestamp": "2026-05-28T17:38:41.359Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10339",
+      "volunteerName": "Lancaster, Barry",
+      "hole": 17,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Bishop, Woody",
+      "timestamp": "2026-05-28T17:38:41.686Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -19164,6 +19303,114 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1779989963208",
+      "timestamp": "2026-05-28T17:39:23.208Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 6",
+      "details": "Submitted Thursday PM for Hole 6"
+    },
+    {
+      "id": "1779989942800",
+      "timestamp": "2026-05-28T17:39:02.800Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "delete",
+      "target": "Mashburn, Victor",
+      "details": "Deleted volunteer"
+    },
+    {
+      "id": "1779989884396",
+      "timestamp": "2026-05-28T17:38:04.396Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Wright, Tony",
+      "details": "Thursday PM - Hole #6"
+    },
+    {
+      "id": "1779989884071",
+      "timestamp": "2026-05-28T17:38:04.071Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Uy, Antonio",
+      "details": "Thursday PM - Hole #6"
+    },
+    {
+      "id": "1779989880540",
+      "timestamp": "2026-05-28T17:38:00.540Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Miller, Ken",
+      "details": "Thursday PM - Hole #6"
+    },
+    {
+      "id": "1779989877472",
+      "timestamp": "2026-05-28T17:37:57.472Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Lee, Rodney",
+      "details": "Thursday PM - Hole #6"
+    },
+    {
+      "id": "1779989877234",
+      "timestamp": "2026-05-28T17:37:57.234Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Justice, Neal",
+      "details": "Thursday PM - Hole #6"
+    },
+    {
+      "id": "1779989877151",
+      "timestamp": "2026-05-28T17:37:57.151Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Greener, Jim",
+      "details": "Thursday PM - Hole #6"
+    },
+    {
+      "id": "1779989872971",
+      "timestamp": "2026-05-28T17:37:52.971Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Cantu, Doug",
+      "details": "Thursday PM - Hole #6"
+    },
+    {
+      "id": "1779989872143",
+      "timestamp": "2026-05-28T17:37:52.143Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Cantu, Brady",
+      "details": "Thursday PM - Hole #6"
+    },
+    {
+      "id": "1779989869175",
+      "timestamp": "2026-05-28T17:37:49.175Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Elkins, Paul",
+      "details": "Thursday PM - Hole #6"
+    },
+    {
+      "id": "1779989868431",
+      "timestamp": "2026-05-28T17:37:48.431Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Mcdaniel, Patrick",
+      "details": "Thursday PM - Hole #6"
+    },
     {
       "id": "1779989518312-m5sma5",
       "timestamp": "2026-05-28T17:31:58.312Z",
@@ -46410,7 +46657,11 @@
     {
       "id": "9574",
       "deletedAt": 1779923202912
+    },
+    {
+      "id": "4988",
+      "deletedAt": 1779989943424
     }
   ],
-  "serverNow": 1779986916772
+  "serverNow": 1779989943492
 }
