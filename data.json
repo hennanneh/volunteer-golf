@@ -18920,6 +18920,36 @@
       "checkedInBy": "Rogenski, Chris P.",
       "timestamp": "2026-05-28T16:54:11.629Z",
       "isAlternate": true
+    },
+    {
+      "volunteerId": "4745",
+      "volunteerName": "Pittman, Tom",
+      "hole": 12,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-28T16:58:08.915Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10319",
+      "volunteerName": "Montou, John",
+      "hole": 10,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-28T16:59:16.247Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9580",
+      "volunteerName": "Ludgate, Robert",
+      "hole": 10,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-28T16:59:28.184Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -18940,6 +18970,24 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1779987567969",
+      "timestamp": "2026-05-28T16:59:27.969Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Ludgate, Robert",
+      "details": "Thursday PM - Hole #10"
+    },
+    {
+      "id": "1779987488564",
+      "timestamp": "2026-05-28T16:58:08.565Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Pittman, Tom",
+      "details": "Thursday PM - Hole #12"
+    },
     {
       "id": "1779987280444-xstn3f",
       "timestamp": "2026-05-28T16:54:40.444Z",
