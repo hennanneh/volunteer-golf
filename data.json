@@ -17725,6 +17725,36 @@
       "checkedInBy": "Roy, Mike",
       "timestamp": "2026-05-28T13:56:48.599Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "380",
+      "volunteerName": "Johnson, Kenny",
+      "hole": 1,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Johnson, Kenny",
+      "timestamp": "2026-05-28T15:04:04.322Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6553",
+      "volunteerName": "Ruddell, Dick",
+      "hole": 1,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Johnson, Kenny",
+      "timestamp": "2026-05-28T15:04:05.361Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10248",
+      "volunteerName": "Hardaway, Jerry",
+      "hole": 1,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Johnson, Kenny",
+      "timestamp": "2026-05-28T15:04:07.183Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -17745,6 +17775,42 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1779980650409",
+      "timestamp": "2026-05-28T15:04:10.409Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 1",
+      "details": "Submitted Thursday PM for Hole 1"
+    },
+    {
+      "id": "1779980647276",
+      "timestamp": "2026-05-28T15:04:07.276Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Hardaway, Jerry",
+      "details": "Thursday PM - Hole #1"
+    },
+    {
+      "id": "1779980645444",
+      "timestamp": "2026-05-28T15:04:05.444Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Ruddell, Dick",
+      "details": "Thursday PM - Hole #1"
+    },
+    {
+      "id": "1779980644411",
+      "timestamp": "2026-05-28T15:04:04.411Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Johnson, Kenny",
+      "details": "Thursday PM - Hole #1"
+    },
     {
       "id": "1779980215360",
       "timestamp": "2026-05-28T14:56:55.360Z",
