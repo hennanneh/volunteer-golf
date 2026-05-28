@@ -15822,6 +15822,42 @@
   },
   "activityLog": [
     {
+      "id": "1779968051110",
+      "timestamp": "2026-05-28T11:34:11.110Z",
+      "user": "Peterson, Durk",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1779967848321",
+      "timestamp": "2026-05-28T11:30:48.321Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Williams, Amy",
+      "details": "Thursday AM - Hole #20"
+    },
+    {
+      "id": "1779967846540",
+      "timestamp": "2026-05-28T11:30:46.540Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Williams, Amy",
+      "details": "Thursday AM - Hole #20"
+    },
+    {
+      "id": "1779967832854",
+      "timestamp": "2026-05-28T11:30:32.854Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1779967785160",
       "timestamp": "2026-05-28T11:29:45.160Z",
       "user": "Johnson, Kenny",
@@ -36989,5 +37025,5 @@
       "deletedAt": 1779923202912
     }
   ],
-  "serverNow": 1779967774470
+  "serverNow": 1779967714869
 }
