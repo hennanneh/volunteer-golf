@@ -15990,6 +15990,86 @@
       "checkedInBy": "Imboden, Thomas",
       "timestamp": "2026-05-28T12:05:44.370Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "7191",
+      "volunteerName": "Sanders, Steve",
+      "hole": 14,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Sanders, Steve",
+      "timestamp": "2026-05-28T12:16:51.014Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9916",
+      "volunteerName": "Endicott, Eric",
+      "hole": 14,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Sanders, Steve",
+      "timestamp": "2026-05-28T12:16:54.563Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9138",
+      "volunteerName": "Morrison, Hal",
+      "hole": 14,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Sanders, Steve",
+      "timestamp": "2026-05-28T12:17:03.945Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "3986",
+      "volunteerName": "Clayton, Rodney",
+      "hole": 13,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Duncan, Larry",
+      "timestamp": "2026-05-28T12:17:33.381Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7927",
+      "volunteerName": "Johnson, Dean",
+      "hole": 13,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Duncan, Larry",
+      "timestamp": "2026-05-28T12:17:43.184Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7926",
+      "volunteerName": "Johnson, Linda",
+      "hole": 13,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Duncan, Larry",
+      "timestamp": "2026-05-28T12:17:44.006Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5454",
+      "volunteerName": "Kopenec, Rich",
+      "hole": 13,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Duncan, Larry",
+      "timestamp": "2026-05-28T12:17:45.554Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "1518",
+      "volunteerName": "Trias, Dan",
+      "hole": 9,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Edwards, Bill",
+      "timestamp": "2026-05-28T12:18:59.287Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -16009,6 +16089,78 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779970754619",
+      "timestamp": "2026-05-28T12:19:14.619Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 9",
+      "details": "Submitted Thursday AM for Hole 9"
+    },
+    {
+      "id": "1779970720540",
+      "timestamp": "2026-05-28T12:18:40.540Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 13",
+      "details": "Submitted Thursday AM for Hole 13"
+    },
+    {
+      "id": "1779970665592",
+      "timestamp": "2026-05-28T12:17:45.592Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Kopenec, Rich",
+      "details": "Thursday AM - Hole #13"
+    },
+    {
+      "id": "1779970664052",
+      "timestamp": "2026-05-28T12:17:44.052Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Johnson, Linda",
+      "details": "Thursday AM - Hole #13"
+    },
+    {
+      "id": "1779970663232",
+      "timestamp": "2026-05-28T12:17:43.232Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Johnson, Dean",
+      "details": "Thursday AM - Hole #13"
+    },
+    {
+      "id": "1779970653428",
+      "timestamp": "2026-05-28T12:17:33.428Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Clayton, Rodney",
+      "details": "Thursday AM - Hole #13"
+    },
+    {
+      "id": "1779970635738",
+      "timestamp": "2026-05-28T12:17:15.738Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Morrison, Hal",
+      "details": "Thursday AM - Hole #14"
+    },
+    {
+      "id": "1779970552536",
+      "timestamp": "2026-05-28T12:15:52.536Z",
+      "user": "Harrell, Michael",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
     {
       "id": "1779970176596",
       "timestamp": "2026-05-28T12:09:36.596Z",
