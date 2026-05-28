@@ -20032,6 +20032,24 @@
   },
   "activityLog": [
     {
+      "id": "1780004633048",
+      "timestamp": "2026-05-28T21:43:53.048Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1780004603942",
+      "timestamp": "2026-05-28T21:43:23.943Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
       "id": "1780003527769",
       "timestamp": "2026-05-28T21:25:27.769Z",
       "user": "Roy, Mike",
