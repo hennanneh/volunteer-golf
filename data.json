@@ -15890,6 +15890,26 @@
       "checkedInBy": "Pugh, Clayton",
       "timestamp": "2026-05-28T11:53:58.108Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "7052",
+      "volunteerName": "Fisher, Paul",
+      "hole": 12,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-28T11:59:14.741Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6692",
+      "volunteerName": "Starks, Michael",
+      "hole": 12,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-28T11:59:17.062Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -15909,6 +15929,24 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779969556747",
+      "timestamp": "2026-05-28T11:59:16.747Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Starks, Michael",
+      "details": "Thursday AM - Hole #12"
+    },
+    {
+      "id": "1779969554422",
+      "timestamp": "2026-05-28T11:59:14.427Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Fisher, Paul",
+      "details": "Thursday AM - Hole #12"
+    },
     {
       "id": "1779969294604",
       "timestamp": "2026-05-28T11:54:54.604Z",
