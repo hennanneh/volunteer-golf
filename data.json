@@ -5842,7 +5842,8 @@
       "address": "3230 Robin Rd Paris, TX 75460",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1778813044771,
+      "volunteerPassword": "$2b$10$Z5.SNFsYOlIjnLwjnRS2S.fSnawN13SoixtUBZxw4FYn/WVvFStl6"
     },
     {
       "id": "9133",
