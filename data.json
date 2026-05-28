@@ -17695,6 +17695,42 @@
   },
   "activityLog": [
     {
+      "id": "1779975253667",
+      "timestamp": "2026-05-28T13:34:13.667Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 6",
+      "details": "Submitted Thursday AM for Hole 6"
+    },
+    {
+      "id": "1779975028851",
+      "timestamp": "2026-05-28T13:30:28.851Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1779975024643",
+      "timestamp": "2026-05-28T13:30:24.643Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779975007902",
+      "timestamp": "2026-05-28T13:30:07.902Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 99",
+      "details": "Submitted Tuesday AM for Hole 99"
+    },
+    {
       "id": "1779975000006",
       "timestamp": "2026-05-28T13:30:00.006Z",
       "user": "Howrey, Anne",
