@@ -19122,6 +19122,26 @@
       "checkedInBy": "Imboden, Thomas",
       "timestamp": "2026-05-28T17:21:49.324Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "6744",
+      "volunteerName": "Livermore, James",
+      "hole": 5,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Imboden, Thomas",
+      "timestamp": "2026-05-28T17:28:08.410Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10271",
+      "volunteerName": "Mcintyre, Sean",
+      "hole": 5,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Imboden, Thomas",
+      "timestamp": "2026-05-28T17:28:10.552Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -19142,6 +19162,33 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1779989292354",
+      "timestamp": "2026-05-28T17:28:12.354Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 5",
+      "details": "Submitted Thursday PM for Hole 5"
+    },
+    {
+      "id": "1779989290651",
+      "timestamp": "2026-05-28T17:28:10.651Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Mcintyre, Sean",
+      "details": "Thursday PM - Hole #5"
+    },
+    {
+      "id": "1779989288504",
+      "timestamp": "2026-05-28T17:28:08.504Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Livermore, James",
+      "details": "Thursday PM - Hole #5"
+    },
     {
       "id": "1779988914289",
       "timestamp": "2026-05-28T17:21:54.289Z",
