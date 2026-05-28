@@ -20032,6 +20032,69 @@
   },
   "activityLog": [
     {
+      "id": "1780005874286",
+      "timestamp": "2026-05-28T22:04:34.286Z",
+      "user": "Leggett, Deborah",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1780005784782",
+      "timestamp": "2026-05-28T22:03:04.782Z",
+      "user": "Justice, Neal",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1780005750373",
+      "timestamp": "2026-05-28T22:02:30.373Z",
+      "user": "Leggett, Deborah",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1780005749828",
+      "timestamp": "2026-05-28T22:02:29.828Z",
+      "user": "Holt, Sharron",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1780005740058",
+      "timestamp": "2026-05-28T22:02:20.058Z",
+      "user": "Holt, Sharron",
+      "userType": "Volunteer",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Volunteer portal"
+    },
+    {
+      "id": "1780005719677",
+      "timestamp": "2026-05-28T22:01:59.677Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1780005627707",
+      "timestamp": "2026-05-28T22:00:27.707Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 8",
+      "details": "Submitted Thursday PM for Hole 8"
+    },
+    {
       "id": "1780005544800",
       "timestamp": "2026-05-28T21:59:04.800Z",
       "user": "Rogenski, Chris P.",
@@ -48579,5 +48642,5 @@
       "deletedAt": 1779989943424
     }
   ],
-  "serverNow": 1779996934920
+  "serverNow": 1780005786125
 }
