@@ -19713,6 +19713,136 @@
       "checkedInBy": "Gradt, Jason",
       "timestamp": "2026-05-28T18:19:54.686Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "278",
+      "volunteerName": "Watson, Stan",
+      "hole": 11,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-28T18:20:38.404Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2657",
+      "volunteerName": "James, Marty",
+      "hole": 11,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-28T18:20:38.721Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7291",
+      "volunteerName": "Casey, John",
+      "hole": 11,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-28T18:20:42.963Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10274",
+      "volunteerName": "Hitz, Jim",
+      "hole": 11,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-28T18:20:43.046Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10178",
+      "volunteerName": "Jamison, Tina",
+      "hole": 11,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-28T18:20:44.217Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6758",
+      "volunteerName": "Oakley, Jeff",
+      "hole": 11,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-28T18:20:46.061Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2488",
+      "volunteerName": "Reinfelds, David",
+      "hole": 11,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-28T18:20:47.130Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9796",
+      "volunteerName": "Richards, Stephen",
+      "hole": 11,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-28T18:20:49.583Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5612",
+      "volunteerName": "Tengra, Mary",
+      "hole": 11,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-28T18:20:49.871Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2552",
+      "volunteerName": "Kane, Joseph",
+      "hole": 15,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Beckley, Bob",
+      "timestamp": "2026-05-28T18:20:57.254Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9244",
+      "volunteerName": "King, Chad",
+      "hole": 15,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Beckley, Bob",
+      "timestamp": "2026-05-28T18:20:57.817Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10279",
+      "volunteerName": "Wright, Nancy",
+      "hole": 17,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Bishop, Woody",
+      "timestamp": "2026-05-28T18:21:45.407Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4661",
+      "volunteerName": "Wright, Paul",
+      "hole": 17,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Bishop, Woody",
+      "timestamp": "2026-05-28T18:21:45.864Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -19733,6 +19863,132 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1779992468051",
+      "timestamp": "2026-05-28T18:21:08.051Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 15",
+      "details": "Submitted Thursday PM for Hole 15"
+    },
+    {
+      "id": "1779992464356",
+      "timestamp": "2026-05-28T18:21:04.356Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 11",
+      "details": "Submitted Thursday PM for Hole 11"
+    },
+    {
+      "id": "1779992457884",
+      "timestamp": "2026-05-28T18:20:57.884Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "King, Chad",
+      "details": "Thursday PM - Hole #15"
+    },
+    {
+      "id": "1779992457360",
+      "timestamp": "2026-05-28T18:20:57.362Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Kane, Joseph",
+      "details": "Thursday PM - Hole #15"
+    },
+    {
+      "id": "1779992449735",
+      "timestamp": "2026-05-28T18:20:49.735Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Tengra, Mary",
+      "details": "Thursday PM - Hole #11"
+    },
+    {
+      "id": "1779992449443",
+      "timestamp": "2026-05-28T18:20:49.443Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Richards, Stephen",
+      "details": "Thursday PM - Hole #11"
+    },
+    {
+      "id": "1779992447028",
+      "timestamp": "2026-05-28T18:20:47.028Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Reinfelds, David",
+      "details": "Thursday PM - Hole #11"
+    },
+    {
+      "id": "1779992445921",
+      "timestamp": "2026-05-28T18:20:45.921Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Oakley, Jeff",
+      "details": "Thursday PM - Hole #11"
+    },
+    {
+      "id": "1779992444075",
+      "timestamp": "2026-05-28T18:20:44.075Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Jamison, Tina",
+      "details": "Thursday PM - Hole #11"
+    },
+    {
+      "id": "1779992442898",
+      "timestamp": "2026-05-28T18:20:42.898Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Hitz, Jim",
+      "details": "Thursday PM - Hole #11"
+    },
+    {
+      "id": "1779992442815",
+      "timestamp": "2026-05-28T18:20:42.815Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Casey, John",
+      "details": "Thursday PM - Hole #11"
+    },
+    {
+      "id": "1779992438575",
+      "timestamp": "2026-05-28T18:20:38.575Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "James, Marty",
+      "details": "Thursday PM - Hole #11"
+    },
+    {
+      "id": "1779992438253",
+      "timestamp": "2026-05-28T18:20:38.253Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Watson, Stan",
+      "details": "Thursday PM - Hole #11"
+    },
+    {
+      "id": "1779992421541",
+      "timestamp": "2026-05-28T18:20:21.541Z",
+      "user": "Gradt, Jason",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 18",
+      "details": "Submitted Thursday PM for Hole 18"
+    },
     {
       "id": "1779992032330",
       "timestamp": "2026-05-28T18:13:52.330Z",
@@ -47507,5 +47763,5 @@
       "deletedAt": 1779989943424
     }
   ],
-  "serverNow": 1779990769785
+  "serverNow": 1779992453288
 }
