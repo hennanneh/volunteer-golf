@@ -18256,6 +18256,46 @@
       "checkedInBy": "Gordon, Gary",
       "timestamp": "2026-05-28T16:19:54.198Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "1520",
+      "volunteerName": "Craft, John",
+      "hole": 2,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Gordon, Gary",
+      "timestamp": "2026-05-28T16:20:47.414Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5539",
+      "volunteerName": "Mansir, Greg",
+      "hole": 2,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Gordon, Gary",
+      "timestamp": "2026-05-28T16:23:07.867Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4014",
+      "volunteerName": "Hoover, Thomas",
+      "hole": 2,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Gordon, Gary",
+      "timestamp": "2026-05-28T16:23:19.435Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7692",
+      "volunteerName": "Lemay, Mark",
+      "hole": 2,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Gordon, Gary",
+      "timestamp": "2026-05-28T16:24:57.111Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -18276,6 +18316,60 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1779985497429",
+      "timestamp": "2026-05-28T16:24:57.429Z",
+      "user": "Gordon, Gary",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Lemay, Mark",
+      "details": "Thursday PM - Hole #2"
+    },
+    {
+      "id": "1779985496396",
+      "timestamp": "2026-05-28T16:24:56.396Z",
+      "user": "Gordon, Gary",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Lemay, Mark",
+      "details": "Thursday PM - Hole #2"
+    },
+    {
+      "id": "1779985399746",
+      "timestamp": "2026-05-28T16:23:19.746Z",
+      "user": "Gordon, Gary",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Hoover, Thomas",
+      "details": "Thursday PM - Hole #2"
+    },
+    {
+      "id": "1779985390343",
+      "timestamp": "2026-05-28T16:23:10.343Z",
+      "user": "Gordon, Gary",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Lemay, Mark",
+      "details": "Thursday PM - Hole #2"
+    },
+    {
+      "id": "1779985388172",
+      "timestamp": "2026-05-28T16:23:08.172Z",
+      "user": "Gordon, Gary",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Mansir, Greg",
+      "details": "Thursday PM - Hole #2"
+    },
+    {
+      "id": "1779985247732",
+      "timestamp": "2026-05-28T16:20:47.732Z",
+      "user": "Gordon, Gary",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Craft, John",
+      "details": "Thursday PM - Hole #2"
+    },
     {
       "id": "1779985194512",
       "timestamp": "2026-05-28T16:19:54.512Z",
