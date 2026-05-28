@@ -20032,6 +20032,33 @@
   },
   "activityLog": [
     {
+      "id": "1780006026277",
+      "timestamp": "2026-05-28T22:07:06.277Z",
+      "user": "Holt, Sharron",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1780006005499",
+      "timestamp": "2026-05-28T22:06:45.499Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 8",
+      "details": "Submitted Thursday PM for Hole 8"
+    },
+    {
+      "id": "1780005988064",
+      "timestamp": "2026-05-28T22:06:28.064Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1780005874286",
       "timestamp": "2026-05-28T22:04:34.286Z",
       "user": "Leggett, Deborah",
@@ -48642,5 +48669,5 @@
       "deletedAt": 1779989943424
     }
   ],
-  "serverNow": 1780005786125
+  "serverNow": 1779996934920
 }
