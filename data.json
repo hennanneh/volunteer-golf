@@ -18175,6 +18175,26 @@
       "checkedInBy": "Watson, Stan",
       "timestamp": "2026-05-28T15:58:11.937Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "10222",
+      "volunteerName": "Weber, James",
+      "hole": 1,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Johnson, Kenny",
+      "timestamp": "2026-05-28T16:01:32.893Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9405",
+      "volunteerName": "Wilson, Anita",
+      "hole": 1,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Johnson, Kenny",
+      "timestamp": "2026-05-28T16:01:49.663Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -18195,6 +18215,42 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1779984161329",
+      "timestamp": "2026-05-28T16:02:41.329Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1779984147837",
+      "timestamp": "2026-05-28T16:02:27.837Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 1",
+      "details": "Submitted Thursday PM for Hole 1"
+    },
+    {
+      "id": "1779984109759",
+      "timestamp": "2026-05-28T16:01:49.759Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Wilson, Anita",
+      "details": "Thursday PM - Hole #1"
+    },
+    {
+      "id": "1779984092981",
+      "timestamp": "2026-05-28T16:01:32.981Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Weber, James",
+      "details": "Thursday PM - Hole #1"
+    },
     {
       "id": "1779983914107",
       "timestamp": "2026-05-28T15:58:34.107Z",
