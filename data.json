@@ -17675,6 +17675,26 @@
       "checkedInBy": "Browning, Wayne",
       "timestamp": "2026-05-28T13:29:46.351Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "9018",
+      "volunteerName": "Chee, Wendell",
+      "hole": 14,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Sanders, Steve",
+      "timestamp": "2026-05-28T13:37:50.005Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5029",
+      "volunteerName": "Stevens, Deborah",
+      "hole": 14,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Sanders, Steve",
+      "timestamp": "2026-05-28T13:37:54.377Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -17694,6 +17714,42 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779975589009",
+      "timestamp": "2026-05-28T13:39:49.009Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 14",
+      "details": "Submitted Thursday AM for Hole 14"
+    },
+    {
+      "id": "1779975495643",
+      "timestamp": "2026-05-28T13:38:15.643Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 14",
+      "details": "Submitted Thursday AM for Hole 14"
+    },
+    {
+      "id": "1779975486248",
+      "timestamp": "2026-05-28T13:38:06.248Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Stevens, Deborah",
+      "details": "Thursday AM - Hole #14"
+    },
+    {
+      "id": "1779975481884",
+      "timestamp": "2026-05-28T13:38:01.884Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Chee, Wendell",
+      "details": "Thursday AM - Hole #14"
+    },
     {
       "id": "1779975253667",
       "timestamp": "2026-05-28T13:34:13.667Z",
