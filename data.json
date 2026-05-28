@@ -17741,9 +17741,46 @@
     "pairingsUrl": "https://colonialvolunteers.golf/pairings/",
     "showOutingPreferences": false,
     "pairingsText": "Pairings Thursday",
-    "showPoweredBy": false
+    "showPoweredBy": true,
+    "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1779980215360",
+      "timestamp": "2026-05-28T14:56:55.360Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779980211818",
+      "timestamp": "2026-05-28T14:56:51.818Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1779980200440",
+      "timestamp": "2026-05-28T14:56:40.440Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "settings-change",
+      "target": "showPoweredBy",
+      "details": "Updated setting: showPoweredBy"
+    },
+    {
+      "id": "1779980198945",
+      "timestamp": "2026-05-28T14:56:38.945Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "settings-change",
+      "target": "poweredByText",
+      "details": "Updated setting: poweredByText"
+    },
     {
       "id": "1779979619236",
       "timestamp": "2026-05-28T14:46:59.236Z",
