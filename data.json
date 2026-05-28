@@ -15342,6 +15342,15 @@
   },
   "activityLog": [
     {
+      "id": "1779964485525",
+      "timestamp": "2026-05-28T10:34:45.525Z",
+      "user": "Anderson, Jodie",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
       "id": "1779936920503",
       "timestamp": "2026-05-28T02:55:20.503Z",
       "user": "Imboden, Thomas",
