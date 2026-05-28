@@ -19852,6 +19852,15 @@
   },
   "activityLog": [
     {
+      "id": "1779993553559",
+      "timestamp": "2026-05-28T18:39:13.559Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1779993231700",
       "timestamp": "2026-05-28T18:33:51.700Z",
       "user": "Howrey, Anne",
