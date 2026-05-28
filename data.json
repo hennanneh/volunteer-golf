@@ -15870,6 +15870,26 @@
       "checkedInBy": "Ruddell, Dick",
       "timestamp": "2026-05-28T11:49:35.350Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "9503",
+      "volunteerName": "Gregston, Bryan",
+      "hole": 2,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Gordon, Gary",
+      "timestamp": "2026-05-28T11:51:32.377Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4988",
+      "volunteerName": "Mashburn, Victor",
+      "hole": 12,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-28T11:53:58.108Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -15889,6 +15909,150 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779969294604",
+      "timestamp": "2026-05-28T11:54:54.604Z",
+      "user": "Peterson, Durk",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1779969124484",
+      "timestamp": "2026-05-28T11:52:04.484Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 2",
+      "details": "Submitted Thursday AM for Hole 2"
+    },
+    {
+      "id": "1779969102554",
+      "timestamp": "2026-05-28T11:51:42.554Z",
+      "user": "Gordon, Gary",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779969092695",
+      "timestamp": "2026-05-28T11:51:32.695Z",
+      "user": "Gordon, Gary",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Gregston, Bryan",
+      "details": "Thursday AM - Hole #2"
+    },
+    {
+      "id": "1779969082364",
+      "timestamp": "2026-05-28T11:51:22.364Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Nederostek, Brad",
+      "details": "Thursday AM - Hole #4"
+    },
+    {
+      "id": "1779969081966",
+      "timestamp": "2026-05-28T11:51:21.966Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Schafer, John",
+      "details": "Thursday AM - Hole #4"
+    },
+    {
+      "id": "1779969080870",
+      "timestamp": "2026-05-28T11:51:20.870Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Burford, Gary",
+      "details": "Thursday AM - Hole #4"
+    },
+    {
+      "id": "1779969080498",
+      "timestamp": "2026-05-28T11:51:20.498Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Livingston, Jennifier",
+      "details": "Thursday AM - Hole #4"
+    },
+    {
+      "id": "1779969080473",
+      "timestamp": "2026-05-28T11:51:20.473Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Gray, Leandro",
+      "details": "Thursday AM - Hole #4"
+    },
+    {
+      "id": "1779969080238",
+      "timestamp": "2026-05-28T11:51:20.238Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Williams, David",
+      "details": "Thursday AM - Hole #4"
+    },
+    {
+      "id": "1779969073721",
+      "timestamp": "2026-05-28T11:51:13.721Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Gray, Leandro",
+      "details": "Thursday AM - Hole #4"
+    },
+    {
+      "id": "1779969073221",
+      "timestamp": "2026-05-28T11:51:13.221Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Burford, Gary",
+      "details": "Thursday AM - Hole #4"
+    },
+    {
+      "id": "1779969069419",
+      "timestamp": "2026-05-28T11:51:09.419Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Schafer, John",
+      "details": "Thursday AM - Hole #4"
+    },
+    {
+      "id": "1779969068453",
+      "timestamp": "2026-05-28T11:51:08.453Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Nederostek, Brad",
+      "details": "Thursday AM - Hole #4"
+    },
+    {
+      "id": "1779969031788",
+      "timestamp": "2026-05-28T11:50:31.788Z",
+      "user": "Wilson, Todd",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779969029843",
+      "timestamp": "2026-05-28T11:50:29.843Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779968976178",
       "timestamp": "2026-05-28T11:49:36.178Z",
@@ -37284,5 +37448,5 @@
       "deletedAt": 1779923202912
     }
   ],
-  "serverNow": 1779968822241
+  "serverNow": 1779968976254
 }
