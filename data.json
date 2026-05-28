@@ -16194,6 +16194,166 @@
       "checkedInBy": "Imboden, Thomas",
       "timestamp": "2026-05-28T12:28:34.627Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "7806",
+      "volunteerName": "Mosler, Mitch",
+      "hole": 14,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Mosler, Mitch",
+      "timestamp": "2026-05-28T12:30:21.280Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7207",
+      "volunteerName": "Watson, Steve",
+      "hole": 14,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Sanders, Steve",
+      "timestamp": "2026-05-28T12:30:28.376Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8182",
+      "volunteerName": "Walters, Mark",
+      "hole": 14,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Sanders, Steve",
+      "timestamp": "2026-05-28T12:30:33.487Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9658",
+      "volunteerName": "Jutras, Michael",
+      "hole": 9,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Jutras, Michael",
+      "timestamp": "2026-05-28T12:31:15.145Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "3034",
+      "volunteerName": "Burnett, Eric",
+      "hole": 9,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Jutras, Michael",
+      "timestamp": "2026-05-28T12:31:17.818Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2055",
+      "volunteerName": "Edwards, Bill",
+      "hole": 9,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Jutras, Michael",
+      "timestamp": "2026-05-28T12:31:18.769Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "3149",
+      "volunteerName": "Broom, Douglas",
+      "hole": 9,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Jutras, Michael",
+      "timestamp": "2026-05-28T12:31:30.393Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "1445",
+      "volunteerName": "Clark, David",
+      "hole": 9,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Jutras, Michael",
+      "timestamp": "2026-05-28T12:31:55.041Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10239",
+      "volunteerName": "A Schultz, Jill",
+      "hole": 5,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Imboden, Thomas",
+      "timestamp": "2026-05-28T12:32:28.658Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10328",
+      "volunteerName": "Elliott, David",
+      "hole": 9,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Jutras, Michael",
+      "timestamp": "2026-05-28T12:32:33.805Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9109",
+      "volunteerName": "Sippel, Mark",
+      "hole": 9,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Jutras, Michael",
+      "timestamp": "2026-05-28T12:32:45.801Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5391",
+      "volunteerName": "Gradt, Jason",
+      "hole": 18,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Gradt, Jason",
+      "timestamp": "2026-05-28T12:33:23.049Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4222",
+      "volunteerName": "Wehmeyer, Tom",
+      "hole": 18,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Gradt, Jason",
+      "timestamp": "2026-05-28T12:33:23.588Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10696",
+      "volunteerName": "Schoeppach, Ryan",
+      "hole": 18,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Gradt, Jason",
+      "timestamp": "2026-05-28T12:33:33.997Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8184",
+      "volunteerName": "Langford, Alan",
+      "hole": 18,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Gradt, Jason",
+      "timestamp": "2026-05-28T12:33:46.184Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8510",
+      "volunteerName": "Reddington, Joseph",
+      "hole": 18,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Gradt, Jason",
+      "timestamp": "2026-05-28T12:33:55.446Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -16213,6 +16373,195 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779971635506",
+      "timestamp": "2026-05-28T12:33:55.506Z",
+      "user": "Gradt, Jason",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Reddington, Joseph",
+      "details": "Thursday AM - Hole #18"
+    },
+    {
+      "id": "1779971626253",
+      "timestamp": "2026-05-28T12:33:46.253Z",
+      "user": "Gradt, Jason",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Langford, Alan",
+      "details": "Thursday AM - Hole #18"
+    },
+    {
+      "id": "1779971614097",
+      "timestamp": "2026-05-28T12:33:34.097Z",
+      "user": "Gradt, Jason",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Schoeppach, Ryan",
+      "details": "Thursday AM - Hole #18"
+    },
+    {
+      "id": "1779971603652",
+      "timestamp": "2026-05-28T12:33:23.652Z",
+      "user": "Gradt, Jason",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Wehmeyer, Tom",
+      "details": "Thursday AM - Hole #18"
+    },
+    {
+      "id": "1779971589083",
+      "timestamp": "2026-05-28T12:33:09.083Z",
+      "user": "Starks, Michael",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1779971565863",
+      "timestamp": "2026-05-28T12:32:45.863Z",
+      "user": "Jutras, Michael",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Sippel, Mark",
+      "details": "Thursday AM - Hole #9"
+    },
+    {
+      "id": "1779971553868",
+      "timestamp": "2026-05-28T12:32:33.868Z",
+      "user": "Jutras, Michael",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Elliott, David",
+      "details": "Thursday AM - Hole #9"
+    },
+    {
+      "id": "1779971550629",
+      "timestamp": "2026-05-28T12:32:30.629Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 5",
+      "details": "Submitted Thursday AM for Hole 5"
+    },
+    {
+      "id": "1779971548708",
+      "timestamp": "2026-05-28T12:32:28.708Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "A Schultz, Jill",
+      "details": "Thursday AM - Hole #5"
+    },
+    {
+      "id": "1779971515109",
+      "timestamp": "2026-05-28T12:31:55.109Z",
+      "user": "Jutras, Michael",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Clark, David",
+      "details": "Thursday AM - Hole #9"
+    },
+    {
+      "id": "1779971490476",
+      "timestamp": "2026-05-28T12:31:30.476Z",
+      "user": "Jutras, Michael",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Broom, Douglas",
+      "details": "Thursday AM - Hole #9"
+    },
+    {
+      "id": "1779971478833",
+      "timestamp": "2026-05-28T12:31:18.833Z",
+      "user": "Jutras, Michael",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Edwards, Bill",
+      "details": "Thursday AM - Hole #9"
+    },
+    {
+      "id": "1779971477895",
+      "timestamp": "2026-05-28T12:31:17.895Z",
+      "user": "Jutras, Michael",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Burnett, Eric",
+      "details": "Thursday AM - Hole #9"
+    },
+    {
+      "id": "1779971475202",
+      "timestamp": "2026-05-28T12:31:15.202Z",
+      "user": "Jutras, Michael",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Jutras, Michael",
+      "details": "Thursday AM - Hole #9"
+    },
+    {
+      "id": "1779971469252",
+      "timestamp": "2026-05-28T12:31:09.252Z",
+      "user": "Jutras, Michael",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779971450942",
+      "timestamp": "2026-05-28T12:30:50.942Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Walters, Mark",
+      "details": "Thursday AM - Hole #14"
+    },
+    {
+      "id": "1779971445297",
+      "timestamp": "2026-05-28T12:30:45.297Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Walters, Mark",
+      "details": "Thursday AM - Hole #14"
+    },
+    {
+      "id": "1779971440183",
+      "timestamp": "2026-05-28T12:30:40.183Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Watson, Steve",
+      "details": "Thursday AM - Hole #14"
+    },
+    {
+      "id": "1779971423477",
+      "timestamp": "2026-05-28T12:30:23.477Z",
+      "user": "Mosler, Mitch",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 14",
+      "details": "Submitted Thursday AM for Hole 14"
+    },
+    {
+      "id": "1779971421379",
+      "timestamp": "2026-05-28T12:30:21.379Z",
+      "user": "Mosler, Mitch",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Mosler, Mitch",
+      "details": "Thursday AM - Hole #14"
+    },
+    {
+      "id": "1779971419286",
+      "timestamp": "2026-05-28T12:30:19.286Z",
+      "user": "Mosler, Mitch",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779971321893",
       "timestamp": "2026-05-28T12:28:41.893Z",
@@ -38131,5 +38480,5 @@
       "deletedAt": 1779923202912
     }
   ],
-  "serverNow": 1779971167126
+  "serverNow": 1779971551581
 }
