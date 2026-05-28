@@ -18155,6 +18155,26 @@
       "checkedInBy": "Burnett, Eric",
       "timestamp": "2026-05-28T15:53:21.329Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "7865",
+      "volunteerName": "Davis, Sam",
+      "hole": 8,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-28T15:58:07.582Z",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "2657",
+      "volunteerName": "James, Marty",
+      "hole": 11,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-28T15:58:11.937Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -18175,6 +18195,15 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1779983914107",
+      "timestamp": "2026-05-28T15:58:34.107Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 11",
+      "details": "Submitted Thursday AM for Hole 11"
+    },
     {
       "id": "1779983606368",
       "timestamp": "2026-05-28T15:53:26.368Z",
