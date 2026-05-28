@@ -19852,6 +19852,60 @@
   },
   "activityLog": [
     {
+      "id": "1779993231700",
+      "timestamp": "2026-05-28T18:33:51.700Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1779993226988",
+      "timestamp": "2026-05-28T18:33:46.988Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779993170917",
+      "timestamp": "2026-05-28T18:32:50.917Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779993166388",
+      "timestamp": "2026-05-28T18:32:46.388Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1779993141693",
+      "timestamp": "2026-05-28T18:32:21.693Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1779993131658",
+      "timestamp": "2026-05-28T18:32:11.658Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
       "id": "1779992961818-2609cr",
       "timestamp": "2026-05-28T18:29:21.818Z",
       "user": "Howrey, Anne",
