@@ -19693,6 +19693,26 @@
       "checkedInBy": "Rogenski, Chris P.",
       "timestamp": "2026-05-28T18:13:46.998Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "10797",
+      "volunteerName": "Martin, Hubert",
+      "hole": 18,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Gradt, Jason",
+      "timestamp": "2026-05-28T18:19:52.143Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9568",
+      "volunteerName": "Krajca, Brian",
+      "hole": 18,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Gradt, Jason",
+      "timestamp": "2026-05-28T18:19:54.686Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
