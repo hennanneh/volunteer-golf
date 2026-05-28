@@ -19010,6 +19010,26 @@
       "checkedInBy": "Duncan, Larry",
       "timestamp": "2026-05-28T17:03:10.025Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "5772",
+      "volunteerName": "Cherry, Charles",
+      "hole": 16,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Roy, Mike",
+      "timestamp": "2026-05-28T17:09:09.830Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7120",
+      "volunteerName": "Truitt, Norman",
+      "hole": 16,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Roy, Mike",
+      "timestamp": "2026-05-28T17:09:19.477Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -19030,6 +19050,33 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1779988178582",
+      "timestamp": "2026-05-28T17:09:38.582Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 16",
+      "details": "Submitted Thursday PM for Hole 16"
+    },
+    {
+      "id": "1779988159561",
+      "timestamp": "2026-05-28T17:09:19.561Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Truitt, Norman",
+      "details": "Thursday PM - Hole #16"
+    },
+    {
+      "id": "1779988149925",
+      "timestamp": "2026-05-28T17:09:09.925Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Cherry, Charles",
+      "details": "Thursday PM - Hole #16"
+    },
     {
       "id": "1779987891763",
       "timestamp": "2026-05-28T17:04:51.763Z",
