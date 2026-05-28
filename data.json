@@ -15702,6 +15702,15 @@
   },
   "activityLog": [
     {
+      "id": "1779967384258",
+      "timestamp": "2026-05-28T11:23:04.258Z",
+      "user": "Osiek, Curt",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1779967152220",
       "timestamp": "2026-05-28T11:19:12.220Z",
       "user": "Pugh, Clayton",
