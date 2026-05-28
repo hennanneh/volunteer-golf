@@ -1089,6 +1089,7 @@
       "scheduled": {
         "Wednesday PM": true,
         "Thursday AM": true,
+        "Friday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
         "Sunday PM": true
@@ -1097,7 +1098,7 @@
       "address": "39 E Sunny Slope Cir The Woodlands, TX 77381",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771,
+      "lastModified": 1779988743312,
       "volunteerPassword": "$2b$10$/xWuTknuELcScRNcOZ3XT.wfm0WJzerZPHOQCFtS/ouv9CqbWXJJi"
     },
     {
@@ -19031,6 +19032,46 @@
       "checkedInBy": "Trout, Wayne",
       "timestamp": "2026-05-28T17:11:58.658Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "7191",
+      "volunteerName": "Sanders, Steve",
+      "hole": 14,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Sanders, Steve",
+      "timestamp": "2026-05-28T17:17:10.953Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7806",
+      "volunteerName": "Mosler, Mitch",
+      "hole": 14,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Sanders, Steve",
+      "timestamp": "2026-05-28T17:17:12.921Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9018",
+      "volunteerName": "Chee, Wendell",
+      "hole": 14,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Sanders, Steve",
+      "timestamp": "2026-05-28T17:17:16.558Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9621",
+      "volunteerName": "Ready, Charles",
+      "hole": 14,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Sanders, Steve",
+      "timestamp": "2026-05-28T17:17:20.201Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -19051,6 +19092,15 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1779988743313-c95k6t",
+      "timestamp": "2026-05-28T17:19:03.313Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Chapman, John A.",
+      "details": "added Friday AM"
+    },
     {
       "id": "1779988318446",
       "timestamp": "2026-05-28T17:11:58.446Z",
