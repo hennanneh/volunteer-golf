@@ -1113,6 +1113,7 @@
         "Monday PM": true,
         "Thursday AM": true,
         "Thursday PM": true,
+        "Friday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
         "Sunday PM": true
@@ -1121,7 +1122,7 @@
       "address": "1318 Bora Bora Street Tool, TX 75143",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771,
+      "lastModified": 1779984453785,
       "volunteerPassword": "$2b$10$1n4tYiaUM6rNeY0Vkl0Vm.9czFOByF/7n7Q.nNhRjsggIbuj3ccsq"
     },
     {
@@ -18195,6 +18196,36 @@
       "checkedInBy": "Johnson, Kenny",
       "timestamp": "2026-05-28T16:01:49.663Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "145",
+      "volunteerName": "Gordon, Gary",
+      "hole": 2,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Gordon, Gary",
+      "timestamp": "2026-05-28T16:08:12.289Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "243",
+      "volunteerName": "Sale, Lynn",
+      "hole": 2,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Gordon, Gary",
+      "timestamp": "2026-05-28T16:08:12.981Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8127",
+      "volunteerName": "Harrell, Michael",
+      "hole": 2,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Gordon, Gary",
+      "timestamp": "2026-05-28T16:08:21.019Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -18215,6 +18246,60 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1779984501344",
+      "timestamp": "2026-05-28T16:08:21.345Z",
+      "user": "Gordon, Gary",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Harrell, Michael",
+      "details": "Thursday PM - Hole #2"
+    },
+    {
+      "id": "1779984493287",
+      "timestamp": "2026-05-28T16:08:13.287Z",
+      "user": "Gordon, Gary",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Sale, Lynn",
+      "details": "Thursday PM - Hole #2"
+    },
+    {
+      "id": "1779984493136",
+      "timestamp": "2026-05-28T16:08:13.136Z",
+      "user": "Gordon, Gary",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Gordon, Gary",
+      "details": "Thursday PM - Hole #2"
+    },
+    {
+      "id": "1779984483545",
+      "timestamp": "2026-05-28T16:08:03.545Z",
+      "user": "Gordon, Gary",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779984453785-my27g4",
+      "timestamp": "2026-05-28T16:07:33.785Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Chee, Wendell",
+      "details": "added Friday AM"
+    },
+    {
+      "id": "1779984416107",
+      "timestamp": "2026-05-28T16:06:56.107Z",
+      "user": "Hughes, Allen",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
     {
       "id": "1779984161329",
       "timestamp": "2026-05-28T16:02:41.329Z",
