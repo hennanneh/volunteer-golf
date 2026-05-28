@@ -15412,6 +15412,186 @@
       "checkedInBy": "Watson, Stan",
       "timestamp": "2026-05-28T11:08:26.259Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "4531",
+      "volunteerName": "Duncan, Larry",
+      "hole": 13,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Duncan, Larry",
+      "timestamp": "2026-05-28T11:10:10.420Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "380",
+      "volunteerName": "Johnson, Kenny",
+      "hole": 1,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Johnson, Kenny",
+      "timestamp": "2026-05-28T11:10:20.383Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6553",
+      "volunteerName": "Ruddell, Dick",
+      "hole": 1,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Johnson, Kenny",
+      "timestamp": "2026-05-28T11:10:20.653Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8448",
+      "volunteerName": "Prater, David",
+      "hole": 1,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Johnson, Kenny",
+      "timestamp": "2026-05-28T11:10:29.361Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4667",
+      "volunteerName": "Prentice, Roy",
+      "hole": 1,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Johnson, Kenny",
+      "timestamp": "2026-05-28T11:10:32.235Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4536",
+      "volunteerName": "Trout, Wayne",
+      "hole": 10,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-28T11:12:03.838Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "214",
+      "volunteerName": "Osiek, Curt",
+      "hole": 10,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-28T11:12:10.046Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8306",
+      "volunteerName": "Ellis, Tom",
+      "hole": 10,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-28T11:12:17.121Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9595",
+      "volunteerName": "Gaunce, David",
+      "hole": 10,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-28T11:12:20.804Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9788",
+      "volunteerName": "Kramer, Ed",
+      "hole": 10,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-28T11:12:25.529Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10061",
+      "volunteerName": "Luton, Bob",
+      "hole": 10,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-28T11:12:31.272Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4434",
+      "volunteerName": "Mueller, Tom",
+      "hole": 10,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-28T11:12:37.102Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10150",
+      "volunteerName": "Peterson, Durk",
+      "hole": 10,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-28T11:12:38.893Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4518",
+      "volunteerName": "Kutzler, Jack",
+      "hole": 10,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-28T11:13:05.708Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8802",
+      "volunteerName": "Austin, Vance",
+      "hole": 10,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-28T11:13:26.263Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10337",
+      "volunteerName": "Jacobs, Rick",
+      "hole": 10,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-28T11:13:32.404Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8013",
+      "volunteerName": "Naukam, Philip",
+      "hole": 12,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-28T11:14:13.382Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6949",
+      "volunteerName": "Putt, Gerald",
+      "hole": 12,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-28T11:14:14.066Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -15431,6 +15611,195 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779966853775",
+      "timestamp": "2026-05-28T11:14:13.775Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Putt, Gerald",
+      "details": "Thursday AM - Hole #12"
+    },
+    {
+      "id": "1779966853088",
+      "timestamp": "2026-05-28T11:14:13.088Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Naukam, Philip",
+      "details": "Thursday AM - Hole #12"
+    },
+    {
+      "id": "1779966852018",
+      "timestamp": "2026-05-28T11:14:12.018Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Naukam, Philip",
+      "details": "Thursday AM - Hole #12"
+    },
+    {
+      "id": "1779966812371",
+      "timestamp": "2026-05-28T11:13:32.371Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Jacobs, Rick",
+      "details": "Thursday AM - Hole #10"
+    },
+    {
+      "id": "1779966805972",
+      "timestamp": "2026-05-28T11:13:25.972Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Austin, Vance",
+      "details": "Thursday AM - Hole #10"
+    },
+    {
+      "id": "1779966785493",
+      "timestamp": "2026-05-28T11:13:05.493Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Kutzler, Jack",
+      "details": "Thursday AM - Hole #10"
+    },
+    {
+      "id": "1779966758601",
+      "timestamp": "2026-05-28T11:12:38.601Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Peterson, Durk",
+      "details": "Thursday AM - Hole #10"
+    },
+    {
+      "id": "1779966757323",
+      "timestamp": "2026-05-28T11:12:37.323Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Mueller, Tom",
+      "details": "Thursday AM - Hole #10"
+    },
+    {
+      "id": "1779966750968",
+      "timestamp": "2026-05-28T11:12:30.968Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Luton, Bob",
+      "details": "Thursday AM - Hole #10"
+    },
+    {
+      "id": "1779966748452",
+      "timestamp": "2026-05-28T11:12:28.452Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Naukam, Philip",
+      "details": "Thursday AM - Hole #12"
+    },
+    {
+      "id": "1779966745221",
+      "timestamp": "2026-05-28T11:12:25.221Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Kramer, Ed",
+      "details": "Thursday AM - Hole #10"
+    },
+    {
+      "id": "1779966740684",
+      "timestamp": "2026-05-28T11:12:20.684Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Gaunce, David",
+      "details": "Thursday AM - Hole #10"
+    },
+    {
+      "id": "1779966736843",
+      "timestamp": "2026-05-28T11:12:16.843Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Ellis, Tom",
+      "details": "Thursday AM - Hole #10"
+    },
+    {
+      "id": "1779966729805",
+      "timestamp": "2026-05-28T11:12:09.805Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Osiek, Curt",
+      "details": "Thursday AM - Hole #10"
+    },
+    {
+      "id": "1779966640172",
+      "timestamp": "2026-05-28T11:10:40.172Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 1",
+      "details": "Submitted Thursday AM for Hole 1"
+    },
+    {
+      "id": "1779966632350",
+      "timestamp": "2026-05-28T11:10:32.350Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Prentice, Roy",
+      "details": "Thursday AM - Hole #1"
+    },
+    {
+      "id": "1779966629896",
+      "timestamp": "2026-05-28T11:10:29.896Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Prater, David",
+      "details": "Thursday AM - Hole #1"
+    },
+    {
+      "id": "1779966620932",
+      "timestamp": "2026-05-28T11:10:20.932Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Ruddell, Dick",
+      "details": "Thursday AM - Hole #1"
+    },
+    {
+      "id": "1779966620529",
+      "timestamp": "2026-05-28T11:10:20.529Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Johnson, Kenny",
+      "details": "Thursday AM - Hole #1"
+    },
+    {
+      "id": "1779966616501",
+      "timestamp": "2026-05-28T11:10:16.502Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 13",
+      "details": "Submitted Thursday AM for Hole 13"
+    },
+    {
+      "id": "1779966615087",
+      "timestamp": "2026-05-28T11:10:15.087Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779966581066",
       "timestamp": "2026-05-28T11:09:41.067Z",
@@ -36185,5 +36554,5 @@
       "deletedAt": 1779923202912
     }
   ],
-  "serverNow": 1779931489743
+  "serverNow": 1779966813716
 }
