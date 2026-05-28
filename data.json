@@ -1123,8 +1123,10 @@
       "address": "1318 Bora Bora Street Tool, TX 75143",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779984453785,
-      "volunteerPassword": "$2b$10$1n4tYiaUM6rNeY0Vkl0Vm.9czFOByF/7n7Q.nNhRjsggIbuj3ccsq"
+      "lastModified": 1779989518312,
+      "volunteerPassword": "$2b$10$1n4tYiaUM6rNeY0Vkl0Vm.9czFOByF/7n7Q.nNhRjsggIbuj3ccsq",
+      "notes": "",
+      "hatReceived": false
     },
     {
       "id": "5772",
@@ -19162,6 +19164,15 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1779989518312-m5sma5",
+      "timestamp": "2026-05-28T17:31:58.312Z",
+      "user": "Hill, Michael",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Chee, Wendell",
+      "details": "Updated fields: notes, hatReceived"
+    },
     {
       "id": "1779989292354",
       "timestamp": "2026-05-28T17:28:12.354Z",
