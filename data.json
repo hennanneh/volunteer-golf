@@ -18115,6 +18115,16 @@
       "checkedInBy": "Howrey, Anne",
       "timestamp": "2026-05-28T15:34:25.594Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "9896",
+      "volunteerName": "Sullivan, Patrick",
+      "hole": 8,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-28T15:36:17.431Z",
+      "isAlternate": true
     }
   ],
   "submissions": [],
@@ -18135,6 +18145,33 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1779982631210",
+      "timestamp": "2026-05-28T15:37:11.210Z",
+      "user": "Wilson, Todd",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779982579237",
+      "timestamp": "2026-05-28T15:36:19.237Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Sullivan, Patrick",
+      "details": "Thursday AM - Hole #8 (alternate)"
+    },
+    {
+      "id": "1779982573573",
+      "timestamp": "2026-05-28T15:36:13.573Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779982483675",
       "timestamp": "2026-05-28T15:34:43.675Z",
