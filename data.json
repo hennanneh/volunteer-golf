@@ -7706,7 +7706,6 @@
       "hat": "",
       "scheduled": {
         "Wednesday AM": true,
-        "Wednesday PM": true,
         "Thursday PM": true,
         "Friday AM": true,
         "Saturday PM": true,
@@ -7716,7 +7715,7 @@
       "address": "481 Pecan Dr Burleson, TX 76028",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779907286539
+      "lastModified": 1779933516459
     },
     {
       "id": "4204",
@@ -15342,6 +15341,33 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779933524116",
+      "timestamp": "2026-05-28T01:58:44.116Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779933516459-06rqkv",
+      "timestamp": "2026-05-28T01:58:36.459Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Smith, Bruce T.",
+      "details": "removed Wednesday PM"
+    },
+    {
+      "id": "1779933399526",
+      "timestamp": "2026-05-28T01:56:39.526Z",
+      "user": "Lutke, Jeff",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
     {
       "id": "1779932891829",
       "timestamp": "2026-05-28T01:48:11.829Z",
@@ -35880,5 +35906,5 @@
       "deletedAt": 1779923202912
     }
   ],
-  "serverNow": 1779913952261
+  "serverNow": 1779931489743
 }
