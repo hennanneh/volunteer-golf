@@ -4698,7 +4698,6 @@
       "scheduled": {
         "Wednesday PM": true,
         "Thursday AM": true,
-        "Friday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
         "Sunday PM": true
@@ -4707,7 +4706,7 @@
       "volId": "5441",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779907286539
+      "lastModified": 1779927177751
     },
     {
       "id": "6967",
@@ -15333,6 +15332,15 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779927177751-pvzuvl",
+      "timestamp": "2026-05-28T00:12:57.751Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Lee, Rodney",
+      "details": "removed Friday AM"
+    },
     {
       "id": "1779926427667-g29vew",
       "timestamp": "2026-05-28T00:00:27.667Z",
