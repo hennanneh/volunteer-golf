@@ -287,10 +287,6 @@
       "yearsWorked": 10,
       "hat": "",
       "scheduled": {
-        "Monday AM": true,
-        "Monday PM": true,
-        "Tuesday AM": true,
-        "Tuesday PM": true,
         "Wednesday AM": true,
         "Wednesday PM": true,
         "Thursday AM": true,
@@ -306,7 +302,7 @@
       "volId": "6828",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779992809216
     },
     {
       "id": "9019",
@@ -890,10 +886,6 @@
       "yearsWorked": 1,
       "hat": "",
       "scheduled": {
-        "Monday AM": true,
-        "Monday PM": true,
-        "Tuesday AM": true,
-        "Tuesday PM": true,
         "Wednesday AM": true,
         "Wednesday PM": true,
         "Thursday AM": true,
@@ -909,7 +901,7 @@
       "address": "9501 Limosine Dr. Crowley, TN 76036",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779558247176
+      "lastModified": 1779992823854
     },
     {
       "id": "10338",
@@ -1056,10 +1048,6 @@
       "yearsWorked": 10,
       "hat": "",
       "scheduled": {
-        "Monday AM": true,
-        "Monday PM": true,
-        "Tuesday AM": true,
-        "Tuesday PM": true,
         "Wednesday AM": true,
         "Wednesday PM": true,
         "Thursday AM": true,
@@ -1075,7 +1063,7 @@
       "address": "226 Wapiti Dr Azle, TX 76020",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779558263447
+      "lastModified": 1779992832161
     },
     {
       "id": "9400",
@@ -1312,10 +1300,6 @@
       "yearsWorked": 4,
       "hat": "",
       "scheduled": {
-        "Monday AM": true,
-        "Monday PM": true,
-        "Tuesday AM": true,
-        "Tuesday PM": true,
         "Wednesday AM": true,
         "Wednesday PM": true,
         "Thursday AM": true,
@@ -1331,7 +1315,7 @@
       "address": "713 Whippoorwill Dr Midlothian, TX 76065",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779558281317
+      "lastModified": 1779992839784
     },
     {
       "id": "7068",
@@ -2281,10 +2265,6 @@
       "yearsWorked": 9,
       "hat": "",
       "scheduled": {
-        "Monday AM": true,
-        "Monday PM": true,
-        "Tuesday AM": true,
-        "Tuesday PM": true,
         "Wednesday AM": true,
         "Wednesday PM": true,
         "Thursday AM": true,
@@ -2300,7 +2280,7 @@
       "address": "545 Abbey Court Grand Prairie, TX 75052",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779558293891
+      "lastModified": 1779992857822
     },
     {
       "id": "10731",
@@ -3016,10 +2996,6 @@
       "yearsWorked": 2,
       "hat": "",
       "scheduled": {
-        "Monday AM": true,
-        "Monday PM": true,
-        "Tuesday AM": true,
-        "Tuesday PM": true,
         "Wednesday AM": true,
         "Wednesday PM": true,
         "Thursday AM": true,
@@ -3035,7 +3011,7 @@
       "address": "2411 W. Tumbleweed Dr Phoenix, AZ 85085",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779558214798
+      "lastModified": 1779992864797
     },
     {
       "id": "10248",
@@ -3400,10 +3376,6 @@
       "yearsWorked": 3,
       "hat": "",
       "scheduled": {
-        "Monday AM": true,
-        "Monday PM": true,
-        "Tuesday AM": true,
-        "Tuesday PM": true,
         "Wednesday AM": true,
         "Wednesday PM": true,
         "Thursday AM": true,
@@ -3419,7 +3391,7 @@
       "address": "3713 Arborlawn Drive Fort Worth, TX 76109",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779558309187
+      "lastModified": 1779992879264
     },
     {
       "id": "2507",
@@ -4031,10 +4003,6 @@
       "yearsWorked": 4,
       "hat": "",
       "scheduled": {
-        "Monday AM": true,
-        "Monday PM": true,
-        "Tuesday AM": true,
-        "Tuesday PM": true,
         "Wednesday AM": true,
         "Wednesday PM": true,
         "Thursday AM": true,
@@ -4050,7 +4018,7 @@
       "address": "4544 Copper Point Dr. Crowley, TX 76036",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779558321168
+      "lastModified": 1779992895165
     },
     {
       "id": "7922",
@@ -4115,10 +4083,6 @@
       "yearsWorked": 4,
       "hat": "",
       "scheduled": {
-        "Monday AM": true,
-        "Monday PM": true,
-        "Tuesday AM": true,
-        "Tuesday PM": true,
         "Wednesday AM": true,
         "Wednesday PM": true,
         "Thursday AM": true,
@@ -4134,7 +4098,7 @@
       "address": "400 Templeton Drive Ft Worth, TX 76107",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779558334689
+      "lastModified": 1779992904252
     },
     {
       "id": "2552",
@@ -4485,10 +4449,6 @@
       "yearsWorked": 3,
       "hat": "",
       "scheduled": {
-        "Monday AM": true,
-        "Monday PM": true,
-        "Tuesday AM": true,
-        "Tuesday PM": true,
         "Wednesday AM": true,
         "Wednesday PM": true,
         "Thursday AM": true,
@@ -4504,7 +4464,7 @@
       "volId": "8345",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779849891331,
+      "lastModified": 1779992912622,
       "notes": "",
       "hatReceived": false,
       "originalHole": 10
@@ -4855,10 +4815,6 @@
       "yearsWorked": 5,
       "hat": "",
       "scheduled": {
-        "Monday AM": true,
-        "Monday PM": true,
-        "Tuesday AM": true,
-        "Tuesday PM": true,
         "Wednesday AM": true,
         "Wednesday PM": true,
         "Thursday AM": true,
@@ -4874,7 +4830,7 @@
       "address": "4008 Steeplechase Dr Colleyville, TX 76034-3738",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779558351138
+      "lastModified": 1779992919364
     },
     {
       "id": "9580",
@@ -5366,10 +5322,6 @@
       "yearsWorked": 5,
       "hat": "",
       "scheduled": {
-        "Monday AM": true,
-        "Monday PM": true,
-        "Tuesday AM": true,
-        "Tuesday PM": true,
         "Wednesday AM": true,
         "Wednesday PM": true,
         "Thursday AM": true,
@@ -5385,7 +5337,7 @@
       "address": "901 Thomas Crossing Dr Burleson, TX 76028",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779558377848
+      "lastModified": 1779992926170
     },
     {
       "id": "10629",
@@ -5492,10 +5444,6 @@
       "yearsWorked": 4,
       "hat": "",
       "scheduled": {
-        "Monday AM": true,
-        "Monday PM": true,
-        "Tuesday AM": true,
-        "Tuesday PM": true,
         "Wednesday AM": true,
         "Wednesday PM": true,
         "Thursday AM": true,
@@ -5511,7 +5459,7 @@
       "address": "2720 River Path Court Burleson, TX 76028",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779849908936,
+      "lastModified": 1779992932917,
       "notes": "",
       "hatReceived": false,
       "originalHole": 4
@@ -6581,10 +6529,6 @@
       "yearsWorked": 8,
       "hat": "",
       "scheduled": {
-        "Monday AM": true,
-        "Monday PM": true,
-        "Tuesday AM": true,
-        "Tuesday PM": true,
         "Wednesday AM": true,
         "Wednesday PM": true,
         "Thursday AM": true,
@@ -6600,7 +6544,7 @@
       "volId": "7527",
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
-      "lastModified": 1778813044771,
+      "lastModified": 1779992818062,
       "volunteerPassword": "$2b$10$Ds8/UBOhd1jrNVKY4I/mguxC4BMZkZlWvQG0AKLCXMDHAwfHUJYqa"
     },
     {
@@ -7298,10 +7242,6 @@
       "yearsWorked": 7,
       "hat": "",
       "scheduled": {
-        "Monday AM": true,
-        "Monday PM": true,
-        "Tuesday AM": true,
-        "Tuesday PM": true,
         "Wednesday AM": true,
         "Wednesday PM": true,
         "Thursday AM": true,
@@ -7317,7 +7257,7 @@
       "address": "6524 Dover Terrance S Fort Worth, TX 76132",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779558227922
+      "lastModified": 1779992940670
     },
     {
       "id": "3428",
@@ -7795,10 +7735,6 @@
       "yearsWorked": 5,
       "hat": "",
       "scheduled": {
-        "Monday AM": true,
-        "Monday PM": true,
-        "Tuesday AM": true,
-        "Tuesday PM": true,
         "Wednesday AM": true,
         "Wednesday PM": true,
         "Thursday AM": true,
@@ -7814,7 +7750,7 @@
       "address": "14806 Ashland Pines Lane Humble, TX 77396",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779558414347
+      "lastModified": 1779992946553
     },
     {
       "id": "5029",
@@ -8138,10 +8074,6 @@
       "yearsWorked": 4,
       "hat": "",
       "scheduled": {
-        "Monday AM": true,
-        "Monday PM": true,
-        "Tuesday AM": true,
-        "Tuesday PM": true,
         "Wednesday AM": true,
         "Wednesday PM": true,
         "Thursday AM": true,
@@ -8157,7 +8089,7 @@
       "address": "6905 Hazeltine Dr. FORT WORTH, TX 76132-4518",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779558424869
+      "lastModified": 1779992952849
     },
     {
       "id": "4190",
@@ -8721,10 +8653,6 @@
       "yearsWorked": 7,
       "hat": "",
       "scheduled": {
-        "Monday AM": true,
-        "Monday PM": true,
-        "Tuesday AM": true,
-        "Tuesday PM": true,
         "Wednesday AM": true,
         "Wednesday PM": true,
         "Thursday AM": true,
@@ -8740,7 +8668,7 @@
       "address": "1412 Eastside Mesquite, TX 75149",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779558436243
+      "lastModified": 1779992961818
     },
     {
       "id": "9581",
@@ -19843,6 +19771,66 @@
       "checkedInBy": "Bishop, Woody",
       "timestamp": "2026-05-28T18:21:45.864Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "6217",
+      "volunteerName": "Nederostek, Brad",
+      "hole": 4,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Nederostek, Brad",
+      "timestamp": "2026-05-28T18:28:04.454Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "3974",
+      "volunteerName": "Schafer, John",
+      "hole": 4,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Nederostek, Brad",
+      "timestamp": "2026-05-28T18:28:04.797Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8359",
+      "volunteerName": "Gray, Leandro",
+      "hole": 4,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Nederostek, Brad",
+      "timestamp": "2026-05-28T18:28:08.050Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8935",
+      "volunteerName": "Knight, Ron",
+      "hole": 4,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Nederostek, Brad",
+      "timestamp": "2026-05-28T18:28:08.939Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "182",
+      "volunteerName": "Killinger, George",
+      "hole": 4,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Nederostek, Brad",
+      "timestamp": "2026-05-28T18:28:09.046Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4800",
+      "volunteerName": "Livingston, Jennifier",
+      "hole": 4,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Nederostek, Brad",
+      "timestamp": "2026-05-28T18:28:10.352Z",
+      "isAlternate": true
     }
   ],
   "submissions": [],
@@ -19863,6 +19851,240 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1779992961818-2609cr",
+      "timestamp": "2026-05-28T18:29:21.818Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "edit-schedule",
+      "target": "Williams, Amy",
+      "details": "removed Monday AM, Monday PM, Tuesday AM, Tuesday PM"
+    },
+    {
+      "id": "1779992952849-tbystb",
+      "timestamp": "2026-05-28T18:29:12.849Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "edit-schedule",
+      "target": "Tidwell, Jim",
+      "details": "removed Monday AM, Monday PM, Tuesday AM, Tuesday PM"
+    },
+    {
+      "id": "1779992946553-jfdp0h",
+      "timestamp": "2026-05-28T18:29:06.553Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "edit-schedule",
+      "target": "Stephens, Rayford",
+      "details": "removed Monday AM, Monday PM, Tuesday AM, Tuesday PM"
+    },
+    {
+      "id": "1779992940670-uai1rn",
+      "timestamp": "2026-05-28T18:29:00.670Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "edit-schedule",
+      "target": "Sassaman, David",
+      "details": "removed Monday AM, Monday PM, Tuesday AM, Tuesday PM"
+    },
+    {
+      "id": "1779992932918-okxosy",
+      "timestamp": "2026-05-28T18:28:52.918Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "edit-schedule",
+      "target": "Mobley, Ken",
+      "details": "removed Monday AM, Monday PM, Tuesday AM, Tuesday PM"
+    },
+    {
+      "id": "1779992926170-fomynm",
+      "timestamp": "2026-05-28T18:28:46.171Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "edit-schedule",
+      "target": "Mendoza, Ralph",
+      "details": "removed Monday AM, Monday PM, Tuesday AM, Tuesday PM"
+    },
+    {
+      "id": "1779992919364-9xoamk",
+      "timestamp": "2026-05-28T18:28:39.364Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "edit-schedule",
+      "target": "Lucas, John H.",
+      "details": "removed Monday AM, Monday PM, Tuesday AM, Tuesday PM"
+    },
+    {
+      "id": "1779992912622-hhd5qm",
+      "timestamp": "2026-05-28T18:28:32.622Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "edit-schedule",
+      "target": "Kuhnell, David",
+      "details": "removed Monday AM, Monday PM, Tuesday AM, Tuesday PM"
+    },
+    {
+      "id": "1779992904252-ov3qv0",
+      "timestamp": "2026-05-28T18:28:24.252Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "edit-schedule",
+      "target": "Kalbfleisch, Joe",
+      "details": "removed Monday AM, Monday PM, Tuesday AM, Tuesday PM"
+    },
+    {
+      "id": "1779992895165-6pfy3m",
+      "timestamp": "2026-05-28T18:28:15.165Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "edit-schedule",
+      "target": "Jones, Dietrich",
+      "details": "removed Monday AM, Monday PM, Tuesday AM, Tuesday PM"
+    },
+    {
+      "id": "1779992889112",
+      "timestamp": "2026-05-28T18:28:09.112Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Killinger, George",
+      "details": "Thursday PM - Hole #4"
+    },
+    {
+      "id": "1779992888987",
+      "timestamp": "2026-05-28T18:28:08.987Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Knight, Ron",
+      "details": "Thursday PM - Hole #4"
+    },
+    {
+      "id": "1779992888093",
+      "timestamp": "2026-05-28T18:28:08.093Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Gray, Leandro",
+      "details": "Thursday PM - Hole #4"
+    },
+    {
+      "id": "1779992884844",
+      "timestamp": "2026-05-28T18:28:04.844Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Schafer, John",
+      "details": "Thursday PM - Hole #4"
+    },
+    {
+      "id": "1779992884508",
+      "timestamp": "2026-05-28T18:28:04.508Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Nederostek, Brad",
+      "details": "Thursday PM - Hole #4"
+    },
+    {
+      "id": "1779992879264-ym85ct",
+      "timestamp": "2026-05-28T18:27:59.264Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "edit-schedule",
+      "target": "Hix, 'Winky",
+      "details": "removed Monday AM, Monday PM, Tuesday AM, Tuesday PM"
+    },
+    {
+      "id": "1779992864797-zljik8",
+      "timestamp": "2026-05-28T18:27:44.797Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "edit-schedule",
+      "target": "Hamic, Craig",
+      "details": "removed Monday AM, Monday PM, Tuesday AM, Tuesday PM"
+    },
+    {
+      "id": "1779992857822-dopnkc",
+      "timestamp": "2026-05-28T18:27:37.822Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "edit-schedule",
+      "target": "Gagel, Chester",
+      "details": "removed Monday AM, Monday PM, Tuesday AM, Tuesday PM"
+    },
+    {
+      "id": "1779992843399",
+      "timestamp": "2026-05-28T18:27:23.399Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Collins, Kevin",
+      "details": "Thursday PM - Hole #20"
+    },
+    {
+      "id": "1779992841280",
+      "timestamp": "2026-05-28T18:27:21.280Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Collins, Kevin",
+      "details": "Thursday PM - Hole #20"
+    },
+    {
+      "id": "1779992839784-9ha9tq",
+      "timestamp": "2026-05-28T18:27:19.784Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "edit-schedule",
+      "target": "Collins, Kevin",
+      "details": "removed Monday AM, Monday PM, Tuesday AM, Tuesday PM"
+    },
+    {
+      "id": "1779992832161-qbd53e",
+      "timestamp": "2026-05-28T18:27:12.161Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "edit-schedule",
+      "target": "Chapman, John",
+      "details": "removed Monday AM, Monday PM, Tuesday AM, Tuesday PM"
+    },
+    {
+      "id": "1779992823854-axcnl9",
+      "timestamp": "2026-05-28T18:27:03.854Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "edit-schedule",
+      "target": "Byrom, Kirk",
+      "details": "removed Monday AM, Monday PM, Tuesday AM, Tuesday PM"
+    },
+    {
+      "id": "1779992818062-1s39tr",
+      "timestamp": "2026-05-28T18:26:58.062Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "edit-schedule",
+      "target": "Pueblo, Vange",
+      "details": "removed Monday AM, Monday PM, Tuesday AM, Tuesday PM"
+    },
+    {
+      "id": "1779992809216-gzuvt0",
+      "timestamp": "2026-05-28T18:26:49.216Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "edit-schedule",
+      "target": "Barber, Michael",
+      "details": "removed Monday AM, Monday PM, Tuesday AM, Tuesday PM"
+    },
+    {
+      "id": "1779992783152",
+      "timestamp": "2026-05-28T18:26:23.152Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779992468051",
       "timestamp": "2026-05-28T18:21:08.051Z",
