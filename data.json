@@ -7457,7 +7457,6 @@
       "hat": "",
       "scheduled": {
         "Tuesday AM": true,
-        "Thursday AM": true,
         "Thursday PM": true,
         "Friday PM": true,
         "Saturday AM": true,
@@ -7468,7 +7467,7 @@
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
       "notes": "",
-      "lastModified": 1779907286539,
+      "lastModified": 1779926427667,
       "volunteerPassword": "$2b$10$w1xd2loPnmEAFEv73loWHOgwqo9FCv/3MAC8k087QbxOAVXifBjKa"
     },
     {
@@ -15334,6 +15333,15 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779926427667-g29vew",
+      "timestamp": "2026-05-28T00:00:27.667Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Schultz, Joni",
+      "details": "removed Thursday AM"
+    },
     {
       "id": "1779925794550-e5fmra",
       "timestamp": "2026-05-27T23:49:54.551Z",
