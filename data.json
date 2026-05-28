@@ -4702,6 +4702,7 @@
       "scheduled": {
         "Wednesday PM": true,
         "Thursday AM": true,
+        "Thursday PM": true,
         "Friday PM": true,
         "Saturday AM": true,
         "Sunday PM": true
@@ -4710,7 +4711,7 @@
       "volId": "5441",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779927177751
+      "lastModified": 1779972444423
     },
     {
       "id": "6967",
@@ -16474,6 +16475,86 @@
       "checkedInBy": "Gradt, Jason",
       "timestamp": "2026-05-28T12:44:42.738Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "5235",
+      "volunteerName": "Thomas, Stephen",
+      "hole": 15,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Thomas, Stephen",
+      "timestamp": "2026-05-28T12:47:55.859Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7794",
+      "volunteerName": "Beckley, Bob",
+      "hole": 15,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Thomas, Stephen",
+      "timestamp": "2026-05-28T12:47:56.498Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9610",
+      "volunteerName": "Bullard, Roy",
+      "hole": 15,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Thomas, Stephen",
+      "timestamp": "2026-05-28T12:47:59.169Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9807",
+      "volunteerName": "Bullard, Tricia",
+      "hole": 15,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Thomas, Stephen",
+      "timestamp": "2026-05-28T12:48:00.405Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9134",
+      "volunteerName": "Clark, Jason",
+      "hole": 15,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Thomas, Stephen",
+      "timestamp": "2026-05-28T12:48:01.516Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6594",
+      "volunteerName": "Dunn, Dean",
+      "hole": 15,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Thomas, Stephen",
+      "timestamp": "2026-05-28T12:48:02.581Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5924",
+      "volunteerName": "Gustaf, David",
+      "hole": 15,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Thomas, Stephen",
+      "timestamp": "2026-05-28T12:48:03.684Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10362",
+      "volunteerName": "Mills, Brad",
+      "hole": 15,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Thomas, Stephen",
+      "timestamp": "2026-05-28T12:48:04.851Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -16493,6 +16574,150 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779972488349",
+      "timestamp": "2026-05-28T12:48:08.349Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Justice, Neal",
+      "details": "Thursday AM - Hole #6 (alternate)"
+    },
+    {
+      "id": "1779972487519",
+      "timestamp": "2026-05-28T12:48:07.519Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Justice, Neal",
+      "details": "Thursday AM - Hole #6 (alternate)"
+    },
+    {
+      "id": "1779972484933",
+      "timestamp": "2026-05-28T12:48:04.933Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Mills, Brad",
+      "details": "Thursday AM - Hole #15"
+    },
+    {
+      "id": "1779972483742",
+      "timestamp": "2026-05-28T12:48:03.742Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Gustaf, David",
+      "details": "Thursday AM - Hole #15"
+    },
+    {
+      "id": "1779972483348",
+      "timestamp": "2026-05-28T12:48:03.348Z",
+      "user": "Bishop, Woody",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779972483221",
+      "timestamp": "2026-05-28T12:48:03.221Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Justice, Neal",
+      "details": "Thursday AM - Hole #6 (alternate)"
+    },
+    {
+      "id": "1779972482871",
+      "timestamp": "2026-05-28T12:48:02.871Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Justice, Neal",
+      "details": "Thursday AM - Hole #6 (alternate)"
+    },
+    {
+      "id": "1779972482657",
+      "timestamp": "2026-05-28T12:48:02.657Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Dunn, Dean",
+      "details": "Thursday AM - Hole #15"
+    },
+    {
+      "id": "1779972481576",
+      "timestamp": "2026-05-28T12:48:01.576Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Clark, Jason",
+      "details": "Thursday AM - Hole #15"
+    },
+    {
+      "id": "1779972480452",
+      "timestamp": "2026-05-28T12:48:00.452Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Bullard, Tricia",
+      "details": "Thursday AM - Hole #15"
+    },
+    {
+      "id": "1779972479216",
+      "timestamp": "2026-05-28T12:47:59.216Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Bullard, Roy",
+      "details": "Thursday AM - Hole #15"
+    },
+    {
+      "id": "1779972476546",
+      "timestamp": "2026-05-28T12:47:56.546Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Beckley, Bob",
+      "details": "Thursday AM - Hole #15"
+    },
+    {
+      "id": "1779972475911",
+      "timestamp": "2026-05-28T12:47:55.911Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Thomas, Stephen",
+      "details": "Thursday AM - Hole #15"
+    },
+    {
+      "id": "1779972472172",
+      "timestamp": "2026-05-28T12:47:52.172Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779972444423-7uqewo",
+      "timestamp": "2026-05-28T12:47:24.423Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Lee, Rodney",
+      "details": "added Thursday PM"
+    },
+    {
+      "id": "1779972403161",
+      "timestamp": "2026-05-28T12:46:43.162Z",
+      "user": "Mcdaniel, Patrick",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779972282799",
       "timestamp": "2026-05-28T12:44:42.799Z",
@@ -38744,5 +38969,5 @@
       "deletedAt": 1779923202912
     }
   ],
-  "serverNow": 1779972266497
+  "serverNow": 1779972485942
 }
