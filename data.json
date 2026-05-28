@@ -17856,6 +17856,15 @@
   },
   "activityLog": [
     {
+      "id": "1779981765066",
+      "timestamp": "2026-05-28T15:22:45.066Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1779980939949",
       "timestamp": "2026-05-28T15:08:59.949Z",
       "user": "Mulvaney, Matt",
