@@ -7842,7 +7842,7 @@
       "name": "Steward, Denny",
       "type": "Asst. Chairman",
       "hole": 99,
-      "phone": "(817) 300-3590",
+      "phone": "(817) 300-2590",
       "email": "stewarddenny@yahoo.com",
       "yearsWorked": 42,
       "hat": "",
@@ -7866,7 +7866,16 @@
       "volId": "438",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779968386109,
+      "notes": "",
+      "hatReceived": false,
+      "assignedHoles": [
+        99,
+        1,
+        2,
+        3,
+        4
+      ]
     },
     {
       "id": "10695",
@@ -15802,6 +15811,46 @@
       "checkedInBy": "Johnson, Kenny",
       "timestamp": "2026-05-28T11:29:29.416Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "8946",
+      "volunteerName": "Gregston, Parker",
+      "hole": 2,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Sale, Lynn",
+      "timestamp": "2026-05-28T11:37:24.184Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10274",
+      "volunteerName": "Hitz, Jim",
+      "hole": 11,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-28T11:37:42.750Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10178",
+      "volunteerName": "Jamison, Tina",
+      "hole": 11,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-28T11:37:43.525Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8511",
+      "volunteerName": "Brower, Briggs",
+      "hole": 2,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Sale, Lynn",
+      "timestamp": "2026-05-28T11:37:51.102Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -15821,6 +15870,105 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779968399489",
+      "timestamp": "2026-05-28T11:39:59.489Z",
+      "user": "Steward, Denny",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779968386109-r3kx3s",
+      "timestamp": "2026-05-28T11:39:46.109Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Steward, Denny",
+      "details": "Updated fields: assignedHoles"
+    },
+    {
+      "id": "1779968347097-xv9wkp",
+      "timestamp": "2026-05-28T11:39:07.097Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Steward, Denny",
+      "details": "Updated fields: phone, notes, hatReceived, assignedHoles"
+    },
+    {
+      "id": "1779968270932",
+      "timestamp": "2026-05-28T11:37:50.932Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Brower, Briggs",
+      "details": "Thursday AM - Hole #2"
+    },
+    {
+      "id": "1779968270388",
+      "timestamp": "2026-05-28T11:37:50.388Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 11",
+      "details": "Submitted Thursday AM for Hole 11"
+    },
+    {
+      "id": "1779968264758",
+      "timestamp": "2026-05-28T11:37:44.759Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1779968263578",
+      "timestamp": "2026-05-28T11:37:43.578Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Jamison, Tina",
+      "details": "Thursday AM - Hole #11"
+    },
+    {
+      "id": "1779968262805",
+      "timestamp": "2026-05-28T11:37:42.805Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Hitz, Jim",
+      "details": "Thursday AM - Hole #11"
+    },
+    {
+      "id": "1779968260248",
+      "timestamp": "2026-05-28T11:37:40.248Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779968244024",
+      "timestamp": "2026-05-28T11:37:24.026Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Gregston, Parker",
+      "details": "Thursday AM - Hole #2"
+    },
+    {
+      "id": "1779968113778",
+      "timestamp": "2026-05-28T11:35:13.778Z",
+      "user": "Edwards, Bill",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779968051110",
       "timestamp": "2026-05-28T11:34:11.110Z",
@@ -37025,5 +37173,5 @@
       "deletedAt": 1779923202912
     }
   ],
-  "serverNow": 1779967714869
+  "serverNow": 1779968265545
 }
