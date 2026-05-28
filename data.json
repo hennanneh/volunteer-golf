@@ -15980,6 +15980,16 @@
       "checkedInBy": "Pugh, Clayton",
       "timestamp": "2026-05-28T12:02:52.196Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "167",
+      "volunteerName": "Howell, John",
+      "hole": 5,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Imboden, Thomas",
+      "timestamp": "2026-05-28T12:05:44.370Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -15999,6 +16009,51 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779970176596",
+      "timestamp": "2026-05-28T12:09:36.596Z",
+      "user": "Lutke, Jeff",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1779969966733",
+      "timestamp": "2026-05-28T12:06:06.733Z",
+      "user": "Butler, Mark",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779969963384",
+      "timestamp": "2026-05-28T12:06:03.384Z",
+      "user": "Gradt, Jason",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779969945772",
+      "timestamp": "2026-05-28T12:05:45.772Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 5",
+      "details": "Submitted Thursday AM for Hole 5"
+    },
+    {
+      "id": "1779969944915",
+      "timestamp": "2026-05-28T12:05:44.915Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Howell, John",
+      "details": "Thursday AM - Hole #5"
+    },
     {
       "id": "1779969771888",
       "timestamp": "2026-05-28T12:02:51.888Z",
