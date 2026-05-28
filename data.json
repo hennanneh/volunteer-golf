@@ -6669,13 +6669,15 @@
         "Thursday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true,
         "Sunday PM": true
       },
       "volId": "6949",
       "address": "1200 Eastridge Dr Yukon, OK 73099",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779971167094
+      "lastModified": 1779987280444
     },
     {
       "id": "5217",
@@ -18808,6 +18810,116 @@
       "checkedInBy": "Trout, Wayne",
       "timestamp": "2026-05-28T16:48:35.568Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "9366",
+      "volunteerName": "Fitzjarrell, Gary",
+      "hole": 16,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Roy, Mike",
+      "timestamp": "2026-05-28T16:50:06.340Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5656",
+      "volunteerName": "Jackson, Ronald",
+      "hole": 16,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Roy, Mike",
+      "timestamp": "2026-05-28T16:50:08.873Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7794",
+      "volunteerName": "Beckley, Bob",
+      "hole": 15,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Beckley, Bob",
+      "timestamp": "2026-05-28T16:50:13.995Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5235",
+      "volunteerName": "Thomas, Stephen",
+      "hole": 15,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Beckley, Bob",
+      "timestamp": "2026-05-28T16:50:16.159Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9134",
+      "volunteerName": "Clark, Jason",
+      "hole": 15,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Beckley, Bob",
+      "timestamp": "2026-05-28T16:50:18.777Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "897",
+      "volunteerName": "Colborg, Jerry",
+      "hole": 15,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Beckley, Bob",
+      "timestamp": "2026-05-28T16:50:19.241Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10362",
+      "volunteerName": "Mills, Brad",
+      "hole": 15,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Beckley, Bob",
+      "timestamp": "2026-05-28T16:50:23.709Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10550",
+      "volunteerName": "Schultz, Joni",
+      "hole": 15,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Beckley, Bob",
+      "timestamp": "2026-05-28T16:50:25.266Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4143",
+      "volunteerName": "Perez, Emerico",
+      "hole": 13,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Duncan, Larry",
+      "timestamp": "2026-05-28T16:52:08.482Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2135",
+      "volunteerName": "Davidson, Glen",
+      "hole": 8,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-28T16:54:09.390Z",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "6967",
+      "volunteerName": "Leggett, Deborah",
+      "hole": 8,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-28T16:54:11.629Z",
+      "isAlternate": true
     }
   ],
   "submissions": [],
@@ -18828,6 +18940,132 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1779987280444-xstn3f",
+      "timestamp": "2026-05-28T16:54:40.444Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Putt, Gerald",
+      "details": "added Saturday PM, Sunday AM"
+    },
+    {
+      "id": "1779987278658",
+      "timestamp": "2026-05-28T16:54:38.658Z",
+      "user": "Butler, Mark",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779987132302",
+      "timestamp": "2026-05-28T16:52:12.302Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 13",
+      "details": "Submitted Thursday PM for Hole 13"
+    },
+    {
+      "id": "1779987128538",
+      "timestamp": "2026-05-28T16:52:08.539Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Perez, Emerico",
+      "details": "Thursday PM - Hole #13"
+    },
+    {
+      "id": "1779987029357",
+      "timestamp": "2026-05-28T16:50:29.357Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 15",
+      "details": "Submitted Thursday PM for Hole 15"
+    },
+    {
+      "id": "1779987025328",
+      "timestamp": "2026-05-28T16:50:25.328Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Schultz, Joni",
+      "details": "Thursday PM - Hole #15"
+    },
+    {
+      "id": "1779987023764",
+      "timestamp": "2026-05-28T16:50:23.764Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Mills, Brad",
+      "details": "Thursday PM - Hole #15"
+    },
+    {
+      "id": "1779987019292",
+      "timestamp": "2026-05-28T16:50:19.292Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Colborg, Jerry",
+      "details": "Thursday PM - Hole #15"
+    },
+    {
+      "id": "1779987018839",
+      "timestamp": "2026-05-28T16:50:18.839Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Clark, Jason",
+      "details": "Thursday PM - Hole #15"
+    },
+    {
+      "id": "1779987016217",
+      "timestamp": "2026-05-28T16:50:16.217Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Thomas, Stephen",
+      "details": "Thursday PM - Hole #15"
+    },
+    {
+      "id": "1779987014084",
+      "timestamp": "2026-05-28T16:50:14.084Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Beckley, Bob",
+      "details": "Thursday PM - Hole #15"
+    },
+    {
+      "id": "1779987011204",
+      "timestamp": "2026-05-28T16:50:11.204Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 16",
+      "details": "Submitted Thursday PM for Hole 16"
+    },
+    {
+      "id": "1779987010069",
+      "timestamp": "2026-05-28T16:50:10.069Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Jackson, Ronald",
+      "details": "Thursday PM - Hole #16"
+    },
+    {
+      "id": "1779987006459",
+      "timestamp": "2026-05-28T16:50:06.459Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Fitzjarrell, Gary",
+      "details": "Thursday PM - Hole #16"
+    },
     {
       "id": "1779986915373",
       "timestamp": "2026-05-28T16:48:35.373Z",
@@ -45716,5 +45954,5 @@
       "deletedAt": 1779923202912
     }
   ],
-  "serverNow": 1779986575044
+  "serverNow": 1779986916772
 }
