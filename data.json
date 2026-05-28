@@ -7947,15 +7947,15 @@
         "Monday AM": true,
         "Tuesday AM": true,
         "Wednesday AM": true,
+        "Wednesday PM": true,
         "Thursday PM": true,
-        "Friday AM": true,
-        "Friday PM": true
+        "Friday AM": true
       },
       "volId": "10547",
       "address": "2800 Highlawn Terrace Ft. Worth, TX 76133",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779968434082
+      "lastModified": 1779997101038
     },
     {
       "id": "8608",
@@ -20031,6 +20031,78 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1779997101038-w500po",
+      "timestamp": "2026-05-28T19:38:21.038Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Surita, Rene",
+      "details": "added Wednesday PM; removed Friday PM"
+    },
+    {
+      "id": "1779996945505",
+      "timestamp": "2026-05-28T19:35:45.505Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779996936410",
+      "timestamp": "2026-05-28T19:35:36.410Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779996927700",
+      "timestamp": "2026-05-28T19:35:27.700Z",
+      "user": "Montalvo, Sammy",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779996927490",
+      "timestamp": "2026-05-28T19:35:27.490Z",
+      "user": "Montalvo, Sammy",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779996923408",
+      "timestamp": "2026-05-28T19:35:23.408Z",
+      "user": "Montalvo, Sammy",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779996923199",
+      "timestamp": "2026-05-28T19:35:23.199Z",
+      "user": "Montalvo, Sammy",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779996923067",
+      "timestamp": "2026-05-28T19:35:23.067Z",
+      "user": "Montalvo, Sammy",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779996734295",
       "timestamp": "2026-05-28T19:32:14.295Z",
@@ -48426,5 +48498,5 @@
       "deletedAt": 1779989943424
     }
   ],
-  "serverNow": 1779992453288
+  "serverNow": 1779996934920
 }
