@@ -17755,6 +17755,86 @@
       "checkedInBy": "Johnson, Kenny",
       "timestamp": "2026-05-28T15:04:07.183Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "6217",
+      "volunteerName": "Nederostek, Brad",
+      "hole": 4,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Nederostek, Brad",
+      "timestamp": "2026-05-28T15:07:02.094Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "3974",
+      "volunteerName": "Schafer, John",
+      "hole": 4,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Nederostek, Brad",
+      "timestamp": "2026-05-28T15:07:02.475Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7771",
+      "volunteerName": "Burford, Gary",
+      "hole": 4,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Nederostek, Brad",
+      "timestamp": "2026-05-28T15:07:05.202Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8359",
+      "volunteerName": "Gray, Leandro",
+      "hole": 4,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Nederostek, Brad",
+      "timestamp": "2026-05-28T15:07:05.746Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4800",
+      "volunteerName": "Livingston, Jennifier",
+      "hole": 4,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Nederostek, Brad",
+      "timestamp": "2026-05-28T15:07:06.508Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9831",
+      "volunteerName": "Korywchak, Alan",
+      "hole": 4,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Nederostek, Brad",
+      "timestamp": "2026-05-28T15:07:06.541Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9830",
+      "volunteerName": "Korywchak, Joanne",
+      "hole": 4,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Nederostek, Brad",
+      "timestamp": "2026-05-28T15:07:07.184Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9581",
+      "volunteerName": "Williams, David",
+      "hole": 4,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Nederostek, Brad",
+      "timestamp": "2026-05-28T15:07:07.234Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -17775,6 +17855,60 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1779980939949",
+      "timestamp": "2026-05-28T15:08:59.949Z",
+      "user": "Mulvaney, Matt",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779980901580",
+      "timestamp": "2026-05-28T15:08:21.580Z",
+      "user": "Mulvaney, Matt",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779980825807",
+      "timestamp": "2026-05-28T15:07:05.807Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Gray, Leandro",
+      "details": "Thursday AM - Hole #4"
+    },
+    {
+      "id": "1779980825258",
+      "timestamp": "2026-05-28T15:07:05.258Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Burford, Gary",
+      "details": "Thursday AM - Hole #4"
+    },
+    {
+      "id": "1779980822533",
+      "timestamp": "2026-05-28T15:07:02.533Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Schafer, John",
+      "details": "Thursday AM - Hole #4"
+    },
+    {
+      "id": "1779980822150",
+      "timestamp": "2026-05-28T15:07:02.150Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Nederostek, Brad",
+      "details": "Thursday AM - Hole #4"
+    },
     {
       "id": "1779980650409",
       "timestamp": "2026-05-28T15:04:10.409Z",
@@ -43239,5 +43373,5 @@
       "deletedAt": 1779923202912
     }
   ],
-  "serverNow": 1779974997889
+  "serverNow": 1779980651729
 }
