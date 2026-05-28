@@ -15742,16 +15742,6 @@
       "isAlternate": false
     },
     {
-      "volunteerId": "4128",
-      "volunteerName": "Gilley, Roger",
-      "hole": 1,
-      "day": "Thursday",
-      "shift": "AM",
-      "checkedInBy": "Johnson, Kenny",
-      "timestamp": "2026-05-28T11:27:53.895Z",
-      "isAlternate": false
-    },
-    {
       "volunteerId": "9850",
       "volunteerName": "Hartman, Cathy",
       "hole": 1,
@@ -15850,6 +15840,36 @@
       "checkedInBy": "Sale, Lynn",
       "timestamp": "2026-05-28T11:37:51.102Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "8630",
+      "volunteerName": "Montalvo, Sammy",
+      "hole": 5,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Imboden, Thomas",
+      "timestamp": "2026-05-28T11:46:59.232Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2629",
+      "volunteerName": "Smith, Jeff",
+      "hole": 2,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Gordon, Gary",
+      "timestamp": "2026-05-28T11:47:01.223Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4128",
+      "volunteerName": "Gilley, Roger",
+      "hole": 1,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Ruddell, Dick",
+      "timestamp": "2026-05-28T11:49:35.350Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -15869,6 +15889,42 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779968976178",
+      "timestamp": "2026-05-28T11:49:36.178Z",
+      "user": "Ruddell, Dick",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Gilley, Roger",
+      "details": "Thursday AM - Hole #1"
+    },
+    {
+      "id": "1779968974833",
+      "timestamp": "2026-05-28T11:49:34.833Z",
+      "user": "Ruddell, Dick",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Gilley, Roger",
+      "details": "Thursday AM - Hole #1"
+    },
+    {
+      "id": "1779968824264",
+      "timestamp": "2026-05-28T11:47:04.264Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 5",
+      "details": "Submitted Thursday AM for Hole 5"
+    },
+    {
+      "id": "1779968821535",
+      "timestamp": "2026-05-28T11:47:01.535Z",
+      "user": "Gordon, Gary",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Smith, Jeff",
+      "details": "Thursday AM - Hole #2"
+    },
     {
       "id": "1779968685866",
       "timestamp": "2026-05-28T11:44:45.866Z",
@@ -37228,5 +37284,5 @@
       "deletedAt": 1779923202912
     }
   ],
-  "serverNow": 1779968590444
+  "serverNow": 1779968822241
 }
