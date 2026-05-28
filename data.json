@@ -19283,6 +19283,46 @@
       "checkedInBy": "Bishop, Woody",
       "timestamp": "2026-05-28T17:38:41.686Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "8887",
+      "volunteerName": "Arnold, Tyrone",
+      "hole": 14,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Sanders, Steve",
+      "timestamp": "2026-05-28T17:44:04.377Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10582",
+      "volunteerName": "Corrales, Jack",
+      "hole": 14,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Sanders, Steve",
+      "timestamp": "2026-05-28T17:44:07.480Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8608",
+      "volunteerName": "Tellez, Victor",
+      "hole": 14,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Sanders, Steve",
+      "timestamp": "2026-05-28T17:44:09.062Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9233",
+      "volunteerName": "Wooldridge, Brad",
+      "hole": 14,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Sanders, Steve",
+      "timestamp": "2026-05-28T17:44:10.006Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -19320,6 +19360,60 @@
       "action": "delete",
       "target": "Mashburn, Victor",
       "details": "Deleted volunteer"
+    },
+    {
+      "id": "1779989921902",
+      "timestamp": "2026-05-28T17:38:41.902Z",
+      "user": "Bishop, Woody",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Lancaster, Barry",
+      "details": "Thursday PM - Hole #17"
+    },
+    {
+      "id": "1779989921580",
+      "timestamp": "2026-05-28T17:38:41.580Z",
+      "user": "Bishop, Woody",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Sumrall, Stuart",
+      "details": "Thursday PM - Hole #17"
+    },
+    {
+      "id": "1779989920673",
+      "timestamp": "2026-05-28T17:38:40.673Z",
+      "user": "Bishop, Woody",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Kocek, Greg",
+      "details": "Thursday PM - Hole #17"
+    },
+    {
+      "id": "1779989913485",
+      "timestamp": "2026-05-28T17:38:33.485Z",
+      "user": "Bishop, Woody",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Hicks, Jackie",
+      "details": "Thursday PM - Hole #17"
+    },
+    {
+      "id": "1779989912761",
+      "timestamp": "2026-05-28T17:38:32.761Z",
+      "user": "Bishop, Woody",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Hicks, Greg",
+      "details": "Thursday PM - Hole #17"
+    },
+    {
+      "id": "1779989908049",
+      "timestamp": "2026-05-28T17:38:28.049Z",
+      "user": "Bishop, Woody",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Yost, Kc",
+      "details": "Thursday PM - Hole #17"
     },
     {
       "id": "1779989884396",
@@ -46663,5 +46757,5 @@
       "deletedAt": 1779989943424
     }
   ],
-  "serverNow": 1779989943492
+  "serverNow": 1779989890297
 }
