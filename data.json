@@ -91,7 +91,7 @@
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
       "lastModified": 1778813044771,
-      "volunteerPassword": "$2b$10$koP6zXmDvGRPut6U9XZbtuSXvOcVXIDJ0aZ/IfCZf6fLyaxyMYgDq"
+      "volunteerPassword": "$2b$10$4rSnnLPUrNkw5cVUBRTmaurS/hetq/h0XV61xtkv9Cn1Omkxu9JaW"
     },
     {
       "id": "5307",
@@ -19383,16 +19383,6 @@
       "isAlternate": false
     },
     {
-      "volunteerId": "9575",
-      "volunteerName": "Phillips, Jason",
-      "hole": 12,
-      "day": "Thursday",
-      "shift": "PM",
-      "checkedInBy": "Pugh, Clayton",
-      "timestamp": "2026-05-28T17:52:30.685Z",
-      "isAlternate": false
-    },
-    {
       "volunteerId": "2133",
       "volunteerName": "Larrabee, Robert",
       "hole": 18,
@@ -20191,6 +20181,36 @@
       "checkedInBy": "Jutras, Michael",
       "timestamp": "2026-05-28T22:30:33.283Z",
       "isAlternate": true
+    },
+    {
+      "volunteerId": "9371",
+      "volunteerName": "Duckett, Gary",
+      "hole": 9,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Jutras, Michael",
+      "timestamp": "2026-05-28T22:35:03.717Z",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "7430",
+      "volunteerName": "Grizzle, Bob",
+      "hole": 9,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Jutras, Michael",
+      "timestamp": "2026-05-28T22:35:05.702Z",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "9575",
+      "volunteerName": "Phillips, Jason",
+      "hole": 12,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-28T22:39:49.462Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -20211,6 +20231,60 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1780007988991",
+      "timestamp": "2026-05-28T22:39:48.991Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Phillips, Jason",
+      "details": "Thursday PM - Hole #12"
+    },
+    {
+      "id": "1780007982241",
+      "timestamp": "2026-05-28T22:39:42.241Z",
+      "user": "Anderson, Jodie",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1780007896316",
+      "timestamp": "2026-05-28T22:38:16.316Z",
+      "user": "Anderson, Jodie",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1780007708528",
+      "timestamp": "2026-05-28T22:35:08.528Z",
+      "user": "Jutras, Michael",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 9",
+      "details": "Submitted Thursday PM for Hole 9"
+    },
+    {
+      "id": "1780007706188",
+      "timestamp": "2026-05-28T22:35:06.188Z",
+      "user": "Jutras, Michael",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Grizzle, Bob",
+      "details": "Thursday PM - Hole #9 (alternate)"
+    },
+    {
+      "id": "1780007704269",
+      "timestamp": "2026-05-28T22:35:04.269Z",
+      "user": "Jutras, Michael",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Duckett, Gary",
+      "details": "Thursday PM - Hole #9 (alternate)"
+    },
     {
       "id": "1780007448649",
       "timestamp": "2026-05-28T22:30:48.649Z",
@@ -49047,5 +49121,5 @@
       "deletedAt": 1779989943424
     }
   ],
-  "serverNow": 1780007408441
+  "serverNow": 1780007983497
 }
