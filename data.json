@@ -20171,6 +20171,26 @@
       "checkedInBy": "Jutras, Michael",
       "timestamp": "2026-05-28T22:29:03.462Z",
       "isAlternate": true
+    },
+    {
+      "volunteerId": "8462",
+      "volunteerName": "Simmons, Kim",
+      "hole": 9,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Jutras, Michael",
+      "timestamp": "2026-05-28T22:30:32.488Z",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "8463",
+      "volunteerName": "Simmons, Vance",
+      "hole": 9,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Jutras, Michael",
+      "timestamp": "2026-05-28T22:30:33.283Z",
+      "isAlternate": true
     }
   ],
   "submissions": [],
@@ -20191,6 +20211,42 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1780007448649",
+      "timestamp": "2026-05-28T22:30:48.649Z",
+      "user": "Jutras, Michael",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 9",
+      "details": "Submitted Thursday PM for Hole 9"
+    },
+    {
+      "id": "1780007433547",
+      "timestamp": "2026-05-28T22:30:33.547Z",
+      "user": "Jutras, Michael",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Simmons, Vance",
+      "details": "Thursday PM - Hole #9 (alternate)"
+    },
+    {
+      "id": "1780007432908",
+      "timestamp": "2026-05-28T22:30:32.908Z",
+      "user": "Jutras, Michael",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Simmons, Kim",
+      "details": "Thursday PM - Hole #9 (alternate)"
+    },
+    {
+      "id": "1780007407214",
+      "timestamp": "2026-05-28T22:30:07.214Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1780007348253",
       "timestamp": "2026-05-28T22:29:08.253Z",
@@ -48991,5 +49047,5 @@
       "deletedAt": 1779989943424
     }
   ],
-  "serverNow": 1779996934920
+  "serverNow": 1780007408441
 }
