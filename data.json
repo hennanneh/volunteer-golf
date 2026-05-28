@@ -14107,46 +14107,6 @@
       "isAlternate": false
     },
     {
-      "volunteerId": "7527",
-      "volunteerName": "Pueblo, Vange",
-      "hole": 20,
-      "day": "Wednesday",
-      "shift": "AM",
-      "checkedInBy": "Pueblo, Vange",
-      "timestamp": "2026-05-27T16:56:10.273Z",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "6828",
-      "volunteerName": "Barber, Michael",
-      "hole": 20,
-      "day": "Wednesday",
-      "shift": "AM",
-      "checkedInBy": "Pueblo, Vange",
-      "timestamp": "2026-05-27T16:56:11.209Z",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "10573",
-      "volunteerName": "Byrom, Kirk",
-      "hole": 20,
-      "day": "Wednesday",
-      "shift": "AM",
-      "checkedInBy": "Pueblo, Vange",
-      "timestamp": "2026-05-27T16:56:12.870Z",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "6239",
-      "volunteerName": "Chapman, John",
-      "hole": 20,
-      "day": "Wednesday",
-      "shift": "AM",
-      "checkedInBy": "Pueblo, Vange",
-      "timestamp": "2026-05-27T16:56:13.950Z",
-      "isAlternate": false
-    },
-    {
       "volunteerId": "5235",
       "volunteerName": "Thomas, Stephen",
       "hole": 15,
@@ -14167,16 +14127,6 @@
       "isAlternate": false
     },
     {
-      "volunteerId": "8788",
-      "volunteerName": "Collins, Kevin",
-      "hole": 20,
-      "day": "Wednesday",
-      "shift": "AM",
-      "checkedInBy": "Pueblo, Vange",
-      "timestamp": "2026-05-27T16:56:17.369Z",
-      "isAlternate": false
-    },
-    {
       "volunteerId": "9134",
       "volunteerName": "Clark, Jason",
       "hole": 15,
@@ -14187,16 +14137,6 @@
       "isAlternate": false
     },
     {
-      "volunteerId": "7317",
-      "volunteerName": "Gagel, Chester",
-      "hole": 20,
-      "day": "Wednesday",
-      "shift": "AM",
-      "checkedInBy": "Pueblo, Vange",
-      "timestamp": "2026-05-27T16:56:20.570Z",
-      "isAlternate": false
-    },
-    {
       "volunteerId": "6594",
       "volunteerName": "Dunn, Dean",
       "hole": 15,
@@ -14204,86 +14144,6 @@
       "shift": "PM",
       "checkedInBy": "Thomas, Stephen",
       "timestamp": "2026-05-27T16:56:21.288Z",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "9856",
-      "volunteerName": "Hamic, Craig",
-      "hole": 20,
-      "day": "Wednesday",
-      "shift": "AM",
-      "checkedInBy": "Pueblo, Vange",
-      "timestamp": "2026-05-27T16:56:22.293Z",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "9564",
-      "volunteerName": "Hix, 'Winky",
-      "hole": 20,
-      "day": "Wednesday",
-      "shift": "AM",
-      "checkedInBy": "Pueblo, Vange",
-      "timestamp": "2026-05-27T16:56:25.373Z",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "8850",
-      "volunteerName": "Jones, Dietrich",
-      "hole": 20,
-      "day": "Wednesday",
-      "shift": "AM",
-      "checkedInBy": "Pueblo, Vange",
-      "timestamp": "2026-05-27T16:56:27.290Z",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "8899",
-      "volunteerName": "Kalbfleisch, Joe",
-      "hole": 20,
-      "day": "Wednesday",
-      "shift": "AM",
-      "checkedInBy": "Pueblo, Vange",
-      "timestamp": "2026-05-27T16:56:28.587Z",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "8345",
-      "volunteerName": "Kuhnell, David",
-      "hole": 20,
-      "day": "Wednesday",
-      "shift": "AM",
-      "checkedInBy": "Pueblo, Vange",
-      "timestamp": "2026-05-27T16:56:30.157Z",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "8543",
-      "volunteerName": "Lucas, John H.",
-      "hole": 20,
-      "day": "Wednesday",
-      "shift": "AM",
-      "checkedInBy": "Pueblo, Vange",
-      "timestamp": "2026-05-27T16:56:31.973Z",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "8545",
-      "volunteerName": "Mendoza, Ralph",
-      "hole": 20,
-      "day": "Wednesday",
-      "shift": "AM",
-      "checkedInBy": "Pueblo, Vange",
-      "timestamp": "2026-05-27T16:56:34.142Z",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "8571",
-      "volunteerName": "Mobley, Ken",
-      "hole": 20,
-      "day": "Wednesday",
-      "shift": "AM",
-      "checkedInBy": "Pueblo, Vange",
-      "timestamp": "2026-05-27T16:56:35.656Z",
       "isAlternate": false
     },
     {
@@ -14314,46 +14174,6 @@
       "shift": "PM",
       "checkedInBy": "Clayton, Rodney",
       "timestamp": "2026-05-27T16:56:39.267Z",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "8066",
-      "volunteerName": "Sassaman, David",
-      "hole": 20,
-      "day": "Wednesday",
-      "shift": "AM",
-      "checkedInBy": "Pueblo, Vange",
-      "timestamp": "2026-05-27T16:56:42.130Z",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "8695",
-      "volunteerName": "Stephens, Rayford",
-      "hole": 20,
-      "day": "Wednesday",
-      "shift": "AM",
-      "checkedInBy": "Pueblo, Vange",
-      "timestamp": "2026-05-27T16:56:44.358Z",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "1182",
-      "volunteerName": "Tidwell, Jim",
-      "hole": 20,
-      "day": "Wednesday",
-      "shift": "AM",
-      "checkedInBy": "Pueblo, Vange",
-      "timestamp": "2026-05-27T16:56:46.330Z",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "7640",
-      "volunteerName": "Williams, Amy",
-      "hole": 20,
-      "day": "Wednesday",
-      "shift": "AM",
-      "checkedInBy": "Pueblo, Vange",
-      "timestamp": "2026-05-27T16:56:48.277Z",
       "isAlternate": false
     },
     {
@@ -16727,36 +16547,6 @@
       "isAlternate": false
     },
     {
-      "volunteerId": "6828",
-      "volunteerName": "Barber, Michael",
-      "hole": 20,
-      "day": "Tuesday",
-      "shift": "AM",
-      "checkedInBy": "Howrey, Anne",
-      "timestamp": "2026-05-28T13:05:10.079Z",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "7527",
-      "volunteerName": "Pueblo, Vange",
-      "hole": 20,
-      "day": "Tuesday",
-      "shift": "AM",
-      "checkedInBy": "Howrey, Anne",
-      "timestamp": "2026-05-28T13:05:10.457Z",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "10573",
-      "volunteerName": "Byrom, Kirk",
-      "hole": 20,
-      "day": "Tuesday",
-      "shift": "AM",
-      "checkedInBy": "Howrey, Anne",
-      "timestamp": "2026-05-28T13:05:10.926Z",
-      "isAlternate": false
-    },
-    {
       "volunteerId": "10260",
       "volunteerName": "O'Hanlon, Katherine",
       "hole": 18,
@@ -16764,156 +16554,6 @@
       "shift": "AM",
       "checkedInBy": "Gradt, Jason",
       "timestamp": "2026-05-28T13:05:11.226Z",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "6239",
-      "volunteerName": "Chapman, John",
-      "hole": 20,
-      "day": "Tuesday",
-      "shift": "AM",
-      "checkedInBy": "Howrey, Anne",
-      "timestamp": "2026-05-28T13:05:11.853Z",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "8788",
-      "volunteerName": "Collins, Kevin",
-      "hole": 20,
-      "day": "Tuesday",
-      "shift": "AM",
-      "checkedInBy": "Howrey, Anne",
-      "timestamp": "2026-05-28T13:05:12.256Z",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "7317",
-      "volunteerName": "Gagel, Chester",
-      "hole": 20,
-      "day": "Tuesday",
-      "shift": "AM",
-      "checkedInBy": "Howrey, Anne",
-      "timestamp": "2026-05-28T13:05:12.640Z",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "9856",
-      "volunteerName": "Hamic, Craig",
-      "hole": 20,
-      "day": "Tuesday",
-      "shift": "AM",
-      "checkedInBy": "Howrey, Anne",
-      "timestamp": "2026-05-28T13:05:13.956Z",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "9564",
-      "volunteerName": "Hix, 'Winky",
-      "hole": 20,
-      "day": "Tuesday",
-      "shift": "AM",
-      "checkedInBy": "Howrey, Anne",
-      "timestamp": "2026-05-28T13:05:14.932Z",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "8850",
-      "volunteerName": "Jones, Dietrich",
-      "hole": 20,
-      "day": "Tuesday",
-      "shift": "AM",
-      "checkedInBy": "Howrey, Anne",
-      "timestamp": "2026-05-28T13:05:15.344Z",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "8899",
-      "volunteerName": "Kalbfleisch, Joe",
-      "hole": 20,
-      "day": "Tuesday",
-      "shift": "AM",
-      "checkedInBy": "Howrey, Anne",
-      "timestamp": "2026-05-28T13:05:15.926Z",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "8345",
-      "volunteerName": "Kuhnell, David",
-      "hole": 20,
-      "day": "Tuesday",
-      "shift": "AM",
-      "checkedInBy": "Howrey, Anne",
-      "timestamp": "2026-05-28T13:05:16.308Z",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "8543",
-      "volunteerName": "Lucas, John H.",
-      "hole": 20,
-      "day": "Tuesday",
-      "shift": "AM",
-      "checkedInBy": "Howrey, Anne",
-      "timestamp": "2026-05-28T13:05:16.740Z",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "8545",
-      "volunteerName": "Mendoza, Ralph",
-      "hole": 20,
-      "day": "Tuesday",
-      "shift": "AM",
-      "checkedInBy": "Howrey, Anne",
-      "timestamp": "2026-05-28T13:05:17.923Z",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "8571",
-      "volunteerName": "Mobley, Ken",
-      "hole": 20,
-      "day": "Tuesday",
-      "shift": "AM",
-      "checkedInBy": "Howrey, Anne",
-      "timestamp": "2026-05-28T13:05:18.301Z",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "8066",
-      "volunteerName": "Sassaman, David",
-      "hole": 20,
-      "day": "Tuesday",
-      "shift": "AM",
-      "checkedInBy": "Howrey, Anne",
-      "timestamp": "2026-05-28T13:05:18.795Z",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "8695",
-      "volunteerName": "Stephens, Rayford",
-      "hole": 20,
-      "day": "Tuesday",
-      "shift": "AM",
-      "checkedInBy": "Howrey, Anne",
-      "timestamp": "2026-05-28T13:05:19.201Z",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "1182",
-      "volunteerName": "Tidwell, Jim",
-      "hole": 20,
-      "day": "Tuesday",
-      "shift": "AM",
-      "checkedInBy": "Howrey, Anne",
-      "timestamp": "2026-05-28T13:05:21.454Z",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "7640",
-      "volunteerName": "Williams, Amy",
-      "hole": 20,
-      "day": "Tuesday",
-      "shift": "AM",
-      "checkedInBy": "Howrey, Anne",
-      "timestamp": "2026-05-28T13:05:21.977Z",
       "isAlternate": false
     },
     {
@@ -17045,6 +16685,126 @@
       "checkedInBy": "Browning, Wayne",
       "timestamp": "2026-05-28T13:18:39.543Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "274",
+      "volunteerName": "Waller, Gary",
+      "hole": 7,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Quintana, Mike",
+      "timestamp": "2026-05-28T13:20:14.411Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5217",
+      "volunteerName": "Quintana, Mike",
+      "hole": 7,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Quintana, Mike",
+      "timestamp": "2026-05-28T13:20:17.055Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2393",
+      "volunteerName": "Burkhead, Max",
+      "hole": 7,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Quintana, Mike",
+      "timestamp": "2026-05-28T13:20:21.076Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4657",
+      "volunteerName": "Burns, Dianne",
+      "hole": 7,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Quintana, Mike",
+      "timestamp": "2026-05-28T13:20:21.918Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4264",
+      "volunteerName": "Burns, Mike",
+      "hole": 7,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Quintana, Mike",
+      "timestamp": "2026-05-28T13:20:22.905Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6201",
+      "volunteerName": "Burris, Boyd",
+      "hole": 7,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Quintana, Mike",
+      "timestamp": "2026-05-28T13:20:23.905Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10078",
+      "volunteerName": "Crawford, Kirk",
+      "hole": 7,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Quintana, Mike",
+      "timestamp": "2026-05-28T13:20:26.089Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2884",
+      "volunteerName": "Knaus, Chuck",
+      "hole": 7,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Quintana, Mike",
+      "timestamp": "2026-05-28T13:20:27.235Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4659",
+      "volunteerName": "Lynch, Cindy",
+      "hole": 7,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Quintana, Mike",
+      "timestamp": "2026-05-28T13:20:28.048Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10707",
+      "volunteerName": "Mulliken, Reed",
+      "hole": 7,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Quintana, Mike",
+      "timestamp": "2026-05-28T13:20:29.860Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9952",
+      "volunteerName": "Nartker, Christopher",
+      "hole": 7,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Quintana, Mike",
+      "timestamp": "2026-05-28T13:20:31.663Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7747",
+      "volunteerName": "Bezner, Matt",
+      "hole": 7,
+      "day": "Thursday",
+      "shift": "AM",
+      "checkedInBy": "Quintana, Mike",
+      "timestamp": "2026-05-28T13:20:33.831Z",
+      "isAlternate": true
     }
   ],
   "submissions": [],
@@ -17064,6 +16824,438 @@
     "showPoweredBy": false
   },
   "activityLog": [
+    {
+      "id": "1779974623803",
+      "timestamp": "2026-05-28T13:23:43.803Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1779974619089",
+      "timestamp": "2026-05-28T13:23:39.089Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Admin portal"
+    },
+    {
+      "id": "1779974513165",
+      "timestamp": "2026-05-28T13:21:53.165Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
+    {
+      "id": "1779974508633",
+      "timestamp": "2026-05-28T13:21:48.633Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1779974492964",
+      "timestamp": "2026-05-28T13:21:32.964Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Williams, Amy",
+      "details": "Wednesday AM - Hole #20"
+    },
+    {
+      "id": "1779974492501",
+      "timestamp": "2026-05-28T13:21:32.501Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Tidwell, Jim",
+      "details": "Wednesday AM - Hole #20"
+    },
+    {
+      "id": "1779974491432",
+      "timestamp": "2026-05-28T13:21:31.432Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Stephens, Rayford",
+      "details": "Wednesday AM - Hole #20"
+    },
+    {
+      "id": "1779974491279",
+      "timestamp": "2026-05-28T13:21:31.279Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Sassaman, David",
+      "details": "Wednesday AM - Hole #20"
+    },
+    {
+      "id": "1779974490757",
+      "timestamp": "2026-05-28T13:21:30.757Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Mobley, Ken",
+      "details": "Wednesday AM - Hole #20"
+    },
+    {
+      "id": "1779974490348",
+      "timestamp": "2026-05-28T13:21:30.348Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Mendoza, Ralph",
+      "details": "Wednesday AM - Hole #20"
+    },
+    {
+      "id": "1779974489180",
+      "timestamp": "2026-05-28T13:21:29.180Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Lucas, John H.",
+      "details": "Wednesday AM - Hole #20"
+    },
+    {
+      "id": "1779974488754",
+      "timestamp": "2026-05-28T13:21:28.754Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Kuhnell, David",
+      "details": "Wednesday AM - Hole #20"
+    },
+    {
+      "id": "1779974488134",
+      "timestamp": "2026-05-28T13:21:28.134Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Hix, 'Winky",
+      "details": "Wednesday AM - Hole #20"
+    },
+    {
+      "id": "1779974487608",
+      "timestamp": "2026-05-28T13:21:27.608Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Kalbfleisch, Joe",
+      "details": "Wednesday AM - Hole #20"
+    },
+    {
+      "id": "1779974486561",
+      "timestamp": "2026-05-28T13:21:26.561Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Jones, Dietrich",
+      "details": "Wednesday AM - Hole #20"
+    },
+    {
+      "id": "1779974485101",
+      "timestamp": "2026-05-28T13:21:25.101Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Hamic, Craig",
+      "details": "Wednesday AM - Hole #20"
+    },
+    {
+      "id": "1779974484638",
+      "timestamp": "2026-05-28T13:21:24.638Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Gagel, Chester",
+      "details": "Wednesday AM - Hole #20"
+    },
+    {
+      "id": "1779974483522",
+      "timestamp": "2026-05-28T13:21:23.522Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Collins, Kevin",
+      "details": "Wednesday AM - Hole #20"
+    },
+    {
+      "id": "1779974483128",
+      "timestamp": "2026-05-28T13:21:23.128Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Chapman, John",
+      "details": "Wednesday AM - Hole #20"
+    },
+    {
+      "id": "1779974482638",
+      "timestamp": "2026-05-28T13:21:22.638Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Byrom, Kirk",
+      "details": "Wednesday AM - Hole #20"
+    },
+    {
+      "id": "1779974481929",
+      "timestamp": "2026-05-28T13:21:21.929Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Pueblo, Vange",
+      "details": "Wednesday AM - Hole #20"
+    },
+    {
+      "id": "1779974481536",
+      "timestamp": "2026-05-28T13:21:21.536Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Barber, Michael",
+      "details": "Wednesday AM - Hole #20"
+    },
+    {
+      "id": "1779974475028",
+      "timestamp": "2026-05-28T13:21:15.028Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Williams, Amy",
+      "details": "Tuesday AM - Hole #20"
+    },
+    {
+      "id": "1779974473620",
+      "timestamp": "2026-05-28T13:21:13.620Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Tidwell, Jim",
+      "details": "Tuesday AM - Hole #20"
+    },
+    {
+      "id": "1779974473452",
+      "timestamp": "2026-05-28T13:21:13.452Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Stephens, Rayford",
+      "details": "Tuesday AM - Hole #20"
+    },
+    {
+      "id": "1779974472795",
+      "timestamp": "2026-05-28T13:21:12.795Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Sassaman, David",
+      "details": "Tuesday AM - Hole #20"
+    },
+    {
+      "id": "1779974471528",
+      "timestamp": "2026-05-28T13:21:11.528Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Mobley, Ken",
+      "details": "Tuesday AM - Hole #20"
+    },
+    {
+      "id": "1779974462206",
+      "timestamp": "2026-05-28T13:21:02.206Z",
+      "user": "Quintana, Mike",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 7",
+      "details": "Submitted Thursday AM for Hole 7"
+    },
+    {
+      "id": "1779974453814",
+      "timestamp": "2026-05-28T13:20:53.814Z",
+      "user": "Browning, Wayne",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 17",
+      "details": "Submitted Thursday AM for Hole 17"
+    },
+    {
+      "id": "1779974433905",
+      "timestamp": "2026-05-28T13:20:33.905Z",
+      "user": "Quintana, Mike",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Bezner, Matt",
+      "details": "Thursday AM - Hole #7 (alternate)"
+    },
+    {
+      "id": "1779974431753",
+      "timestamp": "2026-05-28T13:20:31.753Z",
+      "user": "Quintana, Mike",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Nartker, Christopher",
+      "details": "Thursday AM - Hole #7"
+    },
+    {
+      "id": "1779974429946",
+      "timestamp": "2026-05-28T13:20:29.946Z",
+      "user": "Quintana, Mike",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Mulliken, Reed",
+      "details": "Thursday AM - Hole #7"
+    },
+    {
+      "id": "1779974428128",
+      "timestamp": "2026-05-28T13:20:28.128Z",
+      "user": "Quintana, Mike",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Lynch, Cindy",
+      "details": "Thursday AM - Hole #7"
+    },
+    {
+      "id": "1779974427361",
+      "timestamp": "2026-05-28T13:20:27.361Z",
+      "user": "Quintana, Mike",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Knaus, Chuck",
+      "details": "Thursday AM - Hole #7"
+    },
+    {
+      "id": "1779974426150",
+      "timestamp": "2026-05-28T13:20:26.150Z",
+      "user": "Quintana, Mike",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Crawford, Kirk",
+      "details": "Thursday AM - Hole #7"
+    },
+    {
+      "id": "1779974423978",
+      "timestamp": "2026-05-28T13:20:23.978Z",
+      "user": "Quintana, Mike",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Burris, Boyd",
+      "details": "Thursday AM - Hole #7"
+    },
+    {
+      "id": "1779974422973",
+      "timestamp": "2026-05-28T13:20:22.973Z",
+      "user": "Quintana, Mike",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Burns, Mike",
+      "details": "Thursday AM - Hole #7"
+    },
+    {
+      "id": "1779974422053",
+      "timestamp": "2026-05-28T13:20:22.053Z",
+      "user": "Quintana, Mike",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Burns, Dianne",
+      "details": "Thursday AM - Hole #7"
+    },
+    {
+      "id": "1779974421131",
+      "timestamp": "2026-05-28T13:20:21.131Z",
+      "user": "Quintana, Mike",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Burkhead, Max",
+      "details": "Thursday AM - Hole #7"
+    },
+    {
+      "id": "1779974417147",
+      "timestamp": "2026-05-28T13:20:17.147Z",
+      "user": "Quintana, Mike",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Quintana, Mike",
+      "details": "Thursday AM - Hole #7"
+    },
+    {
+      "id": "1779974414506",
+      "timestamp": "2026-05-28T13:20:14.506Z",
+      "user": "Quintana, Mike",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Waller, Gary",
+      "details": "Thursday AM - Hole #7"
+    },
+    {
+      "id": "1779974406982",
+      "timestamp": "2026-05-28T13:20:06.982Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Hamic, Craig",
+      "details": "Tuesday AM - Hole #20"
+    },
+    {
+      "id": "1779974406457",
+      "timestamp": "2026-05-28T13:20:06.457Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Gagel, Chester",
+      "details": "Tuesday AM - Hole #20"
+    },
+    {
+      "id": "1779974404924",
+      "timestamp": "2026-05-28T13:20:04.924Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Chapman, John",
+      "details": "Tuesday AM - Hole #20"
+    },
+    {
+      "id": "1779974404364",
+      "timestamp": "2026-05-28T13:20:04.364Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Byrom, Kirk",
+      "details": "Tuesday AM - Hole #20"
+    },
+    {
+      "id": "1779974403804",
+      "timestamp": "2026-05-28T13:20:03.804Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Pueblo, Vange",
+      "details": "Tuesday AM - Hole #20"
+    },
+    {
+      "id": "1779974403298",
+      "timestamp": "2026-05-28T13:20:03.298Z",
+      "user": "Howrey, Anne",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Barber, Michael",
+      "details": "Tuesday AM - Hole #20"
+    },
+    {
+      "id": "1779974403110",
+      "timestamp": "2026-05-28T13:20:03.110Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 15",
+      "details": "Submitted Thursday AM for Hole 15"
+    },
     {
       "id": "1779974399027",
       "timestamp": "2026-05-28T13:19:59.027Z",
@@ -41007,5 +41199,5 @@
       "deletedAt": 1779923202912
     }
   ],
-  "serverNow": 1779974392652
+  "serverNow": 1779974463864
 }
