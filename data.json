@@ -19513,6 +19513,46 @@
       "checkedInBy": "Gradt, Jason",
       "timestamp": "2026-05-28T17:53:25.475Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "3138",
+      "volunteerName": "Bishop, Woody",
+      "hole": 17,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Bishop, Woody",
+      "timestamp": "2026-05-28T17:57:20.231Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6191",
+      "volunteerName": "Browning, Wayne",
+      "hole": 17,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Bishop, Woody",
+      "timestamp": "2026-05-28T17:57:20.344Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9868",
+      "volunteerName": "Mcgowen, Mark",
+      "hole": 18,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Gradt, Jason",
+      "timestamp": "2026-05-28T17:59:40.247Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "1919",
+      "volunteerName": "Crow, Michael",
+      "hole": 18,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Gradt, Jason",
+      "timestamp": "2026-05-28T17:59:47.070Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -19533,6 +19573,24 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1779991187139",
+      "timestamp": "2026-05-28T17:59:47.139Z",
+      "user": "Gradt, Jason",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Crow, Michael",
+      "details": "Thursday PM - Hole #18"
+    },
+    {
+      "id": "1779991180305",
+      "timestamp": "2026-05-28T17:59:40.305Z",
+      "user": "Gradt, Jason",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Mcgowen, Mark",
+      "details": "Thursday PM - Hole #18"
+    },
     {
       "id": "1779990805542",
       "timestamp": "2026-05-28T17:53:25.542Z",
