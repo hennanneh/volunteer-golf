@@ -2424,9 +2424,19 @@
       "volId": "421",
       "hasAdminPassword": true,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771,
+      "lastModified": 1779986346741,
       "adminPassword": "$2b$10$52VdRTtOJc7.riA5b93ScuAbew2kz1a3IPmSWZEOk47q3Z4yp117a",
-      "adminPasswordSetAt": "2026-04-29T19:41:25.640Z"
+      "adminPasswordSetAt": "2026-04-29T19:41:25.640Z",
+      "notes": "",
+      "hatReceived": false,
+      "assignedHoles": [
+        99,
+        14,
+        15,
+        16,
+        17,
+        18
+      ]
     },
     {
       "id": "9595",
@@ -18396,6 +18406,26 @@
       "checkedInBy": "Pugh, Clayton",
       "timestamp": "2026-05-28T16:34:03.862Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "5695",
+      "volunteerName": "Jessop, Tim",
+      "hole": 13,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Duncan, Larry",
+      "timestamp": "2026-05-28T16:38:45.625Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6962",
+      "volunteerName": "Eisen, Scott",
+      "hole": 13,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Duncan, Larry",
+      "timestamp": "2026-05-28T16:38:48.073Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -18416,6 +18446,51 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1779986346741-tgtlch",
+      "timestamp": "2026-05-28T16:39:06.741Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Gastinel, Buck",
+      "details": "Updated fields: notes, hatReceived, assignedHoles"
+    },
+    {
+      "id": "1779986343160",
+      "timestamp": "2026-05-28T16:39:03.160Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 13",
+      "details": "Submitted Thursday PM for Hole 13"
+    },
+    {
+      "id": "1779986328134",
+      "timestamp": "2026-05-28T16:38:48.134Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Eisen, Scott",
+      "details": "Thursday PM - Hole #13"
+    },
+    {
+      "id": "1779986325682",
+      "timestamp": "2026-05-28T16:38:45.682Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Jessop, Tim",
+      "details": "Thursday PM - Hole #13"
+    },
+    {
+      "id": "1779986308540",
+      "timestamp": "2026-05-28T16:38:28.540Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1779986043510",
       "timestamp": "2026-05-28T16:34:03.510Z",
