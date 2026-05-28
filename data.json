@@ -18336,6 +18336,66 @@
       "checkedInBy": "Wilson, Todd",
       "timestamp": "2026-05-28T16:29:56.189Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "10012",
+      "volunteerName": "Borgschatz, Keith",
+      "hole": 12,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-28T16:32:14.080Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9365",
+      "volunteerName": "Pugh, Clayton",
+      "hole": 12,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-28T16:32:28.035Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "342",
+      "volunteerName": "Mckenzie, Roy",
+      "hole": 12,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-28T16:32:28.460Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9988",
+      "volunteerName": "Grall, George",
+      "hole": 12,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-28T16:32:37.316Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8878",
+      "volunteerName": "Myrick, Byron",
+      "hole": 12,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-28T16:33:12.206Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10293",
+      "volunteerName": "Ricks, Bob",
+      "hole": 12,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-28T16:34:03.862Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -18356,6 +18416,69 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1779986043510",
+      "timestamp": "2026-05-28T16:34:03.510Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Ricks, Bob",
+      "details": "Thursday PM - Hole #12"
+    },
+    {
+      "id": "1779985991859",
+      "timestamp": "2026-05-28T16:33:11.859Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Myrick, Byron",
+      "details": "Thursday PM - Hole #12"
+    },
+    {
+      "id": "1779985956957",
+      "timestamp": "2026-05-28T16:32:36.957Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Grall, George",
+      "details": "Thursday PM - Hole #12"
+    },
+    {
+      "id": "1779985948112",
+      "timestamp": "2026-05-28T16:32:28.112Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Mckenzie, Roy",
+      "details": "Thursday PM - Hole #12"
+    },
+    {
+      "id": "1779985947684",
+      "timestamp": "2026-05-28T16:32:27.685Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Pugh, Clayton",
+      "details": "Thursday PM - Hole #12"
+    },
+    {
+      "id": "1779985933737",
+      "timestamp": "2026-05-28T16:32:13.737Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Borgschatz, Keith",
+      "details": "Thursday PM - Hole #12"
+    },
+    {
+      "id": "1779985806315",
+      "timestamp": "2026-05-28T16:30:06.315Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 1",
+      "details": "Submitted Thursday PM for Hole 1"
+    },
     {
       "id": "1779985796414",
       "timestamp": "2026-05-28T16:29:56.414Z",
@@ -44666,5 +44789,5 @@
       "deletedAt": 1779923202912
     }
   ],
-  "serverNow": 1779985786648
+  "serverNow": 1779985565199
 }
