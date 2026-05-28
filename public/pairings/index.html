@@ -26,6 +26,22 @@
     padding: 14px 16px 16px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.15);
   }
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    color: white;
+    background: rgba(255,255,255,0.15);
+    border-radius: 8px;
+    padding: 6px 12px;
+    min-height: 36px;
+    text-decoration: none;
+    margin-bottom: 12px;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .back-link:active { background: rgba(255,255,255,0.28); }
   .today-date {
     font-size: 14px;
     font-weight: 600;
@@ -107,6 +123,17 @@
     max-width: 720px;
     margin: 0 auto;
   }
+  .how-to {
+    background: #eef5f0;
+    color: #1a472a;
+    border-radius: 10px;
+    padding: 10px 14px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.4;
+    border: 1px solid #d3e5d9;
+  }
   .empty {
     background: white;
     border-radius: 12px;
@@ -182,6 +209,7 @@
 </head>
 <body>
 <header>
+  <a class="back-link" href="/">&larr; Back to app</a>
   <div class="today-date" id="todayDate"></div>
   <div class="head-row">
     <h1>Pairings Tracker</h1>
@@ -198,6 +226,7 @@
 </header>
 <div id="staleWarning"></div>
 <main>
+  <div class="how-to">Tap a player when they pass your hole — they'll move to the bottom and get a green check. Tap again to undo.</div>
   <div id="groupList"></div>
 </main>
 
