@@ -1435,6 +1435,7 @@
       "scheduled": {
         "Wednesday PM": true,
         "Thursday AM": true,
+        "Thursday PM": true,
         "Friday PM": true,
         "Saturday AM": true,
         "Sunday PM": true
@@ -1443,7 +1444,7 @@
       "address": "5605 Santa Elena Court Fort Worth, TX 76126",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1779988309262
     },
     {
       "id": "10078",
@@ -18462,16 +18463,6 @@
       "isAlternate": false
     },
     {
-      "volunteerId": "9198",
-      "volunteerName": "Pierce, Mike",
-      "hole": 10,
-      "day": "Thursday",
-      "shift": "PM",
-      "checkedInBy": "Trout, Wayne",
-      "timestamp": "2026-05-28T16:41:39.469Z",
-      "isAlternate": false
-    },
-    {
       "volunteerId": "10150",
       "volunteerName": "Peterson, Durk",
       "hole": 10,
@@ -19030,6 +19021,16 @@
       "checkedInBy": "Roy, Mike",
       "timestamp": "2026-05-28T17:09:19.477Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "10321",
+      "volunteerName": "Crawford, Billy",
+      "hole": 10,
+      "day": "Thursday",
+      "shift": "PM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-28T17:11:58.658Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -19050,6 +19051,33 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1779988318446",
+      "timestamp": "2026-05-28T17:11:58.446Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Crawford, Billy",
+      "details": "Thursday PM - Hole #10"
+    },
+    {
+      "id": "1779988313864",
+      "timestamp": "2026-05-28T17:11:53.864Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Pierce, Mike",
+      "details": "Thursday PM - Hole #10"
+    },
+    {
+      "id": "1779988309262-6ipsuv",
+      "timestamp": "2026-05-28T17:11:49.262Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Crawford, Billy",
+      "details": "added Thursday PM"
+    },
     {
       "id": "1779988178582",
       "timestamp": "2026-05-28T17:09:38.582Z",
@@ -46154,5 +46182,5 @@
       "deletedAt": 1779923202912
     }
   ],
-  "serverNow": 1779987280311
+  "serverNow": 1779986916772
 }
