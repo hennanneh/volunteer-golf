@@ -20032,6 +20032,33 @@
   },
   "activityLog": [
     {
+      "id": "1780005544800",
+      "timestamp": "2026-05-28T21:59:04.800Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 8",
+      "details": "Submitted Thursday PM for Hole 8"
+    },
+    {
+      "id": "1780005532474",
+      "timestamp": "2026-05-28T21:58:52.474Z",
+      "user": "Rogenski, Chris P.",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1780005432867",
+      "timestamp": "2026-05-28T21:57:12.867Z",
+      "user": "Gastinel, Buck",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
       "id": "1780004633048",
       "timestamp": "2026-05-28T21:43:53.048Z",
       "user": "Beckley, Bob",
