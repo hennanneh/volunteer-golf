@@ -21398,6 +21398,86 @@
       "checkedInBy": "Beckley, Bob",
       "timestamp": "2026-05-29T12:29:44.382Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "7191",
+      "volunteerName": "Sanders, Steve",
+      "hole": 14,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Sanders, Steve",
+      "timestamp": "2026-05-29T12:30:42.208Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10675",
+      "volunteerName": "Capps, Macy",
+      "hole": 14,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Sanders, Steve",
+      "timestamp": "2026-05-29T12:30:44.406Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9621",
+      "volunteerName": "Ready, Charles",
+      "hole": 14,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Sanders, Steve",
+      "timestamp": "2026-05-29T12:30:50.628Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7207",
+      "volunteerName": "Watson, Steve",
+      "hole": 14,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Sanders, Steve",
+      "timestamp": "2026-05-29T12:30:53.060Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8630",
+      "volunteerName": "Montalvo, Sammy",
+      "hole": 5,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Imboden, Thomas",
+      "timestamp": "2026-05-29T12:33:11.781Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "167",
+      "volunteerName": "Howell, John",
+      "hole": 5,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Imboden, Thomas",
+      "timestamp": "2026-05-29T12:33:29.369Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6744",
+      "volunteerName": "Livermore, James",
+      "hole": 5,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Imboden, Thomas",
+      "timestamp": "2026-05-29T12:33:31.936Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10271",
+      "volunteerName": "Mcintyre, Sean",
+      "hole": 5,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Imboden, Thomas",
+      "timestamp": "2026-05-29T12:33:32.395Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -21418,6 +21498,96 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1780058012502",
+      "timestamp": "2026-05-29T12:33:32.502Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Mcintyre, Sean",
+      "details": "Friday AM - Hole #5"
+    },
+    {
+      "id": "1780058012034",
+      "timestamp": "2026-05-29T12:33:32.034Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Livermore, James",
+      "details": "Friday AM - Hole #5"
+    },
+    {
+      "id": "1780058009466",
+      "timestamp": "2026-05-29T12:33:29.466Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Howell, John",
+      "details": "Friday AM - Hole #5"
+    },
+    {
+      "id": "1780057866118",
+      "timestamp": "2026-05-29T12:31:06.118Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Watson, Steve",
+      "details": "Friday AM - Hole #14"
+    },
+    {
+      "id": "1780057863683",
+      "timestamp": "2026-05-29T12:31:03.683Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Ready, Charles",
+      "details": "Friday AM - Hole #14"
+    },
+    {
+      "id": "1780057861397",
+      "timestamp": "2026-05-29T12:31:01.397Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Chee, Wendell",
+      "details": "Friday AM - Hole #14"
+    },
+    {
+      "id": "1780057860678",
+      "timestamp": "2026-05-29T12:31:00.678Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Chee, Wendell",
+      "details": "Friday AM - Hole #14"
+    },
+    {
+      "id": "1780057857455",
+      "timestamp": "2026-05-29T12:30:57.455Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Capps, Macy",
+      "details": "Friday AM - Hole #14"
+    },
+    {
+      "id": "1780057855267",
+      "timestamp": "2026-05-29T12:30:55.267Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Sanders, Steve",
+      "details": "Friday AM - Hole #14"
+    },
+    {
+      "id": "1780057826492",
+      "timestamp": "2026-05-29T12:30:26.492Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 15",
+      "details": "Submitted Friday AM for Hole 15"
+    },
     {
       "id": "1780057784439",
       "timestamp": "2026-05-29T12:29:44.439Z",
