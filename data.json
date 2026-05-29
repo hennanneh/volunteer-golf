@@ -541,15 +541,15 @@
       "scheduled": {
         "Wednesday PM": true,
         "Thursday AM": true,
-        "Friday PM": true,
         "Saturday AM": true,
+        "Saturday PM": true,
         "Sunday PM": true
       },
       "volId": "6672",
       "address": "1661 S Forum Dr Apt 4402 Grand Prairie, TX 75052",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779895467933,
+      "lastModified": 1780071367429,
       "notes": "Albert was scheduled for the morning shift but couldn’t make it. Asked to be moved to PM shift."
     },
     {
@@ -22414,6 +22414,56 @@
       "checkedInBy": "Johnson, Kenny",
       "timestamp": "2026-05-29T16:08:39.265Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "9365",
+      "volunteerName": "Pugh, Clayton",
+      "hole": 12,
+      "day": "Friday",
+      "shift": "PM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-29T16:17:01.411Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "342",
+      "volunteerName": "Mckenzie, Roy",
+      "hole": 12,
+      "day": "Friday",
+      "shift": "PM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-29T16:17:02.653Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9988",
+      "volunteerName": "Grall, George",
+      "hole": 12,
+      "day": "Friday",
+      "shift": "PM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-29T16:17:15.284Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9400",
+      "volunteerName": "Chapman, John A.",
+      "hole": 12,
+      "day": "Friday",
+      "shift": "PM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-29T16:17:16.081Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8499",
+      "volunteerName": "Schrader, Brenda",
+      "hole": 2,
+      "day": "Friday",
+      "shift": "PM",
+      "checkedInBy": "Gordon, Gary",
+      "timestamp": "2026-05-29T16:19:21.365Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -22434,6 +22484,15 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1780071367429-l18d7d",
+      "timestamp": "2026-05-29T16:16:07.430Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Bravo, Albert",
+      "details": "added Saturday PM; removed Friday PM"
+    },
     {
       "id": "1780063982964-ldmq2g",
       "timestamp": "2026-05-29T14:13:02.964Z",
