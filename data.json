@@ -23955,6 +23955,96 @@
       "checkedInBy": "Gradt, Jason",
       "timestamp": "2026-05-29T18:09:58.624Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "8184",
+      "volunteerName": "Langford, Alan",
+      "hole": 18,
+      "day": "Friday",
+      "shift": "PM",
+      "checkedInBy": "Gradt, Jason",
+      "timestamp": "2026-05-29T18:10:04.019Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "3034",
+      "volunteerName": "Burnett, Eric",
+      "hole": 9,
+      "day": "Friday",
+      "shift": "PM",
+      "checkedInBy": "Burnett, Eric",
+      "timestamp": "2026-05-29T18:13:29.423Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2055",
+      "volunteerName": "Edwards, Bill",
+      "hole": 9,
+      "day": "Friday",
+      "shift": "PM",
+      "checkedInBy": "Burnett, Eric",
+      "timestamp": "2026-05-29T18:13:32.253Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9658",
+      "volunteerName": "Jutras, Michael",
+      "hole": 9,
+      "day": "Friday",
+      "shift": "PM",
+      "checkedInBy": "Burnett, Eric",
+      "timestamp": "2026-05-29T18:13:33.010Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "3149",
+      "volunteerName": "Broom, Douglas",
+      "hole": 9,
+      "day": "Friday",
+      "shift": "PM",
+      "checkedInBy": "Burnett, Eric",
+      "timestamp": "2026-05-29T18:14:34.850Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "1445",
+      "volunteerName": "Clark, David",
+      "hole": 9,
+      "day": "Friday",
+      "shift": "PM",
+      "checkedInBy": "Burnett, Eric",
+      "timestamp": "2026-05-29T18:14:39.024Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9853",
+      "volunteerName": "Cole, Jefery",
+      "hole": 9,
+      "day": "Friday",
+      "shift": "PM",
+      "checkedInBy": "Burnett, Eric",
+      "timestamp": "2026-05-29T18:14:42.531Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10328",
+      "volunteerName": "Elliott, David",
+      "hole": 9,
+      "day": "Friday",
+      "shift": "PM",
+      "checkedInBy": "Burnett, Eric",
+      "timestamp": "2026-05-29T18:14:51.955Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2919",
+      "volunteerName": "Loveland, Edward",
+      "hole": 9,
+      "day": "Friday",
+      "shift": "PM",
+      "checkedInBy": "Burnett, Eric",
+      "timestamp": "2026-05-29T18:14:57.145Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
