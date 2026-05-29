@@ -20850,16 +20850,6 @@
       "isAlternate": false
     },
     {
-      "volunteerId": "5695",
-      "volunteerName": "Jessop, Tim",
-      "hole": 13,
-      "day": "Friday",
-      "shift": "AM",
-      "checkedInBy": "Duncan, Larry",
-      "timestamp": "2026-05-29T12:11:56.614Z",
-      "isAlternate": false
-    },
-    {
       "volunteerId": "8852",
       "volunteerName": "Vollintine, Derek",
       "hole": 13,
@@ -21308,6 +21298,106 @@
       "checkedInBy": "Pugh, Clayton",
       "timestamp": "2026-05-29T12:24:28.895Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "9069",
+      "volunteerName": "Harper, Leroy",
+      "hole": 13,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Duncan, Larry",
+      "timestamp": "2026-05-29T12:26:14.373Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "3986",
+      "volunteerName": "Clayton, Rodney",
+      "hole": 13,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Duncan, Larry",
+      "timestamp": "2026-05-29T12:26:21.995Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5695",
+      "volunteerName": "Jessop, Tim",
+      "hole": 13,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Duncan, Larry",
+      "timestamp": "2026-05-29T12:29:09.760Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7794",
+      "volunteerName": "Beckley, Bob",
+      "hole": 15,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Beckley, Bob",
+      "timestamp": "2026-05-29T12:29:36.666Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5235",
+      "volunteerName": "Thomas, Stephen",
+      "hole": 15,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Beckley, Bob",
+      "timestamp": "2026-05-29T12:29:38.146Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9134",
+      "volunteerName": "Clark, Jason",
+      "hole": 15,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Beckley, Bob",
+      "timestamp": "2026-05-29T12:29:39.867Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "897",
+      "volunteerName": "Colborg, Jerry",
+      "hole": 15,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Beckley, Bob",
+      "timestamp": "2026-05-29T12:29:41.161Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2552",
+      "volunteerName": "Kane, Joseph",
+      "hole": 15,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Beckley, Bob",
+      "timestamp": "2026-05-29T12:29:41.971Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9244",
+      "volunteerName": "King, Chad",
+      "hole": 15,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Beckley, Bob",
+      "timestamp": "2026-05-29T12:29:42.990Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10362",
+      "volunteerName": "Mills, Brad",
+      "hole": 15,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Beckley, Bob",
+      "timestamp": "2026-05-29T12:29:44.382Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -21328,6 +21418,132 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1780057784439",
+      "timestamp": "2026-05-29T12:29:44.439Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Mills, Brad",
+      "details": "Friday AM - Hole #15"
+    },
+    {
+      "id": "1780057783072",
+      "timestamp": "2026-05-29T12:29:43.072Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "King, Chad",
+      "details": "Friday AM - Hole #15"
+    },
+    {
+      "id": "1780057782026",
+      "timestamp": "2026-05-29T12:29:42.026Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Kane, Joseph",
+      "details": "Friday AM - Hole #15"
+    },
+    {
+      "id": "1780057781217",
+      "timestamp": "2026-05-29T12:29:41.217Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Colborg, Jerry",
+      "details": "Friday AM - Hole #15"
+    },
+    {
+      "id": "1780057779932",
+      "timestamp": "2026-05-29T12:29:39.932Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Clark, Jason",
+      "details": "Friday AM - Hole #15"
+    },
+    {
+      "id": "1780057778208",
+      "timestamp": "2026-05-29T12:29:38.208Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Thomas, Stephen",
+      "details": "Friday AM - Hole #15"
+    },
+    {
+      "id": "1780057776721",
+      "timestamp": "2026-05-29T12:29:36.721Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Beckley, Bob",
+      "details": "Friday AM - Hole #15"
+    },
+    {
+      "id": "1780057749808",
+      "timestamp": "2026-05-29T12:29:09.808Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Jessop, Tim",
+      "details": "Friday AM - Hole #13"
+    },
+    {
+      "id": "1780057742406",
+      "timestamp": "2026-05-29T12:29:02.406Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Jessop, Tim",
+      "details": "Friday AM - Hole #13"
+    },
+    {
+      "id": "1780057732303",
+      "timestamp": "2026-05-29T12:28:52.304Z",
+      "user": "Beckley, Bob",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1780057728624",
+      "timestamp": "2026-05-29T12:28:48.624Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1780057582053",
+      "timestamp": "2026-05-29T12:26:22.053Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Clayton, Rodney",
+      "details": "Friday AM - Hole #13"
+    },
+    {
+      "id": "1780057574423",
+      "timestamp": "2026-05-29T12:26:14.423Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Harper, Leroy",
+      "details": "Friday AM - Hole #13"
+    },
+    {
+      "id": "1780057501824",
+      "timestamp": "2026-05-29T12:25:01.824Z",
+      "user": "Pueblo, Vange",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
     {
       "id": "1780057490290",
       "timestamp": "2026-05-29T12:24:50.290Z",
@@ -51667,5 +51883,5 @@
       "deletedAt": 1779989943424
     }
   ],
-  "serverNow": 1780057469962
+  "serverNow": 1780057751062
 }
