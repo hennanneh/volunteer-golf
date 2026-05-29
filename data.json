@@ -20698,6 +20698,46 @@
       "checkedInBy": "Trout, Wayne",
       "timestamp": "2026-05-29T11:50:59.118Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "5192",
+      "volunteerName": "Imboden, Thomas",
+      "hole": 5,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Imboden, Thomas",
+      "timestamp": "2026-05-29T11:56:46.274Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6281",
+      "volunteerName": "Dunn, Steve",
+      "hole": 5,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Imboden, Thomas",
+      "timestamp": "2026-05-29T11:56:54.539Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4531",
+      "volunteerName": "Duncan, Larry",
+      "hole": 13,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Duncan, Larry",
+      "timestamp": "2026-05-29T11:58:05.096Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6903",
+      "volunteerName": "Hinojosa, Frank",
+      "hole": 5,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Imboden, Thomas",
+      "timestamp": "2026-05-29T11:59:26.584Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -20718,6 +20758,132 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1780055968313",
+      "timestamp": "2026-05-29T11:59:28.313Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 5",
+      "details": "Submitted Friday AM for Hole 5"
+    },
+    {
+      "id": "1780055966666",
+      "timestamp": "2026-05-29T11:59:26.666Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Hinojosa, Frank",
+      "details": "Friday AM - Hole #5"
+    },
+    {
+      "id": "1780055933941",
+      "timestamp": "2026-05-29T11:58:53.941Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Lyons, Dak",
+      "details": "Friday AM - Hole #13"
+    },
+    {
+      "id": "1780055930194",
+      "timestamp": "2026-05-29T11:58:50.194Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Lyons, Dak",
+      "details": "Friday AM - Hole #13"
+    },
+    {
+      "id": "1780055929962",
+      "timestamp": "2026-05-29T11:58:49.962Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 5",
+      "details": "Submitted Friday AM for Hole 5"
+    },
+    {
+      "id": "1780055889769",
+      "timestamp": "2026-05-29T11:58:09.769Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 13",
+      "details": "Submitted Friday AM for Hole 13"
+    },
+    {
+      "id": "1780055885181",
+      "timestamp": "2026-05-29T11:58:05.181Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Duncan, Larry",
+      "details": "Friday AM - Hole #13"
+    },
+    {
+      "id": "1780055884041",
+      "timestamp": "2026-05-29T11:58:04.041Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Clayton, Rodney",
+      "details": "Friday AM - Hole #13"
+    },
+    {
+      "id": "1780055882216",
+      "timestamp": "2026-05-29T11:58:02.216Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Clayton, Rodney",
+      "details": "Friday AM - Hole #13"
+    },
+    {
+      "id": "1780055879243",
+      "timestamp": "2026-05-29T11:57:59.243Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1780055849970",
+      "timestamp": "2026-05-29T11:57:29.970Z",
+      "user": "Montalvo, Sammy",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1780055814598",
+      "timestamp": "2026-05-29T11:56:54.598Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Dunn, Steve",
+      "details": "Friday AM - Hole #5"
+    },
+    {
+      "id": "1780055806342",
+      "timestamp": "2026-05-29T11:56:46.342Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Imboden, Thomas",
+      "details": "Friday AM - Hole #5"
+    },
+    {
+      "id": "1780055804187",
+      "timestamp": "2026-05-29T11:56:44.187Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1780055458330",
       "timestamp": "2026-05-29T11:50:58.330Z",
@@ -50310,5 +50476,5 @@
       "deletedAt": 1779989943424
     }
   ],
-  "serverNow": 1780054807495
+  "serverNow": 1780055931101
 }
