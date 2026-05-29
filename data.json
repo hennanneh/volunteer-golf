@@ -21478,6 +21478,126 @@
       "checkedInBy": "Imboden, Thomas",
       "timestamp": "2026-05-29T12:33:32.395Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "9575",
+      "volunteerName": "Phillips, Jason",
+      "hole": 12,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-29T12:38:28.037Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5391",
+      "volunteerName": "Gradt, Jason",
+      "hole": 18,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Gradt, Jason",
+      "timestamp": "2026-05-29T12:39:01.892Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4222",
+      "volunteerName": "Wehmeyer, Tom",
+      "hole": 18,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Gradt, Jason",
+      "timestamp": "2026-05-29T12:39:02.246Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9295",
+      "volunteerName": "Bird, Bob",
+      "hole": 18,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Gradt, Jason",
+      "timestamp": "2026-05-29T12:39:03.486Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "1919",
+      "volunteerName": "Crow, Michael",
+      "hole": 18,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Gradt, Jason",
+      "timestamp": "2026-05-29T12:39:05.169Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9568",
+      "volunteerName": "Krajca, Brian",
+      "hole": 18,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Gradt, Jason",
+      "timestamp": "2026-05-29T12:39:05.676Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2133",
+      "volunteerName": "Larrabee, Robert",
+      "hole": 18,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Gradt, Jason",
+      "timestamp": "2026-05-29T12:39:07.313Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10797",
+      "volunteerName": "Martin, Hubert",
+      "hole": 18,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Gradt, Jason",
+      "timestamp": "2026-05-29T12:39:08.151Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9868",
+      "volunteerName": "Mcgowen, Mark",
+      "hole": 18,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Gradt, Jason",
+      "timestamp": "2026-05-29T12:39:11.802Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6398",
+      "volunteerName": "Prill, Chuck",
+      "hole": 18,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Gradt, Jason",
+      "timestamp": "2026-05-29T12:39:13.247Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8276",
+      "volunteerName": "Prill, Gina",
+      "hole": 18,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Gradt, Jason",
+      "timestamp": "2026-05-29T12:39:15.241Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8219",
+      "volunteerName": "White, Gary",
+      "hole": 18,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Gradt, Jason",
+      "timestamp": "2026-05-29T12:39:16.727Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -21498,6 +21618,150 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1780058357082",
+      "timestamp": "2026-05-29T12:39:17.082Z",
+      "user": "Gradt, Jason",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "White, Gary",
+      "details": "Friday AM - Hole #18"
+    },
+    {
+      "id": "1780058355801",
+      "timestamp": "2026-05-29T12:39:15.801Z",
+      "user": "Gradt, Jason",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Prill, Gina",
+      "details": "Friday AM - Hole #18"
+    },
+    {
+      "id": "1780058353874",
+      "timestamp": "2026-05-29T12:39:13.874Z",
+      "user": "Gradt, Jason",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Prill, Chuck",
+      "details": "Friday AM - Hole #18"
+    },
+    {
+      "id": "1780058351961",
+      "timestamp": "2026-05-29T12:39:11.961Z",
+      "user": "Gradt, Jason",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Mcgowen, Mark",
+      "details": "Friday AM - Hole #18"
+    },
+    {
+      "id": "1780058351762",
+      "timestamp": "2026-05-29T12:39:11.762Z",
+      "user": "Gradt, Jason",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Maxfield, Michael",
+      "details": "Friday AM - Hole #18"
+    },
+    {
+      "id": "1780058350033",
+      "timestamp": "2026-05-29T12:39:10.033Z",
+      "user": "Gradt, Jason",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Maxfield, Michael",
+      "details": "Friday AM - Hole #18"
+    },
+    {
+      "id": "1780058348226",
+      "timestamp": "2026-05-29T12:39:08.226Z",
+      "user": "Gradt, Jason",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Martin, Hubert",
+      "details": "Friday AM - Hole #18"
+    },
+    {
+      "id": "1780058347474",
+      "timestamp": "2026-05-29T12:39:07.474Z",
+      "user": "Gradt, Jason",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Larrabee, Robert",
+      "details": "Friday AM - Hole #18"
+    },
+    {
+      "id": "1780058345963",
+      "timestamp": "2026-05-29T12:39:05.963Z",
+      "user": "Gradt, Jason",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Krajca, Brian",
+      "details": "Friday AM - Hole #18"
+    },
+    {
+      "id": "1780058345562",
+      "timestamp": "2026-05-29T12:39:05.562Z",
+      "user": "Gradt, Jason",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Crow, Michael",
+      "details": "Friday AM - Hole #18"
+    },
+    {
+      "id": "1780058343641",
+      "timestamp": "2026-05-29T12:39:03.641Z",
+      "user": "Gradt, Jason",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Bird, Bob",
+      "details": "Friday AM - Hole #18"
+    },
+    {
+      "id": "1780058342360",
+      "timestamp": "2026-05-29T12:39:02.360Z",
+      "user": "Gradt, Jason",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Wehmeyer, Tom",
+      "details": "Friday AM - Hole #18"
+    },
+    {
+      "id": "1780058342202",
+      "timestamp": "2026-05-29T12:39:02.202Z",
+      "user": "Gradt, Jason",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Gradt, Jason",
+      "details": "Friday AM - Hole #18"
+    },
+    {
+      "id": "1780058340444",
+      "timestamp": "2026-05-29T12:39:00.444Z",
+      "user": "Gradt, Jason",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1780058308037",
+      "timestamp": "2026-05-29T12:38:28.037Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Phillips, Jason",
+      "details": "Friday AM - Hole #12"
+    },
+    {
+      "id": "1780058268590",
+      "timestamp": "2026-05-29T12:37:48.590Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 5",
+      "details": "Submitted Friday AM for Hole 5"
+    },
     {
       "id": "1780058012502",
       "timestamp": "2026-05-29T12:33:32.502Z",
@@ -52053,5 +52317,5 @@
       "deletedAt": 1779989943424
     }
   ],
-  "serverNow": 1780057751062
+  "serverNow": 1780058015778
 }
