@@ -20310,6 +20310,36 @@
       "checkedInBy": "Gordon, Gary",
       "timestamp": "2026-05-29T11:13:31.278Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "1520",
+      "volunteerName": "Craft, John",
+      "hole": 2,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Gordon, Gary",
+      "timestamp": "2026-05-29T11:22:35.385Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5876",
+      "volunteerName": "Womack, Tim",
+      "hole": 2,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Gordon, Gary",
+      "timestamp": "2026-05-29T11:22:41.822Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10437",
+      "volunteerName": "White, Drake",
+      "hole": 2,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Gordon, Gary",
+      "timestamp": "2026-05-29T11:24:38.198Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -20330,6 +20360,33 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1780053878461",
+      "timestamp": "2026-05-29T11:24:38.461Z",
+      "user": "Gordon, Gary",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "White, Drake",
+      "details": "Friday AM - Hole #2"
+    },
+    {
+      "id": "1780053762047",
+      "timestamp": "2026-05-29T11:22:42.047Z",
+      "user": "Gordon, Gary",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Womack, Tim",
+      "details": "Friday AM - Hole #2"
+    },
+    {
+      "id": "1780053755608",
+      "timestamp": "2026-05-29T11:22:35.608Z",
+      "user": "Gordon, Gary",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Craft, John",
+      "details": "Friday AM - Hole #2"
+    },
     {
       "id": "1780053237185",
       "timestamp": "2026-05-29T11:13:57.185Z",
@@ -49517,5 +49574,5 @@
       "deletedAt": 1779989943424
     }
   ],
-  "serverNow": 1780007983497
+  "serverNow": 1780053238291
 }
