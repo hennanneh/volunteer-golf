@@ -20788,6 +20788,16 @@
       "checkedInBy": "Pugh, Clayton",
       "timestamp": "2026-05-29T12:04:44.405Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "214",
+      "volunteerName": "Osiek, Curt",
+      "hole": 10,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-29T12:07:49.793Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -20808,6 +20818,15 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1780056523538",
+      "timestamp": "2026-05-29T12:08:43.538Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
     {
       "id": "1780056284396",
       "timestamp": "2026-05-29T12:04:44.396Z",
