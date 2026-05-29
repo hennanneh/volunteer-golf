@@ -23212,7 +23212,17 @@
       "day": "Friday",
       "shift": "PM",
       "checkedInBy": "Duncan, Larry",
-      "timestamp": "2026-05-29T16:59:54.290Z",
+      "timestamp": "2026-05-29T17:00:24.808Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8895",
+      "volunteerName": "Addison, Shirley",
+      "hole": 16,
+      "day": "Friday",
+      "shift": "PM",
+      "checkedInBy": "Roy, Mike",
+      "timestamp": "2026-05-29T17:03:54.881Z",
       "isAlternate": false
     }
   ],
