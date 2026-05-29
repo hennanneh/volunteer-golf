@@ -24135,6 +24135,16 @@
       "checkedInBy": "Burnett, Eric",
       "timestamp": "2026-05-29T18:16:04.745Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "9257",
+      "volunteerName": "Cristiano, John",
+      "hole": 18,
+      "day": "Friday",
+      "shift": "PM",
+      "checkedInBy": "Gradt, Jason",
+      "timestamp": "2026-05-29T18:23:31.755Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
