@@ -21868,6 +21868,16 @@
       "checkedInBy": "Rogenski, Chris P.",
       "timestamp": "2026-05-29T12:58:14.046Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "9621",
+      "volunteerName": "Ready, Charles",
+      "hole": 14,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Mosler, Mitch",
+      "timestamp": "2026-05-29T13:02:57.234Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -21888,6 +21898,15 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1780059777326",
+      "timestamp": "2026-05-29T13:02:57.326Z",
+      "user": "Mosler, Mitch",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Ready, Charles",
+      "details": "Friday AM - Hole #14"
+    },
     {
       "id": "1780059489374",
       "timestamp": "2026-05-29T12:58:09.374Z",
@@ -52866,5 +52885,5 @@
       "deletedAt": 1779989943424
     }
   ],
-  "serverNow": 1780059416590
+  "serverNow": 1780059200334
 }
