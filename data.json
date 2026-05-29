@@ -6514,7 +6514,8 @@
       "address": "100 Sam Bass Rd Willow Park, TX 76087",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1778813044771,
+      "volunteerPassword": "$2b$10$PZi5HfBJuD3ZaEc3oFLUouuuNjL1Gql2NVvisXqnzzj9fiayGluNm"
     },
     {
       "id": "8276",
