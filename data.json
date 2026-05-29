@@ -22199,6 +22199,16 @@
       "checkedInBy": "Browning, Wayne",
       "timestamp": "2026-05-29T13:36:12.955Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "5401",
+      "volunteerName": "Badalamenti, Jim",
+      "hole": 8,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-29T13:42:11.321Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
