@@ -2582,7 +2582,23 @@
       "volId": "2540",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1780081894538,
+      "notes": "",
+      "hatReceived": false,
+      "assignedHoles": [
+        99,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ]
     },
     {
       "id": "7768",
@@ -3082,7 +3098,18 @@
       "volId": "1521",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1780081930281,
+      "notes": "",
+      "hatReceived": false,
+      "assignedHoles": [
+        99,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8
+      ]
     },
     {
       "id": "8127",
@@ -3304,14 +3331,18 @@
       "volId": "4639",
       "hasAdminPassword": true,
       "hasVolunteerPassword": false,
-      "lastModified": 1778855578134,
+      "lastModified": 1780082033839,
       "adminPassword": "$2b$10$h0CPonAkFNTz00hqbELOr.zvbfmQqWVYZkDenYxH1YQvjj64aEp8S",
       "adminPasswordSetAt": "2026-04-20T20:13:12.730Z",
       "notes": "",
       "hatReceived": false,
       "assignedHoles": [
         99,
-        11
+        10,
+        11,
+        12,
+        13,
+        14
       ],
       "originalHole": 11,
       "volunteerPassword": "$2b$10$FR6K6NNPONmgorfriPR/jO7wK9rl0gZhSLFBPZj.U90uWBRFGH1T2"
@@ -3563,7 +3594,16 @@
       "volId": "359",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1780081955630,
+      "notes": "",
+      "hatReceived": false,
+      "assignedHoles": [
+        99,
+        8,
+        9,
+        11,
+        12
+      ]
     },
     {
       "id": "9874",
@@ -5013,7 +5053,18 @@
       "volId": "193",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1780082009404,
+      "notes": "",
+      "hatReceived": false,
+      "assignedHoles": [
+        99,
+        1,
+        6,
+        7,
+        9,
+        10,
+        18
+      ]
     },
     {
       "id": "10797",
@@ -6657,7 +6708,21 @@
       "volId": "450",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1780081878372,
+      "notes": "",
+      "hatReceived": false,
+      "assignedHoles": [
+        99,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
     },
     {
       "id": "9621",
@@ -7795,7 +7860,7 @@
       "volId": "438",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779968386109,
+      "lastModified": 1780081911824,
       "notes": "",
       "hatReceived": false,
       "assignedHoles": [
@@ -7803,7 +7868,8 @@
         1,
         2,
         3,
-        4
+        4,
+        5
       ]
     },
     {
@@ -24795,6 +24861,69 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1780082033839-lvnxa2",
+      "timestamp": "2026-05-29T19:13:53.839Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Hill, Michael",
+      "details": "Updated fields: assignedHoles"
+    },
+    {
+      "id": "1780082009404-9lx6ub",
+      "timestamp": "2026-05-29T19:13:29.404Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Markus, Richard",
+      "details": "Updated fields: notes, hatReceived, assignedHoles"
+    },
+    {
+      "id": "1780081955630-d06kmt",
+      "timestamp": "2026-05-29T19:12:35.630Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Howrey, Patrick",
+      "details": "Updated fields: notes, hatReceived, assignedHoles"
+    },
+    {
+      "id": "1780081930281-02c0fg",
+      "timestamp": "2026-05-29T19:12:10.281Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Harrell, John",
+      "details": "Updated fields: notes, hatReceived, assignedHoles"
+    },
+    {
+      "id": "1780081911824-20j03v",
+      "timestamp": "2026-05-29T19:11:51.824Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Steward, Denny",
+      "details": "Updated fields: assignedHoles"
+    },
+    {
+      "id": "1780081894538-taj7y3",
+      "timestamp": "2026-05-29T19:11:34.538Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Gillilan, Rusty",
+      "details": "Updated fields: notes, hatReceived, assignedHoles"
+    },
+    {
+      "id": "1780081878372-mhyspl",
+      "timestamp": "2026-05-29T19:11:18.372Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Rambo, James",
+      "details": "Updated fields: notes, hatReceived, assignedHoles"
+    },
     {
       "id": "1780077728360-fu0x6w",
       "timestamp": "2026-05-29T18:02:08.360Z",
