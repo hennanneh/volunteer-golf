@@ -6108,16 +6108,13 @@
       "hat": "",
       "scheduled": {
         "Wednesday AM": true,
-        "Thursday AM": true,
-        "Friday PM": true,
-        "Saturday AM": true,
-        "Sunday PM": true
+        "Thursday AM": true
       },
       "volId": "9590",
       "address": "5821 Waltham Ave Fort Worth, TX 76133",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779724938342,
+      "lastModified": 1780053917387,
       "notes": "Mark here is your new shift change "
     },
     {
@@ -20340,6 +20337,76 @@
       "checkedInBy": "Gordon, Gary",
       "timestamp": "2026-05-29T11:24:38.198Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "278",
+      "volunteerName": "Watson, Stan",
+      "hole": 11,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-29T11:25:22.416Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7291",
+      "volunteerName": "Casey, John",
+      "hole": 11,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-29T11:25:37.308Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10178",
+      "volunteerName": "Jamison, Tina",
+      "hole": 11,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-29T11:25:37.993Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6758",
+      "volunteerName": "Oakley, Jeff",
+      "hole": 11,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-29T11:25:40.267Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9796",
+      "volunteerName": "Richards, Stephen",
+      "hole": 11,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-29T11:25:42.031Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5612",
+      "volunteerName": "Tengra, Mary",
+      "hole": 11,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-29T11:25:42.633Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8127",
+      "volunteerName": "Harrell, Michael",
+      "hole": 2,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Gordon, Gary",
+      "timestamp": "2026-05-29T11:29:29.199Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -20360,6 +20427,87 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1780054169422",
+      "timestamp": "2026-05-29T11:29:29.422Z",
+      "user": "Gordon, Gary",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Harrell, Michael",
+      "details": "Friday AM - Hole #2"
+    },
+    {
+      "id": "1780053992451",
+      "timestamp": "2026-05-29T11:26:32.451Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1780053983864",
+      "timestamp": "2026-05-29T11:26:23.864Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
+    {
+      "id": "1780053942703",
+      "timestamp": "2026-05-29T11:25:42.703Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Tengra, Mary",
+      "details": "Friday AM - Hole #11"
+    },
+    {
+      "id": "1780053942303",
+      "timestamp": "2026-05-29T11:25:42.303Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Richards, Stephen",
+      "details": "Friday AM - Hole #11"
+    },
+    {
+      "id": "1780053940428",
+      "timestamp": "2026-05-29T11:25:40.428Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Oakley, Jeff",
+      "details": "Friday AM - Hole #11"
+    },
+    {
+      "id": "1780053938256",
+      "timestamp": "2026-05-29T11:25:38.256Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Jamison, Tina",
+      "details": "Friday AM - Hole #11"
+    },
+    {
+      "id": "1780053937869",
+      "timestamp": "2026-05-29T11:25:37.869Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Casey, John",
+      "details": "Friday AM - Hole #11"
+    },
+    {
+      "id": "1780053917387-yai10n",
+      "timestamp": "2026-05-29T11:25:17.387Z",
+      "user": "Sanders, Steve",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Ozier, Mark",
+      "details": "removed Friday PM, Saturday AM, Sunday PM"
+    },
     {
       "id": "1780053878461",
       "timestamp": "2026-05-29T11:24:38.461Z",
