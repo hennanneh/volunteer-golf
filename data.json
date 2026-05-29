@@ -24157,16 +24157,6 @@
       "isAlternate": false
     },
     {
-      "volunteerId": "274",
-      "volunteerName": "Waller, Gary",
-      "hole": 7,
-      "day": "Friday",
-      "shift": "PM",
-      "checkedInBy": "Quintana, Mike",
-      "timestamp": "2026-05-29T18:32:06.353Z",
-      "isAlternate": false
-    },
-    {
       "volunteerId": "7747",
       "volunteerName": "Bezner, Matt",
       "hole": 7,
@@ -24264,6 +24254,16 @@
       "shift": "PM",
       "checkedInBy": "Quintana, Mike",
       "timestamp": "2026-05-29T18:32:29.816Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "274",
+      "volunteerName": "Waller, Gary",
+      "hole": 7,
+      "day": "Friday",
+      "shift": "PM",
+      "checkedInBy": "Quintana, Mike",
+      "timestamp": "2026-05-29T18:37:03.434Z",
       "isAlternate": false
     }
   ],
