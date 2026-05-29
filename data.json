@@ -20637,6 +20637,46 @@
       "checkedInBy": "Pugh, Clayton",
       "timestamp": "2026-05-29T11:39:11.474Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "9580",
+      "volunteerName": "Ludgate, Robert",
+      "hole": 10,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-29T11:40:06.794Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10337",
+      "volunteerName": "Jacobs, Rick",
+      "hole": 10,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-29T11:41:54.614Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10737",
+      "volunteerName": "Baird, Christina",
+      "hole": 10,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-29T11:41:58.305Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8802",
+      "volunteerName": "Austin, Vance",
+      "hole": 10,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-29T11:41:59.321Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -20657,6 +20697,51 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1780054918538",
+      "timestamp": "2026-05-29T11:41:58.538Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Austin, Vance",
+      "details": "Friday AM - Hole #10"
+    },
+    {
+      "id": "1780054917522",
+      "timestamp": "2026-05-29T11:41:57.522Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Baird, Christina",
+      "details": "Friday AM - Hole #10"
+    },
+    {
+      "id": "1780054913827",
+      "timestamp": "2026-05-29T11:41:53.827Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Jacobs, Rick",
+      "details": "Friday AM - Hole #10"
+    },
+    {
+      "id": "1780054806164",
+      "timestamp": "2026-05-29T11:40:06.164Z",
+      "user": "Johnson, Kenny",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1780054806019",
+      "timestamp": "2026-05-29T11:40:06.019Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Ludgate, Robert",
+      "details": "Friday AM - Hole #10"
+    },
     {
       "id": "1780054735231",
       "timestamp": "2026-05-29T11:38:55.231Z",
@@ -50177,5 +50262,5 @@
       "deletedAt": 1779989943424
     }
   ],
-  "serverNow": 1780054693307
+  "serverNow": 1780054807495
 }
