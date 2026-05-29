@@ -7502,17 +7502,17 @@
       "yearsWorked": 2,
       "hat": "",
       "scheduled": {
-        "Wednesday PM": true,
         "Thursday PM": true,
         "Friday AM": true,
         "Saturday PM": true,
-        "Sunday AM": true
+        "Sunday AM": true,
+        "Sunday PM": true
       },
       "volId": "10151",
       "address": "11869 Vienna Apple Rd Fort Worth, TX 76244",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779381402004
+      "lastModified": 1780063982964
     },
     {
       "id": "8462",
@@ -22203,6 +22203,106 @@
       "checkedInBy": "Rogenski, Chris P.",
       "timestamp": "2026-05-29T13:42:11.321Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "5217",
+      "volunteerName": "Quintana, Mike",
+      "hole": 7,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Quintana, Mike",
+      "timestamp": "2026-05-29T14:11:33.762Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "274",
+      "volunteerName": "Waller, Gary",
+      "hole": 7,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Quintana, Mike",
+      "timestamp": "2026-05-29T14:11:35.324Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9969",
+      "volunteerName": "Dority, Jenny",
+      "hole": 7,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Quintana, Mike",
+      "timestamp": "2026-05-29T14:11:37.233Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8178",
+      "volunteerName": "Escobedo, Leo",
+      "hole": 7,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Quintana, Mike",
+      "timestamp": "2026-05-29T14:11:38.085Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7912",
+      "volunteerName": "Escobedo, Xavier",
+      "hole": 7,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Quintana, Mike",
+      "timestamp": "2026-05-29T14:11:39.465Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5857",
+      "volunteerName": "Gunn, Eric",
+      "hole": 7,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Quintana, Mike",
+      "timestamp": "2026-05-29T14:11:40.274Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8183",
+      "volunteerName": "Olney, Doug",
+      "hole": 7,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Quintana, Mike",
+      "timestamp": "2026-05-29T14:11:42.110Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9900",
+      "volunteerName": "Riemitis, Andy",
+      "hole": 7,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Quintana, Mike",
+      "timestamp": "2026-05-29T14:11:43.247Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9204",
+      "volunteerName": "Sanders, Denny",
+      "hole": 7,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Quintana, Mike",
+      "timestamp": "2026-05-29T14:11:45.382Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10151",
+      "volunteerName": "Silvani, Rob",
+      "hole": 7,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Quintana, Mike",
+      "timestamp": "2026-05-29T14:11:45.798Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -22223,6 +22323,15 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1780063982964-ldmq2g",
+      "timestamp": "2026-05-29T14:13:02.964Z",
+      "user": "Quintana, Mike",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Silvani, Rob",
+      "details": "added Sunday PM; removed Wednesday PM"
+    },
     {
       "id": "1780062602176-7ykl7a",
       "timestamp": "2026-05-29T13:50:02.176Z",
