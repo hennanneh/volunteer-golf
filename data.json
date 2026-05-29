@@ -20233,6 +20233,15 @@
   },
   "activityLog": [
     {
+      "id": "1780016486122",
+      "timestamp": "2026-05-29T01:01:26.122Z",
+      "user": "Sale, Lynn",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
       "id": "1780016323115",
       "timestamp": "2026-05-29T00:58:43.115Z",
       "user": "Sale, Lynn",
