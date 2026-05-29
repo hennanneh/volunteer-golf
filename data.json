@@ -20231,6 +20231,15 @@
   },
   "activityLog": [
     {
+      "id": "1780021494071",
+      "timestamp": "2026-05-29T02:24:54.071Z",
+      "user": "Montalvo, Sammy",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1780020269559-hhpyh6",
       "timestamp": "2026-05-29T02:04:29.559Z",
       "user": "Pugh, Clayton",
