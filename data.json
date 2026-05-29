@@ -21598,6 +21598,16 @@
       "checkedInBy": "Gradt, Jason",
       "timestamp": "2026-05-29T12:39:16.727Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "10342",
+      "volunteerName": "Johnson, Kyle",
+      "hole": 13,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Duncan, Larry",
+      "timestamp": "2026-05-29T12:44:28.578Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -21618,6 +21628,15 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1780058690840",
+      "timestamp": "2026-05-29T12:44:50.840Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 13",
+      "details": "Submitted Friday AM for Hole 13"
+    },
     {
       "id": "1780058357082",
       "timestamp": "2026-05-29T12:39:17.082Z",
