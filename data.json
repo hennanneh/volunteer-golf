@@ -179,13 +179,14 @@
         "Friday PM": true,
         "Saturday AM": true,
         "Saturday PM": true,
+        "Sunday AM": true,
         "Sunday PM": true
       },
       "address": "6017 Clipper Lane\r\nFort Worth, TX 76179",
       "volId": "10644",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779730350116
+      "lastModified": 1780077728359
     },
     {
       "id": "8802",
@@ -23826,16 +23827,6 @@
       "isAlternate": false
     },
     {
-      "volunteerId": "7291",
-      "volunteerName": "Casey, John",
-      "hole": 11,
-      "day": "Friday",
-      "shift": "PM",
-      "checkedInBy": "Watson, Stan",
-      "timestamp": "2026-05-29T17:59:56.608Z",
-      "isAlternate": false
-    },
-    {
       "volunteerId": "7043",
       "volunteerName": "Gray, James",
       "hole": 11,
@@ -23864,6 +23855,56 @@
       "checkedInBy": "Watson, Stan",
       "timestamp": "2026-05-29T18:00:00.284Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "10178",
+      "volunteerName": "Jamison, Tina",
+      "hole": 11,
+      "day": "Friday",
+      "shift": "PM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-29T18:00:03.414Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5015",
+      "volunteerName": "Meinke, Albert",
+      "hole": 11,
+      "day": "Friday",
+      "shift": "PM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-29T18:00:04.794Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9796",
+      "volunteerName": "Richards, Stephen",
+      "hole": 11,
+      "day": "Friday",
+      "shift": "PM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-29T18:00:05.253Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8154",
+      "volunteerName": "Wyatt, Jeff",
+      "hole": 11,
+      "day": "Friday",
+      "shift": "PM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-29T18:00:05.426Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7291",
+      "volunteerName": "Casey, John",
+      "hole": 11,
+      "day": "Friday",
+      "shift": "PM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-29T18:01:41.779Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -23884,6 +23925,15 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1780077728360-fu0x6w",
+      "timestamp": "2026-05-29T18:02:08.360Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Ash, Michael",
+      "details": "added Sunday AM"
+    },
     {
       "id": "1780076614104-bx8o7x",
       "timestamp": "2026-05-29T17:43:34.104Z",
