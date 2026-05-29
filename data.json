@@ -23724,6 +23724,26 @@
       "checkedInBy": "Rogenski, Chris P.",
       "timestamp": "2026-05-29T17:42:31.161Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "5192",
+      "volunteerName": "Imboden, Thomas",
+      "hole": 5,
+      "day": "Friday",
+      "shift": "PM",
+      "checkedInBy": "Montalvo, Sammy",
+      "timestamp": "2026-05-29T17:54:58.292Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10610",
+      "volunteerName": "Simon, Russ",
+      "hole": 18,
+      "day": "Friday",
+      "shift": "PM",
+      "checkedInBy": "Gradt, Jason",
+      "timestamp": "2026-05-29T17:54:58.970Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
