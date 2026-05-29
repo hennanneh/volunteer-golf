@@ -24851,6 +24851,16 @@
       "checkedInBy": "Pugh, Clayton",
       "timestamp": "2026-05-29T20:34:55.427Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "6949",
+      "volunteerName": "Putt, Gerald",
+      "hole": 12,
+      "day": "Friday",
+      "shift": "PM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-29T21:16:14.825Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
