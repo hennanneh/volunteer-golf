@@ -20798,6 +20798,106 @@
       "checkedInBy": "Trout, Wayne",
       "timestamp": "2026-05-29T12:07:49.793Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "8234",
+      "volunteerName": "Wilson, Todd",
+      "hole": 3,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Wilson, Todd",
+      "timestamp": "2026-05-29T12:10:27.601Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "1720",
+      "volunteerName": "Butler, Mark",
+      "hole": 3,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Wilson, Todd",
+      "timestamp": "2026-05-29T12:10:28.580Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7998",
+      "volunteerName": "Burrus, Sam",
+      "hole": 3,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Wilson, Todd",
+      "timestamp": "2026-05-29T12:10:37.929Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10634",
+      "volunteerName": "Jones, David",
+      "hole": 3,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Wilson, Todd",
+      "timestamp": "2026-05-29T12:10:39.372Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7806",
+      "volunteerName": "Mosler, Mitch",
+      "hole": 14,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Mosler, Mitch",
+      "timestamp": "2026-05-29T12:11:41.304Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5695",
+      "volunteerName": "Jessop, Tim",
+      "hole": 13,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Duncan, Larry",
+      "timestamp": "2026-05-29T12:11:56.614Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8852",
+      "volunteerName": "Vollintine, Derek",
+      "hole": 13,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Duncan, Larry",
+      "timestamp": "2026-05-29T12:12:09.287Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9775",
+      "volunteerName": "Stults, Mike",
+      "hole": 13,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Duncan, Larry",
+      "timestamp": "2026-05-29T12:12:14.688Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6962",
+      "volunteerName": "Eisen, Scott",
+      "hole": 13,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Duncan, Larry",
+      "timestamp": "2026-05-29T12:12:26.320Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10349",
+      "volunteerName": "Gunnels, Cliff",
+      "hole": 13,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Duncan, Larry",
+      "timestamp": "2026-05-29T12:12:31.379Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -20818,6 +20918,132 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1780056880337",
+      "timestamp": "2026-05-29T12:14:40.337Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 13",
+      "details": "Submitted Friday AM for Hole 13"
+    },
+    {
+      "id": "1780056751426",
+      "timestamp": "2026-05-29T12:12:31.426Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Gunnels, Cliff",
+      "details": "Friday AM - Hole #13"
+    },
+    {
+      "id": "1780056746366",
+      "timestamp": "2026-05-29T12:12:26.366Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Eisen, Scott",
+      "details": "Friday AM - Hole #13"
+    },
+    {
+      "id": "1780056734737",
+      "timestamp": "2026-05-29T12:12:14.737Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Stults, Mike",
+      "details": "Friday AM - Hole #13"
+    },
+    {
+      "id": "1780056729465",
+      "timestamp": "2026-05-29T12:12:09.465Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1780056729332",
+      "timestamp": "2026-05-29T12:12:09.332Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Vollintine, Derek",
+      "details": "Friday AM - Hole #13"
+    },
+    {
+      "id": "1780056708891",
+      "timestamp": "2026-05-29T12:11:48.891Z",
+      "user": "Mosler, Mitch",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 14",
+      "details": "Submitted Friday AM for Hole 14"
+    },
+    {
+      "id": "1780056701391",
+      "timestamp": "2026-05-29T12:11:41.391Z",
+      "user": "Mosler, Mitch",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Mosler, Mitch",
+      "details": "Friday AM - Hole #14"
+    },
+    {
+      "id": "1780056698668",
+      "timestamp": "2026-05-29T12:11:38.668Z",
+      "user": "Mosler, Mitch",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1780056639451",
+      "timestamp": "2026-05-29T12:10:39.451Z",
+      "user": "Wilson, Todd",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Jones, David",
+      "details": "Friday AM - Hole #3"
+    },
+    {
+      "id": "1780056638012",
+      "timestamp": "2026-05-29T12:10:38.012Z",
+      "user": "Wilson, Todd",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Burrus, Sam",
+      "details": "Friday AM - Hole #3"
+    },
+    {
+      "id": "1780056628653",
+      "timestamp": "2026-05-29T12:10:28.653Z",
+      "user": "Wilson, Todd",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Butler, Mark",
+      "details": "Friday AM - Hole #3"
+    },
+    {
+      "id": "1780056627667",
+      "timestamp": "2026-05-29T12:10:27.667Z",
+      "user": "Wilson, Todd",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Wilson, Todd",
+      "details": "Friday AM - Hole #3"
+    },
+    {
+      "id": "1780056609929",
+      "timestamp": "2026-05-29T12:10:09.929Z",
+      "user": "Wilson, Todd",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1780056523538",
       "timestamp": "2026-05-29T12:08:43.538Z",
@@ -50572,5 +50798,5 @@
       "deletedAt": 1779989943424
     }
   ],
-  "serverNow": 1780055931101
+  "serverNow": 1780056730775
 }
