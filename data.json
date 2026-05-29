@@ -2497,18 +2497,12 @@
       "email": "timgibson145@gmail.com",
       "yearsWorked": 7,
       "hat": "",
-      "scheduled": {
-        "Wednesday PM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true
-      },
+      "scheduled": {},
       "volId": "7924",
       "address": "145 Links Ln Aledo, TX 76008",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1780062602176
     },
     {
       "id": "10667",
@@ -22229,6 +22223,15 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1780062602176-7ykl7a",
+      "timestamp": "2026-05-29T13:50:02.176Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Gibson, Tim",
+      "details": "removed Wednesday PM, Thursday PM, Friday AM, Saturday PM, Sunday AM"
+    },
     {
       "id": "1780060129654",
       "timestamp": "2026-05-29T13:08:49.654Z",
