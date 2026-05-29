@@ -7663,14 +7663,13 @@
         "Wednesday PM": true,
         "Thursday AM": true,
         "Friday PM": true,
-        "Saturday AM": true,
-        "Sunday PM": true
+        "Saturday AM": true
       },
       "volId": "4204",
       "address": "600 Marsh Cove Circle Summerville, SC 29486",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1780076614103
     },
     {
       "id": "2629",
@@ -23615,6 +23614,116 @@
       "checkedInBy": "Sanders, Steve",
       "timestamp": "2026-05-29T17:38:33.555Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "6191",
+      "volunteerName": "Browning, Wayne",
+      "hole": 17,
+      "day": "Friday",
+      "shift": "PM",
+      "checkedInBy": "Browning, Wayne",
+      "timestamp": "2026-05-29T17:40:49.886Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "3138",
+      "volunteerName": "Bishop, Woody",
+      "hole": 17,
+      "day": "Friday",
+      "shift": "PM",
+      "checkedInBy": "Browning, Wayne",
+      "timestamp": "2026-05-29T17:40:50.321Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "3777",
+      "volunteerName": "Hicks, Greg",
+      "hole": 17,
+      "day": "Friday",
+      "shift": "PM",
+      "checkedInBy": "Browning, Wayne",
+      "timestamp": "2026-05-29T17:40:52.915Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "3778",
+      "volunteerName": "Hicks, Jackie",
+      "hole": 17,
+      "day": "Friday",
+      "shift": "PM",
+      "checkedInBy": "Browning, Wayne",
+      "timestamp": "2026-05-29T17:40:54.836Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7943",
+      "volunteerName": "Moss, Jeff",
+      "hole": 17,
+      "day": "Friday",
+      "shift": "PM",
+      "checkedInBy": "Browning, Wayne",
+      "timestamp": "2026-05-29T17:40:59.483Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4096",
+      "volunteerName": "Otis, Mike",
+      "hole": 17,
+      "day": "Friday",
+      "shift": "PM",
+      "checkedInBy": "Browning, Wayne",
+      "timestamp": "2026-05-29T17:41:03.952Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8644",
+      "volunteerName": "Richie, Antonio",
+      "hole": 17,
+      "day": "Friday",
+      "shift": "PM",
+      "checkedInBy": "Browning, Wayne",
+      "timestamp": "2026-05-29T17:41:06.292Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10495",
+      "volunteerName": "Studdard, William",
+      "hole": 17,
+      "day": "Friday",
+      "shift": "PM",
+      "checkedInBy": "Browning, Wayne",
+      "timestamp": "2026-05-29T17:41:10.211Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8367",
+      "volunteerName": "King, Jeff",
+      "hole": 8,
+      "day": "Friday",
+      "shift": "PM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-29T17:42:29.915Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9082",
+      "volunteerName": "King, Pat",
+      "hole": 8,
+      "day": "Friday",
+      "shift": "PM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-29T17:42:30.877Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6471",
+      "volunteerName": "King, Steve",
+      "hole": 8,
+      "day": "Friday",
+      "shift": "PM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-29T17:42:31.161Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -23635,6 +23744,15 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1780076614104-bx8o7x",
+      "timestamp": "2026-05-29T17:43:34.104Z",
+      "user": "Montalvo, Sammy",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Smith, Fred",
+      "details": "removed Sunday PM"
+    },
     {
       "id": "1780075288503-7aled3",
       "timestamp": "2026-05-29T17:21:28.503Z",
