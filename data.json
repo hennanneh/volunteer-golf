@@ -21608,6 +21608,26 @@
       "checkedInBy": "Duncan, Larry",
       "timestamp": "2026-05-29T12:44:28.578Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "9465",
+      "volunteerName": "Blankenship, Mitch",
+      "hole": 5,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Imboden, Thomas",
+      "timestamp": "2026-05-29T12:48:16.018Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10239",
+      "volunteerName": "A Schultz, Jill",
+      "hole": 5,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Imboden, Thomas",
+      "timestamp": "2026-05-29T12:48:20.174Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -21628,6 +21648,51 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1780058916028",
+      "timestamp": "2026-05-29T12:48:36.028Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 5",
+      "details": "Submitted Friday AM for Hole 5"
+    },
+    {
+      "id": "1780058900285",
+      "timestamp": "2026-05-29T12:48:20.285Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "A Schultz, Jill",
+      "details": "Friday AM - Hole #5"
+    },
+    {
+      "id": "1780058896139",
+      "timestamp": "2026-05-29T12:48:16.139Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Blankenship, Mitch",
+      "details": "Friday AM - Hole #5"
+    },
+    {
+      "id": "1780058862947",
+      "timestamp": "2026-05-29T12:47:42.947Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 5",
+      "details": "Submitted Friday AM for Hole 5"
+    },
+    {
+      "id": "1780058761897",
+      "timestamp": "2026-05-29T12:46:01.897Z",
+      "user": "Roy, Mike",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1780058690840",
       "timestamp": "2026-05-29T12:44:50.840Z",
@@ -52336,5 +52401,5 @@
       "deletedAt": 1779989943424
     }
   ],
-  "serverNow": 1780058015778
+  "serverNow": 1780058357908
 }
