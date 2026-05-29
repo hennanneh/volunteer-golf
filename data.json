@@ -3803,9 +3803,7 @@
         "Wednesday PM": true,
         "Thursday AM": true,
         "Thursday PM": true,
-        "Friday AM": true,
         "Friday PM": true,
-        "Saturday AM": true,
         "Saturday PM": true,
         "Sunday AM": true,
         "Sunday PM": true
@@ -3814,7 +3812,7 @@
       "volId": "2657",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779410970054
+      "lastModified": 1780096643676
     },
     {
       "id": "10178",
@@ -24871,6 +24869,24 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1780096643676-6jbvjh",
+      "timestamp": "2026-05-29T23:17:23.676Z",
+      "user": "unauth-107.116.180.87",
+      "userType": "unauthenticated",
+      "action": "edit-schedule",
+      "target": "James, Marty",
+      "details": "removed Saturday AM"
+    },
+    {
+      "id": "1780096512324-avbo65",
+      "timestamp": "2026-05-29T23:15:12.324Z",
+      "user": "unauth-107.116.180.87",
+      "userType": "unauthenticated",
+      "action": "edit-schedule",
+      "target": "James, Marty",
+      "details": "removed Friday AM"
+    },
     {
       "id": "1780082033839-lvnxa2",
       "timestamp": "2026-05-29T19:13:53.839Z",
