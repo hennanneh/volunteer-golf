@@ -20225,11 +20225,29 @@
     "helpName": "Mike Hill",
     "pairingsUrl": "https://colonialvolunteers.golf/pairings/",
     "showOutingPreferences": false,
-    "pairingsText": "Pairings Thursday",
+    "pairingsText": "Pairings Friday ",
     "showPoweredBy": true,
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1780050867649",
+      "timestamp": "2026-05-29T10:34:27.649Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "settings-change",
+      "target": "pairingsText",
+      "details": "Updated setting: pairingsText"
+    },
+    {
+      "id": "1780050856781",
+      "timestamp": "2026-05-29T10:34:16.781Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Admin portal"
+    },
     {
       "id": "1780047047123",
       "timestamp": "2026-05-29T09:30:47.123Z",
