@@ -20210,6 +20210,36 @@
       "checkedInBy": "Pugh, Clayton",
       "timestamp": "2026-05-28T22:39:49.462Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "145",
+      "volunteerName": "Gordon, Gary",
+      "hole": 2,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Gordon, Gary",
+      "timestamp": "2026-05-29T10:54:07.210Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "243",
+      "volunteerName": "Sale, Lynn",
+      "hole": 2,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Gordon, Gary",
+      "timestamp": "2026-05-29T10:54:07.907Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9787",
+      "volunteerName": "Waruta, James",
+      "hole": 2,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Gordon, Gary",
+      "timestamp": "2026-05-29T10:54:21.502Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -20230,6 +20260,42 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1780052062199",
+      "timestamp": "2026-05-29T10:54:22.199Z",
+      "user": "Gordon, Gary",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Waruta, James",
+      "details": "Friday AM - Hole #2"
+    },
+    {
+      "id": "1780052048139",
+      "timestamp": "2026-05-29T10:54:08.139Z",
+      "user": "Gordon, Gary",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Sale, Lynn",
+      "details": "Friday AM - Hole #2"
+    },
+    {
+      "id": "1780052047442",
+      "timestamp": "2026-05-29T10:54:07.443Z",
+      "user": "Gordon, Gary",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Gordon, Gary",
+      "details": "Friday AM - Hole #2"
+    },
+    {
+      "id": "1780052045556",
+      "timestamp": "2026-05-29T10:54:05.556Z",
+      "user": "Gordon, Gary",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1780050867649",
       "timestamp": "2026-05-29T10:34:27.649Z",
