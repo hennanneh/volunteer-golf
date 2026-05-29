@@ -6267,6 +6267,7 @@
         "Wednesday PM": true,
         "Thursday AM": true,
         "Thursday PM": true,
+        "Friday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
         "Saturday PM": true,
@@ -6276,7 +6277,7 @@
       "address": "7501 Ranch Ct. Benbrook, TX 76126",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779832394574
+      "lastModified": 1780055452337
     },
     {
       "id": "9575",
@@ -20687,6 +20688,16 @@
       "checkedInBy": "Gordon, Gary",
       "timestamp": "2026-05-29T11:49:43.249Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "10150",
+      "volunteerName": "Peterson, Durk",
+      "hole": 10,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-29T11:50:59.118Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -20707,6 +20718,33 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1780055458330",
+      "timestamp": "2026-05-29T11:50:58.330Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Peterson, Durk",
+      "details": "Friday AM - Hole #10"
+    },
+    {
+      "id": "1780055452337-7jg98c",
+      "timestamp": "2026-05-29T11:50:52.337Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Peterson, Durk",
+      "details": "added Friday AM"
+    },
+    {
+      "id": "1780055401469",
+      "timestamp": "2026-05-29T11:50:01.469Z",
+      "user": "Gordon, Gary",
+      "userType": "Captain",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Captain portal"
+    },
     {
       "id": "1780054918538",
       "timestamp": "2026-05-29T11:41:58.538Z",
