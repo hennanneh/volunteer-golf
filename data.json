@@ -21420,16 +21420,6 @@
       "isAlternate": false
     },
     {
-      "volunteerId": "9621",
-      "volunteerName": "Ready, Charles",
-      "hole": 14,
-      "day": "Friday",
-      "shift": "AM",
-      "checkedInBy": "Sanders, Steve",
-      "timestamp": "2026-05-29T12:30:50.628Z",
-      "isAlternate": false
-    },
-    {
       "volunteerId": "7207",
       "volunteerName": "Watson, Steve",
       "hole": 14,
@@ -21628,6 +21618,56 @@
       "checkedInBy": "Imboden, Thomas",
       "timestamp": "2026-05-29T12:48:20.174Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "8887",
+      "volunteerName": "Arnold, Tyrone",
+      "hole": 14,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Mosler, Mitch",
+      "timestamp": "2026-05-29T12:52:24.753Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9018",
+      "volunteerName": "Chee, Wendell",
+      "hole": 14,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Mosler, Mitch",
+      "timestamp": "2026-05-29T12:52:28.724Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10582",
+      "volunteerName": "Corrales, Jack",
+      "hole": 14,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Mosler, Mitch",
+      "timestamp": "2026-05-29T12:52:30.288Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8608",
+      "volunteerName": "Tellez, Victor",
+      "hole": 14,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Mosler, Mitch",
+      "timestamp": "2026-05-29T12:52:34.233Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9233",
+      "volunteerName": "Wooldridge, Brad",
+      "hole": 14,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Mosler, Mitch",
+      "timestamp": "2026-05-29T12:53:04.969Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -21648,6 +21688,42 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1780059198490",
+      "timestamp": "2026-05-29T12:53:18.490Z",
+      "user": "Clayton, Rodney",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1780059193692",
+      "timestamp": "2026-05-29T12:53:13.692Z",
+      "user": "Mosler, Mitch",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 14",
+      "details": "Submitted Friday AM for Hole 14"
+    },
+    {
+      "id": "1780059185059",
+      "timestamp": "2026-05-29T12:53:05.059Z",
+      "user": "Mosler, Mitch",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Wooldridge, Brad",
+      "details": "Friday AM - Hole #14"
+    },
+    {
+      "id": "1780059177945",
+      "timestamp": "2026-05-29T12:52:57.945Z",
+      "user": "Mosler, Mitch",
+      "userType": "Captain",
+      "action": "check-out",
+      "target": "Ready, Charles",
+      "details": "Friday AM - Hole #14"
+    },
     {
       "id": "1780058916028",
       "timestamp": "2026-05-29T12:48:36.028Z",
