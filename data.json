@@ -22366,16 +22366,6 @@
       "isAlternate": false
     },
     {
-      "volunteerId": "4128",
-      "volunteerName": "Gilley, Roger",
-      "hole": 1,
-      "day": "Friday",
-      "shift": "PM",
-      "checkedInBy": "Johnson, Kenny",
-      "timestamp": "2026-05-29T16:08:30.380Z",
-      "isAlternate": false
-    },
-    {
       "volunteerId": "9850",
       "volunteerName": "Hartman, Cathy",
       "hole": 1,
@@ -22783,6 +22773,76 @@
       "shift": "PM",
       "checkedInBy": "Duncan, Larry",
       "timestamp": "2026-05-29T16:50:00.643Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4128",
+      "volunteerName": "Gilley, Roger",
+      "hole": 1,
+      "day": "Friday",
+      "shift": "PM",
+      "checkedInBy": "Ruddell, Dick",
+      "timestamp": "2026-05-29T16:52:13.758Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5454",
+      "volunteerName": "Kopenec, Rich",
+      "hole": 13,
+      "day": "Friday",
+      "shift": "PM",
+      "checkedInBy": "Duncan, Larry",
+      "timestamp": "2026-05-29T16:54:23.492Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "3489",
+      "volunteerName": "Maxwell, Steve",
+      "hole": 13,
+      "day": "Friday",
+      "shift": "PM",
+      "checkedInBy": "Duncan, Larry",
+      "timestamp": "2026-05-29T16:54:28.585Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9397",
+      "volunteerName": "Seebaum, Todd",
+      "hole": 13,
+      "day": "Friday",
+      "shift": "PM",
+      "checkedInBy": "Duncan, Larry",
+      "timestamp": "2026-05-29T16:54:46.109Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9658",
+      "volunteerName": "Jutras, Michael",
+      "hole": 9,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Jutras, Michael",
+      "timestamp": "2026-05-29T16:54:50.307Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "3034",
+      "volunteerName": "Burnett, Eric",
+      "hole": 9,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Jutras, Michael",
+      "timestamp": "2026-05-29T16:54:50.721Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2055",
+      "volunteerName": "Edwards, Bill",
+      "hole": 9,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Jutras, Michael",
+      "timestamp": "2026-05-29T16:54:55.543Z",
       "isAlternate": false
     }
   ],
