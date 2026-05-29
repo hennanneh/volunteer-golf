@@ -20261,6 +20261,24 @@
   },
   "activityLog": [
     {
+      "id": "1780052391400",
+      "timestamp": "2026-05-29T10:59:51.400Z",
+      "user": "Hughes, Allen",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
+      "id": "1780052248161",
+      "timestamp": "2026-05-29T10:57:28.161Z",
+      "user": "Nederostek, Brad",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
       "id": "1780052062199",
       "timestamp": "2026-05-29T10:54:22.199Z",
       "user": "Gordon, Gary",
