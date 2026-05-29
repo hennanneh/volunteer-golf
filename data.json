@@ -20231,6 +20231,15 @@
   },
   "activityLog": [
     {
+      "id": "1780047047123",
+      "timestamp": "2026-05-29T09:30:47.123Z",
+      "user": "Harrell, Michael",
+      "userType": "Volunteer",
+      "action": "logout",
+      "target": "",
+      "details": "Logged out of Volunteer portal"
+    },
+    {
       "id": "1780022531701",
       "timestamp": "2026-05-29T02:42:11.701Z",
       "user": "Ready, Charles",
