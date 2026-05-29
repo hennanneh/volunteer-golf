@@ -20407,6 +20407,86 @@
       "checkedInBy": "Gordon, Gary",
       "timestamp": "2026-05-29T11:29:29.199Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "4536",
+      "volunteerName": "Trout, Wayne",
+      "hole": 10,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-29T11:31:39.972Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10338",
+      "volunteerName": "Cannon, Natalie",
+      "hole": 10,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-29T11:31:48.896Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9560",
+      "volunteerName": "Cross, Britt",
+      "hole": 10,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-29T11:31:53.901Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10348",
+      "volunteerName": "Hayes, Laurene",
+      "hole": 10,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-29T11:31:55.673Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9788",
+      "volunteerName": "Kramer, Ed",
+      "hole": 10,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-29T11:32:00.342Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4518",
+      "volunteerName": "Kutzler, Jack",
+      "hole": 10,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-29T11:32:02.592Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9485",
+      "volunteerName": "Lutke, Jeff",
+      "hole": 10,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-29T11:32:08.016Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4225",
+      "volunteerName": "Turner, Tom",
+      "hole": 10,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-29T11:32:19.146Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -20427,6 +20507,87 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1780054338360",
+      "timestamp": "2026-05-29T11:32:18.360Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Turner, Tom",
+      "details": "Friday AM - Hole #10"
+    },
+    {
+      "id": "1780054327232",
+      "timestamp": "2026-05-29T11:32:07.232Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Lutke, Jeff",
+      "details": "Friday AM - Hole #10"
+    },
+    {
+      "id": "1780054321811",
+      "timestamp": "2026-05-29T11:32:01.811Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Kutzler, Jack",
+      "details": "Friday AM - Hole #10"
+    },
+    {
+      "id": "1780054319555",
+      "timestamp": "2026-05-29T11:31:59.555Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Kramer, Ed",
+      "details": "Friday AM - Hole #10"
+    },
+    {
+      "id": "1780054314883",
+      "timestamp": "2026-05-29T11:31:54.883Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Hayes, Laurene",
+      "details": "Friday AM - Hole #10"
+    },
+    {
+      "id": "1780054313111",
+      "timestamp": "2026-05-29T11:31:53.111Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Cross, Britt",
+      "details": "Friday AM - Hole #10"
+    },
+    {
+      "id": "1780054308100",
+      "timestamp": "2026-05-29T11:31:48.100Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Cannon, Natalie",
+      "details": "Friday AM - Hole #10"
+    },
+    {
+      "id": "1780054299181",
+      "timestamp": "2026-05-29T11:31:39.181Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Trout, Wayne",
+      "details": "Friday AM - Hole #10"
+    },
+    {
+      "id": "1780054294735",
+      "timestamp": "2026-05-29T11:31:34.735Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
     {
       "id": "1780054169422",
       "timestamp": "2026-05-29T11:29:29.422Z",
