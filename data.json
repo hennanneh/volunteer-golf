@@ -6312,18 +6312,12 @@
       "email": "rootjp@yahoo.com",
       "yearsWorked": 5,
       "hat": "",
-      "scheduled": {
-        "Wednesday PM": true,
-        "Thursday PM": true,
-        "Friday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true
-      },
+      "scheduled": {},
       "volId": "8439",
       "address": "317 W Adams Ave Kiefer, OK 74041",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1780020269559
     },
     {
       "id": "9198",
@@ -20236,6 +20230,15 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1780020269559-hhpyh6",
+      "timestamp": "2026-05-29T02:04:29.559Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Phillips, Michael",
+      "details": "removed Wednesday PM, Thursday PM, Friday AM, Saturday PM, Sunday AM"
+    },
     {
       "id": "1780019575494",
       "timestamp": "2026-05-29T01:52:55.495Z",
