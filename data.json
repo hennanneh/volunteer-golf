@@ -5088,12 +5088,16 @@
       "email": "resmaxm@gmail.com",
       "yearsWorked": 12,
       "hat": "",
-      "scheduled": {},
+      "scheduled": {
+        "Friday AM": true,
+        "Saturday PM": true,
+        "Sunday AM": true
+      },
       "volId": "5764",
       "address": "5101 Dewdrop Lane Fort Worth, TX 76123-1934",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779883159562
+      "lastModified": 1780018327928
     },
     {
       "id": "10683",
@@ -20232,6 +20236,24 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1780018469881",
+      "timestamp": "2026-05-29T01:34:29.881Z",
+      "user": "Duncan, Larry",
+      "userType": "Captain",
+      "action": "login",
+      "target": "",
+      "details": "Logged into Captain portal"
+    },
+    {
+      "id": "1780018327928-jbbvwm",
+      "timestamp": "2026-05-29T01:32:07.928Z",
+      "user": "Wehmeyer, Tom",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Maxfield, Michael",
+      "details": "added Friday AM, Saturday PM, Sunday AM"
+    },
     {
       "id": "1780016486122",
       "timestamp": "2026-05-29T01:01:26.122Z",
