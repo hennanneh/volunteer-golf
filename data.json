@@ -20677,6 +20677,16 @@
       "checkedInBy": "Trout, Wayne",
       "timestamp": "2026-05-29T11:41:59.321Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "5539",
+      "volunteerName": "Mansir, Greg",
+      "hole": 2,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Gordon, Gary",
+      "timestamp": "2026-05-29T11:49:43.249Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
