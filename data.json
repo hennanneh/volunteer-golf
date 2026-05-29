@@ -4703,7 +4703,8 @@
       "address": "6120 Fall Creek Lane Fort Worth, TX 76123",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779545374417
+      "lastModified": 1779545374417,
+      "volunteerPassword": "$2b$10$u2E3DcUZXXjH0UNoFieY3usgyQ2Y0pNf8pOxF5d.d3CqDzcXHdFBq"
     },
     {
       "id": "7692",
