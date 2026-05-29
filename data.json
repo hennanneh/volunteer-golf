@@ -20738,6 +20738,56 @@
       "checkedInBy": "Imboden, Thomas",
       "timestamp": "2026-05-29T11:59:26.584Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "10293",
+      "volunteerName": "Ricks, Bob",
+      "hole": 12,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-29T12:03:03.697Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8711",
+      "volunteerName": "Smith, Bruce T.",
+      "hole": 12,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-29T12:03:03.768Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10012",
+      "volunteerName": "Borgschatz, Keith",
+      "hole": 12,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-29T12:03:21.939Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9400",
+      "volunteerName": "Chapman, John A.",
+      "hole": 12,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-29T12:03:55.769Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8878",
+      "volunteerName": "Myrick, Byron",
+      "hole": 12,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-29T12:04:44.405Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -20758,6 +20808,33 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1780056284396",
+      "timestamp": "2026-05-29T12:04:44.396Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Myrick, Byron",
+      "details": "Friday AM - Hole #12"
+    },
+    {
+      "id": "1780056235764",
+      "timestamp": "2026-05-29T12:03:55.764Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Chapman, John A.",
+      "details": "Friday AM - Hole #12"
+    },
+    {
+      "id": "1780056201935",
+      "timestamp": "2026-05-29T12:03:21.935Z",
+      "user": "Pugh, Clayton",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Borgschatz, Keith",
+      "details": "Friday AM - Hole #12"
+    },
     {
       "id": "1780055968313",
       "timestamp": "2026-05-29T11:59:28.313Z",
