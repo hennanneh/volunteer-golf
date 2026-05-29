@@ -20898,6 +20898,36 @@
       "checkedInBy": "Duncan, Larry",
       "timestamp": "2026-05-29T12:12:31.379Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "2488",
+      "volunteerName": "Reinfelds, David",
+      "hole": 11,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-29T12:16:28.007Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10499",
+      "volunteerName": "Henson, Barry",
+      "hole": 3,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Wilson, Todd",
+      "timestamp": "2026-05-29T12:16:45.173Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9398",
+      "volunteerName": "Whitcomb, Diane",
+      "hole": 3,
+      "day": "Friday",
+      "shift": "AM",
+      "checkedInBy": "Wilson, Todd",
+      "timestamp": "2026-05-29T12:16:46.041Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -20918,6 +20948,42 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1780057009554",
+      "timestamp": "2026-05-29T12:16:49.554Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 11",
+      "details": "Submitted Friday AM for Hole 11"
+    },
+    {
+      "id": "1780057008378",
+      "timestamp": "2026-05-29T12:16:48.378Z",
+      "user": "Wilson, Todd",
+      "userType": "Captain",
+      "action": "submission",
+      "target": "Hole 3",
+      "details": "Submitted Friday AM for Hole 3"
+    },
+    {
+      "id": "1780057006127",
+      "timestamp": "2026-05-29T12:16:46.127Z",
+      "user": "Wilson, Todd",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Whitcomb, Diane",
+      "details": "Friday AM - Hole #3"
+    },
+    {
+      "id": "1780057005252",
+      "timestamp": "2026-05-29T12:16:45.252Z",
+      "user": "Wilson, Todd",
+      "userType": "Captain",
+      "action": "check-in",
+      "target": "Henson, Barry",
+      "details": "Friday AM - Hole #3"
+    },
     {
       "id": "1780056880337",
       "timestamp": "2026-05-29T12:14:40.337Z",
@@ -50798,5 +50864,5 @@
       "deletedAt": 1779989943424
     }
   ],
-  "serverNow": 1780056730775
+  "serverNow": 1780055931101
 }
