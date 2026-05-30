@@ -26318,6 +26318,66 @@
       "checkedInBy": "Pugh, Clayton",
       "timestamp": "2026-05-30T14:02:50.359Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "4531",
+      "volunteerName": "Duncan, Larry",
+      "hole": 13,
+      "day": "Saturday",
+      "shift": "AM",
+      "checkedInBy": "Duncan, Larry",
+      "timestamp": "2026-05-30T14:08:49.253Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7926",
+      "volunteerName": "Johnson, Linda",
+      "hole": 13,
+      "day": "Saturday",
+      "shift": "AM",
+      "checkedInBy": "Duncan, Larry",
+      "timestamp": "2026-05-30T14:08:54.499Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7927",
+      "volunteerName": "Johnson, Dean",
+      "hole": 13,
+      "day": "Saturday",
+      "shift": "AM",
+      "checkedInBy": "Duncan, Larry",
+      "timestamp": "2026-05-30T14:08:54.810Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5454",
+      "volunteerName": "Kopenec, Rich",
+      "hole": 13,
+      "day": "Saturday",
+      "shift": "AM",
+      "checkedInBy": "Duncan, Larry",
+      "timestamp": "2026-05-30T14:08:58.521Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "3489",
+      "volunteerName": "Maxwell, Steve",
+      "hole": 13,
+      "day": "Saturday",
+      "shift": "AM",
+      "checkedInBy": "Duncan, Larry",
+      "timestamp": "2026-05-30T14:08:59.440Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10566",
+      "volunteerName": "Sharrah, Adam",
+      "hole": 13,
+      "day": "Saturday",
+      "shift": "AM",
+      "checkedInBy": "Duncan, Larry",
+      "timestamp": "2026-05-30T14:09:02.725Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
