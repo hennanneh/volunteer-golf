@@ -25996,6 +25996,146 @@
       "checkedInBy": "Trout, Wayne",
       "timestamp": "2026-05-30T13:12:12.824Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "3034",
+      "volunteerName": "Burnett, Eric",
+      "hole": 9,
+      "day": "Saturday",
+      "shift": "AM",
+      "checkedInBy": "Burnett, Eric",
+      "timestamp": "2026-05-30T13:20:57.994Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2055",
+      "volunteerName": "Edwards, Bill",
+      "hole": 9,
+      "day": "Saturday",
+      "shift": "AM",
+      "checkedInBy": "Burnett, Eric",
+      "timestamp": "2026-05-30T13:21:00.761Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9658",
+      "volunteerName": "Jutras, Michael",
+      "hole": 9,
+      "day": "Saturday",
+      "shift": "AM",
+      "checkedInBy": "Burnett, Eric",
+      "timestamp": "2026-05-30T13:21:01.168Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "3149",
+      "volunteerName": "Broom, Douglas",
+      "hole": 9,
+      "day": "Saturday",
+      "shift": "AM",
+      "checkedInBy": "Burnett, Eric",
+      "timestamp": "2026-05-30T13:21:04.775Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8462",
+      "volunteerName": "Simmons, Kim",
+      "hole": 9,
+      "day": "Saturday",
+      "shift": "AM",
+      "checkedInBy": "Burnett, Eric",
+      "timestamp": "2026-05-30T13:22:32.389Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8463",
+      "volunteerName": "Simmons, Vance",
+      "hole": 9,
+      "day": "Saturday",
+      "shift": "AM",
+      "checkedInBy": "Burnett, Eric",
+      "timestamp": "2026-05-30T13:22:33.371Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9109",
+      "volunteerName": "Sippel, Mark",
+      "hole": 9,
+      "day": "Saturday",
+      "shift": "AM",
+      "checkedInBy": "Burnett, Eric",
+      "timestamp": "2026-05-30T13:23:06.771Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9510",
+      "volunteerName": "Mason, Larry",
+      "hole": 9,
+      "day": "Saturday",
+      "shift": "AM",
+      "checkedInBy": "Burnett, Eric",
+      "timestamp": "2026-05-30T13:23:16.199Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10766",
+      "volunteerName": "Rose, Jacob",
+      "hole": 9,
+      "day": "Saturday",
+      "shift": "AM",
+      "checkedInBy": "Burnett, Eric",
+      "timestamp": "2026-05-30T13:23:37.039Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "278",
+      "volunteerName": "Watson, Stan",
+      "hole": 11,
+      "day": "Saturday",
+      "shift": "AM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-30T13:23:39.703Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10644",
+      "volunteerName": "Ash, Michael",
+      "hole": 11,
+      "day": "Saturday",
+      "shift": "AM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-30T13:23:41.621Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10274",
+      "volunteerName": "Hitz, Jim",
+      "hole": 11,
+      "day": "Saturday",
+      "shift": "AM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-30T13:23:43.033Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8154",
+      "volunteerName": "Wyatt, Jeff",
+      "hole": 11,
+      "day": "Saturday",
+      "shift": "AM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-30T13:23:44.838Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "1518",
+      "volunteerName": "Trias, Dan",
+      "hole": 9,
+      "day": "Saturday",
+      "shift": "AM",
+      "checkedInBy": "Burnett, Eric",
+      "timestamp": "2026-05-30T13:24:00.182Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
