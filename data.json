@@ -24883,16 +24883,6 @@
       "isAlternate": false
     },
     {
-      "volunteerId": "7692",
-      "volunteerName": "Lemay, Mark",
-      "hole": 2,
-      "day": "Saturday",
-      "shift": "AM",
-      "checkedInBy": "Gordon, Gary",
-      "timestamp": "2026-05-30T11:28:50.047Z",
-      "isAlternate": false
-    },
-    {
       "volunteerId": "145",
       "volunteerName": "Gordon, Gary",
       "hole": 2,
@@ -24950,16 +24940,6 @@
       "shift": "AM",
       "checkedInBy": "Gordon, Gary",
       "timestamp": "2026-05-30T11:44:17.447Z",
-      "isAlternate": false
-    },
-    {
-      "volunteerId": "9503",
-      "volunteerName": "Gregston, Bryan",
-      "hole": 2,
-      "day": "Saturday",
-      "shift": "AM",
-      "checkedInBy": "Gordon, Gary",
-      "timestamp": "2026-05-30T11:44:23.826Z",
       "isAlternate": false
     },
     {
@@ -25070,6 +25050,26 @@
       "shift": "AM",
       "checkedInBy": "Ruddell, Dick",
       "timestamp": "2026-05-30T11:53:20.254Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7692",
+      "volunteerName": "Lemay, Mark",
+      "hole": 2,
+      "day": "Saturday",
+      "shift": "AM",
+      "checkedInBy": "Sale, Lynn",
+      "timestamp": "2026-05-30T11:59:08.097Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2629",
+      "volunteerName": "Smith, Jeff",
+      "hole": 2,
+      "day": "Saturday",
+      "shift": "AM",
+      "checkedInBy": "Sale, Lynn",
+      "timestamp": "2026-05-30T11:59:09.980Z",
       "isAlternate": false
     }
   ],
