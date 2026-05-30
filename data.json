@@ -25343,6 +25343,26 @@
       "checkedInBy": "Pugh, Clayton",
       "timestamp": "2026-05-30T12:35:00.914Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "9928",
+      "volunteerName": "Rodrigues, Donald",
+      "hole": 8,
+      "day": "Saturday",
+      "shift": "AM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-30T12:35:02.774Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10436",
+      "volunteerName": "Schumann, Rick",
+      "hole": 8,
+      "day": "Saturday",
+      "shift": "AM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-30T12:35:08.186Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
