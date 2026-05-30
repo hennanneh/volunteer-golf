@@ -7694,15 +7694,13 @@
         "Thursday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true,
-        "Sunday PM": true
+        "Saturday PM": true
       },
       "volId": "9109",
       "address": "4650 Cougar Ridge Rd Fort Worth, TX 76126",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779044644752
+      "lastModified": 1780175281550
     },
     {
       "id": "8711",
@@ -29381,6 +29379,15 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1780175281550-7lqbwx",
+      "timestamp": "2026-05-30T21:08:01.550Z",
+      "user": "Burnett, Eric",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Sippel, Mark",
+      "details": "removed Sunday AM, Sunday PM"
+    },
     {
       "id": "1780169124801-qewfk1",
       "timestamp": "2026-05-30T19:25:24.801Z",
