@@ -28722,16 +28722,6 @@
       "isAlternate": false
     },
     {
-      "volunteerId": "9427",
-      "volunteerName": "Yost, Kc",
-      "hole": 17,
-      "day": "Saturday",
-      "shift": "PM",
-      "checkedInBy": "Browning, Wayne",
-      "timestamp": "2026-05-30T18:04:58.803Z",
-      "isAlternate": false
-    },
-    {
       "volunteerId": "9233",
       "volunteerName": "Wooldridge, Brad",
       "hole": 14,
@@ -28749,6 +28739,166 @@
       "shift": "PM",
       "checkedInBy": "Sanders, Steve",
       "timestamp": "2026-05-30T18:05:08.518Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10237",
+      "volunteerName": "Sumrall, Stuart",
+      "hole": 17,
+      "day": "Saturday",
+      "shift": "PM",
+      "checkedInBy": "Browning, Wayne",
+      "timestamp": "2026-05-30T18:10:52.105Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "278",
+      "volunteerName": "Watson, Stan",
+      "hole": 11,
+      "day": "Saturday",
+      "shift": "PM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-30T18:13:23.671Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2657",
+      "volunteerName": "James, Marty",
+      "hole": 11,
+      "day": "Saturday",
+      "shift": "PM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-30T18:13:23.939Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10644",
+      "volunteerName": "Ash, Michael",
+      "hole": 11,
+      "day": "Saturday",
+      "shift": "PM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-30T18:13:27.848Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7291",
+      "volunteerName": "Casey, John",
+      "hole": 11,
+      "day": "Saturday",
+      "shift": "PM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-30T18:13:28.123Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10178",
+      "volunteerName": "Jamison, Tina",
+      "hole": 11,
+      "day": "Saturday",
+      "shift": "PM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-30T18:13:29.133Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6758",
+      "volunteerName": "Oakley, Jeff",
+      "hole": 11,
+      "day": "Saturday",
+      "shift": "PM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-30T18:13:30.501Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9796",
+      "volunteerName": "Richards, Stephen",
+      "hole": 11,
+      "day": "Saturday",
+      "shift": "PM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-30T18:13:31.476Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2488",
+      "volunteerName": "Reinfelds, David",
+      "hole": 11,
+      "day": "Saturday",
+      "shift": "PM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-30T18:13:32.587Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5612",
+      "volunteerName": "Tengra, Mary",
+      "hole": 11,
+      "day": "Saturday",
+      "shift": "PM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-30T18:13:34.967Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8154",
+      "volunteerName": "Wyatt, Jeff",
+      "hole": 11,
+      "day": "Saturday",
+      "shift": "PM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-30T18:13:46.042Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "3777",
+      "volunteerName": "Hicks, Greg",
+      "hole": 17,
+      "day": "Saturday",
+      "shift": "PM",
+      "checkedInBy": "Browning, Wayne",
+      "timestamp": "2026-05-30T18:14:09.542Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9427",
+      "volunteerName": "Yost, Kc",
+      "hole": 17,
+      "day": "Saturday",
+      "shift": "PM",
+      "checkedInBy": "Browning, Wayne",
+      "timestamp": "2026-05-30T18:14:36.877Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10279",
+      "volunteerName": "Wright, Nancy",
+      "hole": 17,
+      "day": "Saturday",
+      "shift": "PM",
+      "checkedInBy": "Browning, Wayne",
+      "timestamp": "2026-05-30T18:14:47.067Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4661",
+      "volunteerName": "Wright, Paul",
+      "hole": 17,
+      "day": "Saturday",
+      "shift": "PM",
+      "checkedInBy": "Browning, Wayne",
+      "timestamp": "2026-05-30T18:14:48.682Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9406",
+      "volunteerName": "Kocek, Greg",
+      "hole": 17,
+      "day": "Saturday",
+      "shift": "PM",
+      "checkedInBy": "Browning, Wayne",
+      "timestamp": "2026-05-30T18:14:54.202Z",
       "isAlternate": false
     }
   ],
