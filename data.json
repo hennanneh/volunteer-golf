@@ -1433,7 +1433,8 @@
       "address": "5605 Santa Elena Court Fort Worth, TX 76126",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779988309262
+      "lastModified": 1779988309262,
+      "volunteerPassword": "$2b$10$Db6VpYZq4/iZiOym9fdzIOT12obPja0FB260zrjkw1kMrBQ8A9wHm"
     },
     {
       "id": "10078",
@@ -4475,7 +4476,8 @@
       "address": "764 Parkview Drive Burleson, TX 76028",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779907264397
+      "lastModified": 1779907264397,
+      "volunteerPassword": "$2b$10$mCv9lf6Nuln5RW8.as1TyOm8MqEcTh7T9FJABDHRSI3STeS8syhXS"
     },
     {
       "id": "8345",
@@ -26278,16 +26280,6 @@
       "isAlternate": false
     },
     {
-      "volunteerId": "7052",
-      "volunteerName": "Fisher, Paul",
-      "hole": 12,
-      "day": "Saturday",
-      "shift": "AM",
-      "checkedInBy": "Pugh, Clayton",
-      "timestamp": "2026-05-30T13:52:26.336Z",
-      "isAlternate": false
-    },
-    {
       "volunteerId": "1445",
       "volunteerName": "Clark, David",
       "hole": 9,
@@ -26305,6 +26297,26 @@
       "shift": "AM",
       "checkedInBy": "Burnett, Eric",
       "timestamp": "2026-05-30T13:56:56.102Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "342",
+      "volunteerName": "Mckenzie, Roy",
+      "hole": 12,
+      "day": "Saturday",
+      "shift": "AM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-30T14:02:29.213Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7052",
+      "volunteerName": "Fisher, Paul",
+      "hole": 12,
+      "day": "Saturday",
+      "shift": "AM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-30T14:02:50.359Z",
       "isAlternate": false
     }
   ],
