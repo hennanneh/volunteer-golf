@@ -1583,14 +1583,13 @@
         "Wednesday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true
+        "Saturday PM": true
       },
       "volId": "8056",
       "address": "17 Corona Cir Odessa, TX 79763-2216",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779907286539
+      "lastModified": 1780175458546
     },
     {
       "id": "2135",
@@ -29379,6 +29378,15 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1780175458546-uy3w36",
+      "timestamp": "2026-05-30T21:10:58.546Z",
+      "user": "Burnett, Eric",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Daly, Lee",
+      "details": "removed Sunday AM"
+    },
     {
       "id": "1780175281550-7lqbwx",
       "timestamp": "2026-05-30T21:08:01.550Z",
