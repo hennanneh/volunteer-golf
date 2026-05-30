@@ -27790,6 +27790,146 @@
       "checkedInBy": "Pugh, Clayton",
       "timestamp": "2026-05-30T16:49:40.911Z",
       "isAlternate": true
+    },
+    {
+      "volunteerId": "7250",
+      "volunteerName": "Wilson, Jane",
+      "hole": 16,
+      "day": "Saturday",
+      "shift": "PM",
+      "checkedInBy": "Roy, Mike",
+      "timestamp": "2026-05-30T16:56:24.783Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7120",
+      "volunteerName": "Truitt, Norman",
+      "hole": 16,
+      "day": "Saturday",
+      "shift": "PM",
+      "checkedInBy": "Roy, Mike",
+      "timestamp": "2026-05-30T16:56:28.550Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10240",
+      "volunteerName": "Schaumburg, Kent",
+      "hole": 16,
+      "day": "Saturday",
+      "shift": "PM",
+      "checkedInBy": "Roy, Mike",
+      "timestamp": "2026-05-30T16:56:32.195Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5952",
+      "volunteerName": "Pate, Teresa",
+      "hole": 16,
+      "day": "Saturday",
+      "shift": "PM",
+      "checkedInBy": "Roy, Mike",
+      "timestamp": "2026-05-30T16:56:32.394Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4807",
+      "volunteerName": "Mcjunkin, Curtis",
+      "hole": 16,
+      "day": "Saturday",
+      "shift": "PM",
+      "checkedInBy": "Roy, Mike",
+      "timestamp": "2026-05-30T16:56:37.828Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "155",
+      "volunteerName": "Harvey, Dalton",
+      "hole": 16,
+      "day": "Saturday",
+      "shift": "PM",
+      "checkedInBy": "Roy, Mike",
+      "timestamp": "2026-05-30T16:56:37.930Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5656",
+      "volunteerName": "Jackson, Ronald",
+      "hole": 16,
+      "day": "Saturday",
+      "shift": "PM",
+      "checkedInBy": "Roy, Mike",
+      "timestamp": "2026-05-30T16:56:38.042Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9366",
+      "volunteerName": "Fitzjarrell, Gary",
+      "hole": 16,
+      "day": "Saturday",
+      "shift": "PM",
+      "checkedInBy": "Roy, Mike",
+      "timestamp": "2026-05-30T16:56:41.803Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6731",
+      "volunteerName": "Emerson, David",
+      "hole": 16,
+      "day": "Saturday",
+      "shift": "PM",
+      "checkedInBy": "Roy, Mike",
+      "timestamp": "2026-05-30T16:56:43.875Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5772",
+      "volunteerName": "Cherry, Charles",
+      "hole": 16,
+      "day": "Saturday",
+      "shift": "PM",
+      "checkedInBy": "Roy, Mike",
+      "timestamp": "2026-05-30T16:56:46.274Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10207",
+      "volunteerName": "Bell, Scott",
+      "hole": 16,
+      "day": "Saturday",
+      "shift": "PM",
+      "checkedInBy": "Roy, Mike",
+      "timestamp": "2026-05-30T16:56:48.865Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "292",
+      "volunteerName": "Zamzow, Steve",
+      "hole": 16,
+      "day": "Saturday",
+      "shift": "PM",
+      "checkedInBy": "Roy, Mike",
+      "timestamp": "2026-05-30T16:56:51.488Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "1770",
+      "volunteerName": "Mulvaney, Matt",
+      "hole": 16,
+      "day": "Saturday",
+      "shift": "PM",
+      "checkedInBy": "Roy, Mike",
+      "timestamp": "2026-05-30T16:56:52.361Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2745",
+      "volunteerName": "Roy, Mike",
+      "hole": 16,
+      "day": "Saturday",
+      "shift": "PM",
+      "checkedInBy": "Roy, Mike",
+      "timestamp": "2026-05-30T16:56:54.546Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -27805,7 +27945,7 @@
     "helpName": "Mike Hill",
     "pairingsUrl": "https://colonialvolunteers.golf/pairings/",
     "showOutingPreferences": false,
-    "pairingsText": "Pairings Friday ",
+    "pairingsText": "Pairings Saturday",
     "showPoweredBy": true,
     "poweredByText": "Anne"
   },
