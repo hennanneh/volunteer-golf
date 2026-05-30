@@ -28450,6 +28450,16 @@
       "checkedInBy": "Clayton, Rodney",
       "timestamp": "2026-05-30T17:39:34.282Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "8711",
+      "volunteerName": "Smith, Bruce T.",
+      "hole": 12,
+      "day": "Saturday",
+      "shift": "PM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-30T17:53:48.778Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
