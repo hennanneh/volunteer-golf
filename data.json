@@ -27730,6 +27730,36 @@
       "checkedInBy": "Trout, Wayne",
       "timestamp": "2026-05-30T16:34:36.882Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "9581",
+      "volunteerName": "Williams, David",
+      "hole": 4,
+      "day": "Saturday",
+      "shift": "PM",
+      "checkedInBy": "Nederostek, Brad",
+      "timestamp": "2026-05-30T16:35:12.516Z",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "7771",
+      "volunteerName": "Burford, Gary",
+      "hole": 4,
+      "day": "Saturday",
+      "shift": "PM",
+      "checkedInBy": "Nederostek, Brad",
+      "timestamp": "2026-05-30T16:35:20.618Z",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "10667",
+      "volunteerName": "Gilchrist, William (Bill)",
+      "hole": 8,
+      "day": "Saturday",
+      "shift": "PM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-30T16:37:12.646Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
