@@ -26246,6 +26246,46 @@
       "checkedInBy": "Pugh, Clayton",
       "timestamp": "2026-05-30T13:48:43.604Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "2919",
+      "volunteerName": "Loveland, Edward",
+      "hole": 9,
+      "day": "Saturday",
+      "shift": "AM",
+      "checkedInBy": "Burnett, Eric",
+      "timestamp": "2026-05-30T13:50:29.156Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9371",
+      "volunteerName": "Duckett, Gary",
+      "hole": 9,
+      "day": "Saturday",
+      "shift": "AM",
+      "checkedInBy": "Burnett, Eric",
+      "timestamp": "2026-05-30T13:50:41.042Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6692",
+      "volunteerName": "Starks, Michael",
+      "hole": 12,
+      "day": "Saturday",
+      "shift": "AM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-30T13:52:23.772Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7052",
+      "volunteerName": "Fisher, Paul",
+      "hole": 12,
+      "day": "Saturday",
+      "shift": "AM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-30T13:52:26.336Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
