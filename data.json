@@ -25263,6 +25263,86 @@
       "checkedInBy": "Imboden, Thomas",
       "timestamp": "2026-05-30T12:29:05.808Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "5240",
+      "volunteerName": "Rogenski, Chris P.",
+      "hole": 8,
+      "day": "Saturday",
+      "shift": "AM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-30T12:33:35.887Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5307",
+      "volunteerName": "Anderson, Rob",
+      "hole": 8,
+      "day": "Saturday",
+      "shift": "AM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-30T12:34:53.723Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7865",
+      "volunteerName": "Davis, Sam",
+      "hole": 8,
+      "day": "Saturday",
+      "shift": "AM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-30T12:34:54.369Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "3779",
+      "volunteerName": "Johnson, Claude",
+      "hole": 8,
+      "day": "Saturday",
+      "shift": "AM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-30T12:34:57.194Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8367",
+      "volunteerName": "King, Jeff",
+      "hole": 8,
+      "day": "Saturday",
+      "shift": "AM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-30T12:34:59.227Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9082",
+      "volunteerName": "King, Pat",
+      "hole": 8,
+      "day": "Saturday",
+      "shift": "AM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-30T12:34:59.351Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6471",
+      "volunteerName": "King, Steve",
+      "hole": 8,
+      "day": "Saturday",
+      "shift": "AM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-30T12:34:59.627Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9365",
+      "volunteerName": "Pugh, Clayton",
+      "hole": 12,
+      "day": "Saturday",
+      "shift": "AM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-30T12:35:00.914Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
