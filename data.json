@@ -26478,6 +26478,66 @@
       "checkedInBy": "Beckley, Bob",
       "timestamp": "2026-05-30T14:24:47.458Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "380",
+      "volunteerName": "Johnson, Kenny",
+      "hole": 1,
+      "day": "Saturday",
+      "shift": "PM",
+      "checkedInBy": "Ruddell, Dick",
+      "timestamp": "2026-05-30T14:32:20.960Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6553",
+      "volunteerName": "Ruddell, Dick",
+      "hole": 1,
+      "day": "Saturday",
+      "shift": "PM",
+      "checkedInBy": "Ruddell, Dick",
+      "timestamp": "2026-05-30T14:32:21.366Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10364",
+      "volunteerName": "Thomas, Harold",
+      "hole": 1,
+      "day": "Saturday",
+      "shift": "PM",
+      "checkedInBy": "Ruddell, Dick",
+      "timestamp": "2026-05-30T14:33:22.683Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10222",
+      "volunteerName": "Weber, James",
+      "hole": 1,
+      "day": "Saturday",
+      "shift": "PM",
+      "checkedInBy": "Ruddell, Dick",
+      "timestamp": "2026-05-30T14:33:22.864Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10360",
+      "volunteerName": "Parker, James",
+      "hole": 1,
+      "day": "Saturday",
+      "shift": "PM",
+      "checkedInBy": "Ruddell, Dick",
+      "timestamp": "2026-05-30T14:33:53.736Z",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "6672",
+      "volunteerName": "Bravo, Albert",
+      "hole": 13,
+      "day": "Saturday",
+      "shift": "AM",
+      "checkedInBy": "Duncan, Larry",
+      "timestamp": "2026-05-30T14:34:12.288Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
