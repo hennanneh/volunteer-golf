@@ -2615,6 +2615,7 @@
       "scheduled": {
         "Wednesday PM": true,
         "Friday AM": true,
+        "Saturday PM": true,
         "Sunday AM": true
       },
       "address": "2407 Lakepoint Drive\r\nKeller, TX 76248",
@@ -2622,7 +2623,7 @@
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
       "notAttendingOuting": true,
-      "lastModified": 1779117314291,
+      "lastModified": 1780156656286,
       "volunteerPassword": "$2b$10$wGD4Nsg5CJoBUH4a66XUQuCxufSedayVUZICfAnCGRzZsH1nPs8ke"
     },
     {
@@ -4225,7 +4226,8 @@
       "address": "191 Tyler Road Anacoco, LA 71403",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1778813044771,
+      "volunteerPassword": "$2b$10$KmvJICqcXC/.2UeAQm1qq.KgNssSeuQaplCNp4Q/McyUE3B5mGApS"
     },
     {
       "id": "8367",
@@ -27348,6 +27350,26 @@
       "checkedInBy": "Howrey, Anne",
       "timestamp": "2026-05-30T15:48:12.117Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "8127",
+      "volunteerName": "Harrell, Michael",
+      "hole": 2,
+      "day": "Saturday",
+      "shift": "PM",
+      "checkedInBy": "Gordon, Gary",
+      "timestamp": "2026-05-30T15:56:45.251Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7768",
+      "volunteerName": "Gillitzer, Dean",
+      "hole": 2,
+      "day": "Saturday",
+      "shift": "PM",
+      "checkedInBy": "Gordon, Gary",
+      "timestamp": "2026-05-30T15:58:04.854Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -27368,6 +27390,15 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1780156656286-b3rm87",
+      "timestamp": "2026-05-30T15:57:36.286Z",
+      "user": "Gordon, Gary",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Gillitzer, Dean",
+      "details": "added Saturday PM"
+    },
     {
       "id": "1780146191676-p5j7sd",
       "timestamp": "2026-05-30T13:03:11.676Z",
