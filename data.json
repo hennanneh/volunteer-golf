@@ -837,6 +837,7 @@
         "Wednesday AM": true,
         "Thursday PM": true,
         "Friday AM": true,
+        "Saturday AM": true,
         "Saturday PM": true,
         "Sunday AM": true,
         "Sunday PM": true
@@ -845,7 +846,7 @@
       "address": "512 N 4TH STREET Sanger, TX 76266",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1780146165626
     },
     {
       "id": "1720",
@@ -4020,6 +4021,7 @@
         "Tuesday PM": true,
         "Thursday PM": true,
         "Friday AM": true,
+        "Saturday AM": true,
         "Saturday PM": true,
         "Sunday AM": true
       },
@@ -4027,7 +4029,7 @@
       "volId": "10634",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1780146191676
     },
     {
       "id": "8850",
@@ -25744,6 +25746,96 @@
       "checkedInBy": "Rogenski, Chris P.",
       "timestamp": "2026-05-30T12:55:06.004Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "9988",
+      "volunteerName": "Grall, George",
+      "hole": 12,
+      "day": "Saturday",
+      "shift": "AM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-30T13:02:31.346Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "1720",
+      "volunteerName": "Butler, Mark",
+      "hole": 3,
+      "day": "Saturday",
+      "shift": "AM",
+      "checkedInBy": "Butler, Mark",
+      "timestamp": "2026-05-30T13:03:43.526Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8234",
+      "volunteerName": "Wilson, Todd",
+      "hole": 3,
+      "day": "Saturday",
+      "shift": "AM",
+      "checkedInBy": "Butler, Mark",
+      "timestamp": "2026-05-30T13:03:44.593Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7998",
+      "volunteerName": "Burrus, Sam",
+      "hole": 3,
+      "day": "Saturday",
+      "shift": "AM",
+      "checkedInBy": "Butler, Mark",
+      "timestamp": "2026-05-30T13:03:47.215Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10229",
+      "volunteerName": "Corson, Michael",
+      "hole": 3,
+      "day": "Saturday",
+      "shift": "AM",
+      "checkedInBy": "Butler, Mark",
+      "timestamp": "2026-05-30T13:03:47.495Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10634",
+      "volunteerName": "Jones, David",
+      "hole": 3,
+      "day": "Saturday",
+      "shift": "AM",
+      "checkedInBy": "Butler, Mark",
+      "timestamp": "2026-05-30T13:03:48.976Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10451",
+      "volunteerName": "Miller, David",
+      "hole": 3,
+      "day": "Saturday",
+      "shift": "AM",
+      "checkedInBy": "Butler, Mark",
+      "timestamp": "2026-05-30T13:03:52.824Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8791",
+      "volunteerName": "Moss, Linc",
+      "hole": 3,
+      "day": "Saturday",
+      "shift": "AM",
+      "checkedInBy": "Butler, Mark",
+      "timestamp": "2026-05-30T13:03:53.815Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8790",
+      "volunteerName": "Moss, Linda",
+      "hole": 3,
+      "day": "Saturday",
+      "shift": "AM",
+      "checkedInBy": "Butler, Mark",
+      "timestamp": "2026-05-30T13:03:54.725Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -25764,6 +25856,24 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1780146191676-p5j7sd",
+      "timestamp": "2026-05-30T13:03:11.676Z",
+      "user": "Butler, Mark",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Jones, David",
+      "details": "added Saturday AM"
+    },
+    {
+      "id": "1780146165626-3cgsnw",
+      "timestamp": "2026-05-30T13:02:45.626Z",
+      "user": "Butler, Mark",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Burrus, Sam",
+      "details": "added Saturday AM"
+    },
     {
       "id": "1780145832292-ykaijp",
       "timestamp": "2026-05-30T12:57:12.292Z",
