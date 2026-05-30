@@ -2746,7 +2746,8 @@
       "address": "7017 Twin Hills Dr JOSHUA, TX 76058",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779971160651
+      "lastModified": 1779971160651,
+      "volunteerPassword": "$2b$10$SAs.TlyTtEVtFuRBy/uEK.vc8sTiO/wXQ/.LnlQCdPiN2olWRbXhe"
     },
     {
       "id": "7043",
