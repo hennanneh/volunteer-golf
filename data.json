@@ -26958,6 +26958,16 @@
       "checkedInBy": "Gordon, Gary",
       "timestamp": "2026-05-30T15:05:21.516Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "3986",
+      "volunteerName": "Clayton, Rodney",
+      "hole": 13,
+      "day": "Saturday",
+      "shift": "AM",
+      "checkedInBy": "Duncan, Larry",
+      "timestamp": "2026-05-30T15:16:08.879Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
