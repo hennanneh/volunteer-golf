@@ -3523,6 +3523,7 @@
         "Wednesday AM": true,
         "Thursday AM": true,
         "Friday AM": true,
+        "Saturday AM": true,
         "Saturday PM": true,
         "Sunday AM": true
       },
@@ -3530,7 +3531,7 @@
       "address": "2222 Fairmount Ave Fort Worth, TX 76110",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1780142918656
     },
     {
       "id": "10249",
@@ -25101,6 +25102,56 @@
       "checkedInBy": "Sale, Lynn",
       "timestamp": "2026-05-30T12:03:12.603Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "8630",
+      "volunteerName": "Montalvo, Sammy",
+      "hole": 5,
+      "day": "Saturday",
+      "shift": "AM",
+      "checkedInBy": "Imboden, Thomas",
+      "timestamp": "2026-05-30T12:07:37.087Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "3428",
+      "volunteerName": "Saunders, Martin",
+      "hole": 5,
+      "day": "Saturday",
+      "shift": "AM",
+      "checkedInBy": "Imboden, Thomas",
+      "timestamp": "2026-05-30T12:07:44.527Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10619",
+      "volunteerName": "Simmons, Rick",
+      "hole": 5,
+      "day": "Saturday",
+      "shift": "AM",
+      "checkedInBy": "Imboden, Thomas",
+      "timestamp": "2026-05-30T12:07:46.602Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "167",
+      "volunteerName": "Howell, John",
+      "hole": 5,
+      "day": "Saturday",
+      "shift": "AM",
+      "checkedInBy": "Imboden, Thomas",
+      "timestamp": "2026-05-30T12:08:51.685Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10629",
+      "volunteerName": "Millard, Tyrone",
+      "hole": 5,
+      "day": "Saturday",
+      "shift": "AM",
+      "checkedInBy": "Imboden, Thomas",
+      "timestamp": "2026-05-30T12:09:48.047Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -25121,6 +25172,15 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1780142918656-15txzu",
+      "timestamp": "2026-05-30T12:08:38.656Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Howell, John",
+      "details": "added Saturday AM"
+    },
     {
       "id": "1780096643676-6jbvjh",
       "timestamp": "2026-05-29T23:17:23.676Z",
