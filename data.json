@@ -26286,6 +26286,26 @@
       "checkedInBy": "Pugh, Clayton",
       "timestamp": "2026-05-30T13:52:26.336Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "1445",
+      "volunteerName": "Clark, David",
+      "hole": 9,
+      "day": "Saturday",
+      "shift": "AM",
+      "checkedInBy": "Burnett, Eric",
+      "timestamp": "2026-05-30T13:56:51.676Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10328",
+      "volunteerName": "Elliott, David",
+      "hole": 9,
+      "day": "Saturday",
+      "shift": "AM",
+      "checkedInBy": "Burnett, Eric",
+      "timestamp": "2026-05-30T13:56:56.102Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
