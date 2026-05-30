@@ -6808,6 +6808,7 @@
         "Monday PM": true,
         "Thursday PM": true,
         "Friday AM": true,
+        "Saturday AM": true,
         "Saturday PM": true,
         "Sunday AM": true
       },
@@ -6815,7 +6816,7 @@
       "volId": "7070",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1780144130329
     },
     {
       "id": "2488",
@@ -25252,6 +25253,16 @@
       "checkedInBy": "Nederostek, Brad",
       "timestamp": "2026-05-30T12:14:47.118Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "7070",
+      "volunteerName": "Reding, Gary",
+      "hole": 5,
+      "day": "Saturday",
+      "shift": "AM",
+      "checkedInBy": "Imboden, Thomas",
+      "timestamp": "2026-05-30T12:29:05.808Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -25272,6 +25283,15 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1780144130329-onk7yk",
+      "timestamp": "2026-05-30T12:28:50.329Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Reding, Gary",
+      "details": "added Saturday AM"
+    },
     {
       "id": "1780142918656-15txzu",
       "timestamp": "2026-05-30T12:08:38.656Z",
