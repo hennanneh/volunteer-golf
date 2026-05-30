@@ -24993,16 +24993,6 @@
       "isAlternate": false
     },
     {
-      "volunteerId": "6553",
-      "volunteerName": "Ruddell, Dick",
-      "hole": 1,
-      "day": "Saturday",
-      "shift": "AM",
-      "checkedInBy": "Johnson, Kenny",
-      "timestamp": "2026-05-30T11:47:43.587Z",
-      "isAlternate": false
-    },
-    {
       "volunteerId": "9850",
       "volunteerName": "Hartman, Cathy",
       "hole": 1,
@@ -25070,6 +25060,16 @@
       "shift": "AM",
       "checkedInBy": "Johnson, Kenny",
       "timestamp": "2026-05-30T11:48:07.940Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6553",
+      "volunteerName": "Ruddell, Dick",
+      "hole": 1,
+      "day": "Saturday",
+      "shift": "AM",
+      "checkedInBy": "Ruddell, Dick",
+      "timestamp": "2026-05-30T11:53:20.254Z",
       "isAlternate": false
     }
   ],
