@@ -28900,6 +28900,16 @@
       "checkedInBy": "Browning, Wayne",
       "timestamp": "2026-05-30T18:14:54.202Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "3778",
+      "volunteerName": "Hicks, Jackie",
+      "hole": 17,
+      "day": "Saturday",
+      "shift": "PM",
+      "checkedInBy": "Browning, Wayne",
+      "timestamp": "2026-05-30T18:15:25.886Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
