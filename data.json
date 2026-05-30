@@ -1853,17 +1853,18 @@
       "yearsWorked": 10,
       "hat": "",
       "scheduled": {
+        "Tuesday PM": true,
         "Wednesday PM": true,
         "Thursday AM": true,
         "Friday PM": true,
-        "Saturday AM": true,
+        "Saturday PM": true,
         "Sunday PM": true
       },
       "volId": "6594",
       "address": "11105 Christina Lane Haslet, TX 76052",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1780145832292
     },
     {
       "id": "6281",
@@ -25723,6 +25724,26 @@
       "checkedInBy": "Pueblo, Vange",
       "timestamp": "2026-05-30T12:54:57.221Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "1182",
+      "volunteerName": "Tidwell, Jim",
+      "hole": 20,
+      "day": "Saturday",
+      "shift": "PM",
+      "checkedInBy": "Pueblo, Vange",
+      "timestamp": "2026-05-30T12:55:02.230Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8787",
+      "volunteerName": "Jefferies, David",
+      "hole": 8,
+      "day": "Saturday",
+      "shift": "AM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-30T12:55:06.004Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -25743,6 +25764,15 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1780145832292-ykaijp",
+      "timestamp": "2026-05-30T12:57:12.292Z",
+      "user": "Thomas, Stephen",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Dunn, Dean",
+      "details": "added Tuesday PM, Saturday PM; removed Saturday AM"
+    },
     {
       "id": "1780144130329-onk7yk",
       "timestamp": "2026-05-30T12:28:50.329Z",
