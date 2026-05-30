@@ -6039,13 +6039,14 @@
         "Thursday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
+        "Saturday PM": true,
         "Sunday PM": true
       },
       "volId": "10260",
       "address": "22818 Deforest Ridge Lane Katy, TX 77494",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779556270283
+      "lastModified": 1780169124801
     },
     {
       "id": "6758",
@@ -29170,6 +29171,16 @@
       "checkedInBy": "Gradt, Jason",
       "timestamp": "2026-05-30T19:23:56.425Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "10260",
+      "volunteerName": "O'Hanlon, Katherine",
+      "hole": 18,
+      "day": "Saturday",
+      "shift": "PM",
+      "checkedInBy": "Gradt, Jason",
+      "timestamp": "2026-05-30T19:25:31.228Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -29190,6 +29201,15 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1780169124801-qewfk1",
+      "timestamp": "2026-05-30T19:25:24.801Z",
+      "user": "Gradt, Jason",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "O'Hanlon, Katherine",
+      "details": "added Saturday PM"
+    },
     {
       "id": "1780156656286-b3rm87",
       "timestamp": "2026-05-30T15:57:36.286Z",
