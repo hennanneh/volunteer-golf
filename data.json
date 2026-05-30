@@ -24851,6 +24851,16 @@
       "checkedInBy": "Pugh, Clayton",
       "timestamp": "2026-05-29T21:16:14.825Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "5192",
+      "volunteerName": "Imboden, Thomas",
+      "hole": 5,
+      "day": "Saturday",
+      "shift": "AM",
+      "checkedInBy": "Imboden, Thomas",
+      "timestamp": "2026-05-30T11:17:38.602Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
