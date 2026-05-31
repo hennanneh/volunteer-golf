@@ -550,7 +550,7 @@
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
       "lastModified": 1780071367429,
-      "notes": "Albert was scheduled for the morning shift but couldn’t make it. Asked to be moved to PM shift."
+      "notes": "Albert was scheduled for the morning shift but couldn\u2019t make it. Asked to be moved to PM shift."
     },
     {
       "id": "3149",
@@ -4339,7 +4339,7 @@
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
       "lastModified": 1779502298153,
-      "notes": "Wednesday AM will be Ron’s first extra shift."
+      "notes": "Wednesday AM will be Ron\u2019s first extra shift."
     },
     {
       "id": "9406",
@@ -29372,7 +29372,7 @@
     "helpName": "Mike Hill",
     "pairingsUrl": "https://colonialvolunteers.golf/pairings/",
     "showOutingPreferences": false,
-    "pairingsText": "Pairings Saturday",
+    "pairingsText": "Pairings Sunday",
     "showPoweredBy": true,
     "poweredByText": "Anne"
   },
@@ -39314,7 +39314,7 @@
       "userType": "Captain",
       "action": "rejected-bulk-edit",
       "target": "Steward, Denny",
-      "details": "Captain hole 1 attempted to modify hole 99 volunteer (auto-rejected via bulk save — no data changed)",
+      "details": "Captain hole 1 attempted to modify hole 99 volunteer (auto-rejected via bulk save \u2014 no data changed)",
       "targetHole": 99,
       "actorHole": 1
     },
@@ -40889,7 +40889,7 @@
       "userType": "Captain",
       "action": "rejected-bulk-edit",
       "target": "Harvey, Dalton",
-      "details": "Captain hole 1 attempted to modify hole 16 volunteer (auto-rejected via bulk save — no data changed)",
+      "details": "Captain hole 1 attempted to modify hole 16 volunteer (auto-rejected via bulk save \u2014 no data changed)",
       "targetHole": 16,
       "actorHole": 1
     },
@@ -40936,7 +40936,7 @@
       "userType": "Captain",
       "action": "rejected-bulk-edit",
       "target": "Daly, Lee",
-      "details": "Captain hole 7 attempted to modify hole 9 volunteer (auto-rejected via bulk save — no data changed)",
+      "details": "Captain hole 7 attempted to modify hole 9 volunteer (auto-rejected via bulk save \u2014 no data changed)",
       "targetHole": 9,
       "actorHole": 7
     },
@@ -40956,7 +40956,7 @@
       "userType": "Captain",
       "action": "rejected-bulk-edit",
       "target": "Daly, Lee",
-      "details": "Captain hole 7 attempted to modify hole 9 volunteer (auto-rejected via bulk save — no data changed)",
+      "details": "Captain hole 7 attempted to modify hole 9 volunteer (auto-rejected via bulk save \u2014 no data changed)",
       "targetHole": 9,
       "actorHole": 7
     },
@@ -41111,7 +41111,7 @@
       "userType": "Captain",
       "action": "rejected-bulk-edit",
       "target": "Smith, Bruce T.",
-      "details": "Captain hole 9 attempted to modify hole 12 volunteer (auto-rejected via bulk save — no data changed)",
+      "details": "Captain hole 9 attempted to modify hole 12 volunteer (auto-rejected via bulk save \u2014 no data changed)",
       "targetHole": 12,
       "actorHole": 9
     },
@@ -41122,7 +41122,7 @@
       "userType": "Captain",
       "action": "rejected-bulk-edit",
       "target": "Karnes, Tripp",
-      "details": "Hole reassignment attempt 18→16 (admin-only) (auto-rejected via bulk save — no data changed)",
+      "details": "Hole reassignment attempt 18\u219216 (admin-only) (auto-rejected via bulk save \u2014 no data changed)",
       "targetHole": 18,
       "actorHole": 9
     },
@@ -41133,7 +41133,7 @@
       "userType": "Captain",
       "action": "rejected-bulk-edit",
       "target": "Kramer, Ed",
-      "details": "Captain hole 9 attempted to modify hole 10 volunteer (auto-rejected via bulk save — no data changed)",
+      "details": "Captain hole 9 attempted to modify hole 10 volunteer (auto-rejected via bulk save \u2014 no data changed)",
       "targetHole": 10,
       "actorHole": 9
     },
@@ -41144,7 +41144,7 @@
       "userType": "Captain",
       "action": "rejected-bulk-edit",
       "target": "Oakley, Jeff",
-      "details": "Captain hole 9 attempted to modify hole 11 volunteer (auto-rejected via bulk save — no data changed)",
+      "details": "Captain hole 9 attempted to modify hole 11 volunteer (auto-rejected via bulk save \u2014 no data changed)",
       "targetHole": 11,
       "actorHole": 9
     },
@@ -41155,7 +41155,7 @@
       "userType": "Captain",
       "action": "rejected-bulk-edit",
       "target": "Hardaway, Jerry",
-      "details": "Captain hole 9 attempted to modify hole 1 volunteer (auto-rejected via bulk save — no data changed)",
+      "details": "Captain hole 9 attempted to modify hole 1 volunteer (auto-rejected via bulk save \u2014 no data changed)",
       "targetHole": 1,
       "actorHole": 9
     },
@@ -41166,7 +41166,7 @@
       "userType": "Captain",
       "action": "rejected-bulk-edit",
       "target": "Anderson, Rob",
-      "details": "Captain hole 9 attempted to modify hole 8 volunteer (auto-rejected via bulk save — no data changed)",
+      "details": "Captain hole 9 attempted to modify hole 8 volunteer (auto-rejected via bulk save \u2014 no data changed)",
       "targetHole": 8,
       "actorHole": 9
     },
@@ -41177,7 +41177,7 @@
       "userType": "Captain",
       "action": "rejected-bulk-edit",
       "target": "Bravo, Albert",
-      "details": "Captain hole 9 attempted to modify hole 13 volunteer (auto-rejected via bulk save — no data changed)",
+      "details": "Captain hole 9 attempted to modify hole 13 volunteer (auto-rejected via bulk save \u2014 no data changed)",
       "targetHole": 13,
       "actorHole": 9
     },
@@ -41188,7 +41188,7 @@
       "userType": "Captain",
       "action": "rejected-bulk-edit",
       "target": "Karnes, Tripp",
-      "details": "Hole reassignment attempt 18→16 (admin-only) (auto-rejected via bulk save — no data changed)",
+      "details": "Hole reassignment attempt 18\u219216 (admin-only) (auto-rejected via bulk save \u2014 no data changed)",
       "targetHole": 18,
       "actorHole": 9
     },
@@ -41199,7 +41199,7 @@
       "userType": "Captain",
       "action": "rejected-bulk-edit",
       "target": "Smith, Bruce T.",
-      "details": "Captain hole 9 attempted to modify hole 12 volunteer (auto-rejected via bulk save — no data changed)",
+      "details": "Captain hole 9 attempted to modify hole 12 volunteer (auto-rejected via bulk save \u2014 no data changed)",
       "targetHole": 12,
       "actorHole": 9
     },
@@ -41210,7 +41210,7 @@
       "userType": "Captain",
       "action": "rejected-bulk-edit",
       "target": "Kramer, Ed",
-      "details": "Captain hole 9 attempted to modify hole 10 volunteer (auto-rejected via bulk save — no data changed)",
+      "details": "Captain hole 9 attempted to modify hole 10 volunteer (auto-rejected via bulk save \u2014 no data changed)",
       "targetHole": 10,
       "actorHole": 9
     },
@@ -41221,7 +41221,7 @@
       "userType": "Captain",
       "action": "rejected-bulk-edit",
       "target": "Oakley, Jeff",
-      "details": "Captain hole 9 attempted to modify hole 11 volunteer (auto-rejected via bulk save — no data changed)",
+      "details": "Captain hole 9 attempted to modify hole 11 volunteer (auto-rejected via bulk save \u2014 no data changed)",
       "targetHole": 11,
       "actorHole": 9
     },
@@ -41232,7 +41232,7 @@
       "userType": "Captain",
       "action": "rejected-bulk-edit",
       "target": "Hardaway, Jerry",
-      "details": "Captain hole 9 attempted to modify hole 1 volunteer (auto-rejected via bulk save — no data changed)",
+      "details": "Captain hole 9 attempted to modify hole 1 volunteer (auto-rejected via bulk save \u2014 no data changed)",
       "targetHole": 1,
       "actorHole": 9
     },
@@ -41243,7 +41243,7 @@
       "userType": "Captain",
       "action": "rejected-bulk-edit",
       "target": "Bravo, Albert",
-      "details": "Captain hole 9 attempted to modify hole 13 volunteer (auto-rejected via bulk save — no data changed)",
+      "details": "Captain hole 9 attempted to modify hole 13 volunteer (auto-rejected via bulk save \u2014 no data changed)",
       "targetHole": 13,
       "actorHole": 9
     },
@@ -41254,7 +41254,7 @@
       "userType": "Captain",
       "action": "rejected-bulk-edit",
       "target": "Anderson, Rob",
-      "details": "Captain hole 9 attempted to modify hole 8 volunteer (auto-rejected via bulk save — no data changed)",
+      "details": "Captain hole 9 attempted to modify hole 8 volunteer (auto-rejected via bulk save \u2014 no data changed)",
       "targetHole": 8,
       "actorHole": 9
     },
@@ -41879,7 +41879,7 @@
       "userType": "Captain",
       "action": "rejected-bulk-edit",
       "target": "Schultz, Joni",
-      "details": "Captain hole 8 attempted to modify hole 15 volunteer (auto-rejected via bulk save — no data changed)",
+      "details": "Captain hole 8 attempted to modify hole 15 volunteer (auto-rejected via bulk save \u2014 no data changed)",
       "targetHole": 15,
       "actorHole": 8
     },
@@ -41890,7 +41890,7 @@
       "userType": "Captain",
       "action": "rejected-bulk-edit",
       "target": "Lee, Rodney",
-      "details": "Captain hole 8 attempted to modify hole 6 volunteer (auto-rejected via bulk save — no data changed)",
+      "details": "Captain hole 8 attempted to modify hole 6 volunteer (auto-rejected via bulk save \u2014 no data changed)",
       "targetHole": 6,
       "actorHole": 8
     },
@@ -41910,7 +41910,7 @@
       "userType": "Captain",
       "action": "rejected-bulk-edit",
       "target": "Lee, Rodney",
-      "details": "Captain hole 8 attempted to modify hole 6 volunteer (auto-rejected via bulk save — no data changed)",
+      "details": "Captain hole 8 attempted to modify hole 6 volunteer (auto-rejected via bulk save \u2014 no data changed)",
       "targetHole": 6,
       "actorHole": 8
     },
@@ -42002,7 +42002,7 @@
       "userType": "Captain",
       "action": "rejected-bulk-edit",
       "target": "Lee, Rodney",
-      "details": "Captain hole 8 attempted to modify hole 6 volunteer (auto-rejected via bulk save — no data changed)",
+      "details": "Captain hole 8 attempted to modify hole 6 volunteer (auto-rejected via bulk save \u2014 no data changed)",
       "targetHole": 6,
       "actorHole": 8
     },
@@ -42022,7 +42022,7 @@
       "userType": "Captain",
       "action": "rejected-bulk-edit",
       "target": "Lee, Rodney",
-      "details": "Captain hole 8 attempted to modify hole 6 volunteer (auto-rejected via bulk save — no data changed)",
+      "details": "Captain hole 8 attempted to modify hole 6 volunteer (auto-rejected via bulk save \u2014 no data changed)",
       "targetHole": 6,
       "actorHole": 8
     },
@@ -42051,7 +42051,7 @@
       "userType": "Captain",
       "action": "rejected-bulk-edit",
       "target": "Lee, Rodney",
-      "details": "Captain hole 3 attempted to modify hole 6 volunteer (auto-rejected via bulk save — no data changed)",
+      "details": "Captain hole 3 attempted to modify hole 6 volunteer (auto-rejected via bulk save \u2014 no data changed)",
       "targetHole": 6,
       "actorHole": 3
     },
@@ -42062,7 +42062,7 @@
       "userType": "Captain",
       "action": "rejected-bulk-edit",
       "target": "Kramer, Ed",
-      "details": "Captain hole 3 attempted to modify hole 10 volunteer (auto-rejected via bulk save — no data changed)",
+      "details": "Captain hole 3 attempted to modify hole 10 volunteer (auto-rejected via bulk save \u2014 no data changed)",
       "targetHole": 10,
       "actorHole": 3
     },
@@ -42100,7 +42100,7 @@
       "userType": "Captain",
       "action": "rejected-bulk-edit",
       "target": "Kramer, Ed",
-      "details": "Captain hole 3 attempted to modify hole 10 volunteer (auto-rejected via bulk save — no data changed)",
+      "details": "Captain hole 3 attempted to modify hole 10 volunteer (auto-rejected via bulk save \u2014 no data changed)",
       "targetHole": 10,
       "actorHole": 3
     },
@@ -42111,7 +42111,7 @@
       "userType": "Captain",
       "action": "rejected-bulk-edit",
       "target": "Lee, Rodney",
-      "details": "Captain hole 3 attempted to modify hole 6 volunteer (auto-rejected via bulk save — no data changed)",
+      "details": "Captain hole 3 attempted to modify hole 6 volunteer (auto-rejected via bulk save \u2014 no data changed)",
       "targetHole": 6,
       "actorHole": 3
     },
@@ -42131,7 +42131,7 @@
       "userType": "Captain",
       "action": "rejected-bulk-edit",
       "target": "Kramer, Ed",
-      "details": "Captain hole 3 attempted to modify hole 10 volunteer (auto-rejected via bulk save — no data changed)",
+      "details": "Captain hole 3 attempted to modify hole 10 volunteer (auto-rejected via bulk save \u2014 no data changed)",
       "targetHole": 10,
       "actorHole": 3
     },
@@ -42142,7 +42142,7 @@
       "userType": "Captain",
       "action": "rejected-bulk-edit",
       "target": "Lee, Rodney",
-      "details": "Captain hole 3 attempted to modify hole 6 volunteer (auto-rejected via bulk save — no data changed)",
+      "details": "Captain hole 3 attempted to modify hole 6 volunteer (auto-rejected via bulk save \u2014 no data changed)",
       "targetHole": 6,
       "actorHole": 3
     },
@@ -42334,7 +42334,7 @@
       "userType": "Captain",
       "action": "rejected-bulk-edit",
       "target": "Kramer, Ed",
-      "details": "Captain hole 8 attempted to modify hole 10 volunteer (auto-rejected via bulk save — no data changed)",
+      "details": "Captain hole 8 attempted to modify hole 10 volunteer (auto-rejected via bulk save \u2014 no data changed)",
       "targetHole": 10,
       "actorHole": 8
     },
@@ -42552,7 +42552,7 @@
       "userType": "Captain",
       "action": "rejected-bulk-edit",
       "target": "Kramer, Ed",
-      "details": "Captain hole 20 attempted to modify hole 10 volunteer (auto-rejected via bulk save — no data changed)",
+      "details": "Captain hole 20 attempted to modify hole 10 volunteer (auto-rejected via bulk save \u2014 no data changed)",
       "targetHole": 10,
       "actorHole": 20
     },
@@ -42590,7 +42590,7 @@
       "userType": "Captain",
       "action": "rejected-bulk-edit",
       "target": "Kramer, Ed",
-      "details": "Captain hole 20 attempted to modify hole 10 volunteer (auto-rejected via bulk save — no data changed)",
+      "details": "Captain hole 20 attempted to modify hole 10 volunteer (auto-rejected via bulk save \u2014 no data changed)",
       "targetHole": 10,
       "actorHole": 20
     },
@@ -42610,7 +42610,7 @@
       "userType": "Captain",
       "action": "rejected-bulk-edit",
       "target": "Kramer, Ed",
-      "details": "Captain hole 20 attempted to modify hole 10 volunteer (auto-rejected via bulk save — no data changed)",
+      "details": "Captain hole 20 attempted to modify hole 10 volunteer (auto-rejected via bulk save \u2014 no data changed)",
       "targetHole": 10,
       "actorHole": 20
     },
@@ -42630,7 +42630,7 @@
       "userType": "Captain",
       "action": "rejected-bulk-edit",
       "target": "Kramer, Ed",
-      "details": "Captain hole 20 attempted to modify hole 10 volunteer (auto-rejected via bulk save — no data changed)",
+      "details": "Captain hole 20 attempted to modify hole 10 volunteer (auto-rejected via bulk save \u2014 no data changed)",
       "targetHole": 10,
       "actorHole": 20
     },
@@ -45155,7 +45155,7 @@
       "userType": "Captain",
       "action": "rejected-bulk-edit",
       "target": "Livingston, Jennifier",
-      "details": "Captain hole 14 attempted to modify hole 4 volunteer (auto-rejected via bulk save — no data changed)",
+      "details": "Captain hole 14 attempted to modify hole 4 volunteer (auto-rejected via bulk save \u2014 no data changed)",
       "targetHole": 4,
       "actorHole": 14
     },
@@ -45166,7 +45166,7 @@
       "userType": "Captain",
       "action": "rejected-bulk-edit",
       "target": "Bravo, Albert",
-      "details": "Captain hole 14 attempted to modify hole 13 volunteer (auto-rejected via bulk save — no data changed)",
+      "details": "Captain hole 14 attempted to modify hole 13 volunteer (auto-rejected via bulk save \u2014 no data changed)",
       "targetHole": 13,
       "actorHole": 14
     },
@@ -45177,7 +45177,7 @@
       "userType": "Captain",
       "action": "rejected-bulk-edit",
       "target": "Livingston, Jennifier",
-      "details": "Captain hole 14 attempted to modify hole 4 volunteer (auto-rejected via bulk save — no data changed)",
+      "details": "Captain hole 14 attempted to modify hole 4 volunteer (auto-rejected via bulk save \u2014 no data changed)",
       "targetHole": 4,
       "actorHole": 14
     },
@@ -45188,7 +45188,7 @@
       "userType": "Captain",
       "action": "rejected-bulk-edit",
       "target": "Bravo, Albert",
-      "details": "Captain hole 14 attempted to modify hole 13 volunteer (auto-rejected via bulk save — no data changed)",
+      "details": "Captain hole 14 attempted to modify hole 13 volunteer (auto-rejected via bulk save \u2014 no data changed)",
       "targetHole": 13,
       "actorHole": 14
     },
@@ -45199,7 +45199,7 @@
       "userType": "Captain",
       "action": "rejected-bulk-edit",
       "target": "Livingston, Jennifier",
-      "details": "Captain hole 14 attempted to modify hole 4 volunteer (auto-rejected via bulk save — no data changed)",
+      "details": "Captain hole 14 attempted to modify hole 4 volunteer (auto-rejected via bulk save \u2014 no data changed)",
       "targetHole": 4,
       "actorHole": 14
     },
@@ -45210,7 +45210,7 @@
       "userType": "Captain",
       "action": "rejected-bulk-edit",
       "target": "Bravo, Albert",
-      "details": "Captain hole 14 attempted to modify hole 13 volunteer (auto-rejected via bulk save — no data changed)",
+      "details": "Captain hole 14 attempted to modify hole 13 volunteer (auto-rejected via bulk save \u2014 no data changed)",
       "targetHole": 13,
       "actorHole": 14
     },
@@ -45230,7 +45230,7 @@
       "userType": "Captain",
       "action": "rejected-bulk-edit",
       "target": "Livingston, Jennifier",
-      "details": "Captain hole 14 attempted to modify hole 4 volunteer (auto-rejected via bulk save — no data changed)",
+      "details": "Captain hole 14 attempted to modify hole 4 volunteer (auto-rejected via bulk save \u2014 no data changed)",
       "targetHole": 4,
       "actorHole": 14
     },
@@ -45241,7 +45241,7 @@
       "userType": "Captain",
       "action": "rejected-bulk-edit",
       "target": "Bravo, Albert",
-      "details": "Captain hole 14 attempted to modify hole 13 volunteer (auto-rejected via bulk save — no data changed)",
+      "details": "Captain hole 14 attempted to modify hole 13 volunteer (auto-rejected via bulk save \u2014 no data changed)",
       "targetHole": 13,
       "actorHole": 14
     },
@@ -45297,7 +45297,7 @@
       "userType": "Captain",
       "action": "rejected-bulk-edit",
       "target": "Livingston, Jennifier",
-      "details": "Captain hole 14 attempted to modify hole 4 volunteer (auto-rejected via bulk save — no data changed)",
+      "details": "Captain hole 14 attempted to modify hole 4 volunteer (auto-rejected via bulk save \u2014 no data changed)",
       "targetHole": 4,
       "actorHole": 14
     },
@@ -45308,7 +45308,7 @@
       "userType": "Captain",
       "action": "rejected-bulk-edit",
       "target": "Bravo, Albert",
-      "details": "Captain hole 14 attempted to modify hole 13 volunteer (auto-rejected via bulk save — no data changed)",
+      "details": "Captain hole 14 attempted to modify hole 13 volunteer (auto-rejected via bulk save \u2014 no data changed)",
       "targetHole": 13,
       "actorHole": 14
     },
@@ -45328,7 +45328,7 @@
       "userType": "Captain",
       "action": "rejected-bulk-edit",
       "target": "Livingston, Jennifier",
-      "details": "Captain hole 14 attempted to modify hole 4 volunteer (auto-rejected via bulk save — no data changed)",
+      "details": "Captain hole 14 attempted to modify hole 4 volunteer (auto-rejected via bulk save \u2014 no data changed)",
       "targetHole": 4,
       "actorHole": 14
     },
@@ -45339,7 +45339,7 @@
       "userType": "Captain",
       "action": "rejected-bulk-edit",
       "target": "Bravo, Albert",
-      "details": "Captain hole 14 attempted to modify hole 13 volunteer (auto-rejected via bulk save — no data changed)",
+      "details": "Captain hole 14 attempted to modify hole 13 volunteer (auto-rejected via bulk save \u2014 no data changed)",
       "targetHole": 13,
       "actorHole": 14
     },
@@ -45359,7 +45359,7 @@
       "userType": "Captain",
       "action": "rejected-bulk-edit",
       "target": "Livingston, Jennifier",
-      "details": "Captain hole 14 attempted to modify hole 4 volunteer (auto-rejected via bulk save — no data changed)",
+      "details": "Captain hole 14 attempted to modify hole 4 volunteer (auto-rejected via bulk save \u2014 no data changed)",
       "targetHole": 4,
       "actorHole": 14
     },
@@ -45370,7 +45370,7 @@
       "userType": "Captain",
       "action": "rejected-bulk-edit",
       "target": "Bravo, Albert",
-      "details": "Captain hole 14 attempted to modify hole 13 volunteer (auto-rejected via bulk save — no data changed)",
+      "details": "Captain hole 14 attempted to modify hole 13 volunteer (auto-rejected via bulk save \u2014 no data changed)",
       "targetHole": 13,
       "actorHole": 14
     },
@@ -45381,7 +45381,7 @@
       "userType": "Captain",
       "action": "rejected-bulk-edit",
       "target": "Livingston, Jennifier",
-      "details": "Captain hole 14 attempted to modify hole 4 volunteer (auto-rejected via bulk save — no data changed)",
+      "details": "Captain hole 14 attempted to modify hole 4 volunteer (auto-rejected via bulk save \u2014 no data changed)",
       "targetHole": 4,
       "actorHole": 14
     },
@@ -45392,7 +45392,7 @@
       "userType": "Captain",
       "action": "rejected-bulk-edit",
       "target": "Bravo, Albert",
-      "details": "Captain hole 14 attempted to modify hole 13 volunteer (auto-rejected via bulk save — no data changed)",
+      "details": "Captain hole 14 attempted to modify hole 13 volunteer (auto-rejected via bulk save \u2014 no data changed)",
       "targetHole": 13,
       "actorHole": 14
     },
@@ -46143,7 +46143,7 @@
       "userType": "Captain",
       "action": "rejected-bulk-edit",
       "target": "Brower, Briggs",
-      "details": "Captain hole 10 attempted to modify hole 2 volunteer (auto-rejected via bulk save — no data changed)",
+      "details": "Captain hole 10 attempted to modify hole 2 volunteer (auto-rejected via bulk save \u2014 no data changed)",
       "targetHole": 2,
       "actorHole": 10
     },
@@ -49277,7 +49277,7 @@
       "userType": "Captain",
       "action": "rejected-bulk-edit",
       "target": "Reiter, Mackenzie",
-      "details": "Captain hole 16 attempted to add volunteer in hole 8 (auto-rejected via bulk save — no data changed)",
+      "details": "Captain hole 16 attempted to add volunteer in hole 8 (auto-rejected via bulk save \u2014 no data changed)",
       "targetHole": 8,
       "actorHole": 16
     },
@@ -50415,7 +50415,7 @@
       "userType": "Captain",
       "action": "rejected-bulk-edit",
       "target": "Oakley, Jeff",
-      "details": "Captain hole 12 attempted to modify hole 11 volunteer (auto-rejected via bulk save — no data changed)",
+      "details": "Captain hole 12 attempted to modify hole 11 volunteer (auto-rejected via bulk save \u2014 no data changed)",
       "targetHole": 11,
       "actorHole": 12
     },
@@ -50426,7 +50426,7 @@
       "userType": "Captain",
       "action": "rejected-bulk-edit",
       "target": "Mills, Brad",
-      "details": "Captain hole 12 attempted to modify hole 15 volunteer (auto-rejected via bulk save — no data changed)",
+      "details": "Captain hole 12 attempted to modify hole 15 volunteer (auto-rejected via bulk save \u2014 no data changed)",
       "targetHole": 15,
       "actorHole": 12
     },
@@ -50437,7 +50437,7 @@
       "userType": "Captain",
       "action": "rejected-bulk-edit",
       "target": "Gilchrist, William (Bill)",
-      "details": "Captain hole 12 attempted to modify hole 8 volunteer (auto-rejected via bulk save — no data changed)",
+      "details": "Captain hole 12 attempted to modify hole 8 volunteer (auto-rejected via bulk save \u2014 no data changed)",
       "targetHole": 8,
       "actorHole": 12
     },
@@ -50448,7 +50448,7 @@
       "userType": "Captain",
       "action": "rejected-bulk-edit",
       "target": "Gustaf, David",
-      "details": "Captain hole 12 attempted to modify hole 15 volunteer (auto-rejected via bulk save — no data changed)",
+      "details": "Captain hole 12 attempted to modify hole 15 volunteer (auto-rejected via bulk save \u2014 no data changed)",
       "targetHole": 15,
       "actorHole": 12
     },
@@ -50603,7 +50603,7 @@
       "userType": "Captain",
       "action": "rejected-bulk-edit",
       "target": "Gilchrist, William (Bill)",
-      "details": "Captain hole 15 attempted to modify hole 8 volunteer (auto-rejected via bulk save — no data changed)",
+      "details": "Captain hole 15 attempted to modify hole 8 volunteer (auto-rejected via bulk save \u2014 no data changed)",
       "targetHole": 8,
       "actorHole": 15
     },
@@ -51149,7 +51149,7 @@
       "userType": "Captain",
       "action": "rejected-bulk-edit",
       "target": "Addison, Shirley",
-      "details": "Captain hole 13 attempted to modify hole 16 volunteer (auto-rejected via bulk save — no data changed)",
+      "details": "Captain hole 13 attempted to modify hole 16 volunteer (auto-rejected via bulk save \u2014 no data changed)",
       "targetHole": 16,
       "actorHole": 13
     },
@@ -52123,7 +52123,7 @@
       "userType": "Captain",
       "action": "rejected-bulk-edit",
       "target": "Perez, Emerico",
-      "details": "Captain hole 15 attempted to modify hole 13 volunteer (auto-rejected via bulk save — no data changed)",
+      "details": "Captain hole 15 attempted to modify hole 13 volunteer (auto-rejected via bulk save \u2014 no data changed)",
       "targetHole": 13,
       "actorHole": 15
     },
@@ -52143,7 +52143,7 @@
       "userType": "Captain",
       "action": "rejected-bulk-edit",
       "target": "Perez, Emerico",
-      "details": "Captain hole 15 attempted to modify hole 13 volunteer (auto-rejected via bulk save — no data changed)",
+      "details": "Captain hole 15 attempted to modify hole 13 volunteer (auto-rejected via bulk save \u2014 no data changed)",
       "targetHole": 13,
       "actorHole": 15
     },
@@ -52163,7 +52163,7 @@
       "userType": "Captain",
       "action": "rejected-bulk-edit",
       "target": "Perez, Emerico",
-      "details": "Captain hole 15 attempted to modify hole 13 volunteer (auto-rejected via bulk save — no data changed)",
+      "details": "Captain hole 15 attempted to modify hole 13 volunteer (auto-rejected via bulk save \u2014 no data changed)",
       "targetHole": 13,
       "actorHole": 15
     },
@@ -52849,7 +52849,7 @@
       "userType": "Captain",
       "action": "rejected-bulk-edit",
       "target": "Howrey, Anne",
-      "details": "Captain hole 12 attempted to add volunteer in hole  (auto-rejected via bulk save — no data changed)",
+      "details": "Captain hole 12 attempted to add volunteer in hole  (auto-rejected via bulk save \u2014 no data changed)",
       "targetHole": "",
       "actorHole": 12
     },
