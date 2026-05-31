@@ -31408,16 +31408,6 @@
       "isAlternate": false
     },
     {
-      "volunteerId": "3986",
-      "volunteerName": "Clayton, Rodney",
-      "hole": 13,
-      "day": "Sunday",
-      "shift": "AM",
-      "checkedInBy": "Clayton, Rodney",
-      "timestamp": "2026-05-31T14:28:07.218Z",
-      "isAlternate": false
-    },
-    {
       "volunteerId": "4531",
       "volunteerName": "Duncan, Larry",
       "hole": 13,
@@ -32875,6 +32865,186 @@
       "shift": "PM",
       "checkedInBy": "Imboden, Thomas",
       "timestamp": "2026-05-31T16:59:10.262Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5217",
+      "volunteerName": "Quintana, Mike",
+      "hole": 7,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Quintana, Mike",
+      "timestamp": "2026-05-31T17:05:52.706Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "274",
+      "volunteerName": "Waller, Gary",
+      "hole": 7,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Quintana, Mike",
+      "timestamp": "2026-05-31T17:05:53.882Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7747",
+      "volunteerName": "Bezner, Matt",
+      "hole": 7,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Quintana, Mike",
+      "timestamp": "2026-05-31T17:05:57.678Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4657",
+      "volunteerName": "Burns, Dianne",
+      "hole": 7,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Quintana, Mike",
+      "timestamp": "2026-05-31T17:05:58.669Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4264",
+      "volunteerName": "Burns, Mike",
+      "hole": 7,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Quintana, Mike",
+      "timestamp": "2026-05-31T17:05:59.401Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6201",
+      "volunteerName": "Burris, Boyd",
+      "hole": 7,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Quintana, Mike",
+      "timestamp": "2026-05-31T17:06:01.128Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10078",
+      "volunteerName": "Crawford, Kirk",
+      "hole": 7,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Quintana, Mike",
+      "timestamp": "2026-05-31T17:06:02.137Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2884",
+      "volunteerName": "Knaus, Chuck",
+      "hole": 7,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Quintana, Mike",
+      "timestamp": "2026-05-31T17:06:03.844Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4659",
+      "volunteerName": "Lynch, Cindy",
+      "hole": 7,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Quintana, Mike",
+      "timestamp": "2026-05-31T17:06:04.976Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10707",
+      "volunteerName": "Mulliken, Reed",
+      "hole": 7,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Quintana, Mike",
+      "timestamp": "2026-05-31T17:06:06.692Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9952",
+      "volunteerName": "Nartker, Christopher",
+      "hole": 7,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Quintana, Mike",
+      "timestamp": "2026-05-31T17:06:08.336Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10151",
+      "volunteerName": "Silvani, Rob",
+      "hole": 7,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Quintana, Mike",
+      "timestamp": "2026-05-31T17:06:09.864Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10321",
+      "volunteerName": "Crawford, Billy",
+      "hole": 10,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-31T17:08:48.277Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9082",
+      "volunteerName": "King, Pat",
+      "hole": 8,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-31T17:09:01.038Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6471",
+      "volunteerName": "King, Steve",
+      "hole": 8,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-31T17:09:01.159Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8367",
+      "volunteerName": "King, Jeff",
+      "hole": 8,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-31T17:09:01.268Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9418",
+      "volunteerName": "Schuljak, Patty",
+      "hole": 8,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-31T17:09:01.343Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "3986",
+      "volunteerName": "Clayton, Rodney",
+      "hole": 13,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Clayton, Rodney",
+      "timestamp": "2026-05-31T17:09:20.211Z",
       "isAlternate": false
     }
   ],
