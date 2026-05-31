@@ -33306,6 +33306,76 @@
       "checkedInBy": "Duncan, Larry",
       "timestamp": "2026-05-31T17:49:52.436Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "9400",
+      "volunteerName": "Chapman, John A.",
+      "hole": 12,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-31T17:51:13.276Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9988",
+      "volunteerName": "Grall, George",
+      "hole": 12,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-31T17:51:45.121Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6949",
+      "volunteerName": "Putt, Gerald",
+      "hole": 12,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-31T17:51:49.545Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7191",
+      "volunteerName": "Sanders, Steve",
+      "hole": 14,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Sanders, Steve",
+      "timestamp": "2026-05-31T17:52:39.794Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7806",
+      "volunteerName": "Mosler, Mitch",
+      "hole": 14,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Sanders, Steve",
+      "timestamp": "2026-05-31T17:52:40.183Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9138",
+      "volunteerName": "Morrison, Hal",
+      "hole": 14,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Sanders, Steve",
+      "timestamp": "2026-05-31T17:52:44.669Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9133",
+      "volunteerName": "Nall, Kelly",
+      "hole": 14,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Sanders, Steve",
+      "timestamp": "2026-05-31T17:52:45.795Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
