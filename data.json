@@ -33716,6 +33716,146 @@
       "checkedInBy": "Mosler, Mitch",
       "timestamp": "2026-05-31T18:32:09.642Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "292",
+      "volunteerName": "Zamzow, Steve",
+      "hole": 16,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Roy, Mike",
+      "timestamp": "2026-05-31T18:36:34.298Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "1770",
+      "volunteerName": "Mulvaney, Matt",
+      "hole": 16,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Roy, Mike",
+      "timestamp": "2026-05-31T18:36:34.389Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2745",
+      "volunteerName": "Roy, Mike",
+      "hole": 16,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Roy, Mike",
+      "timestamp": "2026-05-31T18:36:34.458Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8895",
+      "volunteerName": "Addison, Shirley",
+      "hole": 16,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Roy, Mike",
+      "timestamp": "2026-05-31T18:36:36.002Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "3937",
+      "volunteerName": "Bianchi, Edward",
+      "hole": 16,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Roy, Mike",
+      "timestamp": "2026-05-31T18:36:40.493Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8522",
+      "volunteerName": "Anderson, Jodie",
+      "hole": 16,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Roy, Mike",
+      "timestamp": "2026-05-31T18:36:40.920Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6349",
+      "volunteerName": "Bailey, Archie",
+      "hole": 16,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Roy, Mike",
+      "timestamp": "2026-05-31T18:36:40.991Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "333",
+      "volunteerName": "Crow, Hampton",
+      "hole": 16,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Roy, Mike",
+      "timestamp": "2026-05-31T18:36:42.942Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4669",
+      "volunteerName": "Degraauw, Roland",
+      "hole": 16,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Roy, Mike",
+      "timestamp": "2026-05-31T18:36:43.750Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9051",
+      "volunteerName": "Edmiston, Charles",
+      "hole": 16,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Roy, Mike",
+      "timestamp": "2026-05-31T18:36:45.889Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7723",
+      "volunteerName": "Penneman, Douglas",
+      "hole": 16,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Roy, Mike",
+      "timestamp": "2026-05-31T18:36:49.931Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10130",
+      "volunteerName": "Penneman, Roger",
+      "hole": 16,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Roy, Mike",
+      "timestamp": "2026-05-31T18:36:50.952Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7250",
+      "volunteerName": "Wilson, Jane",
+      "hole": 16,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Roy, Mike",
+      "timestamp": "2026-05-31T18:36:52.318Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9575",
+      "volunteerName": "Phillips, Jason",
+      "hole": 12,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-31T18:38:51.173Z",
+      "isAlternate": true
     }
   ],
   "submissions": [],
