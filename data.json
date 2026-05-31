@@ -32656,6 +32656,126 @@
       "checkedInBy": "Trout, Wayne",
       "timestamp": "2026-05-31T16:47:38.463Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "9018",
+      "volunteerName": "Chee, Wendell",
+      "hole": 14,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Mosler, Mitch",
+      "timestamp": "2026-05-31T16:53:11.522Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9916",
+      "volunteerName": "Endicott, Eric",
+      "hole": 14,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Mosler, Mitch",
+      "timestamp": "2026-05-31T16:53:11.924Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5240",
+      "volunteerName": "Rogenski, Chris P.",
+      "hole": 8,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-31T16:53:27.180Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2507",
+      "volunteerName": "Holt, Sammy",
+      "hole": 8,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-31T16:53:27.669Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2543",
+      "volunteerName": "Holt, Sharron",
+      "hole": 8,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-31T16:53:28.164Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9928",
+      "volunteerName": "Rodrigues, Donald",
+      "hole": 8,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-31T16:53:42.159Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "3779",
+      "volunteerName": "Johnson, Claude",
+      "hole": 8,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-31T16:53:42.873Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10436",
+      "volunteerName": "Schumann, Rick",
+      "hole": 8,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-31T16:53:44.356Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8787",
+      "volunteerName": "Jefferies, David",
+      "hole": 8,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-31T16:53:45.132Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7865",
+      "volunteerName": "Davis, Sam",
+      "hole": 8,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-31T16:53:45.181Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7430",
+      "volunteerName": "Grizzle, Bob",
+      "hole": 9,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Burnett, Eric",
+      "timestamp": "2026-05-31T16:54:45.843Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9371",
+      "volunteerName": "Duckett, Gary",
+      "hole": 9,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Burnett, Eric",
+      "timestamp": "2026-05-31T16:54:56.928Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
