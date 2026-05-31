@@ -37,13 +37,14 @@
         "Tuesday PM": true,
         "Thursday AM": true,
         "Friday PM": true,
-        "Saturday AM": true
+        "Saturday AM": true,
+        "Sunday PM": true
       },
       "volId": "9015",
       "address": "5312 Lake Mead Trail Ft Worth, TX 76137-5344",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1780187520939
+      "lastModified": 1780243815295
     },
     {
       "id": "8220",
@@ -32282,6 +32283,16 @@
       "checkedInBy": "Browning, Wayne",
       "timestamp": "2026-05-31T15:42:02.389Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "9015",
+      "volunteerName": "Aguilar, Jorge",
+      "hole": 2,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Gordon, Gary",
+      "timestamp": "2026-05-31T16:10:24.365Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -32302,6 +32313,15 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1780243815295-ospka7",
+      "timestamp": "2026-05-31T16:10:15.295Z",
+      "user": "Gordon, Gary",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Aguilar, Jorge",
+      "details": "added Sunday PM"
+    },
     {
       "id": "1780241755693-f1am2f",
       "timestamp": "2026-05-31T15:35:55.693Z",
