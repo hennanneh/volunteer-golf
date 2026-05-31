@@ -33376,6 +33376,96 @@
       "checkedInBy": "Sanders, Steve",
       "timestamp": "2026-05-31T17:52:45.795Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "7926",
+      "volunteerName": "Johnson, Linda",
+      "hole": 13,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Duncan, Larry",
+      "timestamp": "2026-05-31T17:56:32.136Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7927",
+      "volunteerName": "Johnson, Dean",
+      "hole": 13,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Duncan, Larry",
+      "timestamp": "2026-05-31T17:56:32.262Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5454",
+      "volunteerName": "Kopenec, Rich",
+      "hole": 13,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Duncan, Larry",
+      "timestamp": "2026-05-31T17:56:39.439Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "3489",
+      "volunteerName": "Maxwell, Steve",
+      "hole": 13,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Duncan, Larry",
+      "timestamp": "2026-05-31T17:56:43.073Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4143",
+      "volunteerName": "Perez, Emerico",
+      "hole": 13,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Duncan, Larry",
+      "timestamp": "2026-05-31T17:56:43.187Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9397",
+      "volunteerName": "Seebaum, Todd",
+      "hole": 13,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Duncan, Larry",
+      "timestamp": "2026-05-31T17:56:47.416Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10566",
+      "volunteerName": "Sharrah, Adam",
+      "hole": 13,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Duncan, Larry",
+      "timestamp": "2026-05-31T17:56:48.346Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6692",
+      "volunteerName": "Starks, Michael",
+      "hole": 12,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-31T17:59:25.702Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7052",
+      "volunteerName": "Fisher, Paul",
+      "hole": 12,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-31T17:59:28.328Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
