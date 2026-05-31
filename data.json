@@ -29758,6 +29758,46 @@
       "checkedInBy": "Nederostek, Brad",
       "timestamp": "2026-05-31T12:18:04.245Z",
       "isAlternate": true
+    },
+    {
+      "volunteerId": "9465",
+      "volunteerName": "Blankenship, Mitch",
+      "hole": 5,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Imboden, Thomas",
+      "timestamp": "2026-05-31T12:20:52.822Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6744",
+      "volunteerName": "Livermore, James",
+      "hole": 5,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Imboden, Thomas",
+      "timestamp": "2026-05-31T12:20:58.576Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10271",
+      "volunteerName": "Mcintyre, Sean",
+      "hole": 5,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Imboden, Thomas",
+      "timestamp": "2026-05-31T12:21:01.583Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7070",
+      "volunteerName": "Reding, Gary",
+      "hole": 5,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Imboden, Thomas",
+      "timestamp": "2026-05-31T12:21:04.623Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
