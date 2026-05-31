@@ -33076,6 +33076,126 @@
       "checkedInBy": "Duncan, Larry",
       "timestamp": "2026-05-31T17:29:00.819Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "2657",
+      "volunteerName": "James, Marty",
+      "hole": 11,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-31T17:36:53.473Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "278",
+      "volunteerName": "Watson, Stan",
+      "hole": 11,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-31T17:37:42.158Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2657",
+      "volunteerName": "James, Marty",
+      "hole": 11,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-31T17:37:42.467Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6335",
+      "volunteerName": "Gray, Jerry",
+      "hole": 11,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-31T17:37:48.829Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10644",
+      "volunteerName": "Ash, Michael",
+      "hole": 11,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-31T17:37:48.936Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7043",
+      "volunteerName": "Gray, James",
+      "hole": 11,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-31T17:37:48.990Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10274",
+      "volunteerName": "Hitz, Jim",
+      "hole": 11,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-31T17:37:49.368Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5015",
+      "volunteerName": "Meinke, Albert",
+      "hole": 11,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-31T17:37:50.664Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6758",
+      "volunteerName": "Oakley, Jeff",
+      "hole": 11,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-31T17:37:51.138Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8154",
+      "volunteerName": "Wyatt, Jeff",
+      "hole": 11,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-31T17:37:54.389Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7291",
+      "volunteerName": "Casey, John",
+      "hole": 11,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-31T17:37:56.005Z",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "6672",
+      "volunteerName": "Bravo, Albert",
+      "hole": 13,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Duncan, Larry",
+      "timestamp": "2026-05-31T17:40:00.600Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
