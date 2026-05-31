@@ -31359,6 +31359,76 @@
       "checkedInBy": "Sanders, Steve",
       "timestamp": "2026-05-31T14:24:00.937Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "9233",
+      "volunteerName": "Wooldridge, Brad",
+      "hole": 14,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Sanders, Steve",
+      "timestamp": "2026-05-31T14:25:24.493Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4143",
+      "volunteerName": "Perez, Emerico",
+      "hole": 13,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Clayton, Rodney",
+      "timestamp": "2026-05-31T14:26:53.008Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9775",
+      "volunteerName": "Stults, Mike",
+      "hole": 13,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Clayton, Rodney",
+      "timestamp": "2026-05-31T14:26:54.331Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8852",
+      "volunteerName": "Vollintine, Derek",
+      "hole": 13,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Clayton, Rodney",
+      "timestamp": "2026-05-31T14:26:56.399Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10349",
+      "volunteerName": "Gunnels, Cliff",
+      "hole": 13,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Clayton, Rodney",
+      "timestamp": "2026-05-31T14:27:10.378Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "3986",
+      "volunteerName": "Clayton, Rodney",
+      "hole": 13,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Clayton, Rodney",
+      "timestamp": "2026-05-31T14:28:07.218Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4531",
+      "volunteerName": "Duncan, Larry",
+      "hole": 13,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Clayton, Rodney",
+      "timestamp": "2026-05-31T14:28:07.646Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
