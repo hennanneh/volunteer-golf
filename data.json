@@ -31139,6 +31139,76 @@
       "checkedInBy": "Gordon, Gary",
       "timestamp": "2026-05-31T14:04:36.440Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "380",
+      "volunteerName": "Johnson, Kenny",
+      "hole": 1,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Johnson, Kenny",
+      "timestamp": "2026-05-31T14:11:46.736Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6553",
+      "volunteerName": "Ruddell, Dick",
+      "hole": 1,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Johnson, Kenny",
+      "timestamp": "2026-05-31T14:11:47.914Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4128",
+      "volunteerName": "Gilley, Roger",
+      "hole": 1,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Johnson, Kenny",
+      "timestamp": "2026-05-31T14:11:49.987Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10213",
+      "volunteerName": "Hurr, Randy",
+      "hole": 1,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Johnson, Kenny",
+      "timestamp": "2026-05-31T14:11:54.157Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10360",
+      "volunteerName": "Parker, James",
+      "hole": 1,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Johnson, Kenny",
+      "timestamp": "2026-05-31T14:11:56.984Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8448",
+      "volunteerName": "Prater, David",
+      "hole": 1,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Johnson, Kenny",
+      "timestamp": "2026-05-31T14:11:58.562Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4667",
+      "volunteerName": "Prentice, Roy",
+      "hole": 1,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Johnson, Kenny",
+      "timestamp": "2026-05-31T14:12:00.524Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
