@@ -31519,6 +31519,36 @@
       "checkedInBy": "Pugh, Clayton",
       "timestamp": "2026-05-31T14:39:26.685Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "5695",
+      "volunteerName": "Jessop, Tim",
+      "hole": 13,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Clayton, Rodney",
+      "timestamp": "2026-05-31T14:40:06.955Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6962",
+      "volunteerName": "Eisen, Scott",
+      "hole": 13,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Clayton, Rodney",
+      "timestamp": "2026-05-31T14:40:24.308Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10582",
+      "volunteerName": "Corrales, Jack",
+      "hole": 14,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Sanders, Steve",
+      "timestamp": "2026-05-31T14:44:25.593Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
