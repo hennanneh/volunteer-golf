@@ -32596,6 +32596,66 @@
       "checkedInBy": "Burnett, Eric",
       "timestamp": "2026-05-31T16:44:50.222Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "10328",
+      "volunteerName": "Elliott, David",
+      "hole": 9,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Burnett, Eric",
+      "timestamp": "2026-05-31T16:45:18.768Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9595",
+      "volunteerName": "Gaunce, David",
+      "hole": 10,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-31T16:47:29.519Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8306",
+      "volunteerName": "Ellis, Tom",
+      "hole": 10,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-31T16:47:30.039Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8194",
+      "volunteerName": "Croxdale, Jack",
+      "hole": 10,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-31T16:47:32.269Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10329",
+      "volunteerName": "Mecum, Scott",
+      "hole": 10,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-31T16:47:38.129Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10774",
+      "volunteerName": "Moss, Doyle",
+      "hole": 10,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-31T16:47:38.463Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
