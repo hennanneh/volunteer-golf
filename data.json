@@ -2358,7 +2358,8 @@
       "volId": "10735",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779826832297
+      "lastModified": 1780239684519,
+      "notes": "Withdrew-medical reasons"
     },
     {
       "id": "7528",
@@ -8497,7 +8498,8 @@
         "Thursday PM": true,
         "Friday AM": true,
         "Saturday PM": true,
-        "Sunday AM": true
+        "Sunday AM": true,
+        "Sunday PM": true
       },
       "volId": "9787",
       "address": "3201 Sth 23rd st Apt 236 Abilene, TX 79605",
@@ -8507,7 +8509,7 @@
         "7692",
         "10437"
       ],
-      "lastModified": 1778813044771,
+      "lastModified": 1780239612461,
       "volunteerPassword": "$2b$10$AjSjintHmCsQroDClY2cZuzYZ286dfB1r1F83jYGNDIEARONiVesu"
     },
     {
@@ -31829,6 +31831,36 @@
       "checkedInBy": "Browning, Wayne",
       "timestamp": "2026-05-31T14:59:56.551Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "10276",
+      "volunteerName": "Lawson, Arnie",
+      "hole": 9,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Burnett, Eric",
+      "timestamp": "2026-05-31T15:00:11.981Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9787",
+      "volunteerName": "Waruta, James",
+      "hole": 2,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Gordon, Gary",
+      "timestamp": "2026-05-31T15:00:21.215Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2629",
+      "volunteerName": "Smith, Jeff",
+      "hole": 2,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Gordon, Gary",
+      "timestamp": "2026-05-31T15:01:42.938Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -31849,6 +31881,24 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1780239684519-k236b3",
+      "timestamp": "2026-05-31T15:01:24.519Z",
+      "user": "Burnett, Eric",
+      "userType": "Captain",
+      "action": "edit-volunteer",
+      "target": "Gaona, Carlos",
+      "details": "Updated fields: notes"
+    },
+    {
+      "id": "1780239612461-xlgccw",
+      "timestamp": "2026-05-31T15:00:12.461Z",
+      "user": "Gordon, Gary",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Waruta, James",
+      "details": "added Sunday PM"
+    },
     {
       "id": "1780233765272-jaa18x",
       "timestamp": "2026-05-31T13:22:45.272Z",
