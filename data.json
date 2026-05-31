@@ -31861,6 +31861,36 @@
       "checkedInBy": "Gordon, Gary",
       "timestamp": "2026-05-31T15:01:42.938Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "8644",
+      "volunteerName": "Richie, Antonio",
+      "hole": 17,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Browning, Wayne",
+      "timestamp": "2026-05-31T15:06:30.690Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "3778",
+      "volunteerName": "Hicks, Jackie",
+      "hole": 17,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Browning, Wayne",
+      "timestamp": "2026-05-31T15:09:37.834Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "3777",
+      "volunteerName": "Hicks, Greg",
+      "hole": 17,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Browning, Wayne",
+      "timestamp": "2026-05-31T15:09:38.980Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
