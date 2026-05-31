@@ -30218,6 +30218,136 @@
       "checkedInBy": "Holt, Sharron",
       "timestamp": "2026-05-31T12:53:21.269Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "4536",
+      "volunteerName": "Trout, Wayne",
+      "hole": 10,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-31T12:55:43.739Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "214",
+      "volunteerName": "Osiek, Curt",
+      "hole": 10,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-31T12:55:44.429Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9560",
+      "volunteerName": "Cross, Britt",
+      "hole": 10,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-31T12:55:48.941Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9788",
+      "volunteerName": "Kramer, Ed",
+      "hole": 10,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-31T12:55:57.964Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4518",
+      "volunteerName": "Kutzler, Jack",
+      "hole": 10,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-31T12:55:59.764Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9485",
+      "volunteerName": "Lutke, Jeff",
+      "hole": 10,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-31T12:56:02.178Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10319",
+      "volunteerName": "Montou, John",
+      "hole": 10,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-31T12:56:07.238Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10348",
+      "volunteerName": "Hayes, Laurene",
+      "hole": 10,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-31T12:56:21.746Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10337",
+      "volunteerName": "Jacobs, Rick",
+      "hole": 10,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-31T12:56:37.249Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10737",
+      "volunteerName": "Baird, Christina",
+      "hole": 10,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-31T12:56:42.815Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8802",
+      "volunteerName": "Austin, Vance",
+      "hole": 10,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-31T12:56:45.139Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10061",
+      "volunteerName": "Luton, Bob",
+      "hole": 10,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-31T12:57:04.361Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4434",
+      "volunteerName": "Mueller, Tom",
+      "hole": 10,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-31T12:57:06.810Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
