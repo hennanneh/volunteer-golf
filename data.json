@@ -2615,14 +2615,15 @@
         "Wednesday PM": true,
         "Friday AM": true,
         "Saturday PM": true,
-        "Sunday AM": true
+        "Sunday AM": true,
+        "Sunday PM": true
       },
       "address": "2407 Lakepoint Drive\r\nKeller, TX 76248",
       "volId": "7768",
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
       "notAttendingOuting": true,
-      "lastModified": 1780156656286,
+      "lastModified": 1780233765272,
       "volunteerPassword": "$2b$10$wGD4Nsg5CJoBUH4a66XUQuCxufSedayVUZICfAnCGRzZsH1nPs8ke"
     },
     {
@@ -30858,6 +30859,26 @@
       "checkedInBy": "Gordon, Gary",
       "timestamp": "2026-05-31T13:18:46.135Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "9580",
+      "volunteerName": "Ludgate, Robert",
+      "hole": 10,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-31T13:20:07.729Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7768",
+      "volunteerName": "Gillitzer, Dean",
+      "hole": 2,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Gordon, Gary",
+      "timestamp": "2026-05-31T13:23:02.847Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -30878,6 +30899,15 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1780233765272-jaa18x",
+      "timestamp": "2026-05-31T13:22:45.272Z",
+      "user": "Gordon, Gary",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Gillitzer, Dean",
+      "details": "added Sunday PM"
+    },
     {
       "id": "1780231959981-g4239e",
       "timestamp": "2026-05-31T12:52:39.981Z",
