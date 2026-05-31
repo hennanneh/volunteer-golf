@@ -30148,6 +30148,16 @@
       "checkedInBy": "Pugh, Clayton",
       "timestamp": "2026-05-31T12:43:36.878Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "2540",
+      "volunteerName": "Gillilan, Rusty",
+      "hole": 99,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Howrey, Anne",
+      "timestamp": "2026-05-31T12:47:32.416Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
