@@ -6390,13 +6390,14 @@
         "Thursday PM": true,
         "Friday AM": true,
         "Saturday PM": true,
-        "Sunday AM": true
+        "Sunday AM": true,
+        "Sunday PM": true
       },
       "volId": "9198",
       "address": "352 Holly Ridge Lane Ft. Worth, TX 76108",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1780244781410
     },
     {
       "id": "9834",
@@ -32374,6 +32375,96 @@
       "checkedInBy": "Trout, Wayne",
       "timestamp": "2026-05-31T16:24:31.408Z",
       "isAlternate": true
+    },
+    {
+      "volunteerId": "4433",
+      "volunteerName": "Elkins, Paul",
+      "hole": 6,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Mcdaniel, Patrick",
+      "timestamp": "2026-05-31T16:25:18.879Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "1464",
+      "volunteerName": "Mcdaniel, Patrick",
+      "hole": 6,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Mcdaniel, Patrick",
+      "timestamp": "2026-05-31T16:25:19.212Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9461",
+      "volunteerName": "Goodenough, Timothy",
+      "hole": 6,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Mcdaniel, Patrick",
+      "timestamp": "2026-05-31T16:25:23.486Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5441",
+      "volunteerName": "Lee, Rodney",
+      "hole": 6,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Mcdaniel, Patrick",
+      "timestamp": "2026-05-31T16:25:23.711Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9834",
+      "volunteerName": "Piper, Kathleen",
+      "hole": 6,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Mcdaniel, Patrick",
+      "timestamp": "2026-05-31T16:25:24.359Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9833",
+      "volunteerName": "Piper, Monte",
+      "hole": 6,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Mcdaniel, Patrick",
+      "timestamp": "2026-05-31T16:25:26.096Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9198",
+      "volunteerName": "Pierce, Mike",
+      "hole": 10,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-31T16:26:29.107Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2658",
+      "volunteerName": "Andrews, Joseph",
+      "hole": 6,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Mcdaniel, Patrick",
+      "timestamp": "2026-05-31T16:26:43.227Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4190",
+      "volunteerName": "Towers, Douglas",
+      "hole": 6,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Mcdaniel, Patrick",
+      "timestamp": "2026-05-31T16:26:45.759Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -32394,6 +32485,15 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1780244781410-axylmf",
+      "timestamp": "2026-05-31T16:26:21.410Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Pierce, Mike",
+      "details": "added Sunday PM"
+    },
     {
       "id": "1780244676568-an0y10",
       "timestamp": "2026-05-31T16:24:36.568Z",
