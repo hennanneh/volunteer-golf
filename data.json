@@ -30989,6 +30989,16 @@
       "checkedInBy": "Johnson, Kenny",
       "timestamp": "2026-05-31T13:29:22.573Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "5401",
+      "volunteerName": "Badalamenti, Jim",
+      "hole": 8,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Rogenski, Chris P.",
+      "timestamp": "2026-05-31T13:34:14.400Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
