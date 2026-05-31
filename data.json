@@ -4642,8 +4642,10 @@
       "address": "11102 Jereme Trail Frisco, TX 75035",
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
-      "lastModified": 1778813044771,
-      "volunteerPassword": "$2b$10$VqqP7bJ5Z3xQw8UPxsbki.hhMDlBk7k95gOYCnyICv/e4wdieki2O"
+      "lastModified": 1780253850753,
+      "volunteerPassword": "$2b$10$VqqP7bJ5Z3xQw8UPxsbki.hhMDlBk7k95gOYCnyICv/e4wdieki2O",
+      "notes": "5/31- medical emergency- felt like he was going to pass out in HQ",
+      "hatReceived": false
     },
     {
       "id": "2133",
@@ -33896,6 +33898,15 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1780253850754-6259m1",
+      "timestamp": "2026-05-31T18:57:30.754Z",
+      "user": "Howrey, Anne",
+      "userType": "Admin",
+      "action": "edit-volunteer",
+      "target": "Langford, Alan",
+      "details": "Updated fields: notes, hatReceived"
+    },
     {
       "id": "1780245774214-t83aa4",
       "timestamp": "2026-05-31T16:42:54.214Z",
