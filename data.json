@@ -1291,7 +1291,8 @@
       "address": "196 Santa Lena Court Dectur, TX 76040",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1780245774214,
+      "notes": "Withdrew family emergency"
     },
     {
       "id": "8788",
@@ -30167,16 +30168,6 @@
       "isAlternate": false
     },
     {
-      "volunteerId": "3034",
-      "volunteerName": "Burnett, Eric",
-      "hole": 9,
-      "day": "Sunday",
-      "shift": "AM",
-      "checkedInBy": "Jutras, Michael",
-      "timestamp": "2026-05-31T12:50:22.389Z",
-      "isAlternate": false
-    },
-    {
       "volunteerId": "2055",
       "volunteerName": "Edwards, Bill",
       "hole": 9,
@@ -32465,6 +32456,146 @@
       "checkedInBy": "Mcdaniel, Patrick",
       "timestamp": "2026-05-31T16:26:45.759Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "3034",
+      "volunteerName": "Burnett, Eric",
+      "hole": 9,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Burnett, Eric",
+      "timestamp": "2026-05-31T16:41:29.297Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2055",
+      "volunteerName": "Edwards, Bill",
+      "hole": 9,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Burnett, Eric",
+      "timestamp": "2026-05-31T16:41:30.587Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9658",
+      "volunteerName": "Jutras, Michael",
+      "hole": 9,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Burnett, Eric",
+      "timestamp": "2026-05-31T16:41:31.093Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "3034",
+      "volunteerName": "Burnett, Eric",
+      "hole": 9,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Burnett, Eric",
+      "timestamp": "2026-05-31T16:41:41.215Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "3149",
+      "volunteerName": "Broom, Douglas",
+      "hole": 9,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Burnett, Eric",
+      "timestamp": "2026-05-31T16:41:53.687Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6714",
+      "volunteerName": "Hellis, Neil",
+      "hole": 9,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Burnett, Eric",
+      "timestamp": "2026-05-31T16:43:07.757Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2919",
+      "volunteerName": "Loveland, Edward",
+      "hole": 9,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Burnett, Eric",
+      "timestamp": "2026-05-31T16:43:09.500Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9510",
+      "volunteerName": "Mason, Larry",
+      "hole": 9,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Burnett, Eric",
+      "timestamp": "2026-05-31T16:43:11.923Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8462",
+      "volunteerName": "Simmons, Kim",
+      "hole": 9,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Burnett, Eric",
+      "timestamp": "2026-05-31T16:43:16.486Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8463",
+      "volunteerName": "Simmons, Vance",
+      "hole": 9,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Burnett, Eric",
+      "timestamp": "2026-05-31T16:43:19.607Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9109",
+      "volunteerName": "Sippel, Mark",
+      "hole": 9,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Burnett, Eric",
+      "timestamp": "2026-05-31T16:43:24.976Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "1518",
+      "volunteerName": "Trias, Dan",
+      "hole": 9,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Burnett, Eric",
+      "timestamp": "2026-05-31T16:43:29.315Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "1445",
+      "volunteerName": "Clark, David",
+      "hole": 9,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Burnett, Eric",
+      "timestamp": "2026-05-31T16:44:41.314Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10766",
+      "volunteerName": "Rose, Jacob",
+      "hole": 9,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Burnett, Eric",
+      "timestamp": "2026-05-31T16:44:50.222Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -32485,6 +32616,15 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1780245774214-t83aa4",
+      "timestamp": "2026-05-31T16:42:54.214Z",
+      "user": "Burnett, Eric",
+      "userType": "Captain",
+      "action": "edit-volunteer",
+      "target": "Cole, Jefery",
+      "details": "Updated fields: notes"
+    },
     {
       "id": "1780244781410-axylmf",
       "timestamp": "2026-05-31T16:26:21.410Z",
