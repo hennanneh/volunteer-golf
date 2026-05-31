@@ -31873,23 +31873,43 @@
       "isAlternate": false
     },
     {
-      "volunteerId": "3778",
-      "volunteerName": "Hicks, Jackie",
+      "volunteerId": "9427",
+      "volunteerName": "Yost, Kc",
       "hole": 17,
       "day": "Sunday",
       "shift": "AM",
       "checkedInBy": "Browning, Wayne",
-      "timestamp": "2026-05-31T15:09:37.834Z",
+      "timestamp": "2026-05-31T15:11:28.721Z",
       "isAlternate": false
     },
     {
-      "volunteerId": "3777",
-      "volunteerName": "Hicks, Greg",
+      "volunteerId": "10237",
+      "volunteerName": "Sumrall, Stuart",
       "hole": 17,
       "day": "Sunday",
       "shift": "AM",
       "checkedInBy": "Browning, Wayne",
-      "timestamp": "2026-05-31T15:09:38.980Z",
+      "timestamp": "2026-05-31T15:11:37.559Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4661",
+      "volunteerName": "Wright, Paul",
+      "hole": 17,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Browning, Wayne",
+      "timestamp": "2026-05-31T15:13:24.829Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10279",
+      "volunteerName": "Wright, Nancy",
+      "hole": 17,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Browning, Wayne",
+      "timestamp": "2026-05-31T15:13:25.626Z",
       "isAlternate": false
     }
   ],
