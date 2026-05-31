@@ -31429,6 +31429,36 @@
       "checkedInBy": "Clayton, Rodney",
       "timestamp": "2026-05-31T14:28:07.646Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "9503",
+      "volunteerName": "Gregston, Bryan",
+      "hole": 2,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Gordon, Gary",
+      "timestamp": "2026-05-31T14:30:38.526Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8946",
+      "volunteerName": "Gregston, Parker",
+      "hole": 2,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Gordon, Gary",
+      "timestamp": "2026-05-31T14:30:39.074Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9083",
+      "volunteerName": "Lyons, Dak",
+      "hole": 13,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Clayton, Rodney",
+      "timestamp": "2026-05-31T14:32:20.553Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
