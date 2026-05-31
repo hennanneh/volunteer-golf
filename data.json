@@ -33486,6 +33486,96 @@
       "checkedInBy": "Browning, Wayne",
       "timestamp": "2026-05-31T18:20:00.574Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "7794",
+      "volunteerName": "Beckley, Bob",
+      "hole": 15,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Beckley, Bob",
+      "timestamp": "2026-05-31T18:22:02.929Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5235",
+      "volunteerName": "Thomas, Stephen",
+      "hole": 15,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Beckley, Bob",
+      "timestamp": "2026-05-31T18:22:03.462Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9807",
+      "volunteerName": "Bullard, Tricia",
+      "hole": 15,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Beckley, Bob",
+      "timestamp": "2026-05-31T18:22:11.067Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9134",
+      "volunteerName": "Clark, Jason",
+      "hole": 15,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Beckley, Bob",
+      "timestamp": "2026-05-31T18:22:13.897Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6594",
+      "volunteerName": "Dunn, Dean",
+      "hole": 15,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Beckley, Bob",
+      "timestamp": "2026-05-31T18:22:14.278Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5924",
+      "volunteerName": "Gustaf, David",
+      "hole": 15,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Beckley, Bob",
+      "timestamp": "2026-05-31T18:22:14.613Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10362",
+      "volunteerName": "Mills, Brad",
+      "hole": 15,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Beckley, Bob",
+      "timestamp": "2026-05-31T18:22:36.827Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10550",
+      "volunteerName": "Schultz, Joni",
+      "hole": 15,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Beckley, Bob",
+      "timestamp": "2026-05-31T18:22:42.267Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10495",
+      "volunteerName": "Studdard, William",
+      "hole": 17,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Browning, Wayne",
+      "timestamp": "2026-05-31T18:24:33.971Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
