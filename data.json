@@ -8060,14 +8060,13 @@
         "Wednesday PM": true,
         "Thursday PM": true,
         "Friday AM": true,
-        "Saturday PM": true,
-        "Sunday AM": true
+        "Saturday PM": true
       },
       "volId": "5612",
       "address": "2142 Rohne Dr Cedar Hill, TX 75104",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1780193237490
     },
     {
       "id": "10364",
@@ -29378,6 +29377,15 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1780193237490-wn791f",
+      "timestamp": "2026-05-31T02:07:17.490Z",
+      "user": "Watson, Stan",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Tengra, Mary",
+      "details": "removed Sunday AM"
+    },
     {
       "id": "1780187520939-q96pa5",
       "timestamp": "2026-05-31T00:32:00.939Z",
