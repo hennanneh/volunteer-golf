@@ -8654,13 +8654,13 @@
         "Thursday PM": true,
         "Friday AM": true,
         "Saturday PM": true,
-        "Sunday AM": true
+        "Sunday PM": true
       },
       "address": "6828 Walter Street North Richland Hills, TX 76182",
       "volId": "10437",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1780231959981
     },
     {
       "id": "8219",
@@ -30158,6 +30158,66 @@
       "checkedInBy": "Howrey, Anne",
       "timestamp": "2026-05-31T12:47:32.416Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "9658",
+      "volunteerName": "Jutras, Michael",
+      "hole": 9,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Jutras, Michael",
+      "timestamp": "2026-05-31T12:50:21.379Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "3034",
+      "volunteerName": "Burnett, Eric",
+      "hole": 9,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Jutras, Michael",
+      "timestamp": "2026-05-31T12:50:22.389Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2055",
+      "volunteerName": "Edwards, Bill",
+      "hole": 9,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Jutras, Michael",
+      "timestamp": "2026-05-31T12:50:24.459Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9818",
+      "volunteerName": "Robinson, Evan",
+      "hole": 5,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Imboden, Thomas",
+      "timestamp": "2026-05-31T12:51:52.606Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2543",
+      "volunteerName": "Holt, Sharron",
+      "hole": 8,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Holt, Sharron",
+      "timestamp": "2026-05-31T12:53:21.163Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2507",
+      "volunteerName": "Holt, Sammy",
+      "hole": 8,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Holt, Sharron",
+      "timestamp": "2026-05-31T12:53:21.269Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -30178,6 +30238,15 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1780231959981-g4239e",
+      "timestamp": "2026-05-31T12:52:39.981Z",
+      "user": "Gordon, Gary",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "White, Drake",
+      "details": "added Sunday PM; removed Sunday AM"
+    },
     {
       "id": "1780226631195-yabzmq",
       "timestamp": "2026-05-31T11:23:51.195Z",
