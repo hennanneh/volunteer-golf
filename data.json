@@ -29648,6 +29648,36 @@
       "checkedInBy": "Imboden, Thomas",
       "timestamp": "2026-05-31T11:55:34.307Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "9405",
+      "volunteerName": "Wilson, Anita",
+      "hole": 1,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Ruddell, Dick",
+      "timestamp": "2026-05-31T12:01:36.838Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8646",
+      "volunteerName": "Macfarlane, Tracy",
+      "hole": 2,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Gordon, Gary",
+      "timestamp": "2026-05-31T12:01:57.390Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10731",
+      "volunteerName": "Gaines, Lisa",
+      "hole": 2,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Gordon, Gary",
+      "timestamp": "2026-05-31T12:02:00.434Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
