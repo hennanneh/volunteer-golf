@@ -37,14 +37,13 @@
         "Tuesday PM": true,
         "Thursday AM": true,
         "Friday PM": true,
-        "Saturday AM": true,
-        "Sunday PM": true
+        "Saturday AM": true
       },
       "volId": "9015",
       "address": "5312 Lake Mead Trail Ft Worth, TX 76137-5344",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1780187520939
     },
     {
       "id": "8220",
@@ -29379,6 +29378,15 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1780187520939-q96pa5",
+      "timestamp": "2026-05-31T00:32:00.939Z",
+      "user": "Sale, Lynn",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Aguilar, Jorge",
+      "details": "removed Sunday PM"
+    },
     {
       "id": "1780182204687-4xm397",
       "timestamp": "2026-05-30T23:03:24.687Z",
