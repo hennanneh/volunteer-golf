@@ -33466,6 +33466,26 @@
       "checkedInBy": "Pugh, Clayton",
       "timestamp": "2026-05-31T17:59:28.328Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "3777",
+      "volunteerName": "Hicks, Greg",
+      "hole": 17,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Browning, Wayne",
+      "timestamp": "2026-05-31T18:19:59.986Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "3778",
+      "volunteerName": "Hicks, Jackie",
+      "hole": 17,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Browning, Wayne",
+      "timestamp": "2026-05-31T18:20:00.574Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
