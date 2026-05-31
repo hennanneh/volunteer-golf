@@ -33046,6 +33046,36 @@
       "checkedInBy": "Clayton, Rodney",
       "timestamp": "2026-05-31T17:09:20.211Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "4531",
+      "volunteerName": "Duncan, Larry",
+      "hole": 13,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Duncan, Larry",
+      "timestamp": "2026-05-31T17:29:00.255Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "3986",
+      "volunteerName": "Clayton, Rodney",
+      "hole": 13,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Duncan, Larry",
+      "timestamp": "2026-05-31T17:29:00.424Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9019",
+      "volunteerName": "Barron, Jamey",
+      "hole": 13,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Duncan, Larry",
+      "timestamp": "2026-05-31T17:29:00.819Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
