@@ -30128,6 +30128,26 @@
       "checkedInBy": "Howrey, Anne",
       "timestamp": "2026-05-31T12:38:07.422Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "8630",
+      "volunteerName": "Montalvo, Sammy",
+      "hole": 5,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Imboden, Thomas",
+      "timestamp": "2026-05-31T12:42:44.607Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9988",
+      "volunteerName": "Grall, George",
+      "hole": 12,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-31T12:43:36.878Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
