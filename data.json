@@ -31884,16 +31884,6 @@
       "isAlternate": false
     },
     {
-      "volunteerId": "10237",
-      "volunteerName": "Sumrall, Stuart",
-      "hole": 17,
-      "day": "Sunday",
-      "shift": "AM",
-      "checkedInBy": "Browning, Wayne",
-      "timestamp": "2026-05-31T15:11:37.559Z",
-      "isAlternate": false
-    },
-    {
       "volunteerId": "4661",
       "volunteerName": "Wright, Paul",
       "hole": 17,
@@ -32271,6 +32261,26 @@
       "shift": "PM",
       "checkedInBy": "Nederostek, Brad",
       "timestamp": "2026-05-31T15:35:36.882Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9406",
+      "volunteerName": "Kocek, Greg",
+      "hole": 17,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Browning, Wayne",
+      "timestamp": "2026-05-31T15:40:33.706Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10237",
+      "volunteerName": "Sumrall, Stuart",
+      "hole": 17,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Browning, Wayne",
+      "timestamp": "2026-05-31T15:42:02.389Z",
       "isAlternate": false
     }
   ],
