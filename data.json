@@ -29387,6 +29387,26 @@
       "checkedInBy": "Gordon, Gary",
       "timestamp": "2026-05-31T11:02:49.750Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "380",
+      "volunteerName": "Johnson, Kenny",
+      "hole": 1,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Johnson, Kenny",
+      "timestamp": "2026-05-31T11:19:28.135Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6553",
+      "volunteerName": "Ruddell, Dick",
+      "hole": 1,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Johnson, Kenny",
+      "timestamp": "2026-05-31T11:19:28.705Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
