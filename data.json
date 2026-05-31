@@ -31559,6 +31559,66 @@
       "checkedInBy": "Pugh, Clayton",
       "timestamp": "2026-05-31T14:48:16.737Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "278",
+      "volunteerName": "Watson, Stan",
+      "hole": 11,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-31T14:54:01.840Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10644",
+      "volunteerName": "Ash, Michael",
+      "hole": 11,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-31T14:54:04.755Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7291",
+      "volunteerName": "Casey, John",
+      "hole": 11,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-31T14:54:06.455Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6758",
+      "volunteerName": "Oakley, Jeff",
+      "hole": 11,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-31T14:54:06.646Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2488",
+      "volunteerName": "Reinfelds, David",
+      "hole": 11,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-31T14:54:09.719Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9796",
+      "volunteerName": "Richards, Stephen",
+      "hole": 11,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Watson, Stan",
+      "timestamp": "2026-05-31T14:54:10.022Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
