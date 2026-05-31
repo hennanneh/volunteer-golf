@@ -4474,13 +4474,14 @@
         "Friday PM": true,
         "Saturday AM": true,
         "Saturday PM": true,
-        "Sunday AM": true
+        "Sunday AM": true,
+        "Sunday PM": true
       },
       "volId": "9788",
       "address": "764 Parkview Drive Burleson, TX 76028",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1779907264397,
+      "lastModified": 1780244676568,
       "volunteerPassword": "$2b$10$mCv9lf6Nuln5RW8.as1TyOm8MqEcTh7T9FJABDHRSI3STeS8syhXS"
     },
     {
@@ -32293,6 +32294,86 @@
       "checkedInBy": "Gordon, Gary",
       "timestamp": "2026-05-31T16:10:24.365Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "4536",
+      "volunteerName": "Trout, Wayne",
+      "hole": 10,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-31T16:23:08.082Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "214",
+      "volunteerName": "Osiek, Curt",
+      "hole": 10,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-31T16:23:08.886Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8220",
+      "volunteerName": "Anderson, Brian",
+      "hole": 10,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-31T16:23:11.601Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4518",
+      "volunteerName": "Kutzler, Jack",
+      "hole": 10,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-31T16:23:18.846Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10061",
+      "volunteerName": "Luton, Bob",
+      "hole": 10,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-31T16:23:20.040Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10150",
+      "volunteerName": "Peterson, Durk",
+      "hole": 10,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-31T16:23:24.117Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4225",
+      "volunteerName": "Turner, Tom",
+      "hole": 10,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-31T16:23:26.977Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9788",
+      "volunteerName": "Kramer, Ed",
+      "hole": 10,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Trout, Wayne",
+      "timestamp": "2026-05-31T16:24:31.408Z",
+      "isAlternate": true
     }
   ],
   "submissions": [],
@@ -32313,6 +32394,15 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1780244676568-an0y10",
+      "timestamp": "2026-05-31T16:24:36.568Z",
+      "user": "Trout, Wayne",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Kramer, Ed",
+      "details": "added Sunday PM"
+    },
     {
       "id": "1780243815295-ospka7",
       "timestamp": "2026-05-31T16:10:15.295Z",
