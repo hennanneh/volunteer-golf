@@ -33856,6 +33856,16 @@
       "checkedInBy": "Pugh, Clayton",
       "timestamp": "2026-05-31T18:38:51.173Z",
       "isAlternate": true
+    },
+    {
+      "volunteerId": "8182",
+      "volunteerName": "Walters, Mark",
+      "hole": 14,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Mosler, Mitch",
+      "timestamp": "2026-05-31T18:48:11.137Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
