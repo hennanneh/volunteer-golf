@@ -33576,6 +33576,146 @@
       "checkedInBy": "Browning, Wayne",
       "timestamp": "2026-05-31T18:24:33.971Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "5391",
+      "volunteerName": "Gradt, Jason",
+      "hole": 18,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Gradt, Jason",
+      "timestamp": "2026-05-31T18:30:41.793Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4222",
+      "volunteerName": "Wehmeyer, Tom",
+      "hole": 18,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Gradt, Jason",
+      "timestamp": "2026-05-31T18:30:43.009Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8184",
+      "volunteerName": "Langford, Alan",
+      "hole": 18,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Gradt, Jason",
+      "timestamp": "2026-05-31T18:30:45.259Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "3558",
+      "volunteerName": "Moore, Barry",
+      "hole": 18,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Gradt, Jason",
+      "timestamp": "2026-05-31T18:30:46.286Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2125",
+      "volunteerName": "Moore, Keith",
+      "hole": 18,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Gradt, Jason",
+      "timestamp": "2026-05-31T18:30:48.238Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10260",
+      "volunteerName": "O'Hanlon, Katherine",
+      "hole": 18,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Gradt, Jason",
+      "timestamp": "2026-05-31T18:30:48.576Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8510",
+      "volunteerName": "Reddington, Joseph",
+      "hole": 18,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Gradt, Jason",
+      "timestamp": "2026-05-31T18:30:50.093Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10696",
+      "volunteerName": "Schoeppach, Ryan",
+      "hole": 18,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Gradt, Jason",
+      "timestamp": "2026-05-31T18:30:52.708Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10610",
+      "volunteerName": "Simon, Russ",
+      "hole": 18,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Gradt, Jason",
+      "timestamp": "2026-05-31T18:30:57.631Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10483",
+      "volunteerName": "Stoffel, Dan",
+      "hole": 18,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Gradt, Jason",
+      "timestamp": "2026-05-31T18:30:59.276Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10695",
+      "volunteerName": "Stone, Tyler",
+      "hole": 18,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Gradt, Jason",
+      "timestamp": "2026-05-31T18:30:59.805Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10237",
+      "volunteerName": "Sumrall, Stuart",
+      "hole": 17,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Browning, Wayne",
+      "timestamp": "2026-05-31T18:31:12.796Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "2439",
+      "volunteerName": "Vela, Humberto",
+      "hole": 18,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Gradt, Jason",
+      "timestamp": "2026-05-31T18:31:13.895Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5029",
+      "volunteerName": "Stevens, Deborah",
+      "hole": 14,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Mosler, Mitch",
+      "timestamp": "2026-05-31T18:32:09.642Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
