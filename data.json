@@ -29478,6 +29478,66 @@
       "checkedInBy": "Gordon, Gary",
       "timestamp": "2026-05-31T11:28:54.029Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "8935",
+      "volunteerName": "Knight, Ron",
+      "hole": 4,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Nederostek, Brad",
+      "timestamp": "2026-05-31T11:38:58.763Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "182",
+      "volunteerName": "Killinger, George",
+      "hole": 4,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Nederostek, Brad",
+      "timestamp": "2026-05-31T11:38:59.535Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "3974",
+      "volunteerName": "Schafer, John",
+      "hole": 4,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Nederostek, Brad",
+      "timestamp": "2026-05-31T11:39:00.935Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "6217",
+      "volunteerName": "Nederostek, Brad",
+      "hole": 4,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Nederostek, Brad",
+      "timestamp": "2026-05-31T11:39:01.033Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4800",
+      "volunteerName": "Livingston, Jennifier",
+      "hole": 4,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Nederostek, Brad",
+      "timestamp": "2026-05-31T11:39:06.543Z",
+      "isAlternate": true
+    },
+    {
+      "volunteerId": "7771",
+      "volunteerName": "Burford, Gary",
+      "hole": 4,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Nederostek, Brad",
+      "timestamp": "2026-05-31T11:39:19.225Z",
+      "isAlternate": true
     }
   ],
   "submissions": [],
