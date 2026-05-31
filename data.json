@@ -4797,13 +4797,14 @@
         "Thursday PM": true,
         "Friday AM": true,
         "Saturday PM": true,
-        "Sunday AM": true
+        "Sunday AM": true,
+        "Sunday PM": true
       },
       "volId": "6744",
       "address": "5707 2ND PL LUBBOCK, TX 79416",
       "hasAdminPassword": false,
       "hasVolunteerPassword": false,
-      "lastModified": 1778813044771
+      "lastModified": 1780241755693
     },
     {
       "id": "4800",
@@ -32201,6 +32202,76 @@
       "checkedInBy": "Roy, Mike",
       "timestamp": "2026-05-31T15:34:27.599Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "6217",
+      "volunteerName": "Nederostek, Brad",
+      "hole": 4,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Nederostek, Brad",
+      "timestamp": "2026-05-31T15:35:28.338Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "3974",
+      "volunteerName": "Schafer, John",
+      "hole": 4,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Nederostek, Brad",
+      "timestamp": "2026-05-31T15:35:28.522Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7771",
+      "volunteerName": "Burford, Gary",
+      "hole": 4,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Nederostek, Brad",
+      "timestamp": "2026-05-31T15:35:31.745Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9831",
+      "volunteerName": "Korywchak, Alan",
+      "hole": 4,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Nederostek, Brad",
+      "timestamp": "2026-05-31T15:35:31.980Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9830",
+      "volunteerName": "Korywchak, Joanne",
+      "hole": 4,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Nederostek, Brad",
+      "timestamp": "2026-05-31T15:35:32.037Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4800",
+      "volunteerName": "Livingston, Jennifier",
+      "hole": 4,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Nederostek, Brad",
+      "timestamp": "2026-05-31T15:35:35.841Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9581",
+      "volunteerName": "Williams, David",
+      "hole": 4,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Nederostek, Brad",
+      "timestamp": "2026-05-31T15:35:36.882Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -32221,6 +32292,15 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1780241755693-f1am2f",
+      "timestamp": "2026-05-31T15:35:55.693Z",
+      "user": "Imboden, Thomas",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Livermore, James",
+      "details": "added Sunday PM"
+    },
     {
       "id": "1780239684519-k236b3",
       "timestamp": "2026-05-31T15:01:24.519Z",
