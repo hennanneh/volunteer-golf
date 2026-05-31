@@ -31549,6 +31549,16 @@
       "checkedInBy": "Sanders, Steve",
       "timestamp": "2026-05-31T14:44:25.593Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "9575",
+      "volunteerName": "Phillips, Jason",
+      "hole": 12,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-31T14:48:16.737Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
