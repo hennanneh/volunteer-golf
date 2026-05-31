@@ -33868,6 +33868,16 @@
       "checkedInBy": "Pugh, Clayton",
       "timestamp": "2026-05-31T19:10:32.691Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "9610",
+      "volunteerName": "Bullard, Roy",
+      "hole": 15,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Thomas, Stephen",
+      "timestamp": "2026-05-31T22:35:44.331Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
