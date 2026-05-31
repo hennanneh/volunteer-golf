@@ -31459,6 +31459,66 @@
       "checkedInBy": "Clayton, Rodney",
       "timestamp": "2026-05-31T14:32:20.553Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "8608",
+      "volunteerName": "Tellez, Victor",
+      "hole": 14,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Sanders, Steve",
+      "timestamp": "2026-05-31T14:36:12.824Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8887",
+      "volunteerName": "Arnold, Tyrone",
+      "hole": 14,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Sanders, Steve",
+      "timestamp": "2026-05-31T14:36:17.022Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10342",
+      "volunteerName": "Johnson, Kyle",
+      "hole": 13,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Clayton, Rodney",
+      "timestamp": "2026-05-31T14:37:11.332Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "9069",
+      "volunteerName": "Harper, Leroy",
+      "hole": 13,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Clayton, Rodney",
+      "timestamp": "2026-05-31T14:37:14.486Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8711",
+      "volunteerName": "Smith, Bruce T.",
+      "hole": 12,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-31T14:39:14.101Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "4745",
+      "volunteerName": "Pittman, Tom",
+      "hole": 12,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Pugh, Clayton",
+      "timestamp": "2026-05-31T14:39:26.685Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
