@@ -590,13 +590,14 @@
         "Thursday AM": true,
         "Friday PM": true,
         "Saturday AM": true,
+        "Sunday AM": true,
         "Sunday PM": true
       },
       "volId": "8511",
       "address": "6043 Meadowcrest Drive Dallas, TX 75230",
       "hasAdminPassword": false,
       "hasVolunteerPassword": true,
-      "lastModified": 1779882116745,
+      "lastModified": 1780226631195,
       "volunteerPassword": "$2b$10$5qr2MxnBSLBSMRYNxVzgo.q25YMpvu4V18DBZq71sEFbh633Y6mu6"
     },
     {
@@ -29407,6 +29408,66 @@
       "checkedInBy": "Johnson, Kenny",
       "timestamp": "2026-05-31T11:19:28.705Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "1520",
+      "volunteerName": "Craft, John",
+      "hole": 2,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Gordon, Gary",
+      "timestamp": "2026-05-31T11:23:17.680Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7768",
+      "volunteerName": "Gillitzer, Dean",
+      "hole": 2,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Gordon, Gary",
+      "timestamp": "2026-05-31T11:23:21.061Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7692",
+      "volunteerName": "Lemay, Mark",
+      "hole": 2,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Gordon, Gary",
+      "timestamp": "2026-05-31T11:23:26.138Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "5539",
+      "volunteerName": "Mansir, Greg",
+      "hole": 2,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Gordon, Gary",
+      "timestamp": "2026-05-31T11:23:29.663Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "1790",
+      "volunteerName": "Turner, Charlie",
+      "hole": 2,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Gordon, Gary",
+      "timestamp": "2026-05-31T11:23:31.464Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8511",
+      "volunteerName": "Brower, Briggs",
+      "hole": 2,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Gordon, Gary",
+      "timestamp": "2026-05-31T11:24:00.324Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
@@ -29427,6 +29488,15 @@
     "poweredByText": "Anne"
   },
   "activityLog": [
+    {
+      "id": "1780226631195-yabzmq",
+      "timestamp": "2026-05-31T11:23:51.195Z",
+      "user": "Gordon, Gary",
+      "userType": "Captain",
+      "action": "edit-schedule",
+      "target": "Brower, Briggs",
+      "details": "added Sunday AM"
+    },
     {
       "id": "1780193237490-wn791f",
       "timestamp": "2026-05-31T02:07:17.490Z",
