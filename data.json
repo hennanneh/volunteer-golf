@@ -2415,8 +2415,8 @@
       "hasAdminPassword": true,
       "hasVolunteerPassword": false,
       "lastModified": 1779986346741,
-      "adminPassword": "$2b$10$52VdRTtOJc7.riA5b93ScuAbew2kz1a3IPmSWZEOk47q3Z4yp117a",
-      "adminPasswordSetAt": "2026-04-29T19:41:25.640Z",
+      "adminPassword": "$2b$10$Tnu1RP71Ymgn3Pyg9VrQmuTbRHNc2jrCshcOEtWz.H5i41ypl11vK",
+      "adminPasswordSetAt": "2026-06-01T20:00:15.474Z",
       "notes": "",
       "hatReceived": false,
       "assignedHoles": [
