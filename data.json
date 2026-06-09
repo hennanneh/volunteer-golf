@@ -3340,8 +3340,8 @@
       "hasAdminPassword": true,
       "hasVolunteerPassword": false,
       "lastModified": 1780082033839,
-      "adminPassword": "$2b$10$h0CPonAkFNTz00hqbELOr.zvbfmQqWVYZkDenYxH1YQvjj64aEp8S",
-      "adminPasswordSetAt": "2026-04-20T20:13:12.730Z",
+      "adminPassword": "$2b$10$GS8B8THf/44np2WggEwLF.qerr3SDa.sIEAYvLhu3Xf3TiBdMwNhi",
+      "adminPasswordSetAt": "2026-06-09T14:33:52.716Z",
       "notes": "",
       "hatReceived": false,
       "assignedHoles": [
@@ -33877,6 +33877,26 @@
       "shift": "PM",
       "checkedInBy": "Thomas, Stephen",
       "timestamp": "2026-05-31T22:35:44.331Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "3777",
+      "volunteerName": "Hicks, Greg",
+      "hole": 17,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Hill, Michael",
+      "timestamp": "2026-06-09T14:31:30.976Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "3778",
+      "volunteerName": "Hicks, Jackie",
+      "hole": 17,
+      "day": "Sunday",
+      "shift": "AM",
+      "checkedInBy": "Hill, Michael",
+      "timestamp": "2026-06-09T14:31:32.200Z",
       "isAlternate": false
     }
   ],
