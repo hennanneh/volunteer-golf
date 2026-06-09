@@ -33898,6 +33898,76 @@
       "checkedInBy": "Hill, Michael",
       "timestamp": "2026-06-09T14:31:32.200Z",
       "isAlternate": false
+    },
+    {
+      "volunteerId": "1720",
+      "volunteerName": "Butler, Mark",
+      "hole": 3,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Hill, Michael",
+      "timestamp": "2026-06-09T15:13:42.211Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8234",
+      "volunteerName": "Wilson, Todd",
+      "hole": 3,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Hill, Michael",
+      "timestamp": "2026-06-09T15:13:44.193Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "7998",
+      "volunteerName": "Burrus, Sam",
+      "hole": 3,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Hill, Michael",
+      "timestamp": "2026-06-09T15:13:47.616Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10229",
+      "volunteerName": "Corson, Michael",
+      "hole": 3,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Hill, Michael",
+      "timestamp": "2026-06-09T15:13:48.555Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "10451",
+      "volunteerName": "Miller, David",
+      "hole": 3,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Hill, Michael",
+      "timestamp": "2026-06-09T15:13:49.626Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8791",
+      "volunteerName": "Moss, Linc",
+      "hole": 3,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Hill, Michael",
+      "timestamp": "2026-06-09T15:13:50.800Z",
+      "isAlternate": false
+    },
+    {
+      "volunteerId": "8790",
+      "volunteerName": "Moss, Linda",
+      "hole": 3,
+      "day": "Sunday",
+      "shift": "PM",
+      "checkedInBy": "Hill, Michael",
+      "timestamp": "2026-06-09T15:13:53.462Z",
+      "isAlternate": false
     }
   ],
   "submissions": [],
