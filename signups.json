@@ -1,13 +1,4 @@
 {
-  "signups": [
-    {
-      "id": "e555cbda-2178-4d3b-b310-9b4155f06064",
-      "name": "Anne Howrey",
-      "email": "annehowrey@yahoo.com",
-      "phone": "2148868611",
-      "holeRequest": "Pat's Hole",
-      "submittedAt": "2026-06-15T23:02:47.144Z"
-    }
-  ],
-  "updatedAt": "2026-06-15T23:04:54.445Z"
+  "signups": [],
+  "updatedAt": "2026-06-15T23:05:36.492Z"
 }
