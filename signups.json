@@ -1,4 +1,13 @@
 {
-  "signups": [],
-  "updatedAt": "2026-06-15T23:16:25.588Z"
+  "signups": [
+    {
+      "id": "62be9903-11d5-415a-9c35-ae4fbde7ee11",
+      "name": "Anne Howrey",
+      "email": "annehowrey@yahoo.com",
+      "phone": "2148868611",
+      "holeRequest": "Volunter HQ",
+      "submittedAt": "2026-06-15T23:20:40.047Z"
+    }
+  ],
+  "updatedAt": "2026-06-15T23:20:40.047Z"
 }
