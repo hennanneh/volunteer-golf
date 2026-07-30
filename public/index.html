@@ -1075,13 +1075,12 @@
     let pendingDeletedIds = [];
 
     let currentView = 'landing';
-    // OFF-SEASON FLAG — when true, the root landing leads with 2027 volunteer
-    // recruiting and DEMOTES the check-in login (it is never removed). Flip to
-    // false in May 2027 to make check-in the primary landing again — that one
-    // line is the whole change. Regardless of the flag, ?checkin=1 (the PWA
-    // start_url) and ?portal=... always bypass recruiting straight to check-in.
+    // OFF-SEASON FLAG: when true, the root landing shows only 2027 recruiting;
+    // the check-in login is not shown on the public page (it is never removed,
+    // just hidden, and stays fully reachable at ?checkin=1 (the PWA start_url)
+    // and via ?portal=...). Flip to false in May 2027 to make check-in the
+    // primary landing again; that one line is the whole change.
     const OFF_SEASON = true;
-    let showCheckinOptions = false; // off-season only: reveal the demoted check-in buttons
     let adminAuth = false; // false, 'full', or 'viewOnly'
     let adminAuthUser = null; // The volunteer object for logged-in admin
     let captainAuth = null;
@@ -1760,14 +1759,6 @@
             <h1 class="landing-title">Volunteer as a Marshal in 2027</h1>
             <p class="landing-subtitle">The 2027 Charles Schwab Challenge returns to Colonial Country Club, Fort Worth &middot; May 24&ndash;30, 2027. Sign up to be notified the moment volunteer registration opens.</p>
             <a class="btn-primary" href="/next-year.html" style="display:block;text-decoration:none;box-sizing:border-box">Sign up to volunteer for 2027</a>
-            ${showCheckinOptions ? `
-              <div style="margin-top:22px;padding-top:20px;border-top:1px solid #e3e8e4">
-                <p style="color:#666;font-size:13px;margin-bottom:14px">Current volunteer? Sign in to check in.</p>
-                ${checkinButtons}
-              </div>
-            ` : `
-              <button type="button" onclick="showCheckinOptions=true;render()" style="margin-top:18px;background:none;border:none;color:#1a472a;font-size:13px;font-weight:600;text-decoration:underline;cursor:pointer">Current volunteer? Check in here</button>
-            `}
           </div>
           ${helpBlock}
           ${adminLink}
