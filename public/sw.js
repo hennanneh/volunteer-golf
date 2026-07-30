@@ -1,9 +1,10 @@
-const CACHE_NAME = 'volunteer-golf-v41';
+const CACHE_NAME = 'volunteer-golf-v57';
 const STATIC_ASSETS = [
   '/',
   '/index.html',
   '/hat-pickup.html',
   '/help.html',
+  '/next-year.html',
   '/favicon.svg',
   '/manifest.json',
   'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap',

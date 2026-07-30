@@ -1083,6 +1083,12 @@
     var socket = null; // WebSocket connection
     let selectedShift = null;
     let adminTab = 'overview';
+    let signupsData = null;       // { signups:[...], updatedAt } from GET /api/signups; null until first load
+    let signupsLoading = false;
+    let signupsError = null;
+    let signupsPollTimer = null;
+    let signupSortKey = 'submittedAt';   // name | email | phone | holeRequest | submittedAt
+    let signupSortDir = 'desc';          // 'asc' | 'desc'
     let showAllVolunteers = false;
     let searchTerm = '';
     let showModal = null;
@@ -2095,17 +2101,17 @@
           </div>
 
           <div class="tabs">
-            ${['overview', 'checkins', 'volunteers', 'reports', 'summary', 'activity', 'import', 'settings']
-              .filter(t => adminAuth === 'full' || (t !== 'import' && t !== 'settings' && t !== 'activity'))
+            ${['overview', 'checkins', 'volunteers', 'reports', 'summary', 'activity', 'signups', 'import', 'settings']
+              .filter(t => adminAuth === 'full' || (t !== 'import' && t !== 'settings' && t !== 'activity' && t !== 'signups'))
               .map(t =>
-              `<button class="tab-btn ${adminTab === t ? 'active' : ''}" onclick="setAdminTab('${t}')">${t === 'checkins' ? 'Check-ins' : t === 'volunteers' ? 'Volunteers' : t === 'activity' ? 'Activity Log' : t === 'summary' ? 'Tournament Summary' : t.charAt(0).toUpperCase() + t.slice(1)}</button>`
+              `<button class="tab-btn ${adminTab === t ? 'active' : ''}" onclick="setAdminTab('${t}')">${t === 'checkins' ? 'Check-ins' : t === 'volunteers' ? 'Volunteers' : t === 'activity' ? 'Activity Log' : t === 'summary' ? 'Tournament Summary' : t === 'signups' ? ('Signups' + (signupsData ? ' (' + signupsData.signups.length + ')' : '')) : t.charAt(0).toUpperCase() + t.slice(1)}</button>`
             ).join('')}
           </div>
           <select class="tabs-mobile-select" onchange="setAdminTab(this.value)">
-            ${['overview', 'checkins', 'volunteers', 'reports', 'summary', 'activity', 'import', 'settings']
-              .filter(t => adminAuth === 'full' || (t !== 'import' && t !== 'settings' && t !== 'activity'))
+            ${['overview', 'checkins', 'volunteers', 'reports', 'summary', 'activity', 'signups', 'import', 'settings']
+              .filter(t => adminAuth === 'full' || (t !== 'import' && t !== 'settings' && t !== 'activity' && t !== 'signups'))
               .map(t =>
-              `<option value="${t}" ${adminTab === t ? 'selected' : ''}>${t === 'checkins' ? 'Check-ins' : t === 'volunteers' ? 'Volunteers' : t === 'activity' ? 'Activity Log' : t === 'summary' ? 'Tournament Summary' : t.charAt(0).toUpperCase() + t.slice(1)}</option>`
+              `<option value="${t}" ${adminTab === t ? 'selected' : ''}>${t === 'checkins' ? 'Check-ins' : t === 'volunteers' ? 'Volunteers' : t === 'activity' ? 'Activity Log' : t === 'summary' ? 'Tournament Summary' : t === 'signups' ? ('Signups' + (signupsData ? ' (' + signupsData.signups.length + ')' : '')) : t.charAt(0).toUpperCase() + t.slice(1)}</option>`
             ).join('')}
           </select>
           
@@ -2132,6 +2138,7 @@
             ${adminTab === 'reports' ? renderReports(false) : ''}
             ${adminTab === 'summary' ? renderTournamentSummary(stats) : ''}
             ${adminTab === 'activity' ? renderActivityLog() : ''}
+            ${adminTab === 'signups' ? renderSignups() : ''}
             ${adminTab === 'import' ? renderImport() : ''}
             ${adminTab === 'settings' ? renderSettings() : ''}
           </div>
@@ -5382,10 +5389,16 @@
       const scheduledVolunteers = holeVolunteers.filter(v => v.scheduled && v.scheduled[`${selectedDay} ${selectedShift}`]);
       const unscheduledVolunteers = holeVolunteers.filter(v => !v.scheduled || !v.scheduled[`${selectedDay} ${selectedShift}`]);
 
-      // Get captains for this hole
+      // Get captains for this hole. Hole 99 is the staff/leadership pool —
+      // every non-Volunteer role there belongs in this section so the admin
+      // can check them in.
+      const isStaffHole = activeHole === 99;
       const holeCaptains = appData.volunteers.filter(v =>
-        v.hole === activeHole &&
-        (v.type === 'Captain' || v.type === 'Asst. Chairman' || v.type === 'Chairman')
+        v.hole === activeHole && (
+          isStaffHole
+            ? v.type !== 'Volunteer'
+            : (v.type === 'Captain' || v.type === 'Asst. Chairman' || v.type === 'Chairman')
+        )
       );
 
       // Find the current user's volunteer record (for admin, find by name)
@@ -5660,6 +5673,7 @@
                   <h1 style="display:flex;align-items:center;gap:10px">
                     <select onchange="adminSelectedHole=parseInt(this.value);render()" style="font-size:24px;font-weight:700;padding:8px 12px;border-radius:6px;border:none;background:rgba(255,255,255,0.9);color:#1a472a;min-height:48px">
                       ${[...Array(getNumberOfHoles()).keys()].map(i => i + 1).map(h => `<option value="${h}" ${h === adminSelectedHole ? 'selected' : ''}>Hole #${h}</option>`).join('')}
+                      <option value="99" ${99 === adminSelectedHole ? 'selected' : ''}>Hole #99 (Staff)</option>
                     </select>
                   </h1>
                   <p>Admin: ${captainAuth.name}</p>
@@ -5752,15 +5766,20 @@
             ` : displayVolunteers.map((v, idx) => {
               const isCheckedIn = checkedInIds.has(v.id);
               const isScheduled = v.scheduled && v.scheduled[`${selectedDay} ${selectedShift}`];
-              const isCaptain = v.type === 'Captain' || v.type === 'Asst. Chairman' || v.type === 'Chairman';
+              // At Hole 99 every non-Volunteer role lives in the "staff" section, not just captain types.
+              const isCaptain = isStaffHole
+                ? v.type !== 'Volunteer'
+                : (v.type === 'Captain' || v.type === 'Asst. Chairman' || v.type === 'Chairman');
               const isCurrentCaptain = v.name === captainAuth.name;
               // Add section header when transitioning from captains to volunteers or scheduled to unscheduled
-              const prevIsCaptain = idx > 0 ? (displayVolunteers[idx-1].type === 'Captain' || displayVolunteers[idx-1].type === 'Asst. Chairman' || displayVolunteers[idx-1].type === 'Chairman') : false;
+              const prevIsCaptain = idx > 0 ? (isStaffHole
+                ? displayVolunteers[idx-1].type !== 'Volunteer'
+                : (displayVolunteers[idx-1].type === 'Captain' || displayVolunteers[idx-1].type === 'Asst. Chairman' || displayVolunteers[idx-1].type === 'Chairman')) : false;
               const prevIsScheduled = idx > 0 ? (displayVolunteers[idx-1].scheduled && displayVolunteers[idx-1].scheduled[`${selectedDay} ${selectedShift}`]) : true;
               const showVolunteerDivider = !searchTerm && !isCaptain && prevIsCaptain;
               const showUnscheduledDivider = !searchTerm && !isCaptain && !isScheduled && prevIsScheduled && !prevIsCaptain;
               return `
-                ${idx === 0 && isCaptain && !searchTerm ? '<div style="padding:12px 14px;color:#fff;font-size:15px;font-weight:600;text-transform:uppercase;background:#1a472a;margin:0 -15px 12px -15px;border-radius:0">Captains</div>' : ''}
+                ${idx === 0 && isCaptain && !searchTerm ? `<div style="padding:12px 14px;color:#fff;font-size:15px;font-weight:600;text-transform:uppercase;background:#1a472a;margin:0 -15px 12px -15px;border-radius:0">${isStaffHole ? 'Staff' : 'Captains'}</div>` : ''}
                 ${showVolunteerDivider ? '<div style="padding:12px 14px;color:#fff;font-size:15px;font-weight:600;text-transform:uppercase;background:#1a472a;margin:15px -15px 12px -15px;border-radius:0">Scheduled Volunteers</div>' : ''}
                 ${showUnscheduledDivider ? '<div style="padding:12px 14px;color:#fff;font-size:15px;font-weight:600;text-transform:uppercase;background:#6b7c6b;margin:15px -15px 12px -15px;border-radius:0">Not Scheduled This Shift</div>' : ''}
                 <div class="volunteer-item ${isCheckedIn ? 'checked' : ''}" ${shiftLocked ? '' : `onclick="toggleCheckIn('${v.id}')"`} style="${shiftLocked ? 'cursor:default;opacity:0.8' : ''}">
@@ -5869,7 +5888,162 @@
     function setAdminTab(tab) {
       adminTab = tab;
       saveAuthState();
+      if (tab === 'signups') fetchSignups(false);
       render();
+    }
+
+    function setSignupSort(key) {
+      if (signupSortKey === key) {
+        signupSortDir = signupSortDir === 'asc' ? 'desc' : 'asc';
+      } else {
+        signupSortKey = key;
+        signupSortDir = (key === 'submittedAt') ? 'desc' : 'asc'; // dates newest-first, text A→Z
+      }
+      render();
+    }
+
+    // ---- Next-year volunteer signups tab ----------------------------------
+    // Fetches the admin-only list and re-renders. Best-effort; surfaces auth
+    // and network errors in the tab instead of throwing.
+    function fetchSignups(showSpinner) {
+      if (signupsLoading) return;
+      signupsLoading = true;
+      signupsError = null;
+      if (showSpinner) render();
+      fetch('/api/signups', { headers: { 'Accept': 'application/json' }, credentials: 'same-origin' })
+        .then(function(r) {
+          if (r.status === 401 || r.status === 403) throw new Error('auth');
+          return r.json();
+        })
+        .then(function(d) {
+          if (d && d.success) {
+            signupsData = { signups: Array.isArray(d.signups) ? d.signups : [], updatedAt: d.updatedAt || null };
+            signupsError = null;
+          } else {
+            signupsError = (d && d.error) || 'Failed to load signups.';
+          }
+        })
+        .catch(function(e) {
+          signupsError = e && e.message === 'auth'
+            ? 'Please log in as an admin to view signups.'
+            : 'Could not load signups. Check your connection and try again.';
+        })
+        .finally(function() {
+          signupsLoading = false;
+          if (currentView === 'admin' && adminTab === 'signups') render();
+        });
+    }
+
+    // One shared timer; only acts while the Signups tab is open (near-live).
+    function startSignupsPolling() {
+      if (signupsPollTimer) return;
+      signupsPollTimer = setInterval(function() {
+        if (currentView === 'admin' && adminTab === 'signups' && adminAuth === 'full' && !signupsLoading) {
+          fetchSignups(false);
+        }
+      }, 20000);
+    }
+
+    function renderSignups() {
+      // Lazy initial load (covers a restored 'signups' tab on page reload).
+      if (signupsData === null && !signupsLoading && !signupsError) {
+        setTimeout(function() { fetchSignups(false); }, 0);
+      }
+      startSignupsPolling();
+
+      var esc = function(s) {
+        return String(s == null ? '' : s)
+          .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+      };
+      var fmtDate = function(iso) {
+        if (!iso) return '';
+        var d = new Date(iso);
+        if (isNaN(d.getTime())) return esc(iso);
+        return d.toLocaleDateString([], { year: 'numeric', month: 'short', day: 'numeric' }) +
+               ', ' + d.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' });
+      };
+
+      var list = signupsData ? signupsData.signups.slice() : [];
+      list.sort(function(a, b) {
+        var dir = signupSortDir === 'asc' ? 1 : -1;
+        if (signupSortKey === 'submittedAt') {
+          return (new Date(a.submittedAt) - new Date(b.submittedAt)) * dir;
+        }
+        var av = String(a[signupSortKey] || '').toLowerCase();
+        var bv = String(b[signupSortKey] || '').toLowerCase();
+        // Always push blanks to the bottom regardless of direction.
+        if (av === '' && bv !== '') return 1;
+        if (bv === '' && av !== '') return -1;
+        return av.localeCompare(bv) * dir;
+      });
+      var count = list.length;
+
+      var header =
+        '<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:8px">' +
+          '<h2 style="font-size:20px;color:#1a472a;margin:0">Next-Year Signups' +
+            (signupsData ? ' <span style="color:#888;font-weight:500">(' + count + ')</span>' : '') + '</h2>' +
+          '<div style="display:flex;gap:8px;align-items:center">' +
+            (count ? '<a href="/api/signups.csv" class="add-alert-btn" style="background:#2196F3;display:inline-block;text-decoration:none;padding:8px 14px;font-size:13px">Download CSV</a>' : '') +
+          '</div>' +
+        '</div>' +
+        '<p style="color:#666;font-size:12.5px;margin:0 0 18px">People who signed up on the public page to be notified when volunteer registration opens. Updates automatically as new signups come in.</p>';
+
+      if (signupsError) {
+        return '<div class="settings-section" style="max-width:none">' + header +
+          '<div style="background:#fdecea;color:#b3261e;border:1px solid #f5c6c0;border-radius:8px;padding:14px 16px;font-size:14px">' + esc(signupsError) +
+          ' <button onclick="fetchSignups(true)" style="margin-left:8px;padding:4px 10px;border:1px solid #b3261e;background:#fff;color:#b3261e;border-radius:5px;cursor:pointer;font-size:12px">Retry</button></div></div>';
+      }
+
+      if (signupsData === null && signupsLoading) {
+        return '<div class="settings-section" style="max-width:none">' + header +
+          '<p style="color:#888;padding:20px 0">Loading signups…</p></div>';
+      }
+
+      if (count === 0) {
+        return '<div class="settings-section" style="max-width:none">' + header +
+          '<div style="text-align:center;color:#999;padding:48px 20px;border:1px dashed #ddd;border-radius:10px">No signups yet. New entries will appear here automatically.</div></div>';
+      }
+
+      var rows = list.map(function(s, i) {
+        var updated = s.updatedAt && s.updatedAt !== s.submittedAt
+          ? '<div style="color:#999;font-size:11px">updated ' + esc(fmtDate(s.updatedAt)) + '</div>' : '';
+        return '<tr style="border-bottom:1px solid #eee">' +
+          '<td style="padding:10px 12px;color:#999;font-size:12px">' + (i + 1) + '</td>' +
+          '<td style="padding:10px 12px;font-weight:600;color:#1a472a">' + esc(s.name) + '</td>' +
+          '<td style="padding:10px 12px"><a href="mailto:' + esc(s.email) + '" style="color:#2196F3;text-decoration:none">' + esc(s.email) + '</a></td>' +
+          '<td style="padding:10px 12px;white-space:nowrap">' + (s.phone ? esc(s.phone) : '<span style="color:#bbb">—</span>') + '</td>' +
+          '<td style="padding:10px 12px;max-width:260px">' + (s.holeRequest ? esc(s.holeRequest) : '<span style="color:#bbb">—</span>') + '</td>' +
+          '<td style="padding:10px 12px;white-space:nowrap;color:#555">' + esc(fmtDate(s.submittedAt)) + updated + '</td>' +
+        '</tr>';
+      }).join('');
+
+      // Clickable, sortable column headers. Active column shows a direction
+      // arrow; click again to flip direction. The "#" column isn't sortable.
+      var sortCols = [
+        { key: 'name', label: 'Name' },
+        { key: 'email', label: 'Email' },
+        { key: 'phone', label: 'Phone' },
+        { key: 'holeRequest', label: 'Hole / partner preference' },
+        { key: 'submittedAt', label: 'Signed up' }
+      ];
+      var thBase = 'padding:11px 12px;font-weight:600;background:#1a472a;color:#fff';
+      var headCells = '<th style="' + thBase + ';width:36px">#</th>';
+      sortCols.forEach(function(c) {
+        var active = signupSortKey === c.key;
+        var arrow = active ? (signupSortDir === 'asc' ? ' ▲' : ' ▼') : '';
+        headCells += '<th onclick="setSignupSort(\'' + c.key + '\')" title="Sort by ' + c.label + '" ' +
+          'style="' + thBase + ';cursor:pointer;user-select:none;white-space:nowrap' + (active ? ';background:#143a22' : '') + '">' +
+          esc(c.label) + '<span style="opacity:.85">' + arrow + '</span></th>';
+      });
+
+      return '<div class="settings-section" style="max-width:none">' + header +
+        '<div style="overflow-x:auto;border:1px solid #eee;border-radius:10px;background:#fff">' +
+          '<table style="width:100%;border-collapse:collapse;font-size:14px;min-width:720px">' +
+            '<thead><tr style="text-align:left">' + headCells + '</tr></thead>' +
+            '<tbody>' + rows + '</tbody>' +
+          '</table>' +
+        '</div></div>';
     }
 
     function setSelectedDay(day) {
@@ -7164,6 +7338,14 @@
         console.log('WebSocket disconnected');
         isConnected = false;
         updateConnectionStatus(false);
+      });
+
+      // Live nudge when a new public signup arrives. Only refetch if the admin
+      // is actually looking at the Signups tab (payload carries no PII).
+      socket.on('signupAdded', function() {
+        if (currentView === 'admin' && adminTab === 'signups' && adminAuth === 'full' && !signupsLoading) {
+          fetchSignups(false);
+        }
       });
       
       socket.on('dataUpdated', function(event) {

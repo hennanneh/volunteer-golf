@@ -157,6 +157,112 @@ function isValidPairingGroup(g) {
 }
 
 // ============================================================================
+// Next-year volunteer waiting-list signups (server-side, append-only).
+//
+// The POST endpoint is PUBLIC — the whole point is to let prospective marshals
+// submit without an account. To keep that from re-creating the 2026-04-10 wipe
+// vector, this lives in its OWN file (never touches data.json), is APPEND-ONLY
+// (a request can only add/update one record, never replace or clear the list),
+// validated, rate-limited, and honeypot-guarded. Reading the list back (which
+// exposes collected PII) requires admin auth. Shape:
+//   { signups: [{ id, name, email, phone, holeRequest, submittedAt, updatedAt }], updatedAt }
+// ============================================================================
+const SIGNUPS_FILE = path.join(__dirname, 'signups.json');
+const MAX_SIGNUPS = 5000;  // disk-fill backstop; a community tournament won't approach this
+
+function loadSignups() {
+  try {
+    if (fs.existsSync(SIGNUPS_FILE)) {
+      const parsed = JSON.parse(fs.readFileSync(SIGNUPS_FILE, 'utf8'));
+      if (parsed && Array.isArray(parsed.signups)) {
+        return { signups: parsed.signups, updatedAt: parsed.updatedAt || null };
+      }
+    }
+  } catch (err) {
+    console.error('Error loading signups:', err.message);
+  }
+  return { signups: [], updatedAt: null };
+}
+
+function saveSignups(data) {
+  try {
+    const tmpFile = SIGNUPS_FILE + '.tmp';
+    fs.writeFileSync(tmpFile, JSON.stringify(data, null, 2));
+    fs.renameSync(tmpFile, SIGNUPS_FILE);
+    return true;
+  } catch (err) {
+    console.error('Error saving signups:', err.message);
+    return false;
+  }
+}
+
+// Dedicated lock so concurrent signup writes can't clobber each other.
+let signupsLock = Promise.resolve();
+function withSignupsLock(fn) {
+  const prev = signupsLock;
+  let resolve;
+  signupsLock = new Promise(r => { resolve = r; });
+  return prev.then(() => fn()).finally(resolve);
+}
+
+// Trim + length-bound a free-text field. Returns '' for non-strings.
+function cleanField(v, maxLen) {
+  if (typeof v !== 'string') return '';
+  return v.trim().slice(0, maxLen);
+}
+
+// Permissive sanity checks (reject obvious junk, not strict RFC validation).
+function looksLikeEmail(s) {
+  return typeof s === 'string' && s.length <= 254 && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(s);
+}
+
+function escapeHtml(s) {
+  return String(s == null ? '' : s)
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+}
+
+// Fire-and-forget thank-you to the person who joined the waiting list.
+// Callers MUST .catch() — a failed email must never fail the signup.
+async function sendSignupConfirmation(name, email, holeRequest) {
+  if (!process.env.RESEND_API_KEY) return;
+  const firstName = (name.split(/\s+/)[0] || name);
+  const holeBlock = holeRequest
+    ? '<p style="margin:0 0 14px;color:#444">Your hole preference, noted as: <strong>' + escapeHtml(holeRequest) + '</strong></p>'
+    : '';
+  const html =
+    '<div style="font-family:-apple-system,Segoe UI,Roboto,sans-serif;max-width:560px;margin:0 auto;color:#333">' +
+      '<h2 style="color:#1a472a;margin:0 0 6px">We\'ll let you know when signups open</h2>' +
+      '<p style="margin:0 0 16px;color:#666">2027 Charles Schwab Challenge &middot; Colonial Country Club &middot; Fort Worth, TX</p>' +
+      '<p style="margin:0 0 14px">Hi ' + escapeHtml(firstName) + ', thanks for your interest in volunteering as a marshal for the ' +
+        '2027 Charles Schwab Challenge (May 24&ndash;30, 2027). We\'ve saved your info and will email you as soon as official ' +
+        'volunteer registration opens.</p>' +
+      holeBlock +
+      '<p style="margin:0 0 14px">For reference, marshals work four half-day shifts across the four tournament days, ' +
+        'plus one additional shift Monday through Wednesday during the Pro-Ams and practice day.</p>' +
+      '<p style="margin:0 0 14px">No action is needed from you right now &mdash; just keep an eye on your inbox.</p>' +
+      '<p style="margin:18px 0 0;color:#888;font-size:13px">If you didn\'t request this, you can ignore this email.</p>' +
+    '</div>';
+  const text =
+    'We\'ll let you know when signups open\n\n' +
+    'Hi ' + firstName + ', thanks for your interest in volunteering as a marshal for the 2027 Charles Schwab Challenge ' +
+    '(May 24-30, 2027) at Colonial Country Club, Fort Worth, TX. We\'ve saved your info and will email you as soon as ' +
+    'official volunteer registration opens.\n\n' +
+    (holeRequest ? ('Your hole preference, noted as: ' + holeRequest + '\n\n') : '') +
+    'For reference, marshals work four half-day shifts across the four tournament days, plus one additional shift ' +
+    'Monday through Wednesday during the Pro-Ams and practice day.\n\n' +
+    'No action is needed right now — just keep an eye on your inbox.\n\n' +
+    'If you didn\'t request this, you can ignore this email.';
+  await resend.emails.send({
+    from: process.env.EMAIL_FROM || 'Volunteer Golf <hello@colonialvolunteers.golf>',
+    to: email,
+    subject: "We'll notify you when volunteer signups open — 2027 Charles Schwab Challenge",
+    html,
+    text
+  });
+}
+
+// ============================================================================
 // Concurrent-save merge (added 2026-05-11 after captains reported schedule
 // edits silently overwriting each other and a deleted volunteer reappearing).
 //
@@ -617,6 +723,7 @@ const loginLimiter   = makeLimiter(10,  'login');    // POST /api/login       10
 const resetReqLimiter    = makeLimiter(5,  'reset-request'); // POST /api/request-password-reset
 const resetSubmitLimiter = makeLimiter(10, 'reset-submit');  // POST /api/reset-password
 const pairingsLimiter    = makeLimiter(30, 'pairings');      // POST /api/pairings    30/min
+const signupLimiter      = makeLimiter(5,  'signup');        // POST /api/signup       5/min (public)
 
 // ============================================================================
 // Authentication (Phase 1.1, added 2026-04-10 — see SECURITY.md)
@@ -866,6 +973,26 @@ function requireAuth(allowedRoles) {
       return next();
     }
   };
+}
+
+// Strict admin gate that deliberately does NOT honor the STRICT_AUTH=false
+// rollout fallback. requireAuth() currently lets unauthenticated requests
+// through (logged as UNAUTH FALLBACK) so legacy clients keep working during
+// rollout — acceptable for write endpoints, but NOT for endpoints that read
+// back collected PII. The next-year signups list must require a real admin
+// session no matter what STRICT_AUTH is set to.
+function requireRealAdmin(req, res, next) {
+  const token = req.cookies && req.cookies.session;
+  const session = token ? sessions.get(token) : null;
+  if (!session || (Date.now() - session.lastUsed > SESSION_IDLE_MS)) {
+    return res.status(401).json({ success: false, error: 'Authentication required - please log in as an admin' });
+  }
+  if (session.role !== 'admin') {
+    return res.status(403).json({ success: false, error: 'Forbidden: admin access required' });
+  }
+  session.lastUsed = Date.now();
+  req.user = session;
+  next();
 }
 
 // POST /api/login — verify password, issue session
@@ -1262,6 +1389,90 @@ app.post('/api/pairings', pairingsLimiter, requireAuth(['admin', 'chair', 'asstC
       res.status(500).json({ success: false, error: 'Failed to save pairings' });
     }
   });
+});
+
+// ----------------------------------------------------------------------------
+// Next-year volunteer waiting-list signups. POST is PUBLIC + append-only (see
+// the helper block above). GET endpoints expose collected PII, so admin-only.
+// ----------------------------------------------------------------------------
+app.post('/api/signup', signupLimiter, (req, res) => {
+  const body = req.body;
+  const ip = clientIpFromReq(req);
+  if (!body || typeof body !== 'object' || Array.isArray(body)) {
+    return res.status(400).json({ success: false, error: 'Invalid submission.' });
+  }
+
+  // Honeypot: bots fill hidden fields a human never sees. Pretend success so the
+  // bot moves on, but store nothing.
+  if (cleanField(body.website, 200) !== '') {
+    console.log('[' + new Date().toISOString() + '] SIGNUP honeypot tripped, ignoring  ip=' + ip);
+    return res.json({ success: true });
+  }
+
+  const name = cleanField(body.name, 120);
+  const email = cleanField(body.email, 254).toLowerCase();
+  const phone = cleanField(body.phone, 40);
+  const holeRequest = cleanField(body.holeRequest, 1000);
+
+  if (!name) return res.status(400).json({ success: false, error: 'Please enter your name.' });
+  if (!looksLikeEmail(email)) return res.status(400).json({ success: false, error: 'Please enter a valid email address.' });
+  // Phone is optional; if provided, it's stored as-is (already trimmed/bounded).
+
+  withSignupsLock(() => {
+    const store = loadSignups();
+
+    if (store.signups.length >= MAX_SIGNUPS) {
+      console.warn('[' + new Date().toISOString() + '] REJECTED /api/signup: cap reached  ip=' + ip);
+      return res.status(503).json({ success: false, error: 'The waiting list is temporarily full. Please try again later.' });
+    }
+
+    // Dedupe by email: a repeat submission updates the existing record rather
+    // than piling up duplicates (people re-submit when unsure it went through).
+    const now = new Date().toISOString();
+    const existing = store.signups.find(s => s.email === email);
+    if (existing) {
+      existing.name = name;
+      existing.phone = phone;
+      existing.holeRequest = holeRequest;
+      existing.updatedAt = now;
+    } else {
+      store.signups.push({ id: crypto.randomUUID(), name, email, phone, holeRequest, submittedAt: now });
+    }
+    store.updatedAt = now;
+
+    if (!saveSignups(store)) {
+      return res.status(500).json({ success: false, error: 'Could not save your signup. Please try again.' });
+    }
+
+    console.log('[' + now + '] SIGNUP ' + (existing ? 'updated' : 'new') + '  total=' + store.signups.length + '  ip=' + ip);
+    res.json({ success: true });
+
+    // Live ping for any admin viewing the Signups tab. No PII in the payload —
+    // just a nudge to refetch the (auth-protected) list. Harmless to other clients.
+    io.emit('signupAdded', { total: store.signups.length });
+
+    // Confirmation email is best-effort: respond already sent above.
+    sendSignupConfirmation(name, email, holeRequest).catch(err =>
+      console.error('[' + new Date().toISOString() + '] signup confirmation email failed for ' + email + ': ' + err.message)
+    );
+  });
+});
+
+app.get('/api/signups', requireRealAdmin, (req, res) => {
+  res.json({ success: true, ...loadSignups() });
+});
+
+app.get('/api/signups.csv', requireRealAdmin, (req, res) => {
+  const { signups } = loadSignups();
+  const esc = (v) => '"' + String(v == null ? '' : v).replace(/"/g, '""') + '"';
+  const header = ['Name', 'Email', 'Phone', 'Hole preference', 'Submitted', 'Updated'];
+  const lines = [header.map(esc).join(',')];
+  for (const s of signups) {
+    lines.push([s.name, s.email, s.phone, s.holeRequest, s.submittedAt, s.updatedAt || ''].map(esc).join(','));
+  }
+  res.setHeader('Content-Type', 'text/csv; charset=utf-8');
+  res.setHeader('Content-Disposition', 'attachment; filename="next-year-signups.csv"');
+  res.send('﻿' + lines.join('\r\n'));  // BOM so Excel/Sheets read UTF-8 correctly
 });
 
 app.post('/api/data', dataLimiter, requireAuth(['admin', 'chair', 'asstChair', 'captain']), (req, res) => {

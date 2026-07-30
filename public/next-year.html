@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Volunteer Interest — 2027 Charles Schwab Challenge</title>
+  <meta name="description" content="Sign up to be notified when volunteer marshal registration opens for the 2027 Charles Schwab Challenge, Colonial Country Club, Fort Worth, Texas.">
+  <link rel="icon" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      color: #2b2b2b;
+      background: #eef1ee;
+      min-height: 100vh;
+      padding: 24px 16px 48px;
+    }
+    .wrap { max-width: 620px; margin: 0 auto; }
+    .hero {
+      background: linear-gradient(135deg, #1a472a, #2d5a3f);
+      color: #fff;
+      border-radius: 16px 16px 0 0;
+      padding: 32px 28px 26px;
+    }
+    .hero .event {
+      font-size: 13px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: #b9e3c4;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .hero h1 {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+    .hero p { color: rgba(255,255,255,.9); font-size: 15.5px; }
+    .hero .where { margin-top: 14px; font-size: 14px; color: #d7ecdd; }
+    .card {
+      background: #fff;
+      border-radius: 0 0 16px 16px;
+      padding: 26px 28px 30px;
+      box-shadow: 0 6px 24px rgba(0,0,0,.08);
+    }
+    .commitment {
+      background: #f1f5f2;
+      border-left: 4px solid #1a472a;
+      border-radius: 0 8px 8px 0;
+      padding: 13px 16px;
+      font-size: 14.5px;
+      color: #3a4a40;
+      margin-bottom: 24px;
+    }
+    label { display: block; font-weight: 600; font-size: 14.5px; margin: 0 0 6px; color: #1a472a; }
+    .field { margin-bottom: 18px; }
+    .req { color: #c0392b; }
+    .hint { font-weight: 400; color: #7a857d; font-size: 13px; }
+    input, textarea {
+      width: 100%;
+      font-family: inherit;
+      font-size: 16px; /* 16px avoids iOS zoom-on-focus */
+      color: #2b2b2b;
+      padding: 12px 14px;
+      border: 1.5px solid #d4dcd6;
+      border-radius: 10px;
+      background: #fbfdfb;
+      transition: border-color .15s, box-shadow .15s;
+    }
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: #2d5a3f;
+      box-shadow: 0 0 0 3px rgba(45,90,63,.15);
+    }
+    textarea { resize: vertical; min-height: 70px; }
+    /* Honeypot — hidden from humans, tempting to bots */
+    .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+    button {
+      width: 100%;
+      font-family: inherit;
+      font-size: 17px;
+      font-weight: 600;
+      color: #fff;
+      background: #1a472a;
+      border: none;
+      border-radius: 10px;
+      padding: 15px;
+      margin-top: 4px;
+      cursor: pointer;
+      transition: background .15s, transform .05s;
+    }
+    button:hover { background: #14391f; }
+    button:active { transform: translateY(1px); }
+    button:disabled { background: #8aa593; cursor: default; }
+    .msg { margin-top: 16px; padding: 13px 16px; border-radius: 10px; font-size: 14.5px; display: none; }
+    .msg.error { display: block; background: #fdecea; color: #b3261e; border: 1px solid #f5c6c0; }
+    .footnote { text-align: center; color: #8a948c; font-size: 13px; margin-top: 22px; }
+    /* Success view */
+    .success { display: none; text-align: center; padding: 14px 6px 6px; }
+    .success.show { display: block; }
+    .success .check {
+      width: 64px; height: 64px; border-radius: 50%;
+      background: #e8f5e9; color: #1a472a;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 34px; margin: 0 auto 16px;
+    }
+    .success h2 { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #1a472a; font-size: 24px; margin-bottom: 10px; }
+    .success p { color: #4a564e; font-size: 15.5px; margin-bottom: 8px; }
+    @media (max-width: 480px) {
+      .hero { padding: 26px 20px 22px; }
+      .hero h1 { font-size: 25px; }
+      .card { padding: 22px 20px 26px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="hero">
+      <div class="event">2027 Charles Schwab Challenge</div>
+      <h1>Volunteer as a Marshal in 2027</h1>
+      <p>The 2027 Charles Schwab Challenge returns to the historic Colonial Country Club May 24&ndash;30, 2027. Leave your info and we'll email you the moment official volunteer registration opens.</p>
+      <div class="where">Colonial Country Club &middot; Fort Worth, Texas</div>
+    </div>
+
+    <div class="card">
+      <div class="commitment">
+        Volunteer marshals work <strong>four half-day shifts</strong> during the four days of the tournament, plus <strong>one additional shift</strong> Monday through Wednesday during the Pro-Ams and practice day.
+      </div>
+
+      <form id="signupForm" novalidate>
+        <div class="field">
+          <label for="name">Full name <span class="req">*</span></label>
+          <input id="name" name="name" type="text" autocomplete="name" maxlength="120" required>
+        </div>
+
+        <div class="field">
+          <label for="email">Email address <span class="req">*</span></label>
+          <input id="email" name="email" type="email" autocomplete="email" inputmode="email" maxlength="254" required>
+        </div>
+
+        <div class="field">
+          <label for="phone">Phone number <span class="hint">(optional)</span></label>
+          <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" maxlength="40">
+        </div>
+
+        <div class="field">
+          <label for="holeRequest">Hole or partner preference <span class="hint">(optional)</span></label>
+          <textarea id="holeRequest" name="holeRequest" maxlength="1000" placeholder="Which hole would you like to work — or which other marshal would you like to work with?"></textarea>
+        </div>
+
+        <!-- Honeypot: must stay empty. Hidden from real users. -->
+        <div class="hp" aria-hidden="true">
+          <label for="website">Website</label>
+          <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+        </div>
+
+        <button type="submit" id="submitBtn">Notify me when signups open</button>
+        <div class="msg error" id="errorMsg"></div>
+      </form>
+
+      <div class="success" id="successView">
+        <div class="check">&#10003;</div>
+        <h2>You're all set!</h2>
+        <p>Thanks for your interest in volunteering at the 2027 Charles Schwab Challenge.</p>
+        <p>We've sent a confirmation to your email, and we'll notify you as soon as official volunteer registration opens.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var form = document.getElementById('signupForm');
+      var btn = document.getElementById('submitBtn');
+      var errorMsg = document.getElementById('errorMsg');
+      var successView = document.getElementById('successView');
+
+      function showError(text) {
+        errorMsg.textContent = text;
+        errorMsg.style.display = 'block';
+      }
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        errorMsg.style.display = 'none';
+
+        var payload = {
+          name: document.getElementById('name').value,
+          phone: document.getElementById('phone').value,
+          email: document.getElementById('email').value,
+          holeRequest: document.getElementById('holeRequest').value,
+          website: document.getElementById('website').value
+        };
+
+        if (!payload.name.trim()) { showError('Please enter your name.'); return; }
+        if (!payload.email.trim()) { showError('Please enter your email address.'); return; }
+
+        btn.disabled = true;
+        btn.textContent = 'Submitting…';
+
+        fetch('/api/signup', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        })
+          .then(function (r) { return r.json().then(function (d) { return { ok: r.ok, d: d }; }); })
+          .then(function (res) {
+            if (res.ok && res.d && res.d.success) {
+              form.style.display = 'none';
+              successView.classList.add('show');
+              successView.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            } else {
+              showError((res.d && res.d.error) || 'Something went wrong. Please try again.');
+              btn.disabled = false;
+              btn.textContent = 'Notify me when signups open';
+            }
+          })
+          .catch(function () {
+            showError('Network error. Please check your connection and try again.');
+            btn.disabled = false;
+            btn.textContent = 'Notify me when signups open';
+          });
+      });
+    })();
+  </script>
+</body>
+</html>
