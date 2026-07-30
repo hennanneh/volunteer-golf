@@ -1,4 +1,4 @@
-const CACHE_NAME = 'volunteer-golf-v59';
+const CACHE_NAME = 'volunteer-golf-v60';
 const STATIC_ASSETS = [
   '/',
   '/index.html',
