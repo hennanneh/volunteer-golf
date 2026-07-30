@@ -33989,6 +33989,24 @@
   },
   "activityLog": [
     {
+      "id": "1785450362876-axwbro",
+      "timestamp": "2026-07-30T22:26:02.876Z",
+      "user": "System",
+      "userType": "Deployment",
+      "action": "system-update",
+      "target": "3d00ba5f",
+      "details": "Fix empty error box on signup page; sw v60"
+    },
+    {
+      "id": "1785450360555-zyz8p9",
+      "timestamp": "2026-07-30T22:26:00.555Z",
+      "user": "System",
+      "userType": "Deployment",
+      "action": "system-update",
+      "target": "3d00ba5",
+      "details": "Fix empty red error box under signup button (.msg.error forced display:block)"
+    },
+    {
       "id": "1785450160984-39aok0",
       "timestamp": "2026-07-30T22:22:40.984Z",
       "user": "System",
