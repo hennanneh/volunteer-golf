@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Volunteer Interest — 2027 Charles Schwab Challenge</title>
+  <title>Volunteer Interest: 2027 Charles Schwab Challenge</title>
   <meta name="description" content="Sign up to be notified when volunteer marshal registration opens for the 2027 Charles Schwab Challenge, Colonial Country Club, Fort Worth, Texas.">
   <link rel="icon" href="/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -56,8 +56,14 @@
       padding: 13px 16px;
       font-size: 14.5px;
       color: #3a4a40;
-      margin-bottom: 24px;
+      margin-top: 22px;
     }
+    .benefits { margin-top: 24px; }
+    .benefits h3 { font-size: 15px; color: #1a472a; font-weight: 700; margin-bottom: 12px; }
+    .benefits ul { list-style: none; }
+    .benefits li { position: relative; padding-left: 26px; margin-bottom: 10px; font-size: 14.5px; color: #3a4a40; }
+    .benefits li:last-child { margin-bottom: 0; }
+    .benefits li::before { content: "\2713"; position: absolute; left: 0; top: 0; color: #1a472a; font-weight: 700; }
     label { display: block; font-weight: 600; font-size: 14.5px; margin: 0 0 6px; color: #1a472a; }
     .field { margin-bottom: 18px; }
     .req { color: #c0392b; }
@@ -132,10 +138,6 @@
     </div>
 
     <div class="card">
-      <div class="commitment">
-        Volunteer marshals work <strong>four half-day shifts</strong> during the four days of the tournament, plus <strong>one additional shift</strong> Monday through Wednesday during the Pro-Ams and practice day.
-      </div>
-
       <form id="signupForm" novalidate>
         <div class="field">
           <label for="name">Full name <span class="req">*</span></label>
@@ -154,7 +156,7 @@
 
         <div class="field">
           <label for="holeRequest">Hole or partner preference <span class="hint">(optional)</span></label>
-          <textarea id="holeRequest" name="holeRequest" maxlength="1000" placeholder="Which hole would you like to work — or which other marshal would you like to work with?"></textarea>
+          <textarea id="holeRequest" name="holeRequest" maxlength="1000" placeholder="Which hole would you like to work, or which other marshal would you like to work with?"></textarea>
         </div>
 
         <!-- Honeypot: must stay empty. Hidden from real users. -->
@@ -165,6 +167,22 @@
 
         <button type="submit" id="submitBtn">Notify me when signups open</button>
         <div class="msg error" id="errorMsg"></div>
+
+        <div class="benefits">
+          <h3>Why volunteer as a marshal?</h3>
+          <ul>
+            <li>Sit courtside with the best view of every player</li>
+            <li>The chance to play the historic Colonial course yourself</li>
+            <li>A behind-the-scenes look at a PGA TOUR event</li>
+            <li>Friendships with volunteers who come back year after year</li>
+            <li>Free tickets for friends to come by and say hi</li>
+            <li>A free beer after your shift</li>
+          </ul>
+        </div>
+
+        <div class="commitment">
+          Volunteer marshals work <strong>four half-day shifts</strong> during the four days of the tournament, plus <strong>one additional shift</strong> Monday through Wednesday during the Pro-Ams and practice day.
+        </div>
       </form>
 
       <div class="success" id="successView">
