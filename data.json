@@ -33989,6 +33989,24 @@
   },
   "activityLog": [
     {
+      "id": "1785450160984-39aok0",
+      "timestamp": "2026-07-30T22:22:40.984Z",
+      "user": "System",
+      "userType": "Deployment",
+      "action": "system-update",
+      "target": "2cdd78b7",
+      "details": "Signup page: raise fields, benefits list, cross-links; sw v59"
+    },
+    {
+      "id": "1785450158704-wgx4bc",
+      "timestamp": "2026-07-30T22:22:38.704Z",
+      "user": "System",
+      "userType": "Deployment",
+      "action": "system-update",
+      "target": "2cdd78b",
+      "details": "Signup page: raise fields, move details below button, add benefits list + cross-links"
+    },
+    {
       "id": "1785448843028-ax6w6y",
       "timestamp": "2026-07-30T22:00:43.028Z",
       "user": "System",
