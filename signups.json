@@ -2,11 +2,12 @@
   "signups": [
     {
       "id": "62be9903-11d5-415a-9c35-ae4fbde7ee11",
-      "name": "Anne Howrey",
+      "name": "Anne",
       "email": "annehowrey@yahoo.com",
-      "phone": "2148868611",
-      "holeRequest": "Volunter HQ",
-      "submittedAt": "2026-06-15T23:20:40.047Z"
+      "phone": "",
+      "holeRequest": "",
+      "submittedAt": "2026-06-15T23:20:40.047Z",
+      "updatedAt": "2026-07-30T22:15:52.991Z"
     },
     {
       "id": "1f50d2f2-aa7f-4762-abbb-9df443355b03",
@@ -17,5 +18,5 @@
       "submittedAt": "2026-06-18T02:08:38.850Z"
     }
   ],
-  "updatedAt": "2026-06-18T02:08:38.850Z"
+  "updatedAt": "2026-07-30T22:15:52.991Z"
 }
