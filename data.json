@@ -33989,6 +33989,24 @@
   },
   "activityLog": [
     {
+      "id": "1785448843028-ax6w6y",
+      "timestamp": "2026-07-30T22:00:43.028Z",
+      "user": "System",
+      "userType": "Deployment",
+      "action": "system-update",
+      "target": "4e079224",
+      "details": "Off-season landing: 2027 recruiting primary, check-in demoted behind OFF_SEASON flag; start_url to /?checkin=1; sw v58"
+    },
+    {
+      "id": "1785448841021-xy45bb",
+      "timestamp": "2026-07-30T22:00:41.021Z",
+      "user": "System",
+      "userType": "Deployment",
+      "action": "system-update",
+      "target": "4e07922",
+      "details": "Off-season: lead root with 2027 recruiting, demote check-in behind OFF_SEASON flag"
+    },
+    {
       "id": "1781565374978-8bu5e9",
       "timestamp": "2026-06-15T23:16:14.979Z",
       "user": "System",
