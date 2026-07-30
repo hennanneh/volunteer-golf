@@ -1075,6 +1075,13 @@
     let pendingDeletedIds = [];
 
     let currentView = 'landing';
+    // OFF-SEASON FLAG — when true, the root landing leads with 2027 volunteer
+    // recruiting and DEMOTES the check-in login (it is never removed). Flip to
+    // false in May 2027 to make check-in the primary landing again — that one
+    // line is the whole change. Regardless of the flag, ?checkin=1 (the PWA
+    // start_url) and ?portal=... always bypass recruiting straight to check-in.
+    const OFF_SEASON = true;
+    let showCheckinOptions = false; // off-season only: reveal the demoted check-in buttons
     let adminAuth = false; // false, 'full', or 'viewOnly'
     let adminAuthUser = null; // The volunteer object for logged-in admin
     let captainAuth = null;
@@ -1719,19 +1726,14 @@
 
     function renderLanding() {
       const hasContact = appData.settings.helpPhone || appData.settings.helpEmail;
+      const params = new URLSearchParams(window.location.search);
+      // ?checkin=1 (the PWA start_url) or ?portal=... jumps straight to the
+      // check-in card, even in the off-season when recruiting is the default.
+      const forceCheckin = params.has('checkin') || params.has('portal');
+      const recruiting = OFF_SEASON && !forceCheckin;
 
-      return `
-        <div class="landing">
-          <div class="landing-card">
-            <a href="https://connect.us.app.pam.co/?navmapId=29b117c9-84ce-47e7-98c8-c34950550589&utm_source=Charles.Schwab&utm_medium=club&utm_campaign=C.S#17.6/32.71641/-97.374044/92.8/50" target="_blank" rel="noopener noreferrer" style="position:absolute;top:16px;left:20px;font-size:13px;color:#1a472a;text-decoration:none;font-weight:600;">Smart Map</a>
-            <div class="landing-icon">⛳</div>
-            <h1 class="landing-title">${appData.settings.tournamentName}</h1>
-            <p class="landing-subtitle">Tournament Volunteer Manager</p>
-            <button class="btn-primary" onclick="goTo('captainLogin')">Hole Captain Check-In</button>
-            <button class="btn-secondary" onclick="goTo('volunteerLogin')">Volunteer Portal</button>
-            ${(appData.settings.showPairingsLink !== false && appData.settings.pairingsUrl) ? `<a href="${appData.settings.pairingsUrl}" target="_blank" class="btn-secondary" style="display:block;margin-top:12px;text-decoration:none">${appData.settings.pairingsText || 'Pairings Sheet'}</a>` : ''}
-          </div>
-          ${hasContact ? `
+      // Shared blocks so both landing variants stay identical below the fold.
+      const helpBlock = hasContact ? `
             <div style="margin-top:30px;text-align:center;color:rgba(255,255,255,0.9)">
               <p style="font-size:13px;font-weight:600;margin-bottom:10px">Need help?</p>
               ${appData.settings.helpName ? `<p style="font-size:14px;margin-bottom:8px">${appData.settings.helpName}</p>` : ''}
@@ -1739,9 +1741,54 @@
               ${appData.settings.helpEmail ? `<p style="font-size:13px;margin-bottom:6px"><a href="mailto:${appData.settings.helpEmail}" style="color:white;text-decoration:none">${appData.settings.helpEmail}</a></p>` : ''}
               <p style="font-size:11px;opacity:0.7;margin-top:8px">Tournament staff available during event hours</p>
             </div>
-          ` : ''}
-          <a href="#" onclick="goTo('adminLogin'); return false;" style="display:block;margin-top:20px;font-size:12px;color:rgba(255,255,255,0.6);text-decoration:none;">Admin Login</a>
-          <p class="footer-text">colonialvolunteers.golf</p>
+          ` : '';
+      const adminLink = `<a href="#" onclick="goTo('adminLogin'); return false;" style="display:block;margin-top:20px;font-size:12px;color:rgba(255,255,255,0.6);text-decoration:none;">Admin Login</a>`;
+      const footer = `<p class="footer-text">colonialvolunteers.golf</p>`;
+
+      // The two existing check-in entries — unchanged, reused by both variants.
+      const checkinButtons = `
+            <button class="btn-primary" onclick="goTo('captainLogin')">Hole Captain Check-In</button>
+            <button class="btn-secondary" onclick="goTo('volunteerLogin')">Volunteer Portal</button>
+            ${(appData.settings.showPairingsLink !== false && appData.settings.pairingsUrl) ? `<a href="${appData.settings.pairingsUrl}" target="_blank" class="btn-secondary" style="display:block;margin-top:12px;text-decoration:none">${appData.settings.pairingsText || 'Pairings Sheet'}</a>` : ''}`;
+
+      // Off-season: recruiting leads, check-in is demoted behind a reveal.
+      if (recruiting) {
+        return `
+        <div class="landing">
+          <div class="landing-card">
+            <div class="landing-icon">⛳</div>
+            <h1 class="landing-title">Volunteer as a Marshal in 2027</h1>
+            <p class="landing-subtitle">The 2027 Charles Schwab Challenge returns to Colonial Country Club, Fort Worth &middot; May 24&ndash;30, 2027. Sign up to be notified the moment volunteer registration opens.</p>
+            <a class="btn-primary" href="/next-year.html" style="display:block;text-decoration:none;box-sizing:border-box">Sign up to volunteer for 2027</a>
+            ${showCheckinOptions ? `
+              <div style="margin-top:22px;padding-top:20px;border-top:1px solid #e3e8e4">
+                <p style="color:#666;font-size:13px;margin-bottom:14px">Current volunteer? Sign in to check in.</p>
+                ${checkinButtons}
+              </div>
+            ` : `
+              <button type="button" onclick="showCheckinOptions=true;render()" style="margin-top:18px;background:none;border:none;color:#1a472a;font-size:13px;font-weight:600;text-decoration:underline;cursor:pointer">Current volunteer? Check in here</button>
+            `}
+          </div>
+          ${helpBlock}
+          ${adminLink}
+          ${footer}
+        </div>
+      `;
+      }
+
+      // In-season (or ?checkin / ?portal): original check-in-first landing.
+      return `
+        <div class="landing">
+          <div class="landing-card">
+            <a href="https://connect.us.app.pam.co/?navmapId=29b117c9-84ce-47e7-98c8-c34950550589&utm_source=Charles.Schwab&utm_medium=club&utm_campaign=C.S#17.6/32.71641/-97.374044/92.8/50" target="_blank" rel="noopener noreferrer" style="position:absolute;top:16px;left:20px;font-size:13px;color:#1a472a;text-decoration:none;font-weight:600;">Smart Map</a>
+            <div class="landing-icon">⛳</div>
+            <h1 class="landing-title">${appData.settings.tournamentName}</h1>
+            <p class="landing-subtitle">Tournament Volunteer Manager</p>
+            ${checkinButtons}
+          </div>
+          ${helpBlock}
+          ${adminLink}
+          ${footer}
         </div>
       `;
     }

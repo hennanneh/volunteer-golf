@@ -2,7 +2,7 @@
   "name": "Colonial Volunteers Golf",
   "short_name": "Volunteers",
   "description": "Volunteer check-in system for Colonial golf tournament",
-  "start_url": "/",
+  "start_url": "/?checkin=1",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#1a472a",
