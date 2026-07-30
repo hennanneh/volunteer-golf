@@ -33989,6 +33989,24 @@
   },
   "activityLog": [
     {
+      "id": "1785451169869-viffd3",
+      "timestamp": "2026-07-30T22:39:29.869Z",
+      "user": "System",
+      "userType": "Deployment",
+      "action": "system-update",
+      "target": "f11c3a1b",
+      "details": "Off-season landing: public shows signup + Admin only; check-in stays at /?checkin=1; sw v61"
+    },
+    {
+      "id": "1785451167821-ejk022",
+      "timestamp": "2026-07-30T22:39:27.821Z",
+      "user": "System",
+      "userType": "Deployment",
+      "action": "system-update",
+      "target": "f11c3a1",
+      "details": "Off-season landing: remove public check-in reveal, keep signup + Admin only"
+    },
+    {
       "id": "1785450362876-axwbro",
       "timestamp": "2026-07-30T22:26:02.876Z",
       "user": "System",
