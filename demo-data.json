@@ -1,0 +1,41 @@
+{
+  "volunteers": [
+    {"id": "1001", "name": "Smith, John", "type": "Chairman", "hole": 1, "phone": "(555) 100-1001", "yearsWorked": 10, "assignedHoles": [1,2,3,4,5,6], "scheduled": {"Wednesday AM": true, "Wednesday PM": true, "Thursday AM": true, "Thursday PM": true, "Friday AM": true, "Friday PM": true, "Saturday AM": true, "Saturday PM": true, "Sunday AM": true, "Sunday PM": true}},
+    {"id": "1002", "name": "Johnson, Mary", "type": "Asst. Chairman", "hole": 10, "phone": "(555) 100-1002", "yearsWorked": 8, "assignedHoles": [10,11,12,13,14,15,16,17,18], "scheduled": {"Wednesday AM": true, "Wednesday PM": true, "Thursday AM": true, "Thursday PM": true, "Friday AM": true, "Friday PM": true, "Saturday AM": true, "Saturday PM": true, "Sunday AM": true, "Sunday PM": true}},
+    {"id": "1003", "name": "Williams, Robert", "type": "Captain", "hole": 1, "phone": "(555) 100-1003", "yearsWorked": 5, "scheduled": {"Wednesday AM": true, "Thursday AM": true, "Friday AM": true, "Saturday AM": true, "Sunday AM": true}},
+    {"id": "1004", "name": "Brown, Patricia", "type": "Captain", "hole": 2, "phone": "(555) 100-1004", "yearsWorked": 6, "scheduled": {"Wednesday PM": true, "Thursday PM": true, "Friday PM": true, "Saturday PM": true, "Sunday PM": true}},
+    {"id": "1005", "name": "Davis, Michael", "type": "Volunteer", "hole": 1, "phone": "(555) 100-1005", "yearsWorked": 3, "email": "michael.davis@example.com", "scheduled": {"Thursday AM": true, "Friday AM": true, "Saturday AM": true}},
+    {"id": "1006", "name": "Miller, Jennifer", "type": "Volunteer", "hole": 1, "phone": "(555) 100-1006", "yearsWorked": 2, "email": "jennifer.miller@example.com", "scheduled": {"Thursday PM": true, "Friday PM": true, "Saturday PM": true}},
+    {"id": "1007", "name": "Wilson, James", "type": "Volunteer", "hole": 2, "phone": "(555) 100-1007", "yearsWorked": 4, "scheduled": {"Wednesday AM": true, "Thursday AM": true, "Friday AM": true}},
+    {"id": "1008", "name": "Moore, Linda", "type": "Volunteer", "hole": 2, "phone": "(555) 100-1008", "yearsWorked": 1, "scheduled": {"Saturday AM": true, "Saturday PM": true, "Sunday AM": true}},
+    {"id": "1009", "name": "Taylor, William", "type": "Captain", "hole": 3, "phone": "(555) 100-1009", "yearsWorked": 7, "scheduled": {"Wednesday AM": true, "Thursday AM": true, "Friday AM": true, "Saturday AM": true, "Sunday AM": true}},
+    {"id": "1010", "name": "Anderson, Barbara", "type": "Volunteer", "hole": 3, "phone": "(555) 100-1010", "yearsWorked": 2, "scheduled": {"Thursday PM": true, "Friday PM": true, "Saturday PM": true}},
+    {"id": "1011", "name": "Thomas, Richard", "type": "Volunteer", "hole": 3, "phone": "(555) 100-1011", "yearsWorked": 5, "scheduled": {"Wednesday PM": true, "Thursday AM": true, "Sunday PM": true}},
+    {"id": "1012", "name": "Jackson, Susan", "type": "Captain", "hole": 10, "phone": "(555) 100-1012", "yearsWorked": 4, "scheduled": {"Thursday AM": true, "Friday AM": true, "Saturday AM": true, "Sunday AM": true}},
+    {"id": "1013", "name": "White, Charles", "type": "Volunteer", "hole": 10, "phone": "(555) 100-1013", "yearsWorked": 3, "scheduled": {"Wednesday PM": true, "Thursday PM": true, "Friday PM": true}},
+    {"id": "1014", "name": "Harris, Margaret", "type": "Volunteer", "hole": 10, "phone": "(555) 100-1014", "yearsWorked": 6, "scheduled": {"Saturday AM": true, "Saturday PM": true, "Sunday AM": true, "Sunday PM": true}},
+    {"id": "1015", "name": "Martin, Joseph", "type": "Captain", "hole": 18, "phone": "(555) 100-1015", "yearsWorked": 8, "scheduled": {"Wednesday AM": true, "Thursday AM": true, "Friday AM": true, "Saturday AM": true, "Sunday AM": true}},
+    {"id": "1016", "name": "Garcia, Elizabeth", "type": "Volunteer", "hole": 18, "phone": "(555) 100-1016", "yearsWorked": 2, "scheduled": {"Thursday PM": true, "Friday PM": true, "Saturday PM": true, "Sunday PM": true}},
+    {"id": "1017", "name": "Martinez, David", "type": "Volunteer", "hole": 18, "phone": "(555) 100-1017", "yearsWorked": 1, "scheduled": {"Friday AM": true, "Saturday AM": true, "Sunday AM": true}},
+    {"id": "1018", "name": "Robinson, Nancy", "type": "Admin", "hole": 1, "phone": "(555) 100-1018", "yearsWorked": 12, "scheduled": {"Wednesday AM": true, "Wednesday PM": true, "Thursday AM": true, "Thursday PM": true, "Friday AM": true, "Friday PM": true, "Saturday AM": true, "Saturday PM": true, "Sunday AM": true, "Sunday PM": true}}
+  ],
+  "checkIns": [
+    {"volunteerId": "1005", "volunteerName": "Davis, Michael", "hole": 1, "day": "Thursday", "shift": "AM", "checkedInBy": "Williams, Robert", "timestamp": "2025-01-09T08:15:00.000Z"},
+    {"volunteerId": "1006", "volunteerName": "Miller, Jennifer", "hole": 1, "day": "Thursday", "shift": "PM", "checkedInBy": "Williams, Robert", "timestamp": "2025-01-09T13:05:00.000Z"},
+    {"volunteerId": "1007", "volunteerName": "Wilson, James", "hole": 2, "day": "Thursday", "shift": "AM", "checkedInBy": "Brown, Patricia", "timestamp": "2025-01-09T08:22:00.000Z"}
+  ],
+  "submissions": [
+    {"hole": 1, "day": "Thursday", "shift": "AM", "timestamp": "2025-01-09T11:45:00.000Z", "captainName": "Williams, Robert", "notes": "Great turnout today!", "checkedInIds": ["1005"]}
+  ],
+  "settings": {
+    "adminPassword": "demo",
+    "viewAdminPassword": "demoview",
+    "tournamentName": "Demo Golf Championship 2025",
+    "tournamentStartDate": "2025-01-08",
+    "tournamentEndDate": "2025-01-12",
+    "helpName": "Demo Support",
+    "helpPhone": "555-123-4567",
+    "helpEmail": "demo@example.com",
+    "numberOfHoles": 18
+  }
+}
