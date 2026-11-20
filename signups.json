@@ -21,7 +21,7 @@
       "name": "Bernie Pineda",
       "email": "mribernie@gmail.com",
       "phone": "18177760484",
-      "holeRequest": "I\u2019m willing to work any of the holes. I would like to work with Buck Gastinel if possible.",
+      "holeRequest": "I’m willing to work any of the holes. I would like to work with Buck Gastinel if possible.",
       "submittedAt": "2026-08-04T12:32:32.118Z",
       "updatedAt": "2026-10-15T18:50:10.732Z"
     },
@@ -135,7 +135,7 @@
       "name": "Forest Smith",
       "email": "forestj29@yahoo.com",
       "phone": "8179051242",
-      "holeRequest": "I\u2019ve marshaled 1997 - 2002",
+      "holeRequest": "I’ve marshaled 1997 - 2002",
       "submittedAt": "2026-11-09T22:22:38.724Z"
     },
     {
@@ -145,7 +145,15 @@
       "phone": "7025824147",
       "holeRequest": "Anything and anyone!",
       "submittedAt": "2026-11-10T01:36:06.766Z"
+    },
+    {
+      "id": "0a5efb9d-19a4-433f-bfd4-8399fc28f727",
+      "name": "Ryan Dyro",
+      "email": "ryan.dyro@gmail.com",
+      "phone": "5733101921",
+      "holeRequest": "",
+      "submittedAt": "2026-11-20T15:45:02.836Z"
     }
   ],
-  "updatedAt": "2026-11-19T20:41:35.472Z"
+  "updatedAt": "2026-11-20T15:45:02.836Z"
 }
